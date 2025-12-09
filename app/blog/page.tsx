@@ -1,12 +1,11 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { useState } from 'react';
 import BlogCard from '@/components/BlogCard';
 
-export const metadata: Metadata = {
-    title: 'Blog - FAMED Exam Preparation Tips & Guides',
-    description: 'Expert tips, study guides, and strategies for passing the FAMED medical German language exam. Learn from doctors who passed on their first try.',
-};
-
 export default function BlogPage() {
+    const [selectedCategory, setSelectedCategory] = useState<string>('All Posts');
+
     const blogPosts = [
         {
             title: "FAMED vs FSP: Complete Comparison Guide 2025",
@@ -58,47 +57,58 @@ export default function BlogPage() {
         }
     ];
 
+    const categories = ['All Posts', 'Exam Guide', 'Study Tips', 'Station Guide', 'Tips & Tricks'];
+    
+    const filteredPosts = selectedCategory === 'All Posts' 
+        ? blogPosts 
+        : blogPosts.filter(post => post.category === selectedCategory);
+
     return (
-        <div className="py-16">
+        <div className="py-16 bg-white min-h-screen">
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="max-w-3xl mx-auto text-center mb-16">
                     <h1 className="text-5xl font-bold mb-6 text-gray-900">
                         FAMED Exam Blog
                     </h1>
-                    <p className="text-xl text-gray-600">
+                    <p className="text-xl text-gray-700">
                         Expert tips, study guides, and proven strategies to help you pass the FAMED exam on your first try
                     </p>
                 </div>
 
+                {/* Categories */}
+                <div className="mb-12 max-w-4xl mx-auto">
+                    <h2 className="text-2xl font-bold mb-6 text-gray-900">Browse by Category</h2>
+                    <div className="flex flex-wrap gap-3">
+                        {categories.map((category) => (
+                            <button
+                                key={category}
+                                onClick={() => setSelectedCategory(category)}
+                                className={`px-4 py-2 rounded-lg font-semibold transition ${
+                                    selectedCategory === category
+                                        ? 'bg-blue-600 text-white'
+                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                }`}
+                            >
+                                {category}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Blog Posts Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    {blogPosts.map((post) => (
+                    {filteredPosts.map((post) => (
                         <BlogCard key={post.slug} {...post} />
                     ))}
                 </div>
 
-                {/* Categories */}
-                <div className="mt-16 max-w-4xl mx-auto">
-                    <h2 className="text-2xl font-bold mb-6 text-gray-900">Browse by Category</h2>
-                    <div className="flex flex-wrap gap-3">
-                        <button className="bg-blue-100 text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-200 transition">
-                            All Posts
-                        </button>
-                        <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">
-                            Exam Guide
-                        </button>
-                        <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">
-                            Study Tips
-                        </button>
-                        <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">
-                            Station Guide
-                        </button>
-                        <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">
-                            Tips & Tricks
-                        </button>
+                {/* No results message */}
+                {filteredPosts.length === 0 && (
+                    <div className="text-center py-12">
+                        <p className="text-gray-500 text-lg">No posts found in this category.</p>
                     </div>
-                </div>
+                )}
             </div>
         </div>
     );
