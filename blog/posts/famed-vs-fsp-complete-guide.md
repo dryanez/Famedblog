@@ -61,6 +61,8 @@ This structure is rigid and timed, ensuring you are tested on specific competenc
 *   You want an exam developed by university researchers (LMU) with a focus on fairness.
 *   You want to avoid the "examiner lottery" of traditional FSPs.
 
+**THERE IS A WAY TO WORK ANYWHERE AFTER FAMED once you have your approbation dont worry. [click here to know more](/blog)**
+
 ### Choose Traditional FSP if:
 
 *   You have a job offer in a state that **only** accepts the local Medical Chamber's exam (e.g., Hessen or NRW).
