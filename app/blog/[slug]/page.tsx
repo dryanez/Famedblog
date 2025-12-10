@@ -43,8 +43,39 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     .filter(p => p.slug !== slug)
     .slice(0, 2);
 
+  // Structured Data for SEO & LLMs
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt || `${post.content.substring(0, 150)}...`,
+    image: 'https://famedtestprep.com/og-image.jpg', // Add a real default image later
+    datePublished: new Date(post.date).toISOString(),
+    author: {
+      '@type': 'Organization',
+      name: 'FaMED Test Prep Team',
+      url: 'https://famedtestprep.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'FaMED Test Prep',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://famedtestprep.com/logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://famedtestprep.com/blog/${slug}`,
+    },
+  };
+
   return (
     <article className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Article Header */}
       <header className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16">
         <div className="container mx-auto px-4">

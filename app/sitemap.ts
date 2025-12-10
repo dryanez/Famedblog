@@ -1,9 +1,18 @@
 import { MetadataRoute } from 'next'
+import { getAllPosts } from '@/lib/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://famedtestprep.com'
+    const posts = getAllPosts()
 
-    return [
+    const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+    }))
+
+    const staticRoutes: MetadataRoute.Sitemap = [
         {
             url: baseUrl,
             lastModified: new Date(),
@@ -21,24 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.9,
-        },
-        {
-            url: `${baseUrl}/blog/famed-vs-fsp-complete-guide`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/blog/8-week-famed-study-plan`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/blog/top-10-famed-mistakes`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.7,
         },
         {
             url: `${baseUrl}/exam`,
@@ -71,4 +62,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.7,
         },
     ]
+
+    return [...staticRoutes, ...blogEntries]
 }
