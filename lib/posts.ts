@@ -11,6 +11,7 @@ export interface BlogPost {
     readTime: string;
     category: string;
     content: string;
+    excerpt: string;
     tags?: string[];
     status?: string;
 }
