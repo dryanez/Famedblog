@@ -68,15 +68,39 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact */}
+                    {/* Connect */}
                     <div>
-                        <h3 className="text-lg font-bold mb-4">Contact</h3>
-                        <ul className="space-y-2 text-sm text-gray-400">
-                            <li>Email: info@famedtestprep.com</li>
+                        <h3 className="text-lg font-bold mb-4">Connect with Us</h3>
+                        <ul className="space-y-3 text-sm">
                             <li>
-                                <Link href="/community" className="hover:text-white transition">
-                                    Join Community
-                                </Link>
+                                <a href="https://www.instagram.com/famedprep/" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white transition group">
+                                    <span className="w-6 text-xl">📸</span>
+                                    <span className="group-hover:translate-x-1 transition-transform">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@famedtestprep" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white transition group">
+                                    <span className="w-6 text-xl">🎵</span>
+                                    <span className="group-hover:translate-x-1 transition-transform">TikTok</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@FaMEDPrep" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white transition group">
+                                    <span className="w-6 text-xl">📺</span>
+                                    <span className="group-hover:translate-x-1 transition-transform">YouTube</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=61584575684278" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white transition group">
+                                    <span className="w-6 text-xl">📘</span>
+                                    <span className="group-hover:translate-x-1 transition-transform">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/famedtest-prep-a0296337a/" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white transition group">
+                                    <span className="w-6 text-xl">💼</span>
+                                    <span className="group-hover:translate-x-1 transition-transform">LinkedIn</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
