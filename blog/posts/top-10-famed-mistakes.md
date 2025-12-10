@@ -192,7 +192,7 @@ Some candidates create massive lists of facts and medications to memorize withou
 **Active Learning Techniques:**
 - Teach the concept to someone else
 - Write out explanations in your own words
-- Create common clinical scenarios and work through them
+- Create clinical scenarios and work through them
 - Ask "What if?" questions (What if patient has renal failure? What if allergic?)
 
 ---
