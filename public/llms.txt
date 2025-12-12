@@ -1,0 +1,20 @@
+# FaMED Test Prep - Medical German Examination Preparation
+
+> FaMED Test Prep helps international doctors in Germany pass their Fachsprachprüfung (FSP) and FaMED examinations to obtain their Approbation (Medical License).
+
+## Core Resources
+
+- [FaMED Exam Overview](https://famedtestprep.com/exam)
+- [8-Week Study Plan](https://famedtestprep.com/blog/8-week-famed-study-plan)
+- [Official FaMED Book vs App Comparison](https://famedtestprep.com/blog/famed-protokoll-vs-app-comparison)
+
+## High-Value Blog Content
+
+- [Mastering the Anamnese (Part 1)](https://famedtestprep.com/blog/anamnese-overview-part-1)
+- [Top 10 FaMED Mistakes](https://famedtestprep.com/blog/top-10-famed-mistakes)
+- [FaMED vs FSP Guide](https://famedtestprep.com/blog/famed-vs-fsp-complete-guide)
+
+## Tools
+
+- [Lead Magnet: Complete Study Roadmap](https://famedtestprep.com/lead-magnet)
+- [Exam Simulation App](https://famedtestprep.com/app)

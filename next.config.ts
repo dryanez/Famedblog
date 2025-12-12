@@ -5,6 +5,10 @@ const nextConfig = {
     domains: ['famedtestprep.com'],
     formats: ['image/avif', 'image/webp'],
   },
+  webpack: (config: any) => {
+    config.resolve.alias.canvas = false;
+    return config;
+  },
   async redirects() {
     return [
       {

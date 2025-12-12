@@ -1,6 +1,6 @@
 ---
 title: "8-Week FaMed Study Plan: Pass on Your First Try"
-date: "Dec 7, 2024"
+date: "2024-12-07"
 readTime: "12 min"
 category: "Study Tips"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "FaMed vs FSP: Complete Comparison Guide 2025"
-date: "Dec 7, 2024"
+date: "2024-12-07"
 readTime: "8 min"
 category: "Exam Guide"
 status: "published"
@@ -71,8 +71,8 @@ This structure is rigid and timed, ensuring you are tested on specific competenc
 ## Preparation Strategy
 
 Standardized exams like FaMed reward systematic preparation. Focus on:
-*   **Structured Communication:** Learn precise phrases for transitioning between exam sections.
-*   **OSCE Timing:** Practice completing tasks strictly within the time limits (e.g., 20 minutes for Anamnese).
+*   **Structured Communication:** Learn precise phrases for transitioning between exam sections. [**Get the Official FaMED Book (€49.99)**](/book) for complete conversation protocols.
+*   **OSCE Timing:** Practice completing tasks strictly within the time limits (e.g., 20 minutes for Anamnese). [**Start Online Practice Exam**](/exam) 
 *   **Standard German:** FaMed values clear, professional German communication over dialect or slang.
 
 ## Final Recommendation

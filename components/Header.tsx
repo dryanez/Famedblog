@@ -12,8 +12,8 @@ export default function Header() {
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-xl">F</span>
+                        <div className="w-10 h-10 relative">
+                            <img src="/logo.png" alt="FaMED Logo" className="object-contain w-full h-full" />
                         </div>
                         <span className="text-xl font-bold text-gray-900">FAMED Test Prep</span>
                     </Link>
@@ -22,6 +22,9 @@ export default function Header() {
                     <div className="hidden md:flex items-center space-x-8">
                         <Link href="/" className="text-gray-700 hover:text-blue-600 transition">
                             Home
+                        </Link>
+                        <Link href="/what-is-famed" className="text-gray-700 hover:text-blue-600 transition font-medium text-blue-900">
+                            What is FAMED?
                         </Link>
                         <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition">
                             Blog
@@ -61,6 +64,13 @@ export default function Header() {
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Home
+                        </Link>
+                        <Link
+                            href="/what-is-famed"
+                            className="block text-gray-700 hover:text-blue-600 transition font-medium"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            What is FAMED?
                         </Link>
                         <Link
                             href="/blog"

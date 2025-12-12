@@ -123,8 +123,23 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </ReactMarkdown>
           </div>
 
+          {/* Telegram CTA */}
+          <div className="my-12 p-6 bg-blue-50 border border-blue-200 rounded-xl flex items-center justify-between gap-4">
+            <div>
+              <h3 className="font-bold text-lg text-blue-900 mb-1">Join the Community</h3>
+              <p className="text-blue-700 text-sm">Get daily tips and connect with 500+ doctors.</p>
+            </div>
+            <a
+              href="https://t.me/+vgtsHuqtwfk4MTJh"
+              target="_blank"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition flex-shrink-0"
+            >
+              Join Telegram →
+            </a>
+          </div>
+
           {/* Lead Magnet CTA */}
-          <div className="mt-16">
+          <div className="mt-8">
             <LeadMagnetCTA />
           </div>
 
