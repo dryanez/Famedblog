@@ -38,7 +38,7 @@ export async function submitLead(formData: FormData) {
         // 2. Send Email via Resend
         if (process.env.RESEND_API_KEY) {
             const { error: emailError } = await resend.emails.send({
-                from: 'FaMED Prep <team@famed-vorbereitung.com>', // Update with verify domain if needed, or use 'onboarding@resend.dev' for testing
+                from: 'FaMED Prep <team@famed-vorbereitung.com>',
                 to: email,
                 subject: 'Your 8-Week FaMED Study Plan 📚',
                 html: `
