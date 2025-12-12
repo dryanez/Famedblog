@@ -1,14 +1,15 @@
+```typescript
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { supabaseAdmin } from '@/lib/supabase-admin';
 
 export async function GET() {
     // Try to insert a test row to verify DB connection & permissions
-    const { data, error: dbError } = await supabase
+    const { data, error: dbError } = await supabaseAdmin
         .from('leads')
         .insert([{
-            email: `healthcheck_${Date.now()}@test.com`,
-            first_name: 'SystemCheck',
-            source: 'health_check_endpoint'
+            email: `healthcheck_admin_${ Date.now() } @test.com`,
+            first_name: 'SystemCheck_Admin',
+            source: 'health_check_endpoint_admin'
         }])
         .select();
 
@@ -16,7 +17,7 @@ export async function GET() {
         status: 'ok',
         env: {
             NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL ? '✅ Defined' : '❌ MISSING',
-            NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? '✅ Defined' : '❌ MISSING',
+            SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY ? '✅ Defined' : '❌ MISSING', // Critical check
             RESEND_API_KEY: process.env.RESEND_API_KEY ? '✅ Defined' : '❌ MISSING',
         },
         database: {

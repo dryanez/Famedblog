@@ -1,6 +1,6 @@
 'use server';
 
-import { supabase } from '@/lib/supabase';
+import { supabaseAdmin } from '@/lib/supabase-admin';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -13,7 +13,7 @@ export async function submitLead(formData: FormData) {
     console.log('--- Lead Submission Debug ---');
     console.log('1. Checking Environment Variables:');
     console.log('   - NEXT_PUBLIC_SUPABASE_URL:', process.env.NEXT_PUBLIC_SUPABASE_URL ? '✅ Defined' : '❌ MISSING');
-    console.log('   - NEXT_PUBLIC_SUPABASE_ANON_KEY:', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? '✅ Defined' : '❌ MISSING');
+    console.log('   - SUPABASE_SERVICE_ROLE_KEY:', process.env.SUPABASE_SERVICE_ROLE_KEY ? '✅ Defined' : '❌ MISSING');
     console.log('   - RESEND_API_KEY:', process.env.RESEND_API_KEY ? '✅ Defined' : '❌ MISSING');
     console.log('2. Submission Data:', { email, firstName });
     // --- DEBUG LOGGING END ---
@@ -23,8 +23,8 @@ export async function submitLead(formData: FormData) {
     }
 
     try {
-        // 1. Save to Supabase
-        const { error: dbError } = await supabase
+        // 1. Save to Supabase (bypassing RLS with admin client)
+        const { error: dbError } = await supabaseAdmin
             .from('leads')
             .insert([
                 {
