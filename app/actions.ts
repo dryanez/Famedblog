@@ -45,7 +45,7 @@ export async function submitLead(formData: FormData) {
           <h1>Hi ${firstName}!</h1>
           <p>Here is the 8-Week FaMED Study Plan you requested.</p>
           <p>This roadmap has helped hundreds of doctors pass their exam. We hope it helps you too!</p>
-          <p><strong><a href="https://famed-vorbereitung.com/FAMED_8WEEK_CORRECTED_STUDY_PLAN.md">Click here to download the Study Plan</a></strong></p>
+          <p><strong><a href="https://famed-vorbereitung.com/FAMED_8WEEK_CORRECTED_STUDY_PLAN.pdf">Click here to download the Study Plan (PDF)</a></strong></p>
           <p>(Note: The link above connects to our latest version. Right click and 'Save As' if needed)</p>
           <br/>
           <p>Veil Erfolg,<br/>The FaMED Prep Team</p>
