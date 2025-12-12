@@ -50,11 +50,19 @@ export default function LeadMagnetCTA() {
                                 </li>
                                 <li className="flex items-start">
                                     <span className="mr-3 text-green-300">✓</span>
-                                    <span>Real exam case questions & answers</span>
+                                    <span>Sample questions & model answers from actual FAMED cases</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="mr-3 text-green-300">✓</span>
                                     <span>Top 10 common mistakes to avoid</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="mr-3 text-green-300">✓</span>
+                                    <span>Essential vocabulary lists & communication frameworks</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="mr-3 text-green-300">✓</span>
+                                    <span>Access to preparation community with 500+ candidates</span>
                                 </li>
                             </ul>
                         </div>
