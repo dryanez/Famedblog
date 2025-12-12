@@ -1,4 +1,4 @@
-```typescript
+
 import { NextResponse } from 'next/server';
 import { supabaseAdmin } from '@/lib/supabase-admin';
 
@@ -7,7 +7,7 @@ export async function GET() {
     const { data, error: dbError } = await supabaseAdmin
         .from('leads')
         .insert([{
-            email: `healthcheck_admin_${ Date.now() } @test.com`,
+            email: `healthcheck_admin_${Date.now()}@test.com`,
             first_name: 'SystemCheck_Admin',
             source: 'health_check_endpoint_admin'
         }])
