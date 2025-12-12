@@ -9,6 +9,15 @@ export async function submitLead(formData: FormData) {
     const email = formData.get('email') as string;
     const firstName = formData.get('firstName') as string || 'Doctor'; // Default if not provided
 
+    // --- DEBUG LOGGING START ---
+    console.log('--- Lead Submission Debug ---');
+    console.log('1. Checking Environment Variables:');
+    console.log('   - NEXT_PUBLIC_SUPABASE_URL:', process.env.NEXT_PUBLIC_SUPABASE_URL ? '✅ Defined' : '❌ MISSING');
+    console.log('   - NEXT_PUBLIC_SUPABASE_ANON_KEY:', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? '✅ Defined' : '❌ MISSING');
+    console.log('   - RESEND_API_KEY:', process.env.RESEND_API_KEY ? '✅ Defined' : '❌ MISSING');
+    console.log('2. Submission Data:', { email, firstName });
+    // --- DEBUG LOGGING END ---
+
     if (!email) {
         return { success: false, message: 'Email is required' };
     }
