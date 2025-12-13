@@ -13,10 +13,10 @@ const PREVIEW_STORAGE = path.join(process.cwd(), 'preview_drafts.json');
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
-        const previewId = params.id;
+        const { id: previewId } = await params;
 
         // Load preview storage
         if (!fs.existsSync(PREVIEW_STORAGE)) {
