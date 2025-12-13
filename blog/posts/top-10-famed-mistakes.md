@@ -7,7 +7,7 @@ category: "Exam Strategy"
 tags: ["FaMED", "Common Mistakes", "Study Tips", "Exam Strategy", "Foreign Doctors", "Germany"]
 featured: true
 metaDescription: "Avoid these 10 critical mistakes that cause foreign doctors to fail the FaMED exam. Learn from others' failures and pass on your first attempt."
-status: "draft"
+status: "published"
 ---
 
 # Top 10 FaMED Mistakes Foreign Doctors Make (And How to Avoid Them)
