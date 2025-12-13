@@ -8,24 +8,38 @@ export default function LeadMagnetCTA() {
     const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [message, setMessage] = useState('');
 
-    async function handleSubmit(formData: FormData) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        console.log('Form submitting...');
+
         setIsLoading(true);
         setStatus('idle');
+        setMessage('');
 
-        const result = await submitLead(formData);
+        try {
+            const formData = new FormData(e.currentTarget);
+            const result = await submitLead(formData);
+            console.log('Result:', result);
 
-        setIsLoading(false);
-        if (result.success) {
-            setStatus('success');
-            setMessage(result.message);
-        } else {
+            setIsLoading(false);
+            if (result.success) {
+                setStatus('success');
+                setMessage(result.message);
+            } else {
+                setStatus('error');
+                setMessage(result.message || 'Something went wrong.');
+            }
+        } catch (err) {
+            console.error('Submission error:', err);
+            setIsLoading(false);
             setStatus('error');
-            setMessage(result.message || 'Something went wrong.');
+            setMessage('An unexpected error occurred. Please try again.');
         }
     }
 
     return (
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 my-12 text-white shadow-xl">
+            {/* Same header content... */}
             <div className="max-w-3xl mx-auto text-center">
                 <h3 className="text-3xl font-bold mb-4">
                     Pass Your FAMED Exam in Just 8 Weeks!
@@ -35,14 +49,15 @@ export default function LeadMagnetCTA() {
                 </p>
 
                 {status === 'success' ? (
-                    <div className="bg-green-100 text-green-800 p-6 rounded-lg mb-6">
-                        <svg className="w-12 h-12 mx-auto mb-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                        <h4 className="text-xl font-bold mb-2">Success! check your inbox.</h4>
+                    <div className="bg-green-100 text-green-800 p-6 rounded-lg mb-6 shadow-inner">
+                        <svg className="w-16 h-16 mx-auto mb-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                        <h4 className="text-2xl font-bold mb-2">Check your inbox!</h4>
                         <p>{message}</p>
                     </div>
                 ) : (
                     <>
                         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+                            {/* List items unchanged */}
                             <ul className="space-y-3">
                                 <li className="flex items-start">
                                     <span className="mr-3 text-green-300">✓</span>
@@ -50,24 +65,20 @@ export default function LeadMagnetCTA() {
                                 </li>
                                 <li className="flex items-start">
                                     <span className="mr-3 text-green-300">✓</span>
-                                    <span>Sample questions & model answers from actual FAMED cases</span>
+                                    <span>Sample questions & model answers</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="mr-3 text-green-300">✓</span>
-                                    <span>Top 10 common mistakes to avoid</span>
+                                    <span>Top 10 common mistakes</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="mr-3 text-green-300">✓</span>
-                                    <span>Essential vocabulary lists & communication frameworks</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-3 text-green-300">✓</span>
-                                    <span>Access to preparation community with 500+ candidates</span>
+                                    <span>Essential vocabulary lists</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <form action={handleSubmit} className="max-w-md mx-auto space-y-4">
+                        <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
                             <div>
                                 <input
                                     type="text"
@@ -91,10 +102,18 @@ export default function LeadMagnetCTA() {
                                 disabled={isLoading}
                                 className="w-full bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
                             >
-                                {isLoading ? 'Sending...' : 'Send Me The Study Plan →'}
+                                {isLoading ? (
+                                    <span className="flex items-center justify-center">
+                                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        Sending...
+                                    </span>
+                                ) : 'Send Me The Study Plan →'}
                             </button>
                             {status === 'error' && (
-                                <p className="text-red-200 text-sm mt-2 font-bold">{message}</p>
+                                <p className="bg-red-100 text-red-800 p-3 rounded text-sm mt-2 font-bold border border-red-200">{message}</p>
                             )}
                         </form>
                     </>
