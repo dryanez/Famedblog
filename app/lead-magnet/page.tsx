@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { Metadata } from 'next';
+import { submitLead } from '@/app/actions';
 
 export default function LeadMagnetPage() {
     const [email, setEmail] = useState('');
@@ -13,20 +13,28 @@ export default function LeadMagnetPage() {
         e.preventDefault();
         setLoading(true);
 
-        try {
-            const response = await fetch('/api/subscribe', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, name }),
-            });
+        const formData = new FormData();
+        formData.append('email', email);
+        formData.append('firstName', name);
 
-            if (response.ok) {
+        try {
+            const result = await submitLead(formData);
+
+            if (result.success) {
                 setSubmitted(true);
                 // Trigger download
-                window.open('/FAMED_8WEEK_CORRECTED_STUDY_PLAN.pdf', '_blank');
+                const link = document.createElement('a');
+                link.href = '/FAMED_8WEEK_CORRECTED_STUDY_PLAN.pdf';
+                link.download = 'FAMED_8Week_Plan.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                alert('Error: ' + result.message);
             }
         } catch (error) {
             console.error('Error:', error);
+            alert('Something went wrong. Please try again.');
         } finally {
             setLoading(false);
         }
