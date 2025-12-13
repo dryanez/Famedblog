@@ -47,7 +47,7 @@ export async function submitLead(formData: FormData) {
         // 2. Send Email via Resend
         if (process.env.RESEND_API_KEY) {
             const { error: emailError } = await resend.emails.send({
-                from: 'FaMED Prep <team@famed-vorbereitung.com>',
+                from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
                 to: email,
                 subject: 'Your 8-Week FaMED Study Plan 📚',
                 html: `
@@ -62,7 +62,7 @@ export async function submitLead(formData: FormData) {
         <!-- Header -->
         <tr>
             <td style="padding: 40px 40px 20px 40px; text-align: center; background-color: #2563eb;">
-                <h1 style="color: #ffffff; margin: 0; font-size: 24px;">FaMED Prep</h1>
+                <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED-Vorbereitung" style="height: 50px; width: auto; max-width: 100%;">
             </td>
         </tr>
 
@@ -120,7 +120,7 @@ export async function submitLead(formData: FormData) {
 
                 <p style="margin-top: 30px; font-size: 16px; line-height: 1.6; color: #4b5563;">
                     Viel Erfolg,<br>
-                    <strong>The FaMED Prep Team</strong>
+                    <strong>The FaMED-Vorbereitung Team</strong>
                 </p>
             </td>
         </tr>
@@ -128,7 +128,7 @@ export async function submitLead(formData: FormData) {
         <!-- Footer -->
         <tr>
             <td style="padding: 20px; text-align: center; background-color: #f3f4f6; font-size: 12px; color: #6b7280;">
-                <p style="margin: 0;">&copy; ${new Date().getFullYear()} FaMED Prep. All rights reserved.</p>
+                <p style="margin: 0;">&copy; ${new Date().getFullYear()} FaMED-Vorbereitung. All rights reserved.</p>
                 <p style="margin: 5px 0;">You received this email because you signed up for our study resources.</p>
             </td>
         </tr>
