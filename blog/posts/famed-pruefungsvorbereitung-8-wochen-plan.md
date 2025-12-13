@@ -1,9 +1,9 @@
 ---
 title: "FaMED Prüfungsvorbereitung 8 Wochen Plan"
-date: "2025-12-15"
+date: "2025-12-13"
 excerpt: "Placeholder content for FaMED Prüfungsvorbereitung 8 Wochen Plan. Will be updated with AI content later."
 tags: ["FaMED", "Placeholder"]
-status: "draft"
+status: "published"
 ---
 
 # FaMED Prüfungsvorbereitung 8 Wochen Plan
