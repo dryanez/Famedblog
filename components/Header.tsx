@@ -32,6 +32,9 @@ export default function Header() {
                         <Link href="/exam" className="text-gray-700 hover:text-blue-600 transition">
                             Practice Exam
                         </Link>
+                        <Link href="/career" className="text-gray-700 hover:text-blue-600 transition">
+                            Career
+                        </Link>
                         <Link
                             href="/lead-magnet"
                             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-semibold"
@@ -85,6 +88,13 @@ export default function Header() {
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Practice Exam
+                        </Link>
+                        <Link
+                            href="/career"
+                            className="block text-gray-700 hover:text-blue-600 transition"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Career
                         </Link>
                         <Link
                             href="/lead-magnet"
