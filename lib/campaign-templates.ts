@@ -18,8 +18,8 @@ export const getExamUrgency14Days = (data: any) => `
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="max-width: 150px; margin-bottom: 20px;">
-      <h1>FaMED Exam Prep</h1>
+      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 40px; width: auto; vertical-align: middle; margin-right: 15px;">
+      <h1 style="display: inline-block; vertical-align: middle; margin: 0;">FaMED Exam Prep</h1>
     </div>
     <div class="content">
       <div class="alert-box">
@@ -62,8 +62,8 @@ export const getExamUrgencySpecialOffer = (data: any) => `
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="max-width: 150px; margin-bottom: 20px;">
-      <h1>LAST MINUTE EXAM RESCUE</h1>
+      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 40px; width: auto; vertical-align: middle; margin-right: 15px;">
+      <h1 style="display: inline-block; vertical-align: middle; margin: 0;">LAST MINUTE EXAM RESCUE</h1>
     </div>
     <div class="content">
       <p style="font-size: 18px; font-weight: 600;">Hi ${data.userName},</p>
@@ -117,8 +117,8 @@ export const getExamUrgency7Days = (data: any) => `
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="max-width: 150px; margin-bottom: 20px;">
-      <h1>7 Days Left. Don't Panic.</h1>
+      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 40px; width: auto; vertical-align: middle; margin-right: 15px;">
+      <h1 style="display: inline-block; vertical-align: middle; margin: 0;">7 Days Left. Don't Panic.</h1>
     </div>
     <div class="content">
       <p>Hi ${data.userName},</p>
@@ -154,8 +154,8 @@ export const getExamUrgency3Days = (data: any) => `
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="max-width: 150px; margin-bottom: 20px;">
-      <h1>72 Hours Remaining</h1>
+      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 40px; width: auto; vertical-align: middle; margin-right: 15px;">
+      <h1 style="display: inline-block; vertical-align: middle; margin: 0;">72 Hours Remaining</h1>
     </div>
     <div class="content">
       <p>Hi ${data.userName},</p>
@@ -190,8 +190,8 @@ export const getWelcomeDay0 = (data: any) => `
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="max-width: 150px; margin-bottom: 20px;">
-      <h1>Welcome to FaMED Prep! 🩺</h1>
+      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 40px; width: auto; vertical-align: middle; margin-right: 15px;">
+      <h1 style="display: inline-block; vertical-align: middle; margin: 0;">Welcome to FaMED Prep! 🩺</h1>
     </div>
     <div class="content">
       <p>Hi ${data.userName},</p>
@@ -230,8 +230,8 @@ export const getSubscriptionExpiry = (data: any) => `
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="max-width: 150px; margin-bottom: 20px;">
-      <h1>Don't Lose Your Progress</h1>
+      <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 40px; width: auto; vertical-align: middle; margin-right: 15px;">
+      <h1 style="display: inline-block; vertical-align: middle; margin: 0;">Don't Lose Your Progress</h1>
     </div>
     <div class="content">
       <p>Hi ${data.userName},</p>
