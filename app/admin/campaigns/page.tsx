@@ -296,16 +296,20 @@ export default function CampaignsPage() {
 
 
         setSending(true);
+        console.log('Saving campaign:', previewCampaignId);
+        console.log('Content length:', editedContent?.length);
         try {
             const response = await fetch(`/api/campaigns/${previewCampaignId}`, {
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ htmlContent: editedContent })
             });
+            console.log('Response status:', response.status);
 
             const data = await response.json();
 
             if (response.ok) {
+                console.log('Save successful!');
                 // Update local state
                 setCustomCampaigns(prev => prev.map(c =>
                     c.id === previewCampaignId
@@ -315,6 +319,7 @@ export default function CampaignsPage() {
                 setResult({ success: true, message: "Campaign saved successfully!" });
                 setIsEditing(false);
             } else {
+                console.error('Save failed:', data);
                 setResult({ success: false, message: data.error || 'Failed to save campaign' });
             }
         } catch (error) {

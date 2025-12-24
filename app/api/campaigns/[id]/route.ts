@@ -39,7 +39,11 @@ export async function PATCH(
         const body = await request.json();
         const { htmlContent } = body;
 
+        console.log('PATCH request for campaign:', id);
+        console.log('Content length:', htmlContent?.length);
+
         if (!id || !htmlContent) {
+            console.error('Missing fields - id:', !!id, 'htmlContent:', !!htmlContent);
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
@@ -54,6 +58,8 @@ export async function PATCH(
             .select('id')
             .eq('name', campaignName)
             .single();
+
+        console.log('Existing campaign found:', !!existingCampaign);
 
         if (existingCampaign) {
             // Update existing campaign
