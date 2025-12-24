@@ -1,0 +1,1 @@
+import { createClient } from '@supabase/supabase-js'; const sb = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY); sb.from('campaigns').select('*').limit(1).then(({data, error}) => console.log(error ? 'Error: ' + error.message : 'Table exists'));

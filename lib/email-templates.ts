@@ -1,4 +1,11 @@
-export function getEmailTemplate(segment: "exam_soon" | "sleeping" | "active" | "all", name: string) {
+interface EmailTemplateParams {
+    segment: "exam_soon" | "sleeping" | "active" | "all" | "paid";
+    name: string;
+    examDate?: string | null;
+    daysUntilExam?: number | null;
+}
+
+export function getEmailTemplate({ segment, name, examDate, daysUntilExam }: EmailTemplateParams): string {
     const firstName = name.split(" ")[0] || "Doctor";
 
     const baseStyle = `
@@ -19,16 +26,41 @@ export function getEmailTemplate(segment: "exam_soon" | "sleeping" | "active" | 
     `;
 
     if (segment === "exam_soon") {
-        return `
-            <div style="${baseStyle}">
-                <h1>Final Push, ${firstName}? 🚀</h1>
-                <p>We noticed your exam is coming up soon. The final weeks are crucial.</p>
-                <p>To help you maximize your preparation, we're giving you a massive boost.</p>
-                ${offer}
-                <p>Good luck!</p>
-                <p>The FaMED Team</p>
-            </div>
-        `;
+        // Check if exam is within 2 weeks (14 days)
+        const isVeryUrgent = daysUntilExam !== null && daysUntilExam !== undefined && daysUntilExam <= 14;
+
+        if (isVeryUrgent) {
+            // Special messaging for exams < 2 weeks
+            return `
+                <div style="${baseStyle}">
+                    <h1>🔔 Hey ${firstName}, Your Test is Around the Corner!</h1>
+                    <p style="font-size: 18px; font-weight: 600; color: #d97706; background: #fef3c7; padding: 12px; border-radius: 8px; text-align: center;">
+                        Your exam is on <strong>${examDate}</strong> — just ${daysUntilExam} day${daysUntilExam === 1 ? '' : 's'} away! ⏰
+                    </p>
+                    <p>You are the <strong>perfect student</strong> to make the most of these final days. As your test approaches, it's crucial that you practice <strong>exactly how the test will be on the real day</strong>.</p>
+                    <p>That's why we highly recommend our <strong>1-on-1 Computer Simulations</strong> 💻 — they replicate the real exam environment so you can walk in with confidence and zero surprises.</p>
+                    <p>To support your final push, here's a special boost:</p>
+                    ${offer}
+                    <p style="margin-top: 30px;">You've got this, ${firstName}! Go crush it! 🚀</p>
+                    <p>The FaMED Team</p>
+                </div>
+            `;
+        } else {
+            // Regular exam soon message (within 90 days but > 2 weeks)
+            const examInfo = examDate ? `<p style="font-size: 16px; background: #fef3c7; padding: 10px; border-radius: 8px; text-align: center;">Your exam is scheduled for <strong>${examDate}</strong>${daysUntilExam ? ` (${daysUntilExam} days away)` : ''}.</p>` : '';
+
+            return `
+                <div style="${baseStyle}">
+                    <h1>Final Push, ${firstName}! 🚀</h1>
+                    ${examInfo}
+                    <p>We noticed your exam is coming up soon. The final weeks are crucial for solidifying your knowledge and building confidence.</p>
+                    <p>To help you maximize your preparation, we're giving you a massive boost:</p>
+                    ${offer}
+                    <p>Good luck with your preparation!</p>
+                    <p>The FaMED Team</p>
+                </div>
+            `;
+        }
     }
 
     if (segment === "sleeping") {
@@ -51,7 +83,7 @@ export function getEmailTemplate(segment: "exam_soon" | "sleeping" | "active" | 
             <p>You're doing great with your preparation.</p>
             <p>To celebrate your dedication (and the holidays), here is a special gift.</p>
             ${offer}
-            <p>Frohe Weihnachten!</p>
+            <p>Happy Holidays!</p>
             <p>The FaMED Team</p>
         </div>
     `;

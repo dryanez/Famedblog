@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { UserData } from "@/lib/types";
-import { CSVUploader } from "./CSVUploader";
 import { ActivityChart } from "./ActivityChart";
-import { Users, Calendar, CloudLightning, Moon, Search, Mail } from "lucide-react";
+import { Users, Calendar, CloudLightning, Moon, Search, Mail, Eye, X, DollarSign } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getEmailTemplate } from "@/lib/email-templates";
 
 // --- Subcomponents (Inlined for speed, can refactor later) ---
 
@@ -32,24 +32,88 @@ function StatCard({ label, value, icon: Icon, color, onClick, active }: any) {
 
 export function Dashboard() {
     const [users, setUsers] = useState<UserData[]>([]);
-    const [activeSegment, setActiveSegment] = useState<"all" | "exam_soon" | "sleeping" | "active">("all");
+    const [activeSegment, setActiveSegment] = useState<"all" | "exam_soon" | "sleeping" | "active" | "paid">("all");
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedUsers, setSelectedUsers] = useState<Set<string>>(new Set());
+    const [previewUser, setPreviewUser] = useState<UserData | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    // Fetch users from Supabase on mount
+    useEffect(() => {
+        async function fetchUsers() {
+            try {
+                setLoading(true);
+                const res = await fetch('/api/users');
+                const json = await res.json();
+
+                if (!res.ok) {
+                    throw new Error(json.error || 'Failed to fetch users');
+                }
+
+                // Map Supabase data to UserData format
+                const mappedUsers: UserData[] = (json.users || []).map((user: any) => {
+                    const fullName = user.full_name || '';
+                    const nameParts = fullName.split(' ');
+                    const firstName = nameParts[0] || '';
+                    const lastName = nameParts.slice(1).join(' ') || '';
+
+                    const examDate = user.exam_date || '';
+                    const parsedExamDate = examDate ? new Date(examDate) : null;
+                    const planExpiry = user.plan_expiry || '';
+                    const parsedPlanExpiry = planExpiry ? new Date(planExpiry) : null;
+
+                    return {
+                        Name: firstName,
+                        'Last Name': lastName,
+                        Email: user.email || '',
+                        'German Level': user.german_level || 'N/A',
+                        'Exam Date': examDate,
+                        'Previous Attempt': user.has_attempted_before ? 'Yes' : 'No',
+                        'Preparation Time': user.preparation_time || 'N/A',
+                        'Total XP': String(user.xp || 0),
+                        'Total Activities': '0', // Not available in Supabase
+                        'Last Active': '', // Not available in Supabase
+                        'Activity Type': '',
+                        'Activity Name': '',
+                        Score: '',
+                        Date: '',
+                        accountType: user.account_type,
+                        planExpiry,
+                        parsedExamDate,
+                        parsedLastActive: null,
+                        parsedTotalXP: user.xp || 0,
+                        parsedPlanExpiry,
+                        id: String(user.id)
+                    };
+                });
+
+                setUsers(mappedUsers);
+                setError(null);
+            } catch (err: any) {
+                console.error('Error fetching users:', err);
+                setError(err.message || 'Failed to load users');
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        fetchUsers();
+    }, []);
 
     // --- Derived State & Stats ---
-    const now = new Date(); // In a real app, might want to fix this date or use user provided date
+    const now = new Date();
     const stats = useMemo(() => {
         const examSoon = users.filter(u => u.parsedExamDate && u.parsedExamDate > now && u.parsedExamDate < new Date(now.getTime() + 90 * 86400000)).length;
-        const sleeping = users.filter(u => !u.parsedLastActive).length; // "Never" active often results in null parsedLastActive
-        // Wait, "Never" active based on CSV logic.
-        // Also check if Last Active is very old (> 30 days) AND they have signed up?
-        // The script logic was: Never Active = Last Active is NaN.
-        // Sleeping Giants (High Potential) was a subset.
-        // Let's align with the segments.
+        // Since we don't have "Last Active", use created_date logic would go here if we had it in the data
+        // For now, sleeping = users with no exam date set (not engaged)
+        const sleeping = users.filter(u => !u['Exam Date'] || u['Exam Date'] === '').length;
+        // Active = users with recent activity (would need activity data, using exam date as proxy for now)
+        const activeRecent = users.filter(u => u.parsedExamDate && u.parsedExamDate > now).length;
+        // Paid = any account_type that starts with "paid"
+        const paid = users.filter(u => u.accountType && u.accountType.startsWith('paid')).length;
 
-        const activeRecent = users.filter(u => u.parsedLastActive && u.parsedLastActive > new Date(now.getTime() - 30 * 86400000)).length;
-
-        return { total: users.length, examSoon, sleeping, activeRecent };
+        return { total: users.length, examSoon, sleeping, activeRecent, paid };
     }, [users]);
 
     const filteredUsers = useMemo(() => {
@@ -59,11 +123,11 @@ export function Dashboard() {
         if (activeSegment === "exam_soon") {
             result = result.filter(u => u.parsedExamDate && u.parsedExamDate > now && u.parsedExamDate < new Date(now.getTime() + 90 * 86400000));
         } else if (activeSegment === "sleeping") {
-            result = result.filter(u => !u.parsedLastActive); // Never active
-            // Note: Users who were active long ago are also "sleeping" but let's stick to "Never" for the big bucket, or "Inactive > 30d"
-            // Let's make "Sleeping" = Never active OR Inactive > 60 days
+            result = result.filter(u => !u['Exam Date'] || u['Exam Date'] === '');
         } else if (activeSegment === "active") {
-            result = result.filter(u => u.parsedLastActive && u.parsedLastActive > new Date(now.getTime() - 30 * 86400000));
+            result = result.filter(u => u.parsedExamDate && u.parsedExamDate > now);
+        } else if (activeSegment === "paid") {
+            result = result.filter(u => u.accountType && u.accountType.startsWith('paid'));
         }
 
         // search
@@ -94,6 +158,13 @@ export function Dashboard() {
         setSelectedUsers(next);
     };
 
+    const getDaysUntilExam = (user: UserData): number | null => {
+        if (!user.parsedExamDate) return null;
+        const now = new Date();
+        const diff = user.parsedExamDate.getTime() - now.getTime();
+        return Math.ceil(diff / (1000 * 60 * 60 * 24));
+    };
+
     const sendBulkEmail = async () => {
         const recipients = filteredUsers.filter(u => selectedUsers.has(u.id));
         if (recipients.length === 0) return;
@@ -106,7 +177,12 @@ export function Dashboard() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    emails: recipients.map(u => ({ email: u.Email, name: u.Name })),
+                    emails: recipients.map(u => ({
+                        email: u.Email,
+                        name: u.Name,
+                        examDate: u["Exam Date"] || null,
+                        daysUntilExam: getDaysUntilExam(u)
+                    })),
                     segment: activeSegment
                 })
             });
@@ -118,32 +194,100 @@ export function Dashboard() {
         }
     };
 
-    if (users.length === 0) {
+    // Email Preview Modal
+    const EmailPreviewModal = () => {
+        if (!previewUser) return null;
+
+        const daysUntilExam = getDaysUntilExam(previewUser);
+        const emailHtml = getEmailTemplate({
+            segment: activeSegment,
+            name: previewUser.Name,
+            examDate: previewUser["Exam Date"] || null,
+            daysUntilExam
+        });
+
         return (
-            <div className="max-w-xl mx-auto mt-20 px-6">
-                <div className="text-center mb-10">
-                    <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-3">Welcome Back, Felipe</h1>
-                    <p className="text-gray-500 text-lg">Upload the latest user activity export to analyze segments.</p>
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={() => setPreviewUser(null)}>
+                <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto" onClick={(e) => e.stopPropagation()}>
+                    <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between">
+                        <div>
+                            <h2 className="text-xl font-bold text-gray-900">Email Preview</h2>
+                            <p className="text-sm text-gray-500">
+                                To: {previewUser.Email} ({previewUser.Name})
+                                {daysUntilExam !== null && ` • ${daysUntilExam} days until exam`}
+                            </p>
+                        </div>
+                        <button
+                            onClick={() => setPreviewUser(null)}
+                            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                        >
+                            <X className="w-5 h-5 text-gray-500" />
+                        </button>
+                    </div>
+                    <div className="p-6">
+                        <div className="bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
+                            <p className="text-sm text-gray-600 mb-1"><strong>Subject:</strong></p>
+                            <p className="text-gray-900">
+                                {activeSegment === 'exam_soon' && daysUntilExam !== null && daysUntilExam <= 14
+                                    ? `🔔 Your Test is Around the Corner, ${previewUser.Name.split(" ")[0]}!`
+                                    : activeSegment === 'exam_soon'
+                                        ? 'Final Push for your Exam 🚀'
+                                        : '50% Off FaMED Xmas Special 🎄'}
+                            </p>
+                        </div>
+                        <div
+                            className="prose prose-sm max-w-none"
+                            dangerouslySetInnerHTML={{ __html: emailHtml }}
+                        />
+                    </div>
                 </div>
-                <CSVUploader onDataLoaded={setUsers} />
+            </div>
+        );
+    };
+
+    if (loading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                <div className="text-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+                    <p className="text-gray-600">Loading users from database...</p>
+                </div>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gray-50">
+                <div className="max-w-md text-center">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Failed to Load Users</h2>
+                    <p className="text-gray-600 mb-4">{error}</p>
+                    <button
+                        onClick={() => window.location.reload()}
+                        className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800"
+                    >
+                        Retry
+                    </button>
+                </div>
             </div>
         );
     }
 
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
+            <EmailPreviewModal />
             <header className="flex items-center justify-between pb-6 border-b border-gray-100">
                 <div>
                     <h1 className="text-2xl font-bold tracking-tight text-gray-900">User Analytics</h1>
                     <p className="text-gray-500">Targeting Strategy: Xmas 50% Special</p>
                 </div>
                 <div className="flex gap-3">
-                    <button
-                        onClick={() => setUsers([])}
-                        className="px-4 py-2 text-sm text-gray-600 hover:text-gray-900 font-medium"
+                    <a
+                        href="/admin/campaigns"
+                        className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm bg-blue-600 text-white hover:bg-blue-700"
                     >
-                        Reset Data
-                    </button>
+                        📧 Campaigns
+                    </a>
                     <button
                         onClick={sendBulkEmail}
                         disabled={selectedUsers.size === 0}
@@ -161,7 +305,7 @@ export function Dashboard() {
             </header>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-5 gap-4">
                 <StatCard
                     label="Total Users"
                     value={stats.total}
@@ -177,6 +321,14 @@ export function Dashboard() {
                     color="bg-amber-100"
                     active={activeSegment === 'exam_soon'}
                     onClick={() => setActiveSegment('exam_soon')}
+                />
+                <StatCard
+                    label="Paid Users"
+                    value={stats.paid}
+                    icon={DollarSign}
+                    color="bg-green-100"
+                    active={activeSegment === 'paid'}
+                    onClick={() => setActiveSegment('paid')}
                 />
                 <StatCard
                     label="Sleeping Giants"
@@ -230,9 +382,11 @@ export function Dashboard() {
                                 <th className="px-6 py-3">Name</th>
                                 <th className="px-6 py-3">Email</th>
                                 <th className="px-6 py-3">German Level</th>
+                                <th className="px-6 py-3">Account Type</th>
+                                <th className="px-6 py-3">Plan Expiry</th>
                                 <th className="px-6 py-3">Exam Date</th>
-                                <th className="px-6 py-3">Last Active</th>
                                 <th className="px-6 py-3 text-right">Total XP</th>
+                                <th className="px-6 py-3 text-center">Preview</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-50">
@@ -260,24 +414,36 @@ export function Dashboard() {
                                             {user["German Level"] || "N/A"}
                                         </span>
                                     </td>
+                                    <td className="px-6 py-3">
+                                        <span className={cn(
+                                            "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium",
+                                            user.accountType && user.accountType.startsWith('paid')
+                                                ? "bg-green-100 text-green-700"
+                                                : "bg-gray-100 text-gray-600"
+                                        )}>
+                                            {user.accountType === 'paid_1m' ? 'Paid 1M' :
+                                                user.accountType === 'paid_3m' ? 'Paid 3M' :
+                                                    user.accountType || 'Free'}
+                                        </span>
+                                    </td>
+                                    <td className="px-6 py-3 text-gray-600">
+                                        {user.planExpiry || "-"}
+                                    </td>
                                     <td className="px-6 py-3 text-gray-600">
                                         {user["Exam Date"] || "-"}
                                     </td>
-                                    <td className="px-6 py-3">
-                                        {user["Last Active"] ? (
-                                            <span className={cn(
-                                                user.parsedLastActive && user.parsedLastActive > new Date(now.getTime() - 30 * 86400000)
-                                                    ? "text-green-600"
-                                                    : "text-gray-400"
-                                            )}>
-                                                {user["Last Active"]}
-                                            </span>
-                                        ) : (
-                                            <span className="text-gray-300 italic">Never</span>
-                                        )}
-                                    </td>
                                     <td className="px-6 py-3 text-right text-gray-900 font-mono">
                                         {user["Total XP"]}
+                                    </td>
+                                    <td className="px-6 py-3 text-center">
+                                        <button
+                                            onClick={() => setPreviewUser(user)}
+                                            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+                                            title="Preview email"
+                                        >
+                                            <Eye className="w-4 h-4" />
+                                            Preview
+                                        </button>
                                     </td>
                                 </tr>
                             ))}

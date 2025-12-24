@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from '@/lib/supabaseClient';
 import { useRouter } from 'next/navigation';
 
 export default function AdminLogin() {
@@ -15,11 +15,6 @@ export default function AdminLogin() {
         e.preventDefault();
         setLoading(true);
         setError(null);
-
-        const supabase = createClient(
-            process.env.NEXT_PUBLIC_SUPABASE_URL!,
-            process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-        );
 
         const { error } = await supabase.auth.signInWithPassword({
             email,
