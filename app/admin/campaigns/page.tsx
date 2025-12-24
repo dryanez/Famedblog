@@ -10,7 +10,8 @@ import {
     getExamUrgency7Days,
     getExamUrgency3Days,
     getWelcomeDay0,
-    getSubscriptionExpiry
+    getSubscriptionExpiry,
+    getExamUrgencySpecialOffer
 } from "@/lib/campaign-templates";
 import { CampaignStatsModal } from "./CampaignStatsModal";
 
@@ -38,6 +39,17 @@ const DEFAULT_CAMPAIGNS: CampaignTemplate[] = [
         color: "bg-amber-100 text-amber-700",
         estimatedReach: 0,
         conversionRate: "40-60%"
+    },
+    {
+        id: "exam_urgency_special_offer",
+        name: "Two Week Special Offer ($19.99)",
+        description: "Trigger: Exam in 7-14 days. Upsell: Fast Track Prep.",
+        type: "automated",
+        targetSegment: "exam_7_14d_unpaid",
+        icon: DollarSign,
+        color: "bg-green-100 text-green-700",
+        estimatedReach: 0,
+        conversionRate: "65-85%"
     },
     {
         id: "exam_urgency_7d",
@@ -229,6 +241,9 @@ export default function CampaignsPage() {
             switch (campaignId) {
                 case 'exam_urgency_14d':
                     template = getExamUrgency14Days(sampleData);
+                    break;
+                case 'exam_urgency_special_offer':
+                    template = getExamUrgencySpecialOffer(sampleData);
                     break;
                 case 'exam_urgency_7d':
                     template = getExamUrgency7Days(sampleData);

@@ -6,7 +6,8 @@ import {
     getExamUrgency7Days,
     getExamUrgency3Days,
     getWelcomeDay0,
-    getSubscriptionExpiry
+    getSubscriptionExpiry,
+    getExamUrgencySpecialOffer
 } from '@/lib/campaign-templates';
 
 const supabase = createClient(
@@ -47,6 +48,7 @@ export async function POST(request: Request) {
             // Try to find if campaignId matches a default template
             const found = [
                 { id: 'exam_urgency_14d', t: getExamUrgency14Days, s: '⚠️ Test: Exam in 14 Days' },
+                { id: 'exam_urgency_special_offer', t: getExamUrgencySpecialOffer, s: '🔥 Test: Special Offer ($19.99)' },
                 { id: 'exam_urgency_7d', t: getExamUrgency7Days, s: '🚨 Test: Exam in 7 Days' },
                 { id: 'exam_urgency_3d', t: getExamUrgency3Days, s: '⏰ Test: 72 Hours Until Exam' },
                 { id: 'welcome_day0', t: getWelcomeDay0, s: '👋 Test: Welcome to FaMED' },
@@ -74,6 +76,17 @@ export async function POST(request: Request) {
                     });
                     emailTemplate = getExamUrgency14Days;
                     subjectLine = '⚠️ Your Exam is in 14 Days!';
+                    break;
+
+                case 'exam_urgency_special_offer':
+                    targetUsers = users.filter(u => {
+                        if (!u.exam_date || u.account_type !== 'free') return false;
+                        const examDate = new Date(u.exam_date);
+                        const daysUntil = (examDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24);
+                        return daysUntil >= 7 && daysUntil <= 15; // 1-2 weeks
+                    });
+                    emailTemplate = getExamUrgencySpecialOffer;
+                    subjectLine = '🔥 Special Offer: Last Minute Rescue Pack (€19.99)';
                     break;
 
                 case 'exam_urgency_7d':
