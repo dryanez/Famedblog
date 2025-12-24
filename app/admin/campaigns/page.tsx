@@ -189,7 +189,12 @@ export default function CampaignsPage() {
             const data = await response.json();
 
             if (response.ok) {
-                setResult({ success: true, message: `Successfully sent to ${data.sentCount} users!` });
+                console.log('Campaign sent to:', data.recipients);
+                const recipientList = data.recipients?.map((r: any) => `${r.name} (${r.email})`).join(', ') || '';
+                setResult({
+                    success: true,
+                    message: `Successfully sent to ${data.sentCount} users!\n\nRecipients:\n${recipientList || 'No recipient details available'}`
+                });
             } else {
                 setResult({ success: false, message: data.error || 'Failed to send campaign' });
             }

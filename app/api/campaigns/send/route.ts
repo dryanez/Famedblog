@@ -207,8 +207,8 @@ export async function POST(request: Request) {
             });
         }
 
-        // Prepare emails (batch of 50 max for demo)
-        const emailsToSend = targetUsers.slice(0, 50).map(user => {
+        // Prepare emails for all eligible users
+        const emailsToSend = targetUsers.map(user => {
             const daysUntilExam = user.exam_date
                 ? Math.ceil((new Date(user.exam_date).getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
                 : undefined;
@@ -293,7 +293,12 @@ export async function POST(request: Request) {
             success: true,
             sentCount: emailsToSend.length,
             totalEligible: targetUsers.length,
-            message: `Successfully sent ${emailsToSend.length} emails`
+            message: `Successfully sent ${emailsToSend.length} emails`,
+            recipients: targetUsers.map(u => ({
+                email: u.email,
+                name: u.full_name,
+                accountType: u.account_type
+            }))
         });
 
     } catch (error: any) {
