@@ -161,17 +161,17 @@ export async function POST(request: Request) {
 
                 case 'holiday_special':
                     // Check if there is a custom override in the database
-                    const { data: holidayOverrides } = await supabase
+                    const { data: holidayOverride } = await supabase
                         .from('campaigns')
                         .select('content')
-                        .eq('id', 'holiday_special')
+                        .eq('name', 'Holiday Special')
                         .single();
 
                     // Target all free users (not paid)
                     targetUsers = users.filter(u => !u.account_type?.startsWith('paid'));
 
-                    if (holidayOverrides?.content) {
-                        emailTemplate = () => holidayOverrides.content;
+                    if (holidayOverride?.content) {
+                        emailTemplate = () => holidayOverride.content;
                     } else {
                         emailTemplate = getHolidaySpecial;
                     }

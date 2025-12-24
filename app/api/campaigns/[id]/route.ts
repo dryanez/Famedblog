@@ -44,25 +44,49 @@ export async function PATCH(
         }
 
 
-        // Use upsert to create the record if it doesn't exist, or update if it does
-        const { error } = await supabase
-            .from('campaigns')
-            .upsert({
-                id: id,
-                name: id === 'holiday_special' ? 'Holiday Special' : `Campaign ${id}`,
-                content: htmlContent,
-                status: 'draft',
-                target_audience: 'Default',
-                goal: 'Engagement',
-                tone: 'Professional',
-                metadata: { lastModified: new Date().toISOString() }
-            }, {
-                onConflict: 'id' // Update based on id if it exists
-            });
+        // For default campaigns like 'holiday_special', we need to find or create by name
+        // since the DB uses UUID for id, not the campaign identifier
+        const campaignName = id === 'holiday_special' ? 'Holiday Special' : `Campaign ${id}`;
 
-        if (error) {
-            console.error('Upsert error:', error);
-            return NextResponse.json({ error: error.message }, { status: 500 });
+        // First, try to find an existing campaign with this name
+        const { data: existingCampaign } = await supabase
+            .from('campaigns')
+            .select('id')
+            .eq('name', campaignName)
+            .single();
+
+        if (existingCampaign) {
+            // Update existing campaign
+            const { error } = await supabase
+                .from('campaigns')
+                .update({
+                    content: htmlContent,
+                    metadata: { lastModified: new Date().toISOString() }
+                })
+                .eq('id', existingCampaign.id);
+
+            if (error) {
+                console.error('Update error:', error);
+                return NextResponse.json({ error: error.message }, { status: 500 });
+            }
+        } else {
+            // Create new campaign
+            const { error } = await supabase
+                .from('campaigns')
+                .insert({
+                    name: campaignName,
+                    content: htmlContent,
+                    status: 'draft',
+                    target_audience: 'Default',
+                    goal: 'Engagement',
+                    tone: 'Professional',
+                    metadata: { campaignId: id, lastModified: new Date().toISOString() }
+                });
+
+            if (error) {
+                console.error('Insert error:', error);
+                return NextResponse.json({ error: error.message }, { status: 500 });
+            }
         }
 
         return NextResponse.json({ success: true, message: 'Campaign saved successfully' });
