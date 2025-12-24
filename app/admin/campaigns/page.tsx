@@ -284,12 +284,12 @@ export default function CampaignsPage() {
     };
 
     // Save changes to a custom campaign
-    const handleSaveChanges = () => {
+    const handleSaveChanges = async () => {
         // Allow saving for any campaign that is in our custom list (persisted or new)
-        // But realistically, only custom campaigns have the 'Save' button in the modal currently
+        // AND special allowance for "holiday_special" which we want to be editable
         const isDefault = DEFAULT_CAMPAIGNS.some(c => c.id === previewCampaignId);
 
-        if (isDefault) {
+        if (isDefault && previewCampaignId !== 'holiday_special') {
             alert("You cannot modify default campaigns permanently.");
             return;
         }
@@ -533,8 +533,8 @@ export default function CampaignsPage() {
                                 </p>
                             </div>
                             <div className="flex gap-2">
-                                {/* Save Button - Only for custom campaigns */}
-                                {previewCampaignId && !DEFAULT_CAMPAIGNS.some(c => c.id === previewCampaignId) && (
+                                {/* Save Button - For custom campaigns OR Holiday Special */}
+                                {previewCampaignId && (!DEFAULT_CAMPAIGNS.some(c => c.id === previewCampaignId) || previewCampaignId === 'holiday_special') && (
                                     <button
                                         onClick={handleSaveChanges}
                                         className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 font-medium transition-all"

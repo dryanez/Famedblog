@@ -160,10 +160,23 @@ export async function POST(request: Request) {
                     break;
 
                 case 'holiday_special':
+                    // Check if there is a custom override in the database
+                    const { data: holidayOverrides } = await supabase
+                        .from('campaigns')
+                        .select('content')
+                        .eq('id', 'holiday_special')
+                        .single();
+
                     // Target all free users (not paid)
                     targetUsers = users.filter(u => !u.account_type?.startsWith('paid'));
-                    emailTemplate = getHolidaySpecial;
-                    textTemplate = getTextHolidaySpecial;
+
+                    if (holidayOverrides?.content) {
+                        emailTemplate = () => holidayOverrides.content;
+                    } else {
+                        emailTemplate = getHolidaySpecial;
+                    }
+
+                    textTemplate = getTextHolidaySpecial; // We only allow editing HTML for now
                     subjectLine = '🎄 Holiday Special: 50% Off + Free Book! 🎁';
                     break;
 
