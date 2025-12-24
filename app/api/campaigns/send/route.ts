@@ -185,7 +185,13 @@ export async function POST(request: Request) {
                 to: user.email,
                 reply_to: 'support@famed-vorbereitung.com',
                 subject: subjectLine,
-                html: htmlContent
+                html: htmlContent,
+                headers: {
+                    'X-Entity-Ref-ID': campaignId
+                },
+                // Disable tracking to improve deliverability
+                open_tracking: false,
+                click_tracking: false
             };
         });
 

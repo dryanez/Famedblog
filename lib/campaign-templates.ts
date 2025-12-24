@@ -21,7 +21,7 @@ export const getExamUrgency14Days = (data: any) => `
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center" valign="middle">
-            <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
             <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">FaMED Exam Prep</span>
           </td>
         </tr>
@@ -71,7 +71,7 @@ export const getExamUrgencySpecialOffer = (data: any) => `
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center" valign="middle">
-            <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
             <span style="font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; vertical-align: middle;">LAST MINUTE EXAM RESCUE</span>
           </td>
         </tr>
@@ -132,7 +132,7 @@ export const getExamUrgency7Days = (data: any) => `
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center" valign="middle">
-            <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
             <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">7 Days Left. Don't Panic.</span>
           </td>
         </tr>
@@ -175,7 +175,7 @@ export const getExamUrgency3Days = (data: any) => `
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center" valign="middle">
-            <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
             <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">72 Hours Remaining</span>
           </td>
         </tr>
@@ -217,7 +217,7 @@ export const getWelcomeDay0 = (data: any) => `
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center" valign="middle">
-            <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
             <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">Welcome to FaMED Prep! 🩺</span>
           </td>
         </tr>
@@ -263,7 +263,7 @@ export const getSubscriptionExpiry = (data: any) => `
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center" valign="middle">
-            <img src="https://famed-vorbereitung.com/logo.svg" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
             <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">Don't Lose Your Progress</span>
           </td>
         </tr>
