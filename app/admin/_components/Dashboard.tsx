@@ -6,6 +6,7 @@ import { ActivityChart } from "./ActivityChart";
 import { Users, Calendar, CloudLightning, Moon, Search, Mail, Eye, X, DollarSign } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { getEmailTemplate } from "@/lib/email-templates";
+import { CampaignHistoryModal } from "./CampaignHistoryModal";
 
 // --- Subcomponents (Inlined for speed, can refactor later) ---
 
@@ -36,6 +37,8 @@ export function Dashboard() {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedUsers, setSelectedUsers] = useState<Set<string>>(new Set());
     const [previewUser, setPreviewUser] = useState<UserData | null>(null);
+    const [historyUserId, setHistoryUserId] = useState<string | null>(null);
+    const [historyUserEmail, setHistoryUserEmail] = useState<string>("");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -386,6 +389,7 @@ export function Dashboard() {
                                 <th className="px-6 py-3">Plan Expiry</th>
                                 <th className="px-6 py-3">Exam Date</th>
                                 <th className="px-6 py-3 text-right">Total XP</th>
+                                <th className="px-6 py-3 text-center">Campaigns</th>
                                 <th className="px-6 py-3 text-center">Preview</th>
                             </tr>
                         </thead>
@@ -437,6 +441,19 @@ export function Dashboard() {
                                     </td>
                                     <td className="px-6 py-3 text-center">
                                         <button
+                                            onClick={() => {
+                                                setHistoryUserId(user.id);
+                                                setHistoryUserEmail(user.Email);
+                                            }}
+                                            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-blue-600 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-colors"
+                                            title="View campaign history"
+                                        >
+                                            <Mail className="w-4 h-4" />
+                                            History
+                                        </button>
+                                    </td>
+                                    <td className="px-6 py-3 text-center">
+                                        <button
                                             onClick={() => setPreviewUser(user)}
                                             className="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
                                             title="Preview email"
@@ -456,6 +473,18 @@ export function Dashboard() {
                     )}
                 </div>
             </div>
+
+            {/* Campaign History Modal */}
+            {historyUserId && (
+                <CampaignHistoryModal
+                    userId={historyUserId}
+                    userEmail={historyUserEmail}
+                    onClose={() => {
+                        setHistoryUserId(null);
+                        setHistoryUserEmail("");
+                    }}
+                />
+            )}
         </div>
     );
 }
