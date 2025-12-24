@@ -1,6 +1,32 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
 
+export async function GET(
+    request: Request,
+    { params }: { params: Promise<{ id: string }> }
+) {
+    try {
+        const { id } = await params;
+        const campaignName = id === 'holiday_special' ? 'Holiday Special' : `Campaign ${id}`;
+
+        const { data: campaign, error } = await supabase
+            .from('campaigns')
+            .select('content')
+            .eq('name', campaignName)
+            .single();
+
+        if (error || !campaign) {
+            return NextResponse.json({ content: null }, { status: 404 });
+        }
+
+        return NextResponse.json({ content: campaign.content });
+
+    } catch (error: any) {
+        console.error('GET handler error:', error);
+        return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+}
+
 export async function DELETE(
     request: Request,
     { params }: { params: Promise<{ id: string }> } // In Next.js 15+ params is a Promise

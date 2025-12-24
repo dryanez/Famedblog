@@ -231,7 +231,7 @@ export default function CampaignsPage() {
         }
     };
 
-    const handlePreview = (campaignId: string) => {
+    const handlePreview = async (campaignId: string) => {
         const campaign = allCampaigns.find(c => c.id === campaignId);
         if (!campaign) return;
 
@@ -241,40 +241,59 @@ export default function CampaignsPage() {
         if (campaign.customContent) {
             template = campaign.customContent;
         } else {
-            const sampleData = {
-                userName: "Dr. Maria Schmidt",
-                userEmail: "maria.schmidt@example.com",
-                examDate: "2026-01-15",
-                daysUntilExam: 14,
-                planExpiry: "2025-02-01",
-                accountType: "paid_1m"
-            };
+            // For holiday_special, check if there's saved content in the database
+            if (campaignId === 'holiday_special') {
+                try {
+                    const response = await fetch('/api/campaigns/holiday_special');
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data.content) {
+                            console.log('Loaded saved holiday_special content from DB');
+                            template = data.content;
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error fetching saved holiday content:', error);
+                }
+            }
 
-            switch (campaignId) {
-                case 'exam_urgency_14d':
-                    template = getExamUrgency14Days(sampleData);
-                    break;
-                case 'exam_urgency_special_offer':
-                    template = getExamUrgencySpecialOffer(sampleData);
-                    break;
-                case 'exam_urgency_7d':
-                    template = getExamUrgency7Days(sampleData);
-                    break;
-                case 'exam_urgency_3d':
-                    template = getExamUrgency3Days(sampleData);
-                    break;
-                case 'welcome_day0':
-                    template = getWelcomeDay0(sampleData);
-                    break;
-                case 'subscription_expiry':
-                    template = getSubscriptionExpiry(sampleData);
-                    break;
-                case 'holiday_special':
-                    template = getHolidaySpecial(sampleData);
-                    break;
-                default:
-                    // For default campaigns without specific function or manual ones
-                    template = "<div>No preview available for this standard campaign yet.</div>";
+            // If no saved content, use default template
+            if (!template) {
+                const sampleData = {
+                    userName: "Dr. Maria Schmidt",
+                    userEmail: "maria.schmidt@example.com",
+                    examDate: "2026-01-15",
+                    daysUntilExam: 14,
+                    planExpiry: "2025-02-01",
+                    accountType: "paid_1m"
+                };
+
+                switch (campaignId) {
+                    case 'exam_urgency_14d':
+                        template = getExamUrgency14Days(sampleData);
+                        break;
+                    case 'exam_urgency_special_offer':
+                        template = getExamUrgencySpecialOffer(sampleData);
+                        break;
+                    case 'exam_urgency_7d':
+                        template = getExamUrgency7Days(sampleData);
+                        break;
+                    case 'exam_urgency_3d':
+                        template = getExamUrgency3Days(sampleData);
+                        break;
+                    case 'welcome_day0':
+                        template = getWelcomeDay0(sampleData);
+                        break;
+                    case 'subscription_expiry':
+                        template = getSubscriptionExpiry(sampleData);
+                        break;
+                    case 'holiday_special':
+                        template = getHolidaySpecial(sampleData);
+                        break;
+                    default:
+                        // For default campaigns without specific function or manual ones
+                        template = "<div>No preview available for this standard campaign yet.</div>";
+                }
             }
         }
 
