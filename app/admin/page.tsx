@@ -10,10 +10,11 @@ export default function AdminPage() {
     const router = useRouter();
 
     useEffect(() => {
-        const checkAuth = async () => {
-            const { data: { session } } = await supabase.auth.getSession();
+        const checkAuth = () => {
+            // Check for simple admin cookie
+            const isAdmin = document.cookie.split('; ').find(row => row.startsWith('admin_session='));
 
-            if (!session) {
+            if (!isAdmin) {
                 router.push('/admin/login');
             } else {
                 setLoading(false);
