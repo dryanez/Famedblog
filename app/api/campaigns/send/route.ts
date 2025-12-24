@@ -13,8 +13,6 @@ import {
     getTextExamUrgency3Days,
     getTextWelcomeDay0,
     getTextSubscriptionExpiry,
-    getTextWelcomeDay0,
-    getTextSubscriptionExpiry,
     getTextExamUrgencySpecialOffer,
     getHolidaySpecial,
     getTextHolidaySpecial
