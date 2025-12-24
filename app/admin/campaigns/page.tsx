@@ -294,31 +294,36 @@ export default function CampaignsPage() {
             return;
         }
 
-        // ... existing save logic ...
-        // Since we are now using Supabase, saving changes to CONTENT for an existing campaign
-        // requires an UPDATE API call, which is not yet implemented in the backend fully for UPDATES,
-        // only CREATE and DELETE.
-        // The current implementation of handleSaveChanges was for localStorage.
-        // For now, let's just update local state and show a "Saved" message, 
-        // OR better, alert that updating content is not fully supported yet if it's a persisted campaign.
-        // However, the user task was Persistence (Generate) and Deletion.
-        // Editing *content* of an *existing* persisted campaign was not explicitly in the 'Done' list,
-        // but it's good UX.
-        // Given I didn't create a PUT/PATCH route, I will fix the condition but maybe warn or just strict to optimistic update for now.
-        // Wait, the prompt asked for "Ensure generated campaigns are saved... Implement ability to delete".
-        // Editing is extra. I will just fix the check to not crash.
 
-        setCustomCampaigns(prev => prev.map(c =>
-            c.id === previewCampaignId
-                ? { ...c, customContent: editedContent }
-                : c
-        ));
+        setSending(true);
+        try {
+            const response = await fetch(`/api/campaigns/${previewCampaignId}`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ htmlContent: editedContent })
+            });
 
-        setIsEditing(false);
-        setResult({ success: true, message: "Campaign changes saved locally (refresh will reset)!" });
+            const data = await response.json();
 
-        // Hide success message after 3s
-        setTimeout(() => setResult(null), 3000);
+            if (response.ok) {
+                // Update local state
+                setCustomCampaigns(prev => prev.map(c =>
+                    c.id === previewCampaignId
+                        ? { ...c, customContent: editedContent }
+                        : c
+                ));
+                setResult({ success: true, message: "Campaign saved successfully!" });
+                setIsEditing(false);
+            } else {
+                setResult({ success: false, message: data.error || 'Failed to save campaign' });
+            }
+        } catch (error) {
+            console.error('Save error:', error);
+            setResult({ success: false, message: 'Network error saving campaign' });
+        } finally {
+            setSending(false);
+            setTimeout(() => setResult(null), 3000);
+        }
     };
 
     const handleDeleteCampaign = async (e: React.MouseEvent, id: string) => {
