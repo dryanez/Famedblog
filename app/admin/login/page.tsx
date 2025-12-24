@@ -11,23 +11,24 @@ export default function AdminLogin() {
     const [error, setError] = useState<string | null>(null);
     const router = useRouter();
 
-    const handleLogin = async (e: React.FormEvent) => {
+    const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
         setError(null);
 
-        const { error } = await supabase.auth.signInWithPassword({
-            email,
-            password,
-        });
+        // Simple hardcoded auth for now
+        // Allow both the specific email and 'admin' as username
+        const isValid = (email === 'dr.felipeyanez@gmail.com' && password === 'admin') ||
+            (email === 'admin' && password === 'admin');
 
-        if (error) {
-            setError(error.message);
-            setLoading(false);
-        } else {
+        if (isValid) {
+            document.cookie = 'admin_session=true; path=/';
             router.push('/admin');
             router.refresh();
+        } else {
+            setError('Invalid credentials');
         }
+        setLoading(false);
     };
 
     return (
