@@ -47,6 +47,18 @@ export const getExamUrgency14Days = (data: any) => `
 </html>
 `;
 
+export const getTextExamUrgency14Days = (data: any) => `Hi ${data.userName},
+
+We noticed your exam is scheduled for ${new Date(data.examDate).toLocaleDateString()}. That is exactly ${data.daysUntilExam} days from now.
+
+Typically, these last two weeks are where 80% of candidates make or break their grade. It's not about learning new things anymore—it's about pattern recognition and confidence.
+
+Are you ready?
+We have a specific "Final Sprint" module designed exactly for this timeframe.
+
+Access the Final Sprint: https://famed-vorbereitung.com/pricing
+`;
+
 export const getExamUrgencySpecialOffer = (data: any) => `
 <!DOCTYPE html>
 <html>
@@ -85,8 +97,8 @@ export const getExamUrgencySpecialOffer = (data: any) => `
       <div class="highlight-box">
         <p style="margin:0; font-weight:600; color:#7f1d1d;">SPECIAL "CRUNCH TIME" OFFER</p>
         <div style="margin: 10px 0;">
-          <span class="price-old">€69.00</span>
-          <span class="price-new">€19.99</span>
+            <span class="price-old">€69.00</span>
+            <span class="price-new">€19.99</span>
         </div>
         <a href="https://buy.stripe.com/9B64gAb4R2YV2sA8Vz7Re0o" class="btn">⚡ UNLOCK NOW - €19.99</a>
         <p class="timer">Offer Expires in 24 Hours</p>
@@ -110,6 +122,25 @@ export const getExamUrgencySpecialOffer = (data: any) => `
   </div>
 </body>
 </html>
+`;
+
+export const getTextExamUrgencySpecialOffer = (data: any) => `Hi ${data.userName},
+
+Your exam is in less than 2 weeks. The pressure is on.
+We know you don't have time for full courses anymore. You need the highest yield information, fast.
+
+SPECIAL "CRUNCH TIME" OFFER
+Price: €19.99 (was €69.00)
+Offer Expires in 24 Hours
+
+What you get instantly:
+- Rapid Review Cheatsheets (PDFs)
+- 5 "Must-Know" Clinical Cases
+- Interactive Exam Simulator
+
+Don't risk your grade to save €20. Give yourself the best chance to pass.
+
+Get Instant Access: https://buy.stripe.com/9B64gAb4R2YV2sA8Vz7Re0o
 `;
 
 export const getExamUrgency7Days = (data: any) => `
@@ -155,6 +186,17 @@ export const getExamUrgency7Days = (data: any) => `
 </html>
 `;
 
+export const getTextExamUrgency7Days = (data: any) => `Hi ${data.userName},
+
+This is it. The final week.
+Most students make the mistake of trying to cram everything in the last week. That leads to burnout.
+
+You need a strategy.
+Our 7-Day Emergency Plan focuses only on the highest-yield topics that appear on 90% of exams.
+
+Get the 7-Day Plan: https://famed-vorbereitung.com/pricing
+`;
+
 export const getExamUrgency3Days = (data: any) => `
 <!DOCTYPE html>
 <html>
@@ -195,6 +237,16 @@ export const getExamUrgency3Days = (data: any) => `
   </div>
 </body>
 </html>
+`;
+
+export const getTextExamUrgency3Days = (data: any) => `Hi ${data.userName},
+
+Relax. Take a deep breath.
+You have prepared for this. The next 3 days are about maintenance and mindset, not heavy lifting.
+
+We've prepared a Pre-Exam Checklist specifically for the FaMED exam to ensure you don't miss any small details on exam day.
+
+Download Checklist: https://famed-vorbereitung.com/checklist
 `;
 
 export const getWelcomeDay0 = (data: any) => `
@@ -243,6 +295,19 @@ export const getWelcomeDay0 = (data: any) => `
 </html>
 `;
 
+export const getTextWelcomeDay0 = (data: any) => `Hi ${data.userName},
+
+Thanks for joining us! You've taken the first serious step towards passing your exam.
+
+Here is what to do next:
+1. Set your Exam Date in the dashboard.
+2. Take the Diagnostic Test to see where you stand.
+
+We are here to guide you every step of the way.
+
+Go to Dashboard: https://famed-vorbereitung.com/dashboard
+`;
+
 export const getSubscriptionExpiry = (data: any) => `
 <!DOCTYPE html>
 <html>
@@ -283,3 +348,102 @@ export const getSubscriptionExpiry = (data: any) => `
 </body>
 </html>
 `;
+
+export const getTextSubscriptionExpiry = (data: any) => `Hi ${data.userName},
+
+Your Premium subscription is set to expire on ${new Date(data.planExpiry).toLocaleDateString()}.
+
+To ensure uninterrupted access to all your study materials, progress tracking, and simulation exams, please renew your subscription today.
+
+
+Renew Subscription: https://famed-vorbereitung.com/billing
+`;
+
+export const getHolidaySpecial = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f0fdf4; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #15803d; padding: 30px; text-align: center; background-image: linear-gradient(135deg, #15803d 25%, #16a34a 25%, #16a34a 50%, #15803d 50%, #15803d 75%, #16a34a 75%, #16a34a 100%); background-size: 20px 20px; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 28px; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+  .content { padding: 40px 30px; }
+  .gift-box { background-color: #fef2f2; border: 2px dashed #dc2626; padding: 25px; text-align: center; border-radius: 12px; margin: 25px 0; position: relative; }
+  .gift-tag { background-color: #dc2626; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); }
+  .price-old { text-decoration: line-through; color: #9ca3af; font-size: 18px; }
+  .price-new { color: #dc2626; font-size: 36px; font-weight: 800; margin-left: 10px; }
+  .btn { display: inline-block; background-color: #dc2626; color: #ffffff; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 20px; margin-top: 15px; width: 100%; text-align: center; box-sizing: border-box; box-shadow: 0 4px 0 #991b1b; transition: all 0.2s; }
+  .btn:hover { background-color: #b91c1c; transform: translateY(2px); box-shadow: 0 2px 0 #991b1b; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
+  .bonus-item { display: flex; align-items: center; justify-content: center; margin-top: 15px; background: white; padding: 10px; border-radius: 8px; font-weight: 600; color: #15803d; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+             <div style="font-size: 48px; margin-bottom: 10px;">🎄</div>
+             <h1 style="color: #ffffff; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">HOLIDAY SPECIAL</h1>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <p style="font-size: 18px;">Hi ${data.userName},</p>
+      <p>The holidays are here, and at FaMED, we want to give you the gift of <strong>passing your exam</strong>.</p>
+      
+      <div class="gift-box">
+        <div class="gift-tag">LIMITED TIME OFFER 🎁</div>
+        <h2 style="color: #15803d; margin-top: 10px; margin-bottom: 5px;">50% OFF EVERYTHING</h2>
+        <p style="margin: 0; color: #6b7280;">Any Subscription Plan</p>
+        
+        <div class="bonus-item">
+          <span style="font-size: 24px; margin-right: 10px;">📚</span>
+          PLUS: Free "Protokoll 2006" Book
+        </div>
+
+        <a href="https://famedtestprep.com/HolidaySpecial" class="btn">CLAIM MY GIFT 🎁</a>
+        <p style="font-size: 12px; color: #ef4444; margin-top: 15px;">*Offer expires soon!</p>
+      </div>
+
+      <p><strong>This package gives you:</strong></p>
+      <ul style="padding-left: 20px; color: #374151;">
+        <li>✅ Full Access to 2,000+ Exam Questions</li>
+        <li>✅ The "Protokoll 2006" Book (Physical Copy!)</li>
+        <li>✅ Performance Tracking Dashboard</li>
+      </ul>
+      
+      <p>Prepare smarter in 2026.</p>
+    </div>
+    <div class="footer">
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextHolidaySpecial = (data: any) => `Hi ${data.userName},
+
+🎄 HOLIDAY SPECIAL: 50% OFF + FREE BOOK 🎁
+
+The holidays are here, and we want to give you the gift of passing your exam.
+
+For a limited time, get:
+- 50% OFF any subscription plan
+- PLUS: A Free copy of the "Protokoll 2006" Book
+
+This package includes full access to 2,000+ exam questions and our advanced performance dashboard.
+
+Claim your gift now: https://famedtestprep.com/HolidaySpecial
+
+Prepare smarter in 2026.
+
+--
+FaMED Vorbereitung
+`;
+

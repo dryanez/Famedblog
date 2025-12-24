@@ -11,7 +11,8 @@ import {
     getExamUrgency3Days,
     getWelcomeDay0,
     getSubscriptionExpiry,
-    getExamUrgencySpecialOffer
+    getExamUrgencySpecialOffer,
+    getHolidaySpecial
 } from "@/lib/campaign-templates";
 import { CampaignStatsModal } from "./CampaignStatsModal";
 
@@ -50,6 +51,17 @@ const DEFAULT_CAMPAIGNS: CampaignTemplate[] = [
         color: "bg-green-100 text-green-700",
         estimatedReach: 0,
         conversionRate: "65-85%"
+    },
+    {
+        id: "holiday_special",
+        name: "Holiday Special (50% Off + Book)",
+        description: "Trigger: Holiday offer for free users. 50% Off + Free Book.",
+        type: "automated",
+        targetSegment: "free_users",
+        icon: Sparkles,
+        color: "bg-green-100 text-green-700",
+        estimatedReach: 0,
+        conversionRate: "70-90%"
     },
     {
         id: "exam_urgency_7d",
@@ -256,6 +268,9 @@ export default function CampaignsPage() {
                     break;
                 case 'subscription_expiry':
                     template = getSubscriptionExpiry(sampleData);
+                    break;
+                case 'holiday_special':
+                    template = getHolidaySpecial(sampleData);
                     break;
                 default:
                     // For default campaigns without specific function or manual ones

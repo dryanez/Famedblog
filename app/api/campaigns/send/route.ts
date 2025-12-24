@@ -7,7 +7,17 @@ import {
     getExamUrgency3Days,
     getWelcomeDay0,
     getSubscriptionExpiry,
-    getExamUrgencySpecialOffer
+    getExamUrgencySpecialOffer,
+    getTextExamUrgency14Days,
+    getTextExamUrgency7Days,
+    getTextExamUrgency3Days,
+    getTextWelcomeDay0,
+    getTextSubscriptionExpiry,
+    getTextWelcomeDay0,
+    getTextSubscriptionExpiry,
+    getTextExamUrgencySpecialOffer,
+    getHolidaySpecial,
+    getTextHolidaySpecial
 } from '@/lib/campaign-templates';
 
 const supabase = createClient(
@@ -32,7 +42,9 @@ export async function POST(request: Request) {
 
         const now = new Date();
         let targetUsers: any[] = [];
+
         let emailTemplate: (params: any) => string;
+        let textTemplate: (params: any) => string;
         let subjectLine = '';
 
         if (testEmail) {
@@ -47,20 +59,23 @@ export async function POST(request: Request) {
             emailTemplate = campaignId === 'subscription_expiry' ? getSubscriptionExpiry : getExamUrgency14Days; // Default template for test
             // Try to find if campaignId matches a default template
             const found = [
-                { id: 'exam_urgency_14d', t: getExamUrgency14Days, s: '⚠️ Test: Exam in 14 Days' },
-                { id: 'exam_urgency_special_offer', t: getExamUrgencySpecialOffer, s: '🔥 Test: Special Offer ($19.99)' },
-                { id: 'exam_urgency_7d', t: getExamUrgency7Days, s: '🚨 Test: Exam in 7 Days' },
-                { id: 'exam_urgency_3d', t: getExamUrgency3Days, s: '⏰ Test: 72 Hours Until Exam' },
-                { id: 'welcome_day0', t: getWelcomeDay0, s: '👋 Test: Welcome to FaMED' },
-                { id: 'subscription_expiry', t: getSubscriptionExpiry, s: '🔔 Test: Subscription Expiry' },
+                { id: 'exam_urgency_14d', t: getExamUrgency14Days, tt: getTextExamUrgency14Days, s: '⚠️ Test: Exam in 14 Days' },
+                { id: 'exam_urgency_special_offer', t: getExamUrgencySpecialOffer, tt: getTextExamUrgencySpecialOffer, s: '🔥 Test: Special Offer ($19.99)' },
+                { id: 'exam_urgency_7d', t: getExamUrgency7Days, tt: getTextExamUrgency7Days, s: '🚨 Test: Exam in 7 Days' },
+                { id: 'exam_urgency_3d', t: getExamUrgency3Days, tt: getTextExamUrgency3Days, s: '⏰ Test: 72 Hours Until Exam' },
+                { id: 'welcome_day0', t: getWelcomeDay0, tt: getTextWelcomeDay0, s: '👋 Test: Welcome to FaMED' },
+                { id: 'subscription_expiry', t: getSubscriptionExpiry, tt: getTextSubscriptionExpiry, s: '🔔 Test: Subscription Expiry' },
+                { id: 'holiday_special', t: getHolidaySpecial, tt: getTextHolidaySpecial, s: '🎄 Test: Holiday Special' },
             ].find(t => t.id === campaignId);
 
             if (found) {
                 emailTemplate = found.t;
+                textTemplate = found.tt;
                 subjectLine = found.s;
             } else {
                 // It's likely a custom campaign
                 subjectLine = `Test: Action Required - ${campaignId}`;
+                textTemplate = (data) => `This is a test email for campaign ${campaignId}.`;
                 // We will fetch the custom campaign content later in the loop if needed
                 // But current loop uses emailTemplate(params)
             }
@@ -75,6 +90,7 @@ export async function POST(request: Request) {
                         return daysUntil >= 12 && daysUntil <= 16;
                     });
                     emailTemplate = getExamUrgency14Days;
+                    textTemplate = getTextExamUrgency14Days;
                     subjectLine = '⚠️ Your Exam is in 14 Days!';
                     break;
 
@@ -86,6 +102,7 @@ export async function POST(request: Request) {
                         return daysUntil >= 7 && daysUntil <= 15; // 1-2 weeks
                     });
                     emailTemplate = getExamUrgencySpecialOffer;
+                    textTemplate = getTextExamUrgencySpecialOffer;
                     subjectLine = '🔥 Special Offer: Last Minute Rescue Pack (€19.99)';
                     break;
 
@@ -97,6 +114,7 @@ export async function POST(request: Request) {
                         return daysUntil >= 6 && daysUntil <= 8;
                     });
                     emailTemplate = getExamUrgency7Days;
+                    textTemplate = getTextExamUrgency7Days;
                     subjectLine = '🚨 Final Week! Your Exam is This Week';
                     break;
 
@@ -108,6 +126,7 @@ export async function POST(request: Request) {
                         return daysUntil >= 2 && daysUntil <= 4;
                     });
                     emailTemplate = getExamUrgency3Days;
+                    textTemplate = getTextExamUrgency3Days;
                     subjectLine = '⏰ 72 Hours Until Your FaMED Exam';
                     break;
 
@@ -119,6 +138,7 @@ export async function POST(request: Request) {
                         return daysSinceSignup <= 7;
                     });
                     emailTemplate = getWelcomeDay0;
+                    textTemplate = getTextWelcomeDay0;
                     subjectLine = '👋 Welcome to FaMED Prep!';
                     break;
 
@@ -130,13 +150,23 @@ export async function POST(request: Request) {
                         return daysUntilExpiry >= 6 && daysUntilExpiry <= 8;
                     });
                     emailTemplate = getSubscriptionExpiry;
+                    textTemplate = getTextSubscriptionExpiry;
                     subjectLine = '🔔 Your Premium Access Expires Soon';
                     break;
 
                 case 'no_exam_set':
                     targetUsers = users.filter(u => !u.exam_date && u.account_type === 'free');
                     emailTemplate = getWelcomeDay0; // Reusing welcome for now
+                    textTemplate = getTextWelcomeDay0;
                     subjectLine = '📅 Set Your Exam Date & Get a Personalized Study Plan';
+                    break;
+
+                case 'holiday_special':
+                    // Target all free users (not paid)
+                    targetUsers = users.filter(u => !u.account_type?.startsWith('paid'));
+                    emailTemplate = getHolidaySpecial;
+                    textTemplate = getTextHolidaySpecial;
+                    subjectLine = '🎄 Holiday Special: 50% Off + Free Book! 🎁';
                     break;
 
                 default:
@@ -151,6 +181,7 @@ export async function POST(request: Request) {
                         targetUsers = users; // Fallback to all users if no criteria, but usually we handle criteria in metadata
                         subjectLine = `Update: ${customCampaign.name}`;
                         emailTemplate = () => customCampaign.content;
+                        textTemplate = (data) => `Please enable HTML to view this email.`; // Fallback for custom
                     } else {
                         return NextResponse.json({ error: 'Invalid campaign ID or campaign not found' }, { status: 400 });
                     }
@@ -180,14 +211,25 @@ export async function POST(request: Request) {
                 accountType: user.account_type
             });
 
+            const textContent = textTemplate({
+                userName: user.full_name || 'there',
+                userEmail: user.email,
+                examDate: user.exam_date,
+                daysUntilExam,
+                planExpiry: user.plan_expiry,
+                accountType: user.account_type
+            });
+
             return {
                 from: 'FaMED Prep <noreply@famed-vorbereitung.com>',
                 to: user.email,
                 reply_to: 'support@famed-vorbereitung.com',
                 subject: subjectLine,
                 html: htmlContent,
+                text: textContent,
                 headers: {
-                    'X-Entity-Ref-ID': campaignId
+                    'X-Entity-Ref-ID': campaignId,
+                    'List-Unsubscribe': '<mailto:unsubscribe@famed-vorbereitung.com>'
                 },
                 // Disable tracking to improve deliverability
                 open_tracking: false,
