@@ -199,11 +199,43 @@ export async function POST(request: Request) {
             }
         }
 
+        // **DEDUPLICATION: Fetch users who already received this campaign**
+        if (!testEmail) { // Skip deduplication for test emails
+            const { data: existingLogs, error: logError } = await supabase
+                .from('campaign_logs')
+                .select('user_id, user_email')
+                .eq('campaign_id', campaignId);
+
+            if (logError) {
+                console.error('Error fetching campaign logs for deduplication:', logError);
+            } else if (existingLogs && existingLogs.length > 0) {
+                // Create a Set of user IDs and emails who already received this campaign
+                const sentUserIds = new Set(existingLogs.map(log => log.user_id).filter(Boolean));
+                const sentEmails = new Set(existingLogs.map(log => log.user_email));
+
+                const beforeCount = targetUsers.length;
+
+                // Filter out users who already received this campaign
+                targetUsers = targetUsers.filter(user => {
+                    // Check both user ID and email to handle cases where user_id might be null
+                    const alreadySent = sentUserIds.has(user.id) || sentEmails.has(user.email);
+                    return !alreadySent;
+                });
+
+                const dedupedCount = beforeCount - targetUsers.length;
+                if (dedupedCount > 0) {
+                    console.log(`[DEDUPLICATION] Filtered out ${dedupedCount} users who already received campaign ${campaignId}`);
+                }
+            }
+        }
+
         if (targetUsers.length === 0) {
             return NextResponse.json({
                 success: true,
                 sentCount: 0,
-                message: 'No users match the campaign criteria'
+                message: testEmail
+                    ? 'No users match the campaign criteria'
+                    : 'No new users to send to - all eligible users have already received this campaign'
             });
         }
 

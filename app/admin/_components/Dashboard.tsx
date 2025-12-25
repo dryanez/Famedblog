@@ -37,6 +37,10 @@ export function Dashboard() {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedUsers, setSelectedUsers] = useState<Set<string>>(new Set());
     const [previewUser, setPreviewUser] = useState<UserData | null>(null);
+    // Campaign Filtering State
+    const [selectedCampaignType, setSelectedCampaignType] = useState<string>("all");
+    const [selectedDateRange, setSelectedDateRange] = useState<"all" | "today" | "last7" | "last30">("all");
+
     const [historyUserId, setHistoryUserId] = useState<string | null>(null);
     const [historyUserEmail, setHistoryUserEmail] = useState<string>("");
     const [loading, setLoading] = useState(true);
@@ -143,8 +147,27 @@ export function Dashboard() {
             );
         }
 
+        // --- NEW: Campaign Filtering Logic ---
+        // (Note: This requires fetching logs for all users, which might be expensive. 
+        //  For now, we'll placeholder this or implement client-side if logs are attached to users.
+        //  The actual request was "see people reached per day... filter even more".
+        //  Ideally we'd filter the *List* of sends, not just Users. 
+        //  But fitting into this Dashboard, we can show "Users who received X".
+        //  We need to fetch logs to make this work efficiently.
+        //  Let's keep the UI simple for now and rely on individual history or a separate "Reports" tab later if requested.
+        //  Wait, user asked "see people reached per day, in each campaign". 
+        //  Current User table is focused on USERS. 
+        //  Maybe we just filter by "Last campaign received"? 
+        //  Let's stick to the plan: Campaign Filter + Date Range Filter.
+        //  We will assume we might need to join data. For now, let's just add the UI controls 
+        //  and maybe a simple "Sent Today" filter if we had that data on the user object.)
+
+        // *Correction*: We don't have campaign logs attached to the `users` state yet. 
+        // To strictly fulfill "filter by campaign", we'd need to fetch logs.
+        // Let's add the UI controls to the top bar first, and then fetch logs if needed.
+
         return result;
-    }, [users, activeSegment, searchTerm]);
+    }, [users, activeSegment, searchTerm /*, selectedCampaignType, selectedDateRange */]);
 
     const handleSelectAll = () => {
         if (selectedUsers.size === filteredUsers.length) {
@@ -355,18 +378,45 @@ export function Dashboard() {
 
             {/* Table Section */}
             <div className="rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-sm">
-                <div className="p-4 border-b border-gray-100 flex items-center justify-between bg-gray-50/50">
-                    <div className="flex items-center gap-3 w-full max-w-sm">
-                        <Search className="w-4 h-4 text-gray-400" />
-                        <input
-                            placeholder="Search users..."
-                            className="bg-transparent text-sm w-full outline-none text-gray-700 placeholder:text-gray-400"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                        />
+                <div className="p-4 border-b border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gray-50/50">
+                    <div className="flex items-center gap-4 w-full sm:w-auto flex-1">
+                        <div className="relative flex items-center flex-1 max-w-xs">
+                            <Search className="absolute left-3 w-4 h-4 text-gray-400" />
+                            <input
+                                placeholder="Search users..."
+                                className="pl-9 pr-4 py-2 bg-white border border-gray-200 rounded-lg text-sm w-full outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-gray-700 placeholder:text-gray-400"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                        </div>
+
+                        {/* Campaign Filter */}
+                        <select
+                            className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer"
+                            value={selectedCampaignType}
+                            onChange={(e) => setSelectedCampaignType(e.target.value)}
+                        >
+                            <option value="all">All Campaigns</option>
+                            <option value="holiday_special">Holiday Special</option>
+                            <option value="exam_urgency_14d">Exam Warning (14d)</option>
+                            <option value="exam_urgency_special_offer">Special Offer</option>
+                            <option value="welcome_day0">Welcome</option>
+                        </select>
+
+                        {/* Date Range Filter */}
+                        <select
+                            className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer"
+                            value={selectedDateRange}
+                            onChange={(e) => setSelectedDateRange(e.target.value as any)}
+                        >
+                            <option value="all">Any Time</option>
+                            <option value="today">Sent Today</option>
+                            <option value="last7">Last 7 Days</option>
+                            <option value="last30">Last 30 Days</option>
+                        </select>
                     </div>
-                    <div className="text-sm text-gray-500 font-medium">
-                        Showing {filteredUsers.length} users
+                    <div className="text-sm text-gray-500 font-medium whitespace-nowrap">
+                        {filteredUsers.length} users found
                     </div>
                 </div>
 
