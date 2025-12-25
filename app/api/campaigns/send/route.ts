@@ -213,14 +213,46 @@ export async function POST(request: Request) {
                 ? Math.ceil((new Date(user.exam_date).getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
                 : undefined;
 
-            const htmlContent = emailTemplate({
+            // Function to replace placeholders in stored content
+            const replacePlaceholders = (content: string, data: any) => {
+                let text = content;
+                const replacements: Record<string, string | undefined> = {
+                    '{{userName}}': data.userName,
+                    '{{userEmail}}': data.userEmail,
+                    '{{examDate}}': data.examDate ? new Date(data.examDate).toLocaleDateString('de-DE') : '',
+                    '{{daysUntilExam}}': data.daysUntilExam?.toString(),
+                    '{{planExpiry}}': data.planExpiry ? new Date(data.planExpiry).toLocaleDateString('de-DE') : '',
+                    '{{accountType}}': data.accountType
+                };
+
+                Object.entries(replacements).forEach(([key, value]) => {
+                    text = text.replace(new RegExp(key, 'g'), value || '');
+                });
+                return text;
+            };
+
+            const templateData = {
                 userName: user.full_name || 'there',
                 userEmail: user.email,
                 examDate: user.exam_date,
                 daysUntilExam,
                 planExpiry: user.plan_expiry,
                 accountType: user.account_type
-            });
+            };
+
+            // Generate HTML content (handling both function and string templates)
+            let htmlContent = '';
+            // Check if emailTemplate is a function that returns a string (standard templates)
+            // OR if it wraps a stored string (custom campaigns)
+            try {
+                const result = emailTemplate(templateData);
+                // If the result contains placeholders, replace them (for custom saved campaigns)
+                htmlContent = replacePlaceholders(result, templateData);
+            } catch (e) {
+                // Should not happen, but safe fallback
+                console.error('Template generation error', e);
+                htmlContent = '<div>Error generating email content</div>';
+            }
 
             const textContent = textTemplate({
                 userName: user.full_name || 'there',
