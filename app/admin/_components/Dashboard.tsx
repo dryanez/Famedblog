@@ -35,8 +35,6 @@ export function Dashboard() {
     const [users, setUsers] = useState<UserData[]>([]);
     const [activeSegment, setActiveSegment] = useState<"all" | "exam_soon" | "sleeping" | "active" | "paid">("all");
     const [searchTerm, setSearchTerm] = useState("");
-    const [selectedUsers, setSelectedUsers] = useState<Set<string>>(new Set());
-    const [previewUser, setPreviewUser] = useState<UserData | null>(null);
     // Campaign Filtering State
     const [selectedCampaignType, setSelectedCampaignType] = useState<string>("all");
     const [selectedDateRange, setSelectedDateRange] = useState<"all" | "today" | "last7" | "last30">("all");
@@ -169,106 +167,11 @@ export function Dashboard() {
         return result;
     }, [users, activeSegment, searchTerm /*, selectedCampaignType, selectedDateRange */]);
 
-    const handleSelectAll = () => {
-        if (selectedUsers.size === filteredUsers.length) {
-            setSelectedUsers(new Set());
-        } else {
-            setSelectedUsers(new Set(filteredUsers.map(u => u.id)));
-        }
-    };
-
-    const toggleUser = (id: string) => {
-        const next = new Set(selectedUsers);
-        if (next.has(id)) next.delete(id);
-        else next.add(id);
-        setSelectedUsers(next);
-    };
-
     const getDaysUntilExam = (user: UserData): number | null => {
         if (!user.parsedExamDate) return null;
         const now = new Date();
         const diff = user.parsedExamDate.getTime() - now.getTime();
         return Math.ceil(diff / (1000 * 60 * 60 * 24));
-    };
-
-    const sendBulkEmail = async () => {
-        const recipients = filteredUsers.filter(u => selectedUsers.has(u.id));
-        if (recipients.length === 0) return;
-
-        if (!confirm(`Ready to send 50% discount offer to ${recipients.length} users?`)) return;
-
-        // Call API
-        try {
-            const res = await fetch("/api/send-email", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    emails: recipients.map(u => ({
-                        email: u.Email,
-                        name: u.Name,
-                        examDate: u["Exam Date"] || null,
-                        daysUntilExam: getDaysUntilExam(u)
-                    })),
-                    segment: activeSegment
-                })
-            });
-            const json = await res.json();
-            if (json.success) alert(`Success! Sent ${json.count} emails.`);
-            else alert("Error: " + json.error);
-        } catch (e) {
-            alert("Failed to send.");
-        }
-    };
-
-    // Email Preview Modal
-    const EmailPreviewModal = () => {
-        if (!previewUser) return null;
-
-        const daysUntilExam = getDaysUntilExam(previewUser);
-        const emailHtml = getEmailTemplate({
-            segment: activeSegment,
-            name: previewUser.Name,
-            examDate: previewUser["Exam Date"] || null,
-            daysUntilExam
-        });
-
-        return (
-            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={() => setPreviewUser(null)}>
-                <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto" onClick={(e) => e.stopPropagation()}>
-                    <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between">
-                        <div>
-                            <h2 className="text-xl font-bold text-gray-900">Email Preview</h2>
-                            <p className="text-sm text-gray-500">
-                                To: {previewUser.Email} ({previewUser.Name})
-                                {daysUntilExam !== null && ` • ${daysUntilExam} days until exam`}
-                            </p>
-                        </div>
-                        <button
-                            onClick={() => setPreviewUser(null)}
-                            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                        >
-                            <X className="w-5 h-5 text-gray-500" />
-                        </button>
-                    </div>
-                    <div className="p-6">
-                        <div className="bg-gray-50 rounded-lg p-4 mb-4 border border-gray-200">
-                            <p className="text-sm text-gray-600 mb-1"><strong>Subject:</strong></p>
-                            <p className="text-gray-900">
-                                {activeSegment === 'exam_soon' && daysUntilExam !== null && daysUntilExam <= 14
-                                    ? `🔔 Your Test is Around the Corner, ${previewUser.Name.split(" ")[0]}!`
-                                    : activeSegment === 'exam_soon'
-                                        ? 'Final Push for your Exam 🚀'
-                                        : '50% Off FaMED Xmas Special 🎄'}
-                            </p>
-                        </div>
-                        <div
-                            className="prose prose-sm max-w-none"
-                            dangerouslySetInnerHTML={{ __html: emailHtml }}
-                        />
-                    </div>
-                </div>
-            </div>
-        );
     };
 
     if (loading) {
@@ -301,7 +204,6 @@ export function Dashboard() {
 
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
-            <EmailPreviewModal />
             <header className="flex items-center justify-between pb-6 border-b border-gray-100">
                 <div>
                     <h1 className="text-2xl font-bold tracking-tight text-gray-900">User Analytics</h1>
@@ -314,19 +216,6 @@ export function Dashboard() {
                     >
                         📧 Campaigns
                     </a>
-                    <button
-                        onClick={sendBulkEmail}
-                        disabled={selectedUsers.size === 0}
-                        className={cn(
-                            "flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm",
-                            selectedUsers.size > 0
-                                ? "bg-gray-900 text-white hover:bg-gray-800 hover:shadow-md"
-                                : "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        )}
-                    >
-                        <Mail className="w-4 h-4" />
-                        Send Offer ({selectedUsers.size})
-                    </button>
                 </div>
             </header>
 
@@ -424,14 +313,6 @@ export function Dashboard() {
                     <table className="w-full text-left text-sm">
                         <thead className="bg-gray-50 text-gray-500 font-medium border-b border-gray-100">
                             <tr>
-                                <th className="px-6 py-3 w-10">
-                                    <input
-                                        type="checkbox"
-                                        className="rounded border-gray-300"
-                                        checked={selectedUsers.size === filteredUsers.length && filteredUsers.length > 0}
-                                        onChange={handleSelectAll}
-                                    />
-                                </th>
                                 <th className="px-6 py-3">Name</th>
                                 <th className="px-6 py-3">Email</th>
                                 <th className="px-6 py-3">German Level</th>
@@ -440,20 +321,11 @@ export function Dashboard() {
                                 <th className="px-6 py-3">Exam Date</th>
                                 <th className="px-6 py-3 text-right">Total XP</th>
                                 <th className="px-6 py-3 text-center">Campaigns</th>
-                                <th className="px-6 py-3 text-center">Preview</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-50">
                             {filteredUsers.map(user => (
                                 <tr key={user.id} className="hover:bg-gray-50/80 transition-colors group">
-                                    <td className="px-6 py-3">
-                                        <input
-                                            type="checkbox"
-                                            className="rounded border-gray-300"
-                                            checked={selectedUsers.has(user.id)}
-                                            onChange={() => toggleUser(user.id)}
-                                        />
-                                    </td>
                                     <td className="px-6 py-3 font-medium text-gray-900">
                                         {user.Name} {user["Last Name"]}
                                     </td>
@@ -500,16 +372,6 @@ export function Dashboard() {
                                         >
                                             <Mail className="w-4 h-4" />
                                             History
-                                        </button>
-                                    </td>
-                                    <td className="px-6 py-3 text-center">
-                                        <button
-                                            onClick={() => setPreviewUser(user)}
-                                            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-                                            title="Preview email"
-                                        >
-                                            <Eye className="w-4 h-4" />
-                                            Preview
                                         </button>
                                     </td>
                                 </tr>
