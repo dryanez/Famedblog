@@ -13,7 +13,7 @@ export async function GET(
             .from('campaign_logs')
             .select('*')
             .eq('user_id', id)
-            .order('created_at', { ascending: false });
+            .order('sent_at', { ascending: false });
 
         if (error) {
             console.error('Error fetching campaign logs:', error);

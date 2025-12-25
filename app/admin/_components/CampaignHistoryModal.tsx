@@ -8,7 +8,7 @@ interface CampaignLog {
     campaign_id: string;
     user_email: string;
     status: string;
-    created_at: string;
+    sent_at: string;
     metadata?: {
         subject?: string;
         is_test?: boolean;
@@ -91,7 +91,7 @@ export function CampaignHistoryModal({ userId, userEmail, onClose }: CampaignHis
                                                 <p className="text-sm text-gray-600 mt-1">{log.metadata.subject}</p>
                                             )}
                                             <p className="text-xs text-gray-500 mt-2">
-                                                {new Date(log.created_at).toLocaleString('en-US', {
+                                                {new Date(log.sent_at).toLocaleString('en-US', {
                                                     year: 'numeric',
                                                     month: 'short',
                                                     day: 'numeric',
