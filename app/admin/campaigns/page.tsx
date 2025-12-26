@@ -139,12 +139,13 @@ export default function CampaignsPage() {
         }
     };
 
-    // Fetch sent counts from campaign_logs
+    // Fetch sent counts from campaign_logs (excluding admin test emails)
     const fetchSentCounts = async () => {
         try {
             const { data, error } = await supabase
                 .from('campaign_logs')
-                .select('campaign_id');
+                .select('campaign_id, user_email')
+                .neq('user_email', 'dr.felipeyanez01@gmail.com'); // Exclude admin tests
 
             if (error) {
                 console.error('Error fetching sent counts:', error);
