@@ -126,7 +126,15 @@ async function backfillCheckoutSessions() {
                     if (!metadataAccountType) metadataAccountType = 'paid_6m';
                 }
 
-                // 3. Consolidate 1-Month Products SPLIT by Price
+                // 3. Consolidate 3-Month Products
+
+                // A. 3-Month Special (~€65.99)
+                else if (amount >= 6500 && amount <= 6700) {
+                    productName = '💎 3-Month Pro Prep (Special 50% Off)';
+                    if (!metadataAccountType) metadataAccountType = 'paid_3m';
+                }
+
+                // 4. Consolidate 1-Month Products SPLIT by Price
 
                 // A. Discounted / Holiday Special (~€29.00 - €30.00)
                 else if (amount >= 2900 && amount <= 3000) {
@@ -134,39 +142,55 @@ async function backfillCheckoutSessions() {
                     if (!metadataAccountType) metadataAccountType = 'paid_1m';
                 }
 
-                // B. Standard Price (~€59.00)
+                // B. Standard Price (~€59.00) or generic fallback > 40
                 else if (amount >= 5800 && amount <= 6000) {
                     productName = '1-Month Intensive (Standard)';
                     if (!metadataAccountType) metadataAccountType = 'paid_1m';
                 }
 
-                // 4. Keyword Fallbacks (if price buckets didn't match exactly but clearly belongs to one group)
+                // 5. Keyword Fallbacks
                 else {
                     const oneMonthKeywords = ['antonino', 'ramzy', 'sahouli', 'farouk', 'holiday special'];
-                    // "1-month intensive" keyword is ambiguous without price, so strictly rely on price buckets above for main groups.
-                    // If it has "special" or specific names, force to Special.
-
                     const sixMonthKeywords = ['6-month', '6 monat', '6 months'];
+                    // Added 3-month keywords to catch outliers
+                    const threeMonthKeywords = ['3-month', '3 monat'];
 
                     if (sixMonthKeywords.some(k => nameLower.includes(k)) && amount > 5000) {
                         productName = '💎 6-Month Pro Prep Holiday Special';
                         if (!metadataAccountType) metadataAccountType = 'paid_6m';
-                    } else if (oneMonthKeywords.some(k => nameLower.includes(k))) {
-                        // Strict Price Check: specific keywords like "Special" should typically imply the discount.
-                        // If someone paid > €40 but has "Special" in name, treat as Standard
+                    }
+                    else if (threeMonthKeywords.some(k => nameLower.includes(k)) && amount > 6000) {
+                        // Check price to imply special vs standard for 3-month?
+                        if (amount < 8000) {
+                            productName = '💎 3-Month Pro Prep (Special 50% Off)';
+                        } else {
+                            productName = '💎 3-Month Pro Prep (Standard)';
+                        }
+                        if (!metadataAccountType) metadataAccountType = 'paid_3m';
+                    }
+                    else if (oneMonthKeywords.some(k => nameLower.includes(k))) {
+                        // Strict Price Check for 1-month Specials vs 3-month special misidentification?
+                        // €65.00 falls here if it has "Special" but not "3-month".
+                        // So checking price is critical.
+
+                        if (amount < 4000) {
+                            productName = '⚡ 1-Month Intensive Holiday Special';
+                            if (!metadataAccountType) metadataAccountType = 'paid_1m';
+                        } else if (amount >= 6500 && amount <= 6700) {
+                            // If it has "Special" but is €65, it's likely the 3-Month Special even if name missing "3-month"
+                            productName = '💎 3-Month Pro Prep (Special 50% Off)';
+                            if (!metadataAccountType) metadataAccountType = 'paid_3m';
+                        } else {
+                            // Fallback to standard 1-month if ~60
+                            productName = '1-Month Intensive (Standard)';
+                            if (!metadataAccountType) metadataAccountType = 'paid_1m';
+                        }
+                    } else if (nameLower.includes('1-month intensive')) {
+                        // Fallback for generic "1-month intensive"
                         if (amount < 4000) {
                             productName = '⚡ 1-Month Intensive Holiday Special';
                         } else {
                             productName = '1-Month Intensive (Standard)';
-                        }
-                        if (!metadataAccountType) metadataAccountType = 'paid_1m';
-                    } else if (nameLower.includes('1-month intensive')) {
-                        // Fallback for generic "1-month intensive" name outside exact buckets
-                        // Split by price threshold €40
-                        if (amount < 4000) {
-                            productName = '⚡ 1-Month Intensive Holiday Special'; // Assume discounted
-                        } else {
-                            productName = '1-Month Intensive (Standard)'; // Assume standard
                         }
                         if (!metadataAccountType) metadataAccountType = 'paid_1m';
                     }
