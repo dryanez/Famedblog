@@ -90,7 +90,8 @@ export async function GET(request: Request) {
         const productStats: Record<string, { revenue: number; units: number; name: string }> = {};
 
         payments.forEach(payment => {
-            const productKey = payment.product_id || payment.product_name || 'Unknown';
+            // Group by name primarily since we normalize names in backfill
+            const productKey = payment.product_name || 'Unknown';
             if (!productStats[productKey]) {
                 productStats[productKey] = {
                     name: payment.product_name || 'Unknown Product',
