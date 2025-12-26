@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { RevenueChart } from '@/components/RevenueChart';
 import { TrendingUp, DollarSign, ShoppingCart, Download } from 'lucide-react';
+import ProductCustomersModal from '@/components/ProductCustomersModal';
+import { SendCampaignModal } from '@/app/admin/_components/SendCampaignModal';
 
 interface AnalyticsData {
     totalRevenue: number;
@@ -33,6 +35,9 @@ export default function AnalyticsPage() {
     const [loading, setLoading] = useState(true);
     const [period, setPeriod] = useState('30d');
     const [chartType, setChartType] = useState<'line' | 'bar'>('line');
+    const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
+    const [showCampaignModal, setShowCampaignModal] = useState(false);
+    const [campaignEmails, setCampaignEmails] = useState<string[]>([]);
 
     useEffect(() => {
         fetchAnalytics();
@@ -198,8 +203,8 @@ export default function AnalyticsPage() {
                         </thead>
                         <tbody className="divide-y divide-gray-100">
                             {data.productPerformance.map((product, index) => (
-                                <tr key={index} className="text-sm">
-                                    <td className="py-3 font-medium text-gray-900">{product.name}</td>
+                                <tr key={index} className="text-sm hover:bg-gray-50 transition cursor-pointer" onClick={() => setSelectedProduct(product.name)}>
+                                    <td className="py-3 font-medium text-blue-600 hover:text-blue-800">{product.name}</td>
                                     <td className="py-3 text-right text-gray-700">€{product.revenue.toFixed(2)}</td>
                                     <td className="py-3 text-right text-gray-700">{product.units}</td>
                                     <td className="py-3 text-right text-gray-700">€{(product.revenue / product.units).toFixed(2)}</td>
@@ -230,6 +235,26 @@ export default function AnalyticsPage() {
                     ))}
                 </div>
             </div>
+
+            {/* Modals */}
+            {selectedProduct && (
+                <ProductCustomersModal
+                    productName={selectedProduct}
+                    onClose={() => setSelectedProduct(null)}
+                    onSendCampaign={(emails) => {
+                        setCampaignEmails(emails);
+                        setSelectedProduct(null);
+                        setShowCampaignModal(true);
+                    }}
+                />
+            )}
+
+            {showCampaignModal && (
+                <SendCampaignModal
+                    onClose={() => setShowCampaignModal(false)}
+                    prefilterEmails={campaignEmails}
+                />
+            )}
         </div>
     );
 }

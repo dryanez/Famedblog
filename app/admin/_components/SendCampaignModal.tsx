@@ -4,9 +4,10 @@ import { useState } from "react";
 import { X, Mail, Loader2 } from "lucide-react";
 
 interface SendCampaignModalProps {
-    selectedUserIds: string[];
+    selectedUserIds?: string[];
+    prefilterEmails?: string[];
     onClose: () => void;
-    onSuccess: () => void;
+    onSuccess?: () => void;
 }
 
 const CAMPAIGNS = [
@@ -19,11 +20,13 @@ const CAMPAIGNS = [
     { id: 'subscription_expiry', name: 'Subscription Expiry', subject: '🔔 Premium Access Expires Soon', description: 'Renewal reminder for paid users' }
 ];
 
-export function SendCampaignModal({ selectedUserIds, onClose, onSuccess }: SendCampaignModalProps) {
+export function SendCampaignModal({ selectedUserIds = [], prefilterEmails = [], onClose, onSuccess }: SendCampaignModalProps) {
     const [selectedCampaign, setSelectedCampaign] = useState<string | null>(null);
     const [sending, setSending] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [result, setResult] = useState<any>(null);
+
+    const recipientCount = prefilterEmails.length > 0 ? prefilterEmails.length : selectedUserIds.length;
 
     const handleSend = async () => {
         if (!selectedCampaign) return;
@@ -38,7 +41,8 @@ export function SendCampaignModal({ selectedUserIds, onClose, onSuccess }: SendC
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     campaignId: selectedCampaign,
-                    userIds: selectedUserIds
+                    userIds: selectedUserIds.length > 0 ? selectedUserIds : undefined,
+                    emails: prefilterEmails.length > 0 ? prefilterEmails : undefined
                 })
             });
 
@@ -50,7 +54,7 @@ export function SendCampaignModal({ selectedUserIds, onClose, onSuccess }: SendC
 
             setResult(data);
             setTimeout(() => {
-                onSuccess();
+                onSuccess?.();
             }, 2000);
         } catch (err: any) {
             setError(err.message || 'Something went wrong');
@@ -67,7 +71,7 @@ export function SendCampaignModal({ selectedUserIds, onClose, onSuccess }: SendC
                     <div>
                         <h2 className="text-2xl font-bold text-gray-900">Send Campaign</h2>
                         <p className="text-sm text-gray-600 mt-1">
-                            Sending to <strong>{selectedUserIds.length}</strong> selected user{selectedUserIds.length !== 1 ? 's' : ''}
+                            Sending to <strong>{recipientCount}</strong> selected {recipientCount !== 1 ? 'users' : 'user'}
                         </p>
                     </div>
                     <button
