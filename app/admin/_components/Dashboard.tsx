@@ -173,9 +173,9 @@ export function Dashboard() {
                 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); // Days until exam
 
                 switch (filterExamTiming) {
-                    case "gt_3m": return diffDays > 90;
-                    case "gt_2m": return diffDays > 60;
-                    case "gt_1m": return diffDays > 30;
+                    case "gt_3m": return diffDays > 90; // 3+ months
+                    case "gt_2m": return diffDays > 60 && diffDays <= 90; // 2-3 months
+                    case "gt_1m": return diffDays > 30 && diffDays <= 60; // 1-2 months
                     case "gte_2w": return diffDays >= 14 && diffDays < 30; // 2-4 weeks
                     case "lt_2w": return diffDays <= 14 && diffDays >= 0;
                     case "lt_1w": return diffDays <= 7 && diffDays >= 0;
@@ -350,9 +350,9 @@ export function Dashboard() {
                             onChange={(e) => setFilterExamTiming(e.target.value)}
                         >
                             <option value="all">Exam Date: All</option>
-                            <option value="gt_3m">&gt; 3 Months</option>
-                            <option value="gt_2m">&gt; 2 Months</option>
-                            <option value="gt_1m">&gt; 1 Month</option>
+                            <option value="gt_3m">3+ Months</option>
+                            <option value="gt_2m">2-3 Months</option>
+                            <option value="gt_1m">1-2 Months</option>
                             <option value="gte_2w">2-4 Weeks</option>
                             <option value="lt_2w">&lt; 2 Weeks</option>
                             <option value="lt_1w">&lt; 1 Week</option>
