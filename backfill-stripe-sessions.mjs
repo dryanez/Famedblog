@@ -111,45 +111,47 @@ async function backfillCheckoutSessions() {
 
                 // Normalization Logic: Consolidate products by price and keywords
                 const amount = session.amount_total;
+                const nameLower = productName.toLowerCase();
 
                 // 1. EXCLUDE Test Plans (≤ €1 or contains "Test Plan")
-                if (amount <= 100 || productName.toLowerCase().includes('test plan')) {
+                if (amount <= 100 || nameLower.includes('test plan')) {
                     console.log(`⏭️  Skipping test item: ${productName} (€${(amount / 100).toFixed(2)})`);
                     totalSkipped++;
                     continue; // Skip this session entirely
                 }
 
                 // 2. Consolidate 6-Month Products (~€100)
-                const sixMonthTarget = '💎 6-Month Pro Prep Holiday Special';
+                // Catches: "Cina 6 monaten" (€100), "Bader Aldeen Special" (€100)
                 if (amount >= 9500 && amount <= 10500) { // €95-105
-                    productName = sixMonthTarget;
+                    productName = '💎 6-Month Pro Prep Holiday Special';
                     if (!metadataAccountType) metadataAccountType = 'paid_6m';
                 }
 
                 // 3. Consolidate 1-Month Products (~€29.90)
-                const oneMonthTarget = '⚡ 1-Month Intensive Holiday Special';
-                if (amount >= 2900 && amount <= 3000) { // €29-30
-                    productName = oneMonthTarget;
+                // Catches: "Antonino Special" (€29.50), "Ramzy Special" (€29.50), "1-Month Intensive" (€29-59)
+                else if (amount >= 2900 && amount <= 3000) { // €29-30
+                    productName = '⚡ 1-Month Intensive Holiday Special';
                     if (!metadataAccountType) metadataAccountType = 'paid_1m';
                 }
 
-                // 4. Map "Unknown Product" to 1-Month if price matches
-                if (productName === 'Unknown Product' && amount >= 2900 && amount <= 3000) {
-                    productName = oneMonthTarget;
-                    if (!metadataAccountType) metadataAccountType = 'paid_1m';
-                }
+                // 4. Keyword Fallbacks for other variations (e.g. higher priced 1-month like €59)
+                else {
+                    const oneMonthKeywords = ['antonino', 'ramzy', 'sahouli', 'farouk', '1-month intensive', 'holiday special'];
+                    const sixMonthKeywords = ['6-month', '6 monat', '6 months'];
 
-                // 5. Specific name-based overrides
-                const specificOverrides = [
-                    'Antonino Special !!',
-                    'Ramzy Special !',
-                    'SAHOULI Aïmen special 1 monat!!',
-                    'Farouk kefif Special'
-                ];
-
-                if (specificOverrides.some(name => productName.includes(name))) {
-                    productName = oneMonthTarget;
-                    if (!metadataAccountType) metadataAccountType = 'paid_1m';
+                    if (sixMonthKeywords.some(k => nameLower.includes(k)) && amount > 5000) {
+                        productName = '💎 6-Month Pro Prep Holiday Special';
+                        if (!metadataAccountType) metadataAccountType = 'paid_6m';
+                    } else if (oneMonthKeywords.some(k => nameLower.includes(k))) {
+                        // Even if price is €59, if it's "1-Month Intensive", we map it to the same group or keep distinct?
+                        // User said "put all fo them together".
+                        // But €59 is the regular price. €29 is the special.
+                        // User input: "Unknown Product. 1-Month Intensive Holiday Special put them together... also when we click in the products it will take as to each person..."
+                        // User listed "⚡ 1-Month Intensive Holiday Special" at €29.50, €29.00.
+                        // I will map strictly if it matches the keyword.
+                        productName = '⚡ 1-Month Intensive Holiday Special';
+                        if (!metadataAccountType) metadataAccountType = 'paid_1m';
+                    }
                 }
 
                 // Find user by email
