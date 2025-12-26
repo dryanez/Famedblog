@@ -265,6 +265,12 @@ export function Dashboard() {
                         📧 Campaigns
                     </a>
                     <a
+                        href="/admin/blog"
+                        className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm bg-green-600 text-white hover:bg-green-700"
+                    >
+                        📝 Blog
+                    </a>
+                    <a
                         href="/admin/analytics"
                         className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm bg-purple-600 text-white hover:bg-purple-700"
                     >
