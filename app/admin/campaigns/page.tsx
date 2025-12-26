@@ -422,45 +422,48 @@ export default function CampaignsPage() {
         }
     };
 
-    const handleDeleteCampaign = async (e: React.MouseEvent, id: string) => {
+    const handleDeleteCampaign = (e: React.MouseEvent, id: string) => {
         e.stopPropagation();
-        const isDefault = DEFAULT_CAMPAIGNS.some(c => c.id === id);
+        // Defer to avoid blocking UI thread during confirm dialog
+        setTimeout(async () => {
+            const isDefault = DEFAULT_CAMPAIGNS.some(c => c.id === id);
 
-        if (isDefault) {
-            // For default campaigns, confirm and disable instead of delete
-            if (window.confirm("This is a default campaign. Would you like to disable it from automation?")) {
-                setEnabledCampaigns(prev => ({ ...prev, [id]: false }));
-                try {
-                    await fetch('/api/campaigns/settings', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ campaignId: id, enabled: false })
-                    });
-                } catch (error) {
-                    console.error('Error disabling campaign:', error);
-                }
-            }
-        } else {
-            // For custom campaigns, delete from database
-            if (window.confirm("Are you sure you want to delete this campaign?")) {
-                // Optimistic update
-                setCustomCampaigns(prev => prev.filter(c => c.id !== id));
-
-                try {
-                    const response = await fetch(`/api/campaigns/${id}`, {
-                        method: 'DELETE',
-                    });
-
-                    if (!response.ok) {
-                        throw new Error('Failed to delete');
+            if (isDefault) {
+                // For default campaigns, confirm and disable instead of delete
+                if (window.confirm("This is a default campaign. Would you like to disable it from automation?")) {
+                    setEnabledCampaigns(prev => ({ ...prev, [id]: false }));
+                    try {
+                        await fetch('/api/campaigns/settings', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ campaignId: id, enabled: false })
+                        });
+                    } catch (error) {
+                        console.error('Error disabling campaign:', error);
                     }
-                } catch (error) {
-                    console.error('Delete error:', error);
-                    alert('Failed to delete campaign from server');
-                    fetchCampaigns(); // Revert on error
+                }
+            } else {
+                // For custom campaigns, delete from database
+                if (window.confirm("Are you sure you want to delete this campaign?")) {
+                    // Optimistic update
+                    setCustomCampaigns(prev => prev.filter(c => c.id !== id));
+
+                    try {
+                        const response = await fetch(`/api/campaigns/${id}`, {
+                            method: 'DELETE',
+                        });
+
+                        if (!response.ok) {
+                            throw new Error('Failed to delete');
+                        }
+                    } catch (error) {
+                        console.error('Delete error:', error);
+                        alert('Failed to delete campaign from server');
+                        fetchCampaigns(); // Revert on error
+                    }
                 }
             }
-        }
+        }, 0);
     };
 
     const handleCreateCampaign = async () => {
