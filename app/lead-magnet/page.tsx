@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { submitLead } from '@/app/actions';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function LeadMagnetPage() {
     const [email, setEmail] = useState('');
@@ -109,12 +110,19 @@ export default function LeadMagnetPage() {
                                     </div>
                                 </div>
 
-                                {/* Right: Visual/Price (Optional, simple text for now) */}
-                                <div className="hidden md:block w-72 h-auto bg-gray-100 rounded-xl p-6 text-center border border-gray-200 transform rotate-2">
-                                    <div className="text-gray-500 font-bold mb-2 uppercase text-sm">Official Guide</div>
-                                    <div className="text-4xl font-extrabold text-blue-900 mb-4">FaMED<br />Protokoll</div>
-                                    <div className="text-3xl font-bold text-green-600 mb-4">€49.99</div>
-                                    <div className="text-sm text-gray-600">Digital + Physical Copy</div>
+                                {/* Right: Visual/Price */}
+                                <div className="hidden md:block w-64 relative transform rotate-3 hover:rotate-0 transition duration-500">
+                                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-2xl border-4 border-white">
+                                        <Image
+                                            src="/images/blog/famed-protokoll-book-3.jpg"
+                                            alt="FaMED Protokoll Book"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-blue-900 font-bold px-4 py-2 rounded-full shadow-lg transform rotate-3">
+                                        €49.99
+                                    </div>
                                 </div>
                             </div>
                         </div>
