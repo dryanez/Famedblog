@@ -176,7 +176,7 @@ export function Dashboard() {
                     case "gt_3m": return diffDays > 90;
                     case "gt_2m": return diffDays > 60;
                     case "gt_1m": return diffDays > 30;
-                    case "gte_2w": return diffDays >= 14;
+                    case "gte_2w": return diffDays >= 14 && diffDays < 30; // 2-4 weeks
                     case "lt_2w": return diffDays <= 14 && diffDays >= 0;
                     case "lt_1w": return diffDays <= 7 && diffDays >= 0;
                     default: return true;
@@ -353,7 +353,7 @@ export function Dashboard() {
                             <option value="gt_3m">&gt; 3 Months</option>
                             <option value="gt_2m">&gt; 2 Months</option>
                             <option value="gt_1m">&gt; 1 Month</option>
-                            <option value="gte_2w">&gt;= 2 Weeks</option>
+                            <option value="gte_2w">2-4 Weeks</option>
                             <option value="lt_2w">&lt; 2 Weeks</option>
                             <option value="lt_1w">&lt; 1 Week</option>
                         </select>
