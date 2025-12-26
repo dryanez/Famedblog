@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import { submitLead } from '@/app/actions';
+import { useRouter } from 'next/navigation';
 
 export default function LeadMagnetPage() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
+    const router = useRouter();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -29,6 +31,11 @@ export default function LeadMagnetPage() {
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
+
+                // Redirect to book page after short delay
+                setTimeout(() => {
+                    router.push('/book');
+                }, 1500);
             } else {
                 alert('Error: ' + result.message);
             }
