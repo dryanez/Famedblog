@@ -466,7 +466,7 @@ export default function CampaignsPage() {
                             {canDelete && (
                                 <button
                                     onClick={(e) => handleDeleteCampaign(e, campaign.id)}
-                                    className="absolute top-4 right-4 p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg opacity-0 group-hover:opacity-100 transition-all"
+                                    className="absolute top-4 right-4 p-2 text-red-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all"
                                     title="Delete Campaign"
                                 >
                                     <Trash2 className="w-4 h-4" />
