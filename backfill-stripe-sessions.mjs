@@ -121,35 +121,53 @@ async function backfillCheckoutSessions() {
                 }
 
                 // 2. Consolidate 6-Month Products (~€100)
-                // Catches: "Cina 6 monaten" (€100), "Bader Aldeen Special" (€100)
                 if (amount >= 9500 && amount <= 10500) { // €95-105
                     productName = '💎 6-Month Pro Prep Holiday Special';
                     if (!metadataAccountType) metadataAccountType = 'paid_6m';
                 }
 
-                // 3. Consolidate 1-Month Products (~€29.90)
-                // Catches: "Antonino Special" (€29.50), "Ramzy Special" (€29.50), "1-Month Intensive" (€29-59)
-                else if (amount >= 2900 && amount <= 3000) { // €29-30
+                // 3. Consolidate 1-Month Products SPLIT by Price
+
+                // A. Discounted / Holiday Special (~€29.00 - €30.00)
+                else if (amount >= 2900 && amount <= 3000) {
                     productName = '⚡ 1-Month Intensive Holiday Special';
                     if (!metadataAccountType) metadataAccountType = 'paid_1m';
                 }
 
-                // 4. Keyword Fallbacks for other variations (e.g. higher priced 1-month like €59)
+                // B. Standard Price (~€59.00)
+                else if (amount >= 5800 && amount <= 6000) {
+                    productName = '1-Month Intensive (Standard)';
+                    if (!metadataAccountType) metadataAccountType = 'paid_1m';
+                }
+
+                // 4. Keyword Fallbacks (if price buckets didn't match exactly but clearly belongs to one group)
                 else {
-                    const oneMonthKeywords = ['antonino', 'ramzy', 'sahouli', 'farouk', '1-month intensive', 'holiday special'];
+                    const oneMonthKeywords = ['antonino', 'ramzy', 'sahouli', 'farouk', 'holiday special'];
+                    // "1-month intensive" keyword is ambiguous without price, so strictly rely on price buckets above for main groups.
+                    // If it has "special" or specific names, force to Special.
+
                     const sixMonthKeywords = ['6-month', '6 monat', '6 months'];
 
                     if (sixMonthKeywords.some(k => nameLower.includes(k)) && amount > 5000) {
                         productName = '💎 6-Month Pro Prep Holiday Special';
                         if (!metadataAccountType) metadataAccountType = 'paid_6m';
                     } else if (oneMonthKeywords.some(k => nameLower.includes(k))) {
-                        // Even if price is €59, if it's "1-Month Intensive", we map it to the same group or keep distinct?
-                        // User said "put all fo them together".
-                        // But €59 is the regular price. €29 is the special.
-                        // User input: "Unknown Product. 1-Month Intensive Holiday Special put them together... also when we click in the products it will take as to each person..."
-                        // User listed "⚡ 1-Month Intensive Holiday Special" at €29.50, €29.00.
-                        // I will map strictly if it matches the keyword.
-                        productName = '⚡ 1-Month Intensive Holiday Special';
+                        // Strict Price Check: specific keywords like "Special" should typically imply the discount.
+                        // If someone paid > €40 but has "Special" in name, treat as Standard
+                        if (amount < 4000) {
+                            productName = '⚡ 1-Month Intensive Holiday Special';
+                        } else {
+                            productName = '1-Month Intensive (Standard)';
+                        }
+                        if (!metadataAccountType) metadataAccountType = 'paid_1m';
+                    } else if (nameLower.includes('1-month intensive')) {
+                        // Fallback for generic "1-month intensive" name outside exact buckets
+                        // Split by price threshold €40
+                        if (amount < 4000) {
+                            productName = '⚡ 1-Month Intensive Holiday Special'; // Assume discounted
+                        } else {
+                            productName = '1-Month Intensive (Standard)'; // Assume standard
+                        }
                         if (!metadataAccountType) metadataAccountType = 'paid_1m';
                     }
                 }
