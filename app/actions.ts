@@ -76,7 +76,7 @@ export async function submitLead(formData: FormData) {
                 
                 <!-- Primary Action: Download Button -->
                 <div style="margin: 30px 0; text-align: center;">
-                    <a href="https://famed-vorbereitung.com/FAMED_8WEEK_CORRECTED_STUDY_PLAN.pdf" 
+                    <a href="${process.env.NEXT_PUBLIC_APP_URL || 'https://famed-vorbereitung.com'}/2026%20Protokol%20Famed.pdf" 
                        style="background-color: #2563eb; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; display: inline-block;">
                        Download Study Plan (PDF) →
                     </a>
