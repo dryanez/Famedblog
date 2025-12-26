@@ -125,6 +125,8 @@ export default function CampaignsPage() {
     const [customCampaigns, setCustomCampaigns] = useState<CampaignTemplate[]>([]);
     // Track enabled/disabled state for automated campaigns
     const [enabledCampaigns, setEnabledCampaigns] = useState<Record<string, boolean>>({});
+    // Track sent counts for each campaign
+    const [sentCounts, setSentCounts] = useState<Record<string, number>>({});
 
     // Fetch campaign settings (enabled/disabled state)
     const fetchSettings = async () => {
@@ -134,6 +136,29 @@ export default function CampaignsPage() {
             setEnabledCampaigns(data.settings || {});
         } catch (error) {
             console.error('Error fetching campaign settings:', error);
+        }
+    };
+
+    // Fetch sent counts from campaign_logs
+    const fetchSentCounts = async () => {
+        try {
+            const { data, error } = await supabase
+                .from('campaign_logs')
+                .select('campaign_id');
+
+            if (error) {
+                console.error('Error fetching sent counts:', error);
+                return;
+            }
+
+            // Count occurrences of each campaign_id
+            const counts: Record<string, number> = {};
+            (data || []).forEach((log: any) => {
+                counts[log.campaign_id] = (counts[log.campaign_id] || 0) + 1;
+            });
+            setSentCounts(counts);
+        } catch (error) {
+            console.error('Error fetching sent counts:', error);
         }
     };
 
@@ -169,6 +194,7 @@ export default function CampaignsPage() {
     useEffect(() => {
         fetchCampaigns();
         fetchSettings();
+        fetchSentCounts();
     }, []);
 
     const allCampaigns = [...DEFAULT_CAMPAIGNS, ...customCampaigns];
@@ -572,16 +598,12 @@ export default function CampaignsPage() {
                             </h3>
                             <p className="text-sm text-gray-600 mb-4 h-10 line-clamp-2">{campaign.description}</p>
 
-                            <div className="space-y-2 mb-4 text-sm">
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">Est. Reach:</span>
-                                    <span className="font-medium text-gray-900">
-                                        {campaign.estimatedReach > 0 ? `${campaign.estimatedReach} users` : "Loading..."}
+                            <div className="mb-4 text-sm">
+                                <div className="flex justify-between items-center py-2 px-3 bg-gray-50 rounded-lg">
+                                    <span className="text-gray-600">📧 Sent to:</span>
+                                    <span className="font-bold text-gray-900">
+                                        {sentCounts[campaign.id] || 0} users
                                     </span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-gray-500">Conv. Rate:</span>
-                                    <span className="font-medium text-green-600">{campaign.conversionRate}</span>
                                 </div>
                             </div>
 
