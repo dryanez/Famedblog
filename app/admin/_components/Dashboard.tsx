@@ -43,6 +43,7 @@ export function Dashboard() {
     const [filterGermanLevel, setFilterGermanLevel] = useState<string>("all");
     const [filterExamTiming, setFilterExamTiming] = useState<string>("all");
     const [filterPrevAttempt, setFilterPrevAttempt] = useState<string>("all");
+    const [filterAccountType, setFilterAccountType] = useState<string>("all");
     // Checkbox Selection
     const [selectedUsers, setSelectedUsers] = useState<Set<string>>(new Set());
 
@@ -159,11 +160,23 @@ export function Dashboard() {
             result = result.filter(u => u["German Level"] === filterGermanLevel);
         }
 
-        // Previous Attempt
+        // Previous Attempt filter
         if (filterPrevAttempt !== "all") {
-            result = result.filter(u => u["Previous Attempt"] === (filterPrevAttempt === "yes" ? "Yes" : "No"));
+            if (filterPrevAttempt === "yes") {
+                result = result.filter(u => u["Previous Attempt"] === "Yes");
+            } else {
+                result = result.filter(u => u["Previous Attempt"] !== "Yes");
+            }
         }
 
+        // Account Type filter (paid/free)
+        if (filterAccountType !== "all") {
+            if (filterAccountType === "paid") {
+                result = result.filter(u => u.accountType && u.accountType.startsWith('paid'));
+            } else if (filterAccountType === "free") {
+                result = result.filter(u => !u.accountType || u.accountType === 'free' || !u.accountType.startsWith('paid'));
+            }
+        }
         // Exam Timing
         if (filterExamTiming !== "all") {
             result = result.filter(u => {
@@ -185,7 +198,7 @@ export function Dashboard() {
         }
 
         return result;
-    }, [users, activeSegment, searchTerm, filterGermanLevel, filterExamTiming, filterPrevAttempt]);
+    }, [users, activeSegment, searchTerm, filterGermanLevel, filterExamTiming, filterPrevAttempt, filterAccountType]);
 
     const handleSelectAll = () => {
         if (selectedUsers.size === filteredUsers.length) {
@@ -367,6 +380,17 @@ export function Dashboard() {
                             <option value="all">Tried Before: All</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
+                        </select>
+
+                        {/* Account Type Filter */}
+                        <select
+                            className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer"
+                            value={filterAccountType}
+                            onChange={(e) => setFilterAccountType(e.target.value)}
+                        >
+                            <option value="all">Account: All</option>
+                            <option value="paid">Paid</option>
+                            <option value="free">Free</option>
                         </select>
                     </div>
                     <div className="text-sm text-gray-500 font-medium whitespace-nowrap">
