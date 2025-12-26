@@ -32,10 +32,6 @@ export default function LeadMagnetPage() {
                 link.click();
                 document.body.removeChild(link);
 
-                // Redirect to book page after short delay
-                setTimeout(() => {
-                    router.push('/book');
-                }, 1500);
             } else {
                 alert('Error: ' + result.message);
             }
@@ -50,32 +46,87 @@ export default function LeadMagnetPage() {
     if (submitted) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-50 py-16 px-4">
-                <div className="max-w-2xl mx-auto text-center bg-white rounded-2xl shadow-xl p-12">
-                    <div className="text-6xl mb-6">🎉</div>
-                    <h1 className="text-4xl font-bold mb-4 text-gray-900">Success!</h1>
-                    <p className="text-xl text-gray-600 mb-8">
-                        Your FREE 8-Week FAMED Study Plan is downloading now!
-                    </p>
-                    <p className="text-gray-600 mb-8">
-                        Check your email for additional resources and tips to help you pass the FAMED exam.
-                    </p>
-                    <a
-                        href="/2026%20Protokol%20Famed.pdf"
-                        download
-                        className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition mb-4"
-                    >
-                        Download Again
-                    </a>
-                    <div className="mt-8 pt-8 border-t border-gray-200">
-                        <p className="text-gray-700 font-semibold mb-4">Want more help?</p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/exam" className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition">
-                                Practice Exam →
-                            </a>
-                            <a href="/blog" className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition">
-                                Read Blog →
-                            </a>
+                <div className="max-w-4xl mx-auto w-full">
+                    {/* Success Header */}
+                    <div className="text-center mb-10">
+                        <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
+                            <span className="text-4xl">🎉</span>
                         </div>
+                        <h1 className="text-4xl font-bold mb-4 text-gray-900">It's on the way!</h1>
+                        <p className="text-xl text-gray-600">
+                            Your FREE 8-Week FAMED Study Plan is downloading automatically.
+                        </p>
+                        <p className="text-sm text-gray-500 mt-2">
+                            Doesn't start? <a href="/2026%20Protokol%20Famed.pdf" download className="text-blue-600 underline">Click here to download manually</a>.
+                        </p>
+                    </div>
+
+                    {/* ONE TIME OFFER CARD */}
+                    <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-600 relative">
+                        {/* Banner */}
+                        <div className="bg-blue-600 text-white text-center py-3 font-bold text-lg tracking-wide uppercase">
+                            Wait! One Time Offer
+                        </div>
+
+                        <div className="p-8 md:p-12">
+                            <div className="flex flex-col md:flex-row gap-8 items-center">
+                                {/* Left: Value Prop */}
+                                <div className="flex-1 text-center md:text-left">
+                                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                        Pass Your FaMED Exam <span className="text-blue-600">3x Faster</span>
+                                    </h2>
+                                    <p className="text-gray-600 text-lg mb-6">
+                                        The study plan tells you <strong>what</strong> to do. Our official Preparation Book gives you the <strong>scripts, cases, and answers</strong> to actually do it.
+                                    </p>
+
+                                    <ul className="space-y-3 mb-8 text-left inline-block">
+                                        <li className="flex items-center text-gray-700">
+                                            <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                            Complete Communication Scripts (Anamnese & Aufklärung)
+                                        </li>
+                                        <li className="flex items-center text-gray-700">
+                                            <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                            Arzt-Arzt Simulation Frameworks
+                                        </li>
+                                        <li className="flex items-center text-gray-700">
+                                            <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                            Based on 2024 Exam Requirements
+                                        </li>
+                                    </ul>
+
+                                    <div>
+                                        <a
+                                            href="https://buy.stripe.com/8x228sdcZ0QNebifjX7Re0h"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="block w-full bg-green-600 text-white text-center px-8 py-5 rounded-xl font-bold text-2xl hover:bg-green-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                                        >
+                                            Get The Official Book Now →
+                                        </a>
+                                        <p className="text-center text-xs text-gray-400 mt-3">
+                                            Secure Payment via Stripe • Instant Access
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Right: Visual/Price (Optional, simple text for now) */}
+                                <div className="hidden md:block w-72 h-auto bg-gray-100 rounded-xl p-6 text-center border border-gray-200 transform rotate-2">
+                                    <div className="text-gray-500 font-bold mb-2 uppercase text-sm">Official Guide</div>
+                                    <div className="text-4xl font-extrabold text-blue-900 mb-4">FaMED<br />Protokoll</div>
+                                    <div className="text-3xl font-bold text-green-600 mb-4">€49.99</div>
+                                    <div className="text-sm text-gray-600">Digital + Physical Copy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="text-center mt-8">
+                        <button
+                            onClick={() => window.location.reload()}
+                            className="text-gray-400 hover:text-gray-600 text-sm"
+                        >
+                            No thanks, I'll stick to the free plan
+                        </button>
                     </div>
                 </div>
             </div>
