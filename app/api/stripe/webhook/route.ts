@@ -2,23 +2,31 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-    apiVersion: '2025-01-27.acacia' as any,
-});
-
-const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
-
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
-
 // Note: No more hardcoded Price IDs! 
 // We now fetch product details dynamically from Stripe 
 // and use Stripe Metadata (e.g., account_type: 'paid_1m') for app logic.
 
+// Helper to initialize Stripe (lazy initialization to avoid build-time errors)
+function getStripe() {
+    return new Stripe(process.env.STRIPE_SECRET_KEY!, {
+        apiVersion: '2025-01-27.acacia' as any,
+    });
+}
+
+// Helper to get Supabase client
+function getSupabase() {
+    return createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!
+    );
+}
+
 export async function POST(request: Request) {
     try {
+        const stripe = getStripe();
+        const supabase = getSupabase();
+        const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
+
         const body = await request.text();
         const signature = request.headers.get('stripe-signature');
 
