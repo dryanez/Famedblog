@@ -38,6 +38,12 @@ export function Dashboard() {
     // Campaign Filtering State
     const [selectedCampaignType, setSelectedCampaignType] = useState<string>("all");
     const [selectedDateRange, setSelectedDateRange] = useState<"all" | "today" | "last7" | "last30">("all");
+    // CRM Advanced Filtering
+    const [filterGermanLevel, setFilterGermanLevel] = useState<string>("all");
+    const [filterExamTiming, setFilterExamTiming] = useState<string>("all");
+    const [filterPrevAttempt, setFilterPrevAttempt] = useState<string>("all");
+    // Checkbox Selection
+    const [selectedUsers, setSelectedUsers] = useState<Set<string>>(new Set());
 
     const [historyUserId, setHistoryUserId] = useState<string | null>(null);
     const [historyUserEmail, setHistoryUserEmail] = useState<string>("");
@@ -145,27 +151,53 @@ export function Dashboard() {
             );
         }
 
-        // --- NEW: Campaign Filtering Logic ---
-        // (Note: This requires fetching logs for all users, which might be expensive. 
-        //  For now, we'll placeholder this or implement client-side if logs are attached to users.
-        //  The actual request was "see people reached per day... filter even more".
-        //  Ideally we'd filter the *List* of sends, not just Users. 
-        //  But fitting into this Dashboard, we can show "Users who received X".
-        //  We need to fetch logs to make this work efficiently.
-        //  Let's keep the UI simple for now and rely on individual history or a separate "Reports" tab later if requested.
-        //  Wait, user asked "see people reached per day, in each campaign". 
-        //  Current User table is focused on USERS. 
-        //  Maybe we just filter by "Last campaign received"? 
-        //  Let's stick to the plan: Campaign Filter + Date Range Filter.
-        //  We will assume we might need to join data. For now, let's just add the UI controls 
-        //  and maybe a simple "Sent Today" filter if we had that data on the user object.)
+        // --- Advanced CRM Filters ---
+        // German Level
+        if (filterGermanLevel !== "all") {
+            result = result.filter(u => u["German Level"] === filterGermanLevel);
+        }
 
-        // *Correction*: We don't have campaign logs attached to the `users` state yet. 
-        // To strictly fulfill "filter by campaign", we'd need to fetch logs.
-        // Let's add the UI controls to the top bar first, and then fetch logs if needed.
+        // Previous Attempt
+        if (filterPrevAttempt !== "all") {
+            result = result.filter(u => u["Previous Attempt"] === (filterPrevAttempt === "yes" ? "Yes" : "No"));
+        }
+
+        // Exam Timing
+        if (filterExamTiming !== "all") {
+            result = result.filter(u => {
+                if (!u.parsedExamDate) return false;
+                const now = new Date();
+                const diffTime = u.parsedExamDate.getTime() - now.getTime();
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); // Days until exam
+
+                switch (filterExamTiming) {
+                    case "gt_3m": return diffDays > 90;
+                    case "gt_2m": return diffDays > 60;
+                    case "gt_1m": return diffDays > 30;
+                    case "lt_2w": return diffDays <= 14 && diffDays >= 0;
+                    case "lt_1w": return diffDays <= 7 && diffDays >= 0;
+                    default: return true;
+                }
+            });
+        }
 
         return result;
-    }, [users, activeSegment, searchTerm /*, selectedCampaignType, selectedDateRange */]);
+    }, [users, activeSegment, searchTerm, filterGermanLevel, filterExamTiming, filterPrevAttempt]);
+
+    const handleSelectAll = () => {
+        if (selectedUsers.size === filteredUsers.length) {
+            setSelectedUsers(new Set());
+        } else {
+            setSelectedUsers(new Set(filteredUsers.map(u => u.id)));
+        }
+    };
+
+    const toggleUser = (id: string) => {
+        const next = new Set(selectedUsers);
+        if (next.has(id)) next.delete(id);
+        else next.add(id);
+        setSelectedUsers(next);
+    };
 
     const getDaysUntilExam = (user: UserData): number | null => {
         if (!user.parsedExamDate) return null;
@@ -207,7 +239,7 @@ export function Dashboard() {
             <header className="flex items-center justify-between pb-6 border-b border-gray-100">
                 <div>
                     <h1 className="text-2xl font-bold tracking-tight text-gray-900">User Analytics</h1>
-                    <p className="text-gray-500">Targeting Strategy: Xmas 50% Special</p>
+                    <p className="text-gray-500">Targeting Strategy: Xmas 50% Special <span className="text-green-600 bg-green-100 px-2 py-0.5 rounded text-xs ml-2">CRM v2 Active</span></p>
                 </div>
                 <div className="flex gap-3">
                     <a
@@ -280,28 +312,43 @@ export function Dashboard() {
                         </div>
 
                         {/* Campaign Filter */}
+                        {/* German Level Filter */}
                         <select
                             className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer"
-                            value={selectedCampaignType}
-                            onChange={(e) => setSelectedCampaignType(e.target.value)}
+                            value={filterGermanLevel}
+                            onChange={(e) => setFilterGermanLevel(e.target.value)}
                         >
-                            <option value="all">All Campaigns</option>
-                            <option value="holiday_special">Holiday Special</option>
-                            <option value="exam_urgency_14d">Exam Warning (14d)</option>
-                            <option value="exam_urgency_special_offer">Special Offer</option>
-                            <option value="welcome_day0">Welcome</option>
+                            <option value="all">Level: All</option>
+                            <option value="C1">C1</option>
+                            <option value="B2">B2</option>
+                            <option value="B1">B1</option>
+                            <option value="A2">A2</option>
+                            <option value="N/A">N/A</option>
                         </select>
 
-                        {/* Date Range Filter */}
+                        {/* Exam Timing Filter */}
                         <select
                             className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer"
-                            value={selectedDateRange}
-                            onChange={(e) => setSelectedDateRange(e.target.value as any)}
+                            value={filterExamTiming}
+                            onChange={(e) => setFilterExamTiming(e.target.value)}
                         >
-                            <option value="all">Any Time</option>
-                            <option value="today">Sent Today</option>
-                            <option value="last7">Last 7 Days</option>
-                            <option value="last30">Last 30 Days</option>
+                            <option value="all">Exam Date: All</option>
+                            <option value="gt_3m">&gt; 3 Months</option>
+                            <option value="gt_2m">&gt; 2 Months</option>
+                            <option value="gt_1m">&gt; 1 Month</option>
+                            <option value="lt_2w">&lt; 2 Weeks</option>
+                            <option value="lt_1w">&lt; 1 Week</option>
+                        </select>
+
+                        {/* Previous Attempt Filter */}
+                        <select
+                            className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer"
+                            value={filterPrevAttempt}
+                            onChange={(e) => setFilterPrevAttempt(e.target.value)}
+                        >
+                            <option value="all">Tried Before: All</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
                         </select>
                     </div>
                     <div className="text-sm text-gray-500 font-medium whitespace-nowrap">
@@ -313,6 +360,14 @@ export function Dashboard() {
                     <table className="w-full text-left text-sm">
                         <thead className="bg-gray-50 text-gray-500 font-medium border-b border-gray-100">
                             <tr>
+                                <th className="px-6 py-3 w-10">
+                                    <input
+                                        type="checkbox"
+                                        className="rounded border-gray-300"
+                                        checked={selectedUsers.size === filteredUsers.length && filteredUsers.length > 0}
+                                        onChange={handleSelectAll}
+                                    />
+                                </th>
                                 <th className="px-6 py-3">Name</th>
                                 <th className="px-6 py-3">Email</th>
                                 <th className="px-6 py-3">German Level</th>
@@ -326,6 +381,14 @@ export function Dashboard() {
                         <tbody className="divide-y divide-gray-50">
                             {filteredUsers.map(user => (
                                 <tr key={user.id} className="hover:bg-gray-50/80 transition-colors group">
+                                    <td className="px-6 py-3">
+                                        <input
+                                            type="checkbox"
+                                            className="rounded border-gray-300"
+                                            checked={selectedUsers.has(user.id)}
+                                            onChange={() => toggleUser(user.id)}
+                                        />
+                                    </td>
                                     <td className="px-6 py-3 font-medium text-gray-900">
                                         {user.Name} {user["Last Name"]}
                                     </td>

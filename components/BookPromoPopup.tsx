@@ -70,7 +70,7 @@ export default function BookPromoPopup() {
                             Pass Your Exam 3x Faster?
                         </h3>
                         <p className="text-xs text-gray-500 mb-4 leading-relaxed">
-                            Get the official protocols and scripts used by 500+ doctors.
+                            Master Grammar, Anamnese, Aufklärung, & Arzt-Arzt. FaMED 2026 Protokoll.
                         </p>
 
                         <a

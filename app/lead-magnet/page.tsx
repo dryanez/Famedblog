@@ -76,7 +76,7 @@ export default function LeadMagnetPage() {
                                         Pass Your FaMED Exam <span className="text-blue-600">3x Faster</span>
                                     </h2>
                                     <p className="text-gray-600 text-lg mb-6">
-                                        The study plan tells you <strong>what</strong> to do. Our official Preparation Book gives you the <strong>scripts, cases, and answers</strong> to actually do it.
+                                        The study plan tells you <strong>what</strong> to do. Our official Preparation Book teaches you <strong>everything you need to know</strong>: Grammar, Anamnese, Aufklärung, Arzt-Arzt, and Brief Cases. All of them in one book!
                                     </p>
 
                                     <ul className="space-y-3 mb-8 text-left inline-block">
@@ -90,7 +90,7 @@ export default function LeadMagnetPage() {
                                         </li>
                                         <li className="flex items-center text-gray-700">
                                             <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                            Based on 2024 Exam Requirements
+                                            FaMED 2026 Protokoll
                                         </li>
                                     </ul>
 
