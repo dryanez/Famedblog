@@ -198,7 +198,14 @@ export default function CampaignsPage() {
         fetchSentCounts();
     }, []);
 
-    const allCampaigns = [...DEFAULT_CAMPAIGNS, ...customCampaigns];
+    const allCampaigns = [...DEFAULT_CAMPAIGNS, ...customCampaigns].filter(c => {
+        // Hide default manual campaigns if they are disabled (deleted)
+        const isDefault = DEFAULT_CAMPAIGNS.some(dc => dc.id === c.id);
+        if (isDefault && c.type === 'manual') {
+            return enabledCampaigns[c.id] !== false;
+        }
+        return true;
+    });
 
     const [sending, setSending] = useState(false);
     const [previewCampaignId, setPreviewCampaignId] = useState<string | null>(null);
@@ -263,6 +270,8 @@ export default function CampaignsPage() {
                     success: true,
                     message: `Successfully sent to ${data.sentCount} users!\n\nRecipients:\n${recipientList || 'No recipient details available'}`
                 });
+                // Refresh sent counts
+                fetchSentCounts();
             } else {
                 setResult({ success: false, message: data.error || 'Failed to send campaign' });
             }
@@ -428,19 +437,37 @@ export default function CampaignsPage() {
         // Defer to avoid blocking UI thread during confirm dialog
         setTimeout(async () => {
             const isDefault = DEFAULT_CAMPAIGNS.some(c => c.id === id);
+            const campaign = allCampaigns.find(c => c.id === id);
 
             if (isDefault) {
-                // For default campaigns, confirm and disable instead of delete
-                if (window.confirm("This is a default campaign. Would you like to disable it from automation?")) {
-                    setEnabledCampaigns(prev => ({ ...prev, [id]: false }));
-                    try {
-                        await fetch('/api/campaigns/settings', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ campaignId: id, enabled: false })
-                        });
-                    } catch (error) {
-                        console.error('Error disabling campaign:', error);
+                // For default campaigns, logic depends on type
+                if (campaign?.type === 'manual') {
+                    // Manual default campaigns can be "hidden"
+                    if (window.confirm("Do you want to hide this campaign template?")) {
+                        setEnabledCampaigns(prev => ({ ...prev, [id]: false }));
+                        try {
+                            await fetch('/api/campaigns/settings', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ campaignId: id, enabled: false })
+                            });
+                        } catch (error) {
+                            console.error('Error hiding campaign:', error);
+                        }
+                    }
+                } else {
+                    // Automated default campaigns are disabled from automation
+                    if (window.confirm("This is an automated campaign. Do you want to disable automation for it?")) {
+                        setEnabledCampaigns(prev => ({ ...prev, [id]: false }));
+                        try {
+                            await fetch('/api/campaigns/settings', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ campaignId: id, enabled: false })
+                            });
+                        } catch (error) {
+                            console.error('Error disabling campaign:', error);
+                        }
                     }
                 }
             } else {
