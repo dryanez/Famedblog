@@ -7,7 +7,8 @@ const AUTOMATED_CAMPAIGNS = [
     'exam_urgency_7d',
     'exam_urgency_3d',
     'subscription_expiry',
-    'welcome_day0'
+    'welcome_day0',
+    'holiday_special'  // Added for holiday campaign automation
 ];
 
 export async function GET(request: Request) {
