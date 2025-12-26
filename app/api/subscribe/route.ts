@@ -11,7 +11,7 @@ export async function POST(request: Request) {
         // 2. Get your API key
         // 3. Add RESEND_API_KEY to .env.local
         // 4. Install: npm install resend
-        
+
         if (process.env.RESEND_API_KEY) {
             try {
                 const resendResponse = await fetch('https://api.resend.com/emails', {
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
                                 <li>Anamnese, Aufklärung, Arzt-Arzt, and Brief strategies</li>
                                 <li>Top 10 mistakes to avoid</li>
                             </ul>
-                            <p><a href="https://famedtestprep.com/FAMED_8WEEK_CORRECTED_STUDY_PLAN.pdf" style="background-color: #0066CC; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; display: inline-block; margin: 20px 0;">Download Your Guide</a></p>
+                            <p><a href="${process.env.NEXT_PUBLIC_APP_URL || 'https://famed-vorbereitung.com'}/2026%20Protokol%20Famed.pdf" style="background-color: #0066CC; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; display: inline-block; margin: 20px 0;">Download Your Guide</a></p>
                             <p>Need more help? Check out our <a href="https://famedtestprep.com/blog">blog</a> for expert tips and strategies.</p>
                             <p>Good luck with your preparation!</p>
                             <p>Best regards,<br>FAMED Test Prep Team</p>
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
         // 2. Create an audience/list
         // 3. Get API key from Account > Extras > API keys
         // 4. Add to .env.local: MAILCHIMP_API_KEY and MAILCHIMP_LIST_ID
-        
+
         if (process.env.MAILCHIMP_API_KEY && process.env.MAILCHIMP_LIST_ID) {
             try {
                 const datacenter = process.env.MAILCHIMP_API_KEY.split('-')[1];
@@ -92,7 +92,7 @@ export async function POST(request: Request) {
         // 2. Add Webhook trigger
         // 3. Copy webhook URL
         // 4. Add to .env.local: WEBHOOK_URL
-        
+
         if (process.env.WEBHOOK_URL) {
             try {
                 await fetch(process.env.WEBHOOK_URL, {
@@ -114,15 +114,15 @@ export async function POST(request: Request) {
 
         // OPTION 4: GOOGLE SHEETS (Simple Tracking)
         // Use Make.com or Zapier to save to Google Sheets
-        
-        return NextResponse.json({ 
-            success: true, 
-            message: 'Thank you for subscribing!' 
+
+        return NextResponse.json({
+            success: true,
+            message: 'Thank you for subscribing!'
         });
     } catch (error) {
         console.error('Subscription error:', error);
-        return NextResponse.json({ 
-            error: 'Failed to subscribe. Please try again.' 
+        return NextResponse.json({
+            error: 'Failed to subscribe. Please try again.'
         }, { status: 500 });
     }
 }
