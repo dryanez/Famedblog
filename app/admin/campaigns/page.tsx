@@ -123,6 +123,19 @@ const DEFAULT_CAMPAIGNS: CampaignTemplate[] = [
 export default function CampaignsPage() {
     // Separate custom campaigns to manage persistence easily
     const [customCampaigns, setCustomCampaigns] = useState<CampaignTemplate[]>([]);
+    // Track enabled/disabled state for automated campaigns
+    const [enabledCampaigns, setEnabledCampaigns] = useState<Record<string, boolean>>({});
+
+    // Fetch campaign settings (enabled/disabled state)
+    const fetchSettings = async () => {
+        try {
+            const response = await fetch('/api/campaigns/settings');
+            const data = await response.json();
+            setEnabledCampaigns(data.settings || {});
+        } catch (error) {
+            console.error('Error fetching campaign settings:', error);
+        }
+    };
 
     // Fetch campaigns from Supabase on mount
     const fetchCampaigns = async () => {
@@ -155,6 +168,7 @@ export default function CampaignsPage() {
 
     useEffect(() => {
         fetchCampaigns();
+        fetchSettings();
     }, []);
 
     const allCampaigns = [...DEFAULT_CAMPAIGNS, ...customCampaigns];
@@ -174,6 +188,33 @@ export default function CampaignsPage() {
         tone: "professional"
     });
     const [result, setResult] = useState<{ success: boolean; message: string } | null>(null);
+
+    // Toggle campaign enabled/disabled
+    const handleToggleCampaign = async (campaignId: string) => {
+        const currentState = enabledCampaigns[campaignId] !== false; // Default to true
+        const newState = !currentState;
+
+        // Optimistic update
+        setEnabledCampaigns(prev => ({ ...prev, [campaignId]: newState }));
+
+        try {
+            const response = await fetch('/api/campaigns/settings', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ campaignId, enabled: newState })
+            });
+
+            if (!response.ok) {
+                // Revert on error
+                setEnabledCampaigns(prev => ({ ...prev, [campaignId]: currentState }));
+                console.error('Failed to toggle campaign');
+            }
+        } catch (error) {
+            // Revert on error
+            setEnabledCampaigns(prev => ({ ...prev, [campaignId]: currentState }));
+            console.error('Error toggling campaign:', error);
+        }
+    };
 
     const handleSendCampaign = async (campaignId: string) => {
         setSending(true);
@@ -357,22 +398,41 @@ export default function CampaignsPage() {
 
     const handleDeleteCampaign = async (e: React.MouseEvent, id: string) => {
         e.stopPropagation();
-        if (window.confirm("Are you sure you want to delete this campaign?")) {
-            // Optimistic update
-            setCustomCampaigns(prev => prev.filter(c => c.id !== id));
+        const isDefault = DEFAULT_CAMPAIGNS.some(c => c.id === id);
 
-            try {
-                const response = await fetch(`/api/campaigns/${id}`, {
-                    method: 'DELETE',
-                });
-
-                if (!response.ok) {
-                    throw new Error('Failed to delete');
+        if (isDefault) {
+            // For default campaigns, confirm and disable instead of delete
+            if (window.confirm("This is a default campaign. Would you like to disable it from automation?")) {
+                setEnabledCampaigns(prev => ({ ...prev, [id]: false }));
+                try {
+                    await fetch('/api/campaigns/settings', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ campaignId: id, enabled: false })
+                    });
+                } catch (error) {
+                    console.error('Error disabling campaign:', error);
                 }
-            } catch (error) {
-                console.error('Delete error:', error);
-                alert('Failed to delete campaign from server');
-                fetchCampaigns(); // Revert on error
+            }
+        } else {
+            // For custom campaigns, delete from database
+            if (window.confirm("Are you sure you want to delete this campaign?")) {
+                // Optimistic update
+                setCustomCampaigns(prev => prev.filter(c => c.id !== id));
+
+                try {
+                    const response = await fetch(`/api/campaigns/${id}`, {
+                        method: 'DELETE',
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Failed to delete');
+                    }
+                } catch (error) {
+                    console.error('Delete error:', error);
+                    alert('Failed to delete campaign from server');
+                    fetchCampaigns(); // Revert on error
+                }
             }
         }
     };
@@ -453,38 +513,58 @@ export default function CampaignsPage() {
                     const Icon = campaign.icon || Sparkles; // Fallback icon
                     // Check if it's a default campaign by ID
                     const isDefault = DEFAULT_CAMPAIGNS.some(c => c.id === campaign.id);
-                    const canDelete = !isDefault;
+                    const isAutomated = campaign.type === 'automated';
+                    const isEnabled = enabledCampaigns[campaign.id] !== false; // Default to true
 
                     return (
                         <div
                             key={campaign.id}
                             className={cn(
-                                "bg-white border rounded-xl p-6 hover:shadow-lg transition-shadow relative group",
-                                canDelete ? "border-purple-200" : "border-gray-200"
+                                "bg-white border rounded-xl p-6 hover:shadow-lg transition-shadow relative",
+                                isEnabled ? "border-gray-200" : "border-gray-200 opacity-60"
                             )}
                         >
-                            {canDelete && (
-                                <button
-                                    onClick={(e) => handleDeleteCampaign(e, campaign.id)}
-                                    className="absolute top-4 right-4 p-2 text-red-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all"
-                                    title="Delete Campaign"
-                                >
-                                    <Trash2 className="w-4 h-4" />
-                                </button>
-                            )}
+                            {/* Delete button - always visible, top right */}
+                            <button
+                                onClick={(e) => handleDeleteCampaign(e, campaign.id)}
+                                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all"
+                                title="Delete Campaign"
+                            >
+                                <Trash2 className="w-4 h-4" />
+                            </button>
 
                             <div className="flex items-start justify-between mb-4">
                                 <div className={cn("p-3 rounded-lg", campaign.color)}>
                                     <Icon className="w-6 h-6" />
                                 </div>
-                                <span className={cn(
-                                    "text-xs px-2 py-1 rounded-full font-medium",
-                                    campaign.type === "automated"
-                                        ? "bg-green-100 text-green-700"
-                                        : "bg-gray-100 text-gray-700"
-                                )}>
-                                    {campaign.type === "automated" ? "⚡ Auto" : "Manual"}
-                                </span>
+                                <div className="flex items-center gap-2">
+                                    {/* Toggle switch for automated campaigns */}
+                                    {isAutomated && (
+                                        <button
+                                            onClick={() => handleToggleCampaign(campaign.id)}
+                                            className={cn(
+                                                "relative inline-flex h-6 w-11 items-center rounded-full transition-colors",
+                                                isEnabled ? "bg-green-500" : "bg-gray-300"
+                                            )}
+                                            title={isEnabled ? "Click to disable automation" : "Click to enable automation"}
+                                        >
+                                            <span
+                                                className={cn(
+                                                    "inline-block h-4 w-4 transform rounded-full bg-white transition-transform shadow-sm",
+                                                    isEnabled ? "translate-x-6" : "translate-x-1"
+                                                )}
+                                            />
+                                        </button>
+                                    )}
+                                    <span className={cn(
+                                        "text-xs px-2 py-1 rounded-full font-medium",
+                                        isAutomated
+                                            ? (isEnabled ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500")
+                                            : "bg-gray-100 text-gray-700"
+                                    )}>
+                                        {isAutomated ? (isEnabled ? "⚡ Auto ON" : "⏸ Auto OFF") : "Manual"}
+                                    </span>
+                                </div>
                             </div>
 
                             <h3 className="text-lg font-bold text-gray-900 mb-2 truncate" title={campaign.name}>

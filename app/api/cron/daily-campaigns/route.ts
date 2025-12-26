@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
 
-// List of campaigns that should run automatically
+// List of campaigns that CAN run automatically (if enabled)
 const AUTOMATED_CAMPAIGNS = [
     'exam_urgency_14d',
     'exam_urgency_special_offer',
@@ -8,7 +9,7 @@ const AUTOMATED_CAMPAIGNS = [
     'exam_urgency_3d',
     'subscription_expiry',
     'welcome_day0',
-    'holiday_special'  // Added for holiday campaign automation
+    'holiday_special'
 ];
 
 export async function GET(request: Request) {
@@ -23,10 +24,41 @@ export async function GET(request: Request) {
 
         console.log('[CRON] Starting daily campaign execution at', new Date().toISOString());
 
+        // Fetch enabled state for all campaigns
+        const supabase = createClient(
+            process.env.NEXT_PUBLIC_SUPABASE_URL!,
+            process.env.SUPABASE_SERVICE_ROLE_KEY!
+        );
+
+        const { data: settingsData } = await supabase
+            .from('campaign_automation')
+            .select('campaign_id, enabled');
+
+        // Convert to lookup object (default to true if not found)
+        const enabledMap: Record<string, boolean> = {};
+        (settingsData || []).forEach((row: any) => {
+            enabledMap[row.campaign_id] = row.enabled;
+        });
+
         const results = [];
 
-        // Run each automated campaign
+        // Run each automated campaign IF enabled
         for (const campaignId of AUTOMATED_CAMPAIGNS) {
+            // Check if enabled (default to true if not in settings table)
+            const isEnabled = enabledMap[campaignId] !== false;
+
+            if (!isEnabled) {
+                console.log(`[CRON] Skipping disabled campaign: ${campaignId}`);
+                results.push({
+                    campaignId,
+                    success: true,
+                    sentCount: 0,
+                    message: 'Skipped (disabled)',
+                    skipped: true
+                });
+                continue;
+            }
+
             try {
                 console.log(`[CRON] Processing campaign: ${campaignId}`);
 
