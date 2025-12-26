@@ -113,12 +113,12 @@ async function backfillCheckoutSessions() {
                 const amount = session.amount_total;
                 const nameLower = productName.toLowerCase();
 
-                // 1. INCLUDE Test Plans (User wants them for accounting)
-                // if (amount <= 100 || nameLower.includes('test plan')) {
-                //     console.log(`⏭️  Skipping test item: ${productName} (€${(amount / 100).toFixed(2)})`);
-                //     totalSkipped++;
-                //     continue; // Skip this session entirely
-                // }
+                // 1. EXCLUDE Test Plans (≤ €1 or contains "Test Plan")
+                if (amount <= 100 || nameLower.includes('test plan')) {
+                    console.log(`⏭️  Skipping test item: ${productName} (€${(amount / 100).toFixed(2)})`);
+                    totalSkipped++;
+                    continue; // Skip this session entirely
+                }
 
                 // 2. Consolidate 6-Month Products (~€100)
                 if (amount >= 9500 && amount <= 10500) { // €95-105

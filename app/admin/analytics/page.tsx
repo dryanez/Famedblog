@@ -211,6 +211,18 @@ export default function AnalyticsPage() {
                                 </tr>
                             ))}
                         </tbody>
+                        <tfoot className="border-t-2 border-gray-300 bg-gray-50 font-bold">
+                            <tr>
+                                <td className="py-3 pl-4 text-gray-900">Total</td>
+                                <td className="py-3 text-right text-gray-900">
+                                    €{data.productPerformance.reduce((acc, p) => acc + p.revenue, 0).toFixed(2)}
+                                </td>
+                                <td className="py-3 text-right text-gray-900">
+                                    {data.productPerformance.reduce((acc, p) => acc + p.units, 0)}
+                                </td>
+                                <td className="py-3 text-right text-gray-900">-</td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
