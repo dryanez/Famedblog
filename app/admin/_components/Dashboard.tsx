@@ -7,6 +7,7 @@ import { Users, Calendar, CloudLightning, Moon, Search, Mail, Eye, X, DollarSign
 import { cn } from "@/lib/utils";
 import { getEmailTemplate } from "@/lib/email-templates";
 import { CampaignHistoryModal } from "./CampaignHistoryModal";
+import { SendCampaignModal } from "./SendCampaignModal";
 
 // --- Subcomponents (Inlined for speed, can refactor later) ---
 
@@ -47,6 +48,7 @@ export function Dashboard() {
 
     const [historyUserId, setHistoryUserId] = useState<string | null>(null);
     const [historyUserEmail, setHistoryUserEmail] = useState<string>("");
+    const [showSendModal, setShowSendModal] = useState(false);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -174,6 +176,7 @@ export function Dashboard() {
                     case "gt_3m": return diffDays > 90;
                     case "gt_2m": return diffDays > 60;
                     case "gt_1m": return diffDays > 30;
+                    case "gte_2w": return diffDays >= 14;
                     case "lt_2w": return diffDays <= 14 && diffDays >= 0;
                     case "lt_1w": return diffDays <= 7 && diffDays >= 0;
                     default: return true;
@@ -248,6 +251,20 @@ export function Dashboard() {
                     >
                         📧 Campaigns
                     </a>
+                    <a
+                        href="/admin/analytics"
+                        className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm bg-purple-600 text-white hover:bg-purple-700"
+                    >
+                        📊 Analytics
+                    </a>
+                    {selectedUsers.size > 0 && (
+                        <button
+                            onClick={() => setShowSendModal(true)}
+                            className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-sm bg-green-600 text-white hover:bg-green-700"
+                        >
+                            📤 Send to {selectedUsers.size}
+                        </button>
+                    )}
                 </div>
             </header>
 
@@ -336,6 +353,7 @@ export function Dashboard() {
                             <option value="gt_3m">&gt; 3 Months</option>
                             <option value="gt_2m">&gt; 2 Months</option>
                             <option value="gt_1m">&gt; 1 Month</option>
+                            <option value="gte_2w">&gt;= 2 Weeks</option>
                             <option value="lt_2w">&lt; 2 Weeks</option>
                             <option value="lt_1w">&lt; 1 Week</option>
                         </select>
@@ -457,6 +475,18 @@ export function Dashboard() {
                     onClose={() => {
                         setHistoryUserId(null);
                         setHistoryUserEmail("");
+                    }}
+                />
+            )}
+
+            {/* Send Campaign Modal */}
+            {showSendModal && (
+                <SendCampaignModal
+                    selectedUserIds={Array.from(selectedUsers)}
+                    onClose={() => setShowSendModal(false)}
+                    onSuccess={() => {
+                        setShowSendModal(false);
+                        setSelectedUsers(new Set());
                     }}
                 />
             )}

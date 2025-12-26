@@ -27,7 +27,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
     try {
-        const { campaignId, testEmail } = await request.json();
+        const { campaignId, testEmail, userIds } = await request.json();
 
         // Fetch all users
         const { data: users, error } = await supabase
@@ -76,6 +76,73 @@ export async function POST(request: Request) {
                 textTemplate = (data) => `This is a test email for campaign ${campaignId}.`;
                 // We will fetch the custom campaign content later in the loop if needed
                 // But current loop uses emailTemplate(params)
+            }
+        } else if (userIds && Array.isArray(userIds) && userIds.length > 0) {
+            // MANUAL SELECTION MODE: Use specified user IDs
+            targetUsers = users.filter(u => userIds.includes(String(u.id)));
+
+            // Set templates based on campaign type
+            switch (campaignId) {
+                case 'exam_urgency_14d':
+                    emailTemplate = getExamUrgency14Days;
+                    textTemplate = getTextExamUrgency14Days;
+                    subjectLine = '⚠️ Your Exam is in 14 Days!';
+                    break;
+                case 'exam_urgency_special_offer':
+                    emailTemplate = getExamUrgencySpecialOffer;
+                    textTemplate = getTextExamUrgencySpecialOffer;
+                    subjectLine = '🔥 Special Offer: Last Minute Rescue Pack (€19.99)';
+                    break;
+                case 'exam_urgency_7d':
+                    emailTemplate = getExamUrgency7Days;
+                    textTemplate = getTextExamUrgency7Days;
+                    subjectLine = '🚨 Final Week! Your Exam is This Week';
+                    break;
+                case 'exam_urgency_3d':
+                    emailTemplate = getExamUrgency3Days;
+                    textTemplate = getTextExamUrgency3Days;
+                    subjectLine = '⏰ 72 Hours Until Your FaMED Exam';
+                    break;
+                case 'welcome_day0':
+                    emailTemplate = getWelcomeDay0;
+                    textTemplate = getTextWelcomeDay0;
+                    subjectLine = '👋 Welcome to FaMED Prep!';
+                    break;
+                case 'subscription_expiry':
+                    emailTemplate = getSubscriptionExpiry;
+                    textTemplate = getTextSubscriptionExpiry;
+                    subjectLine = '🔔 Your Premium Access Expires Soon';
+                    break;
+                case 'holiday_special':
+                    const { data: holidayOverride } = await supabase
+                        .from('campaigns')
+                        .select('content')
+                        .eq('name', 'Holiday Special')
+                        .single();
+
+                    if (holidayOverride?.content) {
+                        emailTemplate = () => holidayOverride.content;
+                    } else {
+                        emailTemplate = getHolidaySpecial;
+                    }
+                    textTemplate = getTextHolidaySpecial;
+                    subjectLine = '🎄 Holiday Special: 50% Off + Free Book! 🎁';
+                    break;
+                default:
+                    // Check for custom campaign
+                    const { data: customCampaign } = await supabase
+                        .from('campaigns')
+                        .select('*')
+                        .eq('id', campaignId)
+                        .single();
+
+                    if (customCampaign) {
+                        subjectLine = `Update: ${customCampaign.name}`;
+                        emailTemplate = () => customCampaign.content;
+                        textTemplate = (data) => `Please enable HTML to view this email.`;
+                    } else {
+                        return NextResponse.json({ error: 'Invalid campaign ID' }, { status: 400 });
+                    }
             }
         } else {
             // Filter users based on campaign type

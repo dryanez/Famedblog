@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { submitLead } from '@/app/actions';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import UpsellCard from '@/components/UpsellCard';
 
 export default function LeadMagnetPage() {
     const [email, setEmail] = useState('');
@@ -63,70 +64,7 @@ export default function LeadMagnetPage() {
                     </div>
 
                     {/* ONE TIME OFFER CARD */}
-                    <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-600 relative">
-                        {/* Banner */}
-                        <div className="bg-blue-600 text-white text-center py-3 font-bold text-lg tracking-wide uppercase">
-                            Wait! One Time Offer
-                        </div>
-
-                        <div className="p-8 md:p-12">
-                            <div className="flex flex-col md:flex-row gap-8 items-center">
-                                {/* Left: Value Prop */}
-                                <div className="flex-1 text-center md:text-left">
-                                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                                        Pass Your FaMED Exam <span className="text-blue-600">3x Faster</span>
-                                    </h2>
-                                    <p className="text-gray-600 text-lg mb-6">
-                                        The study plan tells you <strong>what</strong> to do. Our official Preparation Book teaches you <strong>everything you need to know</strong>: Grammar, Anamnese, Aufklärung, Arzt-Arzt, and Brief Cases. All of them in one book!
-                                    </p>
-
-                                    <ul className="space-y-3 mb-8 text-left inline-block">
-                                        <li className="flex items-center text-gray-700">
-                                            <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                            Complete Communication Scripts (Anamnese & Aufklärung)
-                                        </li>
-                                        <li className="flex items-center text-gray-700">
-                                            <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                            Arzt-Arzt Simulation Frameworks
-                                        </li>
-                                        <li className="flex items-center text-gray-700">
-                                            <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                                            FaMED 2026 Protokoll
-                                        </li>
-                                    </ul>
-
-                                    <div>
-                                        <a
-                                            href="https://buy.stripe.com/8x228sdcZ0QNebifjX7Re0h"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="block w-full bg-green-600 text-white text-center px-8 py-5 rounded-xl font-bold text-2xl hover:bg-green-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                                        >
-                                            Get The Official Book Now →
-                                        </a>
-                                        <p className="text-center text-xs text-gray-400 mt-3">
-                                            Secure Payment via Stripe • Instant Access
-                                        </p>
-                                    </div>
-                                </div>
-
-                                {/* Right: Visual/Price */}
-                                <div className="hidden md:block w-64 relative transform rotate-3 hover:rotate-0 transition duration-500">
-                                    <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-2xl border-4 border-white">
-                                        <Image
-                                            src="/images/blog/famed-protokoll-book-3.jpg"
-                                            alt="FaMED Protokoll Book"
-                                            fill
-                                            className="object-cover"
-                                        />
-                                    </div>
-                                    <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-blue-900 font-bold px-4 py-2 rounded-full shadow-lg transform rotate-3">
-                                        €49.99
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <UpsellCard />
 
                     <div className="text-center mt-8">
                         <button

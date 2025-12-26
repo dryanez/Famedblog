@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { submitLead } from '@/app/actions';
+import UpsellCard from '@/components/UpsellCard';
 
 export default function LeadMagnetCTA() {
     const [isLoading, setIsLoading] = useState(false);
@@ -49,10 +50,15 @@ export default function LeadMagnetCTA() {
                 </p>
 
                 {status === 'success' ? (
-                    <div className="bg-green-100 text-green-800 p-6 rounded-lg mb-6 shadow-inner">
-                        <svg className="w-16 h-16 mx-auto mb-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                        <h4 className="text-2xl font-bold mb-2">Check your inbox!</h4>
-                        <p>{message}</p>
+                    <div className="animate-fade-in space-y-8">
+                        <div className="bg-green-100 text-green-800 p-6 rounded-lg shadow-inner">
+                            <svg className="w-16 h-16 mx-auto mb-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                            <h4 className="text-2xl font-bold mb-2">Check your inbox!</h4>
+                            <p>{message}</p>
+                        </div>
+                        <div className="text-black transform scale-100 origin-top">
+                            <UpsellCard />
+                        </div>
                     </div>
                 ) : (
                     <>
