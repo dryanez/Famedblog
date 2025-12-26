@@ -85,7 +85,8 @@ export default function LeadMagnetCTA() {
                                     name="firstName"
                                     placeholder="Your First Name"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-300 outline-none"
+                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-300 outline-none"
+                                    style={{ backgroundColor: 'white' }}
                                 />
                             </div>
                             <div>
@@ -94,7 +95,8 @@ export default function LeadMagnetCTA() {
                                     name="email"
                                     placeholder="Your Email Address"
                                     required
-                                    className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-300 outline-none"
+                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-300 outline-none"
+                                    style={{ backgroundColor: 'white' }}
                                 />
                             </div>
                             <button
