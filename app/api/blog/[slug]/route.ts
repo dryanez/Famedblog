@@ -8,10 +8,11 @@ const postsDirectory = path.join(process.cwd(), 'blog/posts');
 
 export async function GET(
     request: Request,
-    { params }: { params: { slug: string } }
+    { params }: { params: Promise<{ slug: string }> }
 ) {
     try {
-        const post = getPostBySlug(params.slug);
+        const { slug } = await params;
+        const post = getPostBySlug(slug);
 
         if (!post) {
             return NextResponse.json({ error: 'Post not found' }, { status: 404 });
@@ -26,13 +27,14 @@ export async function GET(
 
 export async function PATCH(
     request: Request,
-    { params }: { params: { slug: string } }
+    { params }: { params: Promise<{ slug: string }> }
 ) {
     try {
+        const { slug } = await params;
         const body = await request.json();
         const { title, category, date, status, content, tags, excerpt } = body;
 
-        const filePath = path.join(postsDirectory, `${params.slug}.md`);
+        const filePath = path.join(postsDirectory, `${slug}.md`);
 
         if (!fs.existsSync(filePath)) {
             return NextResponse.json({ error: 'Post not found' }, { status: 404 });
