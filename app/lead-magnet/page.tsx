@@ -24,8 +24,8 @@ export default function LeadMagnetPage() {
                 setSubmitted(true);
                 // Trigger download
                 const link = document.createElement('a');
-                link.href = '/FAMED_8WEEK_CORRECTED_STUDY_PLAN.pdf';
-                link.download = 'FAMED_8Week_Plan.pdf';
+                link.href = '/2026%20Protokol%20Famed.pdf';
+                link.download = '2026_Protokol_Famed.pdf';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -53,7 +53,7 @@ export default function LeadMagnetPage() {
                         Check your email for additional resources and tips to help you pass the FAMED exam.
                     </p>
                     <a
-                        href="/FAMED_8WEEK_CORRECTED_STUDY_PLAN.pdf"
+                        href="/2026%20Protokol%20Famed.pdf"
                         download
                         className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition mb-4"
                     >
