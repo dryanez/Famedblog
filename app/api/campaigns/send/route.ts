@@ -296,7 +296,7 @@ export async function POST(request: Request) {
             });
 
             return {
-                from: 'FaMED Prep <noreply@famed-vorbereitung.com>',
+                from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
                 to: user.email,
                 reply_to: 'support@famed-vorbereitung.com',
                 subject: subjectLine,
@@ -305,10 +305,7 @@ export async function POST(request: Request) {
                 headers: {
                     'X-Entity-Ref-ID': campaignId,
                     'List-Unsubscribe': '<mailto:unsubscribe@famed-vorbereitung.com>'
-                },
-                // Disable tracking to improve deliverability
-                open_tracking: false,
-                click_tracking: false
+                }
             };
         });
 
