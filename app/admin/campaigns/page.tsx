@@ -1,9 +1,10 @@
 "use client";
 
 import { supabase } from '@/lib/supabase';
+import Link from 'next/link';
 
 import React, { useState, useEffect } from "react";
-import { Users, Send, Zap, Calendar, DollarSign, Moon, Eye, X, Edit, Plus, Sparkles, Trash2, Save } from "lucide-react";
+import { Users, Send, Zap, Calendar, DollarSign, Moon, Eye, X, Edit, Plus, Sparkles, Trash2, Save, ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
     getExamUrgency14Days,
@@ -539,6 +540,14 @@ export default function CampaignsPage() {
 
     return (
         <div className="p-8 max-w-7xl mx-auto">
+            <Link
+                href="/admin"
+                className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-6 transition-colors"
+            >
+                <ArrowLeft className="w-4 h-4" />
+                <span className="text-sm font-medium">Back to Admin</span>
+            </Link>
+
             <header className="mb-8 flex items-center justify-between">
                 <div>
                     <h1 className="text-3xl font-bold tracking-tight text-gray-900">Email Campaigns</h1>
