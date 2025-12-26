@@ -26,17 +26,28 @@ export function RevenueChart({ data, chartType = 'line' }: RevenueChartProps) {
     return (
         <div className="w-full h-80">
             <ResponsiveContainer width="100%" height="100%">
-                <Chart data={data} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
+                <Chart data={data} margin={{ top: 5, right: 30, left: 0, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                     <XAxis
                         dataKey="date"
                         stroke="#6b7280"
                         tick={{ fontSize: 12 }}
                     />
+                    {/* Left Y-axis for Revenue */}
                     <YAxis
-                        stroke="#6b7280"
+                        yAxisId="left"
+                        stroke="#3b82f6"
                         tick={{ fontSize: 12 }}
                         tickFormatter={(value) => `€${value}`}
+                        label={{ value: 'Revenue (€)', angle: -90, position: 'insideLeft', style: { fill: '#3b82f6' } }}
+                    />
+                    {/* Right Y-axis for Orders */}
+                    <YAxis
+                        yAxisId="right"
+                        orientation="right"
+                        stroke="#10b981"
+                        tick={{ fontSize: 12 }}
+                        label={{ value: 'Orders', angle: 90, position: 'insideRight', style: { fill: '#10b981' } }}
                     />
                     <Tooltip
                         contentStyle={{
@@ -45,13 +56,14 @@ export function RevenueChart({ data, chartType = 'line' }: RevenueChartProps) {
                             borderRadius: '0.5rem',
                         }}
                         formatter={(value: any, name?: string) => {
-                            if (name === 'revenue') return [`€${value.toFixed(2)}`, 'Revenue'];
-                            if (name === 'orders') return [value, 'Orders'];
+                            if (name === 'Revenue (€)') return [`€${value.toFixed(2)}`, 'Revenue'];
+                            if (name === 'Orders') return [value, 'Orders'];
                             return [value, name || ''];
                         }}
                     />
                     <Legend />
                     <DataElement
+                        yAxisId="left"
                         type="monotone"
                         dataKey="revenue"
                         stroke="#3b82f6"
@@ -60,6 +72,7 @@ export function RevenueChart({ data, chartType = 'line' }: RevenueChartProps) {
                         name="Revenue (€)"
                     />
                     <DataElement
+                        yAxisId="right"
                         type="monotone"
                         dataKey="orders"
                         stroke="#10b981"
