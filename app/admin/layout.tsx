@@ -1,3 +1,5 @@
+'use client';
+
 import { DarkModeProvider } from '@/contexts/DarkModeContext';
 import { DarkModeToggle } from '@/components/DarkModeToggle';
 
