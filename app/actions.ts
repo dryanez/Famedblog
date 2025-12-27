@@ -108,21 +108,32 @@ export async function submitLead(formData: FormData) {
 
                 <!-- Upsell Section: The Book -->
                 <div style="background-color: #f0f9ff; border-radius: 8px; padding: 25px; border: 1px solid #bae6fd;">
-                    <h3 style="color: #0369a1; margin-top: 0;">Want the Complete Package?</h3>
-                    <p style="font-size: 15px; line-height: 1.5; color: #334155;">
-                        The Study Plan tells you <em>when</em> to study. The <strong>FaMED Protokoll Book</strong> tells you <em>what</em> to study.
-                    </p>
-                    <ul style="padding-left: 20px; color: #475569; font-size: 14px;">
-                        <li style="margin-bottom: 5px;">All 76 Official Cases covered</li>
-                        <li style="margin-bottom: 5px;">Perfect Communication Scripts</li>
-                        <li style="margin-bottom: 5px;">Examination Frameworks</li>
-                    </ul>
-                    <div style="margin-top: 20px;">
-                        <a href="https://famed-vorbereitung.com/book" 
-                           style="background-color: #0284c7; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px; display: inline-block;">
-                           Get the Book (€19.99) →
-                        </a>
-                    </div>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td style="width: 35%; vertical-align: top; padding-right: 20px;">
+                                <img src="https://famed-vorbereitung.com/book%20mockup%20website%20german%20(1).png" 
+                                     alt="FaMED Protokoll Book" 
+                                     style="width: 100%; max-width: 180px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                            </td>
+                            <td style="width: 65%; vertical-align: top;">
+                                <h3 style="color: #0369a1; margin-top: 0; margin-bottom: 12px;">Want the Complete Package?</h3>
+                                <p style="font-size: 15px; line-height: 1.5; color: #334155; margin-bottom: 12px;">
+                                    The Study Plan tells you <em>when</em> to study. The <strong>FaMED Protokoll Book</strong> tells you <em>what</em> to study.
+                                </p>
+                                <ul style="padding-left: 20px; color: #475569; font-size: 14px; margin: 12px 0;">
+                                    <li style="margin-bottom: 5px;">All 76 Official Cases covered</li>
+                                    <li style="margin-bottom: 5px;">Perfect Communication Scripts</li>
+                                    <li style="margin-bottom: 5px;">Examination Frameworks</li>
+                                </ul>
+                                <div style="margin-top: 16px;">
+                                    <a href="https://famed-vorbereitung.com/book" 
+                                       style="background-color: #0284c7; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px; display: inline-block;">
+                                       Get the Book (€19.99) →
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
 
                 <p style="margin-top: 30px; font-size: 16px; line-height: 1.6; color: #4b5563;">
