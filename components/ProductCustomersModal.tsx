@@ -78,18 +78,18 @@ export default function ProductCustomersModal({
 
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] flex flex-col">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col">
                 {/* Header */}
-                <div className="border-b p-6 flex justify-between items-start">
+                <div className="border-b border-gray-300 dark:border-gray-600 p-6 flex justify-between items-start">
                     <div>
-                        <h2 className="text-2xl font-bold text-gray-900">{productName}</h2>
-                        <p className="text-gray-600 mt-1">
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{productName}</h2>
+                        <p className="text-gray-600 dark:text-gray-400 mt-1">
                             {customers.length} customer{customers.length !== 1 ? 's' : ''}
                         </p>
                     </div>
                     <button
                         onClick={onClose}
-                        className="text-gray-400 hover:text-gray-600 transition"
+                        className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition"
                     >
                         <X size={24} />
                     </button>
@@ -100,17 +100,17 @@ export default function ProductCustomersModal({
                     {loading ? (
                         <div className="text-center py-12">
                             <div className="animate-spin h-8 w-8 border-4 border-blue-600 border-t-transparent rounded-full mx-auto"></div>
-                            <p className="mt-4 text-gray-600">Loading customers...</p>
+                            <p className="mt-4 text-gray-600 dark:text-gray-400">Loading customers...</p>
                         </div>
                     ) : customers.length === 0 ? (
-                        <div className="text-center py-12 text-gray-500">
+                        <div className="text-center py-12 text-gray-500 dark:text-gray-400">
                             No customers found for this product.
                         </div>
                     ) : (
                         <div className="overflow-x-auto">
-                            <table className="w-full">
+                            <table className="w-full border-collapse">
                                 <thead>
-                                    <tr className="border-b">
+                                    <tr className="border-b-2 border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700">
                                         <th className="text-left p-3">
                                             <input
                                                 type="checkbox"
@@ -119,17 +119,18 @@ export default function ProductCustomersModal({
                                                 className="rounded"
                                             />
                                         </th>
-                                        <th className="text-left p-3 font-semibold">Email</th>
-                                        <th className="text-left p-3 font-semibold">First Purchase</th>
-                                        <th className="text-left p-3 font-semibold">Total Spent</th>
-                                        <th className="text-left p-3 font-semibold">Orders</th>
+                                        <th className="text-left p-3 font-semibold text-gray-900 dark:text-gray-100">Email</th>
+                                        <th className="text-left p-3 font-semibold text-gray-900 dark:text-gray-100">First Purchase</th>
+                                        <th className="text-left p-3 font-semibold text-gray-900 dark:text-gray-100">Total Spent</th>
+                                        <th className="text-left p-3 font-semibold text-gray-900 dark:text-gray-100">Orders</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {customers.map((customer) => (
+                                    {customers.map((customer, index) => (
                                         <tr
                                             key={customer.email}
-                                            className="border-b hover:bg-gray-50 transition"
+                                            className={`border-b border-gray-200 dark:border-gray-700 hover:bg-blue-50 dark:hover:bg-gray-600 transition ${index % 2 === 0 ? 'bg-white dark:bg-gray-800' : 'bg-gray-50 dark:bg-gray-750'
+                                                }`}
                                         >
                                             <td className="p-3">
                                                 <input
@@ -139,14 +140,14 @@ export default function ProductCustomersModal({
                                                     className="rounded"
                                                 />
                                             </td>
-                                            <td className="p-3 font-medium">{customer.email}</td>
-                                            <td className="p-3 text-gray-600">
+                                            <td className="p-3 font-medium text-gray-900 dark:text-gray-100">{customer.email}</td>
+                                            <td className="p-3 text-gray-600 dark:text-gray-300">
                                                 {new Date(customer.first_purchase).toLocaleDateString()}
                                             </td>
-                                            <td className="p-3 text-gray-900">
+                                            <td className="p-3 text-gray-900 dark:text-gray-100 font-semibold">
                                                 €{(customer.total_spent / 100).toFixed(2)}
                                             </td>
-                                            <td className="p-3 text-gray-600">
+                                            <td className="p-3 text-gray-600 dark:text-gray-300">
                                                 {customer.purchase_count}
                                             </td>
                                         </tr>
@@ -158,14 +159,14 @@ export default function ProductCustomersModal({
                 </div>
 
                 {/* Footer */}
-                <div className="border-t p-6 flex justify-between items-center bg-gray-50">
-                    <p className="text-sm text-gray-600">
+                <div className="border-t border-gray-300 dark:border-gray-600 p-6 flex justify-between items-center bg-gray-50 dark:bg-gray-700">
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
                         {selectedEmails.size} of {customers.length} selected
                     </p>
                     <div className="flex gap-3">
                         <button
                             onClick={onClose}
-                            className="px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-lg transition"
+                            className="px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition"
                         >
                             Close
                         </button>
