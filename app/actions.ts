@@ -24,6 +24,7 @@ export async function submitLead(formData: FormData) {
 
     try {
         // 1. Save to Supabase (bypassing RLS with admin client)
+        let isExistingLead = false;
         const { error: dbError } = await supabaseAdmin
             .from('leads')
             .insert([
@@ -35,17 +36,23 @@ export async function submitLead(formData: FormData) {
             ]);
 
         if (dbError) {
-            // If error is unique constraint (already requested), we still send the email but don't fail
+            // If error is unique constraint (already requested), still send the email
             if (dbError.code === '23505') {
-                console.log('Email already exists in leads, sending guide anyway.');
+                console.log('✉️  Email already exists in leads table - sending guide anyway to:', email);
+                isExistingLead = true;
             } else {
-                console.error('Supabase error:', dbError);
-                return { success: false, message: 'Failed to save lead. Please try again.' };
+                console.error('❌ Supabase insert error:', dbError);
+                // Don't fail completely - still try to send email
+                isExistingLead = false; // Treat as new lead and try email anyway
             }
+        } else {
+            console.log('✅ New lead saved to database:', email);
         }
 
         // 2. Send Email via Resend
         if (process.env.RESEND_API_KEY) {
+            console.log('📧 Attempting to send email via Resend to:', email);
+
             const { error: emailError } = await resend.emails.send({
                 from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
                 to: email,
@@ -139,19 +146,39 @@ export async function submitLead(formData: FormData) {
             });
 
             if (emailError) {
-                console.error('Resend error:', emailError);
-                // We don't fail the request if email fails, but we log it. 
-                // In a real app we might want to tell the user.
-                return { success: true, message: 'Signed up, but email sending failed. Please contact support.' };
+                console.error('❌ Resend error:', emailError);
+                // For existing leads, we don't fail - they already got it before
+                if (isExistingLead) {
+                    return {
+                        success: true,
+                        message: 'You\'ve already signed up! Check your email (including spam) for the study plan.'
+                    };
+                }
+                // For new leads with email failure, inform them
+                return {
+                    success: false,
+                    message: 'Signed up, but email sending failed. Please contact support@famed-vorbereitung.com'
+                };
             }
+
+            console.log('✅ Email sent successfully to:', email);
         } else {
-            console.warn('RESEND_API_KEY is missing. Email not sent.');
+            console.warn('⚠️  RESEND_API_KEY is missing. Email not sent.');
+            return {
+                success: false,
+                message: 'Email service not configured. Please contact support.'
+            };
         }
 
-        return { success: true, message: 'Success! Check your email for the study plan.' };
+        return {
+            success: true,
+            message: isExistingLead
+                ? 'You\'ve already signed up! Check your email for the study plan.'
+                : 'Success! Check your email for the study plan.'
+        };
 
     } catch (error) {
-        console.error('Unexpected error:', error);
+        console.error('❌ Unexpected error:', error);
         return { success: false, message: 'Something went wrong.' };
     }
 }
