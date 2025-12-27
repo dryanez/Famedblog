@@ -1,3 +1,5 @@
+import { AdminClientWrapper } from './_components/AdminClientWrapper';
+
 // Force dynamic rendering for all admin pages
 export const dynamic = 'force-dynamic';
 
@@ -7,8 +9,8 @@ export default function AdminLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="min-h-screen bg-white">
+        <AdminClientWrapper>
             {children}
-        </div>
+        </AdminClientWrapper>
     );
 }
