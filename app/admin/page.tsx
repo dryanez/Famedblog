@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabaseClient';
 import { useRouter } from 'next/navigation';
 import { Dashboard } from './_components/Dashboard';
+import { DarkModeProvider } from '@/contexts/DarkModeContext';
+import { DarkModeToggle } from '@/components/DarkModeToggle';
 
 export default function AdminPage() {
     const [loading, setLoading] = useState(true);
@@ -26,15 +28,18 @@ export default function AdminPage() {
 
     if (loading) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-white">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+            <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 dark:border-gray-100"></div>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-white">
-            <Dashboard />
-        </div>
+        <DarkModeProvider>
+            <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+                <DarkModeToggle />
+                <Dashboard />
+            </div>
+        </DarkModeProvider>
     );
 }
