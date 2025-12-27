@@ -26,14 +26,7 @@ export default function LeadMagnetPage() {
 
             if (result.success) {
                 setSubmitted(true);
-                // Trigger download
-                const link = document.createElement('a');
-                link.href = '/2026%20Protokol%20Famed.pdf';
-                link.download = '2026_Protokol_Famed.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-
+                // Email will be sent with download link - no auto-download
             } else {
                 alert('Error: ' + result.message);
             }
@@ -52,14 +45,17 @@ export default function LeadMagnetPage() {
                     {/* Success Header */}
                     <div className="text-center mb-10">
                         <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
-                            <span className="text-4xl">🎉</span>
+                            <span className="text-4xl">📧</span>
                         </div>
-                        <h1 className="text-4xl font-bold mb-4 text-gray-900">It's on the way!</h1>
+                        <h1 className="text-4xl font-bold mb-4 text-gray-900">Check your email!</h1>
                         <p className="text-xl text-gray-600">
-                            Your FREE 8-Week FAMED Study Plan is downloading automatically.
+                            We've sent your FREE 8-Week FAMED Study Plan to <strong>{email}</strong>
                         </p>
-                        <p className="text-sm text-gray-500 mt-2">
-                            Doesn't start? <a href="/2026%20Protokol%20Famed.pdf" download className="text-blue-600 underline">Click here to download manually</a>.
+                        <p className="text-sm text-gray-500 mt-4">
+                            Didn't receive it? Check your spam folder or{' '}
+                            <a href="mailto:support@famed-vorbereitung.com" className="text-blue-600 underline">
+                                contact support
+                            </a>
                         </p>
                     </div>
 
