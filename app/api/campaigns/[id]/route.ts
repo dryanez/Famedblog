@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
+import { supabaseAdmin } from '@/lib/supabase-admin';
 
 export async function GET(
     request: Request,
@@ -38,7 +39,8 @@ export async function DELETE(
             return NextResponse.json({ error: 'Campaign ID is required' }, { status: 400 });
         }
 
-        const { error } = await supabase
+        // Use supabaseAdmin to bypass RLS
+        const { error } = await supabaseAdmin
             .from('campaigns')
             .delete()
             .eq('id', id);
