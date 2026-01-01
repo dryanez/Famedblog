@@ -518,10 +518,11 @@ export async function POST(request: Request) {
             const { data: sendResult, error: sendError } = await resend.batch.send(chunk);
 
             if (sendError) {
-                console.error(`Resend error in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, sendError);
+                console.error(`❌ Resend error in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, sendError);
                 console.error('Resend error details:', JSON.stringify(sendError, null, 2));
                 console.error('Campaign ID:', campaignId);
                 console.error('Number of emails in this batch:', chunk.length);
+                console.error('First email in failed batch:', chunk[0]);
                 // Continue with other batches even if one fails
                 continue;
             }
