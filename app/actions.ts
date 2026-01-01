@@ -25,33 +25,32 @@ export async function submitLead(formData: FormData) {
     }
 
     try {
-        // 1. Create user in users table with account_type='lead'
-        let isExistingUser = false;
+        // 1. Save to leads table (keeping original structure)
+        let isExistingLead = false;
         const { error: dbError } = await supabaseAdmin
-            .from('users')
+            .from('leads')
             .insert([
                 {
                     email,
-                    full_name: firstName,
+                    first_name: firstName,
                     exam_date: examDate,
                     german_level: germanLevel,
-                    account_type: 'lead',
-                    created_date: new Date().toISOString()
+                    source: 'website_lead_magnet'
                 }
             ]);
 
         if (dbError) {
             // If error is unique constraint (email already exists), still send the email
             if (dbError.code === '23505') {
-                console.log('✉️  Email already exists in users table - sending guide anyway to:', email);
-                isExistingUser = true;
+                console.log('✉️  Email already exists in leads table - sending guide anyway to:', email);
+                isExistingLead = true;
             } else {
                 console.error('❌ Supabase insert error:', dbError);
                 // Don't fail completely - still try to send email
-                isExistingUser = false;
+                isExistingLead = false;
             }
         } else {
-            console.log('✅ New lead created as user in database:', email);
+            console.log('✅ New lead saved to leads table:', email);
         }
 
         // 2. Send Email via Resend
@@ -163,14 +162,14 @@ export async function submitLead(formData: FormData) {
 
             if (emailError) {
                 console.error('❌ Resend error:', emailError);
-                // For existing users, we don't fail - they already got it before
-                if (isExistingUser) {
+                // For existing leads, we don't fail - they already got it before
+                if (isExistingLead) {
                     return {
                         success: true,
                         message: 'You\'ve already signed up! Check your email (including spam) for the study plan.'
                     };
                 }
-                // For new users with email failure, inform them
+                // For new leads with email failure, inform them
                 return {
                     success: false,
                     message: 'Signed up, but email sending failed. Please contact support@famed-vorbereitung.com'
@@ -188,7 +187,7 @@ export async function submitLead(formData: FormData) {
 
         return {
             success: true,
-            message: isExistingUser
+            message: isExistingLead
                 ? 'You\'ve already signed up! Check your email for the study plan.'
                 : 'Success! Check your email for the study plan.'
         };
