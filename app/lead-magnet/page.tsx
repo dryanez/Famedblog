@@ -9,6 +9,8 @@ import UpsellCard from '@/components/UpsellCard';
 export default function LeadMagnetPage() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
+    const [examDate, setExamDate] = useState('');
+    const [germanLevel, setGermanLevel] = useState('');
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
     const router = useRouter();
@@ -20,6 +22,8 @@ export default function LeadMagnetPage() {
         const formData = new FormData();
         formData.append('email', email);
         formData.append('firstName', name);
+        formData.append('examDate', examDate);
+        formData.append('germanLevel', germanLevel);
 
         try {
             const result = await submitLead(formData);
@@ -156,6 +160,41 @@ export default function LeadMagnetPage() {
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900"
                                     placeholder="maria@example.com"
                                 />
+                            </div>
+
+                            <div>
+                                <label htmlFor="examDate" className="block text-sm font-semibold text-gray-700 mb-2">
+                                    When is your FaMED exam?
+                                </label>
+                                <input
+                                    type="date"
+                                    id="examDate"
+                                    value={examDate}
+                                    onChange={(e) => setExamDate(e.target.value)}
+                                    required
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900"
+                                />
+                            </div>
+
+                            <div>
+                                <label htmlFor="germanLevel" className="block text-sm font-semibold text-gray-700 mb-2">
+                                    Your German Level
+                                </label>
+                                <select
+                                    id="germanLevel"
+                                    value={germanLevel}
+                                    onChange={(e) => setGermanLevel(e.target.value)}
+                                    required
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900"
+                                >
+                                    <option value="">Select your level</option>
+                                    <option value="A1">A1 - Beginner</option>
+                                    <option value="A2">A2 - Elementary</option>
+                                    <option value="B1">B1 - Intermediate</option>
+                                    <option value="B2">B2 - Upper Intermediate</option>
+                                    <option value="C1">C1 - Advanced</option>
+                                    <option value="C2">C2 - Proficient</option>
+                                </select>
                             </div>
 
                             <button
