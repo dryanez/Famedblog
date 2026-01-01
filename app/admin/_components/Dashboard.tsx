@@ -167,8 +167,7 @@ export function Dashboard() {
                 parsedExamDate: lead.exam_date ? new Date(lead.exam_date) : null,
                 parsedLastActive: null,
                 parsedTotalXP: 0,
-                parsedPlanExpiry: null,
-                id: String(lead.id)
+                parsedPlanExpiry: null
             }));
         } else {
             // segment filter for users
