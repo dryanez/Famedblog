@@ -635,10 +635,10 @@ export default function CampaignsPage() {
                                 isEnabled ? "border-gray-200" : "border-gray-200 opacity-60"
                             )}
                         >
-                            {/* Delete button - always visible, top right */}
+                            {/* Delete button - top left */}
                             <button
                                 onClick={(e) => handleDeleteCampaign(e, campaign.id)}
-                                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all"
+                                className="absolute top-4 left-4 p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all z-10"
                                 title="Delete Campaign"
                             >
                                 <Trash2 className="w-4 h-4" />
