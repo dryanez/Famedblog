@@ -105,6 +105,32 @@ export default function LeadMagnetCTA() {
                                     style={{ backgroundColor: 'white' }}
                                 />
                             </div>
+                            <div>
+                                <input
+                                    type="date"
+                                    name="examDate"
+                                    required
+                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-300 outline-none"
+                                    style={{ backgroundColor: 'white' }}
+                                    placeholder="When is your exam?"
+                                />
+                            </div>
+                            <div>
+                                <select
+                                    name="germanLevel"
+                                    required
+                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 outline-none"
+                                    style={{ backgroundColor: 'white' }}
+                                >
+                                    <option value="">Your German Level</option>
+                                    <option value="A1">A1 - Beginner</option>
+                                    <option value="A2">A2 - Elementary</option>
+                                    <option value="B1">B1 - Intermediate</option>
+                                    <option value="B2">B2 - Upper Intermediate</option>
+                                    <option value="C1">C1 - Advanced</option>
+                                    <option value="C2">C2 - Proficient</option>
+                                </select>
+                            </div>
                             <button
                                 type="submit"
                                 disabled={isLoading}
