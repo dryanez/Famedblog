@@ -10,8 +10,8 @@ export default function BookPromoPopup() {
     const [shouldRender, setShouldRender] = useState(false);
 
     useEffect(() => {
-        // Check if user has already seen/closed the popup
-        const hasSeenPopup = localStorage.getItem('famed_book_popup_seen_v1');
+        // Check if user has already seen/closed the popup (New Year 2026 version)
+        const hasSeenPopup = localStorage.getItem('famed_newyear_popup_seen_2026');
 
         if (!hasSeenPopup) {
             // Delay showing the popup (e.g., 10 seconds)
@@ -30,7 +30,7 @@ export default function BookPromoPopup() {
         // Wait for animation to finish before unmounting
         setTimeout(() => setShouldRender(false), 500);
         // Mark as seen
-        localStorage.setItem('famed_book_popup_seen_v1', 'true');
+        localStorage.setItem('famed_newyear_popup_seen_2026', 'true');
     };
 
     if (!shouldRender) return null;
@@ -40,7 +40,11 @@ export default function BookPromoPopup() {
             className={`fixed bottom-4 right-4 z-50 transition-all duration-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                 }`}
         >
-            <div className="relative bg-white rounded-xl shadow-2xl border-2 border-blue-500 overflow-hidden w-[22rem] md:w-96">
+            <div className="relative bg-gradient-to-br from-purple-50 via-white to-blue-50 rounded-xl shadow-2xl border-2 border-purple-400 overflow-hidden w-[22rem] md:w-96">
+                {/* Sparkle decorations */}
+                <div className="absolute top-2 left-2 text-2xl animate-pulse">✨</div>
+                <div className="absolute top-2 right-12 text-2xl animate-pulse" style={{ animationDelay: '1s' }}>🎉</div>
+
                 {/* Close Button */}
                 <button
                     onClick={handleClose}
@@ -49,10 +53,15 @@ export default function BookPromoPopup() {
                     <X size={20} />
                 </button>
 
+                {/* "LAST DAY" Badge */}
+                <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-red-600 to-red-500 text-white text-center py-1 text-xs font-bold uppercase tracking-wide">
+                    ⚡ LAST DAY OFFER - ENDS TONIGHT ⚡
+                </div>
+
                 {/* Content */}
-                <div className="flex">
+                <div className="flex mt-7">
                     {/* Image Section (Small) */}
-                    <div className="w-1/3 bg-gray-100 relative">
+                    <div className="w-1/3 bg-gradient-to-br from-purple-100 to-blue-100 relative">
                         <Image
                             src="/images/blog/famed-protokoll-book-3.jpg"
                             alt="Book"
@@ -63,25 +72,36 @@ export default function BookPromoPopup() {
 
                     {/* Text Section */}
                     <div className="w-2/3 p-5">
-                        <div className="text-xs font-bold text-blue-600 uppercase tracking-wide mb-1">
-                            One Time Offer
+                        <div className="text-2xl mb-1 text-center">
+                            🎉
                         </div>
-                        <h3 className="text-lg font-bold text-gray-900 leading-tight mb-2">
-                            Pass Your Exam 3x Faster?
+                        <div className="text-xs font-bold text-purple-600 uppercase tracking-wide mb-1 text-center">
+                            Happy New Year Special
+                        </div>
+                        <h3 className="text-lg font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent leading-tight mb-2 text-center">
+                            50% OFF + Free Book!
                         </h3>
-                        <p className="text-xs text-gray-500 mb-4 leading-relaxed">
-                            Master Grammar, Anamnese, Aufklärung, & Arzt-Arzt. FaMED 2026 Protokoll.
+                        <p className="text-xs text-gray-600 mb-3 leading-relaxed text-center">
+                            Start 2026 right! Get full access + the FaMED Protokoll Book.
                         </p>
+                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-2 mb-3">
+                            <p className="text-xs font-bold text-blue-800 text-center">
+                                💪 Study Smart. Pass the Test!
+                            </p>
+                        </div>
 
                         <a
-                            href="https://buy.stripe.com/8x228sdcZ0QNebifjX7Re0h"
+                            href="https://famed-vorbereitung.com/pricing"
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={handleClose} // Allow re-opening? No, treat as conversion/seen
-                            className="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-2 rounded-lg text-sm font-bold transition-colors shadow-md"
+                            onClick={handleClose}
+                            className="block w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-center py-2.5 rounded-lg text-sm font-bold transition-all shadow-md transform hover:scale-105"
                         >
-                            Get The Book (€49)
+                            🎁 Claim My Gift Now →
                         </a>
+                        <p className="text-xs text-red-600 font-semibold text-center mt-2">
+                            ⏰ Offer ends at midnight!
+                        </p>
                     </div>
                 </div>
             </div>

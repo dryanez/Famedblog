@@ -13,7 +13,8 @@ import {
     getWelcomeDay0,
     getSubscriptionExpiry,
     getExamUrgencySpecialOffer,
-    getHolidaySpecial
+    getHolidaySpecial,
+    getNewYearSpecial
 } from "@/lib/campaign-templates";
 import { CampaignStatsModal } from "./CampaignStatsModal";
 
@@ -54,15 +55,15 @@ const DEFAULT_CAMPAIGNS: CampaignTemplate[] = [
         conversionRate: "65-85%"
     },
     {
-        id: "holiday_special",
-        name: "Holiday Special (50% Off + Book)",
-        description: "Trigger: Holiday offer for free users. 50% Off + Free Book.",
-        type: "automated",
+        id: "new_year_special",
+        name: "🎉 Happy New Year Special (50% Off + Book)",
+        description: "LAST DAY: New Year offer for all non-paid users. 50% Off + Free Book.",
+        type: "manual",
         targetSegment: "free_users",
         icon: Sparkles,
-        color: "bg-green-100 text-green-700",
+        color: "bg-gradient-to-br from-purple-100 to-blue-100 border border-purple-300",
         estimatedReach: 0,
-        conversionRate: "70-90%"
+        conversionRate: "75-95%"
     },
     {
         id: "exam_urgency_7d",
@@ -372,6 +373,9 @@ export default function CampaignsPage() {
                         break;
                     case 'holiday_special':
                         template = getHolidaySpecial(sampleData);
+                        break;
+                    case 'new_year_special':
+                        template = getNewYearSpecial(sampleData);
                         break;
                     default:
                         // For default campaigns without specific function or manual ones
