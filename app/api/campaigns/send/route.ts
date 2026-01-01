@@ -123,6 +123,21 @@ export async function POST(request: Request) {
                     textTemplate = getTextWelcomeBundlePromo;
                     subjectLine = '🎁 Welcome! Get the Complete FaMED Bundle';
                     break;
+                case 'new_year_special':
+                    emailTemplate = getNewYearSpecial;
+                    textTemplate = getTextNewYearSpecial;
+                    subjectLine = '🎉 HAPPY NEW YEAR! Start 2026 Right - Pass Your FaMED Exam!';
+                    break;
+                case 'holiday_special':
+                    emailTemplate = getHolidaySpecial;
+                    textTemplate = getTextHolidaySpecial;
+                    subjectLine = '🎄 Holiday Special: 50% Off + Free Book! 🎁';
+                    break;
+                case 'exam_urgency_1_week_special':
+                    emailTemplate = getExamUrgency1WeekSpecial;
+                    textTemplate = getTextExamUrgency1WeekSpecial;
+                    subjectLine = '🚨 1 Week Left! Last Chance to Pass 🚨';
+                    break;
                 default:
                     emailTemplate = getWelcomeDay0;
                     textTemplate = getTextWelcomeDay0;
