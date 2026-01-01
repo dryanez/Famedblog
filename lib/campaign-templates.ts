@@ -478,7 +478,6 @@ export const getNewYearSpecial = (data: any) => `
         <tr>
           <td align="center" valign="middle">
              <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 50px; width: auto; vertical-align: middle; margin-bottom: 20px;">
-             <div style="font-size: 60px; margin-bottom: 15px;">🎉</div>
              <h1 style="color: #ffffff; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">HAPPY NEW YEAR!</h1>
              <p style="color: #e0e7ff; margin-top: 10px; font-size: 18px; font-weight: 600;">Start 2026 Right - Pass Your FaMED Exam!</p>
           </td>
