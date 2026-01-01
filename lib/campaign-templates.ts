@@ -42,28 +42,51 @@ export const getWelcomeBundlePromo = (data: any) => `
       </div>
       
       <div class="bundle-box">
-        <h2 style="color: #b91c1c; margin-top: 0; margin-bottom: 15px; font-size: 28px;">🎁 Complete FaMED Bundle</h2>
-        <p style="margin: 5px 0 20px 0; color: #6b7280; font-size: 18px; font-weight: 600;">Everything You Need to Pass Your Exam</p>
+        <h2 style="color: #b91c1c; margin-top: 0; margin-bottom: 10px; font-size: 28px;">🎁 Special Bundle Offer</h2>
+        <p style="margin: 5px 0 25px 0; color: #dc2626; font-size: 20px; font-weight: 800;">Book + App Bundle - Save 60%!</p>
         
+        <!-- Visual Bundle Display -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 25px 0;">
+          <tr>
+            <td align="center">
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="center" valign="middle">
+                    <img src="https://famed-vorbereitung.com/book%20mockup%20website%20german%20(1).png" alt="FaMED Protokoll Book" style="width: 120px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                  </td>
+                  <td align="center" valign="middle" style="padding: 0 20px;">
+                    <span style="font-size: 48px; font-weight: 900; color: #dc2626;">+</span>
+                  </td>
+                  <td align="center" valign="middle">
+                    <div style="background: white; border: 3px solid #4f46e5; border-radius: 12px; padding: 20px; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                      <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED App" style="width: 80px; height: auto;">
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        
+        <!-- What's Included -->
         <div style="background: white; border-radius: 12px; padding: 20px; margin: 20px 0; text-align: left;">
-          <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 2px dashed #e5e7eb;">
-            <h3 style="color: #1e40af; margin: 0 0 10px 0; font-size: 20px;">📚 FaMED Test Prep 2026 Protokoll</h3>
-            <p style="margin: 5px 0; color: #4b5563; font-size: 15px; line-height: 1.6;">
-              The complete study guide with all 76 official cases, perfect communication scripts, and examination frameworks. Your roadmap to success!
-            </p>
-          </div>
-          
-          <div>
-            <h3 style="color: #7c3aed; margin: 0 0 10px 0; font-size: 20px;">💻 Full App Access</h3>
-            <p style="margin: 5px 0; color: #4b5563; font-size: 15px; line-height: 1.6;">
-              Complete test simulation (1:1 real exam experience), performance tracking dashboard, 1-hour section practice, and exam day preparation tools.
-            </p>
-          </div>
+          <ul style="margin: 0; padding: 0; list-style: none;">
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Complete FaMED Protokoll book</li>
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ FaMED App (3-Months access)</li>
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Personalized 8-week study plan</li>
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Private community access</li>
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Email support</li>
+          </ul>
         </div>
         
-        <div class="price-tag">Special Bundle Price!</div>
+        <!-- Pricing -->
+        <div style="margin: 25px 0;">
+          <p style="margin: 0; color: #6b7280; font-size: 16px; text-decoration: line-through;">Regular Price: €149.98</p>
+          <div class="price-tag" style="margin: 10px 0;">€59.99</div>
+          <p style="margin: 0; color: #059669; font-size: 18px; font-weight: 700;">You Save €89.99 (60% OFF!)</p>
+        </div>
 
-        <a href="https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t" class="btn">🎯 GET THE COMPLETE BUNDLE NOW</a>
+        <a href="https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t" class="btn">🎯 JETZT KAUFEN →</a>
       </div>
 
       <p style="font-size: 18px; font-weight: 700; color: #7c3aed; text-align: center; margin-top: 30px;">🚀 Most students who get the bundle pass on their first try!</p>
@@ -90,17 +113,21 @@ export const getTextWelcomeBundlePromo = (data: any) => `Hi ${data.userName},
 
 Welcome to FaMED-Vorbereitung! We're excited to help you pass your exam with confidence.
 
-🚀 READY TO SUPERCHARGE YOUR PREPARATION?
+🎁 SPECIAL BUNDLE OFFER - SAVE 60%!
 
-Get the Complete FaMED Bundle - Everything You Need to Pass!
+Book + App Bundle - Everything You Need to Pass!
 
-📚 FaMED TEST PREP 2026 PROTOKOLL
-The complete study guide with all 76 official cases, perfect communication scripts, and examination frameworks. Your roadmap to success!
+What's Included:
+✅ Complete FaMED Protokoll book
+✅ FaMED App (3-Months access)
+✅ Personalized 8-week study plan
+✅ Private community access
+✅ Email support
 
-💻 FULL APP ACCESS
-Complete test simulation (1:1 real exam experience), performance tracking dashboard, 1-hour section practice, and exam day preparation tools.
-
-🎁 SPECIAL BUNDLE PRICE FOR NEW MEMBERS!
+PRICING:
+Regular Price: €149.98
+Special Price: €59.99
+YOU SAVE: €89.99 (60% OFF!)
 
 Get the Complete Bundle Now: https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t
 
