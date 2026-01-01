@@ -500,6 +500,12 @@ export async function POST(request: Request) {
             };
         });
 
+        console.log('📧 About to send emails:', {
+            targetUsersCount: targetUsers.length,
+            emailsToSendCount: emailsToSend.length,
+            firstEmail: emailsToSend[0] ? { to: emailsToSend[0].to, subject: emailsToSend[0].subject } : 'none'
+        });
+
         // Send emails using Resend batch API (max 100 per batch)
         const BATCH_SIZE = 100;
         let totalSent = 0;
