@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
 
 import React, { useState, useEffect } from "react";
-import { Users, Send, Zap, Calendar, DollarSign, Moon, Eye, X, Edit, Plus, Sparkles, Trash2, Save, ArrowLeft } from "lucide-react";
+import { Users, Send, Zap, Calendar, DollarSign, Moon, Eye, X, Edit, Plus, Sparkles, Trash2, Save, ArrowLeft, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
     getExamUrgency14Days,
