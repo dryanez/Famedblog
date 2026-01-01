@@ -34,6 +34,7 @@ function StatCard({ label, value, icon: Icon, color, onClick, active }: any) {
 
 export function Dashboard() {
     const [users, setUsers] = useState<UserData[]>([]);
+    const [leads, setLeads] = useState<any[]>([]);
     const [activeSegment, setActiveSegment] = useState<"all" | "exam_soon" | "sleeping" | "active" | "paid" | "lead">("all");
     const [searchTerm, setSearchTerm] = useState("");
     // Campaign Filtering State
@@ -53,20 +54,26 @@ export function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    // Fetch users from Supabase on mount
+    // Fetch users and leads from Supabase on mount
     useEffect(() => {
-        async function fetchUsers() {
+        async function fetchData() {
             try {
                 setLoading(true);
-                const res = await fetch('/api/users');
-                const json = await res.json();
 
-                if (!res.ok) {
-                    throw new Error(json.error || 'Failed to fetch users');
+                // Fetch users
+                const usersRes = await fetch('/api/users');
+                const usersJson = await usersRes.json();
+
+                if (!usersRes.ok) {
+                    throw new Error(usersJson.error || 'Failed to fetch users');
                 }
 
+                // Fetch leads
+                const leadsRes = await fetch('/api/leads');
+                const leadsJson = await leadsRes.json();
+
                 // Map Supabase data to UserData format
-                const mappedUsers: UserData[] = (json.users || []).map((user: any) => {
+                const mappedUsers: UserData[] = (usersJson.users || []).map((user: any) => {
                     const fullName = user.full_name || '';
                     const nameParts = fullName.split(' ');
                     const firstName = nameParts[0] || '';
@@ -86,8 +93,8 @@ export function Dashboard() {
                         'Previous Attempt': user.has_attempted_before ? 'Yes' : 'No',
                         'Preparation Time': user.preparation_time || 'N/A',
                         'Total XP': String(user.xp || 0),
-                        'Total Activities': '0', // Not available in Supabase
-                        'Last Active': '', // Not available in Supabase
+                        'Total Activities': '0',
+                        'Last Active': '',
                         'Activity Type': '',
                         'Activity Name': '',
                         Score: '',
@@ -103,16 +110,17 @@ export function Dashboard() {
                 });
 
                 setUsers(mappedUsers);
+                setLeads(leadsJson.leads || []);
                 setError(null);
             } catch (err: any) {
-                console.error('Error fetching users:', err);
-                setError(err.message || 'Failed to load users');
+                console.error('Error fetching data:', err);
+                setError(err.message || 'Failed to load data');
             } finally {
                 setLoading(false);
             }
         }
 
-        fetchUsers();
+        fetchData();
     }, []);
 
     // --- Derived State & Stats ---
@@ -126,8 +134,8 @@ export function Dashboard() {
         const activeRecent = users.filter(u => u.parsedExamDate && u.parsedExamDate > now).length;
         // Paid = any account_type that starts with "paid"
         const paid = users.filter(u => u.accountType && u.accountType.startsWith('paid')).length;
-        // Lead Magnet = account_type === 'lead'
-        const leadMagnet = users.filter(u => u.accountType === 'lead').length;
+        // Lead Magnet = count from leads table
+        const leadMagnet = leads.length;
 
         return { total: users.length, examSoon, sleeping, activeRecent, paid, leadMagnet };
     }, [users]);
