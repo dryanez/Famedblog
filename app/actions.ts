@@ -61,11 +61,6 @@ export async function submitLead(formData: FormData) {
                 from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
                 to: email,
                 subject: 'Your 8-Week FaMED Study Plan 📚',
-                headers: {
-                    'List-Unsubscribe': '<mailto:team@famed-vorbereitung.com?subject=unsubscribe>',
-                    'Reply-To': 'team@famed-vorbereitung.com',
-                    'X-Entity-Ref-ID': `lead-${email}`
-                },
                 html: `
 <!DOCTYPE html>
 <html>
