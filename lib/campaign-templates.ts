@@ -509,7 +509,7 @@ export const getNewYearSpecial = (data: any) => `
 
       <p><strong>This package gives you:</strong></p>
       <ul style="padding-left: 20px; color: #374151;">
-        <li>✅ Full Access to 2,000+ Exam Questions</li>
+        <li>✅ Full Access to All 76 Official Cases</li>
         <li>✅ The "Protokoll 2006" Book (Physical Copy!)</li>
         <li>✅ Performance Tracking Dashboard</li>
       </ul>
@@ -542,7 +542,7 @@ For TODAY ONLY, get:
 - PLUS: A Free copy of the "Protokoll 2006" Book (Physical Copy!)
 
 This package includes:
-✅ Full Access to 2,000+ Exam Questions
+✅ Full Access to All 76 Official Cases
 ✅ The "Protokoll 2006" Book (Physical Copy!)
 ✅ Performance Tracking Dashboard
 
