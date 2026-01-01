@@ -400,7 +400,12 @@ export async function POST(request: Request) {
 
         if (sendError) {
             console.error('Resend error:', sendError);
-            return NextResponse.json({ error: 'Failed to send emails' }, { status: 500 });
+            console.error('Resend error details:', JSON.stringify(sendError, null, 2));
+            console.error('Campaign ID:', campaignId);
+            console.error('Number of emails attempted:', emailsToSend.length);
+            return NextResponse.json({
+                error: `Failed to send emails: ${sendError.message || JSON.stringify(sendError)}`
+            }, { status: 500 });
         }
 
         // Log sent emails to database
