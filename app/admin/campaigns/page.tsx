@@ -55,6 +55,17 @@ const DEFAULT_CAMPAIGNS: CampaignTemplate[] = [
         conversionRate: "65-85%"
     },
     {
+        id: "holiday_special",
+        name: "🎄 Holiday Special (50% Off + Book)",
+        description: "Christmas special offer for all non-paid users. 50% Off + Free Book.",
+        type: "manual",
+        targetSegment: "free_users",
+        icon: Sparkles,
+        color: "bg-gradient-to-br from-green-100 to-red-100 border border-green-300",
+        estimatedReach: 0,
+        conversionRate: "75-95%"
+    },
+    {
         id: "new_year_special",
         name: "🎉 Happy New Year Special (50% Off + Book)",
         description: "LAST DAY: New Year offer for all non-paid users. 50% Off + Free Book.",
