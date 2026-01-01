@@ -382,6 +382,9 @@ export default function CampaignsPage() {
                     case 'exam_urgency_special_offer':
                         template = getExamUrgencySpecialOffer(sampleData);
                         break;
+                    case 'exam_urgency_1_week_special':
+                        template = getExamUrgency1WeekSpecial(sampleData);
+                        break;
                     case 'exam_urgency_7d':
                         template = getExamUrgency7Days(sampleData);
                         break;

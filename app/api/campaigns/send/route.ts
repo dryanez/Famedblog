@@ -17,7 +17,9 @@ import {
     getHolidaySpecial,
     getTextHolidaySpecial,
     getNewYearSpecial,
-    getTextNewYearSpecial
+    getTextNewYearSpecial,
+    getExamUrgency1WeekSpecial,
+    getTextExamUrgency1WeekSpecial
 } from '@/lib/campaign-templates';
 
 const supabase = createClient(
