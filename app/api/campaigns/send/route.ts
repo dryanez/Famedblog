@@ -435,7 +435,12 @@ export async function POST(request: Request) {
                 to: user.email,
                 subject: subjectLine,
                 html: htmlContent,
-                text: textContent
+                text: textContent,
+                headers: {
+                    'List-Unsubscribe': '<mailto:team@famed-vorbereitung.com?subject=unsubscribe>',
+                    'Reply-To': 'team@famed-vorbereitung.com',
+                    'X-Entity-Ref-ID': `user-${user.id}`
+                }
             };
         });
 
