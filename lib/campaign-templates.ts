@@ -176,11 +176,11 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
     </div>
     <div class="content">
       <p style="font-size: 18px; font-weight: 600;">Hi ${data.userName},</p>
-      <p>Your exam is in less than 1 week. The pressure is on.</p>
-      <p>It's now or never. You need the <strong>highest yield</strong> information, fast. The cheatsheets, the must-know cases, and the simulation.</p>
+      <p>Your exam is in less than 1 week. This is it.</p>
+      <p>The last week is about <strong>simulation</strong> – experiencing the test exactly as it will be on exam day. 1-hour full test simulations by sections. Practice until the real exam feels like routine.</p>
       
       <div class="highlight-box">
-        <p style="margin:0; font-weight:600; color:#7f1d1d;">SPECIAL "CRUNCH TIME" OFFER</p>
+        <p style="margin:0; font-weight:600; color:#7f1d1d;">SPECIAL "FINAL WEEK" OFFER</p>
         <div style="margin: 10px 0;">
             <span class="price-old">€69.00</span>
             <span class="price-new">€9.99</span>
@@ -191,11 +191,11 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
 
       <p><strong>What you get instantly:</strong></p>
       <ul style="padding-left: 20px; margin-bottom: 25px;">
-        <li>✅ <strong>Rapid Review Cheatsheets</strong> (PDFs)</li>
-        <li>✅ <strong>5 "Must-Know" Clinical Cases</strong></li>
-        <li>✅ <strong>Interactive Exam Simulator</strong></li>
+        <li>✅ <strong>Full 1:1 Test Simulation</strong> (Exactly like the real exam)</li>
+        <li>✅ <strong>1-Hour Section Practice</strong> (By topic)</li>
+        <li>✅ <strong>Complete Exam Day Preparation</strong></li>
       </ul>
-      <p>Don't risk your grade to save €10. Give yourself the best chance to pass.</p>
+      <p>Don't walk into the exam unprepared. Practice like it's the real thing.</p>
       <p style="text-align: center; margin-top: 30px;">
         <a href="https://buy.stripe.com/fZudRafl7gPL5EM9ZD7Re0u" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
       </p>
@@ -211,19 +211,20 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
 
 export const getTextExamUrgency1WeekSpecial = (data: any) => `Hi ${data.userName},
 
-Your exam is in less than 1 week. The pressure is on.
-It's now or never. You need the highest yield information, fast.
+Your exam is in less than 1 week. This is it.
 
-SPECIAL "CRUNCH TIME" OFFER
+The last week is about simulation – experiencing the test exactly as it will be on exam day. 1-hour full test simulations by sections. Practice until the real exam feels like routine.
+
+SPECIAL "FINAL WEEK" OFFER
 Price: €9.99 (was €69.00)
 Offer Expires in 24 Hours
 
 What you get instantly:
-- Rapid Review Cheatsheets (PDFs)
-- 5 "Must-Know" Clinical Cases
-- Interactive Exam Simulator
+- Full 1:1 Test Simulation (Exactly like the real exam)
+- 1-Hour Section Practice (By topic)
+- Complete Exam Day Preparation
 
-Don't risk your grade to save €10. Give yourself the best chance to pass.
+Don't walk into the exam unprepared. Practice like it's the real thing.
 
 Get Instant Access: https://buy.stripe.com/fZudRafl7gPL5EM9ZD7Re0u
 `;
