@@ -91,7 +91,7 @@ export default function BookPromoPopup() {
                         </div>
 
                         <a
-                            href="https://famed-vorbereitung.com/pricing"
+                            href="https://famedtestprep.com/HolidaySpecial"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={handleClose}

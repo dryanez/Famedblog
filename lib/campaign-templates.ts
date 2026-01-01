@@ -503,7 +503,7 @@ export const getNewYearSpecial = (data: any) => `
           PLUS: Free "Protokoll 2006" Book
         </div>
 
-        <a href="https://famed-vorbereitung.com/pricing" class="btn">🎁 CLAIM MY NEW YEAR GIFT 🎁</a>
+        <a href="https://famedtestprep.com/HolidaySpecial" class="btn">🎁 CLAIM MY NEW YEAR GIFT 🎁</a>
         <p style="font-size: 13px; color: #ef4444; margin-top: 20px; font-weight: 700;">⏰ Offer ends TONIGHT at midnight!</p>
       </div>
 
@@ -550,7 +550,7 @@ This package includes:
 
 ⏰ Offer ends TONIGHT at midnight!
 
-Claim your New Year gift now: https://famed-vorbereitung.com/pricing
+Claim your New Year gift now: https://famedtestprep.com/HolidaySpecial
 
 🚀 Make 2026 YOUR breakthrough year!
 
