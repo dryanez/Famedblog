@@ -410,13 +410,9 @@ export async function POST(request: Request) {
 
         // Log sent emails to database
         const logs = emailsToSend.map((email, index) => {
-            // We don't have the exact Resend ID for each email in batch unless we map the response
-            // Resend batch response returns an array of data/ids
-            const resendId = sendResult?.data?.[index]?.id;
-            // Find the user correctly. 'emailsToSend' was mapped from 'targetUsers.slice'
-            // So the index matches 'targetUsers' (the sliced version)
-            const user = targetUsers[index]; // Note: targetUsers was not sliced in the variable, but used in map
-            // Wait, emailsToSend = targetUsers.slice(0, 50).map... so indices 0-49 of targetUsers correspond.
+            // Map results from batched sending
+            const resendId = allResults?.[index]?.id;
+            const user = targetUsers[index];
 
             return {
                 campaign_id: campaignId,
