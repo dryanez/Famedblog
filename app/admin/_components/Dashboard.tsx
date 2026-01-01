@@ -561,7 +561,11 @@ export function Dashboard() {
             {/* Send Campaign Modal */}
             {showSendModal && (
                 <SendCampaignModal
-                    selectedUserIds={Array.from(selectedUsers)}
+                    selectedUserIds={activeSegment === 'lead' ? [] : Array.from(selectedUsers)}
+                    prefilterEmails={activeSegment === 'lead' ?
+                        filteredUsers.filter(u => selectedUsers.has(u.id)).map(u => u.Email)
+                        : []
+                    }
                     onClose={() => setShowSendModal(false)}
                     onSuccess={() => {
                         setShowSendModal(false);
