@@ -108,10 +108,19 @@ export async function POST(request: Request) {
             console.log('📧 DIRECT EMAIL MODE: Sending to', emails.length, 'email addresses');
             console.log('📧 Emails:', emails);
 
-            // Validate and filter emails
+            // Auto-fix incomplete email addresses (e.g., @gmail -> @gmail.com)
+            const fixedEmails = emails.map((email: string) => {
+                // Fix common incomplete domains
+                if (email.endsWith('@gmail')) return email + '.com';
+                if (email.endsWith('@yahoo')) return email + '.com';
+                if (email.endsWith('@hotmail')) return email + '.com';
+                return email;
+            });
+
+            // Validate emails
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            const validEmails = emails.filter((email: string) => emailRegex.test(email));
-            const invalidEmails = emails.filter((email: string) => !emailRegex.test(email));
+            const validEmails = fixedEmails.filter((email: string) => emailRegex.test(email));
+            const invalidEmails = fixedEmails.filter((email: string) => !emailRegex.test(email));
 
             if (invalidEmails.length > 0) {
                 console.warn('⚠️ Filtered out invalid emails:', invalidEmails);
