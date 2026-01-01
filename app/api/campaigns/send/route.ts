@@ -19,7 +19,9 @@ import {
     getNewYearSpecial,
     getTextNewYearSpecial,
     getExamUrgency1WeekSpecial,
-    getTextExamUrgency1WeekSpecial
+    getTextExamUrgency1WeekSpecial,
+    getWelcomeBundlePromo,
+    getTextWelcomeBundlePromo
 } from '@/lib/campaign-templates';
 
 const supabase = createClient(
@@ -70,6 +72,7 @@ export async function POST(request: Request) {
                 { id: 'holiday_special', t: getHolidaySpecial, tt: getTextHolidaySpecial, s: '🎄 Test: Holiday Special' },
                 { id: 'new_year_special', t: getNewYearSpecial, tt: getTextNewYearSpecial, s: '🎉 Test: Happy New Year Special' },
                 { id: 'exam_urgency_1_week_special', t: getExamUrgency1WeekSpecial, tt: getTextExamUrgency1WeekSpecial, s: '🚨 Test: 1 Week Special' },
+                { id: 'welcome_bundle_promo', t: getWelcomeBundlePromo, tt: getTextWelcomeBundlePromo, s: '🎁 Test: Welcome Bundle Promo' },
             ].find(t => t.id === campaignId);
 
             if (found) {
@@ -123,6 +126,11 @@ export async function POST(request: Request) {
                     emailTemplate = getSubscriptionExpiry;
                     textTemplate = getTextSubscriptionExpiry;
                     subjectLine = '🔔 Your Premium Access Expires Soon';
+                    break;
+                case 'welcome_bundle_promo':
+                    emailTemplate = getWelcomeBundlePromo;
+                    textTemplate = getTextWelcomeBundlePromo;
+                    subjectLine = '🎁 Welcome! Get the Complete FaMED Bundle';
                     break;
                 case 'holiday_special':
                     const { data: holidayOverride } = await supabase

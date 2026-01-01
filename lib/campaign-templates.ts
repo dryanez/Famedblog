@@ -1,4 +1,109 @@
 
+export const getWelcomeBundlePromo = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+  .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; text-align: center; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 32px; font-weight: 900; text-shadow: 0 3px 6px rgba(0,0,0,0.3); }
+  .content { padding: 40px 30px; }
+  .welcome-box { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); padding: 25px; border-radius: 12px; margin: 25px 0; text-align: center; border: 2px solid #3b82f6; }
+  .bundle-box { background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%); border: 3px solid #f59e0b; padding: 30px; text-align: center; border-radius: 16px; margin: 30px 0; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2); }
+  .price-tag { color: #dc2626; font-size: 36px; font-weight: 900; margin: 15px 0; }
+  .btn { display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; padding: 18px 40px; text-decoration: none; border-radius: 10px; font-weight: 800; font-size: 20px; margin-top: 20px; box-shadow: 0 6px 0 #047857; transition: all 0.2s; text-transform: uppercase; }
+  .btn:hover { transform: translateY(3px); box-shadow: 0 3px 0 #047857; }
+  .footer { background-color: #f9fafb; padding: 25px; text-align: center; font-size: 12px; color: #6b7280; }
+  .feature-list { text-align: left; margin: 20px 0; }
+  .feature-list li { margin: 10px 0; color: #374151; font-size: 16px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+             <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 50px; width: auto; margin-bottom: 20px;">
+             <h1>Welcome to FaMED! 🎉</h1>
+             <p style="color: #e0e7ff; margin-top: 10px; font-size: 18px; font-weight: 600;">Start Your Journey to Success</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <p style="font-size: 18px; font-weight: 600;">Hi ${data.userName},</p>
+      <p style="font-size: 16px; line-height: 1.8;">Welcome to FaMED-Vorbereitung! We're excited to help you pass your exam with confidence.</p>
+      
+      <div class="welcome-box">
+        <p style="margin: 0; font-size: 20px; font-weight: 700; color: #1e40af;">🚀 Ready to Supercharge Your Preparation?</p>
+        <p style="margin: 10px 0 0 0; color: #475569; font-size: 14px;">Get everything you need in one complete bundle</p>
+      </div>
+      
+      <div class="bundle-box">
+        <h2 style="color: #b91c1c; margin-top: 0; margin-bottom: 10px; font-size: 28px;">🎁 Complete FaMED Bundle</h2>
+        <p style="margin: 5px 0; color: #6b7280; font-size: 16px;">Everything You Need to Pass</p>
+        
+        <div class="price-tag">Special Price!</div>
+
+        <a href="https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t" class="btn">🎯 GET THE BUNDLE NOW</a>
+      </div>
+
+      <p><strong>What's included in the bundle:</strong></p>
+      <ul class="feature-list">
+        <li>✅ Full Access to All 76 Official Cases</li>
+        <li>✅ Complete Test Simulation (1:1 Real Exam)</li>
+        <li>✅ Performance Tracking Dashboard</li>
+        <li>✅ Exam Day Preparation Guide</li>
+        <li>✅ Priority Support</li>
+      </ul>
+      
+      <p style="font-size: 18px; font-weight: 700; color: #7c3aed; text-align: center; margin-top: 30px;">🚀 Most students who get the bundle pass on their first try!</p>
+      
+      <p style="text-align: center; margin-top: 30px;">
+        <a href="https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t" style="color: #dc2626; font-weight: 600; font-size: 18px;">Click Here to Get Started →</a>
+      </p>
+      
+      <p style="margin-top: 30px; font-size: 16px; line-height: 1.8;">
+        Viel Erfolg,<br>
+        <strong>The FaMED-Vorbereitung Team</strong>
+      </p>
+    </div>
+    <div class="footer">
+      <p style="margin: 0;">&copy; ${new Date().getFullYear()} FaMED-Vorbereitung. All rights reserved.</p>
+      <p style="margin: 5px 0;">You received this email because you signed up for FaMED.</p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextWelcomeBundlePromo = (data: any) => `Hi ${data.userName},
+
+Welcome to FaMED-Vorbereitung! We're excited to help you pass your exam with confidence.
+
+🚀 READY TO SUPERCHARGE YOUR PREPARATION?
+
+Get the Complete FaMED Bundle - Everything You Need to Pass!
+
+What's included:
+- Full Access to All 76 Official Cases
+- Complete Test Simulation (1:1 Real Exam)
+- Performance Tracking Dashboard
+- Exam Day Preparation Guide
+- Priority Support
+
+🎁 SPECIAL PRICE FOR NEW MEMBERS!
+
+Get the Bundle Now: https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t
+
+Most students who get the bundle pass on their first try!
+
+Viel Erfolg,
+The FaMED-Vorbereitung Team
+`;
+
 export const getExamUrgency14Days = (data: any) => `
 <!DOCTYPE html>
 <html>
