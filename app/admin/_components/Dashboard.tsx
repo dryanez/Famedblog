@@ -138,22 +138,48 @@ export function Dashboard() {
         const leadMagnet = leads.length;
 
         return { total: users.length, examSoon, sleeping, activeRecent, paid, leadMagnet };
-    }, [users]);
+    }, [users, leads]);
 
     const filteredUsers = useMemo(() => {
         let result = users;
 
-        // segment filter
-        if (activeSegment === "exam_soon") {
-            result = result.filter(u => u.parsedExamDate && u.parsedExamDate > now && u.parsedExamDate < new Date(now.getTime() + 90 * 86400000));
-        } else if (activeSegment === "sleeping") {
-            result = result.filter(u => !u['Exam Date'] || u['Exam Date'] === '');
-        } else if (activeSegment === "active") {
-            result = result.filter(u => u.parsedExamDate && u.parsedExamDate > now);
-        } else if (activeSegment === "paid") {
-            result = result.filter(u => u.accountType && u.accountType.startsWith('paid'));
-        } else if (activeSegment === "lead") {
-            result = result.filter(u => u.accountType === 'lead');
+        // If lead segment is active, show leads instead of users
+        if (activeSegment === "lead") {
+            // Convert leads to UserData format for display
+            result = leads.map((lead: any) => ({
+                Name: lead.first_name || '',
+                'Last Name': '',
+                Email: lead.email || '',
+                'German Level': lead.german_level || 'N/A',
+                'Exam Date': lead.exam_date || '',
+                'Previous Attempt': 'N/A',
+                'Preparation Time': 'N/A',
+                'Total XP': '0',
+                'Total Activities': '0',
+                'Last Active': '',
+                'Activity Type': '',
+                'Activity Name': '',
+                Score: '',
+                Date: '',
+                accountType: 'lead',
+                planExpiry: '',
+                parsedExamDate: lead.exam_date ? new Date(lead.exam_date) : null,
+                parsedLastActive: null,
+                parsedTotalXP: 0,
+                parsedPlanExpiry: null,
+                id: String(lead.id)
+            }));
+        } else {
+            // segment filter for users
+            if (activeSegment === "exam_soon") {
+                result = result.filter(u => u.parsedExamDate && u.parsedExamDate > now && u.parsedExamDate < new Date(now.getTime() + 90 * 86400000));
+            } else if (activeSegment === "sleeping") {
+                result = result.filter(u => !u['Exam Date'] || u['Exam Date'] === '');
+            } else if (activeSegment === "active") {
+                result = result.filter(u => u.parsedExamDate && u.parsedExamDate > now);
+            } else if (activeSegment === "paid") {
+                result = result.filter(u => u.accountType && u.accountType.startsWith('paid'));
+            }
         }
 
         // search
