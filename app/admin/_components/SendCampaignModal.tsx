@@ -14,8 +14,10 @@ const CAMPAIGNS = [
     { id: 'exam_urgency_14d', name: '14 Days Urgency', subject: '⚠️ Your Exam is in 14 Days!', description: 'For users with exam in ~2 weeks' },
     { id: 'exam_urgency_7d', name: '7 Days Urgency', subject: '🚨 Final Week! Your Exam is This Week', description: 'For users with exam in ~1 week' },
     { id: 'exam_urgency_3d', name: '3 Days Urgency', subject: '⏰ 72 Hours Until Your FaMED Exam', description: 'For users with exam in 2-4 days' },
-    { id: 'exam_urgency_special_offer', name: 'Special Offer', subject: '🔥 Special Offer (€19.99)', description: 'Limited time pricing offer' },
+    { id: 'exam_urgency_1_week_special', name: '1-Week Special (€9.99)', subject: '🚨 1 Week Left! Last Chance to Pass', description: 'Special offer for users with exam in ≤7 days' },
+    { id: 'exam_urgency_special_offer', name: '2-Week Special (€19.99)', subject: '🔥 Special Offer (€19.99)', description: 'Limited time pricing offer' },
     { id: 'holiday_special', name: 'Holiday Special', subject: '🎄 Holiday Special: 50% Off', description: 'Seasonal promotion campaign' },
+    { id: 'new_year_special', name: 'New Year Special', subject: '🎉 HAPPY NEW YEAR! Start 2026 Right', description: 'New Year promotion campaign' },
     { id: 'welcome_day0', name: 'Welcome Email', subject: '👋 Welcome to FaMED Prep!', description: 'Onboarding for new users' },
     { id: 'subscription_expiry', name: 'Subscription Expiry', subject: '🔔 Premium Access Expires Soon', description: 'Renewal reminder for paid users' }
 ];
