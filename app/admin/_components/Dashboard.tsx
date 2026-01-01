@@ -147,6 +147,7 @@ export function Dashboard() {
         if (activeSegment === "lead") {
             // Convert leads to UserData format for display
             result = leads.map((lead: any) => ({
+                id: String(lead.id),
                 Name: lead.first_name || '',
                 'Last Name': '',
                 Email: lead.email || '',
