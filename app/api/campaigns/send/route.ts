@@ -69,6 +69,7 @@ export async function POST(request: Request) {
                 { id: 'subscription_expiry', t: getSubscriptionExpiry, tt: getTextSubscriptionExpiry, s: '🔔 Test: Subscription Expiry' },
                 { id: 'holiday_special', t: getHolidaySpecial, tt: getTextHolidaySpecial, s: '🎄 Test: Holiday Special' },
                 { id: 'new_year_special', t: getNewYearSpecial, tt: getTextNewYearSpecial, s: '🎉 Test: Happy New Year Special' },
+                { id: 'exam_urgency_1_week_special', t: getExamUrgency1WeekSpecial, tt: getTextExamUrgency1WeekSpecial, s: '🚨 Test: 1 Week Special' },
             ].find(t => t.id === campaignId);
 
             if (found) {
@@ -97,6 +98,11 @@ export async function POST(request: Request) {
                     emailTemplate = getExamUrgencySpecialOffer;
                     textTemplate = getTextExamUrgencySpecialOffer;
                     subjectLine = '🔥 Special Offer: Last Minute Rescue Pack (€19.99)';
+                    break;
+                case 'exam_urgency_1_week_special':
+                    emailTemplate = getExamUrgency1WeekSpecial;
+                    textTemplate = getTextExamUrgency1WeekSpecial;
+                    subjectLine = '🚨 1 Week Left! Last Chance to Pass 🚨';
                     break;
                 case 'exam_urgency_7d':
                     emailTemplate = getExamUrgency7Days;
