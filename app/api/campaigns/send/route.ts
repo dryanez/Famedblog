@@ -33,7 +33,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
     try {
-        const { campaignId, testEmail, userIds } = await request.json();
+        const { campaignId, testEmail, userIds, emails } = await request.json();
 
         // Fetch all users
         const { data: users, error } = await supabase
@@ -85,6 +85,28 @@ export async function POST(request: Request) {
                 textTemplate = (data) => `This is a test email for campaign ${campaignId}.`;
                 // We will fetch the custom campaign content later in the loop if needed
                 // But current loop uses emailTemplate(params)
+            }
+        } else if (emails && Array.isArray(emails) && emails.length > 0) {
+            targetUsers = emails.map((email: string) => ({
+                id: null,
+                email: email,
+                full_name: email.split('@')[0],
+                exam_date: null,
+                account_type: 'lead',
+                created_date: now.toISOString()
+            }));
+
+            switch (campaignId) {
+                case 'welcome_bundle_promo':
+                    emailTemplate = getWelcomeBundlePromo;
+                    textTemplate = getTextWelcomeBundlePromo;
+                    subjectLine = '🎁 Welcome! Get the Complete FaMED Bundle';
+                    break;
+                default:
+                    emailTemplate = getWelcomeDay0;
+                    textTemplate = getTextWelcomeDay0;
+                    subjectLine = '👋 Welcome to FaMED Prep!';
+                    break;
             }
         } else if (userIds && Array.isArray(userIds) && userIds.length > 0) {
             // MANUAL SELECTION MODE: Use specified user IDs
