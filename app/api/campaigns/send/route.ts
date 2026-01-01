@@ -360,7 +360,10 @@ export async function POST(request: Request) {
         }
 
         // **DEDUPLICATION: Fetch users who already received this campaign**
-        if (!testEmail) { // Skip deduplication for test emails
+        // Skip deduplication for test emails AND manual user/email selection
+        const isManualSelection = (userIds && userIds.length > 0) || (emails && emails.length > 0);
+
+        if (!testEmail && !isManualSelection) { // Skip deduplication for test emails and manual selections
             const { data: existingLogs, error: logError } = await supabase
                 .from('campaign_logs')
                 .select('user_id, user_email')
