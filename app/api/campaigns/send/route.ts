@@ -384,11 +384,7 @@ export async function POST(request: Request) {
                 reply_to: 'support@famed-vorbereitung.com',
                 subject: subjectLine,
                 html: htmlContent,
-                text: textContent,
-                headers: {
-                    'X-Entity-Ref-ID': campaignId,
-                    'List-Unsubscribe': '<mailto:unsubscribe@famed-vorbereitung.com>'
-                }
+                text: textContent
             };
         });
 
