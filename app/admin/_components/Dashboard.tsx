@@ -34,7 +34,7 @@ function StatCard({ label, value, icon: Icon, color, onClick, active }: any) {
 
 export function Dashboard() {
     const [users, setUsers] = useState<UserData[]>([]);
-    const [activeSegment, setActiveSegment] = useState<"all" | "exam_soon" | "sleeping" | "active" | "paid">("all");
+    const [activeSegment, setActiveSegment] = useState<"all" | "exam_soon" | "sleeping" | "active" | "paid" | "lead">("all");
     const [searchTerm, setSearchTerm] = useState("");
     // Campaign Filtering State
     const [selectedCampaignType, setSelectedCampaignType] = useState<string>("all");
@@ -126,8 +126,10 @@ export function Dashboard() {
         const activeRecent = users.filter(u => u.parsedExamDate && u.parsedExamDate > now).length;
         // Paid = any account_type that starts with "paid"
         const paid = users.filter(u => u.accountType && u.accountType.startsWith('paid')).length;
+        // Lead Magnet = account_type === 'lead'
+        const leadMagnet = users.filter(u => u.accountType === 'lead').length;
 
-        return { total: users.length, examSoon, sleeping, activeRecent, paid };
+        return { total: users.length, examSoon, sleeping, activeRecent, paid, leadMagnet };
     }, [users]);
 
     const filteredUsers = useMemo(() => {
@@ -142,6 +144,8 @@ export function Dashboard() {
             result = result.filter(u => u.parsedExamDate && u.parsedExamDate > now);
         } else if (activeSegment === "paid") {
             result = result.filter(u => u.accountType && u.accountType.startsWith('paid'));
+        } else if (activeSegment === "lead") {
+            result = result.filter(u => u.accountType === 'lead');
         }
 
         // search
@@ -288,7 +292,15 @@ export function Dashboard() {
             </header>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-6 gap-4">
+                <StatCard
+                    label="📧 Lead Magnet"
+                    value={stats.leadMagnet}
+                    icon={Mail}
+                    color="bg-orange-100"
+                    active={activeSegment === 'lead'}
+                    onClick={() => setActiveSegment('lead')}
+                />
                 <StatCard
                     label="Total Users"
                     value={stats.total}
@@ -456,11 +468,14 @@ export function Dashboard() {
                                             "inline-flex items-center px-2 py-0.5 rounded text-xs font-medium",
                                             user.accountType && user.accountType.startsWith('paid')
                                                 ? "bg-green-100 text-green-700"
-                                                : "bg-gray-100 text-gray-600"
+                                                : user.accountType === 'lead'
+                                                    ? "bg-orange-100 text-orange-700"
+                                                    : "bg-gray-100 text-gray-600"
                                         )}>
                                             {user.accountType === 'paid_1m' ? 'Paid 1M' :
                                                 user.accountType === 'paid_3m' ? 'Paid 3M' :
-                                                    user.accountType || 'Free'}
+                                                    user.accountType === 'lead' ? '📧 Lead Magnet' :
+                                                        user.accountType || 'Free'}
                                         </span>
                                     </td>
                                     <td className="px-6 py-3 text-gray-600">
