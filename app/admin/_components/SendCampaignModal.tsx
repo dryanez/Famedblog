@@ -18,6 +18,7 @@ const CAMPAIGNS = [
     { id: 'exam_urgency_special_offer', name: '2-Week Special (€19.99)', subject: '🔥 Special Offer (€19.99)', description: 'Limited time pricing offer' },
     { id: 'holiday_special', name: 'Holiday Special', subject: '🎄 Holiday Special: 50% Off', description: 'Seasonal promotion campaign' },
     { id: 'new_year_special', name: 'New Year Special', subject: '🎉 HAPPY NEW YEAR! Start 2026 Right', description: 'New Year promotion campaign' },
+    { id: 'welcome_bundle_promo', name: 'Welcome Bundle Promo', subject: '🎁 Welcome! Get the Complete FaMED Bundle', description: 'For new users (last 7 days, not paid)' },
     { id: 'welcome_day0', name: 'Welcome Email', subject: '👋 Welcome to FaMED Prep!', description: 'Onboarding for new users' },
     { id: 'subscription_expiry', name: 'Subscription Expiry', subject: '🔔 Premium Access Expires Soon', description: 'Renewal reminder for paid users' }
 ];

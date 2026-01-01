@@ -299,6 +299,22 @@ export async function POST(request: Request) {
                     subjectLine = '🎉 HAPPY NEW YEAR! Start 2026 Right - Pass Your FaMED Exam!';
                     break;
 
+                case 'welcome_bundle_promo':
+                    // Target: signed up in last 7 days AND not paid
+                    const sevenDaysAgo = new Date();
+                    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+                    targetUsers = users.filter(u => {
+                        if (u.account_type?.startsWith('paid')) return false;
+                        // Check if created_date is within last 7 days
+                        if (!u.created_date) return false;
+                        const createdDate = new Date(u.created_date);
+                        return createdDate >= sevenDaysAgo;
+                    });
+                    emailTemplate = getWelcomeBundlePromo;
+                    textTemplate = getTextWelcomeBundlePromo;
+                    subjectLine = '🎁 Welcome! Get the Complete FaMED Bundle';
+                    break;
+
                 default:
                     // Check if it's a custom campaign in Supabase
                     const { data: customCampaign } = await supabase
