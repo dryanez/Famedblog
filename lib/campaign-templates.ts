@@ -676,23 +676,14 @@ export const getNewYearSpecial = (data: any) => `
 <html>
 <head>
 <style>
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0; padding: 0; }
-  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-  .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; text-align: center; position: relative; overflow: hidden; }
-  .header::before { content: '✨'; position: absolute; top: 10px; left: 20px; font-size: 30px; animation: sparkle 2s infinite; }
-  .header::after { content: '🎉'; position: absolute; top: 10px; right: 20px; font-size: 30px; animation: sparkle 2s infinite 1s; }
-  @keyframes sparkle { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.2); } }
-  .header h1 { color: #ffffff; margin: 0; font-size: 32px; font-weight: 900; text-shadow: 0 3px 6px rgba(0,0,0,0.3); letter-spacing: 1px; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #2563eb; padding: 30px; text-align: center; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; }
   .content { padding: 40px 30px; }
-  .offer-box { background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%); border: 3px solid #f59e0b; padding: 30px; text-align: center; border-radius: 16px; margin: 30px 0; position: relative; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2); }
-  .last-day-badge { background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: white; padding: 8px 20px; border-radius: 25px; font-weight: 800; position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3); }
-  .price-old { text-decoration: line-through; color: #9ca3af; font-size: 20px; }
-  .price-new { color: #dc2626; font-size: 42px; font-weight: 900; margin-left: 15px; text-shadow: 0 2px 4px rgba(220, 38, 38, 0.2); }
-  .btn { display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; padding: 18px 40px; text-decoration: none; border-radius: 10px; font-weight: 800; font-size: 22px; margin-top: 20px; width: 100%; text-align: center; box-sizing: border-box; box-shadow: 0 6px 0 #047857; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
-  .btn:hover { background: linear-gradient(135deg, #059669 0%, #047857 100%); transform: translateY(3px); box-shadow: 0 3px 0 #047857; }
-  .footer { background-color: #f9fafb; padding: 25px; text-align: center; font-size: 12px; color: #6b7280; }
-  .bonus-item { display: flex; align-items: center; justify-content: center; margin-top: 20px; background: white; padding: 15px; border-radius: 10px; font-weight: 700; color: #7c3aed; font-size: 18px; box-shadow: 0 2px 6px rgba(124, 58, 237, 0.1); }
-  .motivational { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); padding: 20px; border-radius: 10px; margin: 25px 0; text-align: center; border-left: 4px solid #3b82f6; }
+  .offer { background-color: #f0f9ff; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb; }
+  .btn { display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
 </style>
 </head>
 <body>
@@ -701,50 +692,30 @@ export const getNewYearSpecial = (data: any) => `
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center" valign="middle">
-             <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 50px; width: auto; vertical-align: middle; margin-bottom: 20px;">
-             <h1 style="color: #ffffff; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">HAPPY NEW YEAR!</h1>
-             <p style="color: #e0e7ff; margin-top: 10px; font-size: 18px; font-weight: 600;">Start 2026 Right - Pass Your FaMED Exam!</p>
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">Happy New Year from FaMED 🎉</span>
           </td>
         </tr>
       </table>
     </div>
     <div class="content">
-      <p style="font-size: 18px; font-weight: 600;">Hi ${data.userName},</p>
-      <p style="font-size: 16px; line-height: 1.8;">Happy New Year! 🥳 We hope 2026 brings you success, and we want to help make that happen.</p>
+      <p>Hi ${data.userName},</p>
+      <p>Happy 2026! We hope this year brings you success in your FaMED exam.</p>
+      <p>To help you start the year right, we wanted to let you know about a special we're running today:</p>
       
-      <div class="motivational">
-        <p style="margin: 0; font-size: 20px; font-weight: 700; color: #1e40af;">💪 Start the Year Right - Study Smart. Pass the Test!</p>
-        <p style="margin: 10px 0 0 0; color: #475569; font-size: 14px;">This is YOUR year to succeed. Let's make it count.</p>
-      </div>
-      
-      <div class="offer-box">
-        <div class="last-day-badge">⚡ LAST DAY OFFER ⚡</div>
-        <h2 style="color: #b91c1c; margin-top: 20px; margin-bottom: 10px; font-size: 28px;">50% OFF EVERYTHING</h2>
-        <p style="margin: 5px 0; color: #6b7280; font-size: 16px;">Any Subscription Plan</p>
-        
-        <div class="bonus-item">
-          <span style="font-size: 28px; margin-right: 12px;">📚</span>
-          PLUS: Free "Protokoll 2006" Book
-        </div>
-
-        <a href="https://famedtestprep.com/HolidaySpecial" class="btn">🎁 CLAIM MY NEW YEAR GIFT 🎁</a>
-        <p style="font-size: 13px; color: #ef4444; margin-top: 20px; font-weight: 700;">⏰ Offer ends TONIGHT at midnight!</p>
+      <div class="offer">
+        <p style="margin: 0 0 10px 0;"><strong>New Year Special</strong></p>
+        <p style="margin: 0;">Half off any subscription plan, plus a free copy of our Protokoll 2006 book.</p>
       </div>
 
-      <p><strong>This package gives you:</strong></p>
-      <ul style="padding-left: 20px; color: #374151;">
-        <li>✅ Full Simulation of the Test</li>
-        <li>✅ Gratis eBook - The "Protokoll 2006" Book</li>
-        <li>✅ Full Access to All 76 Official Cases</li>
-        <li>✅ Performance Tracking Dashboard</li>
-      </ul>
+      <p>If you've been thinking about upgrading your preparation, this might be a good time.</p>
+      <p>Either way, we're here to support you. Let us know if you have any questions.</p>
       
-      <p style="font-size: 18px; font-weight: 700; color: #7c3aed; text-align: center; margin-top: 30px;">🚀 Make 2026 YOUR breakthrough year!</p>
-      <p style="text-align: center; color: #6b7280;">Don't let this opportunity pass. Your future self will thank you.</p>
+      <a href="https://famedtestprep.com/HolidaySpecial" class="btn">View Details</a>
     </div>
     <div class="footer">
-      <p>© 2026 FaMED Vorbereitung. All rights reserved.</p>
-      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p>Need help? Reply to this email or visit our <a href="https://t.me/+vgtsHuqtwfk4MTJh" style="color: #6b7280;">Telegram community</a>.</p>
     </div>
   </div>
 </body>
@@ -757,14 +728,14 @@ export const getTextNewYearSpecial = (data: any) => `Hi ${data.userName},
 
 Happy New Year! We hope 2026 brings you success, and we want to help make that happen.
 
-💪 Start the Year Right - Study Smart. Pass the Test!
+💪 Start the Year Right - Study Smart.Pass the Test!
 
 ⚡ LAST DAY OFFER ⚡
-50% OFF EVERYTHING + FREE BOOK
+50 % OFF EVERYTHING + FREE BOOK
 
 For TODAY ONLY, get:
-- 50% OFF any subscription plan
-- PLUS: Gratis eBook - The "Protokoll 2006" Book
+- 50 % OFF any subscription plan
+  - PLUS: Gratis eBook - The "Protokoll 2006" Book
 
 This package includes:
 ✅ Full Simulation of the Test
@@ -779,6 +750,5 @@ Claim your New Year gift now: https://famedtestprep.com/HolidaySpecial
 🚀 Make 2026 YOUR breakthrough year!
 
 --
-FaMED Vorbereitung
-`;
-
+  FaMED Vorbereitung
+    `;
