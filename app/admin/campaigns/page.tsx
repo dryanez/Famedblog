@@ -15,7 +15,8 @@ import {
     getExamUrgencySpecialOffer,
     getHolidaySpecial,
     getNewYearSpecial,
-    getExamUrgency1WeekSpecial
+    getExamUrgency1WeekSpecial,
+    getWelcomeBundlePromo
 } from "@/lib/campaign-templates";
 import { CampaignStatsModal } from "./CampaignStatsModal";
 
@@ -79,14 +80,25 @@ const DEFAULT_CAMPAIGNS: CampaignTemplate[] = [
     },
     {
         id: "new_year_special",
-        name: "🎉 Happy New Year Special (50% Off + Book)",
-        description: "LAST DAY: New Year offer for all non-paid users. 50% Off + Free Book.",
+        name: "🎉 New Year Special (2026)",
+        description: "New Year promotion for all non-paid users. Start 2026 right!",
         type: "manual",
         targetSegment: "free_users",
         icon: Sparkles,
-        color: "bg-gradient-to-br from-purple-100 to-blue-100 border border-purple-300",
+        color: "bg-gradient-to-br from-purple-100 to-pink-100 border border-purple-300",
         estimatedReach: 0,
-        conversionRate: "75-95%"
+        conversionRate: "70-90%"
+    },
+    {
+        id: "welcome_bundle_promo",
+        name: "🎁 Welcome Bundle Promo",
+        description: "For new users (last 7 days, not paid). Complete FaMED Bundle offer.",
+        type: "automated",
+        targetSegment: "new_free_users",
+        icon: Mail,
+        color: "bg-gradient-to-br from-blue-100 to-indigo-100 border border-blue-300",
+        estimatedReach: 0,
+        conversionRate: "60-80%"
     },
     {
         id: "exam_urgency_7d",
@@ -402,6 +414,9 @@ export default function CampaignsPage() {
                         break;
                     case 'new_year_special':
                         template = getNewYearSpecial(sampleData);
+                        break;
+                    case 'welcome_bundle_promo':
+                        template = getWelcomeBundlePromo(sampleData);
                         break;
                     default:
                         // For default campaigns without specific function or manual ones
