@@ -55,17 +55,22 @@ export function SendCampaignModal({ selectedUserIds = [], prefilterEmails = [], 
                 })
             });
 
+            console.log('📧 Response status:', response.status, response.ok);
             const data = await response.json();
+            console.log('📧 Response data:', data);
 
             if (!response.ok) {
+                console.error('❌ Response not OK:', data);
                 throw new Error(data.error || 'Failed to send campaign');
             }
 
+            console.log('✅ Setting result:', data);
             setResult(data);
             setTimeout(() => {
                 onSuccess?.();
             }, 2000);
         } catch (err: any) {
+            console.error('❌ Catch error:', err);
             setError(err.message || 'Something went wrong');
         } finally {
             setSending(false);
