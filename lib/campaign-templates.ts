@@ -87,6 +87,10 @@ export const getWelcomeBundlePromo = (data: any) => `
         </div>
 
         <a href="https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t" class="btn">🎯 JETZT KAUFEN →</a>
+        
+        <p style="margin-top: 15px; font-size: 14px;">
+          <a href="https://famedtestprep.com/upgrade" style="color: #6b7280; text-decoration: underline;">Want to learn more? View full pricing details →</a>
+        </p>
       </div>
 
       <p style="font-size: 18px; font-weight: 700; color: #7c3aed; text-align: center; margin-top: 30px;">🚀 Most students who get the bundle pass on their first try!</p>
@@ -130,6 +134,8 @@ Special Price: €59.99
 YOU SAVE: €89.99 (60% OFF!)
 
 Get the Complete Bundle Now: https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t
+
+Want to learn more? View full pricing details: https://famedtestprep.com/upgrade
 
 🚀 Most students who get the bundle pass on their first try!
 
