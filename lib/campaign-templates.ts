@@ -59,6 +59,7 @@ We have a specific "Final Sprint" module designed exactly for this timeframe.
 Access the Final Sprint: https://famed-vorbereitung.com/pricing
 `;
 
+// ... existing 2-week special code ...
 export const getExamUrgencySpecialOffer = (data: any) => `
 <!DOCTYPE html>
 <html>
@@ -141,6 +142,90 @@ What you get instantly:
 Don't risk your grade to save €20. Give yourself the best chance to pass.
 
 Get Instant Access: https://buy.stripe.com/9B64gAb4R2YV2sA8Vz7Re0o
+`;
+
+export const getExamUrgency1WeekSpecial = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #dc2626; padding: 30px; text-align: center; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
+  .content { padding: 40px 30px; }
+  .highlight-box { background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0; }
+  .price-old { text-decoration: line-through; color: #9ca3af; font-size: 18px; }
+  .price-new { color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px; }
+  .timer { font-size: 14px; color: #ef4444; font-weight: 600; margin-top: 5px; text-transform: uppercase; }
+  .btn { display: inline-block; background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; vertical-align: middle;">LAST MINUTE EXAM RESCUE</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <p style="font-size: 18px; font-weight: 600;">Hi ${data.userName},</p>
+      <p>Your exam is in less than 1 week. The pressure is on.</p>
+      <p>It's now or never. You need the <strong>highest yield</strong> information, fast. The cheatsheets, the must-know cases, and the simulation.</p>
+      
+      <div class="highlight-box">
+        <p style="margin:0; font-weight:600; color:#7f1d1d;">SPECIAL "CRUNCH TIME" OFFER</p>
+        <div style="margin: 10px 0;">
+            <span class="price-old">€69.00</span>
+            <span class="price-new">€9.99</span>
+        </div>
+        <a href="https://buy.stripe.com/fZudRafl7gPL5EM9ZD7Re0u" class="btn">⚡ UNLOCK NOW - €9.99</a>
+        <p class="timer">Offer Expires in 24 Hours</p>
+      </div>
+
+      <p><strong>What you get instantly:</strong></p>
+      <ul style="padding-left: 20px; margin-bottom: 25px;">
+        <li>✅ <strong>Rapid Review Cheatsheets</strong> (PDFs)</li>
+        <li>✅ <strong>5 "Must-Know" Clinical Cases</strong></li>
+        <li>✅ <strong>Interactive Exam Simulator</strong></li>
+      </ul>
+      <p>Don't risk your grade to save €10. Give yourself the best chance to pass.</p>
+      <p style="text-align: center; margin-top: 30px;">
+        <a href="https://buy.stripe.com/fZudRafl7gPL5EM9ZD7Re0u" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
+      </p>
+    </div>
+    <div class="footer">
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextExamUrgency1WeekSpecial = (data: any) => `Hi ${data.userName},
+
+Your exam is in less than 1 week. The pressure is on.
+It's now or never. You need the highest yield information, fast.
+
+SPECIAL "CRUNCH TIME" OFFER
+Price: €9.99 (was €69.00)
+Offer Expires in 24 Hours
+
+What you get instantly:
+- Rapid Review Cheatsheets (PDFs)
+- 5 "Must-Know" Clinical Cases
+- Interactive Exam Simulator
+
+Don't risk your grade to save €10. Give yourself the best chance to pass.
+
+Get Instant Access: https://buy.stripe.com/fZudRafl7gPL5EM9ZD7Re0u
 `;
 
 export const getExamUrgency7Days = (data: any) => `

@@ -234,6 +234,16 @@ export async function POST(request: Request) {
                     subjectLine = '📅 Set Your Exam Date & Get a Personalized Study Plan';
                     break;
 
+                case 'exam_urgency_1_week_special':
+                    // Target free users with exam in < 7 days
+                    // Note: Filter logic here works on fetched users. For "automated" campaigns, 
+                    // we usually run a cron job with precise filtering, but here we can support manual sends too.
+                    targetUsers = users.filter(u => !u.account_type?.startsWith('paid'));
+                    emailTemplate = getExamUrgency1WeekSpecial;
+                    textTemplate = getTextExamUrgency1WeekSpecial;
+                    subjectLine = '🚨 1 Week Left! Last Chance to Pass 🚨';
+                    break;
+
                 case 'holiday_special':
                     // Check if there is a custom override in the database
                     const { data: holidayOverride } = await supabase

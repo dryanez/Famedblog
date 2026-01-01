@@ -14,7 +14,8 @@ import {
     getSubscriptionExpiry,
     getExamUrgencySpecialOffer,
     getHolidaySpecial,
-    getNewYearSpecial
+    getNewYearSpecial,
+    getExamUrgency1WeekSpecial
 } from "@/lib/campaign-templates";
 import { CampaignStatsModal } from "./CampaignStatsModal";
 
@@ -53,6 +54,17 @@ const DEFAULT_CAMPAIGNS: CampaignTemplate[] = [
         color: "bg-green-100 text-green-700",
         estimatedReach: 0,
         conversionRate: "65-85%"
+    },
+    {
+        id: "exam_urgency_1_week_special",
+        name: "One Week Special Offer ($9.99)",
+        description: "Trigger: Exam in < 7 days. Upsell: 1-Week Fast Track.",
+        type: "automated",
+        targetSegment: "exam_lt_7d_unpaid",
+        icon: Zap,
+        color: "bg-yellow-100 text-yellow-700",
+        estimatedReach: 0,
+        conversionRate: "80-90%"
     },
     {
         id: "holiday_special",
