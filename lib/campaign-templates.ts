@@ -507,12 +507,11 @@ export const getNewYearSpecial = (data: any) => `
         <p style="font-size: 13px; color: #ef4444; margin-top: 20px; font-weight: 700;">⏰ Offer ends TONIGHT at midnight!</p>
       </div>
 
-      <p><strong>🎯 What you get instantly:</strong></p>
-      <ul style="padding-left: 20px; color: #374151; line-height: 1.9;">
-        <li>✅ <strong>Full Access to 2,000+ Exam Questions</strong></li>
-        <li>✅ <strong>The "Protokoll 2006" Book</strong> (Physical Copy!)</li>
-        <li>✅ <strong>Performance Tracking Dashboard</strong></li>
-        <li>✅ <strong>Structured Study Plans</strong></li>
+      <p><strong>This package gives you:</strong></p>
+      <ul style="padding-left: 20px; color: #374151;">
+        <li>✅ Full Access to 2,000+ Exam Questions</li>
+        <li>✅ The "Protokoll 2006" Book (Physical Copy!)</li>
+        <li>✅ Performance Tracking Dashboard</li>
       </ul>
       
       <p style="font-size: 18px; font-weight: 700; color: #7c3aed; text-align: center; margin-top: 30px;">🚀 Make 2026 YOUR breakthrough year!</p>
@@ -546,7 +545,6 @@ This package includes:
 ✅ Full Access to 2,000+ Exam Questions
 ✅ The "Protokoll 2006" Book (Physical Copy!)
 ✅ Performance Tracking Dashboard
-✅ Structured Study Plans
 
 ⏰ Offer ends TONIGHT at midnight!
 
