@@ -35,12 +35,30 @@ export async function POST(request: Request) {
     try {
         const { campaignId, testEmail, userIds, emails } = await request.json();
 
-        // Fetch all users
-        const { data: users, error } = await supabase
-            .from('users')
-            .select('*');
+        let users: any[] = [];
+        let fetchError = null;
 
-        if (error) {
+        // Optimization: Fetch strategy based on mode
+        if (userIds && Array.isArray(userIds) && userIds.length > 0) {
+            console.log('📧 Optimized Fetch: Fetching specific users', userIds.length);
+            const { data, error } = await supabase
+                .from('users')
+                .select('*')
+                .in('id', userIds);
+            users = data || [];
+            fetchError = error;
+        } else if ((!emails || emails.length === 0) && !testEmail) {
+            // Automated/Bulk Mode: Fetch all (limit 5000)
+            const { data, error } = await supabase
+                .from('users')
+                .select('*')
+                .range(0, 4999);
+            users = data || [];
+            fetchError = error;
+        }
+
+        if (fetchError) {
+            console.error('❌ User fetch error:', fetchError);
             return NextResponse.json({ error: 'Failed to fetch users' }, { status: 500 });
         }
 
