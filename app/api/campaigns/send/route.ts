@@ -243,7 +243,10 @@ export async function POST(request: Request) {
                         .single();
 
                     // Target all free users (not paid)
+                    console.log('[HOLIDAY_SPECIAL] Total users fetched:', users?.length);
+                    console.log('[HOLIDAY_SPECIAL] Sample user account_types:', users?.slice(0, 5).map(u => ({ email: u.email, account_type: u.account_type })));
                     targetUsers = users.filter(u => !u.account_type?.startsWith('paid'));
+                    console.log('[HOLIDAY_SPECIAL] Users after filtering (non-paid):', targetUsers.length);
 
                     if (holidayOverride?.content) {
                         emailTemplate = () => holidayOverride.content;
@@ -257,7 +260,11 @@ export async function POST(request: Request) {
 
                 case 'new_year_special':
                     // Target all free users (not paid)
+                    console.log('[NEW_YEAR_SPECIAL] Total users fetched:', users?.length);
+                    console.log('[NEW_YEAR_SPECIAL] Sample user account_types:', users?.slice(0, 5).map(u => ({ email: u.email, account_type: u.account_type })));
                     targetUsers = users.filter(u => !u.account_type?.startsWith('paid'));
+                    console.log('[NEW_YEAR_SPECIAL] Users after filtering (non-paid):', targetUsers.length);
+                    console.log('[NEW_YEAR_SPECIAL] Sample filtered users:', targetUsers.slice(0, 3).map(u => ({ email: u.email, account_type: u.account_type })));
                     emailTemplate = getNewYearSpecial;
                     textTemplate = getTextNewYearSpecial;
                     subjectLine = '🎉 HAPPY NEW YEAR! Start 2026 Right - Pass Your FaMED Exam!';
