@@ -23,7 +23,7 @@ export const getWelcomeBundlePromo = (data: any) => `
 <body>
   <div class="container">
     <div class="header">
-      <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 50px; width: auto;">
+      <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 50px; width: auto; display: block; margin: 0 auto;">
       <p style="color: #e0e7ff; margin-top: 15px; font-size: 20px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">⚡ One Time Offer! ⚡</p>
     </div>
     <div class="content">
