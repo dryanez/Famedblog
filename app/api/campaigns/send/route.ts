@@ -87,6 +87,9 @@ export async function POST(request: Request) {
                 // But current loop uses emailTemplate(params)
             }
         } else if (emails && Array.isArray(emails) && emails.length > 0) {
+            console.log('📧 DIRECT EMAIL MODE: Sending to', emails.length, 'email addresses');
+            console.log('📧 Emails:', emails);
+
             targetUsers = emails.map((email: string) => ({
                 id: null,
                 email: email,

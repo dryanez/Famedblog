@@ -39,6 +39,12 @@ export function SendCampaignModal({ selectedUserIds = [], prefilterEmails = [], 
         setResult(null);
 
         try {
+            console.log('📧 Sending campaign:', {
+                campaignId: selectedCampaign,
+                userIds: selectedUserIds,
+                emails: prefilterEmails
+            });
+
             const response = await fetch('/api/campaigns/send', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
