@@ -243,10 +243,13 @@ export async function POST(request: Request) {
                     break;
 
                 case 'exam_urgency_1_week_special':
-                    // Target free users with exam in < 7 days
-                    // Note: Filter logic here works on fetched users. For "automated" campaigns, 
-                    // we usually run a cron job with precise filtering, but here we can support manual sends too.
-                    targetUsers = users.filter(u => !u.account_type?.startsWith('paid'));
+                    // Target free users with exam in ≤ 7 days
+                    targetUsers = users.filter(u => {
+                        if (!u.exam_date || u.account_type?.startsWith('paid')) return false;
+                        const examDate = new Date(u.exam_date);
+                        const daysUntil = (examDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24);
+                        return daysUntil >= 0 && daysUntil <= 7;
+                    });
                     emailTemplate = getExamUrgency1WeekSpecial;
                     textTemplate = getTextExamUrgency1WeekSpecial;
                     subjectLine = '🚨 1 Week Left! Last Chance to Pass 🚨';
