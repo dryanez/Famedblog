@@ -6,61 +6,52 @@ export const getWelcomeBundlePromo = (data: any) => `
 <style>
   body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0; padding: 0; }
   .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-  .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; text-align: center; }
-  .header h1 { color: #ffffff; margin: 0; font-size: 32px; font-weight: 900; text-shadow: 0 3px 6px rgba(0,0,0,0.3); }
+  .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center; }
   .content { padding: 40px 30px; }
-  .welcome-box { background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); padding: 25px; border-radius: 12px; margin: 25px 0; text-align: center; border: 2px solid #3b82f6; }
-  .bundle-box { background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%); border: 3px solid #f59e0b; padding: 30px; text-align: center; border-radius: 16px; margin: 30px 0; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2); }
+  .bundle-box { background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%); border: 3px solid #f59e0b; padding: 30px 20px; text-align: center; border-radius: 16px; margin: 30px 0; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2); }
   .price-tag { color: #dc2626; font-size: 36px; font-weight: 900; margin: 15px 0; }
   .btn { display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; padding: 18px 40px; text-decoration: none; border-radius: 10px; font-weight: 800; font-size: 20px; margin-top: 20px; box-shadow: 0 6px 0 #047857; transition: all 0.2s; text-transform: uppercase; }
-  .btn:hover { transform: translateY(3px); box-shadow: 0 3px 0 #047857; }
   .footer { background-color: #f9fafb; padding: 25px; text-align: center; font-size: 12px; color: #6b7280; }
-  .feature-list { text-align: left; margin: 20px 0; }
-  .feature-list li { margin: 10px 0; color: #374151; font-size: 16px; }
+  @media only screen and (max-width: 600px) {
+    .bundle-images td { display: block !important; width: 100% !important; padding: 10px 0 !important; }
+    .plus-sign { display: none !important; }
+    .price-tag { font-size: 28px !important; }
+    .btn { padding: 14px 30px !important; font-size: 16px !important; }
+  }
 </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td align="center" valign="middle">
-             <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 50px; width: auto; margin-bottom: 20px;">
-             <h1>Welcome to FaMED! 🎉</h1>
-             <p style="color: #e0e7ff; margin-top: 10px; font-size: 18px; font-weight: 600;">Start Your Journey to Success</p>
-          </td>
-        </tr>
-      </table>
+      <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 50px; width: auto;">
     </div>
     <div class="content">
-      <p style="font-size: 18px; font-weight: 600;">Hi ${data.userName},</p>
-      <p style="font-size: 16px; line-height: 1.8;">Welcome to FaMED-Vorbereitung! We're excited to help you pass your exam with confidence.</p>
-      
-      <div class="welcome-box">
-        <p style="margin: 0; font-size: 20px; font-weight: 700; color: #1e40af;">🚀 Ready to Supercharge Your Preparation?</p>
-        <p style="margin: 10px 0 0 0; color: #475569; font-size: 14px;">Get everything you need in one complete bundle</p>
-      </div>
+      <h2 style="color: #7c3aed; text-align: center; font-size: 28px; margin: 0 0 30px 0;">🚀 Ready to Supercharge Your Preparation?</h2>
       
       <div class="bundle-box">
         <h2 style="color: #b91c1c; margin-top: 0; margin-bottom: 10px; font-size: 28px;">🎁 Special Bundle Offer</h2>
         <p style="margin: 5px 0 25px 0; color: #dc2626; font-size: 20px; font-weight: 800;">Book + App Bundle - Save 60%!</p>
         
-        <!-- Visual Bundle Display -->
+        <!-- Visual Bundle Display - Mobile Optimized -->
         <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 25px 0;">
           <tr>
             <td align="center">
-              <table border="0" cellspacing="0" cellpadding="0">
+              <table border="0" cellspacing="0" cellpadding="0" class="bundle-images">
                 <tr>
-                  <td align="center" valign="middle">
-                    <img src="https://famed-vorbereitung.com/book%20mockup%20website%20german%20(1).png" alt="FaMED Protokoll Book" style="width: 120px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                  <td align="center" valign="middle" style="padding: 10px;">
+                    <img src="https://famed-vorbereitung.com/book%20mockup%20website%20german%20(1).png" alt="FaMED Protokoll Book" style="max-width: 140px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                   </td>
-                  <td align="center" valign="middle" style="padding: 0 20px;">
+                  <td align="center" valign="middle" class="plus-sign" style="padding: 0 15px;">
                     <span style="font-size: 48px; font-weight: 900; color: #dc2626;">+</span>
                   </td>
-                  <td align="center" valign="middle">
-                    <div style="background: white; border: 3px solid #4f46e5; border-radius: 12px; padding: 20px; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                      <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED App" style="width: 80px; height: auto;">
-                    </div>
+                  <td align="center" valign="middle" style="padding: 10px;">
+                    <table border="0" cellspacing="0" cellpadding="0" style="background: white; border: 3px solid #4f46e5; border-radius: 12px; margin: 0 auto;">
+                      <tr>
+                        <td style="padding: 25px;">
+                          <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED App" style="width: 90px; height: auto; display: block;">
+                        </td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </table>
