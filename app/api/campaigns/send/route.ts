@@ -395,16 +395,37 @@ export async function POST(request: Request) {
             };
         });
 
-        // Send emails using Resend batch API
-        const { data: sendResult, error: sendError } = await resend.batch.send(emailsToSend);
+        // Send emails using Resend batch API (max 100 per batch)
+        const BATCH_SIZE = 100;
+        let totalSent = 0;
+        const allResults: any[] = [];
 
-        if (sendError) {
-            console.error('Resend error:', sendError);
-            console.error('Resend error details:', JSON.stringify(sendError, null, 2));
-            console.error('Campaign ID:', campaignId);
-            console.error('Number of emails attempted:', emailsToSend.length);
+        for (let i = 0; i < emailsToSend.length; i += BATCH_SIZE) {
+            const chunk = emailsToSend.slice(i, i + BATCH_SIZE);
+            console.log(`Sending batch ${Math.floor(i / BATCH_SIZE) + 1} of ${Math.ceil(emailsToSend.length / BATCH_SIZE)} (${chunk.length} emails)`);
+
+            const { data: sendResult, error: sendError } = await resend.batch.send(chunk);
+
+            if (sendError) {
+                console.error(`Resend error in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, sendError);
+                console.error('Resend error details:', JSON.stringify(sendError, null, 2));
+                console.error('Campaign ID:', campaignId);
+                console.error('Number of emails in this batch:', chunk.length);
+                // Continue with other batches even if one fails
+                continue;
+            }
+
+            totalSent += chunk.length;
+            if (sendResult?.data) {
+                allResults.push(...sendResult.data);
+            }
+        }
+
+        console.log(`Successfully sent ${totalSent} out of ${emailsToSend.length} emails`);
+
+        if (totalSent === 0) {
             return NextResponse.json({
-                error: `Failed to send emails: ${sendError.message || JSON.stringify(sendError)}`
+                error: 'Failed to send any emails'
             }, { status: 500 });
         }
 
