@@ -406,7 +406,6 @@ export async function POST(request: Request) {
             return {
                 from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
                 to: user.email,
-                reply_to: 'support@famed-vorbereitung.com',
                 subject: subjectLine,
                 html: htmlContent,
                 text: textContent
