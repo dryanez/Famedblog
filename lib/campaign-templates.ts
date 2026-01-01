@@ -24,9 +24,12 @@ export const getWelcomeBundlePromo = (data: any) => `
   <div class="container">
     <div class="header">
       <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 50px; width: auto;">
+      <p style="color: #e0e7ff; margin-top: 15px; font-size: 20px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">⚡ One Time Offer! ⚡</p>
     </div>
     <div class="content">
-      <h2 style="color: #7c3aed; text-align: center; font-size: 28px; margin: 0 0 30px 0;">🚀 Ready to Supercharge Your Preparation?</h2>
+      <div style="background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); padding: 25px; border-radius: 12px; margin: 0 0 30px 0; text-align: center; border: 2px solid #3b82f6;">
+        <p style="margin: 0; font-size: 24px; font-weight: 700; color: #1e40af;">🚀 Ready to Supercharge Your Preparation?</p>
+      </div>
       
       <div class="bundle-box">
         <h2 style="color: #b91c1c; margin-top: 0; margin-bottom: 10px; font-size: 28px;">🎁 Special Bundle Offer</h2>
