@@ -42,23 +42,30 @@ export const getWelcomeBundlePromo = (data: any) => `
       </div>
       
       <div class="bundle-box">
-        <h2 style="color: #b91c1c; margin-top: 0; margin-bottom: 10px; font-size: 28px;">🎁 Complete FaMED Bundle</h2>
-        <p style="margin: 5px 0; color: #6b7280; font-size: 16px;">Everything You Need to Pass</p>
+        <h2 style="color: #b91c1c; margin-top: 0; margin-bottom: 15px; font-size: 28px;">🎁 Complete FaMED Bundle</h2>
+        <p style="margin: 5px 0 20px 0; color: #6b7280; font-size: 18px; font-weight: 600;">Everything You Need to Pass Your Exam</p>
         
-        <div class="price-tag">Special Price!</div>
+        <div style="background: white; border-radius: 12px; padding: 20px; margin: 20px 0; text-align: left;">
+          <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 2px dashed #e5e7eb;">
+            <h3 style="color: #1e40af; margin: 0 0 10px 0; font-size: 20px;">📚 FaMED Test Prep 2026 Protokoll</h3>
+            <p style="margin: 5px 0; color: #4b5563; font-size: 15px; line-height: 1.6;">
+              The complete study guide with all 76 official cases, perfect communication scripts, and examination frameworks. Your roadmap to success!
+            </p>
+          </div>
+          
+          <div>
+            <h3 style="color: #7c3aed; margin: 0 0 10px 0; font-size: 20px;">💻 Full App Access</h3>
+            <p style="margin: 5px 0; color: #4b5563; font-size: 15px; line-height: 1.6;">
+              Complete test simulation (1:1 real exam experience), performance tracking dashboard, 1-hour section practice, and exam day preparation tools.
+            </p>
+          </div>
+        </div>
+        
+        <div class="price-tag">Special Bundle Price!</div>
 
-        <a href="https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t" class="btn">🎯 GET THE BUNDLE NOW</a>
+        <a href="https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t" class="btn">🎯 GET THE COMPLETE BUNDLE NOW</a>
       </div>
 
-      <p><strong>What's included in the bundle:</strong></p>
-      <ul class="feature-list">
-        <li>✅ Full Access to All 76 Official Cases</li>
-        <li>✅ Complete Test Simulation (1:1 Real Exam)</li>
-        <li>✅ Performance Tracking Dashboard</li>
-        <li>✅ Exam Day Preparation Guide</li>
-        <li>✅ Priority Support</li>
-      </ul>
-      
       <p style="font-size: 18px; font-weight: 700; color: #7c3aed; text-align: center; margin-top: 30px;">🚀 Most students who get the bundle pass on their first try!</p>
       
       <p style="text-align: center; margin-top: 30px;">
@@ -87,18 +94,17 @@ Welcome to FaMED-Vorbereitung! We're excited to help you pass your exam with con
 
 Get the Complete FaMED Bundle - Everything You Need to Pass!
 
-What's included:
-- Full Access to All 76 Official Cases
-- Complete Test Simulation (1:1 Real Exam)
-- Performance Tracking Dashboard
-- Exam Day Preparation Guide
-- Priority Support
+📚 FaMED TEST PREP 2026 PROTOKOLL
+The complete study guide with all 76 official cases, perfect communication scripts, and examination frameworks. Your roadmap to success!
 
-🎁 SPECIAL PRICE FOR NEW MEMBERS!
+💻 FULL APP ACCESS
+Complete test simulation (1:1 real exam experience), performance tracking dashboard, 1-hour section practice, and exam day preparation tools.
 
-Get the Bundle Now: https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t
+🎁 SPECIAL BUNDLE PRICE FOR NEW MEMBERS!
 
-Most students who get the bundle pass on their first try!
+Get the Complete Bundle Now: https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t
+
+🚀 Most students who get the bundle pass on their first try!
 
 Viel Erfolg,
 The FaMED-Vorbereitung Team
