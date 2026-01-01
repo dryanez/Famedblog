@@ -108,7 +108,22 @@ export async function POST(request: Request) {
             console.log('📧 DIRECT EMAIL MODE: Sending to', emails.length, 'email addresses');
             console.log('📧 Emails:', emails);
 
-            targetUsers = emails.map((email: string) => ({
+            // Validate and filter emails
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const validEmails = emails.filter((email: string) => emailRegex.test(email));
+            const invalidEmails = emails.filter((email: string) => !emailRegex.test(email));
+
+            if (invalidEmails.length > 0) {
+                console.warn('⚠️ Filtered out invalid emails:', invalidEmails);
+            }
+
+            if (validEmails.length === 0) {
+                return NextResponse.json({
+                    error: 'No valid email addresses provided'
+                }, { status: 400 });
+            }
+
+            targetUsers = validEmails.map((email: string) => ({
                 id: null,
                 email: email,
                 full_name: email.split('@')[0],
