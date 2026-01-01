@@ -509,8 +509,9 @@ export const getNewYearSpecial = (data: any) => `
 
       <p><strong>This package gives you:</strong></p>
       <ul style="padding-left: 20px; color: #374151;">
+        <li>✅ Full Simulation of the Test</li>
+        <li>✅ Gratis eBook - The "Protokoll 2006" Book</li>
         <li>✅ Full Access to All 76 Official Cases</li>
-        <li>✅ The "Protokoll 2006" Book</li>
         <li>✅ Performance Tracking Dashboard</li>
       </ul>
       
@@ -539,11 +540,12 @@ Happy New Year! We hope 2026 brings you success, and we want to help make that h
 
 For TODAY ONLY, get:
 - 50% OFF any subscription plan
-- PLUS: A Free copy of the "Protokoll 2006" Book
+- PLUS: Gratis eBook - The "Protokoll 2006" Book
 
 This package includes:
+✅ Full Simulation of the Test
+✅ Gratis eBook - The "Protokoll 2006" Book
 ✅ Full Access to All 76 Official Cases
-✅ The "Protokoll 2006" Book
 ✅ Performance Tracking Dashboard
 
 ⏰ Offer ends TONIGHT at midnight!
