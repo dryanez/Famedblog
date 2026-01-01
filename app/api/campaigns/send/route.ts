@@ -15,7 +15,9 @@ import {
     getTextSubscriptionExpiry,
     getTextExamUrgencySpecialOffer,
     getHolidaySpecial,
-    getTextHolidaySpecial
+    getTextHolidaySpecial,
+    getNewYearSpecial,
+    getTextNewYearSpecial
 } from '@/lib/campaign-templates';
 
 const supabase = createClient(
@@ -64,6 +66,7 @@ export async function POST(request: Request) {
                 { id: 'welcome_day0', t: getWelcomeDay0, tt: getTextWelcomeDay0, s: '👋 Test: Welcome to FaMED' },
                 { id: 'subscription_expiry', t: getSubscriptionExpiry, tt: getTextSubscriptionExpiry, s: '🔔 Test: Subscription Expiry' },
                 { id: 'holiday_special', t: getHolidaySpecial, tt: getTextHolidaySpecial, s: '🎄 Test: Holiday Special' },
+                { id: 'new_year_special', t: getNewYearSpecial, tt: getTextNewYearSpecial, s: '🎉 Test: Happy New Year Special' },
             ].find(t => t.id === campaignId);
 
             if (found) {
@@ -127,6 +130,11 @@ export async function POST(request: Request) {
                     }
                     textTemplate = getTextHolidaySpecial;
                     subjectLine = '🎄 Holiday Special: 50% Off + Free Book! 🎁';
+                    break;
+                case 'new_year_special':
+                    emailTemplate = getNewYearSpecial;
+                    textTemplate = getTextNewYearSpecial;
+                    subjectLine = '🎉 HAPPY NEW YEAR! Start 2026 Right - Pass Your FaMED Exam!';
                     break;
                 default:
                     // Check for custom campaign
@@ -245,6 +253,14 @@ export async function POST(request: Request) {
 
                     textTemplate = getTextHolidaySpecial; // We only allow editing HTML for now
                     subjectLine = '🎄 Holiday Special: 50% Off + Free Book! 🎁';
+                    break;
+
+                case 'new_year_special':
+                    // Target all free users (not paid)
+                    targetUsers = users.filter(u => !u.account_type?.startsWith('paid'));
+                    emailTemplate = getNewYearSpecial;
+                    textTemplate = getTextNewYearSpecial;
+                    subjectLine = '🎉 HAPPY NEW YEAR! Start 2026 Right - Pass Your FaMED Exam!';
                     break;
 
                 default:
