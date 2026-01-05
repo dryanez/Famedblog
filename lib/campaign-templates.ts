@@ -764,7 +764,9 @@ export const getSiteBackOnline = (data: any) => `
   .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; }
   .content { padding: 40px 30px; }
   .highlight { background-color: #f0f9ff; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb; }
-  .btn { display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; }
+  .bundle-box { background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%); border: 3px solid #dc2626; padding: 30px 20px; text-align: center; border-radius: 16px; margin: 30px 0; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2); }
+  .price-tag { color: #dc2626; font-size: 36px; font-weight: 900; margin: 15px 0; }
+  .btn { display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: #ffffff; padding: 18px 40px; text-decoration: none; border-radius: 10px; font-weight: 800; font-size: 20px; margin-top: 20px; box-shadow: 0 6px 0 #991b1b; transition: all 0.2s; text-transform: uppercase; }
   .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
 </style>
 </head>
@@ -790,17 +792,57 @@ export const getSiteBackOnline = (data: any) => `
         <p style="margin: 0;">You can now access everything on our site, including the Premium App & Book Bundle that helps you prepare for your FaMED exam.</p>
       </div>
 
-      <p><strong>What's included in the bundle:</strong></p>
-      <ul style="line-height: 1.8;">
-        <li>Full access to our FaMED preparation app</li>
-        <li>Protokoll 2006 eBook (digital copy)</li>
-        <li>Complete OSCE case simulations</li>
-        <li>Progress tracking and study plans</li>
-      </ul>
+      <div class="bundle-box">
+        <h2 style="color: #b91c1c; margin-top: 0; margin-bottom: 10px; font-size: 28px;">🎁 Special Bundle Offer</h2>
+        <p style="margin: 5px 0 25px 0; color: #dc2626; font-size: 20px; font-weight: 800;">Book + App Bundle - Save 60%!</p>
+        
+        <!-- Visual Bundle Display -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 25px 0;">
+          <tr>
+            <td align="center">
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="center" valign="middle" style="padding: 10px;">
+                    <img src="https://famed-vorbereitung.com/book%20mockup%20website%20german%20(1).png" alt="FaMED Protokoll Book" style="max-width: 140px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                  </td>
+                  <td align="center" valign="middle" style="padding: 0 15px;">
+                    <span style="font-size: 48px; font-weight: 900; color: #dc2626;">+</span>
+                  </td>
+                  <td align="center" valign="middle" style="padding: 10px;">
+                    <table border="0" cellspacing="0" cellpadding="0" style="background: white; border: 3px solid #2563eb; border-radius: 12px; margin: 0 auto;">
+                      <tr>
+                        <td style="padding: 25px;">
+                          <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED App" style="width: 90px; height: auto; display: block;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        
+        <!-- What's Included -->
+        <div style="background: white; border-radius: 12px; padding: 20px; margin: 20px 0; text-align: left;">
+          <ul style="margin: 0; padding: 0; list-style: none;">
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Complete FaMED Protokoll book</li>
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ FaMED App (3-Months access)</li>
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Personalized 8-week study plan</li>
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Private community access</li>
+            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Email support</li>
+          </ul>
+        </div>
+        
+        <!-- Pricing -->
+        <div style="margin: 25px 0;">
+          <p style="margin: 0; color: #6b7280; font-size: 16px; text-decoration: line-through;">Regular Price: €149.98</p>
+          <div class="price-tag" style="margin: 10px 0;">€59.99</div>
+          <p style="margin: 0; color: #059669; font-size: 18px; font-weight: 700;">You Save €89.99 (60% OFF!)</p>
+        </div>
 
-      <p>If you were trying to get access before, you can complete your purchase now.</p>
-      
-      <a href="https://famed-vorbereitung.com/pricing" class="btn">View Bundle Options</a>
+        <a href="https://famedtestprep.com/famedprotokolle" class="btn">🎯 GET IT NOW →</a>
+      </div>
 
       <p style="margin-top: 30px;">If you have any questions or need help, just reply to this email.</p>
     </div>
@@ -825,18 +867,26 @@ Good news: We're fully operational again.
 
 You can now access everything on our site, including the Premium App & Book Bundle that helps you prepare for your FaMED exam.
 
-What's included in the bundle:
-- Full access to our FaMED preparation app
-- Protokoll 2006 eBook (digital copy)
-- Complete OSCE case simulations
-- Progress tracking and study plans
+🎁 SPECIAL BUNDLE OFFER - Save 60%!
+Book + App Bundle
 
-If you were trying to get access before, you can complete your purchase now.
+What's Included:
+✅ Complete FaMED Protokoll book
+✅ FaMED App (3-Months access)
+✅ Personalized 8-week study plan
+✅ Private community access  
+✅ Email support
 
-View Bundle Options: https://famed-vorbereitung.com/pricing
+PRICING:
+Regular Price: €149.98
+Special Price: €59.99
+YOU SAVE: €89.99 (60% OFF!)
+
+Get the Complete Bundle Now: https://famedtestprep.com/famedprotokolle
 
 If you have any questions or need help, just reply to this email.
 
 --
 FaMED Vorbereitung
 `;
+```
