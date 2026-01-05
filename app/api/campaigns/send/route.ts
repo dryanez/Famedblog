@@ -93,6 +93,7 @@ export async function POST(request: Request) {
                 { id: 'new_year_special', t: getNewYearSpecial, tt: getTextNewYearSpecial, s: '🎉 Test: Happy New Year Special' },
                 { id: 'exam_urgency_1_week_special', t: getExamUrgency1WeekSpecial, tt: getTextExamUrgency1WeekSpecial, s: '🚨 Test: 1 Week Special' },
                 { id: 'welcome_bundle_promo', t: getWelcomeBundlePromo, tt: getTextWelcomeBundlePromo, s: '🎁 Test: Welcome Bundle Promo' },
+                { id: 'site_back_online', t: getSiteBackOnline, tt: getTextSiteBackOnline, s: "We're Back Online!" },
             ].find(t => t.id === campaignId);
 
             if (found) {
