@@ -412,6 +412,14 @@ export async function POST(request: Request) {
                     subjectLine = '🎁 Welcome! Get the Complete FaMED Bundle';
                     break;
 
+                case 'site_back_online':
+                    // Target: all non-paid users
+                    targetUsers = users.filter(u => !u.account_type?.startsWith('paid'));
+                    emailTemplate = getSiteBackOnline;
+                    textTemplate = getTextSiteBackOnline;
+                    subjectLine = "We're Back Online!";
+                    break;
+
                 default:
                     // Check if it's a custom campaign in Supabase
                     const { data: customCampaign } = await supabase
