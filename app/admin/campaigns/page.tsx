@@ -16,7 +16,8 @@ import {
     getHolidaySpecial,
     getNewYearSpecial,
     getExamUrgency1WeekSpecial,
-    getWelcomeBundlePromo
+    getWelcomeBundlePromo,
+    getSiteBackOnline
 } from "@/lib/campaign-templates";
 import { CampaignStatsModal } from "./CampaignStatsModal";
 
@@ -99,6 +100,17 @@ const DEFAULT_CAMPAIGNS: CampaignTemplate[] = [
         color: "bg-gradient-to-br from-blue-100 to-indigo-100 border border-blue-300",
         estimatedReach: 0,
         conversionRate: "60-80%"
+    },
+    {
+        id: "site_back_online",
+        name: "🔄 Site Back Online",
+        description: "Notify non-paid users that the site is operational again. Promote App & Book Bundle.",
+        type: "manual",
+        targetSegment: "free_users",
+        icon: Sparkles,
+        color: "bg-gradient-to-br from-cyan-100 to-teal-100 border border-cyan-300",
+        estimatedReach: 0,
+        conversionRate: "65-85%"
     },
     {
         id: "exam_urgency_7d",
@@ -417,6 +429,9 @@ export default function CampaignsPage() {
                         break;
                     case 'welcome_bundle_promo':
                         template = getWelcomeBundlePromo(sampleData);
+                        break;
+                    case 'site_back_online':
+                        template = getSiteBackOnline(sampleData);
                         break;
                     default:
                         // For default campaigns without specific function or manual ones
