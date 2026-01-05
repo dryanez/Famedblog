@@ -21,7 +21,9 @@ import {
     getExamUrgency1WeekSpecial,
     getTextExamUrgency1WeekSpecial,
     getWelcomeBundlePromo,
-    getTextWelcomeBundlePromo
+    getTextWelcomeBundlePromo,
+    getSiteBackOnline,
+    getTextSiteBackOnline
 } from '@/lib/campaign-templates';
 
 const supabase = createClient(
@@ -162,6 +164,11 @@ export async function POST(request: Request) {
                     textTemplate = getTextExamUrgency1WeekSpecial;
                     subjectLine = '🚨 1 Week Left! Last Chance to Pass 🚨';
                     break;
+                case 'site_back_online':
+                    emailTemplate = getSiteBackOnline;
+                    textTemplate = getTextSiteBackOnline;
+                    subjectLine = "We're Back Online!";
+                    break;
                 default:
                     emailTemplate = getWelcomeDay0;
                     textTemplate = getTextWelcomeDay0;
@@ -233,6 +240,11 @@ export async function POST(request: Request) {
                     emailTemplate = getNewYearSpecial;
                     textTemplate = getTextNewYearSpecial;
                     subjectLine = '🎉 HAPPY NEW YEAR! Start 2026 Right - Pass Your FaMED Exam!';
+                    break;
+                case 'site_back_online':
+                    emailTemplate = getSiteBackOnline;
+                    textTemplate = getTextSiteBackOnline;
+                    subjectLine = "We're Back Online!";
                     break;
                 default:
                     // Check for custom campaign

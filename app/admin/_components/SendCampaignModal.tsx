@@ -11,6 +11,7 @@ interface SendCampaignModalProps {
 }
 
 const CAMPAIGNS = [
+    { id: 'site_back_online', name: 'Site Back Online', subject: "We're Back Online!", description: 'Notify users that site is operational again' },
     { id: 'exam_urgency_14d', name: '14 Days Urgency', subject: '⚠️ Your Exam is in 14 Days!', description: 'For users with exam in ~2 weeks' },
     { id: 'exam_urgency_7d', name: '7 Days Urgency', subject: '🚨 Final Week! Your Exam is This Week', description: 'For users with exam in ~1 week' },
     { id: 'exam_urgency_3d', name: '3 Days Urgency', subject: '⏰ 72 Hours Until Your FaMED Exam', description: 'For users with exam in 2-4 days' },
