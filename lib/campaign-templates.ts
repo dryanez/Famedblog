@@ -889,4 +889,3 @@ If you have any questions or need help, just reply to this email.
 --
 FaMED Vorbereitung
 `;
-```
