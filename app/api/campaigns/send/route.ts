@@ -37,6 +37,8 @@ export async function POST(request: Request) {
     try {
         const { campaignId, testEmail, userIds, emails } = await request.json();
 
+        console.log('🔍 Campaign send request:', { campaignId, testEmail, hasUserIds: !!userIds, hasEmails: !!emails });
+
         let users: any[] = [];
         let fetchError = null;
 
