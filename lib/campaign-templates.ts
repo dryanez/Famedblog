@@ -239,7 +239,7 @@ export const getExamUrgencySpecialOffer = (data: any) => `
             <span class="price-old">€69.00</span>
             <span class="price-new">€19.99</span>
         </div>
-        <a href="https://buy.stripe.com/9B64gAb4R2YV2sA8Vz7Re0o" class="btn">⚡ UNLOCK NOW - €19.99</a>
+        <a href="https://buy.stripe.com/7sYdR88ZMcRqdRv90I0Jq02" class="btn">⚡ UNLOCK NOW - €19.99</a>
         <p class="timer">Offer Expires in 24 Hours</p>
       </div>
 
@@ -251,7 +251,7 @@ export const getExamUrgencySpecialOffer = (data: any) => `
       </ul>
       <p>Don't risk your grade to save €20. Give yourself the best chance to pass.</p>
       <p style="text-align: center; margin-top: 30px;">
-        <a href="https://buy.stripe.com/9B64gAb4R2YV2sA8Vz7Re0o" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
+        <a href="https://buy.stripe.com/7sYdR88ZMcRqdRv90I0Jq02" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
       </p>
     </div>
     <div class="footer">
@@ -279,7 +279,7 @@ What you get instantly:
 
 Don't risk your grade to save €20. Give yourself the best chance to pass.
 
-Get Instant Access: https://buy.stripe.com/9B64gAb4R2YV2sA8Vz7Re0o
+Get Instant Access: https://buy.stripe.com/7sYdR88ZMcRqdRv90I0Jq02
 `;
 
 export const getExamUrgency1WeekSpecial = (data: any) => `
@@ -323,7 +323,7 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
             <span class="price-old">€69.00</span>
             <span class="price-new">€9.99</span>
         </div>
-        <a href="https://buy.stripe.com/fZudRafl7gPL5EM9ZD7Re0u" class="btn">⚡ UNLOCK NOW - €9.99</a>
+        <a href="https://buy.stripe.com/bJe5kCcbYeZy14Ja4M0Jq03" class="btn">⚡ UNLOCK NOW - €9.99</a>
         <p class="timer">Offer Expires in 24 Hours</p>
       </div>
 
@@ -335,7 +335,7 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
       </ul>
       <p>Don't walk into the exam unprepared. Practice like it's the real thing.</p>
       <p style="text-align: center; margin-top: 30px;">
-        <a href="https://buy.stripe.com/fZudRafl7gPL5EM9ZD7Re0u" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
+        <a href="https://buy.stripe.com/bJe5kCcbYeZy14Ja4M0Jq03" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
       </p>
     </div>
     <div class="footer">
@@ -364,7 +364,7 @@ What you get instantly:
 
 Don't walk into the exam unprepared. Practice like it's the real thing.
 
-Get Instant Access: https://buy.stripe.com/fZudRafl7gPL5EM9ZD7Re0u
+Get Instant Access: https://buy.stripe.com/bJe5kCcbYeZy14Ja4M0Jq03
 `;
 
 export const getExamUrgency7Days = (data: any) => `
