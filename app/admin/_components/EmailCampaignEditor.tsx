@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, Save, Eye, Code, Loader2 } from "lucide-react";
 
 interface EmailCampaignEditorProps {
@@ -22,15 +22,31 @@ export function EmailCampaignEditor({
     const [viewMode, setViewMode] = useState<'preview' | 'code'>('preview');
     const [saving, setSaving] = useState(false);
     const [hasChanges, setHasChanges] = useState(false);
+    const previewRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         setContent(initialContent);
         setHasChanges(false);
     }, [initialContent]);
 
+    // Update preview when switching to preview mode or content changes
+    useEffect(() => {
+        if (viewMode === 'preview' && previewRef.current) {
+            previewRef.current.innerHTML = content;
+        }
+    }, [content, viewMode]);
+
     const handleContentChange = (newContent: string) => {
         setContent(newContent);
         setHasChanges(newContent !== initialContent);
+    };
+
+    // Handle direct editing in preview
+    const handlePreviewEdit = () => {
+        if (previewRef.current) {
+            const newContent = previewRef.current.innerHTML;
+            handleContentChange(newContent);
+        }
     };
 
     const handleSave = async () => {
@@ -63,18 +79,18 @@ export function EmailCampaignEditor({
                             <button
                                 onClick={() => setViewMode('preview')}
                                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${viewMode === 'preview'
-                                        ? 'bg-blue-600 text-white shadow-sm'
-                                        : 'text-gray-600 hover:bg-gray-100'
+                                    ? 'bg-blue-600 text-white shadow-sm'
+                                    : 'text-gray-600 hover:bg-gray-100'
                                     }`}
                             >
                                 <Eye className="w-4 h-4" />
-                                Preview
+                                Editing
                             </button>
                             <button
                                 onClick={() => setViewMode('code')}
                                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${viewMode === 'code'
-                                        ? 'bg-blue-600 text-white shadow-sm'
-                                        : 'text-gray-600 hover:bg-gray-100'
+                                    ? 'bg-blue-600 text-white shadow-sm'
+                                    : 'text-gray-600 hover:bg-gray-100'
                                     }`}
                             >
                                 <Code className="w-4 h-4" />
@@ -87,8 +103,8 @@ export function EmailCampaignEditor({
                             onClick={handleSave}
                             disabled={!hasChanges || saving}
                             className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold transition-all ${hasChanges && !saving
-                                    ? 'bg-green-600 text-white hover:bg-green-700 shadow-lg'
-                                    : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                                ? 'bg-green-600 text-white hover:bg-green-700 shadow-lg'
+                                : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                                 }`}
                         >
                             {saving ? (
@@ -117,14 +133,22 @@ export function EmailCampaignEditor({
                 {/* Content Area */}
                 <div className="flex-1 overflow-hidden flex">
                     {viewMode === 'preview' ? (
-                        /* Live Preview */
+                        /* Editable Preview */
                         <div className="flex-1 overflow-auto bg-gray-50 p-6">
-                            <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg">
-                                <iframe
-                                    srcDoc={content}
-                                    className="w-full h-[calc(90vh-200px)] border-0"
-                                    title="Email Preview"
-                                    sandbox="allow-same-origin"
+                            <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                                <p className="text-sm text-blue-800">
+                                    <strong>💡 Click anywhere to edit!</strong> You can directly edit text, links, and content in the email below.
+                                </p>
+                            </div>
+                            <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                                <div
+                                    ref={previewRef}
+                                    contentEditable={true}
+                                    onInput={handlePreviewEdit}
+                                    onBlur={handlePreviewEdit}
+                                    className="w-full min-h-[calc(90vh-300px)] p-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    suppressContentEditableWarning={true}
+                                    dangerouslySetInnerHTML={{ __html: content }}
                                 />
                             </div>
                         </div>
@@ -151,7 +175,9 @@ export function EmailCampaignEditor({
                         )}
                     </div>
                     <div className="text-xs text-gray-500">
-                        Tip: Edit the HTML directly below. Change URLs, text, images, styling - everything!
+                        {viewMode === 'preview'
+                            ? 'Click and type directly in the email to edit. Switch to Code mode for HTML editing.'
+                            : 'Edit HTML code directly. Switch to Editing mode to see the visual preview.'}
                     </div>
                 </div>
             </div>
