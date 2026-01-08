@@ -221,9 +221,13 @@ export const getExamUrgencySpecialOffer = (data: any) => `
     <div class="header">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td align="center" valign="middle">
-            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
-            <span style="font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; vertical-align: middle;">LAST MINUTE EXAM RESCUE</span>
+          <td align="center">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; display: block; margin: 0 auto 15px auto;">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <span style="font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; display: block;">LAST MINUTE EXAM RESCUE</span>
           </td>
         </tr>
       </table>
@@ -239,7 +243,7 @@ export const getExamUrgencySpecialOffer = (data: any) => `
             <span class="price-old">€69.00</span>
             <span class="price-new">€17.99</span>
         </div>
-        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" class="btn">⚡ UNLOCK NOW - €17.99</a>
+        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="display: inline-block; background-color: #dc2626; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box; max-width: 500px;">⚡ UNLOCK NOW - €17.99</a>
         <p class="timer">Offer Expires in 24 Hours</p>
       </div>
 
