@@ -266,18 +266,18 @@ export const getExamUrgencySpecialOffer = (data: any) => `
 export const getTextExamUrgencySpecialOffer = (data: any) => `Hi ${data.userName},
 
 Your exam is in less than 2 weeks. The pressure is on.
-We know you don't have time for full courses anymore. You need the highest yield information, fast.
+We know you don't have time for full courses anymore. You need to Simulate the exam, fast. This is the only way to be ready, and not be nervous during the test.
 
 SPECIAL "CRUNCH TIME" OFFER
-Price: €19.99 (was €69.00)
+Price: €17.99 (was €69.00)
 Offer Expires in 24 Hours
 
 What you get instantly:
-- Rapid Review Cheatsheets (PDFs)
-- 5 "Must-Know" Clinical Cases
-- Interactive Exam Simulator
+- 2 weeks access to Simulation Platform (PDFs)
+- Famed 2026 Protokol ! (€19,99 value)
+- 50% off any subscription if you need to retake the exam.
 
-Don't risk your grade to save €20. Give yourself the best chance to pass.
+Don't risk your grade to save €17.99. Give yourself the best chance to pass.
 
 Get Instant Access: https://www.paypal.com/ncp/payment/DQCLR47JB5DXU
 `;
