@@ -231,25 +231,25 @@ export const getExamUrgencySpecialOffer = (data: any) => `
     <div class="content">
       <p style="font-size: 18px; font-weight: 600;">Hi ${data.userName},</p>
       <p>Your exam is in less than 2 weeks. The pressure is on.</p>
-      <p>We know you don't have time for full courses anymore. You need the <strong>highest yield</strong> information, fast. The cheatsheets, the must-know cases, and the simulation.</p>
+      <p>We know you don't have time for full courses anymore. You need to <strong>Simulate the exam</strong>, fast. This is the only way to be ready, and not be nervous during the test.</p>
       
       <div class="highlight-box">
         <p style="margin:0; font-weight:600; color:#7f1d1d;">SPECIAL "CRUNCH TIME" OFFER</p>
         <div style="margin: 10px 0;">
             <span class="price-old">€69.00</span>
-            <span class="price-new">€19.99</span>
+            <span class="price-new">€17.99</span>
         </div>
-        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" class="btn">⚡ UNLOCK NOW - €19.99</a>
+        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" class="btn">⚡ UNLOCK NOW - €17.99</a>
         <p class="timer">Offer Expires in 24 Hours</p>
       </div>
 
       <p><strong>What you get instantly:</strong></p>
       <ul style="padding-left: 20px; margin-bottom: 25px;">
-        <li>✅ <strong>Rapid Review Cheatsheets</strong> (PDFs)</li>
-        <li>✅ <strong>5 "Must-Know" Clinical Cases</strong></li>
-        <li>✅ <strong>Interactive Exam Simulator</strong></li>
+        <li>✅ <strong>2 weeks access to Simulation Platform</strong> (PDFs)</li>
+        <li>✅ <strong>Famed 2026 Protokol !</strong> (€19,99 value)</li>
+        <li>✅ <strong>50% off any subscription</strong> if you need to retake the exam.</li>
       </ul>
-      <p>Don't risk your grade to save €20. Give yourself the best chance to pass.</p>
+      <p>Don't risk your grade to save €17.99. Give yourself the best chance to pass.</p>
       <p style="text-align: center; margin-top: 30px;">
         <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
       </p>
