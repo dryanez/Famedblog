@@ -59,7 +59,7 @@ You can get access to **all this information**, including **all protocols**, **p
 
 ![Official FaMED Preparation Book](/images/blog/famed-protokoll-book-3.jpg)
 
-[**Buy the Official FaMED Book**](/book)
+[**Buy the Official FaMED Book**](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU)
 
 ---
 

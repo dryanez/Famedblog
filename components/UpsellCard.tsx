@@ -49,7 +49,7 @@ export default function UpsellCard() {
                         {/* 4. CTA */}
                         <div>
                             <a
-                                href="https://buy.stripe.com/8x228sdcZ0QNebifjX7Re0h"
+                                href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="block w-full bg-green-600 text-white text-center px-8 py-5 rounded-xl font-bold text-2xl hover:bg-green-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"

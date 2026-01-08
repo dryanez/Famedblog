@@ -80,7 +80,7 @@ export const getWelcomeBundlePromo = (data: any) => `
           <p style="margin: 0; color: #059669; font-size: 18px; font-weight: 700;">You Save €89.99 (60% OFF!)</p>
         </div>
 
-        <a href="https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t" class="btn">🎯 JETZT KAUFEN →</a>
+        <a href="https://www.paypal.com/ncp/payment/ZP233NEJS6Z26" class="btn">🎯 JETZT KAUFEN →</a>
         
         <p style="margin-top: 15px; font-size: 14px;">
           <a href="https://famedtestprep.com/upgrade" style="color: #6b7280; text-decoration: underline;">Want to learn more? View full pricing details →</a>
@@ -90,7 +90,7 @@ export const getWelcomeBundlePromo = (data: any) => `
       <p style="font-size: 18px; font-weight: 700; color: #7c3aed; text-align: center; margin-top: 30px;">🚀 Most students who get the bundle pass on their first try!</p>
       
       <p style="text-align: center; margin-top: 30px;">
-        <a href="https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t" style="color: #dc2626; font-weight: 600; font-size: 18px;">Click Here to Get Started →</a>
+        <a href="https://www.paypal.com/ncp/payment/ZP233NEJS6Z26" style="color: #dc2626; font-weight: 600; font-size: 18px;">Click Here to Get Started →</a>
       </p>
       
       <p style="margin-top: 30px; font-size: 16px; line-height: 1.8;">
@@ -127,7 +127,7 @@ Regular Price: €149.98
 Special Price: €59.99
 YOU SAVE: €89.99 (60% OFF!)
 
-Get the Complete Bundle Now: https://buy.stripe.com/14A14o7SF0QN0ks9ZD7Re0t
+Get the Complete Bundle Now: https://www.paypal.com/ncp/payment/ZP233NEJS6Z26
 
 Want to learn more? View full pricing details: https://famedtestprep.com/upgrade
 
@@ -239,7 +239,7 @@ export const getExamUrgencySpecialOffer = (data: any) => `
             <span class="price-old">€69.00</span>
             <span class="price-new">€19.99</span>
         </div>
-        <a href="https://buy.stripe.com/7sYdR88ZMcRqdRv90I0Jq02" class="btn">⚡ UNLOCK NOW - €19.99</a>
+        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" class="btn">⚡ UNLOCK NOW - €19.99</a>
         <p class="timer">Offer Expires in 24 Hours</p>
       </div>
 
@@ -251,7 +251,7 @@ export const getExamUrgencySpecialOffer = (data: any) => `
       </ul>
       <p>Don't risk your grade to save €20. Give yourself the best chance to pass.</p>
       <p style="text-align: center; margin-top: 30px;">
-        <a href="https://buy.stripe.com/7sYdR88ZMcRqdRv90I0Jq02" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
+        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
       </p>
     </div>
     <div class="footer">
@@ -279,7 +279,7 @@ What you get instantly:
 
 Don't risk your grade to save €20. Give yourself the best chance to pass.
 
-Get Instant Access: https://buy.stripe.com/7sYdR88ZMcRqdRv90I0Jq02
+Get Instant Access: https://www.paypal.com/ncp/payment/DQCLR47JB5DXU
 `;
 
 export const getExamUrgency1WeekSpecial = (data: any) => `
@@ -323,7 +323,7 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
             <span class="price-old">€69.00</span>
             <span class="price-new">€9.99</span>
         </div>
-        <a href="https://buy.stripe.com/bJe5kCcbYeZy14Ja4M0Jq03" class="btn">⚡ UNLOCK NOW - €9.99</a>
+        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" class="btn">⚡ UNLOCK NOW - €9.99</a>
         <p class="timer">Offer Expires in 24 Hours</p>
       </div>
 
@@ -335,7 +335,7 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
       </ul>
       <p>Don't walk into the exam unprepared. Practice like it's the real thing.</p>
       <p style="text-align: center; margin-top: 30px;">
-        <a href="https://buy.stripe.com/bJe5kCcbYeZy14Ja4M0Jq03" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
+        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
       </p>
     </div>
     <div class="footer">
@@ -364,7 +364,7 @@ What you get instantly:
 
 Don't walk into the exam unprepared. Practice like it's the real thing.
 
-Get Instant Access: https://buy.stripe.com/bJe5kCcbYeZy14Ja4M0Jq03
+Get Instant Access: https://www.paypal.com/ncp/payment/DQCLR47JB5DXU
 `;
 
 export const getExamUrgency7Days = (data: any) => `

@@ -67,7 +67,9 @@ export default function BookPage() {
                                 </ul>
 
                                 <Link
-                                    href="https://famed-vorbereitung.com/checkout/book"
+                                    href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="block w-full bg-blue-600 text-white text-center py-4 rounded-xl font-bold text-xl hover:bg-blue-700 transition shadow-lg"
                                 >
                                     Buy Now - €49.99
