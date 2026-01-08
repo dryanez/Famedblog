@@ -451,14 +451,6 @@ export default function CampaignsPage() {
         // Use provided content or fall back to editedContent
         const content = contentToSave || editedContent;
 
-        // Allow saving for any campaign that is in our custom list (persisted or new)
-        // AND special allowance for "holiday_special" which we want to be editable
-        const isDefault = DEFAULT_CAMPAIGNS.some(c => c.id === previewCampaignId);
-
-        if (isDefault && previewCampaignId !== 'holiday_special') {
-            throw new Error("You cannot modify default campaigns permanently.");
-        }
-
         console.log('Saving campaign:', previewCampaignId);
         console.log('Content length:', content?.length);
 
