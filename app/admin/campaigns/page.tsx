@@ -447,7 +447,10 @@ export default function CampaignsPage() {
     };
 
     // Save changes to a custom campaign
-    const handleSaveChanges = async () => {
+    const handleSaveChanges = async (contentToSave?: string) => {
+        // Use provided content or fall back to editedContent
+        const content = contentToSave || editedContent;
+
         // Allow saving for any campaign that is in our custom list (persisted or new)
         // AND special allowance for "holiday_special" which we want to be editable
         const isDefault = DEFAULT_CAMPAIGNS.some(c => c.id === previewCampaignId);
@@ -457,12 +460,12 @@ export default function CampaignsPage() {
         }
 
         console.log('Saving campaign:', previewCampaignId);
-        console.log('Content length:', editedContent?.length);
+        console.log('Content length:', content?.length);
 
         const response = await fetch(`/api/campaigns/${previewCampaignId}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ htmlContent: editedContent })
+            body: JSON.stringify({ htmlContent: content })
         });
         console.log('Response status:', response.status);
 
@@ -475,9 +478,10 @@ export default function CampaignsPage() {
 
         console.log('Save successful!');
         // Update local state
+        setEditedContent(content);
         setCustomCampaigns(prev => prev.map(c =>
             c.id === previewCampaignId
-                ? { ...c, customContent: editedContent }
+                ? { ...c, customContent: content }
                 : c
         ));
         setResult({ success: true, message: "Campaign saved successfully!" });
@@ -751,8 +755,7 @@ export default function CampaignsPage() {
                     initialContent={editedContent}
                     onClose={() => setPreviewCampaignId(null)}
                     onSave={async (content) => {
-                        setEditedContent(content);
-                        await handleSaveChanges();
+                        await handleSaveChanges(content);
                     }}
                 />
             )}
