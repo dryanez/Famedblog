@@ -29,10 +29,13 @@ export function EmailCampaignEditor({
         setHasChanges(false);
     }, [initialContent]);
 
-    // Update preview when switching to preview mode or content changes
+    // Update preview when switching to preview mode, but NOT during active editing
     useEffect(() => {
         if (viewMode === 'preview' && previewRef.current) {
-            previewRef.current.innerHTML = content;
+            // Only update if the element is not currently focused (not being edited)
+            if (document.activeElement !== previewRef.current) {
+                previewRef.current.innerHTML = content;
+            }
         }
     }, [content, viewMode]);
 
@@ -148,7 +151,6 @@ export function EmailCampaignEditor({
                                     onBlur={handlePreviewEdit}
                                     className="w-full min-h-[calc(90vh-300px)] p-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     suppressContentEditableWarning={true}
-                                    dangerouslySetInnerHTML={{ __html: content }}
                                 />
                             </div>
                         </div>
