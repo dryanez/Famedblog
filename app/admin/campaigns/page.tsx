@@ -20,6 +20,7 @@ import {
     getSiteBackOnline
 } from "@/lib/campaign-templates";
 import { CampaignStatsModal } from "./CampaignStatsModal";
+import { EmailCampaignEditor } from "../_components/EmailCampaignEditor";
 
 interface CampaignTemplate {
     id: string;
@@ -452,45 +453,35 @@ export default function CampaignsPage() {
         const isDefault = DEFAULT_CAMPAIGNS.some(c => c.id === previewCampaignId);
 
         if (isDefault && previewCampaignId !== 'holiday_special') {
-            alert("You cannot modify default campaigns permanently.");
-            return;
+            throw new Error("You cannot modify default campaigns permanently.");
         }
 
-
-        setSending(true);
         console.log('Saving campaign:', previewCampaignId);
         console.log('Content length:', editedContent?.length);
-        try {
-            const response = await fetch(`/api/campaigns/${previewCampaignId}`, {
-                method: 'PATCH',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ htmlContent: editedContent })
-            });
-            console.log('Response status:', response.status);
 
-            const data = await response.json();
+        const response = await fetch(`/api/campaigns/${previewCampaignId}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ htmlContent: editedContent })
+        });
+        console.log('Response status:', response.status);
 
-            if (response.ok) {
-                console.log('Save successful!');
-                // Update local state
-                setCustomCampaigns(prev => prev.map(c =>
-                    c.id === previewCampaignId
-                        ? { ...c, customContent: editedContent }
-                        : c
-                ));
-                setResult({ success: true, message: "Campaign saved successfully!" });
-                setIsEditing(false);
-            } else {
-                console.error('Save failed:', data);
-                setResult({ success: false, message: data.error || 'Failed to save campaign' });
-            }
-        } catch (error) {
-            console.error('Save error:', error);
-            setResult({ success: false, message: 'Network error saving campaign' });
-        } finally {
-            setSending(false);
-            setTimeout(() => setResult(null), 3000);
+        const data = await response.json();
+
+        if (!response.ok) {
+            console.error('Save failed:', data);
+            throw new Error(data.error || 'Failed to save campaign');
         }
+
+        console.log('Save successful!');
+        // Update local state
+        setCustomCampaigns(prev => prev.map(c =>
+            c.id === previewCampaignId
+                ? { ...c, customContent: editedContent }
+                : c
+        ));
+        setResult({ success: true, message: "Campaign saved successfully!" });
+        setTimeout(() => setResult(null), 3000);
     };
 
     const handleDeleteCampaign = (e: React.MouseEvent, id: string) => {
@@ -752,83 +743,18 @@ export default function CampaignsPage() {
                 </ul>
             </div>
 
-            {/* Email Preview Modal */}
+            {/* Email Campaign Editor Modal */}
             {previewCampaignId && (
-                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={() => setPreviewCampaignId(null)}>
-                    <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-auto" onClick={(e) => e.stopPropagation()}>
-                        <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between z-10">
-                            <div>
-                                <h2 className="text-xl font-bold text-gray-900">Email Editor</h2>
-                                <p className="text-sm text-gray-500">
-                                    Campaign: {allCampaigns.find(c => c.id === previewCampaignId)?.name}
-                                </p>
-                            </div>
-                            <div className="flex gap-2">
-                                {/* Save Button - For custom campaigns OR Holiday Special */}
-                                {previewCampaignId && (!DEFAULT_CAMPAIGNS.some(c => c.id === previewCampaignId) || previewCampaignId === 'holiday_special') && (
-                                    <button
-                                        onClick={handleSaveChanges}
-                                        className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 font-medium transition-all"
-                                    >
-                                        <Save className="w-4 h-4" />
-                                        Save Changes
-                                    </button>
-                                )}
-
-                                <button
-                                    onClick={handleSendTest}
-                                    disabled={sending}
-                                    className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-medium transition-all"
-                                >
-                                    <Send className="w-4 h-4" />
-                                    Send Test
-                                </button>
-
-                                <button
-                                    onClick={() => setIsEditing(!isEditing)}
-                                    className={cn(
-                                        "flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all",
-                                        isEditing
-                                            ? "bg-blue-600 text-white hover:bg-blue-700"
-                                            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                                    )}
-                                >
-                                    <Edit className="w-4 h-4" />
-                                    {isEditing ? 'Editing' : 'Preview'}
-                                </button>
-                                <button
-                                    onClick={() => setPreviewCampaignId(null)}
-                                    className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                                >
-                                    <X className="w-5 h-5 text-gray-500" />
-                                </button>
-                            </div>
-                        </div>
-                        <div className="p-6">
-                            {isEditing ? (
-                                <div>
-                                    <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                                        <p className="text-sm text-blue-800">
-                                            <strong>💡 Tip:</strong> Edit the HTML directly below. Change URLs, text, images, styling - everything!
-                                            {previewCampaignId.startsWith('custom_') && " Don't forget to click Save!"}
-                                        </p>
-                                    </div>
-                                    <textarea
-                                        value={editedContent}
-                                        onChange={(e) => setEditedContent(e.target.value)}
-                                        className="w-full h-[600px] p-4 border border-gray-300 rounded-lg font-mono text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                        placeholder="Edit HTML here..."
-                                    />
-                                </div>
-                            ) : (
-                                <div
-                                    className="border border-gray-200 rounded-lg p-4 bg-gray-50"
-                                    dangerouslySetInnerHTML={{ __html: editedContent }}
-                                />
-                            )}
-                        </div>
-                    </div>
-                </div>
+                <EmailCampaignEditor
+                    campaignId={previewCampaignId}
+                    campaignName={allCampaigns.find(c => c.id === previewCampaignId)?.name || 'Campaign'}
+                    initialContent={editedContent}
+                    onClose={() => setPreviewCampaignId(null)}
+                    onSave={async (content) => {
+                        setEditedContent(content);
+                        await handleSaveChanges();
+                    }}
+                />
             )}
 
             {/* Create Campaign Modal */}
