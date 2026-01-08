@@ -118,8 +118,8 @@ export function EmailCampaignEditor({
                                 <button
                                     onClick={() => setViewMode('preview')}
                                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${viewMode === 'preview'
-                                            ? 'bg-blue-600 text-white shadow-sm'
-                                            : 'text-gray-600 hover:bg-gray-100'
+                                        ? 'bg-blue-600 text-white shadow-sm'
+                                        : 'text-gray-600 hover:bg-gray-100'
                                         }`}
                                 >
                                     <Eye className="w-4 h-4" />
@@ -128,8 +128,8 @@ export function EmailCampaignEditor({
                                 <button
                                     onClick={() => setViewMode('code')}
                                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${viewMode === 'code'
-                                            ? 'bg-blue-600 text-white shadow-sm'
-                                            : 'text-gray-600 hover:bg-gray-100'
+                                        ? 'bg-blue-600 text-white shadow-sm'
+                                        : 'text-gray-600 hover:bg-gray-100'
                                         }`}
                                 >
                                     <Code className="w-4 h-4" />
@@ -151,8 +151,8 @@ export function EmailCampaignEditor({
                                 onClick={handleSave}
                                 disabled={!hasChanges || saving}
                                 className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold transition-all ${hasChanges && !saving
-                                        ? 'bg-green-600 text-white hover:bg-green-700 shadow-lg'
-                                        : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                                    ? 'bg-green-600 text-white hover:bg-green-700 shadow-lg'
+                                    : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                                     }`}
                             >
                                 {saving ? (
@@ -195,6 +195,7 @@ export function EmailCampaignEditor({
                                         onInput={handlePreviewEdit}
                                         onBlur={handlePreviewEdit}
                                         className="w-full min-h-[calc(90vh-300px)] p-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        style={{ color: '#333333', backgroundColor: '#ffffff' }}
                                         suppressContentEditableWarning={true}
                                     />
                                 </div>
