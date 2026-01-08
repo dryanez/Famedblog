@@ -202,23 +202,12 @@ export const getExamUrgencySpecialOffer = (data: any) => `
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
-  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-  .header { background-color: #dc2626; padding: 30px; text-align: center; }
-  .header h1 { color: #ffffff; margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
-  .content { padding: 40px 30px; }
-  .highlight-box { background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0; }
-  .price-old { text-decoration: line-through; color: #9ca3af; font-size: 18px; }
-  .price-new { color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px; }
-  .timer { font-size: 14px; color: #ef4444; font-weight: 600; margin-top: 5px; text-transform: uppercase; }
-  .btn { display: inline-block; background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box; }
-  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
-</style>
+<meta charset="UTF-8">
 </head>
-<body>
-  <div class="container">
-    <div class="header">
+<body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333333; background-color: #f9fafb; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <!-- Header -->
+    <div style="background-color: #dc2626; padding: 30px; text-align: center;">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center">
@@ -227,40 +216,45 @@ export const getExamUrgencySpecialOffer = (data: any) => `
         </tr>
         <tr>
           <td align="center">
-            <span style="font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; display: block;">LAST MINUTE EXAM RESCUE</span>
+            <span style="font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; display: block; font-family: Arial, Helvetica, sans-serif;">LAST MINUTE EXAM RESCUE</span>
           </td>
         </tr>
       </table>
     </div>
-    <div class="content">
-      <p style="font-size: 18px; font-weight: 600;">Hi ${data.userName},</p>
-      <p>Your exam is in less than 2 weeks. The pressure is on.</p>
-      <p>We know you don't have time for full courses anymore. You need to <strong>Simulate the exam</strong>, fast. This is the only way to be ready, and not be nervous during the test.</p>
+    
+    <!-- Content -->
+    <div style="padding: 40px 30px;">
+      <p style="font-size: 18px; font-weight: 600; font-family: Arial, Helvetica, sans-serif; margin: 0 0 15px 0;">Hi ${data.userName},</p>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 15px 0;">Your exam is in less than 2 weeks. The pressure is on.</p>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 25px 0;">We know you don't have time for full courses anymore. You need to <strong>Simulate the exam</strong>, fast. This is the only way to be ready, and not be nervous during the test.</p>
       
-      <div class="highlight-box">
-        <p style="margin:0; font-weight:600; color:#7f1d1d;">SPECIAL "CRUNCH TIME" OFFER</p>
+      <!-- Highlight Box -->
+      <div style="background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0;">
+        <p style="margin: 0; font-weight: 600; color: #7f1d1d; font-family: Arial, Helvetica, sans-serif; font-size: 16px;">SPECIAL "CRUNCH TIME" OFFER</p>
         <div style="margin: 10px 0;">
-            <span class="price-old">€69.00</span>
-            <span class="price-new">€17.99</span>
+          <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">€69.00</span>
+          <span style="color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px; font-family: Arial, Helvetica, sans-serif;">€17.99</span>
         </div>
-        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="display: inline-block; background-color: #dc2626; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box; max-width: 500px;">⚡ UNLOCK NOW - €17.99</a>
-        <p class="timer">Offer Expires in 24 Hours</p>
+        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="display: inline-block; background-color: #dc2626; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; max-width: 500px; text-align: center; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;">⚡ UNLOCK NOW - €17.99</a>
+        <p style="font-size: 14px; color: #ef4444; font-weight: 600; margin-top: 10px; text-transform: uppercase; font-family: Arial, Helvetica, sans-serif;">Offer Expires in 24 Hours</p>
       </div>
 
-      <p><strong>What you get instantly:</strong></p>
-      <ul style="padding-left: 20px; margin-bottom: 25px;">
-        <li>✅ <strong>2 weeks access to Simulation Platform</strong> (PDFs)</li>
-        <li>✅ <strong>Famed 2026 Protokol !</strong> (€19,99 value)</li>
-        <li>✅ <strong>50% off any subscription</strong> if you need to retake the exam.</li>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 25px 0 10px 0;"><strong>What you get instantly:</strong></p>
+      <ul style="padding-left: 20px; margin-bottom: 25px; font-family: Arial, Helvetica, sans-serif;">
+        <li style="margin-bottom: 8px;">✅ <strong>2 weeks access to Simulation Platform</strong> (PDFs)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>Famed 2026 Protokol !</strong> (€19,99 value)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>50% off any subscription</strong> if you need to retake the exam.</li>
       </ul>
-      <p>Don't risk your grade to save €17.99. Give yourself the best chance to pass.</p>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 30px 0;">Don't risk your grade to save €17.99. Give yourself the best chance to pass.</p>
       <p style="text-align: center; margin-top: 30px;">
-        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
+        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="color: #dc2626; font-weight: 600; font-family: Arial, Helvetica, sans-serif; text-decoration: none;">Get Instant Access →</a>
       </p>
     </div>
-    <div class="footer">
-      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
-      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    
+    <!-- Footer -->
+    <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; font-family: Arial, Helvetica, sans-serif;">
+      <p style="margin: 0 0 5px 0;">© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p style="margin: 0;"><a href="#" style="color: #6b7280; text-decoration: none;">Unsubscribe</a></p>
     </div>
   </div>
 </body>
