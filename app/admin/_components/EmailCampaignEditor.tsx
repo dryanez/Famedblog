@@ -55,11 +55,14 @@ export function EmailCampaignEditor({
     const handleSave = async () => {
         setSaving(true);
         try {
+            console.log('Saving content, length:', content.length);
             await onSave(content);
             setHasChanges(false);
-        } catch (error) {
+            console.log('Save successful!');
+        } catch (error: any) {
             console.error('Save error:', error);
-            alert('Failed to save changes');
+            const errorMessage = error?.message || error?.toString() || 'Failed to save changes';
+            alert(`Failed to save changes: ${errorMessage}`);
         } finally {
             setSaving(false);
         }
