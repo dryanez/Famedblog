@@ -343,9 +343,15 @@ export default function CampaignsPage() {
 
     // Resend to a specific user
     const handleResendToUser = async (userId: string) => {
-        if (!previewCampaignData) return;
+        console.log(`🚀 Page: Initiating resend request for user ${userId}`);
+
+        if (!previewCampaignData) {
+            console.error('❌ Page: No preview campaign data available');
+            return;
+        }
 
         try {
+            console.log('📡 Page: Sending fetch request to /api/campaigns/send...');
             const response = await fetch('/api/campaigns/send', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

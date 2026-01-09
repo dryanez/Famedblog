@@ -48,6 +48,7 @@ export function RecipientsPreviewModal({
     });
 
     const handleResend = async (userId: string) => {
+        console.log(`👆 Recipient Modal: Send button clicked for user ${userId}`);
         setResending(prev => new Set(prev).add(userId));
         try {
             await onResend(userId);
@@ -85,8 +86,8 @@ export function RecipientsPreviewModal({
                         <button
                             onClick={() => setFilter('all')}
                             className={`pb-3 px-1 border-b-2 transition-colors ${filter === 'all'
-                                    ? 'border-blue-600 text-blue-600 font-semibold'
-                                    : 'border-transparent text-gray-600 hover:text-gray-900'
+                                ? 'border-blue-600 text-blue-600 font-semibold'
+                                : 'border-transparent text-gray-600 hover:text-gray-900'
                                 }`}
                         >
                             All ({totalMatches})
@@ -94,8 +95,8 @@ export function RecipientsPreviewModal({
                         <button
                             onClick={() => setFilter('not_sent')}
                             className={`pb-3 px-1 border-b-2 transition-colors ${filter === 'not_sent'
-                                    ? 'border-blue-600 text-blue-600 font-semibold'
-                                    : 'border-transparent text-gray-600 hover:text-gray-900'
+                                ? 'border-blue-600 text-blue-600 font-semibold'
+                                : 'border-transparent text-gray-600 hover:text-gray-900'
                                 }`}
                         >
                             Not Sent ({notSent})
@@ -103,8 +104,8 @@ export function RecipientsPreviewModal({
                         <button
                             onClick={() => setFilter('sent')}
                             className={`pb-3 px-1 border-b-2 transition-colors ${filter === 'sent'
-                                    ? 'border-blue-600 text-blue-600 font-semibold'
-                                    : 'border-transparent text-gray-600 hover:text-gray-900'
+                                ? 'border-blue-600 text-blue-600 font-semibold'
+                                : 'border-transparent text-gray-600 hover:text-gray-900'
                                 }`}
                         >
                             Already Sent ({alreadySent})
