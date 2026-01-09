@@ -18,6 +18,8 @@ export async function POST(request: Request) {
         }
 
         console.log(`📋 Previewing recipients for campaign: ${campaignId}`);
+        console.log('🔑 Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL ? 'Set' : 'Missing');
+        console.log('🔑 Service Role Key:', process.env.SUPABASE_SERVICE_ROLE_KEY ? 'Set' : 'Missing');
 
         // Fetch all users
         const { data: allUsers, error: usersError } = await supabaseAdmin
@@ -25,12 +27,15 @@ export async function POST(request: Request) {
             .select('id, email, name, exam_date, account_type, created_at');
 
         if (usersError) {
-            console.error('Error fetching users:', usersError);
+            console.error('❌ Error fetching users:', usersError);
+            console.error('Error details:', JSON.stringify(usersError, null, 2));
             return NextResponse.json(
-                { error: 'Failed to fetch users' },
+                { error: `Failed to fetch users: ${usersError.message}` },
                 { status: 500 }
             );
         }
+
+        console.log(`✅ Fetched ${allUsers?.length || 0} total users`);
 
         // Filter users based on campaign criteria
         let targetUsers: any[] = [];
