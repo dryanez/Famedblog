@@ -755,11 +755,14 @@ export async function POST(request: Request) {
         }
 
         // ALSO log to campaign_sends table for tracking "already sent" status
-        const sendRecords = emailsToSend.map(email => ({
-            campaign_id: campaignId,
-            user_id: email.userId,
-            sent_at: new Date().toISOString()
-        }));
+        const sendRecords = emailsToSend.map((email, index) => {
+            const user = targetUsers[index];
+            return {
+                campaign_id: campaignId,
+                user_id: user?.id || null,
+                sent_at: new Date().toISOString()
+            };
+        });
 
         const { error: sendsError } = await supabase
             .from('campaign_sends')
