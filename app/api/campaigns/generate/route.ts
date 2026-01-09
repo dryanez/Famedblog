@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import { getExamUrgency14Days } from '@/lib/campaign-templates';
+import { getExamUrgency1WeekSpecial } from '@/lib/campaign-templates';
 import { supabase } from '@/lib/supabase';
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
@@ -36,27 +36,28 @@ export async function POST(request: Request) {
 - Campaign Goal: ${campaignGoal}
 - Tone: ${tone || 'Professional but warm'}
 
-**CRITICAL: Use this EXACT HTML structure and styling:**
+**CRITICAL: Use this EXACT HTML structure with INLINE STYLES:**
 Here's an example template you MUST follow:
 ${exampleTemplate}
 
-**Requirements:**
-1. Keep the EXACT same HTML structure (div containers, classes, inline styles)
-2. Keep the gradient header style (linear-gradient)
-3. Keep the same color scheme and design elements
-4. Use the same layout: header, body content, highlighted boxes, CTA button, footer
-5. Use variables like {{name}}, {{exam_date}}, {{days_until_exam}} for personalization
-6. The CTA button must link to https://famed-vorbereitung.com/pricing with appropriate discount code
-7. Make it compelling and conversion-focused
-8. Maximum 600px width
-9. Mobile-responsive inline styles
+**CRITICAL REQUIREMENTS:**
+1. **NO CSS CLASSES** - Use ONLY inline styles (style="...") on every element
+2. **NO <style> tags** - All styling must be inline for mobile email compatibility
+3. Keep the EXACT same HTML structure (div containers with inline styles)
+4. Use the same color scheme and design elements
+5. Use the same layout: header, body content, highlighted boxes, CTA button, footer
+6. Use variables like \${data.userName}, \${data.examDate}, \${data.daysUntilExam} for personalization
+7. The CTA button must link to https://famed-vorbereitung.com/pricing
+8. Make it compelling and conversion-focused
+9. Maximum 600px width (use style="max-width: 600px; margin: 0 auto;")
+10. All styles must be inline - NO external CSS or <style> blocks
 
 **Important Variables to Include:**
-- {{name}} - User's name
-- {{exam_date}} - Their exam date (if applicable)
-- {{days_until_exam}} - Days until exam (if applicable)
+- \${data.userName} - User's name
+- \${data.examDate} - Their exam date (if applicable)
+- \${data.daysUntilExam} - Days until exam (if applicable)
 
-**Output ONLY the complete HTML email. No explanations, no markdown code blocks, just pure HTML.**`;
+**Output ONLY the complete HTML email with inline styles. No explanations, no markdown code blocks, just pure HTML.**`;
 
         let generatedHtml = '';
         let errors: string[] = [];
