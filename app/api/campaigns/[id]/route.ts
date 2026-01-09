@@ -8,18 +8,37 @@ export async function GET(
 ) {
     try {
         const { id } = await params;
-        const campaignName = id === 'holiday_special' ? 'Holiday Special' : `Campaign ${id}`;
 
-        const { data: campaign, error } = await supabase
+        // Use the same name mapping as PATCH endpoint
+        const campaignNameMap: Record<string, string> = {
+            'holiday_special': 'Holiday Special',
+            'new_year_special': 'New Year Special',
+            'exam_urgency_special_offer': 'Exam Urgency Special Offer',
+            'exam_urgency_1_week_special': '1 Week Special Offer',
+            'site_back_online': 'Site Back Online',
+            'welcome_bundle_promo': 'Welcome Bundle Promo',
+            'exam_urgency_14d': 'Exam in 14 Days',
+            'exam_urgency_7d': 'Exam in 7 Days',
+            'exam_urgency_3d': 'Exam in 3 Days',
+            'welcome_day0': 'Welcome Email',
+            'subscription_expiry': 'Subscription Expiry'
+        };
+
+        const campaignName = campaignNameMap[id] || `Campaign ${id}`;
+        console.log('GET campaign - ID:', id, '-> Name:', campaignName);
+
+        const { data: campaign, error } = await supabaseAdmin
             .from('campaigns')
             .select('content')
             .eq('name', campaignName)
             .single();
 
         if (error || !campaign) {
+            console.log('No saved content found for:', campaignName);
             return NextResponse.json({ content: null }, { status: 404 });
         }
 
+        console.log('Found saved content for:', campaignName);
         return NextResponse.json({ content: campaign.content });
 
     } catch (error: any) {
