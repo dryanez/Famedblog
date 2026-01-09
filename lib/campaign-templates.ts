@@ -86,19 +86,23 @@ Thanks for joining FaMED-Vorbereitung. We're here to help you prepare effectivel
 
 To get the most out of your preparation, we've put together a complete study bundle that includes everything you need.
 
-Complete Preparation Bundle
-Price: €59.99
+SPECIAL "WELCOME" OFFER
+Was: €149.98
+Now: €59.99
+⚡ UNLOCK NOW - €59.99
 
-What's included:
-- Complete FaMED Protokoll book
-- FaMED App (3-Months access)
-- Personalized 8-week study plan
-- Private community access
-- Email support
+Offer Expires in 24 Hours
 
-This bundle gives you structured preparation with all the resources you need to pass your exam.
+What you get instantly:
+✅ Complete FaMED Protokoll book
+✅ FaMED App (3-Months access)
+✅ Personalized 8-week study plan
+✅ Private community access
+✅ Email support
 
-View Bundle Options: https://www.paypal.com/ncp/payment/ZP233NEJS6Z26
+Don't walk into the exam unprepared. Get everything you need to pass.
+
+Get Access: https://www.paypal.com/ncp/payment/ZP233NEJS6Z26
 
 Viel Erfolg,
 The FaMED-Vorbereitung Team
