@@ -222,24 +222,22 @@ export const getExamUrgencySpecialOffer = (data: any) => `
     </div>
     <div style="padding: 40px 30px;">
       <p style="font-size: 18px; font-weight: 600; font-family: Arial, Helvetica, sans-serif; margin: 0 0 15px 0;">Hi ${data.userName},</p>
-      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 15px 0;">Your exam is in less than 2 weeks. The pressure is on.</p>
-      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 25px 0;">We know you don't have time for full courses anymore. You need to <strong>Simulate the exam</strong>, fast. This is the only way to be ready, and not be nervous during the test.</p>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 15px 0;">Your exam is in 2 weeks. This is crunch time.</p>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 25px 0;">The next two weeks are about <strong>focused practice</strong> – experiencing the test exactly as it will be on exam day. Full test simulations by sections. Practice until the real exam feels routine.</p>
       <div style="background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0;">
-        <p style="margin: 0; font-weight: 600; color: #7f1d1d; font-family: Arial, Helvetica, sans-serif; font-size: 16px;">SPECIAL "CRUNCH TIME" OFFER</p>
+        <p style="margin: 0; font-weight: 600; color: #7f1d1d; font-family: Arial, Helvetica, sans-serif; font-size: 16px;">2-Week Preparation Bundle</p>
         <div style="margin: 10px 0;">
-          <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">€69.00</span>
-          <span style="color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px; font-family: Arial, Helvetica, sans-serif;">€17.99</span>
+          <span style="color: #dc2626; font-size: 32px; font-weight: 800; font-family: Arial, Helvetica, sans-serif;">€19.99</span>
         </div>
-        <a href="https://www.paypal.com/ncp/payment/L9UX6QD4U85UC" style="display: inline-block; background-color: #dc2626; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; max-width: 500px; text-align: center; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;">⚡ UNLOCK NOW - €19.99</a>
-        <p style="font-size: 14px; color: #ef4444; font-weight: 600; margin-top: 10px; text-transform: uppercase; font-family: Arial, Helvetica, sans-serif;">Offer Expires in 24 Hours</p>
+        <a href="https://www.paypal.com/ncp/payment/L9UX6QD4U85UC" style="display: inline-block; background-color: #dc2626; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; max-width: 500px; text-align: center; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;">Get Access - €19.99</a>
       </div>
       <p style="font-family: Arial, Helvetica, sans-serif; margin: 25px 0 10px 0;"><strong>What you get instantly:</strong></p>
       <ul style="padding-left: 20px; margin-bottom: 25px; font-family: Arial, Helvetica, sans-serif;">
-        <li style="margin-bottom: 8px;">✅ <strong>2 weeks access to Simulation Platform</strong> (PDFs)</li>
-        <li style="margin-bottom: 8px;">✅ <strong>Famed 2026 Protokol !</strong> (€19,99 value)</li>
-        <li style="margin-bottom: 8px;">✅ <strong>50% off any subscription</strong> if you need to retake the exam.</li>
+        <li style="margin-bottom: 8px;">✅ <strong>Full Exam Simulation Platform</strong> (2 weeks access)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>FaMED 2026 Protokoll</strong> (Complete study guide)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>Section-by-Section Practice</strong></li>
       </ul>
-      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 30px 0;">Don't risk your grade to save €17.99. Give yourself the best chance to pass.</p>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 30px 0;">Don't walk into the exam unprepared. Practice like it's the real thing.</p>
       <p style="text-align: center; margin-top: 30px;">
         <a href="https://www.paypal.com/ncp/payment/L9UX6QD4U85UC" style="color: #dc2626; font-weight: 600; font-family: Arial, Helvetica, sans-serif; text-decoration: none;">Get Instant Access →</a>
       </p>
