@@ -90,15 +90,107 @@ async function getCampaignContent(campaignId: string, templateFn: (data: any) =>
 
 export async function POST(request: Request) {
     try {
-        const { campaignId, testEmail, userIds, emails } = await request.json();
+        const { campaignId, testEmail, userIds, emails, specificUserId, force } = await request.json();
 
-        console.log('🔍 Campaign send request:', { campaignId, testEmail, hasUserIds: !!userIds, hasEmails: !!emails });
+        console.log('🔍 Campaign send request:', { campaignId, testEmail, hasUserIds: !!userIds, hasEmails: !!emails, specificUserId, force });
 
         let users: any[] = [];
         let fetchError = null;
 
         // Optimization: Fetch strategy based on mode
-        if (userIds && Array.isArray(userIds) && userIds.length > 0) {
+
+
+        if (specificUserId) {
+
+
+            // Manual resend to specific user
+
+
+            console.log('📧 Manual Resend: Fetching specific user', specificUserId);
+
+
+            const { data, error } = await supabase
+
+
+                .from('users')
+
+
+                .select('*')
+
+
+                .eq('id', specificUserId)
+
+
+                .single();
+
+
+            
+
+
+            if (error || !data) {
+
+
+                console.error('❌ User not found:', error);
+
+
+                return NextResponse.json({ error: 'User not found' }, { status: 404 });
+
+
+            }
+
+
+
+            // Check if already sent (unless force is true)
+
+
+            if (!force) {
+
+
+                const { data: sentRecord } = await supabase
+
+
+                    .from('campaign_sends')
+
+
+                    .select('id')
+
+
+                    .eq('campaign_id', campaignId)
+
+
+                    .eq('user_id', specificUserId)
+
+
+                    .single();
+
+
+
+                if (sentRecord) {
+
+
+                    return NextResponse.json({ 
+
+
+                        error: 'Campaign already sent to this user. Use force=true to resend.' 
+
+
+                    }, { status: 400 });
+
+
+                }
+
+
+            }
+
+
+
+            users = [data];
+
+
+            fetchError = null;
+
+
+        } else if (userIds && Array.isArray(userIds) && userIds.length > 0) {
             console.log('📧 Optimized Fetch: Fetching specific users', userIds.length);
             const { data, error } = await supabase
                 .from('users')

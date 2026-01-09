@@ -21,6 +21,7 @@ import {
 } from "@/lib/campaign-templates";
 import { CampaignStatsModal } from "./CampaignStatsModal";
 import { EmailCampaignEditor } from "../_components/EmailCampaignEditor";
+import { RecipientsPreviewModal } from "./RecipientsPreviewModal";
 
 interface CampaignTemplate {
     id: string;
@@ -272,6 +273,12 @@ export default function CampaignsPage() {
         tone: "professional"
     });
     const [result, setResult] = useState<{ success: boolean; message: string } | null>(null);
+    // Recipients preview modal state
+    const [showRecipientsModal, setShowRecipientsModal] = useState(false);
+    const [previewRecipients, setPreviewRecipients] = useState<any[]>([]);
+    const [previewCampaignData, setPreviewCampaignData] = useState<any>(null);
+    const [loadingRecipients, setLoadingRecipients] = useState(false);
+
 
     // Toggle campaign enabled/disabled
     const handleToggleCampaign = async (campaignId: string) => {
@@ -297,6 +304,70 @@ export default function CampaignsPage() {
             // Revert on error
             setEnabledCampaigns(prev => ({ ...prev, [campaignId]: currentState }));
             console.error('Error toggling campaign:', error);
+        }
+    };
+
+
+    // Preview recipients for a campaign
+    const handlePreviewRecipients = async (campaignId: string, campaignName: string) => {
+        setLoadingRecipients(true);
+        try {
+            const response = await fetch('/api/campaigns/preview-recipients', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ campaignId })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setPreviewRecipients(data.users || []);
+                setPreviewCampaignData({
+                    campaignId,
+                    campaignName,
+                    totalMatches: data.totalMatches,
+                    alreadySent: data.alreadySent,
+                    notSent: data.notSent
+                });
+                setShowRecipientsModal(true);
+            } else {
+                alert(`Failed to load recipients: ${data.error}`);
+            }
+        } catch (error) {
+            console.error('Error loading recipients:', error);
+            alert('Network error. Please try again.');
+        } finally {
+            setLoadingRecipients(false);
+        }
+    };
+
+    // Resend to a specific user
+    const handleResendToUser = async (userId: string) => {
+        if (!previewCampaignData) return;
+
+        try {
+            const response = await fetch('/api/campaigns/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    campaignId: previewCampaignData.campaignId,
+                    specificUserId: userId,
+                    force: true
+                })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert(`✅ Email sent successfully!`);
+                // Refresh the preview to update "already sent" status
+                await handlePreviewRecipients(previewCampaignData.campaignId, previewCampaignData.campaignName);
+            } else {
+                alert(`Failed to send: ${data.error}`);
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('Network error. Please try again.');
         }
     };
 
@@ -701,6 +772,14 @@ export default function CampaignsPage() {
                                     Preview
                                 </button>
                                 <button
+                                    onClick={() => handlePreviewRecipients(campaign.id, campaign.name)}
+                                    disabled={loadingRecipients}
+                                    className="px-4 py-2 rounded-lg font-medium transition-all bg-blue-100 text-blue-700 hover:bg-blue-200 flex items-center gap-2 disabled:opacity-50"
+                                >
+                                    <Users className="w-4 h-4" />
+                                    {loadingRecipients ? 'Loading...' : 'Recipients'}
+                                </button>
+                                <button
                                     onClick={() => handleSendCampaign(campaign.id)}
                                     disabled={sending}
                                     className={cn(
@@ -859,6 +938,21 @@ export default function CampaignsPage() {
                     campaignId={statsCampaign.id}
                     campaignName={statsCampaign.name}
                     onClose={() => setStatsCampaign(null)}
+                />
+            )}
+
+            {/* Recipients Preview Modal */}
+            {showRecipientsModal && previewCampaignData && (
+                <RecipientsPreviewModal
+                    isOpen={showRecipientsModal}
+                    onClose={() => setShowRecipientsModal(false)}
+                    campaignId={previewCampaignData.campaignId}
+                    campaignName={previewCampaignData.campaignName}
+                    users={previewRecipients}
+                    totalMatches={previewCampaignData.totalMatches}
+                    alreadySent={previewCampaignData.alreadySent}
+                    notSent={previewCampaignData.notSent}
+                    onResend={handleResendToUser}
                 />
             )}
         </div>
