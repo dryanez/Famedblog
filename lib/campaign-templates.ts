@@ -302,7 +302,7 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
           <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px;">€69.00</span>
           <span style="color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px;">€9.99</span>
         </div>
-        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW" style="display: inline-block; background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box;">⚡ UNLOCK NOW - €9.99</a>
+        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW4" style="display: inline-block; background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box;">⚡ UNLOCK NOW - €9.99</a>
         <p style="font-size: 14px; color: #ef4444; font-weight: 600; margin: 5px 0 0 0; text-transform: uppercase;">Offer Expires in 24 Hours</p>
       </div>
 
@@ -315,7 +315,7 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
       
       <p style="margin: 0 0 16px 0;">Don't walk into the exam unprepared. Practice like it's the real thing.</p>
       <p style="text-align: center; margin-top: 30px; margin-bottom: 0;">
-        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW" style="color: #dc2626; font-weight: 600; text-decoration: none;">Get Instant Access &rarr;</a>
+        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW4" style="color: #dc2626; font-weight: 600; text-decoration: none;">Get Instant Access &rarr;</a>
       </p>
     </div>
     <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
@@ -344,7 +344,7 @@ What you get instantly:
 
 Don't walk into the exam unprepared. Practice like it's the real thing.
 
-Get Instant Access: https://www.paypal.com/ncp/payment/WMDX2PJU9BTW
+Get Instant Access: https://www.paypal.com/ncp/payment/WMDX2PJU9BTW4
 `;
 
 export const getExamUrgency7Days = (data: any) => `
