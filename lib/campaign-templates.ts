@@ -230,7 +230,7 @@ export const getExamUrgencySpecialOffer = (data: any) => `
           <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">€69.00</span>
           <span style="color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px; font-family: Arial, Helvetica, sans-serif;">€17.99</span>
         </div>
-        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="display: inline-block; background-color: #dc2626; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; max-width: 500px; text-align: center; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;">⚡ UNLOCK NOW - €17.99</a>
+        <a href="https://www.paypal.com/ncp/payment/L9UX6QD4U85UC" style="display: inline-block; background-color: #dc2626; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; max-width: 500px; text-align: center; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;">⚡ UNLOCK NOW - €19.99</a>
         <p style="font-size: 14px; color: #ef4444; font-weight: 600; margin-top: 10px; text-transform: uppercase; font-family: Arial, Helvetica, sans-serif;">Offer Expires in 24 Hours</p>
       </div>
       <p style="font-family: Arial, Helvetica, sans-serif; margin: 25px 0 10px 0;"><strong>What you get instantly:</strong></p>
@@ -241,7 +241,7 @@ export const getExamUrgencySpecialOffer = (data: any) => `
       </ul>
       <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 30px 0;">Don't risk your grade to save €17.99. Give yourself the best chance to pass.</p>
       <p style="text-align: center; margin-top: 30px;">
-        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="color: #dc2626; font-weight: 600; font-family: Arial, Helvetica, sans-serif; text-decoration: none;">Get Instant Access →</a>
+        <a href="https://www.paypal.com/ncp/payment/L9UX6QD4U85UC" style="color: #dc2626; font-weight: 600; font-family: Arial, Helvetica, sans-serif; text-decoration: none;">Get Instant Access →</a>
       </p>
     </div>
     <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; font-family: Arial, Helvetica, sans-serif;">
