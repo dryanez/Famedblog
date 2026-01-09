@@ -17,11 +17,11 @@ export async function POST(request: Request) {
         }
 
         // Get an example template to show Gemini the style
-        const exampleTemplate = getExamUrgency14Days({
+        const exampleTemplate = getExamUrgency1WeekSpecial({
             userName: "Dr. Maria Schmidt",
             userEmail: "maria.schmidt@example.com",
             examDate: "2026-01-15",
-            daysUntilExam: 14,
+            daysUntilExam: 7,
             planExpiry: undefined,
             accountType: "free"
         });
