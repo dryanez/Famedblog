@@ -33,6 +33,53 @@ const supabase = createClient(
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Helper function to get campaign content - checks DB first, then falls back to template
+async function getCampaignContent(campaignId: string, templateFn: (data: any) => string, data: any): Promise<string> {
+    // Campaign name mapping (same as in [id]/route.ts)
+    const campaignNameMap: Record<string, string> = {
+        'holiday_special': 'Holiday Special',
+        'new_year_special': 'New Year Special',
+        'exam_urgency_special_offer': 'Exam Urgency Special Offer',
+        'exam_urgency_1_week_special': '1 Week Special Offer',
+        'site_back_online': 'Site Back Online',
+        'welcome_bundle_promo': 'Welcome Bundle Promo',
+        'exam_urgency_14d': 'Exam in 14 Days',
+        'exam_urgency_7d': 'Exam in 7 Days',
+        'exam_urgency_3d': 'Exam in 3 Days',
+        'welcome_day0': 'Welcome Email',
+        'subscription_expiry': 'Subscription Expiry'
+    };
+
+    const campaignName = campaignNameMap[campaignId];
+
+    // Try to load saved content from database
+    if (campaignName) {
+        try {
+            const { data: campaign } = await supabase
+                .from('campaigns')
+                .select('content')
+                .eq('name', campaignName)
+                .single();
+
+            if (campaign?.content) {
+                console.log(`📧 Using saved content for ${campaignId}`);
+                // Replace placeholders in saved content
+                let content = campaign.content;
+                Object.keys(data).forEach(key => {
+                    const placeholder = `\${data.${key}}`;
+                    content = content.replaceAll(placeholder, data[key] || '');
+                });
+                return content;
+            }
+        } catch (error) {
+            console.log(`No saved content for ${campaignId}, using template`);
+        }
+    }
+
+    // Fall back to template function
+    return templateFn(data);
+}
+
 export async function POST(request: Request) {
     try {
         const { campaignId, testEmail, userIds, emails } = await request.json();
@@ -483,12 +530,12 @@ export async function POST(request: Request) {
         }
 
         // Prepare emails for all eligible users
-        const emailsToSend = targetUsers.map(user => {
+        const emailsToSend = await Promise.all(targetUsers.map(async (user) => {
             const daysUntilExam = user.exam_date
                 ? Math.ceil((new Date(user.exam_date).getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
-                : undefined;
+                : null;
 
-            // Function to replace placeholders in stored content
+            // Helper function to replace placeholders
             const replacePlaceholders = (content: string, data: any) => {
                 let text = content;
                 const replacements: Record<string, string | undefined> = {
@@ -515,19 +562,8 @@ export async function POST(request: Request) {
                 accountType: user.account_type
             };
 
-            // Generate HTML content (handling both function and string templates)
-            let htmlContent = '';
-            // Check if emailTemplate is a function that returns a string (standard templates)
-            // OR if it wraps a stored string (custom campaigns)
-            try {
-                const result = emailTemplate(templateData);
-                // If the result contains placeholders, replace them (for custom saved campaigns)
-                htmlContent = replacePlaceholders(result, templateData);
-            } catch (e) {
-                // Should not happen, but safe fallback
-                console.error('Template generation error', e);
-                htmlContent = '<div>Error generating email content</div>';
-            }
+            // Use helper function to get content (checks DB first, then template)
+            const htmlContent = await getCampaignContent(campaignId, emailTemplate, templateData);
 
             const textContent = textTemplate({
                 userName: user.full_name || 'there',
@@ -545,7 +581,7 @@ export async function POST(request: Request) {
                 html: htmlContent,
                 text: textContent
             };
-        });
+        }));
 
         console.log('📧 About to send emails:', {
             targetUsersCount: targetUsers.length,
