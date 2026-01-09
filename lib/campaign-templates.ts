@@ -3,109 +3,84 @@ export const getWelcomeBundlePromo = (data: any) => `
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0; padding: 0; }
-  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-  .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center; }
-  .content { padding: 40px 30px; }
-  .bundle-box { background: linear-gradient(135deg, #fef2f2 0%, #fff7ed 100%); border: 3px solid #f59e0b; padding: 30px 20px; text-align: center; border-radius: 16px; margin: 30px 0; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2); }
-  .price-tag { color: #dc2626; font-size: 36px; font-weight: 900; margin: 15px 0; }
-  .btn { display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; padding: 18px 40px; text-decoration: none; border-radius: 10px; font-weight: 800; font-size: 20px; margin-top: 20px; box-shadow: 0 6px 0 #047857; transition: all 0.2s; text-transform: uppercase; }
-  .footer { background-color: #f9fafb; padding: 25px; text-align: center; font-size: 12px; color: #6b7280; }
-  @media only screen and (max-width: 600px) {
-    .bundle-images td { display: block !important; width: 100% !important; padding: 10px 0 !important; }
-    .plus-sign { display: none !important; }
-    .price-tag { font-size: 28px !important; }
-    .btn { padding: 14px 30px !important; font-size: 16px !important; }
-  }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-  <div class="container">
-    <div class="header">
-      <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 50px; width: auto; display: block; margin: 0 auto;">
-      <p style="color: #e0e7ff; margin-top: 15px; font-size: 20px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">⚡ One Time Offer! ⚡</p>
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <div style="background-color: #2563eb; padding: 30px; text-align: center;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">Welcome to FaMED!</span>
+          </td>
+        </tr>
+      </table>
     </div>
-    <div class="content">
-      <div style="background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%); padding: 25px; border-radius: 12px; margin: 0 0 30px 0; text-align: center; border: 2px solid #3b82f6;">
-        <p style="margin: 0; font-size: 24px; font-weight: 700; color: #1e40af;">🚀 Ready to Supercharge Your Preparation?</p>
-      </div>
+    <div style="padding: 40px 30px;">
+      <p style="font-size: 18px; font-weight: 600; margin: 0 0 16px 0;">Hi ${data.userName},</p>
+      <p style="margin: 0 0 16px 0;">Thanks for joining FaMED-Vorbereitung. We're here to help you prepare effectively for your exam.</p>
+      <p style="margin: 0 0 16px 0;">To get the most out of your preparation, we've put together a complete study bundle that includes everything you need.</p>
       
-      <div class="bundle-box">
-        <h2 style="color: #b91c1c; margin-top: 0; margin-bottom: 10px; font-size: 28px;">🎁 Special Bundle Offer</h2>
-        <p style="margin: 5px 0 25px 0; color: #dc2626; font-size: 20px; font-weight: 800;">Book + App Bundle - Save 60%!</p>
-        
-        <!-- Visual Bundle Display - Mobile Optimized -->
-        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 25px 0;">
-          <tr>
-            <td align="center">
-              <table border="0" cellspacing="0" cellpadding="0" class="bundle-images">
-                <tr>
-                  <td align="center" valign="middle" style="padding: 10px;">
-                    <img src="https://famed-vorbereitung.com/book%20mockup%20website%20german%20(1).png" alt="FaMED Protokoll Book" style="max-width: 140px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                  </td>
-                  <td align="center" valign="middle" class="plus-sign" style="padding: 0 15px;">
-                    <span style="font-size: 48px; font-weight: 900; color: #dc2626;">+</span>
-                  </td>
-                  <td align="center" valign="middle" style="padding: 10px;">
-                    <table border="0" cellspacing="0" cellpadding="0" style="background: white; border: 3px solid #4f46e5; border-radius: 12px; margin: 0 auto;">
-                      <tr>
-                        <td style="padding: 25px;">
-                          <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED App" style="width: 90px; height: auto; display: block;">
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-        
-        <!-- What's Included -->
-        <div style="background: white; border-radius: 12px; padding: 20px; margin: 20px 0; text-align: left;">
-          <ul style="margin: 0; padding: 0; list-style: none;">
-            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Complete FaMED Protokoll book</li>
-            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ FaMED App (3-Months access)</li>
-            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Personalized 8-week study plan</li>
-            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Private community access</li>
-            <li style="margin: 10px 0; color: #374151; font-size: 16px;">✅ Email support</li>
-          </ul>
-        </div>
-        
-        <!-- Pricing -->
-        <div style="margin: 25px 0;">
-          <p style="margin: 0; color: #6b7280; font-size: 16px; text-decoration: line-through;">Regular Price: €149.98</p>
-          <div class="price-tag" style="margin: 10px 0;">€59.99</div>
-          <p style="margin: 0; color: #059669; font-size: 18px; font-weight: 700;">You Save €89.99 (60% OFF!)</p>
-        </div>
-
-        <a href="https://www.paypal.com/ncp/payment/ZP233NEJS6Z26" class="btn">🎯 JETZT KAUFEN →</a>
-        
-        <p style="margin-top: 15px; font-size: 14px;">
-          <a href="https://famedtestprep.com/upgrade" style="color: #6b7280; text-decoration: underline;">Want to learn more? View full pricing details →</a>
-        </p>
+      <div style="background-color: #f0f9ff; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb;">
+        <p style="margin: 0 0 10px 0; font-weight: 600;">Complete Preparation Bundle</p>
+        <p style="margin: 0; color: #2563eb; font-size: 24px; font-weight: 700;">€59.99</p>
       </div>
 
-      <p style="font-size: 18px; font-weight: 700; color: #7c3aed; text-align: center; margin-top: 30px;">🚀 Most students who get the bundle pass on their first try!</p>
+      <p style="margin: 16px 0 8px 0;"><strong>What's included:</strong></p>
+      <ul style="padding-left: 20px; margin: 0 0 20px 0; line-height: 1.8;">
+        <li>Complete FaMED Protokoll book</li>
+        <li>FaMED App (3-Months access)</li>
+        <li>Personalized 8-week study plan</li>
+        <li>Private community access</li>
+        <li>Email support</li>
+      </ul>
+
+      <p style="margin: 0 0 20px 0;">This bundle gives you structured preparation with all the resources you need to pass your exam.</p>
       
-      <p style="text-align: center; margin-top: 30px;">
-        <a href="https://www.paypal.com/ncp/payment/ZP233NEJS6Z26" style="color: #dc2626; font-weight: 600; font-size: 18px;">Click Here to Get Started →</a>
+      <p style="text-align: center; margin: 30px 0;">
+        <a href="https://www.paypal.com/ncp/payment/ZP233NEJS6Z26" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">View Bundle Options</a>
       </p>
-      
-      <p style="margin-top: 30px; font-size: 16px; line-height: 1.8;">
+
+      <p style="margin-top: 30px; margin-bottom: 0;">
         Viel Erfolg,<br>
         <strong>The FaMED-Vorbereitung Team</strong>
       </p>
     </div>
-    <div class="footer">
-      <p style="margin: 0;">&copy; ${new Date().getFullYear()} FaMED-Vorbereitung. All rights reserved.</p>
-      <p style="margin: 5px 0;">You received this email because you signed up for FaMED.</p>
+    <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+      <p style="margin: 0 0 5px 0;">© ${new Date().getFullYear()} FaMED-Vorbereitung. All rights reserved.</p>
+      <p style="margin: 0;">You received this email because you signed up for FaMED.</p>
     </div>
   </div>
 </body>
 </html>
 `;
+
+export const getTextWelcomeBundlePromo = (data: any) => \`Hi \${data.userName},
+
+Thanks for joining FaMED-Vorbereitung. We're here to help you prepare effectively for your exam.
+
+To get the most out of your preparation, we've put together a complete study bundle that includes everything you need.
+
+Complete Preparation Bundle
+Price: €59.99
+
+What's included:
+- Complete FaMED Protokoll book
+- FaMED App (3-Months access)
+- Personalized 8-week study plan
+- Private community access
+- Email support
+
+This bundle gives you structured preparation with all the resources you need to pass your exam.
+
+View Bundle Options: https://www.paypal.com/ncp/payment/ZP233NEJS6Z26
+
+Viel Erfolg,
+The FaMED-Vorbereitung Team
+\`;
+
 
 export const getTextWelcomeBundlePromo = (data: any) => `Hi ${data.userName},
 
