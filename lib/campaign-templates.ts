@@ -57,7 +57,7 @@ export const getWelcomeBundlePromo = (data: any) => `
 </html>
 `;
 
-export const getTextWelcomeBundlePromo = (data: any) => \`Hi \${data.userName},
+export const getTextWelcomeBundlePromo = (data: any) => `Hi ${data.userName},
 
 Thanks for joining FaMED-Vorbereitung. We're here to help you prepare effectively for your exam.
 
@@ -76,37 +76,6 @@ What's included:
 This bundle gives you structured preparation with all the resources you need to pass your exam.
 
 View Bundle Options: https://www.paypal.com/ncp/payment/ZP233NEJS6Z26
-
-Viel Erfolg,
-The FaMED-Vorbereitung Team
-\`;
-
-
-export const getTextWelcomeBundlePromo = (data: any) => `Hi ${data.userName},
-
-Welcome to FaMED-Vorbereitung! We're excited to help you pass your exam with confidence.
-
-🎁 SPECIAL BUNDLE OFFER - SAVE 60%!
-
-Book + App Bundle - Everything You Need to Pass!
-
-What's Included:
-✅ Complete FaMED Protokoll book
-✅ FaMED App (3-Months access)
-✅ Personalized 8-week study plan
-✅ Private community access
-✅ Email support
-
-PRICING:
-Regular Price: €149.98
-Special Price: €59.99
-YOU SAVE: €89.99 (60% OFF!)
-
-Get the Complete Bundle Now: https://www.paypal.com/ncp/payment/ZP233NEJS6Z26
-
-Want to learn more? View full pricing details: https://famedtestprep.com/upgrade
-
-🚀 Most students who get the bundle pass on their first try!
 
 Viel Erfolg,
 The FaMED-Vorbereitung Team
