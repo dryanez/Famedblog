@@ -64,11 +64,19 @@ async function getCampaignContent(campaignId: string, templateFn: (data: any) =>
             if (campaign?.content) {
                 console.log(`📧 Using saved content for ${campaignId}`);
                 // Replace placeholders in saved content
+                // Handle both ${data.key} and {{key}} formats
                 let content = campaign.content;
+
                 Object.keys(data).forEach(key => {
-                    const placeholder = `\${data.${key}}`;
-                    content = content.replaceAll(placeholder, data[key] || '');
+                    // Replace ${data.key} format (template literal syntax)
+                    const templateLiteralPattern = new RegExp(`\\$\\{data\\.${key}\\}`, 'g');
+                    content = content.replace(templateLiteralPattern, String(data[key] || ''));
+
+                    // Also replace {{key}} format (custom placeholder syntax)
+                    const customPlaceholder = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
+                    content = content.replace(customPlaceholder, String(data[key] || ''));
                 });
+
                 return content;
             }
         } catch (error) {
