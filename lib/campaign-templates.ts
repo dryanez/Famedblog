@@ -269,7 +269,7 @@ What you get instantly:
 
 Don't risk your grade to save €17.99. Give yourself the best chance to pass.
 
-Get Instant Access: https://www.paypal.com/ncp/payment/DQCLR47JB5DXU
+Get Instant Access: https://www.paypal.com/ncp/payment/L9UX6QD4U85UC
 `;
 
 export const getExamUrgency1WeekSpecial = (data: any) => `
@@ -354,7 +354,7 @@ What you get instantly:
 
 Don't walk into the exam unprepared. Practice like it's the real thing.
 
-Get Instant Access: https://www.paypal.com/ncp/payment/DQCLR47JB5DXU
+Get Instant Access: https://www.paypal.com/ncp/payment/WMDX2PJU9BTW
 `;
 
 export const getExamUrgency7Days = (data: any) => `
