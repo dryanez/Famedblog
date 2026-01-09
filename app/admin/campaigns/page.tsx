@@ -358,6 +358,11 @@ export default function CampaignsPage() {
 
             const data = await response.json();
 
+            // Log server debug info to browser console
+            if (data.debug) {
+                console.log('🔍 Server Debug Info:', data.debug);
+            }
+
             if (response.ok) {
                 alert(`✅ Email sent successfully!`);
                 // Refresh the preview to update "already sent" status
