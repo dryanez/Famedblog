@@ -96,6 +96,10 @@ export async function POST(request: Request) {
 
         let users: any[] = [];
         let fetchError = null;
+        let targetUsers: any[] = [];
+        let emailTemplate: (params: any) => string;
+        let textTemplate: (params: any) => string;
+        let subjectLine = '';
 
         // Optimization: Fetch strategy based on mode
 
@@ -190,7 +194,7 @@ export async function POST(request: Request) {
 
             // For specificUserId, bypass all filtering and send directly
             targetUsers = users;
-            
+
             // Set templates based on campaign type
             switch (campaignId) {
                 case 'exam_urgency_14d':
