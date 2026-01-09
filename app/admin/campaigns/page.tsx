@@ -373,20 +373,18 @@ export default function CampaignsPage() {
         if (campaign.customContent) {
             template = campaign.customContent;
         } else {
-            // For holiday_special, check if there's saved content in the database
-            if (campaignId === 'holiday_special') {
-                try {
-                    const response = await fetch('/api/campaigns/holiday_special');
-                    if (response.ok) {
-                        const data = await response.json();
-                        if (data.content) {
-                            console.log('Loaded saved holiday_special content from DB');
-                            template = data.content;
-                        }
+            // For ALL default campaigns, check if there's saved content in the database
+            try {
+                const response = await fetch(`/api/campaigns/${campaignId}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.content) {
+                        console.log(`Loaded saved ${campaignId} content from DB`);
+                        template = data.content;
                     }
-                } catch (error) {
-                    console.error('Error fetching saved holiday content:', error);
                 }
+            } catch (error) {
+                console.error(`Error fetching saved ${campaignId} content:`, error);
             }
 
             // If no saved content, use default template
