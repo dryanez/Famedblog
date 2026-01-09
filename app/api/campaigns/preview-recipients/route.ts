@@ -24,7 +24,7 @@ export async function POST(request: Request) {
         // Fetch all users
         const { data: allUsers, error: usersError } = await supabaseAdmin
             .from('users')
-            .select('id, email, name, exam_date, account_type, created_at');
+            .select('id, email, full_name, exam_date, account_type, created_at');
 
         if (usersError) {
             console.error('❌ Error fetching users:', usersError);
@@ -119,7 +119,7 @@ export async function POST(request: Request) {
             return {
                 id: user.id,
                 email: user.email,
-                name: user.name || 'Unknown',
+                name: user.full_name || 'Unknown',
                 exam_date: user.exam_date,
                 days_until_exam: daysUntilExam,
                 account_type: user.account_type,
