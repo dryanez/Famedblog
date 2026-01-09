@@ -253,19 +253,19 @@ export const getExamUrgencySpecialOffer = (data: any) => `
 
 export const getTextExamUrgencySpecialOffer = (data: any) => `Hi ${data.userName},
 
-Your exam is in less than 2 weeks. The pressure is on.
-We know you don't have time for full courses anymore. You need to Simulate the exam, fast. This is the only way to be ready, and not be nervous during the test.
+Your exam is in 2 weeks. This is crunch time.
 
-SPECIAL "CRUNCH TIME" OFFER
-Price: €17.99 (was €69.00)
-Offer Expires in 24 Hours
+The next two weeks are about focused practice – experiencing the test exactly as it will be on exam day. Full test simulations by sections. Practice until the real exam feels routine.
+
+2-Week Preparation Bundle
+Price: €19.99
 
 What you get instantly:
-- 2 weeks access to Simulation Platform (PDFs)
-- Famed 2026 Protokol ! (€19,99 value)
-- 50% off any subscription if you need to retake the exam.
+- Full Exam Simulation Platform (2 weeks access)
+- FaMED 2026 Protokoll (Complete study guide)
+- Section-by-Section Practice
 
-Don't risk your grade to save €17.99. Give yourself the best chance to pass.
+Don't walk into the exam unprepared. Practice like it's the real thing.
 
 Get Instant Access: https://www.paypal.com/ncp/payment/L9UX6QD4U85UC
 `;
