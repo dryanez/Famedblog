@@ -187,6 +187,44 @@ export async function POST(request: Request) {
             users = [data];
 
 
+
+            // For specificUserId, bypass all filtering and send directly
+            targetUsers = users;
+            
+            // Set templates based on campaign type
+            switch (campaignId) {
+                case 'exam_urgency_14d':
+                    emailTemplate = getExamUrgency14Days;
+                    textTemplate = getTextExamUrgency14Days;
+                    subjectLine = '⚠️ Your Exam is in 14 Days!';
+                    break;
+                case 'exam_urgency_special_offer':
+                    emailTemplate = getExamUrgencySpecialOffer;
+                    textTemplate = getTextExamUrgencySpecialOffer;
+                    subjectLine = '🔥 Last Chance: €17.99 Special Offer';
+                    break;
+                case 'exam_urgency_1_week_special':
+                    emailTemplate = getExamUrgency1WeekSpecial;
+                    textTemplate = getTextExamUrgency1WeekSpecial;
+                    subjectLine = '🚨 Final Week Special Offer';
+                    break;
+                case 'welcome_bundle_promo':
+                    emailTemplate = getWelcomeBundlePromo;
+                    textTemplate = getTextWelcomeBundlePromo;
+                    subjectLine = '🎁 Welcome to FaMED - Special Offer';
+                    break;
+                case 'site_back_online':
+                    emailTemplate = getSiteBackOnline;
+                    textTemplate = getTextSiteBackOnline;
+                    subjectLine = "We're Back Online!";
+                    break;
+                default:
+                    emailTemplate = getWelcomeDay0;
+                    textTemplate = getTextWelcomeDay0;
+                    subjectLine = '👋 Welcome to FaMED!';
+                    break;
+            }
+
             fetchError = null;
 
 
