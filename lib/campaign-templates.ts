@@ -313,7 +313,7 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
             <span class="price-old">€69.00</span>
             <span class="price-new">€9.99</span>
         </div>
-        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" class="btn">⚡ UNLOCK NOW - €9.99</a>
+        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW" class="btn">⚡ UNLOCK NOW - €9.99</a>
         <p class="timer">Offer Expires in 24 Hours</p>
       </div>
 
@@ -325,7 +325,7 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
       </ul>
       <p>Don't walk into the exam unprepared. Practice like it's the real thing.</p>
       <p style="text-align: center; margin-top: 30px;">
-        <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
+        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
       </p>
     </div>
     <div class="footer">
