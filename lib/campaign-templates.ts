@@ -45,25 +45,26 @@ export const getWelcomeBundlePromo = (data: any) => `
         </tr>
       </table>
 
-      <div style="background-color: #f0f9ff; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb;">
-        <p style="margin: 0 0 10px 0; font-weight: 600;">Complete Preparation Bundle</p>
-        <p style="margin: 0; color: #2563eb; font-size: 24px; font-weight: 700;">€59.99</p>
+      <div style="background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0;">
+        <p style="margin: 0 0 10px 0; font-weight: 600; color: #7f1d1d;">SPECIAL "WELCOME" OFFER</p>
+        <div style="margin: 10px 0;">
+          <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px;">€149.98</span>
+          <span style="color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px;">€59.99</span>
+        </div>
+        <a href="https://www.paypal.com/ncp/payment/ZP233NEJS6Z26" style="display: inline-block; background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box;">⚡ UNLOCK NOW - €59.99</a>
+        <p style="font-size: 14px; color: #ef4444; font-weight: 600; margin: 5px 0 0 0; text-transform: uppercase;">Offer Expires in 24 Hours</p>
       </div>
 
-      <p style="margin: 16px 0 8px 0;"><strong>What's included:</strong></p>
-      <ul style="padding-left: 20px; margin: 0 0 20px 0; line-height: 1.8;">
-        <li>Complete FaMED Protokoll book</li>
-        <li>FaMED App (3-Months access)</li>
-        <li>Personalized 8-week study plan</li>
-        <li>Private community access</li>
-        <li>Email support</li>
+      <p style="margin: 25px 0 10px 0;"><strong>What you get instantly:</strong></p>
+      <ul style="padding-left: 20px; margin: 0 0 25px 0;">
+        <li style="margin-bottom: 8px;">✅ <strong>Complete FaMED Protokoll book</strong></li>
+        <li style="margin-bottom: 8px;">✅ <strong>FaMED App (3-Months access)</strong></li>
+        <li style="margin-bottom: 8px;">✅ <strong>Personalized 8-week study plan</strong></li>
+        <li style="margin-bottom: 8px;">✅ <strong>Private community access</strong></li>
+        <li style="margin-bottom: 8px;">✅ <strong>Email support</strong></li>
       </ul>
-
-      <p style="margin: 0 0 20px 0;">This bundle gives you structured preparation with all the resources you need to pass your exam.</p>
       
-      <p style="text-align: center; margin: 30px 0;">
-        <a href="https://www.paypal.com/ncp/payment/ZP233NEJS6Z26" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">View Bundle Options</a>
-      </p>
+      <p style="margin: 0 0 16px 0;">Don't walk into the exam unprepared. Get everything you need to pass.</p>
 
       <p style="margin-top: 30px; margin-bottom: 0;">
         Viel Erfolg,<br>
