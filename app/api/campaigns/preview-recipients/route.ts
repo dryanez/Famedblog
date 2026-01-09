@@ -24,7 +24,7 @@ export async function POST(request: Request) {
         // Fetch all users
         const { data: allUsers, error: usersError } = await supabaseAdmin
             .from('users')
-            .select('id, email, full_name, exam_date, account_type, created_at');
+            .select('id, email, full_name, exam_date, account_type, created_date');
 
         if (usersError) {
             console.error('❌ Error fetching users:', usersError);
@@ -84,7 +84,7 @@ export async function POST(request: Request) {
                 const sevenDaysAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
                 targetUsers = allUsers.filter(user => {
                     if (user.account_type !== 'free') return false;
-                    const createdAt = new Date(user.created_at);
+                    const createdAt = new Date(user.created_date);
                     return createdAt >= sevenDaysAgo;
                 });
                 break;
