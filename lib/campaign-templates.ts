@@ -737,20 +737,12 @@ export const getSiteBackOnline = (data: any) => `
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
-  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-  .header { background-color: #2563eb; padding: 30px; text-align: center; }
-  .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; }
-  .content { padding: 40px 30px; }
-  .highlight { background-color: #f0f9ff; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb; }
-  .btn { display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; }
-  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-  <div class="container">
-    <div class="header">
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <div style="background-color: #2563eb; padding: 30px; text-align: center;">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center" valign="middle">
@@ -760,18 +752,18 @@ export const getSiteBackOnline = (data: any) => `
         </tr>
       </table>
     </div>
-    <div class="content">
-      <p>Hi ${data.userName},</p>
-      <p>We wanted to reach out personally to apologize. Our website experienced some technical difficulties over the past few days, and we know some of you were unable to complete your purchase.</p>
-      <p>We're sorry for the inconvenience this caused.</p>
+    <div style="padding: 40px 30px;">
+      <p style="margin: 0 0 16px 0;">Hi ${data.userName},</p>
+      <p style="margin: 0 0 16px 0;">We wanted to reach out personally to apologize. Our website experienced some technical difficulties over the past few days, and we know some of you were unable to complete your purchase.</p>
+      <p style="margin: 0 0 16px 0;">We're sorry for the inconvenience this caused.</p>
       
-      <div class="highlight">
+      <div style="background-color: #f0f9ff; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb;">
         <p style="margin: 0 0 10px 0;"><strong>Good news: We're fully operational again</strong></p>
         <p style="margin: 0;">You can now access everything on our site, including the Premium App & Book Bundle that helps you prepare for your FaMED exam.</p>
       </div>
 
-      <p><strong>What's included in the bundle:</strong></p>
-      <ul style="line-height: 1.8;">
+      <p style="margin: 16px 0 8px 0;"><strong>What's included in the bundle:</strong></p>
+      <ul style="line-height: 1.8; padding-left: 20px; margin: 0 0 20px 0;">
         <li>Complete FaMED Protokoll book</li>
         <li>FaMED App (3-Months access)</li>
         <li>Personalized 8-week study plan</li>
@@ -779,15 +771,17 @@ export const getSiteBackOnline = (data: any) => `
         <li>Email support</li>
       </ul>
 
-      <p>If you were trying to get access before, you can complete your purchase now.</p>
+      <p style="margin: 0 0 20px 0;">If you were trying to get access before, you can complete your purchase now.</p>
       
-      <a href="https://famedtestprep.com/famedprotokolle" class="btn">View Bundle Options</a>
+      <p style="text-align: center; margin: 20px 0;">
+        <a href="https://famedtestprep.com/famedprotokolle" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">View Bundle Options</a>
+      </p>
 
-      <p style="margin-top: 30px;">If you have any questions or need help, just reply to this email.</p>
+      <p style="margin-top: 30px; margin-bottom: 0;">If you have any questions or need help, just reply to this email.</p>
     </div>
-    <div class="footer">
-      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
-      <p>Need help? Reply to this email or visit our <a href="https://t.me/+vgtsHuqtwfk4MTJh" style="color: #6b7280;">Telegram community</a>.</p>
+    <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+      <p style="margin: 0 0 5px 0;">© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p style="margin: 0;">Need help? Reply to this email or visit our <a href="https://t.me/+vgtsHuqtwfk4MTJh" style="color: #6b7280; text-decoration: none;">Telegram community</a>.</p>
     </div>
   </div>
 </body>
