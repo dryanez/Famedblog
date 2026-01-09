@@ -252,11 +252,6 @@ export async function POST(request: Request) {
         }
 
         const now = new Date();
-        let targetUsers: any[] = [];
-
-        let emailTemplate: (params: any) => string;
-        let textTemplate: (params: any) => string;
-        let subjectLine = '';
 
         if (testEmail) {
             targetUsers = [{
