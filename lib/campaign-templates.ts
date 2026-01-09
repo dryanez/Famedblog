@@ -23,6 +23,28 @@ export const getWelcomeBundlePromo = (data: any) => `
       <p style="margin: 0 0 16px 0;">Thanks for joining FaMED-Vorbereitung. We're here to help you prepare effectively for your exam.</p>
       <p style="margin: 0 0 16px 0;">To get the most out of your preparation, we've put together a complete study bundle that includes everything you need.</p>
       
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 25px 0;">
+        <tr>
+          <td align="center">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="middle" style="padding: 10px;">
+                  <img src="https://famed-vorbereitung.com/book%20mockup%20website%20german%20(1).png" alt="FaMED Protokoll Book" style="max-width: 140px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </td>
+                <td align="center" valign="middle" style="padding: 0 15px;">
+                  <span style="font-size: 24px; font-weight: 700; color: #2563eb;">+</span>
+                </td>
+                <td align="center" valign="middle" style="padding: 10px;">
+                  <div style="background: white; border: 2px solid #2563eb; border-radius: 8px; padding: 20px;">
+                    <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED App" style="width: 80px; height: auto; display: block;">
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
       <div style="background-color: #f0f9ff; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb;">
         <p style="margin: 0 0 10px 0; font-weight: 600;">Complete Preparation Bundle</p>
         <p style="margin: 0; color: #2563eb; font-size: 24px; font-weight: 700;">€59.99</p>
