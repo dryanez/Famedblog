@@ -96,7 +96,8 @@ export async function PATCH(
         console.log('Campaign ID:', id, '-> Name:', campaignName);
 
         // First, try to find an existing campaign with this name
-        const { data: existingCampaign, error: fetchError } = await supabase
+        // Use supabaseAdmin to bypass RLS
+        const { data: existingCampaign, error: fetchError } = await supabaseAdmin
             .from('campaigns')
             .select('id')
             .eq('name', campaignName)
@@ -111,8 +112,8 @@ export async function PATCH(
         console.log('Existing campaign found:', !!existingCampaign);
 
         if (existingCampaign) {
-            // Update existing campaign
-            const { error } = await supabase
+            // Update existing campaign using supabaseAdmin
+            const { error } = await supabaseAdmin
                 .from('campaigns')
                 .update({
                     content: htmlContent,
@@ -125,8 +126,8 @@ export async function PATCH(
                 return NextResponse.json({ error: error.message }, { status: 500 });
             }
         } else {
-            // Create new campaign
-            const { error } = await supabase
+            // Create new campaign using supabaseAdmin
+            const { error } = await supabaseAdmin
                 .from('campaigns')
                 .insert({
                     name: campaignName,
