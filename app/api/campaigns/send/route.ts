@@ -734,6 +734,7 @@ export async function POST(request: Request) {
         for (let i = 0; i < emailsToSend.length; i += BATCH_SIZE) {
             const chunk = emailsToSend.slice(i, i + BATCH_SIZE);
             console.log(`Sending batch ${Math.floor(i / BATCH_SIZE) + 1} of ${Math.ceil(emailsToSend.length / BATCH_SIZE)} (${chunk.length} emails)`);
+            console.log('Sending via Resend API key:', process.env.RESEND_API_KEY ? 'Present' : 'MISSING');
 
             const { data: sendResult, error: sendError } = await resend.batch.send(chunk);
 
@@ -745,6 +746,19 @@ export async function POST(request: Request) {
                 console.error('First email in failed batch:', chunk[0]);
                 // Continue with other batches even if one fails
                 continue;
+            }
+
+            console.log(`✅ Batch ${Math.floor(i / BATCH_SIZE) + 1} sent successfully. Result:`, JSON.stringify(sendResult, null, 2));
+
+            if (sendResult?.data) {
+                // Collect results for logging
+                if (Array.isArray(sendResult.data)) {
+                    allResults.push(...sendResult.data);
+                } else {
+                    allResults.push(sendResult.data);
+                }
+            } else {
+                console.warn('⚠️ Send result success but no data returned:', sendResult);
             }
 
             totalSent += chunk.length;
