@@ -124,7 +124,7 @@ export async function POST(request: Request) {
                 .single();
 
 
-            
+
 
 
             if (error || !data) {
@@ -168,10 +168,10 @@ export async function POST(request: Request) {
                 if (sentRecord) {
 
 
-                    return NextResponse.json({ 
+                    return NextResponse.json({
 
 
-                        error: 'Campaign already sent to this user. Use force=true to resend.' 
+                        error: 'Campaign already sent to this user. Use force=true to resend.'
 
 
                     }, { status: 400 });
@@ -744,12 +744,29 @@ export async function POST(request: Request) {
             };
         });
 
+        // Log to campaign_logs table
         const { error: logError } = await supabase
             .from('campaign_logs')
             .insert(logs);
 
         if (logError) {
             console.error('Failed to log campaign sends:', logError);
+            // We don't fail the request since emails were sent
+        }
+
+        // ALSO log to campaign_sends table for tracking "already sent" status
+        const sendRecords = emailsToSend.map(email => ({
+            campaign_id: campaignId,
+            user_id: email.userId,
+            sent_at: new Date().toISOString()
+        }));
+
+        const { error: sendsError } = await supabase
+            .from('campaign_sends')
+            .insert(sendRecords);
+
+        if (sendsError) {
+            console.error('Failed to record campaign sends:', sendsError);
             // We don't fail the request since emails were sent
         }
 
