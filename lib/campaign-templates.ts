@@ -276,23 +276,12 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
-  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-  .header { background-color: #dc2626; padding: 30px; text-align: center; }
-  .header h1 { color: #ffffff; margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.5px; }
-  .content { padding: 40px 30px; }
-  .highlight-box { background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0; }
-  .price-old { text-decoration: line-through; color: #9ca3af; font-size: 18px; }
-  .price-new { color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px; }
-  .timer { font-size: 14px; color: #ef4444; font-weight: 600; margin-top: 5px; text-transform: uppercase; }
-  .btn { display: inline-block; background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box; }
-  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-  <div class="container">
-    <div class="header">
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <div style="background-color: #dc2626; padding: 30px; text-align: center;">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td align="center" valign="middle">
@@ -302,35 +291,36 @@ export const getExamUrgency1WeekSpecial = (data: any) => `
         </tr>
       </table>
     </div>
-    <div class="content">
-      <p style="font-size: 18px; font-weight: 600;">Hi ${data.userName},</p>
-      <p>Your exam is in less than 1 week. This is it.</p>
-      <p>The last week is about <strong>simulation</strong> – experiencing the test exactly as it will be on exam day. 1-hour full test simulations by sections. Practice until the real exam feels like routine.</p>
+    <div style="padding: 40px 30px;">
+      <p style="font-size: 18px; font-weight: 600; margin: 0 0 16px 0;">Hi ${data.userName},</p>
+      <p style="margin: 0 0 16px 0;">Your exam is in less than 1 week. This is it.</p>
+      <p style="margin: 0 0 16px 0;">The last week is about <strong>simulation</strong> – experiencing the test exactly as it will be on exam day. 1-hour full test simulations by sections. Practice until the real exam feels like routine.</p>
       
-      <div class="highlight-box">
-        <p style="margin:0; font-weight:600; color:#7f1d1d;">SPECIAL "FINAL WEEK" OFFER</p>
+      <div style="background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0;">
+        <p style="margin: 0 0 10px 0; font-weight: 600; color: #7f1d1d;">SPECIAL "FINAL WEEK" OFFER</p>
         <div style="margin: 10px 0;">
-            <span class="price-old">€69.00</span>
-            <span class="price-new">€9.99</span>
+          <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px;">€69.00</span>
+          <span style="color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px;">€9.99</span>
         </div>
-        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW" class="btn">⚡ UNLOCK NOW - €9.99</a>
-        <p class="timer">Offer Expires in 24 Hours</p>
+        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW" style="display: inline-block; background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box;">⚡ UNLOCK NOW - €9.99</a>
+        <p style="font-size: 14px; color: #ef4444; font-weight: 600; margin: 5px 0 0 0; text-transform: uppercase;">Offer Expires in 24 Hours</p>
       </div>
 
-      <p><strong>What you get instantly:</strong></p>
-      <ul style="padding-left: 20px; margin-bottom: 25px;">
-        <li>✅ <strong>Full 1:1 Test Simulation</strong> (Exactly like the real exam)</li>
-        <li>✅ <strong>1-Hour Section Practice</strong> (By topic)</li>
-        <li>✅ <strong>Complete Exam Day Preparation</strong></li>
+      <p style="margin: 25px 0 10px 0;"><strong>What you get instantly:</strong></p>
+      <ul style="padding-left: 20px; margin: 0 0 25px 0;">
+        <li style="margin-bottom: 8px;">✅ <strong>Full 1:1 Test Simulation</strong> (Exactly like the real exam)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>1-Hour Section Practice</strong> (By topic)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>Complete Exam Day Preparation</strong></li>
       </ul>
-      <p>Don't walk into the exam unprepared. Practice like it's the real thing.</p>
-      <p style="text-align: center; margin-top: 30px;">
-        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW" style="color: #dc2626; font-weight: 600;">Get Instant Access &rarr;</a>
+      
+      <p style="margin: 0 0 16px 0;">Don't walk into the exam unprepared. Practice like it's the real thing.</p>
+      <p style="text-align: center; margin-top: 30px; margin-bottom: 0;">
+        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW" style="color: #dc2626; font-weight: 600; text-decoration: none;">Get Instant Access &rarr;</a>
       </p>
     </div>
-    <div class="footer">
-      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
-      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+      <p style="margin: 0 0 5px 0;">© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p style="margin: 0;"><a href="#" style="color: #6b7280; text-decoration: none;">Unsubscribe</a></p>
     </div>
   </div>
 </body>
