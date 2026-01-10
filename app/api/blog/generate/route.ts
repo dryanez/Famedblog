@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
-import { spawn } from 'child_process';
+import { google } from '@ai-sdk/google';
+import { generateText } from 'ai';
+import fs from 'fs';
 import path from 'path';
+
+export const maxDuration = 60; // Allow up to 60s for generation
 
 export async function POST(request: Request) {
     try {
@@ -15,64 +19,56 @@ export async function POST(request: Request) {
 
         console.log(`🤖 Generating blog post for topic: "${topic}"...`);
 
-        // Path to python script
-        const scriptPath = path.join(process.cwd(), 'scripts', 'topic_research.py');
+        // Load FAMED context from public/llms.txt
+        let famedContext = '';
+        try {
+            const contextPath = path.join(process.cwd(), 'public', 'llms.txt');
+            if (fs.existsSync(contextPath)) {
+                famedContext = fs.readFileSync(contextPath, 'utf8');
+            }
+        } catch (e) {
+            console.warn('Could not load FAMED context file');
+        }
 
-        // Spawn python process
-        // Note: Using 'python3' - might need to be 'python' depending on environment
-        return new Promise((resolve) => {
-            const pythonProcess = spawn('python3', [
-                scriptPath,
-                '--topic', topic,
-                '--json',
-                '--no-save'
-            ]);
+        const today = new Date().toISOString().split('T')[0];
 
-            let outputData = '';
-            let errorData = '';
+        const prompt = `You are writing a blog post for FaMED-Vorbereitung.com, a German medical licensing exam preparation site.
 
-            pythonProcess.stdout.on('data', (data) => {
-                outputData += data.toString();
-            });
+TOPIC: ${topic}
 
-            pythonProcess.stderr.on('data', (data) => {
-                errorData += data.toString();
-                // console.log(`[Python Log]: ${data.toString()}`);
-            });
+FAMED CONTEXT (USE THIS AS YOUR KNOWLEDGE BASE):
+${famedContext || 'Use general FaMED exam knowledge'}
 
-            pythonProcess.on('close', (code) => {
-                if (code !== 0) {
-                    console.error(`Python script exited with code ${code}`);
-                    console.error(`Error output: ${errorData}`);
-                    resolve(NextResponse.json(
-                        { error: 'Failed to generate content', details: errorData },
-                        { status: 500 }
-                    ));
-                    return;
-                }
+IMPORTANT REQUIREMENTS:
+- Write in German
+- Reference the "FaMED Protokoll Book" when giving advice
+- Include practical tips for exam preparation  
+- Mention communication skills (Anamnese)
+- Keep it under 1500 words
+- Use markdown format with proper headings
+- Include frontmatter in this EXACT format:
+---
+title: "[Your title in German]"
+date: "${today}"
+excerpt: "[Brief 1-2 sentence summary]"
+tags: ["FaMED", "Preparation", "Other relevant tags"]
+status: "draft"
+---
 
-                try {
-                    // unexpected logs might be in stdout if we failed to redirect all logs to stderr in python
-                    // find the JSON part
-                    const jsonStart = outputData.indexOf('{');
-                    const jsonEnd = outputData.lastIndexOf('}');
+Generate the complete blog post now, starting with the frontmatter.`;
 
-                    if (jsonStart === -1 || jsonEnd === -1) {
-                        throw new Error('No JSON found in output');
-                    }
+        const result = await generateText({
+            model: google('gemini-1.5-flash'),
+            prompt: prompt,
+            temperature: 0.7,
+        });
 
-                    const jsonStr = outputData.substring(jsonStart, jsonEnd + 1);
-                    const result = JSON.parse(jsonStr);
+        const content = result.text;
 
-                    resolve(NextResponse.json(result));
-                } catch (e) {
-                    console.error('Failed to parse Python output:', e);
-                    resolve(NextResponse.json(
-                        { error: 'Invalid response from AI agent', raw: outputData },
-                        { status: 500 }
-                    ));
-                }
-            });
+        return NextResponse.json({
+            success: true,
+            topic: topic,
+            content: content
         });
 
     } catch (error: any) {
