@@ -1,27 +1,44 @@
 import { NextResponse } from 'next/server';
-import { getAllPosts } from '@/lib/posts';
+import fs from 'fs';
+import path from 'path';
 
-export async function GET() {
+const POSTS_DIR = path.join(process.cwd(), 'blog/posts');
+
+export async function POST(request: Request) {
     try {
-        const posts = getAllPosts();
+        const { slug, content } = await request.json();
 
-        // Add metadata for admin view
-        const postsWithMetadata = posts.map(post => ({
-            slug: post.slug,
-            title: post.title,
-            date: post.date,
-            category: post.category,
-            status: post.status || 'draft',
-            tags: post.tags || [],
-            excerpt: post.excerpt,
-            // Social media status - you can extend this later
-            facebookPosted: false, // TODO: Track from logs
-            telegramSent: false, // TODO: Track from logs
-        }));
+        if (!slug || !content) {
+            return NextResponse.json(
+                { error: 'Slug and content are required' },
+                { status: 400 }
+            );
+        }
 
-        return NextResponse.json({ posts: postsWithMetadata });
+        // Ensure directory exists
+        if (!fs.existsSync(POSTS_DIR)) {
+            fs.mkdirSync(POSTS_DIR, { recursive: true });
+        }
+
+        // Validate slug for safety
+        const safeSlug = slug.replace(/[^a-zA-Z0-9-]/g, '');
+        const filePath = path.join(POSTS_DIR, `${safeSlug}.md`);
+
+        // Write file
+        fs.writeFileSync(filePath, content, 'utf8');
+
+        return NextResponse.json({
+            success: true,
+            message: 'Post saved successfully',
+            slug: safeSlug,
+            path: filePath
+        });
+
     } catch (error: any) {
-        console.error('Error fetching posts:', error);
-        return NextResponse.json({ error: error.message }, { status: 500 });
+        console.error('Save post error:', error);
+        return NextResponse.json(
+            { error: error.message || 'Failed to save post' },
+            { status: 500 }
+        );
     }
 }
