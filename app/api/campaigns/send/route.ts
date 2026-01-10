@@ -795,12 +795,15 @@ export async function POST(request: Request) {
             };
         });
 
+        console.log(`[DEBUG] About to insert into campaign_sends:`, JSON.stringify(sendRecords, null, 2));
+
         const { error: sendsError } = await supabase
             .from('campaign_sends')
             .insert(sendRecords);
 
         if (sendsError) {
             console.error('Failed to record campaign sends:', sendsError);
+            console.error('Error details:', JSON.stringify(sendsError, null, 2));
             // We don't fail the request since emails were sent
         } else {
             console.log(`✅ Successfully recorded ${sendRecords.length} sends to campaign_sends table`);
