@@ -19,14 +19,42 @@ export default function CreateBlogPostPage() {
     const [savedPath, setSavedPath] = useState('');
     const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
     const [chatInput, setChatInput] = useState('');
-    const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+    const [uploadedFiles, setUploadedFiles] = useState<{ name: string, content: string, parsing?: boolean }[]>([]);
     const [viewMode, setViewMode] = useState<'edit' | 'preview'>('edit');
     const fileInputRef = useRef<HTMLInputElement>(null);
 
-    const handleFileUpload = (files: FileList | null) => {
+    const handleFileUpload = async (files: FileList | null) => {
         if (!files) return;
-        const newFiles = Array.from(files);
-        setUploadedFiles(prev => [...prev, ...newFiles]);
+
+        for (const file of Array.from(files)) {
+            // Add file with parsing status
+            setUploadedFiles(prev => [...prev, { name: file.name, content: '', parsing: true }]);
+
+            try {
+                const formData = new FormData();
+                formData.append('file', file);
+
+                const res = await fetch('/api/blog/parse-document', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await res.json();
+
+                if (data.success && data.content) {
+                    setUploadedFiles(prev =>
+                        prev.map(f => f.name === file.name ? { name: file.name, content: data.content, parsing: false } : f)
+                    );
+                } else {
+                    // Remove failed file
+                    setUploadedFiles(prev => prev.filter(f => f.name !== file.name));
+                    alert(`Failed to parse ${file.name}: ${data.error}`);
+                }
+            } catch (e: any) {
+                setUploadedFiles(prev => prev.filter(f => f.name !== file.name));
+                alert(`Error parsing ${file.name}`);
+            }
+        }
     };
 
     const removeFile = (index: number) => {
@@ -67,9 +95,11 @@ export default function CreateBlogPostPage() {
             }
 
             if (uploadedFiles.length > 0) {
-                additionalContext += '\n\nREFERENCE FILES PROVIDED:\n';
+                additionalContext += '\n\n=== DOCUMENT CONTENTS (USE THIS INFORMATION) ===\n';
                 uploadedFiles.forEach(file => {
-                    additionalContext += `- ${file.name}\n`;
+                    if (file.content) {
+                        additionalContext += `\n--- FROM ${file.name} ---\n${file.content}\n`;
+                    }
                 });
             }
 
@@ -250,8 +280,8 @@ export default function CreateBlogPostPage() {
                                     onClick={handleGenerate}
                                     disabled={loading || !topic}
                                     className={`px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-all ${loading || !topic
-                                            ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                                            : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-lg active:scale-95'
+                                        ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                                        : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-lg active:scale-95'
                                         }`}
                                 >
                                     {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5" />}
@@ -261,8 +291,8 @@ export default function CreateBlogPostPage() {
 
                             {status && (
                                 <div className={`mt-4 p-3 rounded-lg text-sm flex items-center gap-2 ${status.includes('Error') ? 'bg-red-50 text-red-700' :
-                                        status.includes('Generating') || status.includes('Initializing') ? 'bg-blue-50 text-blue-700' :
-                                            'bg-green-50 text-green-700'
+                                    status.includes('Generating') || status.includes('Initializing') ? 'bg-blue-50 text-blue-700' :
+                                        'bg-green-50 text-green-700'
                                     }`}>
                                     {loading && <Loader2 className="w-4 h-4 animate-spin" />}
                                     {status.includes('✅') && <CheckCircle className="w-4 h-4" />}
