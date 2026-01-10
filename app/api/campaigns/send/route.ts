@@ -738,12 +738,24 @@ export async function POST(request: Request) {
 
             let sendResult, sendError;
             try {
-                console.log('Attempting to call resend.batch.send associated with API Key...');
-                const result = await resend.batch.send(chunk);
+                console.log(`[DEBUG] Step 5.${i}: Attempting to call resend.batch.send...`);
+
+                // create a timeout promise
+                const timeoutPromise = new Promise((_, reject) => {
+                    setTimeout(() => reject(new Error('Resend API call timed out after 15 seconds')), 15000);
+                });
+
+                // Race the API call against the timeout
+                const result: any = await Promise.race([
+                    resend.batch.send(chunk),
+                    timeoutPromise
+                ]);
+
+                console.log(`[DEBUG] Step 5.${i}: Resend API returned successfully`);
                 sendResult = result.data;
                 sendError = result.error;
             } catch (e) {
-                console.error(`❌ CRITICAL: Resend API call threw an exception in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, e);
+                console.error(`❌ CRITICAL: Resend API call threw an exception or timed out in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, e);
                 sendError = e;
             }
 
