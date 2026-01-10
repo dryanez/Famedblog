@@ -135,6 +135,8 @@ export async function POST(request: Request) {
             }
 
             // Check if already sent (unless force is true)
+            console.log(`[DEBUG] Force param received: ${force}. SKIPPING campaign_sends DB check for debugging.`);
+            /*
             if (!force) {
                 const { data: sentRecord } = await supabase
                     .from('campaign_sends')
@@ -149,6 +151,7 @@ export async function POST(request: Request) {
                     }, { status: 400 });
                 }
             }
+            */
 
             users = [data];
             targetUsers = users;
