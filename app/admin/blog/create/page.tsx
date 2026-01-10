@@ -165,11 +165,11 @@ export default function CreateBlogPostPage() {
 
                             <div className="h-48 overflow-y-auto space-y-2 text-sm">
                                 {chatMessages.length === 0 ? (
-                                    <p className="text-gray-400 text-center py-8">Give the AI extra instructions here</p>
+                                    <p className="text-gray-500 text-center py-8">Give the AI extra instructions here</p>
                                 ) : (
                                     chatMessages.map((msg, i) => (
-                                        <div key={i} className={`p-2 rounded ${msg.role === 'user' ? 'bg-blue-50' : 'bg-gray-50'}`}>
-                                            <span className="font-semibold">{msg.role === 'user' ? 'You' : 'AI'}:</span> {msg.content}
+                                        <div key={i} className={`p-2 rounded text-gray-900 ${msg.role === 'user' ? 'bg-blue-100' : 'bg-gray-100'}`}>
+                                            <span className="font-bold">{msg.role === 'user' ? 'You' : 'AI'}:</span> {msg.content}
                                         </div>
                                     ))
                                 )}
