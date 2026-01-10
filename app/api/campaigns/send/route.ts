@@ -641,53 +641,51 @@ export async function POST(request: Request) {
             }
         }
 
-    }
+
+        // DEBUG PROBE 3.5
+        console.log('[DEBUG] Step 3.5: Pre-Loop Check. Target users:', targetUsers.length);
+        if (targetUsers.length > 0) {
+            console.log('[DEBUG] Step 3.5.1: TargetUsers exists');
         }
 
-// DEBUG PROBE 3.5
-console.log('[DEBUG] Step 3.5: Pre-Loop Check. Target users:', targetUsers.length);
-if (targetUsers.length > 0) {
-    console.log('[DEBUG] Step 3.5.1: TargetUsers exists');
-}
+        // Prepare emails for all eligible users
+        console.log('[DEBUG] Step 4: Generating email content...');
+        const emailsToSend = await Promise.all(targetUsers.map(async (user, idx) => {
+            console.log(`[DEBUG] Step 4.0: Inside Map for user ${user.id} (idx ${idx})`);
 
-// Prepare emails for all eligible users
-console.log('[DEBUG] Step 4: Generating email content...');
-const emailsToSend = await Promise.all(targetUsers.map(async (user, idx) => {
-    console.log(`[DEBUG] Step 4.0: Inside Map for user ${user.id} (idx ${idx})`);
+            // Personalization variables
+            const templateData = {
+                userName: user.full_name || 'Future Doctor',
+                firstName: user.full_name ? user.full_name.split(' ')[0] : 'Future Doctor',
+                examDate: user.exam_date ? new Date(user.exam_date).toLocaleDateString('de-DE') : 'upcoming exam',
+                year: new Date().getFullYear()
+            };
 
-    // Personalization variables
-    const templateData = {
-        userName: user.full_name || 'Future Doctor',
-        firstName: user.full_name ? user.full_name.split(' ')[0] : 'Future Doctor',
-        examDate: user.exam_date ? new Date(user.exam_date).toLocaleDateString('de-DE') : 'upcoming exam',
-        year: new Date().getFullYear()
-    };
+            // Get content (DB or Template)
+            const htmlContent = await getCampaignContent(campaignId, emailTemplate, templateData);
+            console.log(`[DEBUG] Step 4.1: Content Generated for user ${user.id}`);
 
-    // Get content (DB or Template)
-    const htmlContent = await getCampaignContent(campaignId, emailTemplate, templateData);
-    console.log(`[DEBUG] Step 4.1: Content Generated for user ${user.id}`);
+            const textContent = textTemplate(templateData);
+            const subject = subjectLine;
 
-    const textContent = textTemplate(templateData);
-    const subject = subjectLine;
+            return {
+                from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
+                to: [user.email],
+                subject: subject,
+                html: htmlContent,
+                text: textContent
+            };
+        }));
+        console.log('[DEBUG] Step 4.2: Content generation complete');
 
-    return {
-        from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
-        to: [user.email],
-        subject: subject,
-        html: htmlContent,
-        text: textContent
-    };
-}));
-console.log('[DEBUG] Step 4.2: Content generation complete');
-
-// DEBUG PROBE: Loop Complete
-return NextResponse.json({
-    success: true,
-    debug: {
-        step: '4.2 - Loop Complete',
-        generatedCount: emailsToSend.length
-    }
-});
+        // DEBUG PROBE: Loop Complete
+        return NextResponse.json({
+            success: true,
+            debug: {
+                step: '4.2 - Loop Complete',
+                generatedCount: emailsToSend.length
+            }
+        });
 
         /* CODE BELOW IS UNREACHABLE DUE TO PROBE RETURN - COMMENTED OUT FOR DEBUGGING
         console.log('📧 About to send emails:', {
@@ -698,11 +696,11 @@ return NextResponse.json({
 
         // ... (Rest of send logic) ...
         */
-        
+
     } catch (error: any) {
-    console.error('Campaign send error:', error);
-    return NextResponse.json({
-        error: error.message || 'Internal server error'
-    }, { status: 500 });
-}
+        console.error('Campaign send error:', error);
+        return NextResponse.json({
+            error: error.message || 'Internal server error'
+        }, { status: 500 });
+    }
 }
