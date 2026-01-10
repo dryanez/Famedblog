@@ -821,7 +821,9 @@ export async function POST(request: Request) {
             })),
             debug: {
                 allResults,
-                apiKeyPresent: !!process.env.RESEND_API_KEY
+                apiKeyPresent: !!process.env.RESEND_API_KEY,
+                campaignSendsInserted: !sendsError,
+                campaignSendsError: sendsError ? sendsError.message : null
             }
         });
 
