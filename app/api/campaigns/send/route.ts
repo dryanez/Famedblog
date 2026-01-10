@@ -63,6 +63,8 @@ async function getCampaignContent(campaignId: string, templateFn: (data: any) =>
 
         // Try to load saved content from database
         if (campaignName) {
+            console.log(`[DEBUG] getCampaignContent: SKIPPING DB FETCH for ${campaignName} (Debugging Hang)`);
+            /* 
             try {
                 console.log(`[DEBUG] getCampaignContent: Fetching from DB for ${campaignName}`);
                 const { data: campaign, error } = await supabase
@@ -70,7 +72,7 @@ async function getCampaignContent(campaignId: string, templateFn: (data: any) =>
                     .select('content')
                     .eq('name', campaignName)
                     .single();
-
+                
                 if (error) {
                     console.log(`[DEBUG] getCampaignContent: DB fetch error/empty for ${campaignName}: ${error.message}`);
                 }
@@ -92,6 +94,7 @@ async function getCampaignContent(campaignId: string, templateFn: (data: any) =>
             } catch (error) {
                 console.log(`No saved content for ${campaignId}, using template`);
             }
+            */
         }
 
         console.log(`[DEBUG] getCampaignContent: Using template function`);
