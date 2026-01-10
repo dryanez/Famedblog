@@ -69,7 +69,7 @@ export default function BlogManagementPage() {
                     <p className="text-gray-600 mt-2">Manage your blog content and publishing</p>
                 </div>
                 <Link
-                    href="/admin/blog/new"
+                    href="/admin/blog/create"
                     className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold shadow-lg transition-all"
                 >
                     <Plus className="w-5 h-5" />
@@ -157,8 +157,8 @@ export default function BlogManagementPage() {
                                 </td>
                                 <td className="px-6 py-4">
                                     <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${post.status === 'published' ? 'bg-green-100 text-green-700' :
-                                            post.status === 'draft' ? 'bg-yellow-100 text-yellow-700' :
-                                                'bg-blue-100 text-blue-700'
+                                        post.status === 'draft' ? 'bg-yellow-100 text-yellow-700' :
+                                            'bg-blue-100 text-blue-700'
                                         }`}>
                                         {post.status}
                                     </span>
