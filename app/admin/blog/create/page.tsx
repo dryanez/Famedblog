@@ -182,7 +182,7 @@ export default function CreateBlogPostPage() {
                                     onChange={(e) => setChatInput(e.target.value)}
                                     onKeyDown={(e) => e.key === 'Enter' && sendChat()}
                                     placeholder="e.g., Add more medical examples"
-                                    className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                                    className="flex-1 px-3 py-2 text-sm text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                                 />
                                 <button
                                     onClick={sendChat}
@@ -245,15 +245,15 @@ export default function CreateBlogPostPage() {
                                         value={topic}
                                         onChange={(e) => setTopic(e.target.value)}
                                         placeholder="e.g., 'Anamnese Tips for FaMED' or 'Exam Anxiety Strategies'"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                                        className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                                     />
                                 </div>
                                 <button
                                     onClick={handleGenerate}
                                     disabled={loading || !topic}
                                     className={`px-6 py-2 rounded-lg font-medium flex items-center gap-2 transition-all ${loading || !topic
-                                            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                                            : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-md active:scale-95'
+                                        ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                                        : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-md active:scale-95'
                                         }`}
                                 >
                                     {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5" />}
@@ -263,8 +263,8 @@ export default function CreateBlogPostPage() {
 
                             {status && (
                                 <div className={`mt-4 p-3 rounded-lg text-sm flex items-center gap-2 ${status.includes('Error') ? 'bg-red-50 text-red-700' :
-                                        status.includes('Researching') || status.includes('Initializing') ? 'bg-blue-50 text-blue-700' :
-                                            'bg-green-50 text-green-700'
+                                    status.includes('Researching') || status.includes('Initializing') ? 'bg-blue-50 text-blue-700' :
+                                        'bg-green-50 text-green-700'
                                     }`}>
                                     {loading && !status.includes('Error') && <Loader2 className="w-4 h-4 animate-spin" />}
                                     {status.includes('✅') && <CheckCircle className="w-4 h-4" />}
