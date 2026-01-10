@@ -34,58 +34,72 @@ const supabase = createClient(
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Helper function to get campaign content - checks DB first, then falls back to template
+// Helper function to get campaign content - checks DB first, then falls back to template
 async function getCampaignContent(campaignId: string, templateFn: (data: any) => string, data: any): Promise<string> {
-    // Campaign name mapping (same as in [id]/route.ts)
-    const campaignNameMap: Record<string, string> = {
-        'holiday_special': 'Holiday Special',
-        'new_year_special': 'New Year Special',
-        'exam_urgency_special_offer': 'Exam Urgency Special Offer',
-        'exam_urgency_1_week_special': '1 Week Special Offer',
-        'site_back_online': 'Site Back Online',
-        'welcome_bundle_promo': 'Welcome Bundle Promo',
-        'exam_urgency_14d': 'Exam in 14 Days',
-        'exam_urgency_7d': 'Exam in 7 Days',
-        'exam_urgency_3d': 'Exam in 3 Days',
-        'welcome_day0': 'Welcome Email',
-        'subscription_expiry': 'Subscription Expiry'
-    };
+    console.log(`[DEBUG] getCampaignContent: Starting for ${campaignId}`);
 
-    const campaignName = campaignNameMap[campaignId];
+    // Create a timeout for this operation
+    const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error(`getCampaignContent timed out for ${campaignId}`)), 5000);
+    });
 
-    // Try to load saved content from database
-    if (campaignName) {
-        try {
-            const { data: campaign } = await supabase
-                .from('campaigns')
-                .select('content')
-                .eq('name', campaignName)
-                .single();
+    const contentPromise = (async () => {
+        // Campaign name mapping (same as in [id]/route.ts)
+        const campaignNameMap: Record<string, string> = {
+            'holiday_special': 'Holiday Special',
+            'new_year_special': 'New Year Special',
+            'exam_urgency_special_offer': 'Exam Urgency Special Offer',
+            'exam_urgency_1_week_special': '1 Week Special Offer',
+            'site_back_online': 'Site Back Online',
+            'welcome_bundle_promo': 'Welcome Bundle Promo',
+            'exam_urgency_14d': 'Exam in 14 Days',
+            'exam_urgency_7d': 'Exam in 7 Days',
+            'exam_urgency_3d': 'Exam in 3 Days',
+            'welcome_day0': 'Welcome Email',
+            'subscription_expiry': 'Subscription Expiry'
+        };
 
-            if (campaign?.content) {
-                console.log(`📧 Using saved content for ${campaignId}`);
-                // Replace placeholders in saved content
-                // Handle both ${data.key} and {{key}} formats
-                let content = campaign.content;
+        const campaignName = campaignNameMap[campaignId];
 
-                Object.keys(data).forEach(key => {
-                    // Replace ${data.key} format (template literal syntax)
-                    const templateLiteralPattern = new RegExp(`\\$\\{data\\.${key}\\}`, 'g');
-                    content = content.replace(templateLiteralPattern, String(data[key] || ''));
+        // Try to load saved content from database
+        if (campaignName) {
+            try {
+                console.log(`[DEBUG] getCampaignContent: Fetching from DB for ${campaignName}`);
+                const { data: campaign, error } = await supabase
+                    .from('campaigns')
+                    .select('content')
+                    .eq('name', campaignName)
+                    .single();
 
-                    // Also replace {{key}} format (custom placeholder syntax)
-                    const customPlaceholder = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
-                    content = content.replace(customPlaceholder, String(data[key] || ''));
-                });
+                if (error) {
+                    console.log(`[DEBUG] getCampaignContent: DB fetch error/empty for ${campaignName}: ${error.message}`);
+                }
 
-                return content;
+                if (campaign?.content) {
+                    console.log(`📧 Using saved content for ${campaignId}`);
+                    // Replace placeholders in saved content
+                    let content = campaign.content;
+
+                    Object.keys(data).forEach(key => {
+                        const templateLiteralPattern = new RegExp(`\\$\\{data\\.${key}\\}`, 'g');
+                        content = content.replace(templateLiteralPattern, String(data[key] || ''));
+                        const customPlaceholder = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
+                        content = content.replace(customPlaceholder, String(data[key] || ''));
+                    });
+
+                    return content;
+                }
+            } catch (error) {
+                console.log(`No saved content for ${campaignId}, using template`);
             }
-        } catch (error) {
-            console.log(`No saved content for ${campaignId}, using template`);
         }
-    }
 
-    // Fall back to template function
-    return templateFn(data);
+        console.log(`[DEBUG] getCampaignContent: Using template function`);
+        return templateFn(data);
+    })();
+
+    // Race against timeout
+    return Promise.race([contentPromise, timeoutPromise]) as Promise<string>;
 }
 
 export async function POST(request: Request) {
