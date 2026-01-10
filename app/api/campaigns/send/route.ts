@@ -135,61 +135,85 @@ export async function POST(request: Request) {
             }
 
             // Check if already sent (unless force is true)
-            console.log(`[DEBUG] Force param received: ${force}. SKIPPING campaign_sends DB check for debugging.`);
-            /*
+            console.log(`[DEBUG] Step 2.2: Checking already_sent status. Force=${force}`);
             if (!force) {
-                const { data: sentRecord } = await supabase
-                    .from('campaign_sends')
-                    .select('id')
-                    .eq('campaign_id', campaignId)
-                    .eq('user_id', specificUserId)
-                    .single();
+                // Wrap DB call in timeout to prevent hang
+                try {
+                    const checkPromise = supabase
+                        .from('campaign_sends')
+                        .select('id')
+                        .eq('campaign_id', campaignId)
+                        .eq('user_id', specificUserId)
+                        .single();
 
-                if (sentRecord) {
-                    return NextResponse.json({
-                        error: 'Campaign already sent to this user. Use force=true to resend.'
-                    }, { status: 400 });
+                    const timeoutPromise = new Promise((_, reject) =>
+                        setTimeout(() => reject(new Error('DB Timeout')), 5000)
+                    );
+
+                    console.log('[DEBUG] Step 2.2.1: Starting DB race...');
+                    const result = await Promise.race([checkPromise, timeoutPromise]) as any;
+                    console.log('[DEBUG] Step 2.3: DB check complete', { found: !!result.data });
+
+                    if (result.data) {
+                        return NextResponse.json({
+                            error: 'Campaign already sent to this user. Use force=true to resend.'
+                        }, { status: 400 });
+                    }
+                } catch (e: any) {
+                    console.error('[DEBUG] Step 2.3: DB Check Failed/Timed Out', e);
+                    // Decide if we should abort or continue. 
+                    // Let's continue for now but log it.
                 }
+            } else {
+                console.log('[DEBUG] Step 2.3: Skipped DB check (Force=true)');
             }
-            */
 
+            console.log('[DEBUG] Step 2.4: Assigning user data');
             users = [data];
             targetUsers = users;
 
+            console.log(`[DEBUG] Step 2.5: Selecting Template for CampaignID: ${campaignId}`);
             // Set templates based on campaign type
             switch (campaignId) {
                 case 'exam_urgency_14d':
+                    console.log('[DEBUG] Step 2.6: Selected exam_urgency_14d');
                     emailTemplate = getExamUrgency14Days;
                     textTemplate = getTextExamUrgency14Days;
                     subjectLine = '⚠️ Your Exam is in 14 Days!';
                     break;
                 case 'exam_urgency_special_offer':
+                    console.log('[DEBUG] Step 2.6: Selected exam_urgency_special_offer');
                     emailTemplate = getExamUrgencySpecialOffer;
                     textTemplate = getTextExamUrgencySpecialOffer;
                     subjectLine = '🔥 Last Chance: €17.99 Special Offer';
                     break;
                 case 'exam_urgency_1_week_special':
+                    console.log('[DEBUG] Step 2.6: Selected exam_urgency_1_week_special');
                     emailTemplate = getExamUrgency1WeekSpecial;
                     textTemplate = getTextExamUrgency1WeekSpecial;
                     subjectLine = '🚨 Final Week Special Offer';
                     break;
                 case 'welcome_bundle_promo':
+                    console.log('[DEBUG] Step 2.6: Selected welcome_bundle_promo');
                     emailTemplate = getWelcomeBundlePromo;
                     textTemplate = getTextWelcomeBundlePromo;
                     subjectLine = '🎁 Welcome to FaMED - Special Offer';
                     break;
                 case 'site_back_online':
+                    console.log('[DEBUG] Step 2.6: Selected site_back_online');
                     emailTemplate = getSiteBackOnline;
                     textTemplate = getTextSiteBackOnline;
                     subjectLine = "We're Back Online!";
                     break;
                 default:
+                    console.log(`[DEBUG] Step 2.6: Default template fallback for ${campaignId}`);
                     emailTemplate = getWelcomeDay0;
                     textTemplate = getTextWelcomeDay0;
                     subjectLine = '👋 Welcome to FaMED!';
                     break;
             }
             fetchError = null;
+            console.log('[DEBUG] Step 2.7: Logic Block Complete');
 
         } else if (userIds && Array.isArray(userIds) && userIds.length > 0) {
             console.log('📧 Optimized Fetch: Fetching specific users', userIds.length);
