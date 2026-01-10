@@ -243,8 +243,9 @@ export default function CreateBlogPostPage() {
                             >
                                 <Upload className="w-8 h-8 mx-auto text-gray-400 mb-2" />
                                 <p className="text-sm text-gray-600">Drop files or click</p>
+                                <p className="text-xs text-gray-400 mt-1">TXT or MD only</p>
                             </div>
-                            <input ref={fileInputRef} type="file" multiple onChange={(e) => handleFileUpload(e.target.files)} className="hidden" />
+                            <input ref={fileInputRef} type="file" accept=".txt,.md" multiple onChange={(e) => handleFileUpload(e.target.files)} className="hidden" />
 
                             {uploadedFiles.length > 0 && (
                                 <div className="space-y-2">

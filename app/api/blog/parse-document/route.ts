@@ -17,37 +17,12 @@ export async function POST(request: Request) {
 
         let extractedText = '';
 
-        // Handle different file types
-        if (fileName.endsWith('.pdf')) {
-            try {
-                // Use require for pdf-parse as it doesn't have proper ESM support
-                const pdfParse = require('pdf-parse');
-                const pdfData = await pdfParse(buffer);
-                extractedText = pdfData.text;
-
-                if (!extractedText || extractedText.trim().length === 0) {
-                    return NextResponse.json({
-                        error: 'PDF has no extractable text (might be scanned images only). Try a TXT file instead.',
-                        success: false
-                    }, { status: 400 });
-                }
-            } catch (e: any) {
-                console.error('PDF parse error:', e);
-                return NextResponse.json({
-                    error: `PDF parsing failed: ${e.message}. Try a TXT file instead.`,
-                    success: false
-                }, { status: 400 });
-            }
-        } else if (fileName.endsWith('.txt') || fileName.endsWith('.md')) {
+        // Only support text-based files (PDF parsing doesn't work in serverless)
+        if (fileName.endsWith('.txt') || fileName.endsWith('.md')) {
             extractedText = buffer.toString('utf-8');
-        } else if (fileName.endsWith('.docx')) {
-            return NextResponse.json({
-                error: 'DOCX not supported. Please convert to PDF or TXT first.',
-                success: false
-            }, { status: 400 });
         } else {
             return NextResponse.json({
-                error: 'Unsupported file type. Use PDF, TXT, or MD files.',
+                error: 'Only TXT and MD files are supported. Please convert your document to plain text first.',
                 success: false
             }, { status: 400 });
         }
@@ -68,7 +43,7 @@ export async function POST(request: Request) {
     } catch (error: any) {
         console.error('Document parse error:', error);
         return NextResponse.json({
-            error: error.message || 'Failed to parse document. Try a TXT file.',
+            error: error.message || 'Failed to parse document',
             success: false
         }, { status: 500 });
     }
