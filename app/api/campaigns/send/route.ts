@@ -89,6 +89,13 @@ async function getCampaignContent(campaignId: string, templateFn: (data: any) =>
 }
 
 export async function POST(request: Request) {
+    // DEBUG: Immediate return to test connectivity
+    console.log('🚨 DEBUG: API Hit - Immediate Return');
+    return NextResponse.json({
+        success: true,
+        debug: { message: "API is reachable", step: 0 }
+    });
+
     try {
         const { campaignId, testEmail, userIds, emails, specificUserId, force } = await request.json();
 
