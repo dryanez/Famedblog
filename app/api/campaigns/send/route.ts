@@ -738,30 +738,34 @@ export async function POST(request: Request) {
 
             let sendResult, sendError;
             try {
-                console.log(`[DEBUG] Step 5.${i}: Attempting to call resend.batch.send...`);
+                console.log(`[DEBUG] Step 5.${i}: Attempting to call Resend API via raw fetch...`);
 
-                // create a timeout promise
-                const timeoutPromise = new Promise((_, reject) => {
-                    setTimeout(() => reject(new Error('Resend API call timed out after 15 seconds')), 15000);
+                const response = await fetch('https://api.resend.com/emails/batch', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(chunk)
                 });
 
-                // Race the API call against the timeout
-                const result: any = await Promise.race([
-                    resend.batch.send(chunk),
-                    timeoutPromise
-                ]);
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log(`[DEBUG] Step 5.${i}: Resend API SUCCESS via fetch`);
+                    sendResult = data;
+                } else {
+                    const errorText = await response.text();
+                    console.error(`[DEBUG] Step 5.${i}: Resend API FAILED via fetch: ${response.status} ${errorText}`);
+                    sendError = { message: errorText, status: response.status };
+                }
 
-                console.log(`[DEBUG] Step 5.${i}: Resend API returned successfully`);
-                sendResult = result.data;
-                sendError = result.error;
-            } catch (e) {
-                console.error(`❌ CRITICAL: Resend API call threw an exception or timed out in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, e);
+            } catch (e: any) {
+                console.error(`❌ CRITICAL: Raw fetch to Resend API threw exception in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, e);
                 sendError = e;
             }
 
             if (sendError) {
                 console.error(`❌ Resend error in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, sendError);
-                console.error('Resend error details:', JSON.stringify(sendError, null, 2));
                 // Continue with other batches even if one fails
                 continue;
             }
