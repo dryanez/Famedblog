@@ -63,7 +63,7 @@ status: "draft"
 Generate the complete blog post now, starting with the frontmatter.`;
 
         const result = await generateText({
-            model: google('gemini-2.0-flash'),
+            model: google('gemini-1.5-pro'),
             prompt: prompt,
             temperature: 0.7,
         });
