@@ -215,15 +215,7 @@ export async function POST(request: Request) {
             fetchError = null;
             console.log('[DEBUG] Step 2.7: Logic Block Complete');
 
-            // DEBUG PROBE: We survived the Specific User Block
-            return NextResponse.json({
-                success: true,
-                debug: {
-                    step: '2.7 - Block Complete',
-                    forceParam: force,
-                    campaignId: campaignId
-                }
-            });
+            // DEBUG PROBE REMOVED
 
         } else if (userIds && Array.isArray(userIds) && userIds.length > 0) {
             console.log('📧 Optimized Fetch: Fetching specific users', userIds.length);
