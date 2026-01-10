@@ -20,8 +20,8 @@ export async function POST(request: Request) {
         // Handle different file types
         if (fileName.endsWith('.pdf')) {
             try {
-                // Dynamic import to avoid serverless issues
-                const pdfParse = (await import('pdf-parse')).default;
+                // Use require for pdf-parse as it doesn't have proper ESM support
+                const pdfParse = require('pdf-parse');
                 const pdfData = await pdfParse(buffer);
                 extractedText = pdfData.text;
 
