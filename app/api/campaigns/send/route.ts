@@ -115,17 +115,6 @@ export async function POST(request: Request) {
 
             console.log('[DEBUG] Step 2.1: Specific user fetch result:', { success: !!data, error: error?.message });
 
-            // DEBUG PROBE: Check if we survived the fetch
-            return NextResponse.json({
-                success: true,
-                debug: {
-                    step: '2.1 - User Fetched',
-                    userFound: !!data,
-                    userId: data?.id,
-                    error: error?.message
-                }
-            });
-
             if (error || !data) {
                 console.error('❌ User not found:', error);
                 return NextResponse.json({ error: 'User not found' }, { status: 404 });
