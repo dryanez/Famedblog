@@ -736,14 +736,20 @@ export async function POST(request: Request) {
             console.log(`Sending batch ${Math.floor(i / BATCH_SIZE) + 1} of ${Math.ceil(emailsToSend.length / BATCH_SIZE)} (${chunk.length} emails)`);
             console.log('Sending via Resend API key:', process.env.RESEND_API_KEY ? 'Present' : 'MISSING');
 
-            const { data: sendResult, error: sendError } = await resend.batch.send(chunk);
+            let sendResult, sendError;
+            try {
+                console.log('Attempting to call resend.batch.send associated with API Key...');
+                const result = await resend.batch.send(chunk);
+                sendResult = result.data;
+                sendError = result.error;
+            } catch (e) {
+                console.error(`❌ CRITICAL: Resend API call threw an exception in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, e);
+                sendError = e;
+            }
 
             if (sendError) {
                 console.error(`❌ Resend error in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, sendError);
                 console.error('Resend error details:', JSON.stringify(sendError, null, 2));
-                console.error('Campaign ID:', campaignId);
-                console.error('Number of emails in this batch:', chunk.length);
-                console.error('First email in failed batch:', chunk[0]);
                 // Continue with other batches even if one fails
                 continue;
             }
@@ -833,7 +839,11 @@ export async function POST(request: Request) {
                 email: u.email,
                 name: u.full_name,
                 accountType: u.account_type
-            }))
+            })),
+            debug: {
+                allResults,
+                apiKeyPresent: !!process.env.RESEND_API_KEY
+            }
         });
 
     } catch (error: any) {
