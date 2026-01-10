@@ -612,7 +612,7 @@ export async function POST(request: Request) {
         // Skip deduplication for test emails AND manual user/email selection
         const isManualSelection = (userIds && userIds.length > 0) || (emails && emails.length > 0);
 
-        if (!testEmail && !isManualSelection) { // Skip deduplication for test emails and manual selections
+        if (!testEmail && !isManualSelection && !force) { // Skip deduplication for test emails, manual selections, and forced sends
             const { data: existingLogs, error: logError } = await supabase
                 .from('campaign_logs')
                 .select('user_id, user_email')
@@ -678,24 +678,12 @@ export async function POST(request: Request) {
         }));
         console.log('[DEBUG] Step 4.2: Content generation complete');
 
-        // DEBUG PROBE: Loop Complete
-        return NextResponse.json({
-            success: true,
-            debug: {
-                step: '4.2 - Loop Complete',
-                generatedCount: emailsToSend.length
-            }
-        });
-
-        /* CODE BELOW IS UNREACHABLE DUE TO PROBE RETURN - COMMENTED OUT FOR DEBUGGING
+        // Send emails using Resend batch API (max 100 per batch)
         console.log('📧 About to send emails:', {
             targetUsersCount: targetUsers.length,
             emailsToSendCount: emailsToSend.length,
             firstEmail: emailsToSend[0] ? { to: emailsToSend[0].to, subject: emailsToSend[0].subject } : 'none'
         });
-
-        // ... (Rest of send logic) ...
-        */
 
     } catch (error: any) {
         console.error('Campaign send error:', error);
