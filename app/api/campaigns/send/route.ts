@@ -802,6 +802,8 @@ export async function POST(request: Request) {
         if (sendsError) {
             console.error('Failed to record campaign sends:', sendsError);
             // We don't fail the request since emails were sent
+        } else {
+            console.log(`✅ Successfully recorded ${sendRecords.length} sends to campaign_sends table`);
         }
 
         return NextResponse.json({

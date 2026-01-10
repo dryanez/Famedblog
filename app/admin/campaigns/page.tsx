@@ -370,9 +370,11 @@ export default function CampaignsPage() {
             }
 
             if (response.ok) {
+                console.log('✅ Page: Email sent successfully, refreshing modal...');
                 alert(`✅ Email sent successfully!`);
                 // Refresh the preview to update "already sent" status
                 await handlePreviewRecipients(previewCampaignData.campaignId, previewCampaignData.campaignName);
+                console.log('✅ Page: Modal refreshed');
             } else {
                 alert(`Failed to send: ${data.error}`);
             }
