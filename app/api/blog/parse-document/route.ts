@@ -1,6 +1,4 @@
 import { NextResponse } from 'next/server';
-// @ts-ignore - pdf-parse doesn't have types
-import pdf from 'pdf-parse';
 
 export const maxDuration = 30;
 
@@ -22,31 +20,42 @@ export async function POST(request: Request) {
         // Handle different file types
         if (fileName.endsWith('.pdf')) {
             try {
-                const pdfData = await pdf(buffer);
+                // Dynamic import to avoid serverless issues
+                const pdfParse = (await import('pdf-parse')).default;
+                const pdfData = await pdfParse(buffer);
                 extractedText = pdfData.text;
+
+                if (!extractedText || extractedText.trim().length === 0) {
+                    return NextResponse.json({
+                        error: 'PDF has no extractable text (might be scanned images only). Try a TXT file instead.',
+                        success: false
+                    }, { status: 400 });
+                }
             } catch (e: any) {
+                console.error('PDF parse error:', e);
                 return NextResponse.json({
-                    error: 'Failed to parse PDF',
-                    details: e.message
+                    error: `PDF parsing failed: ${e.message}. Try a TXT file instead.`,
+                    success: false
                 }, { status: 400 });
             }
         } else if (fileName.endsWith('.txt') || fileName.endsWith('.md')) {
             extractedText = buffer.toString('utf-8');
         } else if (fileName.endsWith('.docx')) {
-            // For DOCX, we'd need mammoth.js - for now just return error
             return NextResponse.json({
-                error: 'DOCX not yet supported. Please use PDF or TXT.'
+                error: 'DOCX not supported. Please convert to PDF or TXT first.',
+                success: false
             }, { status: 400 });
         } else {
             return NextResponse.json({
-                error: `Unsupported file type: ${fileName}`
+                error: 'Unsupported file type. Use PDF, TXT, or MD files.',
+                success: false
             }, { status: 400 });
         }
 
-        // Truncate if too long (keep first 10000 chars to avoid token limits)
+        // Truncate if too long
         const maxLength = 10000;
         if (extractedText.length > maxLength) {
-            extractedText = extractedText.substring(0, maxLength) + '\n\n[... content truncated for length ...]';
+            extractedText = extractedText.substring(0, maxLength) + '\n\n[... truncated for length ...]';
         }
 
         return NextResponse.json({
@@ -58,6 +67,9 @@ export async function POST(request: Request) {
 
     } catch (error: any) {
         console.error('Document parse error:', error);
-        return NextResponse.json({ error: error.message }, { status: 500 });
+        return NextResponse.json({
+            error: error.message || 'Failed to parse document. Try a TXT file.',
+            success: false
+        }, { status: 500 });
     }
 }
