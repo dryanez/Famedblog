@@ -8,7 +8,7 @@ export const maxDuration = 60; // Allow up to 60s for generation
 
 export async function POST(request: Request) {
     try {
-        const { topic } = await request.json();
+        const { topic, additionalContext } = await request.json();
 
         if (!topic) {
             return NextResponse.json(
@@ -39,6 +39,8 @@ TOPIC: ${topic}
 FAMED CONTEXT (USE THIS AS YOUR KNOWLEDGE BASE):
 ${famedContext || 'Use general FaMED exam knowledge'}
 
+${additionalContext ? `\n${additionalContext}` : ''}
+
 IMPORTANT REQUIREMENTS:
 - Write in German
 - Reference the "FaMED Protokoll Book" when giving advice
@@ -46,6 +48,9 @@ IMPORTANT REQUIREMENTS:
 - Mention communication skills (Anamnese)
 - Keep it under 1500 words
 - Use markdown format with proper headings
+- **ADD 1-2 IMAGE PLACEHOLDERS** throughout the post using this format:
+  ![Description of helpful image here](/placeholder-image.jpg)
+  Example: ![FaMED Anamnese Struktur Diagram](/images/anamnese-structure.jpg)
 - Include frontmatter in this EXACT format:
 ---
 title: "[Your title in German]"
