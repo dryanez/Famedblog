@@ -89,13 +89,6 @@ async function getCampaignContent(campaignId: string, templateFn: (data: any) =>
 }
 
 export async function POST(request: Request) {
-    // DEBUG: Immediate return to test connectivity
-    console.log('🚨 DEBUG: API Hit - Immediate Return');
-    return NextResponse.json({
-        success: true,
-        debug: { message: "API is reachable", step: 0 }
-    });
-
     try {
         const { campaignId, testEmail, userIds, emails, specificUserId, force } = await request.json();
 
@@ -121,6 +114,17 @@ export async function POST(request: Request) {
                 .single();
 
             console.log('[DEBUG] Step 2.1: Specific user fetch result:', { success: !!data, error: error?.message });
+
+            // DEBUG PROBE: Check if we survived the fetch
+            return NextResponse.json({
+                success: true,
+                debug: {
+                    step: '2.1 - User Fetched',
+                    userFound: !!data,
+                    userId: data?.id,
+                    error: error?.message
+                }
+            });
 
             if (error || !data) {
                 console.error('❌ User not found:', error);
