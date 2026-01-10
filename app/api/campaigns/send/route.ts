@@ -649,216 +649,253 @@ export async function POST(request: Request) {
             }
         }
 
-        if (targetUsers.length === 0) {
-            return NextResponse.json({
-                success: true,
-                sentCount: 0,
-                message: testEmail
-                    ? 'No users match the campaign criteria'
-                    : 'No new users to send to - all eligible users have already received this campaign'
-            });
+    }
+
+        // DEBUG PROBE 3.5
+        console.log('[DEBUG] Step 3.5: Pre-Loop Check. Target users:', targetUsers.length);
+    if (targetUsers.length > 0) {
+        console.log('[DEBUG] Step 3.5.1: TargetUsers exists');
+    }
+
+    // Prepare emails for all eligible users
+    console.log('[DEBUG] Step 4: Generating email content...');
+    const emailsToSend = await Promise.all(targetUsers.map(async (user, idx) => {
+        console.log(`[DEBUG] Step 4.0: Inside Map for user ${user.id} (idx ${idx})`);
+
+        // Personalization variables
+        const templateData = {
+            userName: user.full_name || 'Future Doctor',
+            firstName: user.full_name ? user.full_name.split(' ')[0] : 'Future Doctor',
+            examDate: user.exam_date ? new Date(user.exam_date).toLocaleDateString('de-DE') : 'upcoming exam',
+            year: new Date().getFullYear()
+        };
+
+        // Get content (DB or Template)
+        const htmlContent = await getCampaignContent(campaignId, emailTemplate, templateData);
+        console.log(`[DEBUG] Step 4.1: Content Generated for user ${user.id}`);
+
+        const textContent = textTemplate(templateData);
+        const subject = subjectLine;
+
+        return {
+            from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
+            to: [user.email],
+            subject: subject,
+            html: htmlContent,
+            text: textContent
+        };
+    }));
+    console.log('[DEBUG] Step 4.2: Content generation complete');
+
+    // DEBUG PROBE: Loop Complete
+    return NextResponse.json({
+        success: true,
+        debug: {
+            step: '4.2 - Loop Complete',
+            generatedCount: emailsToSend.length
         }
+    });
 
-        // Prepare emails for all eligible users
-        const emailsToSend = await Promise.all(targetUsers.map(async (user) => {
-            const daysUntilExam = user.exam_date
-                ? Math.ceil((new Date(user.exam_date).getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
-                : null;
+    // Prepare emails for all eligible users
+    const emailsToSend = await Promise.all(targetUsers.map(async (user) => {
+        const daysUntilExam = user.exam_date
+            ? Math.ceil((new Date(user.exam_date).getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
+            : null;
 
-            // Helper function to replace placeholders
-            const replacePlaceholders = (content: string, data: any) => {
-                let text = content;
-                const replacements: Record<string, string | undefined> = {
-                    '{{userName}}': data.userName,
-                    '{{userEmail}}': data.userEmail,
-                    '{{examDate}}': data.examDate ? new Date(data.examDate).toLocaleDateString('de-DE') : '',
-                    '{{daysUntilExam}}': data.daysUntilExam?.toString(),
-                    '{{planExpiry}}': data.planExpiry ? new Date(data.planExpiry).toLocaleDateString('de-DE') : '',
-                    '{{accountType}}': data.accountType
-                };
-
-                Object.entries(replacements).forEach(([key, value]) => {
-                    text = text.replace(new RegExp(key, 'g'), value || '');
-                });
-                return text;
+        // Helper function to replace placeholders
+        const replacePlaceholders = (content: string, data: any) => {
+            let text = content;
+            const replacements: Record<string, string | undefined> = {
+                '{{userName}}': data.userName,
+                '{{userEmail}}': data.userEmail,
+                '{{examDate}}': data.examDate ? new Date(data.examDate).toLocaleDateString('de-DE') : '',
+                '{{daysUntilExam}}': data.daysUntilExam?.toString(),
+                '{{planExpiry}}': data.planExpiry ? new Date(data.planExpiry).toLocaleDateString('de-DE') : '',
+                '{{accountType}}': data.accountType
             };
 
-            const templateData = {
-                userName: user.full_name || 'there',
-                userEmail: user.email,
-                examDate: user.exam_date,
-                daysUntilExam,
-                planExpiry: user.plan_expiry,
-                accountType: user.account_type
-            };
-
-            // Use helper function to get content (checks DB first, then template)
-            const htmlContent = await getCampaignContent(campaignId, emailTemplate, templateData);
-
-            const textContent = textTemplate({
-                userName: user.full_name || 'there',
-                userEmail: user.email,
-                examDate: user.exam_date,
-                daysUntilExam,
-                planExpiry: user.plan_expiry,
-                accountType: user.account_type
+            Object.entries(replacements).forEach(([key, value]) => {
+                text = text.replace(new RegExp(key, 'g'), value || '');
             });
+            return text;
+        };
 
-            return {
-                from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
-                to: user.email,
-                subject: subjectLine,
-                html: htmlContent,
-                text: textContent
-            };
-        }));
+        const templateData = {
+            userName: user.full_name || 'there',
+            userEmail: user.email,
+            examDate: user.exam_date,
+            daysUntilExam,
+            planExpiry: user.plan_expiry,
+            accountType: user.account_type
+        };
 
-        console.log('📧 About to send emails:', {
-            targetUsersCount: targetUsers.length,
-            emailsToSendCount: emailsToSend.length,
-            firstEmail: emailsToSend[0] ? { to: emailsToSend[0].to, subject: emailsToSend[0].subject } : 'none'
+        // Use helper function to get content (checks DB first, then template)
+        const htmlContent = await getCampaignContent(campaignId, emailTemplate, templateData);
+
+        const textContent = textTemplate({
+            userName: user.full_name || 'there',
+            userEmail: user.email,
+            examDate: user.exam_date,
+            daysUntilExam,
+            planExpiry: user.plan_expiry,
+            accountType: user.account_type
         });
 
-        // Send emails using Resend batch API (max 100 per batch)
-        const BATCH_SIZE = 100;
-        let totalSent = 0;
-        const allResults: any[] = [];
+        return {
+            from: 'FaMED-Vorbereitung <team@famed-vorbereitung.com>',
+            to: user.email,
+            subject: subjectLine,
+            html: htmlContent,
+            text: textContent
+        };
+    }));
 
-        for (let i = 0; i < emailsToSend.length; i += BATCH_SIZE) {
-            const chunk = emailsToSend.slice(i, i + BATCH_SIZE);
-            console.log(`Sending batch ${Math.floor(i / BATCH_SIZE) + 1} of ${Math.ceil(emailsToSend.length / BATCH_SIZE)} (${chunk.length} emails)`);
-            console.log('Sending via Resend API key:', process.env.RESEND_API_KEY ? 'Present' : 'MISSING');
+    console.log('📧 About to send emails:', {
+        targetUsersCount: targetUsers.length,
+        emailsToSendCount: emailsToSend.length,
+        firstEmail: emailsToSend[0] ? { to: emailsToSend[0].to, subject: emailsToSend[0].subject } : 'none'
+    });
 
-            let sendResult, sendError;
-            try {
-                console.log(`[DEBUG] Step 5.${i}: Attempting to call Resend API via raw fetch...`);
+    // Send emails using Resend batch API (max 100 per batch)
+    const BATCH_SIZE = 100;
+    let totalSent = 0;
+    const allResults: any[] = [];
 
-                const response = await fetch('https://api.resend.com/emails/batch', {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(chunk)
-                });
+    for (let i = 0; i < emailsToSend.length; i += BATCH_SIZE) {
+        const chunk = emailsToSend.slice(i, i + BATCH_SIZE);
+        console.log(`Sending batch ${Math.floor(i / BATCH_SIZE) + 1} of ${Math.ceil(emailsToSend.length / BATCH_SIZE)} (${chunk.length} emails)`);
+        console.log('Sending via Resend API key:', process.env.RESEND_API_KEY ? 'Present' : 'MISSING');
 
-                if (response.ok) {
-                    const data = await response.json();
-                    console.log(`[DEBUG] Step 5.${i}: Resend API SUCCESS via fetch`);
-                    sendResult = data;
-                } else {
-                    const errorText = await response.text();
-                    console.error(`[DEBUG] Step 5.${i}: Resend API FAILED via fetch: ${response.status} ${errorText}`);
-                    sendError = { message: errorText, status: response.status };
-                }
+        let sendResult, sendError;
+        try {
+            console.log(`[DEBUG] Step 5.${i}: Attempting to call Resend API via raw fetch...`);
 
-            } catch (e: any) {
-                console.error(`❌ CRITICAL: Raw fetch to Resend API threw exception in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, e);
-                sendError = e;
-            }
+            const response = await fetch('https://api.resend.com/emails/batch', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(chunk)
+            });
 
-            if (sendError) {
-                console.error(`❌ Resend error in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, sendError);
-                // Continue with other batches even if one fails
-                continue;
-            }
-
-            console.log(`✅ Batch ${Math.floor(i / BATCH_SIZE) + 1} sent successfully. Result:`, JSON.stringify(sendResult, null, 2));
-
-            if (sendResult?.data) {
-                // Collect results for logging
-                if (Array.isArray(sendResult.data)) {
-                    allResults.push(...sendResult.data);
-                } else {
-                    allResults.push(sendResult.data);
-                }
+            if (response.ok) {
+                const data = await response.json();
+                console.log(`[DEBUG] Step 5.${i}: Resend API SUCCESS via fetch`);
+                sendResult = data;
             } else {
-                console.warn('⚠️ Send result success but no data returned:', sendResult);
+                const errorText = await response.text();
+                console.error(`[DEBUG] Step 5.${i}: Resend API FAILED via fetch: ${response.status} ${errorText}`);
+                sendError = { message: errorText, status: response.status };
             }
 
-            totalSent += chunk.length;
-            if (sendResult?.data) {
+        } catch (e: any) {
+            console.error(`❌ CRITICAL: Raw fetch to Resend API threw exception in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, e);
+            sendError = e;
+        }
+
+        if (sendError) {
+            console.error(`❌ Resend error in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, sendError);
+            // Continue with other batches even if one fails
+            continue;
+        }
+
+        console.log(`✅ Batch ${Math.floor(i / BATCH_SIZE) + 1} sent successfully. Result:`, JSON.stringify(sendResult, null, 2));
+
+        if (sendResult?.data) {
+            // Collect results for logging
+            if (Array.isArray(sendResult.data)) {
                 allResults.push(...sendResult.data);
+            } else {
+                allResults.push(sendResult.data);
             }
+        } else {
+            console.warn('⚠️ Send result success but no data returned:', sendResult);
         }
 
-        console.log(`Successfully sent ${totalSent} out of ${emailsToSend.length} emails`);
-
-        if (totalSent === 0) {
-            return NextResponse.json({
-                error: 'Failed to send any emails'
-            }, { status: 500 });
+        totalSent += chunk.length;
+        if (sendResult?.data) {
+            allResults.push(...sendResult.data);
         }
+    }
 
-        // Log sent emails to database
-        const logs = emailsToSend.map((email, index) => {
-            // Map results from batched sending
-            const resendId = allResults?.[index]?.id;
-            const user = targetUsers[index];
+    console.log(`Successfully sent ${totalSent} out of ${emailsToSend.length} emails`);
 
-            return {
-                campaign_id: campaignId,
-                user_email: email.to,
-                user_id: user.id || null, // null for test emails
-                status: 'sent',
-                resend_email_id: resendId,
-                metadata: {
-                    subject: email.subject,
-                    sent_at: new Date().toISOString(),
-                    is_test: !!testEmail
-                }
-            };
-        });
-
-        // Log to campaign_logs table
-        const { error: logError } = await supabase
-            .from('campaign_logs')
-            .insert(logs);
-
-        if (logError) {
-            console.error('Failed to log campaign sends:', logError);
-            // We don't fail the request since emails were sent
-        }
-
-        // ALSO log to campaign_sends table for tracking "already sent" status
-        const sendRecords = emailsToSend.map((email, index) => {
-            const user = targetUsers[index];
-            return {
-                campaign_id: campaignId,
-                user_id: user?.id || null,
-                sent_at: new Date().toISOString()
-            };
-        });
-
-        const { error: sendsError } = await supabase
-            .from('campaign_sends')
-            .insert(sendRecords);
-
-        if (sendsError) {
-            console.error('Failed to record campaign sends:', sendsError);
-            // We don't fail the request since emails were sent
-        }
-
+    if (totalSent === 0) {
         return NextResponse.json({
-            success: true,
-            sentCount: emailsToSend.length,
-            totalEligible: targetUsers.length,
-            message: `Successfully sent ${emailsToSend.length} emails`,
-            recipients: targetUsers.map(u => ({
-                email: u.email,
-                name: u.full_name,
-                accountType: u.account_type
-            })),
-            debug: {
-                allResults,
-                apiKeyPresent: !!process.env.RESEND_API_KEY
-            }
-        });
-
-    } catch (error: any) {
-        console.error('Campaign send error:', error);
-        return NextResponse.json({
-            error: error.message || 'Internal server error'
+            error: 'Failed to send any emails'
         }, { status: 500 });
     }
+
+    // Log sent emails to database
+    const logs = emailsToSend.map((email, index) => {
+        // Map results from batched sending
+        const resendId = allResults?.[index]?.id;
+        const user = targetUsers[index];
+
+        return {
+            campaign_id: campaignId,
+            user_email: email.to,
+            user_id: user.id || null, // null for test emails
+            status: 'sent',
+            resend_email_id: resendId,
+            metadata: {
+                subject: email.subject,
+                sent_at: new Date().toISOString(),
+                is_test: !!testEmail
+            }
+        };
+    });
+
+    // Log to campaign_logs table
+    const { error: logError } = await supabase
+        .from('campaign_logs')
+        .insert(logs);
+
+    if (logError) {
+        console.error('Failed to log campaign sends:', logError);
+        // We don't fail the request since emails were sent
+    }
+
+    // ALSO log to campaign_sends table for tracking "already sent" status
+    const sendRecords = emailsToSend.map((email, index) => {
+        const user = targetUsers[index];
+        return {
+            campaign_id: campaignId,
+            user_id: user?.id || null,
+            sent_at: new Date().toISOString()
+        };
+    });
+
+    const { error: sendsError } = await supabase
+        .from('campaign_sends')
+        .insert(sendRecords);
+
+    if (sendsError) {
+        console.error('Failed to record campaign sends:', sendsError);
+        // We don't fail the request since emails were sent
+    }
+
+    return NextResponse.json({
+        success: true,
+        sentCount: emailsToSend.length,
+        totalEligible: targetUsers.length,
+        message: `Successfully sent ${emailsToSend.length} emails`,
+        recipients: targetUsers.map(u => ({
+            email: u.email,
+            name: u.full_name,
+            accountType: u.account_type
+        })),
+        debug: {
+            allResults,
+            apiKeyPresent: !!process.env.RESEND_API_KEY
+        }
+    });
+
+} catch (error: any) {
+    console.error('Campaign send error:', error);
+    return NextResponse.json({
+        error: error.message || 'Internal server error'
+    }, { status: 500 });
+}
 }
