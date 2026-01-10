@@ -685,6 +685,141 @@ export async function POST(request: Request) {
             firstEmail: emailsToSend[0] ? { to: emailsToSend[0].to, subject: emailsToSend[0].subject } : 'none'
         });
 
+        const BATCH_SIZE = 100;
+        let totalSent = 0;
+        const allResults: any[] = [];
+
+        for (let i = 0; i < emailsToSend.length; i += BATCH_SIZE) {
+            const chunk = emailsToSend.slice(i, i + BATCH_SIZE);
+            console.log(`Sending batch ${Math.floor(i / BATCH_SIZE) + 1} of ${Math.ceil(emailsToSend.length / BATCH_SIZE)} (${chunk.length} emails)`);
+            console.log('Sending via Resend API key:', process.env.RESEND_API_KEY ? 'Present' : 'MISSING');
+
+            let sendResult, sendError;
+            try {
+                console.log(`[DEBUG] Step 5.${i}: Attempting to call Resend API via raw fetch...`);
+
+                const response = await fetch('https://api.resend.com/emails/batch', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(chunk)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log(`[DEBUG] Step 5.${i}: Resend API SUCCESS via fetch`);
+                    sendResult = data;
+                } else {
+                    const errorText = await response.text();
+                    console.error(`[DEBUG] Step 5.${i}: Resend API FAILED via fetch: ${response.status} ${errorText}`);
+                    sendError = { message: errorText, status: response.status };
+                }
+
+            } catch (e: any) {
+                console.error(`❌ CRITICAL: Raw fetch to Resend API threw exception in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, e);
+                sendError = e;
+            }
+
+            if (sendError) {
+                console.error(`❌ Resend error in batch ${Math.floor(i / BATCH_SIZE) + 1}:`, sendError);
+                // Continue with other batches even if one fails
+                continue;
+            }
+
+            console.log(`✅ Batch ${Math.floor(i / BATCH_SIZE) + 1} sent successfully. Result:`, JSON.stringify(sendResult, null, 2));
+
+            if (sendResult?.data) {
+                // Collect results for logging
+                if (Array.isArray(sendResult.data)) {
+                    allResults.push(...sendResult.data);
+                } else {
+                    allResults.push(sendResult.data);
+                }
+            } else {
+                console.warn('⚠️ Send result success but no data returned:', sendResult);
+            }
+
+            totalSent += chunk.length;
+            if (sendResult?.data) {
+                allResults.push(...sendResult.data);
+            }
+        }
+
+        console.log(`Successfully sent ${totalSent} out of ${emailsToSend.length} emails`);
+
+        if (totalSent === 0) {
+            return NextResponse.json({
+                error: 'Failed to send any emails'
+            }, { status: 500 });
+        }
+
+        // Log sent emails to database
+        const logs = emailsToSend.map((email, index) => {
+            // Map results from batched sending
+            const resendId = allResults?.[index]?.id;
+            const user = targetUsers[index];
+
+            return {
+                campaign_id: campaignId,
+                user_email: email.to,
+                user_id: user.id || null, // null for test emails
+                status: 'sent',
+                resend_email_id: resendId,
+                metadata: {
+                    subject: email.subject,
+                    sent_at: new Date().toISOString(),
+                    is_test: !!testEmail
+                }
+            };
+        });
+
+        // Log to campaign_logs table
+        const { error: logError } = await supabase
+            .from('campaign_logs')
+            .insert(logs);
+
+        if (logError) {
+            console.error('Failed to log campaign sends:', logError);
+            // We don't fail the request since emails were sent
+        }
+
+        // ALSO log to campaign_sends table for tracking "already sent" status
+        const sendRecords = emailsToSend.map((email, index) => {
+            const user = targetUsers[index];
+            return {
+                campaign_id: campaignId,
+                user_id: user?.id || null,
+                sent_at: new Date().toISOString()
+            };
+        });
+
+        const { error: sendsError } = await supabase
+            .from('campaign_sends')
+            .insert(sendRecords);
+
+        if (sendsError) {
+            console.error('Failed to record campaign sends:', sendsError);
+            // We don't fail the request since emails were sent
+        }
+
+        return NextResponse.json({
+            success: true,
+            sentCount: emailsToSend.length,
+            totalEligible: targetUsers.length,
+            message: `Successfully sent ${emailsToSend.length} emails`,
+            recipients: targetUsers.map(u => ({
+                email: u.email,
+                name: u.full_name,
+                accountType: u.account_type
+            })),
+            debug: {
+                allResults,
+                apiKeyPresent: !!process.env.RESEND_API_KEY
+            }
+        });
+
     } catch (error: any) {
         console.error('Campaign send error:', error);
         return NextResponse.json({
