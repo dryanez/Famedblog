@@ -250,7 +250,15 @@ export default function CreateBlogPostPage() {
                                 <div className="space-y-2">
                                     {uploadedFiles.map((file, i) => (
                                         <div key={i} className="flex items-center justify-between p-2 bg-gray-50 rounded text-sm text-gray-900">
-                                            <span className="truncate flex-1">{file.name}</span>
+                                            <div className="flex items-center gap-2 truncate flex-1">
+                                                {file.parsing ? (
+                                                    <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
+                                                ) : (
+                                                    <CheckCircle className="w-4 h-4 text-green-500" />
+                                                )}
+                                                <span className="truncate">{file.name}</span>
+                                                {!file.parsing && <span className="text-xs text-gray-400">({file.content.length} chars)</span>}
+                                            </div>
                                             <button onClick={() => removeFile(i)} className="text-red-500 hover:text-red-700">
                                                 <X className="w-4 h-4" />
                                             </button>
