@@ -31,7 +31,7 @@ export async function POST(request: Request) {
 
         const today = new Date().toISOString().split('T')[0];
 
-        let prompt = `You are writing a blog post for FaMED-Vorbereitung.com, a German medical licensing exam preparation site.
+        let prompt = `You are writing a blog post for FaMED-Vorbereitung.com, a German medical exam preparation site.
 
 TOPIC: ${topic}
 
@@ -43,7 +43,7 @@ ${additionalContext ? `\n${additionalContext}` : ''}
 ${selectedTopic ? `\nSELECTED ANGLE: ${selectedTopic.angle}\nTARGET KEYWORDS: ${selectedTopic.keywords?.join(', ')}` : ''}
 
 IMPORTANT REQUIREMENTS:
-- Write in German
+- **Write in ENGLISH** (not German)
 - Reference the "FaMED Protokoll Book" when giving advice
 - Include practical tips for exam preparation  
 - Mention communication skills (Anamnese)
@@ -51,14 +51,30 @@ IMPORTANT REQUIREMENTS:
 - Use markdown format with proper headings
 - **ADD 1-2 IMAGE PLACEHOLDERS** throughout the post using this format:
   ![Description of helpful image here](/placeholder-image.jpg)
-  Example: ![FaMED Anamnese Struktur Diagram](/images/anamnese-structure.jpg)
+  Example: ![FaMED Anamnese Structure Diagram](/images/anamnese-structure.jpg)
 - Include frontmatter in this EXACT format:
 ---
 title: "${selectedTopic?.title || topic}"
 date: "${today}"
-excerpt: "[Brief 1-2 sentence summary]"
+excerpt: "[Brief 1-2 sentence summary in English]"
 tags: ["FaMED", "Preparation", "Other relevant tags"]
 status: "draft"
+---
+
+**CRITICAL: At the END of the blog post, add this exact CTA section:**
+
+---
+
+## Ready to Start?
+
+📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to simulate the test  
+📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with all the cases  
+👥 **Join our FaMED Study Community** for support and updates
+
+**Viel Erfolg!** (Good luck!)
+
+*Have questions about FaMED preparation? Leave a comment below or join our study group!*
+
 ---
 
 Generate the complete blog post now, starting with the frontmatter.`;
