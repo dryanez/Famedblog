@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Plus, Search, Edit, Trash2, Eye, Facebook, Send, Calendar } from 'lucide-react';
+import { ArrowLeft, Plus, Search, Edit, Trash2, Eye, Facebook, Send, Calendar, Play, Loader2 } from 'lucide-react';
 
 interface BlogPost {
     slug: string;
@@ -23,6 +23,7 @@ export default function BlogManagementPage() {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [filterStatus, setFilterStatus] = useState('all');
+    const [publishing, setPublishing] = useState(false);
 
     useEffect(() => {
         fetchPosts();
@@ -37,6 +38,27 @@ export default function BlogManagementPage() {
             console.error('Error fetching posts:', error);
         } finally {
             setLoading(false);
+        }
+    };
+
+    const handleRunAutoPublish = async () => {
+        if (!confirm('Run auto-publishing now? This will publish any posts scheduled for now or earlier.')) return;
+
+        setPublishing(true);
+        try {
+            const res = await fetch('/api/blog/publish-now', { method: 'POST' });
+            const data = await res.json();
+
+            if (data.success) {
+                alert(data.message);
+                fetchPosts(); // Refresh list
+            } else {
+                alert('Error: ' + data.error);
+            }
+        } catch (e: any) {
+            alert('Failed to run publisher: ' + e.message);
+        } finally {
+            setPublishing(false);
         }
     };
 
@@ -71,6 +93,15 @@ export default function BlogManagementPage() {
                     <p className="text-gray-600 mt-2">Manage your blog content and publishing</p>
                 </div>
                 <div className="flex items-center gap-3">
+                    <button
+                        onClick={handleRunAutoPublish}
+                        disabled={publishing}
+                        className="flex items-center gap-2 px-4 py-2.5 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 font-medium transition-all"
+                        title="Manually trigger scheduled post publishing"
+                    >
+                        {publishing ? <Loader2 className="w-5 h-5 animate-spin" /> : <Play className="w-5 h-5" />}
+                        Run Auto-Publish
+                    </button>
                     <Link
                         href="/admin/blog/calendar"
                         className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 font-medium transition-all"
