@@ -14,6 +14,7 @@ interface BlogPost {
     tags: string[];
     content: string;
     excerpt?: string;
+    scheduled_date?: string;
 }
 
 export default function EditPostPage() {
@@ -31,7 +32,7 @@ export default function EditPostPage() {
 
     const fetchPost = async () => {
         try {
-            const res = await fetch(`/api/blog/${slug}`);
+            const res = await fetch(`/api/blog/posts/${slug}`);
             const data = await res.json();
             setPost(data.post);
         } catch (error) {
@@ -46,8 +47,8 @@ export default function EditPostPage() {
 
         setSaving(true);
         try {
-            const res = await fetch(`/api/blog/${slug}`, {
-                method: 'PATCH',
+            const res = await fetch(`/api/blog/posts/${slug}`, {
+                method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(post)
             });
