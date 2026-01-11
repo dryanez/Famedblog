@@ -301,7 +301,7 @@ export async function processCampaignSend(options: SendCampaignOptions): Promise
     for (let i = 0; i < emailsToSend.length; i += BATCH_SIZE) {
         const chunk = emailsToSend.slice(i, i + BATCH_SIZE);
         try {
-            const { data, error } = await resend.emails.batch(chunk);
+            const { data, error } = await resend.batch.send(chunk);
 
             if (error) {
                 console.error('Resend Batch Error:', error);
