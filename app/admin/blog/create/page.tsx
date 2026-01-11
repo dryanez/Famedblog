@@ -171,6 +171,49 @@ export default function CreateBlogPostPage() {
         }, 500);
     };
 
+    const handleScheduleAll = async () => {
+        if (!suggestedTopics || suggestedTopics.length === 0) return;
+
+        if (!confirm(`Schedule all ${suggestedTopics.length} topics? They will be posted 1 per day starting tomorrow at 9 AM.`)) {
+            return;
+        }
+
+        setLoading(true);
+        setStatus(`Scheduling ${suggestedTopics.length} posts...`);
+
+        try {
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+
+            const response = await fetch('/api/blog/schedule-bulk', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    topics: suggestedTopics,
+                    pdfUri: pdfUri || undefined,
+                    pdfName: pdfFile?.name || 'Unknown',
+                    startDate: tomorrow.toISOString().split('T')[0]
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setStatus(`✅ Scheduled ${data.scheduled}/${data.total} posts! Check the calendar to see them.`);
+                setSuggestedTopics([]);
+                setPdfUri('');
+                setPdfFile(null);
+            } else {
+                throw new Error(data.error || 'Scheduling failed');
+            }
+        } catch (error: any) {
+            console.error('Schedule error:', error);
+            setStatus(`❌ Error: ${error.message}`);
+        } finally {
+            setLoading(false);
+        }
+    };
+
     const handleGenerate = async () => {
         if (!topic) return;
 
@@ -388,9 +431,19 @@ export default function CreateBlogPostPage() {
                 {/* Topic Suggestions */}
                 {suggestedTopics.length > 0 && !selectedTopic && (
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                        <div className="flex items-center gap-2 mb-4">
-                            <Lightbulb className="w-6 h-6 text-yellow-500" />
-                            <h3 className="text-lg font-semibold text-gray-900">AI Suggested Topics</h3>
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="flex items-center gap-2">
+                                <Lightbulb className="w-6 h-6 text-yellow-500" />
+                                <h3 className="text-lg font-semibold text-gray-900">AI Suggested Topics</h3>
+                            </div>
+                            <button
+                                onClick={handleScheduleAll}
+                                disabled={loading}
+                                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-medium inline-flex items-center gap-2"
+                            >
+                                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : '📅'}
+                                Schedule All (1/day for {suggestedTopics.length} days)
+                            </button>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             {suggestedTopics.map((topic, i) => (
