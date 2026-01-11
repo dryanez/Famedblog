@@ -14,6 +14,8 @@ interface BlogPost {
     excerpt: string;
     facebookPosted: boolean;
     telegramSent: boolean;
+    scheduled_date?: string;
+    created_at?: string;
 }
 
 export default function BlogManagementPage() {
@@ -159,10 +161,16 @@ export default function BlogManagementPage() {
                                     </div>
                                 </td>
                                 <td className="px-6 py-4">
-                                    <span className="text-sm text-gray-600">{post.category}</span>
+                                    <span className="text-sm text-gray-900 font-medium">{post.tags?.[0] || post.category || 'FaMED'}</span>
                                 </td>
                                 <td className="px-6 py-4">
-                                    <span className="text-sm text-gray-600">{post.date}</span>
+                                    <span className="text-sm text-gray-900">
+                                        {post.scheduled_date
+                                            ? new Date(post.scheduled_date).toLocaleDateString()
+                                            : post.date || post.created_at
+                                                ? new Date(post.created_at || post.date).toLocaleDateString()
+                                                : '—'}
+                                    </span>
                                 </td>
                                 <td className="px-6 py-4">
                                     <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${post.status === 'published' ? 'bg-green-100 text-green-700' :

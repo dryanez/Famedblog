@@ -127,7 +127,7 @@ export default function EditPostPage() {
                             type="text"
                             value={post.title}
                             onChange={(e) => setPost({ ...post, title: e.target.value })}
-                            className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                            className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-gray-900"
                         />
                     </div>
                     <div>
@@ -136,7 +136,7 @@ export default function EditPostPage() {
                             type="text"
                             value={post.category}
                             onChange={(e) => setPost({ ...post, category: e.target.value })}
-                            className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                            className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-gray-900"
                         />
                     </div>
                     <div>
@@ -145,7 +145,7 @@ export default function EditPostPage() {
                             type="date"
                             value={post.date}
                             onChange={(e) => setPost({ ...post, date: e.target.value })}
-                            className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                            className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-gray-900"
                         />
                     </div>
                     <div>
@@ -153,7 +153,7 @@ export default function EditPostPage() {
                         <select
                             value={post.status}
                             onChange={(e) => setPost({ ...post, status: e.target.value })}
-                            className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                            className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-gray-900"
                         >
                             <option value="draft">Draft</option>
                             <option value="published">Published</option>
@@ -186,7 +186,7 @@ export default function EditPostPage() {
                         type="text"
                         value={post.tags?.join(', ') || ''}
                         onChange={(e) => setPost({ ...post, tags: e.target.value.split(',').map(t => t.trim()) })}
-                        className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                        className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-gray-900"
                         placeholder="exam prep, study tips, medical german"
                     />
                 </div>
