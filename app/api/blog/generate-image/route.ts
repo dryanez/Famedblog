@@ -65,7 +65,7 @@ export async function POST(request: Request) {
         console.error('Image generation error:', error);
 
         // Fallback to Unsplash if Imagen fails
-        const keywords = description
+        const keywords = (description || '') // Use the description from the outer scope
             .toLowerCase()
             .replace(/[^a-z0-9\s]/g, '')
             .split(' ')
@@ -83,7 +83,7 @@ export async function POST(request: Request) {
             imageUrl: imageUrl,
             imageName: imageName,
             imagePath: imageUrl, // Use Unsplash URL directly
-            description: description
+            description: description // Use the description from the outer scope
         });
     }
 }
