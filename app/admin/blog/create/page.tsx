@@ -627,7 +627,7 @@ export default function CreateBlogPostPage() {
                                         <textarea
                                             value={content}
                                             onChange={(e) => setContent(e.target.value)}
-                                            className="w-full h-[600px] font-mono text-sm p-4 text-gray-900 bg-gray-50 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-none"
+                                            className="w-full h-[600px] font-mono text-base p-4 text-black bg-white rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-none placeholder-gray-500"
                                             spellCheck={false}
                                         />
                                     ) : (
