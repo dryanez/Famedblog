@@ -8,10 +8,10 @@ const supabase = createClient(
 
 export async function GET(
     request: Request,
-    { params }: { params: { slug: string } }
+    { params }: { params: Promise<{ slug: string }> }
 ) {
     try {
-        const { slug } = params;
+        const { slug } = await params;
 
         const { data: post, error } = await supabase
             .from('blog_posts')
@@ -41,10 +41,10 @@ export async function GET(
 
 export async function PUT(
     request: Request,
-    { params }: { params: { slug: string } }
+    { params }: { params: Promise<{ slug: string }> }
 ) {
     try {
-        const { slug } = params;
+        const { slug } = await params;
         const body = await request.json();
 
         const { data, error } = await supabase
@@ -79,10 +79,10 @@ export async function PUT(
 
 export async function DELETE(
     request: Request,
-    { params }: { params: { slug: string } }
+    { params }: { params: Promise<{ slug: string }> }
 ) {
     try {
-        const { slug } = params;
+        const { slug } = await params;
 
         const { error } = await supabase
             .from('blog_posts')
