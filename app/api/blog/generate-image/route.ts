@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export const maxDuration = 60;
+export const maxDuration = 30;
 
 export async function POST(request: Request) {
     try {
@@ -10,44 +10,31 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Description is required' }, { status: 400 });
         }
 
-        // Use Gemini's image generation (Imagen)
-        const response = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:generateImages?key=${process.env.GOOGLE_GENERATIVE_AI_API_KEY}`,
-            {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    prompt: `Create a professional, educational image for a medical exam preparation blog post. ${description}. Style: clean, modern, medical education, infographic-like.`,
-                    numberOfImages: 1,
-                    aspectRatio: '16:9',
-                    safetySettings: [{
-                        category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
-                        threshold: 'BLOCK_ONLY_HIGH'
-                    }]
-                })
-            }
-        );
+        // Extract keywords from description for better image search
+        const keywords = description
+            .toLowerCase()
+            .replace(/[^a-z0-9\s]/g, '')
+            .split(' ')
+            .filter(word => word.length > 3)
+            .slice(0, 3)
+            .join(',');
 
-        if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.error?.message || 'Image generation failed');
-        }
+        const query = keywords || 'medical education';
+        const seed = Date.now();
 
-        const data = await response.json();
+        // Use Unsplash Source for free, reliable images
+        const imageUrl = `https://source.unsplash.com/800x400/?${encodeURIComponent(query)}&sig=${seed}`;
 
-        if (!data.generatedImages || data.generatedImages.length === 0) {
-            throw new Error('No images generated');
-        }
-
-        // Return base64 image data
-        const imageData = data.generatedImages[0].imageBytes;
-        const imageName = `${slug || 'blog'}-${Date.now()}.png`;
+        // Generate a unique filename
+        const imageName = `${slug || 'blog'}-${seed}.jpg`;
+        const imagePath = `/images/blog/${imageName}`;
 
         return NextResponse.json({
             success: true,
-            imageData: imageData, // base64
+            imageUrl: imageUrl,
             imageName: imageName,
-            imagePath: `/images/blog/${imageName}`
+            imagePath: imagePath,
+            description: description
         });
 
     } catch (error: any) {
