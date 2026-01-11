@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleAIFileManager } from '@google/generative-ai/server';
 import { writeFile, unlink } from 'fs/promises';
 import path from 'path';
 
@@ -29,9 +29,8 @@ export async function POST(request: Request) {
         tempFilePath = path.join('/tmp', `upload-${Date.now()}.pdf`);
         await writeFile(tempFilePath, buffer);
 
-        // Upload to Gemini File API
-        const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GENERATIVE_AI_API_KEY!);
-        const fileManager = genAI.fileManager();
+        // Upload to Gemini File API using GoogleAIFileManager
+        const fileManager = new GoogleAIFileManager(process.env.GOOGLE_GENERATIVE_AI_API_KEY!);
 
         console.log('Uploading to Gemini File API...');
         const uploadResult = await fileManager.uploadFile(tempFilePath, {
