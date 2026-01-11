@@ -45,7 +45,7 @@ ${selectedTopic ? `\nSELECTED ANGLE: ${selectedTopic.angle}\nTARGET KEYWORDS: ${
 IMPORTANT REQUIREMENTS:
 - **Write in ENGLISH** (not German)
 - When mentioning the "FaMED Protokoll Book", link it naturally: [FaMED Protokoll Book](https://famedtestprep.com/protokoll)
-- When suggesting practice or simulation, link to the app: [FaMED App](https://famedtestprep.com/app)
+- When suggesting practice or simulation, link to the app: [FaMED App](https://famedtestprep.com)
 - Include practical tips for exam preparation  
 - Mention communication skills (Anamnese)
 - Keep it under 1500 words
