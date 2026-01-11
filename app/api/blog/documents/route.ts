@@ -8,19 +8,26 @@ const supabase = createClient(
 
 export async function GET() {
     try {
+        console.log('[Documents GET] Fetching from uploaded_documents...');
+
         const { data, error } = await supabase
             .from('uploaded_documents')
             .select('*')
             .order('uploaded_at', { ascending: false });
 
-        if (error) throw error;
+        if (error) {
+            console.error('[Documents GET] Supabase error:', error);
+            throw error;
+        }
+
+        console.log('[Documents GET] Found documents:', data?.length || 0);
 
         return NextResponse.json({
             success: true,
             documents: data || []
         });
     } catch (error: any) {
-        console.error('Get documents error:', error);
+        console.error('[Documents GET] ERROR:', error);
         return NextResponse.json({
             error: error.message,
             success: false

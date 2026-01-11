@@ -1,7 +1,13 @@
 import { NextResponse } from 'next/server';
 import { GoogleAIFileManager } from '@google/generative-ai/server';
 import { writeFile, unlink } from 'fs/promises';
+import { createClient } from '@supabase/supabase-js';
 import path from 'path';
+
+const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+);
 
 export const maxDuration = 60;
 
@@ -32,28 +38,30 @@ export async function POST(request: Request) {
         // Upload to Gemini File API using GoogleAIFileManager
         const fileManager = new GoogleAIFileManager(process.env.GOOGLE_GENERATIVE_AI_API_KEY!);
 
-        console.log('Uploading to Gemini File API...');
+        console.log('[PDF Upload] Uploading to Gemini File API...');
         const uploadResult = await fileManager.uploadFile(tempFilePath, {
             mimeType: 'application/pdf',
             displayName: file.name,
         });
 
-        console.log('Upload successful:', uploadResult.file.uri);
+        console.log('[PDF Upload] Gemini upload successful:', uploadResult.file.uri);
 
-        // Save to database for reuse
-        try {
-            await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/blog/documents`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    fileName: file.name,
-                    fileUri: uploadResult.file.uri,
-                    mimeType: uploadResult.file.mimeType
-                })
-            });
-        } catch (e) {
-            console.warn('Failed to save document to library:', e);
-            // Don't fail the upload if database save fails
+        // Save to database DIRECTLY (not via fetch)
+        console.log('[PDF Upload] Saving to Supabase uploaded_documents table...');
+        const { data: docData, error: docError } = await supabase
+            .from('uploaded_documents')
+            .insert([{
+                file_name: file.name,
+                file_uri: uploadResult.file.uri,
+                mime_type: uploadResult.file.mimeType || 'application/pdf'
+            }])
+            .select()
+            .single();
+
+        if (docError) {
+            console.error('[PDF Upload] Supabase save FAILED:', docError);
+        } else {
+            console.log('[PDF Upload] Supabase save SUCCESS:', docData);
         }
 
         // Clean up temp file
@@ -65,10 +73,11 @@ export async function POST(request: Request) {
             fileName: file.name,
             fileUri: uploadResult.file.uri,
             mimeType: uploadResult.file.mimeType,
+            savedToLibrary: !docError
         });
 
     } catch (error: any) {
-        console.error('PDF upload error:', error);
+        console.error('[PDF Upload] ERROR:', error);
 
         // Clean up temp file on error
         if (tempFilePath) {
