@@ -5,13 +5,13 @@ import path from 'path';
 export const maxDuration = 60;
 
 export async function POST(request: Request) {
+    const { description, slug } = await request.json();
+
+    if (!description) {
+        return NextResponse.json({ error: 'Description is required' }, { status: 400 });
+    }
+
     try {
-        const { description, slug } = await request.json();
-
-        if (!description) {
-            return NextResponse.json({ error: 'Description is required' }, { status: 400 });
-        }
-
         // Use Gemini's Imagen API for image generation
         const prompt = `Create a professional, educational image for a medical exam preparation blog. ${description}. Style: clean, modern, medical education, professional, high quality.`;
 
@@ -65,11 +65,11 @@ export async function POST(request: Request) {
         console.error('Image generation error:', error);
 
         // Fallback to Unsplash if Imagen fails
-        const keywords = (description || '') // Use the description from the outer scope
+        const keywords = description
             .toLowerCase()
             .replace(/[^a-z0-9\s]/g, '')
             .split(' ')
-            .filter(word => word.length > 3)
+            .filter((word: string) => word.length > 3)
             .slice(0, 3)
             .join(',');
 
@@ -82,8 +82,8 @@ export async function POST(request: Request) {
             success: true,
             imageUrl: imageUrl,
             imageName: imageName,
-            imagePath: imageUrl, // Use Unsplash URL directly
-            description: description // Use the description from the outer scope
+            imagePath: imageUrl,
+            description: description
         });
     }
 }
