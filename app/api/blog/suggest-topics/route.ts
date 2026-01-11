@@ -27,8 +27,8 @@ For each idea, provide in JSON format:
 {
   "topics": [
     {
-      "title": "SEO-friendly title in German",
-      "angle": "What makes this unique/interesting",
+      "title": "SEO-friendly title in ENGLISH",
+      "angle": "What makes this unique/interesting (in ENGLISH)",
       "keywords": ["keyword1", "keyword2", "keyword3"],
       "searchVolume": "High" | "Medium" | "Low"
     }
@@ -37,9 +37,10 @@ For each idea, provide in JSON format:
 
 Focus on topics that:
 - Help medical students prepare for the FaMED exam
-- Are searchable on Google in German
+- Are searchable on Google
 - Can be created from this document's content
 - Use practical, actionable angles
+- **Write ALL titles and descriptions in ENGLISH**
 
 Return ONLY valid JSON, no markdown formatting.`;
 

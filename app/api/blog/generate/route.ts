@@ -44,14 +44,15 @@ ${selectedTopic ? `\nSELECTED ANGLE: ${selectedTopic.angle}\nTARGET KEYWORDS: ${
 
 IMPORTANT REQUIREMENTS:
 - **Write in ENGLISH** (not German)
-- Reference the "FaMED Protokoll Book" when giving advice
+- When mentioning the "FaMED Protokoll Book", link it naturally: [FaMED Protokoll Book](https://famedtestprep.com/protokoll)
+- When suggesting practice or simulation, link to the app: [FaMED App](https://famedtestprep.com/app)
 - Include practical tips for exam preparation  
 - Mention communication skills (Anamnese)
 - Keep it under 1500 words
 - Use markdown format with proper headings
 - **ADD 1-2 IMAGE PLACEHOLDERS** throughout the post using this format:
   ![Description of helpful image here](/placeholder-image.jpg)
-  Example: ![FaMED Anamnese Structure Diagram](/images/anamnese-structure.jpg)
+  Example: ![FaMED Anamnese Structure Diagram](/placeholder-image.jpg)
 - Include frontmatter in this EXACT format:
 ---
 title: "${selectedTopic?.title || topic}"
