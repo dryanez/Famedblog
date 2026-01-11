@@ -173,7 +173,7 @@ export default function EditPostPage() {
                         <textarea
                             value={post.content}
                             onChange={(e) => setPost({ ...post, content: e.target.value })}
-                            className="w-full px-4 py-3 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 font-mono text-sm min-h-[500px]"
+                            className="w-full px-4 py-3 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 font-mono text-sm min-h-[500px] text-gray-900"
                             placeholder="Write your post content in Markdown..."
                         />
                     )}
