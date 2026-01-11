@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Plus, Search, Edit, Trash2, Eye, Facebook, Send } from 'lucide-react';
+import { ArrowLeft, Plus, Search, Edit, Trash2, Eye, Facebook, Send, Calendar } from 'lucide-react';
 
 interface BlogPost {
     slug: string;
@@ -68,13 +68,22 @@ export default function BlogManagementPage() {
                     <h1 className="text-3xl font-bold tracking-tight text-gray-900">Blog Posts</h1>
                     <p className="text-gray-600 mt-2">Manage your blog content and publishing</p>
                 </div>
-                <Link
-                    href="/admin/blog/create"
-                    className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold shadow-lg transition-all"
-                >
-                    <Plus className="w-5 h-5" />
-                    New Post
-                </Link>
+                <div className="flex items-center gap-3">
+                    <Link
+                        href="/admin/blog/calendar"
+                        className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 font-medium transition-all"
+                    >
+                        <Calendar className="w-5 h-5" />
+                        Calendar
+                    </Link>
+                    <Link
+                        href="/admin/blog/create"
+                        className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold shadow-lg transition-all"
+                    >
+                        <Plus className="w-5 h-5" />
+                        New Post
+                    </Link>
+                </div>
             </header>
 
             {/* Filters */}
