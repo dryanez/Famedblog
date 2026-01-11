@@ -40,6 +40,22 @@ export async function POST(request: Request) {
 
         console.log('Upload successful:', uploadResult.file.uri);
 
+        // Save to database for reuse
+        try {
+            await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/blog/documents`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    fileName: file.name,
+                    fileUri: uploadResult.file.uri,
+                    mimeType: uploadResult.file.mimeType
+                })
+            });
+        } catch (e) {
+            console.warn('Failed to save document to library:', e);
+            // Don't fail the upload if database save fails
+        }
+
         // Clean up temp file
         await unlink(tempFilePath);
         tempFilePath = null;
