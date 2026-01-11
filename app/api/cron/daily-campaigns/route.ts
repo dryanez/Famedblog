@@ -15,7 +15,8 @@ const AUTOMATED_CAMPAIGNS = [
     'exam_urgency_3d',
     'subscription_expiry',
     'welcome_day0',
-    'welcome_bundle_promo'
+    'welcome_bundle_promo',
+    'exam_urgency_1_week_special'
 ];
 
 export async function GET(request: Request) {
