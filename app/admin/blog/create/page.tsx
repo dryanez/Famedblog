@@ -155,8 +155,50 @@ export default function CreateBlogPostPage() {
             }
 
             if (data.success && data.content) {
-                setContent(data.content);
-                setStatus('✅ Content generated! Switch to Preview to see styled version.');
+                let finalContent = data.content;
+
+                // Extract image placeholders and generate real images
+                const imagePlaceholders = finalContent.match(/!\[([^\]]+)\]\(\/placeholder-image\.jpg\)/g);
+
+                if (imagePlaceholders && imagePlaceholders.length > 0) {
+                    setStatus(`✅ Content generated! Generating ${imagePlaceholders.length} image(s)...`);
+
+                    for (let i = 0; i < Math.min(imagePlaceholders.length, 2); i++) {
+                        const placeholder = imagePlaceholders[i];
+                        const descriptionMatch = placeholder.match(/!\[([^\]]+)\]/);
+
+                        if (descriptionMatch) {
+                            const description = descriptionMatch[1];
+
+                            try {
+                                const imgRes = await fetch('/api/blog/generate-image', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        description,
+                                        slug: topic.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+                                    })
+                                });
+
+                                const imgData = await imgRes.json();
+
+                                if (imgData.success && imgData.imagePath) {
+                                    // Replace placeholder with actual image path
+                                    finalContent = finalContent.replace(
+                                        placeholder,
+                                        `![${description}](${imgData.imagePath})`
+                                    );
+                                }
+                            } catch (e) {
+                                console.warn('Image generation failed:', e);
+                                // Keep placeholder if generation fails
+                            }
+                        }
+                    }
+                }
+
+                setContent(finalContent);
+                setStatus('✅ Content generated with images! Switch to Preview.');
                 setViewMode('preview');
             } else {
                 throw new Error(data.error || 'No content returned');
@@ -273,8 +315,8 @@ export default function CreateBlogPostPage() {
                                     <div className="flex items-start justify-between mb-2">
                                         <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 flex-1">{topic.title}</h4>
                                         <span className={`text-xs px-2 py-1 rounded ${topic.searchVolume === 'High' ? 'bg-green-100 text-green-700' :
-                                                topic.searchVolume === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
-                                                    'bg-gray-100 text-gray-700'
+                                            topic.searchVolume === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
+                                                'bg-gray-100 text-gray-700'
                                             }`}>
                                             {topic.searchVolume}
                                         </span>
@@ -366,8 +408,8 @@ export default function CreateBlogPostPage() {
                                     onClick={handleGenerate}
                                     disabled={loading || !topic}
                                     className={`px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-all ${loading || !topic
-                                            ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                                            : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-lg active:scale-95'
+                                        ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                                        : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-lg active:scale-95'
                                         }`}
                                 >
                                     {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5" />}
@@ -377,8 +419,8 @@ export default function CreateBlogPostPage() {
 
                             {status && (
                                 <div className={`mt-4 p-3 rounded-lg text-sm flex items-center gap-2 ${status.includes('Error') ? 'bg-red-50 text-red-700' :
-                                        status.includes('Generating') || status.includes('Uploading') || status.includes('Analyzing') ? 'bg-blue-50 text-blue-700' :
-                                            'bg-green-50 text-green-700'
+                                    status.includes('Generating') || status.includes('Uploading') || status.includes('Analyzing') ? 'bg-blue-50 text-blue-700' :
+                                        'bg-green-50 text-green-700'
                                     }`}>
                                     {loading && <Loader2 className="w-4 h-4 animate-spin" />}
                                     {status.includes('✅') && <CheckCircle className="w-4 h-4" />}
