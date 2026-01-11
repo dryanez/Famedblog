@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
-import { ArrowLeft, Loader2, Save, Sparkles, FileText, CheckCircle, Upload, X, Send, MessageSquare, Eye, Code, FileUp, Lightbulb } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { ArrowLeft, Loader2, Save, Sparkles, FileText, CheckCircle, Upload, X, Send, MessageSquare, Eye, Code, FileUp, Lightbulb, FolderOpen, Trash2 } from 'lucide-react';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -16,6 +16,13 @@ interface TopicSuggestion {
     angle: string;
     keywords: string[];
     searchVolume: 'High' | 'Medium' | 'Low';
+}
+
+interface StoredDocument {
+    id: string;
+    file_name: string;
+    file_uri: string;
+    uploaded_at: string;
 }
 
 export default function CreateBlogPostPage() {
@@ -34,8 +41,52 @@ export default function CreateBlogPostPage() {
     const [suggestedTopics, setSuggestedTopics] = useState<TopicSuggestion[]>([]);
     const [selectedTopic, setSelectedTopic] = useState<TopicSuggestion | null>(null);
     const [uploadingPdf, setUploadingPdf] = useState(false);
+    const [storedDocuments, setStoredDocuments] = useState<StoredDocument[]>([]);
+    const [loadingDocs, setLoadingDocs] = useState(false);
 
     const pdfInputRef = useRef<HTMLInputElement>(null);
+
+    // Fetch stored documents on mount
+    useEffect(() => {
+        fetchStoredDocuments();
+    }, []);
+
+    const fetchStoredDocuments = async () => {
+        setLoadingDocs(true);
+        try {
+            const res = await fetch('/api/blog/documents');
+            const data = await res.json();
+            if (data.success) {
+                setStoredDocuments(data.documents || []);
+            }
+        } catch (e) {
+            console.error('Failed to fetch documents:', e);
+        } finally {
+            setLoadingDocs(false);
+        }
+    };
+
+    const handleSelectStoredDocument = async (doc: StoredDocument) => {
+        setPdfUri(doc.file_uri);
+        setPdfFile(null);
+        setStatus(`Selected: ${doc.file_name}. Analyzing for topics...`);
+        await getSuggestedTopics(doc.file_uri);
+    };
+
+    const handleDeleteDocument = async (id: string) => {
+        if (!confirm('Delete this document?')) return;
+
+        try {
+            await fetch('/api/blog/documents', {
+                method: 'DELETE',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id })
+            });
+            await fetchStoredDocuments();
+        } catch (e) {
+            console.error('Failed to delete:', e);
+        }
+    };
 
     const handlePdfUpload = async (file: File) => {
         if (!file || !file.name.toLowerCase().endsWith('.pdf')) {
@@ -273,29 +324,65 @@ export default function CreateBlogPostPage() {
 
                 {/* PDF Upload Section */}
                 {!pdfUri && (
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-2 border-dashed border-blue-300 p-8">
-                        <div className="text-center">
-                            <FileUp className="w-16 h-16 mx-auto text-blue-500 mb-4" />
-                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Upload PDF for AI Topic Suggestions</h3>
-                            <p className="text-gray-600 mb-4">AI will analyze your document and suggest SEO-optimized blog topics</p>
-                            <input
-                                ref={pdfInputRef}
-                                type="file"
-                                accept=".pdf"
-                                onChange={(e) => e.target.files?.[0] && handlePdfUpload(e.target.files[0])}
-                                className="hidden"
-                            />
-                            <button
-                                onClick={() => pdfInputRef.current?.click()}
-                                disabled={uploadingPdf}
-                                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium inline-flex items-center gap-2"
-                            >
-                                {uploadingPdf ? <Loader2 className="w-5 h-5 animate-spin" /> : <Upload className="w-5 h-5" />}
-                                {uploadingPdf ? 'Uploading...' : 'Upload PDF'}
-                            </button>
-                            <p className="text-xs text-gray-500 mt-3">Or skip and enter topic manually below</p>
+                    <>
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-2 border-dashed border-blue-300 p-8">
+                            <div className="text-center">
+                                <FileUp className="w-16 h-16 mx-auto text-blue-500 mb-4" />
+                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Upload PDF for AI Topic Suggestions</h3>
+                                <p className="text-gray-600 mb-4">AI will analyze your document and suggest SEO-optimized blog topics</p>
+                                <input
+                                    ref={pdfInputRef}
+                                    type="file"
+                                    accept=".pdf"
+                                    onChange={(e) => e.target.files?.[0] && handlePdfUpload(e.target.files[0])}
+                                    className="hidden"
+                                />
+                                <button
+                                    onClick={() => pdfInputRef.current?.click()}
+                                    disabled={uploadingPdf}
+                                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium inline-flex items-center gap-2"
+                                >
+                                    {uploadingPdf ? <Loader2 className="w-5 h-5 animate-spin" /> : <Upload className="w-5 h-5" />}
+                                    {uploadingPdf ? 'Uploading...' : 'Upload PDF'}
+                                </button>
+                                <p className="text-xs text-gray-500 mt-3">Or skip and enter topic manually below</p>
+                            </div>
                         </div>
-                    </div>
+
+                        {/* Stored Documents Library */}
+                        {storedDocuments.length > 0 && (
+                            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                                <div className="flex items-center gap-2 mb-4">
+                                    <FolderOpen className="w-5 h-5 text-gray-600" />
+                                    <h3 className="text-lg font-semibold text-gray-900">My Documents</h3>
+                                    <span className="text-sm text-gray-500">({storedDocuments.length})</span>
+                                </div>
+                                <div className="grid grid-cols-2 gap-3">
+                                    {storedDocuments.map((doc) => (
+                                        <div
+                                            key={doc.id}
+                                            className="group flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition cursor-pointer"
+                                            onClick={() => handleSelectStoredDocument(doc)}
+                                        >
+                                            <div className="flex items-center gap-2 flex-1 min-w-0">
+                                                <FileText className="w-4 h-4 text-gray-400 group-hover:text-blue-500 flex-shrink-0" />
+                                                <div className="min-w-0 flex-1">
+                                                    <p className="text-sm font-medium text-gray-900 truncate">{doc.file_name}</p>
+                                                    <p className="text-xs text-gray-500">{new Date(doc.uploaded_at).toLocaleDateString()}</p>
+                                                </div>
+                                            </div>
+                                            <button
+                                                onClick={(e) => { e.stopPropagation(); handleDeleteDocument(doc.id); }}
+                                                className="opacity-0 group-hover:opacity-100 p-1 text-red-500 hover:bg-red-100 rounded transition"
+                                            >
+                                                <Trash2 className="w-4 h-4" />
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                    </>
                 )}
 
                 {/* Topic Suggestions */}
