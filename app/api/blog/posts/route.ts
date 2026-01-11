@@ -29,7 +29,7 @@ export async function POST(request: Request) {
             if (titleMatch) parsedTitle = titleMatch[1];
             if (excerptMatch) parsedExcerpt = excerptMatch[1];
             if (tagsMatch) {
-                parsedTags = tagsMatch[1].split(',').map(t => t.trim().replace(/["']/g, ''));
+                parsedTags = tagsMatch[1].split(',').map((t: string) => t.trim().replace(/["']/g, ''));
             }
         }
 
