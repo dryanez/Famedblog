@@ -392,14 +392,25 @@ export default function CreateBlogPostPage() {
                             </div>
                         </div>
 
-                        {/* Stored Documents Library */}
-                        {storedDocuments.length > 0 && (
-                            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                                <div className="flex items-center gap-2 mb-4">
-                                    <FolderOpen className="w-5 h-5 text-gray-600" />
-                                    <h3 className="text-lg font-semibold text-gray-900">My Documents</h3>
-                                    <span className="text-sm text-gray-500">({storedDocuments.length})</span>
+                        {/* Stored Documents Library - ALWAYS SHOW */}
+                        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                            <div className="flex items-center gap-2 mb-4">
+                                <FolderOpen className="w-5 h-5 text-gray-600" />
+                                <h3 className="text-lg font-semibold text-gray-900">My Documents</h3>
+                                <span className="text-sm text-gray-500">({storedDocuments.length})</span>
+                            </div>
+
+                            {loadingDocs ? (
+                                <div className="flex items-center justify-center py-8 text-gray-500">
+                                    <Loader2 className="w-5 h-5 animate-spin mr-2" />
+                                    Loading documents...
                                 </div>
+                            ) : storedDocuments.length === 0 ? (
+                                <div className="text-center py-8 text-gray-500">
+                                    <p>No documents saved yet.</p>
+                                    <p className="text-sm mt-1">Upload a PDF above and it will appear here for reuse.</p>
+                                </div>
+                            ) : (
                                 <div className="grid grid-cols-2 gap-3">
                                     {storedDocuments.map((doc) => (
                                         <div
@@ -423,213 +434,233 @@ export default function CreateBlogPostPage() {
                                         </div>
                                     ))}
                                 </div>
-                            </div>
-                        )}
+                            )}
+                        </div>
+                        <FileText className="w-4 h-4 text-gray-400 group-hover:text-blue-500 flex-shrink-0" />
+                        <div className="min-w-0 flex-1">
+                            <p className="text-sm font-medium text-gray-900 truncate">{doc.file_name}</p>
+                            <p className="text-xs text-gray-500">{new Date(doc.uploaded_at).toLocaleDateString()}</p>
+                        </div>
+                    </div>
+                <button
+                    onClick={(e) => { e.stopPropagation(); handleDeleteDocument(doc.id); }}
+                    className="opacity-0 group-hover:opacity-100 p-1 text-red-500 hover:bg-red-100 rounded transition"
+                >
+                    <Trash2 className="w-4 h-4" />
+                </button>
+            </div>
+                                    ))}
+        </div>
+                            </div >
+                        )
+}
                     </>
                 )}
 
-                {/* Topic Suggestions */}
-                {suggestedTopics.length > 0 && !selectedTopic && (
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                        <div className="flex items-center justify-between mb-4">
-                            <div className="flex items-center gap-2">
-                                <Lightbulb className="w-6 h-6 text-yellow-500" />
-                                <h3 className="text-lg font-semibold text-gray-900">AI Suggested Topics</h3>
-                            </div>
-                            <button
-                                onClick={handleScheduleAll}
-                                disabled={loading}
-                                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-medium inline-flex items-center gap-2"
-                            >
-                                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : '📅'}
-                                Schedule All (1/day for {suggestedTopics.length} days)
-                            </button>
+{/* Topic Suggestions */ }
+{
+    suggestedTopics.length > 0 && !selectedTopic && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                    <Lightbulb className="w-6 h-6 text-yellow-500" />
+                    <h3 className="text-lg font-semibold text-gray-900">AI Suggested Topics</h3>
+                </div>
+                <button
+                    onClick={handleScheduleAll}
+                    disabled={loading}
+                    className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-medium inline-flex items-center gap-2"
+                >
+                    {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : '📅'}
+                    Schedule All (1/day for {suggestedTopics.length} days)
+                </button>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+                {suggestedTopics.map((topic, i) => (
+                    <button
+                        key={i}
+                        onClick={() => handleTopicSelect(topic)}
+                        className="text-left p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition group"
+                    >
+                        <div className="flex items-start justify-between mb-2">
+                            <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 flex-1">{topic.title}</h4>
+                            <span className={`text-xs px-2 py-1 rounded ${topic.searchVolume === 'High' ? 'bg-green-100 text-green-700' :
+                                topic.searchVolume === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
+                                    'bg-gray-100 text-gray-700'
+                                }`}>
+                                {topic.searchVolume}
+                            </span>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            {suggestedTopics.map((topic, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => handleTopicSelect(topic)}
-                                    className="text-left p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition group"
-                                >
-                                    <div className="flex items-start justify-between mb-2">
-                                        <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 flex-1">{topic.title}</h4>
-                                        <span className={`text-xs px-2 py-1 rounded ${topic.searchVolume === 'High' ? 'bg-green-100 text-green-700' :
-                                            topic.searchVolume === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
-                                                'bg-gray-100 text-gray-700'
-                                            }`}>
-                                            {topic.searchVolume}
-                                        </span>
-                                    </div>
-                                    <p className="text-sm text-gray-600 mb-2">{topic.angle}</p>
-                                    <div className="flex flex-wrap gap-1">
-                                        {topic.keywords.slice(0, 3).map((kw, j) => (
-                                            <span key={j} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">{kw}</span>
-                                        ))}
-                                    </div>
-                                </button>
+                        <p className="text-sm text-gray-600 mb-2">{topic.angle}</p>
+                        <div className="flex flex-wrap gap-1">
+                            {topic.keywords.slice(0, 3).map((kw, j) => (
+                                <span key={j} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">{kw}</span>
                             ))}
                         </div>
-                    </div>
-                )}
-
-                <div className="grid grid-cols-3 gap-6">
-                    {/* Left: Context Panel */}
-                    <div className="col-span-1 space-y-4">
-                        {/* Selected Topic Display */}
-                        {selectedTopic && (
-                            <div className="bg-green-50 rounded-xl border border-green-200 p-4">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <CheckCircle className="w-5 h-5 text-green-600" />
-                                    <span className="font-semibold text-green-900">Selected Topic</span>
-                                </div>
-                                <p className="text-sm text-green-800 font-medium">{selectedTopic.title}</p>
-                                <button
-                                    onClick={() => { setSelectedTopic(null); setTopic(''); }}
-                                    className="text-xs text-green-600 hover:text-green-700 mt-2"
-                                >
-                                    Change topic
-                                </button>
-                            </div>
-                        )}
-
-                        {/* Chat Box */}
-                        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 space-y-3">
-                            <div className="flex items-center gap-2 text-gray-700 font-medium border-b pb-2">
-                                <MessageSquare className="w-5 h-5" />
-                                <span>Chat with AI</span>
-                            </div>
-
-                            <div className="h-48 overflow-y-auto space-y-2 text-sm">
-                                {chatMessages.length === 0 ? (
-                                    <p className="text-gray-500 text-center py-8">Add extra instructions</p>
-                                ) : (
-                                    chatMessages.map((msg, i) => (
-                                        <div key={i} className={`p-2 rounded text-gray-900 ${msg.role === 'user' ? 'bg-blue-100' : 'bg-gray-100'}`}>
-                                            <span className="font-bold">{msg.role === 'user' ? 'You' : 'AI'}:</span> {msg.content}
-                                        </div>
-                                    ))
-                                )}
-                            </div>
-
-                            <div className="flex gap-2">
-                                <input
-                                    type="text"
-                                    value={chatInput}
-                                    onChange={(e) => setChatInput(e.target.value)}
-                                    onKeyDown={(e) => e.key === 'Enter' && sendChat()}
-                                    placeholder="e.g., Add more examples"
-                                    className="flex-1 px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
-                                />
-                                <button onClick={sendChat} className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                                    <Send className="w-4 h-4" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right: Generator & Editor */}
-                    <div className="col-span-2 space-y-4">
-                        {/* Generator Card */}
-                        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                            <div className="flex gap-4 items-end">
-                                <div className="flex-1 space-y-2">
-                                    <label className="block text-sm font-medium text-gray-700">Topic or Keyword</label>
-                                    <input
-                                        type="text"
-                                        value={topic}
-                                        onChange={(e) => setTopic(e.target.value)}
-                                        placeholder="e.g., 'FaMED Anamnese Tips'"
-                                        disabled={!!selectedTopic}
-                                        className="w-full px-4 py-3 text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-base disabled:bg-gray-100"
-                                    />
-                                </div>
-                                <button
-                                    onClick={handleGenerate}
-                                    disabled={loading || !topic}
-                                    className={`px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-all ${loading || !topic
-                                        ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                                        : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-lg active:scale-95'
-                                        }`}
-                                >
-                                    {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5" />}
-                                    Generate
-                                </button>
-                            </div>
-
-                            {status && (
-                                <div className={`mt-4 p-3 rounded-lg text-sm flex items-center gap-2 ${status.includes('Error') ? 'bg-red-50 text-red-700' :
-                                    status.includes('Generating') || status.includes('Uploading') || status.includes('Analyzing') ? 'bg-blue-50 text-blue-700' :
-                                        'bg-green-50 text-green-700'
-                                    }`}>
-                                    {loading && <Loader2 className="w-4 h-4 animate-spin" />}
-                                    {status.includes('✅') && <CheckCircle className="w-4 h-4" />}
-                                    {status}
-                                </div>
-                            )}
-                        </div>
-
-                        {/* Editor/Preview Area */}
-                        {content && (
-                            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                                <div className="flex items-center justify-between p-4 border-b bg-gray-50">
-                                    <div className="flex items-center gap-2">
-                                        <button
-                                            onClick={() => setViewMode('edit')}
-                                            className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition ${viewMode === 'edit' ? 'bg-white shadow text-blue-600' : 'text-gray-600 hover:bg-gray-100'
-                                                }`}
-                                        >
-                                            <Code className="w-4 h-4" />
-                                            Edit
-                                        </button>
-                                        <button
-                                            onClick={() => setViewMode('preview')}
-                                            className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition ${viewMode === 'preview' ? 'bg-white shadow text-blue-600' : 'text-gray-600 hover:bg-gray-100'
-                                                }`}
-                                        >
-                                            <Eye className="w-4 h-4" />
-                                            Preview
-                                        </button>
-                                    </div>
-                                    <div className="flex gap-3">
-                                        <button
-                                            onClick={() => navigator.clipboard.writeText(content)}
-                                            className="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg transition"
-                                        >
-                                            Copy
-                                        </button>
-                                        <button
-                                            onClick={handleSave}
-                                            disabled={loading}
-                                            className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2 font-medium shadow-sm"
-                                        >
-                                            <Save className="w-4 h-4" />
-                                            Save
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div className="p-4">
-                                    {viewMode === 'edit' ? (
-                                        <textarea
-                                            value={content}
-                                            onChange={(e) => setContent(e.target.value)}
-                                            className="w-full h-[600px] font-mono text-sm p-4 text-gray-900 bg-gray-50 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-none"
-                                            spellCheck={false}
-                                        />
-                                    ) : (
-                                        <div className="prose prose-lg max-w-none h-[600px] overflow-y-auto p-4 bg-white rounded-lg border border-gray-200">
-                                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                                {getPreviewContent()}
-                                            </ReactMarkdown>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
+                    </button>
+                ))}
             </div>
         </div>
+    )
+}
+
+<div className="grid grid-cols-3 gap-6">
+    {/* Left: Context Panel */}
+    <div className="col-span-1 space-y-4">
+        {/* Selected Topic Display */}
+        {selectedTopic && (
+            <div className="bg-green-50 rounded-xl border border-green-200 p-4">
+                <div className="flex items-center gap-2 mb-2">
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="font-semibold text-green-900">Selected Topic</span>
+                </div>
+                <p className="text-sm text-green-800 font-medium">{selectedTopic.title}</p>
+                <button
+                    onClick={() => { setSelectedTopic(null); setTopic(''); }}
+                    className="text-xs text-green-600 hover:text-green-700 mt-2"
+                >
+                    Change topic
+                </button>
+            </div>
+        )}
+
+        {/* Chat Box */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 space-y-3">
+            <div className="flex items-center gap-2 text-gray-700 font-medium border-b pb-2">
+                <MessageSquare className="w-5 h-5" />
+                <span>Chat with AI</span>
+            </div>
+
+            <div className="h-48 overflow-y-auto space-y-2 text-sm">
+                {chatMessages.length === 0 ? (
+                    <p className="text-gray-500 text-center py-8">Add extra instructions</p>
+                ) : (
+                    chatMessages.map((msg, i) => (
+                        <div key={i} className={`p-2 rounded text-gray-900 ${msg.role === 'user' ? 'bg-blue-100' : 'bg-gray-100'}`}>
+                            <span className="font-bold">{msg.role === 'user' ? 'You' : 'AI'}:</span> {msg.content}
+                        </div>
+                    ))
+                )}
+            </div>
+
+            <div className="flex gap-2">
+                <input
+                    type="text"
+                    value={chatInput}
+                    onChange={(e) => setChatInput(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && sendChat()}
+                    placeholder="e.g., Add more examples"
+                    className="flex-1 px-3 py-2 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                />
+                <button onClick={sendChat} className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                    <Send className="w-4 h-4" />
+                </button>
+            </div>
+        </div>
+    </div>
+
+    {/* Right: Generator & Editor */}
+    <div className="col-span-2 space-y-4">
+        {/* Generator Card */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <div className="flex gap-4 items-end">
+                <div className="flex-1 space-y-2">
+                    <label className="block text-sm font-medium text-gray-700">Topic or Keyword</label>
+                    <input
+                        type="text"
+                        value={topic}
+                        onChange={(e) => setTopic(e.target.value)}
+                        placeholder="e.g., 'FaMED Anamnese Tips'"
+                        disabled={!!selectedTopic}
+                        className="w-full px-4 py-3 text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-base disabled:bg-gray-100"
+                    />
+                </div>
+                <button
+                    onClick={handleGenerate}
+                    disabled={loading || !topic}
+                    className={`px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-all ${loading || !topic
+                        ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                        : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:shadow-lg active:scale-95'
+                        }`}
+                >
+                    {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Sparkles className="w-5 h-5" />}
+                    Generate
+                </button>
+            </div>
+
+            {status && (
+                <div className={`mt-4 p-3 rounded-lg text-sm flex items-center gap-2 ${status.includes('Error') ? 'bg-red-50 text-red-700' :
+                    status.includes('Generating') || status.includes('Uploading') || status.includes('Analyzing') ? 'bg-blue-50 text-blue-700' :
+                        'bg-green-50 text-green-700'
+                    }`}>
+                    {loading && <Loader2 className="w-4 h-4 animate-spin" />}
+                    {status.includes('✅') && <CheckCircle className="w-4 h-4" />}
+                    {status}
+                </div>
+            )}
+        </div>
+
+        {/* Editor/Preview Area */}
+        {content && (
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div className="flex items-center justify-between p-4 border-b bg-gray-50">
+                    <div className="flex items-center gap-2">
+                        <button
+                            onClick={() => setViewMode('edit')}
+                            className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition ${viewMode === 'edit' ? 'bg-white shadow text-blue-600' : 'text-gray-600 hover:bg-gray-100'
+                                }`}
+                        >
+                            <Code className="w-4 h-4" />
+                            Edit
+                        </button>
+                        <button
+                            onClick={() => setViewMode('preview')}
+                            className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition ${viewMode === 'preview' ? 'bg-white shadow text-blue-600' : 'text-gray-600 hover:bg-gray-100'
+                                }`}
+                        >
+                            <Eye className="w-4 h-4" />
+                            Preview
+                        </button>
+                    </div>
+                    <div className="flex gap-3">
+                        <button
+                            onClick={() => navigator.clipboard.writeText(content)}
+                            className="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg transition"
+                        >
+                            Copy
+                        </button>
+                        <button
+                            onClick={handleSave}
+                            disabled={loading}
+                            className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition flex items-center gap-2 font-medium shadow-sm"
+                        >
+                            <Save className="w-4 h-4" />
+                            Save
+                        </button>
+                    </div>
+                </div>
+
+                <div className="p-4">
+                    {viewMode === 'edit' ? (
+                        <textarea
+                            value={content}
+                            onChange={(e) => setContent(e.target.value)}
+                            className="w-full h-[600px] font-mono text-sm p-4 text-gray-900 bg-gray-50 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none resize-none"
+                            spellCheck={false}
+                        />
+                    ) : (
+                        <div className="prose prose-lg max-w-none h-[600px] overflow-y-auto p-4 bg-white rounded-lg border border-gray-200">
+                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                {getPreviewContent()}
+                            </ReactMarkdown>
+                        </div>
+                    )}
+                </div>
+            </div>
+        )}
+    </div>
+</div>
+            </div >
+        </div >
     );
 }
