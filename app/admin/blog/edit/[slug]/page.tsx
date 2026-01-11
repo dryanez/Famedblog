@@ -166,7 +166,7 @@ export default function EditPostPage() {
                 <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Content (Markdown)</label>
                     {showPreview ? (
-                        <div className="prose max-w-none p-6 border border-gray-200 rounded-lg bg-gray-50 min-h-[500px]">
+                        <div className="prose max-w-none p-6 border border-gray-200 rounded-lg bg-white min-h-[500px] text-black prose-headings:text-black prose-p:text-black prose-li:text-black prose-strong:text-black">
                             <div dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br/>') }} />
                         </div>
                     ) : (

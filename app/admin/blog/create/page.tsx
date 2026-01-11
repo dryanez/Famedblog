@@ -631,7 +631,7 @@ export default function CreateBlogPostPage() {
                                             spellCheck={false}
                                         />
                                     ) : (
-                                        <div className="prose prose-lg max-w-none h-[600px] overflow-y-auto p-4 bg-white rounded-lg border border-gray-200">
+                                        <div className="prose prose-lg max-w-none h-[600px] overflow-y-auto p-4 bg-white rounded-lg border border-gray-200 text-black prose-headings:text-black prose-p:text-black prose-li:text-black prose-strong:text-black">
                                             <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                                 {getPreviewContent()}
                                             </ReactMarkdown>
