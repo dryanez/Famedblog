@@ -24,7 +24,7 @@ def regenerate_post():
     print(f"🧠 Regenerating blog post: {TOPIC}")
     print("Fetching Knowledge Base context...")
     
-    # Debug: Check KB context
+    # Use function imported at top level
     kb_context = get_knowledge_base_context()
     if kb_context:
         print(f"✅ Found Knowledge Base context ({len(kb_context)} chars)")
@@ -39,9 +39,55 @@ def regenerate_post():
     - Common exam scenarios and role-plays
     """
 
-    print("✍️ Generating new content with Local Llama...")
-    # Using Llama instead of Gemini due to quota
-    new_content = generate_blog_post_with_local_llama(TOPIC, book_context)
+    print("✍️ Generating new content...")
+    
+    # Try Gemini first for quality
+    try:
+        from topic_research import generate_blog_post_with_gemini
+        new_content = generate_blog_post_with_gemini(TOPIC, book_context)
+    except Exception:
+        new_content = None
+
+    # Fallback to Llama with better prompt
+    if not new_content:
+        print("⚠️ Gemini failed/quota. Using Local Llama via Ollama...")
+        import requests
+        
+        # We already have kb_context from earlier
+        
+        prompt = f"""You are an expert medical writer for FaMED-Vorbereitung.com.
+        
+        TASK: Write a comprehensive blog post titled "{TOPIC}".
+        
+        CONTEXT FROM KNOWLEDGE BASE (Use as Ground Truth):
+        {kb_context}
+        
+        STRUCTURE:
+        - Title: {TOPIC}
+        - Introduction: Why candidates fail
+        - 10 distinct mistakes with detailed explanations and solutions (referencing specific FaMED facts from context)
+        - Conclusion: Encouragement
+        
+        REQUIREMENTS:
+        - Write in German (High C1 Medical Level)
+        - Be strictly factual based on Knowledge Base
+        - Format in Markdown
+        - Approx 1500 words
+        
+        Generate the Full Blog Post Now:"""
+        
+        payload = {
+            "model": "llama3:latest",
+            "prompt": prompt,
+            "stream": False
+        }
+        
+        try:
+            response = requests.post("http://localhost:11434/api/generate", json=payload, timeout=600)
+            if response.status_code == 200:
+                new_content = response.json().get('response')
+        except Exception as e:
+            print(f"❌ Llama failed: {e}")
 
     if new_content:
         print(f"Saving to {FILENAME}...")
