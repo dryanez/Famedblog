@@ -12,12 +12,12 @@ CREATE TABLE IF NOT EXISTS public.knowledge_base (
 -- Enable Row Level Security
 ALTER TABLE public.knowledge_base ENABLE ROW LEVEL SECURITY;
 
--- Create policies
--- Allow read access to everyone (or authenticated users/service role)
+-- Create policies (drop first to avoid duplicates)
+DROP POLICY IF EXISTS "Allow read access to knowledge_base" ON public.knowledge_base;
 CREATE POLICY "Allow read access to knowledge_base" ON public.knowledge_base
     FOR SELECT USING (true);
 
--- Allow full access to admins/service role
+DROP POLICY IF EXISTS "Allow full access to knowledge_base" ON public.knowledge_base;
 CREATE POLICY "Allow full access to knowledge_base" ON public.knowledge_base
     FOR ALL USING (true);
 
