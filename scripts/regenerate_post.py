@@ -73,6 +73,12 @@ def regenerate_post():
         - Be strictly factual based on Knowledge Base
         - Format in Markdown
         - Approx 1500 words
+        - **CRITICAL:** You MUST include a "Resources" or "Call to Action" section at the end with these EXACT links:
+            - FaMED Protokoll Book: https://famed-vorbereitung.com
+            - FaMED App: https://app.famed-test.de
+            - Simulation / Übungsexamen: https://famed-vorbereitung.com/exam
+            - Telegram Group: https://t.me/FamedTest
+            - WhatsApp Group: https://chat.whatsapp.com/FamedTest
         
         Generate the Full Blog Post Now:"""
         
