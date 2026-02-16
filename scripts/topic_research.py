@@ -14,8 +14,9 @@ from dotenv import load_dotenv
 from supabase import create_client
 import json
 
-load_dotenv()
-load_dotenv('../.env.local')  # Try to load from parenet if needed
+load_dotenv('.env')
+load_dotenv('.env.local')  # Try to load from current dir
+load_dotenv('blog_website/.env.local') # Try to load from blog_website
 
 # Initialize Gemini
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
