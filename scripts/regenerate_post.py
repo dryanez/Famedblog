@@ -72,6 +72,7 @@ def regenerate_post():
         - Write in German (High C1 Medical Level)
         - Be strictly factual based on Knowledge Base
         - Format in Markdown
+        - **IMPORTANT:** In the YAML frontmatter, the 'date' must be QUOTED strings (e.g., date: "2025-05-20").
         - Approx 1500 words
         - **CRITICAL:** You MUST include a "Resources" or "Call to Action" section at the end with these EXACT links:
             - FaMED Protokoll Book: https://famed-vorbereitung.com

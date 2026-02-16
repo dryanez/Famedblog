@@ -1,6 +1,6 @@
 ---
 title: "Top 10 FaMED-Fehler: Was ausländische Ärzte in der Fachsprachenprüfung vermeiden sollten"
-date: 2025-05-20
+date: "2025-05-20"
 excerpt: "Die FaMED-Prüfung ist für viele internationale Ärztinnen und Ärzte die größte Hürde auf dem Weg zur Approbation. Wir zeigen Ihnen die 10 häufigsten Fehler und wie Sie diese mit dem FaMED Protokoll Book vermeiden."
 tags: [Fachsprachenprüfung, FaMED, Medizindeutsch, Approbation, Prüfungstipps]
 status: "draft"
