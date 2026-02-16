@@ -3,7 +3,7 @@ title: "Top 10 FaMED-Fehler: Was ausländische Ärzte in der Fachsprachenprüfun
 date: "2025-05-20"
 excerpt: "Die FaMED-Prüfung ist für viele internationale Ärztinnen und Ärzte die größte Hürde auf dem Weg zur Approbation. Wir zeigen Ihnen die 10 häufigsten Fehler und wie Sie diese mit dem FaMED Protokoll Book vermeiden."
 tags: [Fachsprachenprüfung, FaMED, Medizindeutsch, Approbation, Prüfungstipps]
-status: "draft"
+status: "published"
 ---
 
 Die Fachsprachenprüfung (FaMED) ist oft der schnellste Weg, um die für die Approbation erforderlichen Deutschkenntnisse auf C1-Niveau nachzuweisen. Doch Vorsicht: Viele hochqualifizierte Ärztinnen und Ärzte scheitern nicht an ihrem medizinischen Wissen, sondern an spezifischen kommunikativen und formalen Fehlern.
