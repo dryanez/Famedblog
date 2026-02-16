@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Plus, Search, Trash2, Save, X, BookOpen, Loader2, ExternalLink, Upload, FileText } from 'lucide-react';
