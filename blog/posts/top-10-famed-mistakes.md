@@ -1,7 +1,7 @@
 ---
 title: "Top 10 FaMED Mistakes Foreign Doctors Make (And How to Avoid Them)"
 slug: "top-10-famed-mistakes"
-date: "2025-12-10"
+date: "2026-02-16"
 author: "FaMED Test Prep Team"
 category: "Exam Strategy"
 tags: ["FaMED", "Common Mistakes", "Study Tips", "Exam Strategy", "Foreign Doctors", "Germany"]
