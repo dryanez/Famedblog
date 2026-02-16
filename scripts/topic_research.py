@@ -2,7 +2,7 @@
 Smart Topic Research System
 - Finds trending topics using Google Trends
 - Uses keyword research for FaMED test
-- Generates content using book + FaMED website as sources
+- Generates content using book + Knowledge Base (The Brain) as sources
 """
 import os
 import requests
@@ -11,13 +11,53 @@ from datetime import datetime, timedelta
 import pandas as pd
 import google.generativeai as genai
 from dotenv import load_dotenv
+from supabase import create_client
+import json
 
 load_dotenv()
+load_dotenv('../.env.local')  # Try to load from parenet if needed
 
+# Initialize Gemini
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
     gemini_model = genai.GenerativeModel('gemini-flash-latest')
+
+# Initialize Supabase
+SUPABASE_URL = os.getenv('NEXT_PUBLIC_SUPABASE_URL')
+SUPABASE_KEY = os.getenv('SUPABASE_SERVICE_ROLE_KEY') or os.getenv('NEXT_PUBLIC_SUPABASE_ANON_KEY')
+supabase = None
+
+if SUPABASE_URL and SUPABASE_KEY:
+    try:
+        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+        print("✅ Connected to Knowledge Base (Supabase)")
+    except Exception as e:
+        print(f"⚠️ Failed to connect to Supabase: {e}")
+
+def get_knowledge_base_context():
+    """Fetch all knowledge entries from Supabase to use as context"""
+    if not supabase:
+        return ""
+    
+    try:
+        response = supabase.table('knowledge_base').select('title, content, category').execute()
+        entries = response.data
+        
+        if not entries:
+            return ""
+            
+        context_str = "\n--- KNOWLEDGE BASE (THE BRAIN) ---\n"
+        for entry in entries:
+            context_str += f"Title: {entry['title']} ({entry['category']})\n"
+            context_str += f"Content: {entry['content']}\n\n"
+            
+        print(f"🧠 Loaded {len(entries)} knowledge entries for context")
+        return context_str
+        
+    except Exception as e:
+        print(f"⚠️ Error fetching knowledge base: {e}")
+        return ""
 
 def get_trending_famed_topics():
     """Find trending topics related to FaMED using Google Trends"""
@@ -99,6 +139,9 @@ def generate_blog_post_with_local_llama(topic, book_context=""):
     """Generate blog post using Local Llama via Ollama"""
     print(f"🦙 Attempting generation with Local Llama...")
     
+    # Fetch Knowledge Base Context
+    kb_context = get_knowledge_base_context()
+    
     prompt = f"""You are writing a blog post for FaMED-Vorbereitung.com, a German medical licensing exam prep site.
 
 TOPIC: {topic}
@@ -106,10 +149,13 @@ TOPIC: {topic}
 IMPORTANT SOURCES TO REFERENCE:
 1. FaMED Protokoll Book (the user's study guide book)
 2. Official FaMED exam guidelines
-3. Anamnese techniques
+3. Knowledge Base (attached below)
 
 CONTEXT FROM BOOK:
 {book_context if book_context else 'Use general FaMED exam knowledge'}
+
+CONTEXT FROM KNOWLEDGE BASE (high priority):
+{kb_context}
 
 REQUIREMENTS:
 - Write in German
@@ -142,6 +188,9 @@ Generate the complete blog post now:"""
 def generate_blog_post_with_gemini(topic, book_context=""):
     """Generate blog post using Gemini with book content as reference"""
     
+    # Fetch Knowledge Base Context
+    kb_context = get_knowledge_base_context()
+    
     prompt = f"""You are writing a blog post for FaMED-Vorbereitung.com, a German medical licensing exam prep site.
 
 TOPIC: {topic}
@@ -149,10 +198,13 @@ TOPIC: {topic}
 IMPORTANT SOURCES TO REFERENCE:
 1. FaMED Protokoll Book (the user's study guide book)
 2. Official FaMED exam guidelines
-3. Anamnese techniques from the book
+3. Knowledge Base provided below (Use this as GROUND TRUTH)
 
 CONTEXT FROM BOOK:
 {book_context if book_context else 'Use general FaMED exam knowledge'}
+
+CONTEXT FROM KNOWLEDGE BASE (Use this information to ensure accuracy):
+{kb_context}
 
 REQUIREMENTS:
 - Write in German
@@ -298,8 +350,6 @@ status: "draft"
             'score': 0
         }
         
-    return None
-
     return None
 
 import argparse

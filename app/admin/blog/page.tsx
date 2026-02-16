@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Plus, Search, Edit, Trash2, Eye, Facebook, Send, Calendar, Play, Loader2 } from 'lucide-react';
+import { ArrowLeft, Plus, Search, Edit, Trash2, Eye, Facebook, Send, Calendar, Play, Loader2, BookOpen } from 'lucide-react';
 
 interface BlogPost {
     slug: string;
@@ -108,6 +108,13 @@ export default function BlogManagementPage() {
                     >
                         <Calendar className="w-5 h-5" />
                         Calendar
+                    </Link>
+                    <Link
+                        href="/admin/blog/knowledge"
+                        className="flex items-center gap-2 px-4 py-2.5 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 font-medium transition-all"
+                    >
+                        <BookOpen className="w-5 h-5" />
+                        Knowledge Base
                     </Link>
                     <Link
                         href="/admin/blog/create"
