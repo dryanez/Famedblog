@@ -60,8 +60,8 @@ class BlogAutomationAgent:
         for file_path in sorted(draft_files):
             metadata = self.extract_metadata(file_path)
             
-            # Check if this post should be published today
-            if metadata.get('status') == 'draft' and metadata.get('date') == self.today:
+            # Check if this post should be published today or in the past (catch-up)
+            if metadata.get('status') in ['draft', 'scheduled'] and metadata.get('date') <= self.today:
                 return file_path, metadata
         
         print("ℹ️  No posts scheduled for today")
