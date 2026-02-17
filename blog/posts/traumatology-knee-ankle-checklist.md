@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Traumatologie Anamnese Checkliste: Schlüssel Fragen bei Knie- und Sprunggelenksverletzungen"
 date: "2026-01-16"

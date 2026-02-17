@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Navigating Neurological Anamnesis: Essential Questions for Migraine, Vertigo & Tinnitus"
 date: "2026-01-15"

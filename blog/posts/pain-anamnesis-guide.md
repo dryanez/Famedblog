@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "The Ultimate Guide to Pain Anamnesis: Mastering Medical History Taking"
 date: "2026-01-13"
