@@ -17,7 +17,7 @@ Die detaillierte Beschreibung des Unfallhergangs liefert wichtige Hinweise auf d
 
 *   **Wie ist der Unfall passiert?** (Wie genau hat sich die Verletzung ereignet?)
 *   **Sind Sie gestürzt?** (War ein Sturz beteiligt?)
-    *   **Wenn ja, auf welcher Seite sind Sie gefallen?** (Links oder rechts?)
+*   **Wenn ja, auf welcher Seite sind Sie gefallen?** (Links oder rechts?)
 *   **Haben Sie einen Helm getragen oder waren Sie angeschnallt (falls relevant)?** (Informationen zur Prävention und zum Schweregrad des Unfalls.)
 *   **Wie sind Sie ins Krankenhaus gekommen?** (z.B. Rettungswagen, selbstständig)
 
@@ -36,8 +36,8 @@ Eine genaue Schmerzerfassung hilft bei der Einschätzung des Verletzungsschwereg
 *   **Wie stark sind die Schmerzen auf einer Skala von 0 bis 10, wobei 0 kein Schmerz und 10 der stärkste vorstellbare Schmerz ist?**
 *   **Strahlen die Schmerzen aus?** (z.B. in den Oberschenkel, Unterschenkel, Fuß)
 *   **Haben sich die Schmerzen im Laufe der Zeit verändert?**
-    *   Sind sie stärker oder schwächer geworden?
-    *   Kommen und gehen sie?
+*   Sind sie stärker oder schwächer geworden?
+*   Kommen und gehen sie?
 
 ### Verletzung, Beweglichkeit und Tetanusschutz
 

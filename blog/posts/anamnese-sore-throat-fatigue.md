@@ -22,151 +22,151 @@ Beginnen Sie das Gespräch mit einer freundlichen Begrüßung und stellen Sie si
 Erfassen Sie die grundlegenden persönlichen Daten des Patienten.
 
 *   **Fragen:**
-    *   Wie heißen Sie?
-    *   Wann sind Sie geboren?
-    *   Wie alt sind Sie?
-    *   Wie groß sind Sie?
-    *   Wie viel wiegen Sie?
+*   Wie heißen Sie?
+*   Wann sind Sie geboren?
+*   Wie alt sind Sie?
+*   Wie groß sind Sie?
+*   Wie viel wiegen Sie?
 
 ### 3. Aktuelle Anamnese
 
 Ermitteln Sie den Hauptgrund für den Arztbesuch und die wichtigsten Beschwerden des Patienten. Lassen Sie den Patienten seine Geschichte erzählen.
 
 *   **Fragen:**
-    *   Was führt Sie zu uns?
-    *   Warum sind Sie ins Krankenhaus gekommen?
-    *   Was kann ich für Sie tun, Herr/Frau …?
+*   Was führt Sie zu uns?
+*   Warum sind Sie ins Krankenhaus gekommen?
+*   Was kann ich für Sie tun, Herr/Frau …?
 
 ### 4. Allgemeine Beschwerden
 
 Erfragen Sie detailliert die aktuellen Beschwerden.
 
 *   **Fragen:**
-    *   Was für Beschwerden haben Sie?
-    *   Seit wann haben Sie diese Beschwerden?
-    *   Hatten Sie einen Unfall?
-    *   Haben Sie das Bewusstsein verloren? War Ihnen schwindelig oder schwarz vor Augen?
-    *   Hatten Sie diese Beschwerden früher schon einmal?
-    *   Verändern sich die Beschwerden im Laufe der Zeit?
-    *   Haben Sie noch weitere Beschwerden? Ist Ihnen noch etwas aufgefallen?
-    *   Haben Sie etwas Ungewöhnliches bemerkt?
+*   Was für Beschwerden haben Sie?
+*   Seit wann haben Sie diese Beschwerden?
+*   Hatten Sie einen Unfall?
+*   Haben Sie das Bewusstsein verloren? War Ihnen schwindelig oder schwarz vor Augen?
+*   Hatten Sie diese Beschwerden früher schon einmal?
+*   Verändern sich die Beschwerden im Laufe der Zeit?
+*   Haben Sie noch weitere Beschwerden? Ist Ihnen noch etwas aufgefallen?
+*   Haben Sie etwas Ungewöhnliches bemerkt?
 
 ### 5. Schmerzanalyse (falls zutreffend)
 
 Wenn der Patient Schmerzen hat, führen Sie eine detaillierte Schmerzanalyse durch. Orientieren Sie sich am OPQRST Schema.
 
 *   **Zeitliches Auftreten:**
-    *   Seit wann haben Sie Schmerzen?
-    *   Haben die Schmerzen plötzlich begonnen oder langsam?
-    *   Wie lange dauert der Schmerz an?
-    *   Ist der Schmerz dauerhaft oder sind Sie manchmal auch schmerzfrei?
+*   Seit wann haben Sie Schmerzen?
+*   Haben die Schmerzen plötzlich begonnen oder langsam?
+*   Wie lange dauert der Schmerz an?
+*   Ist der Schmerz dauerhaft oder sind Sie manchmal auch schmerzfrei?
 *   **Lokalisation:**
-    *   Wo genau tut es Ihnen weh?
-    *   Strahlen die Schmerzen aus?
+*   Wo genau tut es Ihnen weh?
+*   Strahlen die Schmerzen aus?
 *   **Stärke:**
-    *   Wie stark sind die Schmerzen auf einer Skala von 0-10, wobei 0 kein Schmerz und 10 der stärkste vorstellbare Schmerz ist?
+*   Wie stark sind die Schmerzen auf einer Skala von 0-10, wobei 0 kein Schmerz und 10 der stärkste vorstellbare Schmerz ist?
 *   **Qualität:**
-    *   Wie fühlen sich die Schmerzen an? Sind sie eher brennend, drückend, stechend, klopfend, ziehend, …?
+*   Wie fühlen sich die Schmerzen an? Sind sie eher brennend, drückend, stechend, klopfend, ziehend, …?
 *   **Auslöser/Linderung:**
-    *   Können Sie einen Auslöser für die Schmerzen erkennen?
-    *   Haben Sie die Beschwerden nur bei Belastung oder auch in Ruhe?
-    *   Gibt es etwas, das die Schmerzen lindert/verstärkt?
-    *   Hilft Ihnen eher Wärme oder Kälte?
+*   Können Sie einen Auslöser für die Schmerzen erkennen?
+*   Haben Sie die Beschwerden nur bei Belastung oder auch in Ruhe?
+*   Gibt es etwas, das die Schmerzen lindert/verstärkt?
+*   Hilft Ihnen eher Wärme oder Kälte?
 *   **Einnahme von Medikamenten:**
-    *   Haben Sie etwas gegen die Schmerzen eingenommen? Hat es geholfen?
+*   Haben Sie etwas gegen die Schmerzen eingenommen? Hat es geholfen?
 
 ### 6. Vegetative Anamnese
 
 Erfragen Sie vegetative Symptome, die auf eine Infektion oder Entzündung hinweisen könnten.
 
 *   **Fragen:**
-    *   War Ihnen übel? Mussten Sie erbrechen? Leiden Sie unter Übelkeit oder Erbrechen?
-    *   Haben Sie Nachtschweiß bemerkt?
-    *   Haben Sie Fieber gemessen?
-    *   Haben Sie Probleme beim Wasserlassen oder Stuhlgang? Leiden Sie unter Durchfall oder Verstopfung?
-    *   Schlafen Sie gut? Haben Sie Ein- oder Durchschlafschwierigkeiten?
-    *   Hat sich Ihr Appetit in letzter Zeit verändert?
-    *   Haben Sie in letzter Zeit ungewollt zu- oder abgenommen?
-    *   Haben Sie Husten? Kommt dabei Schleim hoch oder ist es ein trockener Husten?
+*   War Ihnen übel? Mussten Sie erbrechen? Leiden Sie unter Übelkeit oder Erbrechen?
+*   Haben Sie Nachtschweiß bemerkt?
+*   Haben Sie Fieber gemessen?
+*   Haben Sie Probleme beim Wasserlassen oder Stuhlgang? Leiden Sie unter Durchfall oder Verstopfung?
+*   Schlafen Sie gut? Haben Sie Ein- oder Durchschlafschwierigkeiten?
+*   Hat sich Ihr Appetit in letzter Zeit verändert?
+*   Haben Sie in letzter Zeit ungewollt zu- oder abgenommen?
+*   Haben Sie Husten? Kommt dabei Schleim hoch oder ist es ein trockener Husten?
 
 ### 7. Gynäkologische Anamnese (bei Frauen)
 
 Bei weiblichen Patienten ist die gynäkologische Anamnese wichtig.
 
 *   **Fragen:**
-    *   Wie sieht es mit Ihrer Menstruation aus? Haben Sie sie noch? Ist sie regelmäßig?
-    *   Wann hatten Sie Ihre letzte Regelblutung?
-    *   Haben Sie Menstruationsbeschwerden?
-    *   Waren Sie schon einmal schwanger? Haben Sie Kinder?
-    *   Besteht im Moment die Möglichkeit einer Schwangerschaft?
-    *   Verhüten Sie? Wie verhüten Sie?
+*   Wie sieht es mit Ihrer Menstruation aus? Haben Sie sie noch? Ist sie regelmäßig?
+*   Wann hatten Sie Ihre letzte Regelblutung?
+*   Haben Sie Menstruationsbeschwerden?
+*   Waren Sie schon einmal schwanger? Haben Sie Kinder?
+*   Besteht im Moment die Möglichkeit einer Schwangerschaft?
+*   Verhüten Sie? Wie verhüten Sie?
 
 ### 8. Vorerkrankungen / Voroperationen
 
 Erfragen Sie relevante Vorerkrankungen und Operationen.
 
 *   **Fragen:**
-    *   Leiden Sie an chronischen Erkrankungen? (z.B. Diabetes, Bluthochdruck)
-    *   Waren Sie in letzter Zeit im Krankenhaus oder in ärztlicher Behandlung?
-    *   Sind Sie schon einmal operiert worden? Wann? Aus welchem Grund?
+*   Leiden Sie an chronischen Erkrankungen? (z.B. Diabetes, Bluthochdruck)
+*   Waren Sie in letzter Zeit im Krankenhaus oder in ärztlicher Behandlung?
+*   Sind Sie schon einmal operiert worden? Wann? Aus welchem Grund?
 
 ### 9. Medikamente
 
 Erfassen Sie die aktuelle Medikation des Patienten.
 
 *   **Fragen:**
-    *   Nehmen Sie regelmäßig Medikamente ein?
-    *   In welcher Dosierung?
-    *   Nehmen Sie etwas bei Bedarf ein?
-    *   Hat Ihnen das Medikament geholfen?
+*   Nehmen Sie regelmäßig Medikamente ein?
+*   In welcher Dosierung?
+*   Nehmen Sie etwas bei Bedarf ein?
+*   Hat Ihnen das Medikament geholfen?
 
 ### 10. Allergien
 
 Erfragen Sie bekannte Allergien und Unverträglichkeiten.
 
 *   **Fragen:**
-    *   Sind bei Ihnen Allergien oder Unverträglichkeiten bekannt?
-    *   Haben Sie Lebensmittelunverträglichkeiten (z.B. Laktoseintoleranz)?
-    *   Wogegen sind Sie allergisch?
-    *   Wie äußert sich diese Allergie / Unverträglichkeit?
-    *   Nehmen Sie Medikamente gegen die Allergie?
+*   Sind bei Ihnen Allergien oder Unverträglichkeiten bekannt?
+*   Haben Sie Lebensmittelunverträglichkeiten (z.B. Laktoseintoleranz)?
+*   Wogegen sind Sie allergisch?
+*   Wie äußert sich diese Allergie / Unverträglichkeit?
+*   Nehmen Sie Medikamente gegen die Allergie?
 
 ### 11. Noxen
 
 Erfragen Sie den Konsum von Tabak, Alkohol und Drogen.
 
 *   **Fragen:**
-    *   Rauchen Sie? Haben Sie jemals geraucht? Seit wann rauchen Sie? Wie viele Zigaretten rauchen sie am Tag / in der Woche?
-    *   Trinken Sie (regelmäßig) Alkohol? Wie häufig und wie viel trinken Sie ungefähr?
-    *   Hatten Sie schon einmal Kontakt mit Drogen?
+*   Rauchen Sie? Haben Sie jemals geraucht? Seit wann rauchen Sie? Wie viele Zigaretten rauchen sie am Tag / in der Woche?
+*   Trinken Sie (regelmäßig) Alkohol? Wie häufig und wie viel trinken Sie ungefähr?
+*   Hatten Sie schon einmal Kontakt mit Drogen?
 
 ### 12. Familienanamnese
 
 Erfragen Sie relevante Erkrankungen in der Familie.
 
 *   **Fragen:**
-    *   Sind Ihre Eltern gesund? Woran sind sie gestorben?
-    *   Sind Ihre Geschwister gesund?
-    *   Hat jemand in Ihrer Familie ähnliche Beschwerden wie Sie?
-    *   Gibt es Erbkrankheiten in Ihrer Familie? Gibt es in Ihrer Familie chronische Erkrankungen oder Vorerkrankungen, von denen ich wissen sollte, zum Beispiel Diabetes, Krebs oder Herz-Kreislauf-Erkrankungen?
+*   Sind Ihre Eltern gesund? Woran sind sie gestorben?
+*   Sind Ihre Geschwister gesund?
+*   Hat jemand in Ihrer Familie ähnliche Beschwerden wie Sie?
+*   Gibt es Erbkrankheiten in Ihrer Familie? Gibt es in Ihrer Familie chronische Erkrankungen oder Vorerkrankungen, von denen ich wissen sollte, zum Beispiel Diabetes, Krebs oder Herz-Kreislauf-Erkrankungen?
 
 ### 13. Psychoanamnese
 
 Erfragen Sie psychische Belastungen und Stressoren.
 
 *   **Fragen:**
-    *   Haben Sie in letzter Zeit vermehrt Stress oder etwas, das Sie mental belastet?
-    *   Fühlen Sie sich in letzter Zeit stark belastet oder gestresst?
+*   Haben Sie in letzter Zeit vermehrt Stress oder etwas, das Sie mental belastet?
+*   Fühlen Sie sich in letzter Zeit stark belastet oder gestresst?
 
 ### 14. Sozialanamnese
 
 Erfragen Sie berufliche und soziale Umstände.
 
 *   **Fragen:**
-    *   Was machen Sie beruflich?
-    *   Haben Sie Stress bei der Arbeit?
-    *   Sind Sie verheiratet? Haben Sie Kinder?
-    *   Leben Sie allein? Mit wem leben Sie zusammen?
+*   Was machen Sie beruflich?
+*   Haben Sie Stress bei der Arbeit?
+*   Sind Sie verheiratet? Haben Sie Kinder?
+*   Leben Sie allein? Mit wem leben Sie zusammen?
 
 ### 15. Spezifische Fragen (je nach Symptomatik)
 

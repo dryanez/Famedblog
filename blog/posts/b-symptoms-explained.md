@@ -37,21 +37,21 @@ Insbesondere im Rahmen der onkologischen Anamnese signalisieren B-Symptome oft e
 Um B-Symptome adäquat zu erfassen, ist ein strukturiertes Anamnesegespräch unerlässlich. Hier sind einige wichtige Fragen, die Sie als Arzt stellen sollten:
 
 *   **Gewichtsverlust:**
-    *   "Haben Sie in den letzten sechs Monaten ungewollt Gewicht verloren?"
-    *   "Wie viel Gewicht haben Sie ungefähr verloren?"
-    *   "Haben Sie bemerkt, dass Ihre Kleidung lockerer sitzt?"
-    *   "Haben Sie Ihren Appetit in letzter Zeit verändert?"
+*   "Haben Sie in den letzten sechs Monaten ungewollt Gewicht verloren?"
+*   "Wie viel Gewicht haben Sie ungefähr verloren?"
+*   "Haben Sie bemerkt, dass Ihre Kleidung lockerer sitzt?"
+*   "Haben Sie Ihren Appetit in letzter Zeit verändert?"
 
 *   **Fieber:**
-    *   "Hatten Sie in letzter Zeit Fieber?"
-    *   "Wie hoch war das Fieber (wenn gemessen)?"
-    *   "Wann tritt das Fieber auf (Tageszeit)?"
-    *   "Gibt es Begleitsymptome wie Schüttelfrost?"
+*   "Hatten Sie in letzter Zeit Fieber?"
+*   "Wie hoch war das Fieber (wenn gemessen)?"
+*   "Wann tritt das Fieber auf (Tageszeit)?"
+*   "Gibt es Begleitsymptome wie Schüttelfrost?"
 
 *   **Nachtschweiß:**
-    *   "Haben Sie in letzter Zeit unter Nachtschweiß gelitten?"
-    *   "Ist der Schweiß so stark, dass Sie Ihre Kleidung oder Bettwäsche wechseln müssen?"
-    *   "Wie oft tritt der Nachtschweiß auf?"
+*   "Haben Sie in letzter Zeit unter Nachtschweiß gelitten?"
+*   "Ist der Schweiß so stark, dass Sie Ihre Kleidung oder Bettwäsche wechseln müssen?"
+*   "Wie oft tritt der Nachtschweiß auf?"
 
 Es ist wichtig, die Antworten des Patienten genau zu dokumentieren und nachzufragen, um ein vollständiges Bild der Symptomatik zu erhalten.
 
