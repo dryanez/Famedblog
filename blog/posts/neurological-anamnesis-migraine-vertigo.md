@@ -1,8 +1,8 @@
 ```markdown
 ---
 title: Navigating Neurological Anamnesis: Essential Questions for Migraine, Vertigo & Tinnitus
-date: "2026-10-26"
-status: published
+date: "2026-01-15"
+status: "published"
 ---
 
 # Navigating Neurological Anamnesis: Essential Questions for Migraine, Vertigo & Tinnitus

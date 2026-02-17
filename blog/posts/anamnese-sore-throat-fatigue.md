@@ -1,8 +1,8 @@
 ```markdown
 ---
 title: Systematische Anamnese bei Halsschmerzen, chronischer Müdigkeit & infektiösen Symptomen
-date: "2024-01-18"
-status: published
+date: "2026-01-18"
+status: "published"
 ---
 
 ## Einführung
