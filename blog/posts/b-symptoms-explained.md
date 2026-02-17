@@ -1,93 +1,94 @@
 ---
-title: "B-Symptome erklärt: Ihr Leitfaden zu Gewichtsverlust, Fieber & Nachtschweiß"
+title: "B-Symptoms Explained: Your Guide to Weight Loss, Fever & Night Sweats"
 date: "2026-01-17"
 status: "published"
 ---
 
-## B-Symptome erklärt: Ihr Leitfaden zu Gewichtsverlust, Fieber & Nachtschweiß
+## B-Symptoms Explained: Your Guide to Weight Loss, Fever & Night Sweats
 
-### Einführung
+### Introduction
 
-In der medizinischen Diagnostik spielen unspezifische Symptome oft eine entscheidende Rolle. Unter diesen nehmen die sogenannten B-Symptome – ungewollter Gewichtsverlust, Fieber und Nachtschweiß – eine besondere Stellung ein. Obwohl sie bei vielen verschiedenen Erkrankungen auftreten können, sind sie besonders wichtig im Kontext der onkologischen Anamnese. Dieser Blogbeitrag bietet Ihnen einen umfassenden Überblick über die B-Symptome, ihre Bedeutung und wie sie im Rahmen einer medizinischen Untersuchung erfasst werden.
+In medical diagnostics, non-specific symptoms often play a crucial role. Among these, the so-called B-symptoms — unintentional weight loss, fever, and night sweats — hold a special significance. Although they can occur in many different diseases, they are particularly important in the context of oncological history-taking. This blog post provides you with a comprehensive overview of B-symptoms, their significance, and how they are assessed during a medical examination.
 
-### Was sind B-Symptome?
+### What Are B-Symptoms?
 
-B-Symptome sind charakteristische Anzeichen, die auf eine systemische Erkrankung hinweisen können. Sie umfassen:
+B-symptoms are characteristic signs that may indicate a systemic disease. They include:
 
-*   **Ungewollter Gewichtsverlust:** Ein signifikanter Gewichtsverlust von mehr als 10% des Körpergewichts innerhalb von 6 Monaten ohne bewusste Diät oder gesteigerte körperliche Aktivität.
-*   **Fieber:** Unklärtes Fieber über 38°C, das nicht durch eine offensichtliche Infektion oder andere bekannte Ursachen erklärt werden kann.
-*   **Nachtschweiß:** Wiederholtes Auftreten von starkem Schwitzen während der Nacht, das so ausgeprägt ist, dass die Kleidung oder Bettwäsche durchnässt sind.
+*   **Unintentional weight loss (Ungewollter Gewichtsverlust):** A significant weight loss of more than 10% of body weight within 6 months without deliberate dieting or increased physical activity.
+*   **Fever (Fieber):** Unexplained fever above 38°C that cannot be explained by an obvious infection or other known causes.
+*   **Night sweats (Nachtschweiß):** Repeated occurrence of heavy sweating during the night, so severe that clothing or bedding becomes soaked.
 
-### Die Bedeutung der B-Symptome in der Anamnese
+### The Importance of B-Symptoms in Medical History-Taking
 
-Die Erfassung von B-Symptomen ist besonders wichtig in der Anamnese, da sie auf verschiedene zugrunde liegende Erkrankungen hinweisen können. Zu den häufigsten gehören:
+Capturing B-symptoms is particularly important in the Anamnese, as they can point to various underlying conditions. The most common include:
 
-*   **Infektionen:** Tuberkulose, HIV, bakterielle Infektionen
-*   **Autoimmunerkrankungen:** Systemischer Lupus Erythematodes (SLE), Rheumatoide Arthritis
-*   **Entzündliche Erkrankungen:** Morbus Crohn
-*   **Maligne Lymphome:** Hodgkin-Lymphom, Non-Hodgkin-Lymphom
-*   **Leukämien:** Akute und chronische Leukämien
-*   **Andere Krebserkrankungen:** Seltener bei soliden Tumoren, können aber vorkommen.
+*   **Infections:** Tuberculosis, HIV, bacterial infections
+*   **Autoimmune diseases:** Systemic Lupus Erythematosus (SLE), Rheumatoid Arthritis
+*   **Inflammatory diseases:** Morbus Crohn
+*   **Malignant lymphomas:** Hodgkin-Lymphom, Non-Hodgkin-Lymphom
+*   **Leukemias:** Acute and chronic leukemias
+*   **Other cancers:** Less common in solid tumors, but can occur.
 
-Insbesondere im Rahmen der onkologischen Anamnese signalisieren B-Symptome oft eine fortgeschrittene Erkrankung oder eine hohe Tumorlast.
+Particularly in the context of oncological history-taking, B-symptoms often signal advanced disease or a high tumor burden.
 
-### Die Erfassung von B-Symptomen im Anamnesegespräch
+### Assessing B-Symptoms in the Patient Interview
 
-Um B-Symptome adäquat zu erfassen, ist ein strukturiertes Anamnesegespräch unerlässlich. Hier sind einige wichtige Fragen, die Sie als Arzt stellen sollten:
+To adequately capture B-symptoms, a structured Anamnesegespräch is essential. Here are some important questions you should ask as a doctor:
 
-*   **Gewichtsverlust:**
+*   **Weight loss (Gewichtsverlust):**
 *   "Haben Sie in den letzten sechs Monaten ungewollt Gewicht verloren?"
 *   "Wie viel Gewicht haben Sie ungefähr verloren?"
 *   "Haben Sie bemerkt, dass Ihre Kleidung lockerer sitzt?"
 *   "Haben Sie Ihren Appetit in letzter Zeit verändert?"
 
-*   **Fieber:**
+*   **Fever (Fieber):**
 *   "Hatten Sie in letzter Zeit Fieber?"
 *   "Wie hoch war das Fieber (wenn gemessen)?"
 *   "Wann tritt das Fieber auf (Tageszeit)?"
 *   "Gibt es Begleitsymptome wie Schüttelfrost?"
 
-*   **Nachtschweiß:**
+*   **Night sweats (Nachtschweiß):**
 *   "Haben Sie in letzter Zeit unter Nachtschweiß gelitten?"
 *   "Ist der Schweiß so stark, dass Sie Ihre Kleidung oder Bettwäsche wechseln müssen?"
 *   "Wie oft tritt der Nachtschweiß auf?"
 
-Es ist wichtig, die Antworten des Patienten genau zu dokumentieren und nachzufragen, um ein vollständiges Bild der Symptomatik zu erhalten.
+It is important to carefully document the patient's answers and follow up to get a complete picture of the symptoms.
 
-### Differentialdiagnostische Überlegungen
+### Differential Diagnostic Considerations
 
-Es ist entscheidend, B-Symptome nicht isoliert zu betrachten, sondern im Kontext anderer Symptome, der Krankengeschichte und der körperlichen Untersuchung zu bewerten. Differenzialdiagnostisch müssen andere Ursachen für die Symptome ausgeschlossen werden, bevor eine maligne Erkrankung in Betracht gezogen wird.
+It is crucial not to view B-symptoms in isolation, but to evaluate them in the context of other symptoms, medical history, and physical examination. Other causes for the symptoms must be ruled out before a malignant disease is considered.
 
-### Weiterführende Diagnostik
+### Further Diagnostics
 
-Bei Verdacht auf eine maligne Erkrankung aufgrund von B-Symptomen sind weiterführende diagnostische Maßnahmen erforderlich. Diese können umfassen:
+If a malignant disease is suspected based on B-symptoms, further diagnostic measures are required. These may include:
 
-*   **Blutuntersuchungen:** Blutbild, Entzündungsparameter, Leber- und Nierenwerte, LDH, Beta-2-Mikroglobulin
-*   **Bildgebung:** Röntgen-Thorax, CT-Thorax/Abdomen/Becken, MRT, PET-CT
-*   **Lymphknotenbiopsie:** Bei Verdacht auf Lymphom
-*   **Knochenmarkbiopsie:** Bei Verdacht auf Leukämie
+*   **Blood tests (Blutuntersuchungen):** Blood count, inflammatory markers, liver and kidney values, LDH, Beta-2-Mikroglobulin
+*   **Imaging (Bildgebung):** Chest X-ray, CT Thorax/Abdomen/Pelvis, MRI, PET-CT
+*   **Lymph node biopsy (Lymphknotenbiopsie):** If lymphoma is suspected
+*   **Bone marrow biopsy (Knochenmarkbiopsie):** If leukemia is suspected
 
-### Die Rolle der vegetativen Anamnese
+### The Role of Vegetative History-Taking
 
-Die vegetative Anamnese ist ein wichtiger Bestandteil der umfassenden Anamnese und hilft, B-Symptome besser einzuordnen. Sie umfasst Fragen zu:
+The vegetative Anamnese is an important component of comprehensive history-taking and helps to better classify B-symptoms. It includes questions about:
 
-*   **Temperatur:** "Haben Sie Fieber gemessen?"
-*   **Schlaf:** "Schlafen Sie gut? Haben Sie Ein- oder Durchschlafschwierigkeiten?"
-*   **Appetit:** "Hat sich Ihr Appetit in letzter Zeit verändert?"
-*   **Stuhlgang und Miktion:** "Haben Sie Probleme beim Wasserlassen oder Stuhlgang? Leiden Sie unter Durchfall oder Verstopfung?"
-*   **Husten:** "Haben Sie Husten? Kommt dabei Schleim hoch oder ist es ein trockener Husten?"
+*   **Temperature:** "Haben Sie Fieber gemessen?"
+*   **Sleep:** "Schlafen Sie gut? Haben Sie Ein- oder Durchschlafschwierigkeiten?"
+*   **Appetite:** "Hat sich Ihr Appetit in letzter Zeit verändert?"
+*   **Bowel and urination:** "Haben Sie Probleme beim Wasserlassen oder Stuhlgang? Leiden Sie unter Durchfall oder Verstopfung?"
+*   **Cough:** "Haben Sie Husten? Kommt dabei Schleim hoch oder ist es ein trockener Husten?"
 
-### Gesprächsführung und Reaktion auf Patientenangst
+### Communication and Responding to Patient Anxiety
 
-Es ist entscheidend, dem Patienten während des Gesprächs aufmerksam zuzuhören und auf seine Ängste einzugehen. Formulierungen wie "Ich kann Ihre Angst sehr gut verstehen" oder "Beruhigen Sie sich bitte! Sie brauchen im Moment keine Angst zu haben" können beruhigend wirken. Es ist wichtig zu betonen, dass B-Symptome viele Ursachen haben können und nicht zwangsläufig auf eine Krebserkrankung hindeuten. Eine offene und ehrliche Kommunikation ist entscheidend, um das Vertrauen des Patienten zu gewinnen und eine erfolgreiche Diagnose und Behandlung zu ermöglichen.
-Wenn Krebs in der Familie liegt und der Patient Angst davor hat, kann man entgegnen: “Ich kann Ihre Angst sehr gut verstehen. Aber ich möchte Sie beruhigen, weil Krebs nicht 100% erblich ist." oder “Um ehrlich zu sein, ist Krebs nicht 100% ausgeschlossen, Ihre Beschwerden könnten auch viele andere Gründe haben.”
+It is crucial to listen attentively to the patient during the conversation and address their fears. Phrases like "Ich kann Ihre Angst sehr gut verstehen" or "Beruhigen Sie sich bitte! Sie brauchen im Moment keine Angst zu haben" can have a calming effect. It is important to emphasize that B-symptoms can have many causes and do not necessarily indicate cancer. Open and honest communication is essential to gain the patient's trust and enable successful diagnosis and treatment.
 
-### Fazit
+If cancer runs in the family and the patient is afraid, you can respond: "Ich kann Ihre Angst sehr gut verstehen. Aber ich möchte Sie beruhigen, weil Krebs nicht 100% erblich ist." or "Um ehrlich zu sein, ist Krebs nicht 100% ausgeschlossen, Ihre Beschwerden könnten auch viele andere Gründe haben."
 
-B-Symptome sind wichtige Warnzeichen, die auf verschiedene Erkrankungen hinweisen können. Eine sorgfältige Erfassung im Rahmen der Anamnese ist entscheidend, um die richtige Diagnose zu stellen und eine adäquate Therapie einzuleiten. Besonders im Kontext der onkologischen Anamnese sollten B-Symptome immer ernst genommen und weiter abgeklärt werden.
+### Conclusion
 
-### Ressourcen
+B-symptoms are important warning signs that can indicate various diseases. Careful assessment during medical history-taking is essential to make the correct diagnosis and initiate appropriate therapy. Especially in the context of oncological history-taking, B-symptoms should always be taken seriously and further investigated.
 
-*   FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
-*   FaMED App & Simulation: https://famedtestprep.com
-*   Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
+### Resources 📚
+
+*   📖 FaMED Protocol Book: https://famedtestprep.com/famedprotokolle
+*   💻 FaMED App & Simulation: https://famedtestprep.com
+*   💬 Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh

@@ -1,46 +1,46 @@
 ---
-title: "Systematische Anamnese bei Halsschmerzen, chronischer Müdigkeit & infektiösen Symptomen"
+title: "Systematic Anamnesis for Sore Throat, Chronic Fatigue & Infectious Symptoms"
 date: "2026-01-18"
 status: "published"
 ---
 
-## Einführung
+## Introduction
 
-Die systematische Anamnese ist ein Eckpfeiler der medizinischen Diagnostik. Sie ermöglicht es dem Arzt, ein umfassendes Bild des Patienten und seiner Beschwerden zu erhalten, um eine fundierte Diagnose zu stellen und einen geeigneten Behandlungsplan zu entwickeln. Dieser Blogbeitrag konzentriert sich auf die strukturierte Anamnese bei Patienten mit Halsschmerzen, chronischer Müdigkeit und/oder infektiösen Symptomen, und gibt Ihnen ein solides Grundgerüst für die FaMED Prüfung an die Hand.
+The systematic Anamnese is a cornerstone of medical diagnostics. It allows the doctor to gain a comprehensive picture of the patient and their complaints in order to make an informed diagnosis and develop an appropriate treatment plan. This blog post focuses on structured history-taking for patients with sore throat, chronic fatigue, and/or infectious symptoms, giving you a solid framework for the FaMED exam.
 
-## Systematische Anamnese
+## Systematic Anamnese
 
-### 1. Vorstellung und Einleitung
+### 1. Introduction and Greeting
 
-Beginnen Sie das Gespräch mit einer freundlichen Begrüßung und stellen Sie sich vor. Erklären Sie Ihre Rolle und den Zweck des Gesprächs. Stellen Sie sicher, dass der Patient mit der Anamnese einverstanden ist und Raum für Fragen hat.
+Start the conversation with a friendly greeting and introduce yourself. Explain your role and the purpose of the conversation. Make sure the patient consents to the history-taking and has room for questions.
 
-*   **Beispiel:** "Guten Tag, mein Name ist [Ihr Name]. Ich bin Assistenzarzt/Ärztin hier im Krankenhaus und möchte gerne ein Aufnahmegespräch mit Ihnen führen. Sind Sie damit einverstanden? Wenn Sie Fragen haben, sagen Sie es mir bitte jederzeit."
+*   **Example:** "Guten Tag, mein Name ist [Ihr Name]. Ich bin Assistenzarzt/Ärztin hier im Krankenhaus und möchte gerne ein Aufnahmegespräch mit Ihnen führen. Sind Sie damit einverstanden? Wenn Sie Fragen haben, sagen Sie es mir bitte jederzeit."
 
-### 2. Persönliche Daten
+### 2. Personal Data (Persönliche Daten)
 
-Erfassen Sie die grundlegenden persönlichen Daten des Patienten.
+Collect the patient's basic personal data.
 
-*   **Fragen:**
+*   **Questions:**
 *   Wie heißen Sie?
 *   Wann sind Sie geboren?
 *   Wie alt sind Sie?
 *   Wie groß sind Sie?
 *   Wie viel wiegen Sie?
 
-### 3. Aktuelle Anamnese
+### 3. Current History (Aktuelle Anamnese)
 
-Ermitteln Sie den Hauptgrund für den Arztbesuch und die wichtigsten Beschwerden des Patienten. Lassen Sie den Patienten seine Geschichte erzählen.
+Determine the main reason for the visit and the patient's primary complaints. Let the patient tell their story.
 
-*   **Fragen:**
+*   **Questions:**
 *   Was führt Sie zu uns?
 *   Warum sind Sie ins Krankenhaus gekommen?
 *   Was kann ich für Sie tun, Herr/Frau …?
 
-### 4. Allgemeine Beschwerden
+### 4. General Complaints (Allgemeine Beschwerden)
 
-Erfragen Sie detailliert die aktuellen Beschwerden.
+Ask about current complaints in detail.
 
-*   **Fragen:**
+*   **Questions:**
 *   Was für Beschwerden haben Sie?
 *   Seit wann haben Sie diese Beschwerden?
 *   Hatten Sie einen Unfall?
@@ -50,35 +50,35 @@ Erfragen Sie detailliert die aktuellen Beschwerden.
 *   Haben Sie noch weitere Beschwerden? Ist Ihnen noch etwas aufgefallen?
 *   Haben Sie etwas Ungewöhnliches bemerkt?
 
-### 5. Schmerzanalyse (falls zutreffend)
+### 5. Pain Analysis (Schmerzanalyse) — if applicable
 
-Wenn der Patient Schmerzen hat, führen Sie eine detaillierte Schmerzanalyse durch. Orientieren Sie sich am OPQRST Schema.
+If the patient has pain, conduct a detailed pain analysis. Use the OPQRST framework.
 
-*   **Zeitliches Auftreten:**
+*   **Timing (Zeitliches Auftreten):**
 *   Seit wann haben Sie Schmerzen?
 *   Haben die Schmerzen plötzlich begonnen oder langsam?
 *   Wie lange dauert der Schmerz an?
 *   Ist der Schmerz dauerhaft oder sind Sie manchmal auch schmerzfrei?
-*   **Lokalisation:**
+*   **Location (Lokalisation):**
 *   Wo genau tut es Ihnen weh?
 *   Strahlen die Schmerzen aus?
-*   **Stärke:**
+*   **Severity (Stärke):**
 *   Wie stark sind die Schmerzen auf einer Skala von 0-10, wobei 0 kein Schmerz und 10 der stärkste vorstellbare Schmerz ist?
-*   **Qualität:**
+*   **Quality (Qualität):**
 *   Wie fühlen sich die Schmerzen an? Sind sie eher brennend, drückend, stechend, klopfend, ziehend, …?
-*   **Auslöser/Linderung:**
+*   **Triggers/Relief (Auslöser/Linderung):**
 *   Können Sie einen Auslöser für die Schmerzen erkennen?
 *   Haben Sie die Beschwerden nur bei Belastung oder auch in Ruhe?
 *   Gibt es etwas, das die Schmerzen lindert/verstärkt?
 *   Hilft Ihnen eher Wärme oder Kälte?
-*   **Einnahme von Medikamenten:**
+*   **Medication (Einnahme von Medikamenten):**
 *   Haben Sie etwas gegen die Schmerzen eingenommen? Hat es geholfen?
 
-### 6. Vegetative Anamnese
+### 6. Vegetative History (Vegetative Anamnese)
 
-Erfragen Sie vegetative Symptome, die auf eine Infektion oder Entzündung hinweisen könnten.
+Ask about vegetative symptoms that could indicate an infection or inflammation.
 
-*   **Fragen:**
+*   **Questions:**
 *   War Ihnen übel? Mussten Sie erbrechen? Leiden Sie unter Übelkeit oder Erbrechen?
 *   Haben Sie Nachtschweiß bemerkt?
 *   Haben Sie Fieber gemessen?
@@ -88,11 +88,11 @@ Erfragen Sie vegetative Symptome, die auf eine Infektion oder Entzündung hinwei
 *   Haben Sie in letzter Zeit ungewollt zu- oder abgenommen?
 *   Haben Sie Husten? Kommt dabei Schleim hoch oder ist es ein trockener Husten?
 
-### 7. Gynäkologische Anamnese (bei Frauen)
+### 7. Gynecological History (Gynäkologische Anamnese) — for female patients
 
-Bei weiblichen Patienten ist die gynäkologische Anamnese wichtig.
+For female patients, gynecological history-taking is important.
 
-*   **Fragen:**
+*   **Questions:**
 *   Wie sieht es mit Ihrer Menstruation aus? Haben Sie sie noch? Ist sie regelmäßig?
 *   Wann hatten Sie Ihre letzte Regelblutung?
 *   Haben Sie Menstruationsbeschwerden?
@@ -100,76 +100,76 @@ Bei weiblichen Patienten ist die gynäkologische Anamnese wichtig.
 *   Besteht im Moment die Möglichkeit einer Schwangerschaft?
 *   Verhüten Sie? Wie verhüten Sie?
 
-### 8. Vorerkrankungen / Voroperationen
+### 8. Previous Illnesses / Surgeries (Vorerkrankungen / Voroperationen)
 
-Erfragen Sie relevante Vorerkrankungen und Operationen.
+Ask about relevant previous illnesses and surgeries.
 
-*   **Fragen:**
+*   **Questions:**
 *   Leiden Sie an chronischen Erkrankungen? (z.B. Diabetes, Bluthochdruck)
 *   Waren Sie in letzter Zeit im Krankenhaus oder in ärztlicher Behandlung?
 *   Sind Sie schon einmal operiert worden? Wann? Aus welchem Grund?
 
-### 9. Medikamente
+### 9. Medications (Medikamente)
 
-Erfassen Sie die aktuelle Medikation des Patienten.
+Record the patient's current medication.
 
-*   **Fragen:**
+*   **Questions:**
 *   Nehmen Sie regelmäßig Medikamente ein?
 *   In welcher Dosierung?
 *   Nehmen Sie etwas bei Bedarf ein?
 *   Hat Ihnen das Medikament geholfen?
 
-### 10. Allergien
+### 10. Allergies (Allergien)
 
-Erfragen Sie bekannte Allergien und Unverträglichkeiten.
+Ask about known allergies and intolerances.
 
-*   **Fragen:**
+*   **Questions:**
 *   Sind bei Ihnen Allergien oder Unverträglichkeiten bekannt?
 *   Haben Sie Lebensmittelunverträglichkeiten (z.B. Laktoseintoleranz)?
 *   Wogegen sind Sie allergisch?
 *   Wie äußert sich diese Allergie / Unverträglichkeit?
 *   Nehmen Sie Medikamente gegen die Allergie?
 
-### 11. Noxen
+### 11. Substance Use (Noxen)
 
-Erfragen Sie den Konsum von Tabak, Alkohol und Drogen.
+Ask about tobacco, alcohol, and drug use.
 
-*   **Fragen:**
+*   **Questions:**
 *   Rauchen Sie? Haben Sie jemals geraucht? Seit wann rauchen Sie? Wie viele Zigaretten rauchen sie am Tag / in der Woche?
 *   Trinken Sie (regelmäßig) Alkohol? Wie häufig und wie viel trinken Sie ungefähr?
 *   Hatten Sie schon einmal Kontakt mit Drogen?
 
-### 12. Familienanamnese
+### 12. Family History (Familienanamnese)
 
-Erfragen Sie relevante Erkrankungen in der Familie.
+Ask about relevant diseases in the family.
 
-*   **Fragen:**
+*   **Questions:**
 *   Sind Ihre Eltern gesund? Woran sind sie gestorben?
 *   Sind Ihre Geschwister gesund?
 *   Hat jemand in Ihrer Familie ähnliche Beschwerden wie Sie?
 *   Gibt es Erbkrankheiten in Ihrer Familie? Gibt es in Ihrer Familie chronische Erkrankungen oder Vorerkrankungen, von denen ich wissen sollte, zum Beispiel Diabetes, Krebs oder Herz-Kreislauf-Erkrankungen?
 
-### 13. Psychoanamnese
+### 13. Psychological History (Psychoanamnese)
 
-Erfragen Sie psychische Belastungen und Stressoren.
+Ask about psychological burdens and stressors.
 
-*   **Fragen:**
+*   **Questions:**
 *   Haben Sie in letzter Zeit vermehrt Stress oder etwas, das Sie mental belastet?
 *   Fühlen Sie sich in letzter Zeit stark belastet oder gestresst?
 
-### 14. Sozialanamnese
+### 14. Social History (Sozialanamnese)
 
-Erfragen Sie berufliche und soziale Umstände.
+Ask about professional and social circumstances.
 
-*   **Fragen:**
+*   **Questions:**
 *   Was machen Sie beruflich?
 *   Haben Sie Stress bei der Arbeit?
 *   Sind Sie verheiratet? Haben Sie Kinder?
 *   Leben Sie allein? Mit wem leben Sie zusammen?
 
-### 15. Spezifische Fragen (je nach Symptomatik)
+### 15. Specific Questions (Based on Symptoms)
 
-#### **Halsschmerzen/Mandelentzündung:**
+#### **Sore throat / Tonsillitis (Halsschmerzen / Mandelentzündung):**
 
 *   Wie stark sind die Schmerzen (Skala 1-10)?
 *   Wie fühlen sich die Schmerzen an (stechend, drückend, pulsierend)?
@@ -180,7 +180,7 @@ Erfragen Sie berufliche und soziale Umstände.
 *   Hatten Sie kürzlich Kontakt zu jemandem mit ähnlichen Symptomen?
 *   Waren Sie in letzter Zeit in großen Menschenmengen?
 
-#### **Chronische Müdigkeit (Fatigue):**
+#### **Chronic Fatigue (Chronische Müdigkeit / Fatigue):**
 
 *   Seit wann fühlen Sie sich erschöpft oder müde?
 *   Sind die Beschwerden ständig da oder kommen sie nur manchmal mit Pausen?
@@ -191,7 +191,7 @@ Erfragen Sie berufliche und soziale Umstände.
 *   Hat sich Ihr Appetit in letzter Zeit verändert?
 *   Haben Sie Schwierigkeiten, einzuschlafen oder durchzuschlafen?
 
-#### **Infektiöse Symptome (COVID, Grippe, etc.):**
+#### **Infectious Symptoms (COVID, Flu, etc.):**
 
 *   Seit wann haben Sie die Beschwerden?
 *   Wie haben die Beschwerden begonnen (plötzlich oder langsam)?
@@ -202,18 +202,18 @@ Erfragen Sie berufliche und soziale Umstände.
 *   Sind Sie gegen COVID-19 geimpft?
 *   Haben Sie selbst etwas gegen die Beschwerden unternommen (Medikamente, Hausmittel, Arztbesuch)?
 
-### 16. Gesprächsabschluss
+### 16. Closing the Conversation (Gesprächsabschluss)
 
-Fassen Sie die wichtigsten Informationen zusammen und geben Sie dem Patienten die Möglichkeit, Ergänzungen zu machen. Erklären Sie die nächsten Schritte (körperliche Untersuchung, Laboruntersuchungen etc.).
+Summarize the key information and give the patient the opportunity to add anything. Explain the next steps (physical examination, lab tests, etc.).
 
-*   **Beispiel:** "Jetzt würde ich noch einmal kurz zusammenfassen: Sie haben … Habe ich alles richtig verstanden? Möchten Sie noch etwas hinzufügen? Als Nächstes werde ich eine körperliche Untersuchung durchführen, Ihre Lunge und Ihr Herz abhören sowie Ihren Bauch abtasten. Außerdem werde ich Ihnen ein bisschen Blut abnehmen, um die Blutwerte zu kontrollieren. Anschließend werde ich alle Ergebnisse mit meinem Oberarzt besprechen, und dann können wir Ihnen sagen, was Sie genau haben. Haben Sie noch Fragen an mich? Dann gehen wir weiter."
+*   **Example:** "Jetzt würde ich noch einmal kurz zusammenfassen: Sie haben … Habe ich alles richtig verstanden? Möchten Sie noch etwas hinzufügen? Als Nächstes werde ich eine körperliche Untersuchung durchführen, Ihre Lunge und Ihr Herz abhören sowie Ihren Bauch abtasten. Außerdem werde ich Ihnen ein bisschen Blut abnehmen, um die Blutwerte zu kontrollieren. Anschließend werde ich alle Ergebnisse mit meinem Oberarzt besprechen, und dann können wir Ihnen sagen, was Sie genau haben. Haben Sie noch Fragen an mich? Dann gehen wir weiter."
 
-## Schlussfolgerung
+## Conclusion
 
-Eine strukturierte und systematische Anamnese ist essentiell für die Diagnosestellung. Durch das konsequente Abfragen aller relevanten Bereiche können Sie auch bei komplexen Beschwerdebildern wie chronischer Müdigkeit, Halsschmerzen oder unklaren infektiösen Symptomen die richtige Richtung einschlagen.
+A structured and systematic Anamnese is essential for diagnosis. By consistently covering all relevant areas, you can find the right direction even with complex symptom patterns such as chronic fatigue, sore throat, or unclear infectious symptoms.
 
-## Ressourcen
+## Resources 📚
 
-*   FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
-*   FaMED App & Simulation: https://famedtestprep.com
-*   Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
+*   📖 FaMED Protocol Book: https://famedtestprep.com/famedprotokolle
+*   💻 FaMED App & Simulation: https://famedtestprep.com
+*   💬 Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh

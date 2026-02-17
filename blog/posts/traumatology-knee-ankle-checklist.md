@@ -1,46 +1,46 @@
 ---
-title: "Traumatologie Anamnese Checkliste: Schlüssel Fragen bei Knie- und Sprunggelenksverletzungen"
+title: "Traumatology Anamnesis Checklist: Key Questions for Knee & Ankle Injuries"
 date: "2026-01-16"
 status: "published"
 ---
 
-## Traumatologie Anamnese Checkliste: Schlüssel Fragen bei Knie- und Sprunggelenksverletzungen
+## Traumatology Anamnesis Checklist: Key Questions for Knee & Ankle Injuries
 
-### Einführung
+### Introduction
 
-Ein umfassendes Anamnesegespräch ist entscheidend für die korrekte Diagnose und Behandlungsplanung von Knie- und Sprunggelenksverletzungen.  Dieser Blog-Post dient als praktische Checkliste für Medizinstudenten und junge Ärzte, um ein strukturiertes und effizientes Anamnesegespräch bei Patienten mit Knie- oder Sprunggelenksverletzungen zu führen. Ziel ist es, alle relevanten Informationen zu erfassen, um eine fundierte klinische Entscheidung treffen zu können.
+A comprehensive Anamnesegespräch is crucial for the correct diagnosis and treatment planning of knee and ankle injuries. This blog post serves as a practical checklist for medical students and young doctors to conduct a structured and efficient patient interview for knee or ankle injuries. The goal is to capture all relevant information to make an informed clinical decision.
 
-### Unfallhergang
+### Mechanism of Injury (Unfallhergang)
 
-Die detaillierte Beschreibung des Unfallhergangs liefert wichtige Hinweise auf den Verletzungsmechanismus und die potenziellen beteiligten Strukturen.
+A detailed description of the mechanism of injury provides important clues about the type of injury and the potentially involved structures.
 
-*   **Wie ist der Unfall passiert?** (Wie genau hat sich die Verletzung ereignet?)
-*   **Sind Sie gestürzt?** (War ein Sturz beteiligt?)
-*   **Wenn ja, auf welcher Seite sind Sie gefallen?** (Links oder rechts?)
-*   **Haben Sie einen Helm getragen oder waren Sie angeschnallt (falls relevant)?** (Informationen zur Prävention und zum Schweregrad des Unfalls.)
-*   **Wie sind Sie ins Krankenhaus gekommen?** (z.B. Rettungswagen, selbstständig)
+*   **Wie ist der Unfall passiert?** (How exactly did the injury occur?)
+*   **Sind Sie gestürzt?** (Was a fall involved?)
+*   **Wenn ja, auf welcher Seite sind Sie gefallen?** (Left or right?)
+*   **Haben Sie einen Helm getragen oder waren Sie angeschnallt (falls relevant)?** (Information about prevention and severity of the accident.)
+*   **Wie sind Sie ins Krankenhaus gekommen?** (e.g., ambulance, on your own)
 
-### Kopfverletzung und Bewusstsein
+### Head Injury and Consciousness (Kopfverletzung und Bewusstsein)
 
-Das Erfassen von Informationen über mögliche Kopfverletzungen und Bewusstseinsveränderungen ist essenziell, um Begleitverletzungen zu erkennen oder auszuschliessen.
+Capturing information about possible head injuries and changes in consciousness is essential to identify or rule out accompanying injuries.
 
 *   **Haben Sie sich am Kopf verletzt?**
 *   **War Ihnen schwindelig oder wurden Sie ohnmächtig?**
 
-### Schmerzen
+### Pain Assessment (Schmerzen)
 
-Eine genaue Schmerzerfassung hilft bei der Einschätzung des Verletzungsschweregrads und der Differenzialdiagnose.
+An accurate pain assessment helps evaluate the severity of the injury and supports differential diagnosis.
 
-*   **Wo haben Sie Schmerzen?** (Genaue Lokalisation)
+*   **Wo haben Sie Schmerzen?** (Exact location)
 *   **Wie stark sind die Schmerzen auf einer Skala von 0 bis 10, wobei 0 kein Schmerz und 10 der stärkste vorstellbare Schmerz ist?**
-*   **Strahlen die Schmerzen aus?** (z.B. in den Oberschenkel, Unterschenkel, Fuß)
+*   **Strahlen die Schmerzen aus?** (e.g., into the thigh, lower leg, foot)
 *   **Haben sich die Schmerzen im Laufe der Zeit verändert?**
-*   Sind sie stärker oder schwächer geworden?
-*   Kommen und gehen sie?
+*   Have they become stronger or weaker?
+*   Do they come and go?
 
-### Verletzung, Beweglichkeit und Tetanusschutz
+### Injury, Mobility, and Tetanus Status (Verletzung, Beweglichkeit und Tetanusschutz)
 
-Diese Fragen dienen dazu, das Ausmaß der Verletzung zu bestimmen, die Funktionalität zu beurteilen und den Impfstatus zu überprüfen.
+These questions help determine the extent of injury, assess functionality, and check vaccination status.
 
 *   **Sind Ihnen Abschürfungen oder andere Verletzungen aufgefallen, z.B. Schürfwunden oder Platzwunden?**
 *   **Ist das Knie/der Knöchel geschwollen oder überwärmt?**
@@ -48,9 +48,9 @@ Diese Fragen dienen dazu, das Ausmaß der Verletzung zu bestimmen, die Funktiona
 *   **Haben Sie ein Taubheitsgefühl oder Kribbeln?**
 *   **Haben Sie einen aktuellen Tetanusschutz?**
 
-### Spezielle Fragen bei Knieverletzungen
+### Specific Questions for Knee Injuries (Knieverletzungen)
 
-Bei Verdacht auf eine Knieverletzung sind folgende Fragen zusätzlich relevant:
+If a knee injury is suspected, the following additional questions are relevant:
 
 *   **Können Sie das Knie noch vollständig beugen oder strecken?**
 *   **Haben Sie beim Unfall ein knackendes Geräusch gehört oder gespürt?**
@@ -58,64 +58,64 @@ Bei Verdacht auf eine Knieverletzung sind folgende Fragen zusätzlich relevant:
 *   **Ist das Knie gerötet?**
 *   **Können Sie das Knie belasten? Können Sie normal stehen oder gehen?**
 
-### Spezielle Fragen bei Sprunggelenksverletzungen
+### Specific Questions for Ankle Injuries (Sprunggelenksverletzungen)
 
-Bei Verdacht auf eine Sprunggelenksverletzung sind folgende Fragen zusätzlich relevant:
+If an ankle injury is suspected, the following additional questions are relevant:
 
 *   **Können Sie den Fuß belasten?**
 *   **Können Sie den Fuß in alle Richtungen bewegen?**
 *   **Haben Sie ein Hämatom bemerkt?**
 
-### Vorerkrankungen und Medikamente
+### Previous Illnesses and Medications (Vorerkrankungen und Medikamente)
 
-Die Erfassung von Vorerkrankungen und Medikamenteneinnahme ist wichtig für die Behandlungsplanung und zur Vermeidung von Komplikationen.
+Recording previous illnesses and medication use is important for treatment planning and to avoid complications.
 
 *   **Leiden Sie an chronischen Erkrankungen wie Diabetes mellitus, Bluthochdruck oder erhöhten Blutfettwerten?**
 *   **Nehmen Sie regelmäßig Medikamente ein? Wenn ja, welche und in welcher Dosierung?**
 *   **Sind bei Ihnen Allergien oder Unverträglichkeiten bekannt?**
 
-### Sozialanamnese
+### Social History (Sozialanamnese)
 
-Die Sozialanamnese hilft, die Lebensumstände des Patienten zu verstehen und die Rehabilitation zu planen.
+The social history helps understand the patient's living circumstances and plan rehabilitation.
 
-*   **Was machen Sie beruflich?** (Sind körperliche Belastungen relevant?)
+*   **Was machen Sie beruflich?** (Are physical demands relevant?)
 *   **Treiben Sie regelmäßig Sport? Wenn ja, welchen?**
 *   **Wie leben Sie? Leben Sie alleine? Müssen Sie viele Treppen steigen?**
 
-### Allgemeine Beschwerden und vegetative Anamnese
+### General Complaints and Vegetative History (Vegetative Anamnese)
 
-Allgemeine Beschwerden und vegetative Symptome können Hinweise auf weitere Erkrankungen geben.
+General complaints and vegetative symptoms can provide clues to additional conditions.
 
 *   **Was für Beschwerden haben Sie außer den Schmerzen im Knie/Sprunggelenk?**
 *   **Haben Sie Fieber gemessen?**
 *   **Haben Sie Nachtschweiß bemerkt?**
 *   **Hat sich Ihr Appetit in letzter Zeit verändert?**
 
-### Gesprächsabschluss
+### Closing the Conversation (Gesprächsabschluss)
 
 *   **Möchten Sie noch etwas hinzufügen?**
 *   **Haben Sie noch Fragen an mich?**
 
-### Zusammenfassung der wichtigsten Punkte für die Anamnese
+### Summary of Key Points for History-Taking
 
-| Bereich                  | Schlüssel Fragen                                                                                                                                                                                  |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Unfallhergang           | Wie ist der Unfall passiert? Sturz? Helm/Gurt? Transport ins Krankenhaus?                                                                                                                            |
-| Kopfverletzung          | Kopfverletzung? Schwindel? Bewusstlosigkeit?                                                                                                                                                    |
-| Schmerzen               | Lokalisation? Stärke (0-10)? Ausstrahlung? Veränderung im Zeitverlauf?                                                                                                                              |
-| Verletzung/Beweglichkeit | Abschürfungen? Schwellung? Überwärmung? Beweglichkeitseinschränkung? Taubheitsgefühl/Kribbeln? Tetanusschutz?                                                                                               |
-| Knie (speziell)         | Vollständige Beugung/Streckung möglich? Knacken gehört/gespürt? Instabilität? Rötung? Belastbarkeit?                                                                                                   |
-| Sprunggelenk (speziell)  | Belastbarkeit? Beweglichkeit in alle Richtungen? Hämatom?                                                                                                                                                 |
-| Vorerkrankungen/Medikamente | Chronische Erkrankungen? Regelmäßige Medikamente? Allergien/Unverträglichkeiten?                                                                                                                                 |
-| Sozialanamnese          | Beruf? Sport? Lebensumstände?                                                                                                                                                                        |
-| Allgemein/Vegetativ     | Fieber? Nachtschweiß? Appetitveränderung?                                                                                                                                                            |
+| Area                      | Key Questions                                                                                                                                         |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mechanism of Injury       | Wie ist der Unfall passiert? Sturz? Helm/Gurt? Transport ins Krankenhaus?                                                                              |
+| Head Injury               | Kopfverletzung? Schwindel? Bewusstlosigkeit?                                                                                                          |
+| Pain                      | Lokalisation? Stärke (0-10)? Ausstrahlung? Veränderung im Zeitverlauf?                                                                                |
+| Injury/Mobility           | Abschürfungen? Schwellung? Überwärmung? Beweglichkeitseinschränkung? Taubheitsgefühl/Kribbeln? Tetanusschutz?                                           |
+| Knee (specific)           | Vollständige Beugung/Streckung möglich? Knacken gehört/gespürt? Instabilität? Rötung? Belastbarkeit?                                                   |
+| Ankle (specific)          | Belastbarkeit? Beweglichkeit in alle Richtungen? Hämatom?                                                                                               |
+| Previous Illnesses/Meds   | Chronische Erkrankungen? Regelmäßige Medikamente? Allergien/Unverträglichkeiten?                                                                       |
+| Social History            | Beruf? Sport? Lebensumstände?                                                                                                                          |
+| General/Vegetative        | Fieber? Nachtschweiß? Appetitveränderung?                                                                                                              |
 
-### Schlussfolgerung
+### Conclusion
 
-Eine strukturierte und vollständige Anamnese ist der Grundstein für die Diagnose und Behandlung von Knie- und Sprunggelenksverletzungen. Die hier vorgestellte Checkliste dient als Leitfaden, um alle relevanten Informationen zu erfassen und eine fundierte klinische Entscheidung treffen zu können.
+A structured and complete Anamnese is the foundation for diagnosing and treating knee and ankle injuries. The checklist presented here serves as a guide to capture all relevant information and make informed clinical decisions.
 
-### Ressourcen
+### Resources 📚
 
-*   FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
-*   FaMED App & Simulation: https://famedtestprep.com
-*   Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
+*   📖 FaMED Protocol Book: https://famedtestprep.com/famedprotokolle
+*   💻 FaMED App & Simulation: https://famedtestprep.com
+*   💬 Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
