@@ -75,11 +75,9 @@ def regenerate_post():
         - **IMPORTANT:** In the YAML frontmatter, the 'date' must be QUOTED strings (e.g., date: "2025-05-20").
         - Approx 1500 words
         - **CRITICAL:** You MUST include a "Resources" or "Call to Action" section at the end with these EXACT links:
-            - FaMED Protokoll Book: https://famed-vorbereitung.com
-            - FaMED App: https://app.famed-test.de
-            - Simulation / Übungsexamen: https://famed-vorbereitung.com/exam
-            - Telegram Group: https://t.me/FamedTest
-            - WhatsApp Group: https://chat.whatsapp.com/FamedTest
+            - FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
+            - FaMED App & Simulation: https://famedtestprep.com
+            - Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
         
         Generate the Full Blog Post Now:"""
         

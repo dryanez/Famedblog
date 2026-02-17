@@ -63,15 +63,12 @@ Um diese Fehler zu vermeiden, ist eine integrierte Vorbereitung unerlässlich.
 Die FaMED-Prüfung testet Ihre Fähigkeit, spontan und fließend zu reagieren. Mit der richtigen Struktur und den passenden Werkzeugen werden Sie diese Hürde erfolgreich meistern.
 
 **Viel Erfolg bei Ihrer Prüfung!**
-*Ihr Team von FaMED-Vorbereitung.com*
+*Ihr Team von FaMEDTestPrep.com*
 
 ---
 
 ### 🚀 Ressourcen für Ihren Erfolg
 
-*   📚 **FaMED Protokoll Book:** [Hier bestellen](https://famed-vorbereitung.com)
-*   📱 **FaMED App:** [Jetzt downloaden](https://app.famed-test.de)
-*   💻 **Simulation / Übungsexamen:** [Jetzt starten](https://famed-vorbereitung.com/exam)
-*   💬 **Community:**
-    *   [Telegram Gruppe beitreten](https://t.me/FamedTest)
-    *   [WhatsApp Gruppe beitreten](https://chat.whatsapp.com/FamedTest)
+*   📚 **FaMED Protokoll Book:** [Hier bestellen](https://famedtestprep.com/famedprotokolle)
+*   📱 **FaMED App & Simulation:** [Jetzt starten](https://famedtestprep.com)
+*   💬 **Community:** [Telegram Gruppe beitreten](https://t.me/+vgtsHuqtwfk4MTJh)
