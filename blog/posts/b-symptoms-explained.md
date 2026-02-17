@@ -1,6 +1,6 @@
 ```markdown
 ---
-title: B-Symptome erklärt: Ihr Leitfaden zu Gewichtsverlust, Fieber & Nachtschweiß
+title: "B-Symptome erklärt: Ihr Leitfaden zu Gewichtsverlust, Fieber & Nachtschweiß"
 date: "2026-01-17"
 status: "published"
 ---

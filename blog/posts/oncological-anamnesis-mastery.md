@@ -1,6 +1,6 @@
 ```markdown
 ---
-title: "Mastering Oncological Anamnesis: Key Questions for Medical Exams"
+title: ""Mastering Oncological Anamnesis: Key Questions for Medical Exams""
 date: "2026-01-12"
 status: "published"
 ---
