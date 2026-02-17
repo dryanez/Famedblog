@@ -1,4 +1,3 @@
-```markdown
  ---
  title: Spotting Critical Red Flags in Anamnesis: A Survival Guide
  date: "2026-01-14"
