@@ -50,7 +50,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     headline: post.title,
     description: post.excerpt || `${post.content.substring(0, 150)}...`,
     image: 'https://famedtestprep.com/og-image.jpg', // Add a real default image later
-    datePublished: new Date(post.date).toISOString(),
+    datePublished: (() => {
+      try {
+        return new Date(post.date).toISOString();
+      } catch (e) {
+        return new Date().toISOString(); // Fallback to current date
+      }
+    })(),
     author: {
       '@type': 'Organization',
       name: 'FaMED Test Prep Team',
