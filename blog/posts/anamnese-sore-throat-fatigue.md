@@ -218,4 +218,3 @@ Eine strukturierte und systematische Anamnese ist essentiell für die Diagnosest
 *   FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
 *   FaMED App & Simulation: https://famedtestprep.com
 *   Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
-```

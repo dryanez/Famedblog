@@ -120,4 +120,3 @@ Eine strukturierte und vollständige Anamnese ist der Grundstein für die Diagno
 *   FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
 *   FaMED App & Simulation: https://famedtestprep.com
 *   Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
-```

@@ -130,4 +130,3 @@ Die Schmerzanamnese ist ein entscheidender Schritt in der medizinischen Diagnost
 - FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
 - FaMED App & Simulation: https://famedtestprep.com
 - Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
-```

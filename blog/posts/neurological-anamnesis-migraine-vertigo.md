@@ -98,4 +98,3 @@ Eine umfassende und strukturierte neurologische Anamnese ist essenziell für die
 *   FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
 *   FaMED App & Simulation: https://famedtestprep.com
 *   Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
-```

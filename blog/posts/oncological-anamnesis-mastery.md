@@ -104,4 +104,3 @@ Die onkologische Anamnese ist ein komplexer Prozess, der ein systematisches Vorg
 *   FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
 *   FaMED App & Simulation: https://famedtestprep.com
 *   Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
-```
