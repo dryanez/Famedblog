@@ -31,9 +31,34 @@ export default function BlogManagementPage() {
 
     const fetchPosts = async () => {
         try {
-            const res = await fetch('/api/blog/posts');
-            const data = await res.json();
-            setPosts(data.posts || []);
+            // Fetch from markdown files (source of truth for public blog URLs)
+            const mdRes = await fetch('/api/blog/markdown-posts');
+            const mdData = await mdRes.json();
+
+            // Also fetch from Supabase for social posting status
+            const dbRes = await fetch('/api/blog/posts');
+            const dbData = await dbRes.json();
+
+            // Create a lookup map from Supabase posts by partial slug matching
+            const dbPosts = dbData.posts || [];
+
+            // Use markdown posts as the base, enrich with Supabase social status
+            const mergedPosts = (mdData.posts || []).map((mdPost: BlogPost) => {
+                // Try to find a matching Supabase post
+                const dbMatch = dbPosts.find((db: any) =>
+                    db.slug === mdPost.slug ||
+                    db.slug?.includes(mdPost.slug) ||
+                    mdPost.slug?.includes(db.slug)
+                );
+                return {
+                    ...mdPost,
+                    facebookPosted: dbMatch?.facebookPosted || dbMatch?.facebook_posted || false,
+                    telegramSent: dbMatch?.telegramSent || dbMatch?.telegram_sent || false,
+                    scheduled_date: dbMatch?.scheduled_date,
+                };
+            });
+
+            setPosts(mergedPosts);
         } catch (error) {
             console.error('Error fetching posts:', error);
         } finally {
