@@ -3,6 +3,12 @@ import BlogCard from '@/components/BlogCard';
 import LeadMagnetCTA from '@/components/LeadMagnetCTA';
 import { getAllPosts } from '@/lib/posts';
 
+export const metadata = {
+  title: 'FAMED Test Prep | Pass Your Medical German Exam',
+  description: 'Prepare for the FAMED medical German exam with official cases, an 8-week study plan, and expert strategies for international doctors in Germany.',
+  alternates: { canonical: '/' },
+};
+
 export default function Home() {
   const allPosts = getAllPosts();
   // Filter for published posts and take the first 3

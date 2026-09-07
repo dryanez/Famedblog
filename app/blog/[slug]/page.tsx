@@ -6,6 +6,8 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 
+const siteUrl = 'https://famedtestprep.com';
+
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
@@ -26,6 +28,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: post.title,
     description: `${post.title} - ${post.readTime} read`,
+    alternates: {
+      canonical: `${siteUrl}/blog/${post.slug}`,
+    },
+    openGraph: {
+      type: 'article',
+      url: `${siteUrl}/blog/${post.slug}`,
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: new Date(post.date).toISOString(),
+      images: ['/logo.png'],
+    },
   };
 }
 
@@ -49,7 +62,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt || `${post.content.substring(0, 150)}...`,
-    image: 'https://famedtestprep.com/og-image.jpg', // Add a real default image later
+    image: `${siteUrl}/logo.png`,
     datePublished: (() => {
       try {
         return new Date(post.date).toISOString();
@@ -60,19 +73,19 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     author: {
       '@type': 'Organization',
       name: 'FaMED Test Prep Team',
-      url: 'https://famedtestprep.com',
+      url: siteUrl,
     },
     publisher: {
       '@type': 'Organization',
       name: 'FaMED Test Prep',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://famedtestprep.com/logo.png',
+        url: `${siteUrl}/logo.png`,
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://famedtestprep.com/blog/${slug}`,
+      '@id': `${siteUrl}/blog/${slug}`,
     },
   };
 

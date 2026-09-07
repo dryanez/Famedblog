@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+export const metadata = {
+    title: 'FAMED Preparation Book',
+    description: 'Master medical German protocols, communication strategies, and the FAMED exam with the official preparation book.',
+};
+
 export default function BookPage() {
     return (
         <div className="min-h-screen bg-gray-50">

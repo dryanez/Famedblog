@@ -6,9 +6,10 @@ import Footer from "@/components/Footer";
 import BookPromoPopup from "@/components/BookPromoPopup";
 
 const inter = Inter({ subsets: ["latin"] });
+const siteUrl = "https://famedtestprep.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://famedtestprep.com'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "FAMED Test Prep - Pass Your Medical German Exam",
     template: "%s | FAMED Test Prep"
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://famedtestprep.com",
+    url: siteUrl,
     siteName: "FAMED Test Prep",
     title: "FAMED Test Prep - Pass Your Medical German Exam",
     description: "Complete preparation for the FAMED medical German language exam.",
@@ -56,10 +57,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        name: "FAMED Test Prep",
+        url: siteUrl,
+        logo: `${siteUrl}/logo.png`,
+      },
+      {
+        "@type": "WebSite",
+        name: "FAMED Test Prep",
+        url: siteUrl,
+        publisher: { "@id": `${siteUrl}/#organization` },
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://famedtestprep.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className={inter.className}>
         <Header />
