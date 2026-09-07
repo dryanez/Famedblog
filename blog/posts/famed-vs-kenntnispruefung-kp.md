@@ -26,7 +26,7 @@ Passing the language exam is the prerequisite gateway before you can either work
 |---------|--------------------------------|-------------------------------------|
 | **Target Competence** | Medical German communication (C1 level) | Clinical medicine (equivalent to 3rd German state exam / M3) |
 | **Exam Format** | OSCE (Anamnese, Handover, Arztbrief) | Bedside practical exam + Oral commission exam |
-| **Examining Body** | LMU Munich or State Medical Chambers | University Hospital examination board (3 medical professors) |
+| **Examining Body** | Authorized FaMED Testing Centers (via famed-test.de) / State Medical Chambers | University Hospital examination board (3 medical professors) |
 | **Focus Disciplines** | Internal Medicine, Surgery, General Medicine | Internal Medicine, Surgery + 1-2 Electives (e.g. Pharmacology, Radiology, Emergency) |
 | **Prerequisites** | General German B2 certificate | Passing FSP/FaMED + Defizitbescheid from licensing authority |
 | **Cost** | ~€400 – €500 | ~€800 – €1,500 |

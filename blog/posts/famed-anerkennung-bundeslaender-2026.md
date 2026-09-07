@@ -1,11 +1,11 @@
 ---
-title: "FaMED Recognition 2026: Which German States Accept the LMU Exam?"
+title: "FaMED Recognition 2026: Which German States Accept the FaMED Exam?"
 date: "2026-02-26"
 readTime: "9 min"
 category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Anerkennung", "Approbation", "Bundesländer"]
-excerpt: "A complete 2026 breakdown of where the FaMED medical language exam from LMU Munich is recognized across German federal states and licensing authorities."
+excerpt: "A complete 2026 breakdown of where the FaMED digital medical language exam is recognized across German federal states and licensing authorities."
 ---
 
 One of the most frequent questions international medical graduates ask before investing in exam fees is: **"Is the FaMED examination accepted in my target German state?"**
@@ -48,7 +48,7 @@ If your intended state of licensure accepts FaMED (notably in Bavaria and surrou
 
 ## How to Get Written Verification from Your Authority
 
-Before booking your €490 testing slot in Munich, send a formal request email to your licensing caseworker (*Approbationsbehörde*). Here is a tested German email template:
+Before booking your €490 testing slot on famed-test.de, send a formal request email to your licensing caseworker (*Approbationsbehörde*). Here is a tested German email template:
 
 ```
 Betreff: Antrag auf Approbation / Nachweis der medizinischen Fachsprache (C1)

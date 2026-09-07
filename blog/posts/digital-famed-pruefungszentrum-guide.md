@@ -4,11 +4,11 @@ date: "2026-02-12"
 readTime: "9 min"
 category: "Exam Guide"
 status: "published"
-tags: ["FaMED", "Digital Exam", "LMU Munich", "Test Center"]
-excerpt: "Everything you need to know about the computerized FaMED exam setup at LMU Munich: screen layout, German keyboard layout, video controls, and time savers."
+tags: ["FaMED", "Digital Exam", "Testing Center", "OSCE"]
+excerpt: "Everything you need to know about the computerized FaMED exam setup at authorized testing centers: screen layout, German keyboard layout, video controls, and time savers."
 ---
 
-Unlike traditional chamber exams where you sit across a table from physical examiners in an Ärztekammer meeting room, the **FaMED exam developed by LMU Munich is conducted digitally in an authorized testing center**.
+Unlike traditional chamber exams where you sit across a table from physical examiners in an Ärztekammer meeting room, the **FaMED exam is conducted digitally in authorized testing centers** (developed based on medical didactic research at LMU Munich and booked via famed-test.de).
 
 For many candidates, this computer-based format creates unexpected anxiety: *How do the video stations work? Is there a German QWERTZ keyboard? What happens if the video finishes early?*
 
@@ -22,7 +22,7 @@ Understanding the technical environment before exam day eliminates surprises and
 
 ## The Testing Center Setup: What to Expect
 
-When you enter the FaMED testing center in Munich, you will be assigned an individual testing cubicle equipped with:
+When you enter an authorized FaMED testing center (e.g., in Mainz, Kassel, Nürnberg, or Munich), you will be assigned an individual testing cubicle equipped with:
 * A high-resolution monitor displaying the exam portal.
 * A standardized headset with an integrated noise-cancelling microphone.
 * A standard **German QWERTZ keyboard** and optical mouse.

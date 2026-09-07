@@ -8,7 +8,7 @@ tags: ["FaMED", "Kardiologie", "OSCE Cases", "Innere Medizin"]
 excerpt: "Cardiology represents over 30% of all FaMED internal medicine stations. Review the full clinical protocols for acute myocardial infarction, stable angina, and acute heart failure."
 ---
 
-Internal medicine is the backbone of the FaMED examination, and within internal medicine, **cardiology is the single most frequently tested specialty**. In virtually every testing session at LMU Munich, at least one of your two assigned patient encounters involves acute or chronic chest complaints.
+Internal medicine is the backbone of the FaMED examination, and within internal medicine, **cardiology is the single most frequently tested specialty**. In virtually every FaMED testing session, at least one of your two assigned patient encounters involves acute or chronic chest complaints.
 
 Examiners use cardiovascular cases to evaluate whether you can maintain clinical calm while swiftly initiating life-saving diagnostic and therapeutic algorithms in German.
 

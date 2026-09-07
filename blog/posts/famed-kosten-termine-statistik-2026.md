@@ -5,10 +5,10 @@ readTime: "9 min"
 category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Kosten", "Termine", "Statistik", "Approbation"]
-excerpt: "Planning your FaMED exam budget and timeline? Here is the full breakdown of 2026 examination fees, Munich test dates, registration deadlines, and realistic pass rates."
+excerpt: "Planning your FaMED exam budget and timeline? Here is the full breakdown of 2026 examination fees, registration deadlines on famed-test.de, and realistic pass rates."
 ---
 
-Before international medical doctors commit to the medical language exam pathway, financial and logistical planning is essential. Taking the exam involves registration fees, travel to Munich, document translations, and study materials.
+Before international medical doctors commit to the medical language exam pathway, financial and logistical planning is essential. Taking the exam involves registration fees, document translations, study materials, and potential travel to an authorized testing center.
 
 To help you budget accurately and avoid missed registration windows, here is the complete **2026 administrative guide** to FaMED examination costs, schedules, and statistical pass rates.
 
@@ -22,8 +22,8 @@ To help you budget accurately and avoid missed registration windows, here is the
 
 | Expense Item | Estimated Cost | Notes |
 |--------------|----------------|-------|
-| **FaMED Official Exam Fee** | **€490** | Paid directly to LMU Munich upon booking your test date. |
-| **Travel & Hotel in Munich** | **€120 – €250** | 1–2 nights near Munich Central Station or LMU Klinikum. |
+| **FaMED Official Exam Fee** | **€490** | Paid directly via the official testing portal at famed-test.de upon booking. |
+| **Travel & Accommodation (if needed)** | **€50 – €200** | Only required if traveling to your chosen testing center (e.g., Mainz, Kassel, Nürnberg, etc.). |
 | **Official B2 Language Certificate** | **€180 – €240** | Goethe-Zertifikat B2 or telc Deutsch B2 (mandatory prerequisite). |
 | **Certified Translations of Diplomas** | **€200 – €400** | Sworn court translator (*vereidigter Übersetzer*) in Germany. |
 | **Preparation Materials (Book + App)** | **€50 – €100** | High-yield OSCE protocols and digital case simulations. |
@@ -53,7 +53,7 @@ What are your actual statistical chances of passing the FaMED exam on your first
 * **Candidates Utilizing Structured OSCE Protocol Preparation:** **> 88%**
 
 ### Why Do Candidates Fail?
-According to rater evaluation logs, failure is rarely caused by a complete lack of medical knowledge. The primary reasons international doctors fail are:
+According to rater evaluation feedback, failure is rarely caused by a complete lack of medical knowledge. The primary reasons international doctors fail are:
 1. **Linguistic Jargon Barrier (38% of failures):** Inability to simplify complex surgical or pharmacological terms for patient actors during the Aufklärung.
 2. **Incomplete Written Station (31% of failures):** Running out of time in Station 3 due to slow German typing or chaotic letter structure.
 3. **Severe Structural Disorganization (22% of failures):** Delivering an unstructured doctor-to-doctor presentation without clear differential diagnoses.
