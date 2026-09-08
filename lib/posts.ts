@@ -24,7 +24,7 @@ export function getAllPosts(): BlogPost[] {
 
     const fileNames = fs.readdirSync(postsDirectory);
     const allPostsData = fileNames
-        .filter(fileName => fileName.endsWith('.md'))
+        .filter(fileName => fileName.endsWith('.md') && !fileName.toLowerCase().startsWith('readme'))
         .map(fileName => {
             const slug = fileName.replace(/\.md$/, '');
             const fullPath = path.join(postsDirectory, fileName);
@@ -38,7 +38,7 @@ export function getAllPosts(): BlogPost[] {
             return {
                 slug,
                 title: matterResult.data.title || 'Untitled',
-                date: matterResult.data.date || 'No date',
+                date: matterResult.data.date || new Date().toISOString().split('T')[0],
                 readTime: matterResult.data.readTime || '5 min',
                 category: matterResult.data.category || 'General',
                 content: content,
@@ -61,6 +61,10 @@ export function getAllPosts(): BlogPost[] {
 
 export function getPostBySlug(slug: string): BlogPost | null {
     try {
+        if (!slug || slug.toLowerCase() === 'readme') {
+            return null;
+        }
+
         const fullPath = path.join(postsDirectory, `${slug}.md`);
 
         if (!fs.existsSync(fullPath)) {
@@ -72,13 +76,13 @@ export function getPostBySlug(slug: string): BlogPost | null {
 
         return {
             slug,
-            title: matterResult.data.title,
-            date: matterResult.data.date,
-            readTime: matterResult.data.readTime,
-            category: matterResult.data.category,
+            title: matterResult.data.title || slug,
+            date: matterResult.data.date || new Date().toISOString().split('T')[0],
+            readTime: matterResult.data.readTime || '5 min',
+            category: matterResult.data.category || 'General',
             content: matterResult.content,
-            tags: matterResult.data.tags,
-            status: matterResult.data.status,
+            tags: matterResult.data.tags || [],
+            status: matterResult.data.status || 'draft',
             ...matterResult.data,
         } as BlogPost;
     } catch (error) {

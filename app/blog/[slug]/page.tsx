@@ -36,7 +36,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `${siteUrl}/blog/${post.slug}`,
       title: post.title,
       description: post.excerpt,
-      publishedTime: new Date(post.date).toISOString(),
+      publishedTime: (() => {
+        try {
+          const d = new Date(post.date);
+          return isNaN(d.getTime()) ? new Date().toISOString() : d.toISOString();
+        } catch {
+          return new Date().toISOString();
+        }
+      })(),
       images: ['/logo.png'],
     },
   };
