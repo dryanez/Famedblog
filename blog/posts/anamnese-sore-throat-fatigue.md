@@ -2,6 +2,10 @@
 title: "Systematic Anamnesis for Sore Throat, Chronic Fatigue & Infectious Symptoms"
 date: "2026-01-18"
 status: "published"
+category: "Anamnese"
+readTime: "8 min"
+excerpt: "Master structured German anamnesis for patients presenting with sore throat, chronic fatigue, and infectious signs in the FaMED exam."
+tags: ['Anamnese', 'Infectiology', 'Fatigue', 'Clinical German']
 ---
 
 ## Introduction

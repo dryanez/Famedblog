@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 
-const siteUrl = 'https://famedtestprep.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://famed-vorbereitung.com';
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -25,9 +25,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const metaDesc = post.excerpt || `${post.content.substring(0, 155).replace(/[#*`_\n]/g, '').trim()}...`;
+  const articleDate = (() => {
+    try {
+      const d = new Date(post.date);
+      return isNaN(d.getTime()) ? new Date('2026-09-08').toISOString() : d.toISOString();
+    } catch {
+      return new Date('2026-09-08').toISOString();
+    }
+  })();
+
   return {
     title: post.title,
-    description: `${post.title} - ${post.readTime} read`,
+    description: metaDesc,
+    keywords: post.tags || ['FaMED', 'Fachsprachenprüfung', 'medical German', 'FSP', 'Approbation'],
     alternates: {
       canonical: `${siteUrl}/blog/${post.slug}`,
     },
@@ -35,16 +46,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       url: `${siteUrl}/blog/${post.slug}`,
       title: post.title,
-      description: post.excerpt,
-      publishedTime: (() => {
-        try {
-          const d = new Date(post.date);
-          return isNaN(d.getTime()) ? new Date().toISOString() : d.toISOString();
-        } catch {
-          return new Date().toISOString();
-        }
-      })(),
-      images: ['/logo.png'],
+      description: metaDesc,
+      publishedTime: articleDate,
+      modifiedTime: articleDate,
+      images: ['/og-image.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: metaDesc,
+      images: ['/og-image.png'],
     },
   };
 }
@@ -60,40 +71,72 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   // Get related posts (exclude current)
   const allPosts = getAllPosts();
   const relatedPosts = allPosts
-    .filter(p => p.slug !== slug)
+    .filter(p => p.slug !== slug && p.status === 'published')
     .slice(0, 2);
+
+  const articleDate = (() => {
+    try {
+      const d = new Date(post.date);
+      return isNaN(d.getTime()) ? new Date('2026-09-08').toISOString() : d.toISOString();
+    } catch {
+      return new Date('2026-09-08').toISOString();
+    }
+  })();
 
   // Structured Data for SEO & LLMs
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt || `${post.content.substring(0, 150)}...`,
-    image: `${siteUrl}/logo.png`,
-    datePublished: (() => {
-      try {
-        return new Date(post.date).toISOString();
-      } catch (e) {
-        return new Date().toISOString(); // Fallback to current date
-      }
-    })(),
-    author: {
-      '@type': 'Organization',
-      name: 'FaMED Test Prep Team',
-      url: siteUrl,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'FaMED Test Prep',
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteUrl}/logo.png`,
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `${siteUrl}/blog/${slug}#article`,
+        headline: post.title,
+        description: post.excerpt || `${post.content.substring(0, 150).replace(/[#*`_\n]/g, '').trim()}...`,
+        image: `${siteUrl}/og-image.png`,
+        datePublished: articleDate,
+        dateModified: articleDate,
+        author: {
+          '@type': 'Organization',
+          name: 'FaMED Test Prep Team',
+          url: siteUrl,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'FaMED Test Prep',
+          logo: {
+            '@type': 'ImageObject',
+            url: `${siteUrl}/logo.png`,
+          },
+        },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `${siteUrl}/blog/${slug}`,
+        },
       },
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${siteUrl}/blog/${slug}`,
-    },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: siteUrl,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Blog',
+            item: `${siteUrl}/blog`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: post.title,
+            item: `${siteUrl}/blog/${slug}`,
+          },
+        ],
+      },
+    ],
   };
 
   return (

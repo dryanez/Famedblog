@@ -3,7 +3,7 @@ title: "FaMED Differentialdiagnose Strategien"
 date: "2025-12-13"
 excerpt: "Placeholder content for FaMED Differentialdiagnose Strategien. Will be updated with AI content later."
 tags: ["FaMED", "Placeholder"]
-status: "published"
+status: "draft"
 ---
 
 # FaMED Differentialdiagnose Strategien

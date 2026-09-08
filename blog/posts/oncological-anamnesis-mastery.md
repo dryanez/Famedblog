@@ -2,6 +2,10 @@
 title: "Mastering Oncological Anamnesis: Key Questions for Medical Exams"
 date: "2026-01-12"
 status: "published"
+category: "Oncology"
+readTime: "8 min"
+excerpt: "Structured approach for oncological history-taking, family screening, and empathetic patient communication in German medical exams."
+tags: ['Oncology', 'Anamnese', 'Doctor Patient Communication', 'Internal Medicine']
 ---
 
 # Mastering Oncological Anamnesis: Key Questions for Medical Exams

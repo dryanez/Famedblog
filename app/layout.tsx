@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import BookPromoPopup from "@/components/BookPromoPopup";
 
 const inter = Inter({ subsets: ["latin"] });
-const siteUrl = "https://famedtestprep.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://famed-vorbereitung.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -66,11 +66,17 @@ export default function RootLayout({
         name: "FAMED Test Prep",
         url: siteUrl,
         logo: `${siteUrl}/logo.png`,
+        sameAs: [
+          "https://t.me/+vgtsHuqtwfk4MTJh",
+          "https://www.instagram.com/famedtestprep",
+          "https://www.youtube.com/@famedtestprep"
+        ],
       },
       {
         "@type": "WebSite",
         name: "FAMED Test Prep",
         url: siteUrl,
+        inLanguage: ["en", "de"],
         publisher: { "@id": `${siteUrl}/#organization` },
       },
     ],

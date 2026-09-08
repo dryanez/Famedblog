@@ -2,6 +2,10 @@
 title: "Spotting Critical Red Flags in Anamnesis: A Survival Guide"
 date: "2026-01-14"
 status: "published"
+category: "Anamnese"
+readTime: "7 min"
+excerpt: "A systematic checklist of life-threatening clinical red flags you must identify immediately during the FaMED and FSP anamnesis station."
+tags: ['Anamnese', 'Red Flags', 'Emergency Medicine', 'Patient Safety']
 ---
 
 # Spotting Critical Red Flags in Anamnesis: A Survival Guide

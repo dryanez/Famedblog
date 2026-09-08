@@ -6,8 +6,9 @@ author: "FaMED Test Prep Team"
 category: "Exam Strategy"
 tags: ["FaMED", "Anamnese", "Exam Prep", "Medical German", "Communication"]
 featured: false
-metaDescription: "Master the crucial first 30 seconds and key strategies for the FaMED Anamnese station. Learn how to pass the intake interview with confidence."
+excerpt: "Master the crucial first 30 seconds and key strategies for the FaMED Anamnese station. Learn how to pass the intake interview with confidence."
 status: "published"
+readTime: "8 min"
 ---
 
 # Mastering the FaMED Anamnese: Part 1 - Overview & Intake Interview

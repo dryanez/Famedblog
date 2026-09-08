@@ -2,6 +2,10 @@
 title: "The Ultimate Guide to Pain Anamnesis: Mastering Medical History Taking"
 date: "2026-01-13"
 status: "published"
+category: "Anamnese"
+readTime: "7 min"
+excerpt: "Apply the OPQRST pain anamnesis framework in fluent German. High-yield phrases, pain characterization, and differential diagnosis tips."
+tags: ['Pain Assessment', 'OPQRST', 'Anamnese', 'Clinical Skills']
 ---
 
 # The Ultimate Guide to Pain Anamnesis: Mastering Medical History Taking

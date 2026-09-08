@@ -2,6 +2,10 @@
 title: "B-Symptoms Explained: Your Guide to Weight Loss, Fever & Night Sweats"
 date: "2026-01-17"
 status: "published"
+category: "Anamnese"
+readTime: "6 min"
+excerpt: "How to systematically ask about and document B-symptoms (fever, night sweats, unexplained weight loss) in German clinical consultations."
+tags: ['B-Symptomatik', 'Oncology', 'Internal Medicine', 'Anamnese']
 ---
 
 ## B-Symptoms Explained: Your Guide to Weight Loss, Fever & Night Sweats

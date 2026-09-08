@@ -5,6 +5,7 @@ readTime: "12 min"
 category: "Study Tips"
 status: "published"
 tags: ["study-plan", "schedule", "preparation"]
+excerpt: "A structured, week-by-week study roadmap to prepare for and pass the FaMED German medical language exam on your very first try."
 ---
 
 This realistic, day-by-day study plan covers a wide range of simulated **FaMed OSCE cases** and prepares you for all exam components: Anamnese, Aufklärung, Arzt-Arzt-Gespräch, and Brief writing.

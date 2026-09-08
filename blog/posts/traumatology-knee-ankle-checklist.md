@@ -2,6 +2,10 @@
 title: "Traumatology Anamnesis Checklist: Key Questions for Knee & Ankle Injuries"
 date: "2026-01-16"
 status: "published"
+category: "Surgery"
+readTime: "8 min"
+excerpt: "Checklist of essential questions, trauma mechanisms, and clinical German terminology for acute joint and musculoskeletal injuries."
+tags: ['Traumatology', 'Surgery', 'Orthopedics', 'Anamnese']
 ---
 
 ## Traumatology Anamnesis Checklist: Key Questions for Knee & Ankle Injuries

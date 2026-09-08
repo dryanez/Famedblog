@@ -2,6 +2,10 @@
 title: "Navigating Neurological Anamnesis: Essential Questions for Migraine, Vertigo & Tinnitus"
 date: "2026-01-15"
 status: "published"
+category: "Neurology"
+readTime: "9 min"
+excerpt: "Step-by-step German phrasing and targeted questions for assessing neurological complaints including migraines, dizziness, and tremors."
+tags: ['Neurology', 'Anamnese', 'Headache', 'Vertigo', 'Tremor']
 ---
 
 # Navigating Neurological Anamnesis: Essential Questions for Migraine, Vertigo & Tinnitus

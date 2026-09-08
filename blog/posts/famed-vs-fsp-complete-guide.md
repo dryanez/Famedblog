@@ -5,6 +5,7 @@ readTime: "8 min"
 category: "Exam Guide"
 status: "published"
 tags: ["famed", "fsp", "comparison", "guide"]
+excerpt: "In-depth comparison between the FaMED exam and the traditional Fachsprachenprüfung (FSP): structure, difficulty, and state recognition."
 ---
 
 Understanding the differences between the **FaMed** exam and the traditional **FSP** (Fachsprachprüfung) is crucial for international medical doctors planning to practice in Germany. While both test your medical German, their structure, recognition, and philosophy differ significantly.

@@ -6,8 +6,9 @@ author: "FaMED Test Prep Team"
 category: "Exam Preparation"
 tags: ["FaMED", "Study Guide", "Exam Prep", "Medical German", "Approbation", "Germany"]
 featured: true
-metaDescription: "Complete guide to passing the FaMED exam on your first attempt. Learn proven study strategies, timelines, and resources from successful candidates."
+excerpt: "Complete guide to passing the FaMED exam on your first attempt. Learn proven study strategies, timelines, and resources from successful candidates."
 status: "published"
+readTime: "8 min"
 ---
 
 # Ultimate FaMED Exam Preparation Guide: Pass on Your First Attempt
