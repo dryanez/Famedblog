@@ -1,0 +1,7 @@
+pandas
+openpyxl
+requests
+python-dotenv
+google-generativeai
+pytrends
+supabase

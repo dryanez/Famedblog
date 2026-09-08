@@ -1,0 +1,793 @@
+
+export const getWelcomeBundlePromo = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <div style="background-color: #2563eb; padding: 30px; text-align: center;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">Welcome to FaMED!</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div style="padding: 40px 30px;">
+      <p style="font-size: 18px; font-weight: 600; margin: 0 0 16px 0;">Hi ${data.userName},</p>
+      <p style="margin: 0 0 16px 0;">Thanks for joining FaMED-Vorbereitung. We're here to help you prepare effectively for your exam.</p>
+      <p style="margin: 0 0 16px 0;">To get the most out of your preparation, we've put together a complete study bundle that includes everything you need.</p>
+      
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 25px 0;">
+        <tr>
+          <td align="center">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="middle" style="padding: 10px;">
+                  <img src="https://famed-vorbereitung.com/book%20mockup%20website%20german%20(1).png" alt="FaMED Protokoll Book" style="max-width: 140px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                </td>
+                <td align="center" valign="middle" style="padding: 0 15px;">
+                  <span style="font-size: 24px; font-weight: 700; color: #2563eb;">+</span>
+                </td>
+                <td align="center" valign="middle" style="padding: 10px;">
+                  <div style="background: white; border: 2px solid #2563eb; border-radius: 8px; padding: 20px;">
+                    <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED App" style="width: 80px; height: auto; display: block;">
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <div style="background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0;">
+        <p style="margin: 0 0 10px 0; font-weight: 600; color: #7f1d1d;">SPECIAL "WELCOME" OFFER</p>
+        <div style="margin: 10px 0;">
+          <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px;">€149.98</span>
+          <span style="color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px;">€59.99</span>
+        </div>
+        <a href="https://www.paypal.com/ncp/payment/ZP233NEJS6Z26" style="display: inline-block; background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box;">⚡ UNLOCK NOW - €59.99</a>
+        <p style="font-size: 14px; color: #ef4444; font-weight: 600; margin: 5px 0 0 0; text-transform: uppercase;">Offer Expires in 24 Hours</p>
+      </div>
+
+      <p style="margin: 25px 0 10px 0;"><strong>What you get instantly:</strong></p>
+      <ul style="padding-left: 20px; margin: 0 0 25px 0;">
+        <li style="margin-bottom: 8px;">✅ <strong>Complete FaMED Protokoll book</strong></li>
+        <li style="margin-bottom: 8px;">✅ <strong>FaMED App (3-Months access)</strong></li>
+        <li style="margin-bottom: 8px;">✅ <strong>Personalized 8-week study plan</strong></li>
+        <li style="margin-bottom: 8px;">✅ <strong>Private community access</strong></li>
+        <li style="margin-bottom: 8px;">✅ <strong>Email support</strong></li>
+      </ul>
+      
+      <p style="margin: 0 0 16px 0;">Don't walk into the exam unprepared. Get everything you need to pass.</p>
+
+      <p style="margin-top: 30px; margin-bottom: 0;">
+        Viel Erfolg,<br>
+        <strong>The FaMED-Vorbereitung Team</strong>
+      </p>
+    </div>
+    <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+      <p style="margin: 0 0 5px 0;">© ${new Date().getFullYear()} FaMED-Vorbereitung. All rights reserved.</p>
+      <p style="margin: 0;">You received this email because you signed up for FaMED.</p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextWelcomeBundlePromo = (data: any) => `Hi ${data.userName},
+
+Thanks for joining FaMED-Vorbereitung. We're here to help you prepare effectively for your exam.
+
+To get the most out of your preparation, we've put together a complete study bundle that includes everything you need.
+
+SPECIAL "WELCOME" OFFER
+Was: €149.98
+Now: €59.99
+⚡ UNLOCK NOW - €59.99
+
+Offer Expires in 24 Hours
+
+What you get instantly:
+✅ Complete FaMED Protokoll book
+✅ FaMED App (3-Months access)
+✅ Personalized 8-week study plan
+✅ Private community access
+✅ Email support
+
+Don't walk into the exam unprepared. Get everything you need to pass.
+
+Get Access: https://www.paypal.com/ncp/payment/ZP233NEJS6Z26
+
+Viel Erfolg,
+The FaMED-Vorbereitung Team
+`;
+
+export const getExamUrgency14Days = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #4f46e5; padding: 30px; text-align: center; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; }
+  .content { padding: 40px 30px; }
+  .alert-box { background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 15px; margin-bottom: 25px; border-radius: 4px; }
+  .alert-text { color: #b45309; font-weight: 600; margin: 0; }
+  .btn { display: inline-block; background-color: #4f46e5; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">FaMED Exam Prep</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <div class="alert-box">
+        <p class="alert-text">⚠️ High Priority: ${data.daysUntilExam} Days Until Exam</p>
+      </div>
+      <p>Hi ${data.userName},</p>
+      <p>We noticed your exam is scheduled for <strong>${new Date(data.examDate).toLocaleDateString()}</strong>. That is exactly <strong>${data.daysUntilExam} days</strong> from now.</p>
+      <p>Typically, these last two weeks are where 80% of candidates make or break their grade. It's not about learning new things anymore—it's about pattern recognition and confidence.</p>
+      <p><strong>Are you ready?</strong></p>
+      <p>We have a specific "Final Sprint" module designed exactly for this timeframe.</p>
+      <a href="https://famed-vorbereitung.com/pricing" class="btn">Access the Final Sprint</a>
+    </div>
+    <div class="footer">
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextExamUrgency14Days = (data: any) => `Hi ${data.userName},
+
+We noticed your exam is scheduled for ${new Date(data.examDate).toLocaleDateString()}. That is exactly ${data.daysUntilExam} days from now.
+
+Typically, these last two weeks are where 80% of candidates make or break their grade. It's not about learning new things anymore—it's about pattern recognition and confidence.
+
+Are you ready?
+We have a specific "Final Sprint" module designed exactly for this timeframe.
+
+Access the Final Sprint: https://famed-vorbereitung.com/pricing
+`;
+
+// ... existing 2-week special code ...
+export const getExamUrgencySpecialOffer = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333333; background-color: #f9fafb; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <div style="background-color: #dc2626; padding: 30px; text-align: center;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; display: block; margin: 0 auto 15px auto;">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <span style="font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; display: block; font-family: Arial, Helvetica, sans-serif;">LAST MINUTE EXAM RESCUE</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div style="padding: 40px 30px;">
+      <p style="font-size: 18px; font-weight: 600; font-family: Arial, Helvetica, sans-serif; margin: 0 0 15px 0;">Hi ${data.userName},</p>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 15px 0;">Your exam is in 2 weeks. This is crunch time.</p>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 25px 0;">The next two weeks are about <strong>focused practice</strong> – experiencing the test exactly as it will be on exam day. Full test simulations by sections. Practice until the real exam feels routine.</p>
+      <div style="background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0;">
+        <p style="margin: 0; font-weight: 600; color: #7f1d1d; font-family: Arial, Helvetica, sans-serif; font-size: 16px;">2-Week Preparation Bundle</p>
+        <div style="margin: 10px 0;">
+          <span style="color: #dc2626; font-size: 32px; font-weight: 800; font-family: Arial, Helvetica, sans-serif;">€19.99</span>
+        </div>
+        <a href="https://www.paypal.com/ncp/payment/L9UX6QD4U85UC" style="display: inline-block; background-color: #dc2626; color: #ffffff !important; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; max-width: 500px; text-align: center; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;">Get Access - €19.99</a>
+      </div>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 25px 0 10px 0;"><strong>What you get instantly:</strong></p>
+      <ul style="padding-left: 20px; margin-bottom: 25px; font-family: Arial, Helvetica, sans-serif;">
+        <li style="margin-bottom: 8px;">✅ <strong>Full Exam Simulation Platform</strong> (2 weeks access)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>FaMED 2026 Protokoll</strong> (Complete study guide)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>Section-by-Section Practice</strong></li>
+      </ul>
+      <p style="font-family: Arial, Helvetica, sans-serif; margin: 0 0 30px 0;">Don't walk into the exam unprepared. Practice like it's the real thing.</p>
+      <p style="text-align: center; margin-top: 30px;">
+        <a href="https://www.paypal.com/ncp/payment/L9UX6QD4U85UC" style="color: #dc2626; font-weight: 600; font-family: Arial, Helvetica, sans-serif; text-decoration: none;">Get Instant Access →</a>
+      </p>
+    </div>
+    <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; font-family: Arial, Helvetica, sans-serif;">
+      <p style="margin: 0 0 5px 0;">© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p style="margin: 0;"><a href="#" style="color: #6b7280; text-decoration: none;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextExamUrgencySpecialOffer = (data: any) => `Hi ${data.userName},
+
+Your exam is in 2 weeks. This is crunch time.
+
+The next two weeks are about focused practice – experiencing the test exactly as it will be on exam day. Full test simulations by sections. Practice until the real exam feels routine.
+
+2-Week Preparation Bundle
+Price: €19.99
+
+What you get instantly:
+- Full Exam Simulation Platform (2 weeks access)
+- FaMED 2026 Protokoll (Complete study guide)
+- Section-by-Section Practice
+
+Don't walk into the exam unprepared. Practice like it's the real thing.
+
+Get Instant Access: https://www.paypal.com/ncp/payment/L9UX6QD4U85UC
+`;
+
+export const getExamUrgency1WeekSpecial = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <div style="background-color: #dc2626; padding: 30px; text-align: center;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; vertical-align: middle;">LAST MINUTE EXAM RESCUE</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div style="padding: 40px 30px;">
+      <p style="font-size: 18px; font-weight: 600; margin: 0 0 16px 0;">Hi ${data.userName},</p>
+      <p style="margin: 0 0 16px 0;">Your exam is in less than 1 week. This is it.</p>
+      <p style="margin: 0 0 16px 0;">The last week is about <strong>simulation</strong> – experiencing the test exactly as it will be on exam day. 1-hour full test simulations by sections. Practice until the real exam feels like routine.</p>
+      
+      <div style="background-color: #fef2f2; border: 2px dashed #dc2626; padding: 20px; text-align: center; border-radius: 8px; margin: 25px 0;">
+        <p style="margin: 0 0 10px 0; font-weight: 600; color: #7f1d1d;">SPECIAL "FINAL WEEK" OFFER</p>
+        <div style="margin: 10px 0;">
+          <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px;">€69.00</span>
+          <span style="color: #dc2626; font-size: 32px; font-weight: 800; margin-left: 10px;">€9.99</span>
+        </div>
+        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW4" style="display: inline-block; background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 700; font-size: 18px; margin-top: 10px; width: 100%; text-align: center; box-sizing: border-box;">⚡ UNLOCK NOW - €9.99</a>
+        <p style="font-size: 14px; color: #ef4444; font-weight: 600; margin: 5px 0 0 0; text-transform: uppercase;">Offer Expires in 24 Hours</p>
+      </div>
+
+      <p style="margin: 25px 0 10px 0;"><strong>What you get instantly:</strong></p>
+      <ul style="padding-left: 20px; margin: 0 0 25px 0;">
+        <li style="margin-bottom: 8px;">✅ <strong>Full 1:1 Test Simulation</strong> (Exactly like the real exam)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>1-Hour Section Practice</strong> (By topic)</li>
+        <li style="margin-bottom: 8px;">✅ <strong>Complete Exam Day Preparation</strong></li>
+      </ul>
+      
+      <p style="margin: 0 0 16px 0;">Don't walk into the exam unprepared. Practice like it's the real thing.</p>
+      <p style="text-align: center; margin-top: 30px; margin-bottom: 0;">
+        <a href="https://www.paypal.com/ncp/payment/WMDX2PJU9BTW4" style="color: #dc2626; font-weight: 600; text-decoration: none;">Get Instant Access &rarr;</a>
+      </p>
+    </div>
+    <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+      <p style="margin: 0 0 5px 0;">© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p style="margin: 0;"><a href="#" style="color: #6b7280; text-decoration: none;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextExamUrgency1WeekSpecial = (data: any) => `Hi ${data.userName},
+
+Your exam is in less than 1 week. This is it.
+
+The last week is about simulation – experiencing the test exactly as it will be on exam day. 1-hour full test simulations by sections. Practice until the real exam feels like routine.
+
+SPECIAL "FINAL WEEK" OFFER
+Price: €9.99 (was €69.00)
+Offer Expires in 24 Hours
+
+What you get instantly:
+- Full 1:1 Test Simulation (Exactly like the real exam)
+- 1-Hour Section Practice (By topic)
+- Complete Exam Day Preparation
+
+Don't walk into the exam unprepared. Practice like it's the real thing.
+
+Get Instant Access: https://www.paypal.com/ncp/payment/WMDX2PJU9BTW4
+`;
+
+export const getExamUrgency7Days = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #dc2626; padding: 30px; text-align: center; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; }
+  .content { padding: 40px 30px; }
+  .btn { display: inline-block; background-color: #dc2626; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">7 Days Left. Don't Panic.</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <p>Hi ${data.userName},</p>
+      <p>This is it. The final week.</p>
+      <p>Most students make the mistake of trying to cram <em>everything</em> in the last week. That leads to burnout and forgetting key information.</p>
+      <p><strong>You need a strategy.</strong></p>
+      <p>Our 7-Day Emergency Plan focuses only on the highest-yield topics that appear on 90% of exams. It's designed to maximize your points in minimum time.</p>
+      <a href="https://famed-vorbereitung.com/pricing" class="btn">Get the 7-Day Plan</a>
+    </div>
+    <div class="footer">
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextExamUrgency7Days = (data: any) => `Hi ${data.userName},
+
+This is it. The final week.
+Most students make the mistake of trying to cram everything in the last week. That leads to burnout.
+
+You need a strategy.
+Our 7-Day Emergency Plan focuses only on the highest-yield topics that appear on 90% of exams.
+
+Get the 7-Day Plan: https://famed-vorbereitung.com/pricing
+`;
+
+export const getExamUrgency3Days = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #7c3aed; padding: 30px; text-align: center; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; }
+  .content { padding: 40px 30px; }
+  .btn { display: inline-block; background-color: #7c3aed; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">72 Hours Remaining</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <p>Hi ${data.userName},</p>
+      <p>Relax. Take a deep breath.</p>
+      <p>You have prepared for this. The next 3 days are about maintenance and mindset, not heavy lifting.</p>
+      <p>We've prepared a <strong>Pre-Exam Checklist</strong> specifically for the FaMED exam to ensure you don't miss any small details on exam day.</p>
+      <a href="https://famed-vorbereitung.com/checklist" class="btn">Download Checklist</a>
+    </div>
+    <div class="footer">
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextExamUrgency3Days = (data: any) => `Hi ${data.userName},
+
+Relax. Take a deep breath.
+You have prepared for this. The next 3 days are about maintenance and mindset, not heavy lifting.
+
+We've prepared a Pre-Exam Checklist specifically for the FaMED exam to ensure you don't miss any small details on exam day.
+
+Download Checklist: https://famed-vorbereitung.com/checklist
+`;
+
+export const getWelcomeDay0 = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #2563eb; padding: 30px; text-align: center; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; }
+  .content { padding: 40px 30px; }
+  .btn { display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">Welcome to FaMED Prep! 🩺</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <p>Hi ${data.userName},</p>
+      <p>Thanks for joining us! You've taken the first serious step towards passing your exam.</p>
+      <p><strong>Here is what to do next:</strong></p>
+      <ol>
+        <li>Set your <strong>Exam Date</strong> in the dashboard (so we can build your plan).</li>
+        <li>Take the <strong>Diagnostic Test</strong> to see where you stand.</li>
+      </ol>
+      <p>We are here to guide you every step of the way.</p>
+      <a href="https://famed-vorbereitung.com/dashboard" class="btn">Go to Dashboard</a>
+    </div>
+    <div class="footer">
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextWelcomeDay0 = (data: any) => `Hi ${data.userName},
+
+Thanks for joining us! You've taken the first serious step towards passing your exam.
+
+Here is what to do next:
+1. Set your Exam Date in the dashboard.
+2. Take the Diagnostic Test to see where you stand.
+
+We are here to guide you every step of the way.
+
+Go to Dashboard: https://famed-vorbereitung.com/dashboard
+`;
+
+export const getSubscriptionExpiry = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #10b981; padding: 30px; text-align: center; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; }
+  .content { padding: 40px 30px; }
+  .btn { display: inline-block; background-color: #10b981; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">Don't Lose Your Progress</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <p>Hi ${data.userName},</p>
+      <p>Your Premium subscription is set to expire on <strong>${new Date(data.planExpiry).toLocaleDateString()}</strong>.</p>
+      <p>To ensure uninterrupted access to all your study materials, progress tracking, and simulation exams, please renew your subscription today.</p>
+      <a href="https://famed-vorbereitung.com/billing" class="btn">Renew Subscription</a>
+    </div>
+    <div class="footer">
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextSubscriptionExpiry = (data: any) => `Hi ${data.userName},
+
+Your Premium subscription is set to expire on ${new Date(data.planExpiry).toLocaleDateString()}.
+
+To ensure uninterrupted access to all your study materials, progress tracking, and simulation exams, please renew your subscription today.
+
+
+Renew Subscription: https://famed-vorbereitung.com/billing
+`;
+
+export const getHolidaySpecial = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f0fdf4; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #15803d; padding: 30px; text-align: center; background-image: linear-gradient(135deg, #15803d 25%, #16a34a 25%, #16a34a 50%, #15803d 50%, #15803d 75%, #16a34a 75%, #16a34a 100%); background-size: 20px 20px; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 28px; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+  .content { padding: 40px 30px; }
+  .gift-box { background-color: #fef2f2; border: 2px dashed #dc2626; padding: 25px; text-align: center; border-radius: 12px; margin: 25px 0; position: relative; }
+  .gift-tag { background-color: #dc2626; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); }
+  .price-old { text-decoration: line-through; color: #9ca3af; font-size: 18px; }
+  .price-new { color: #dc2626; font-size: 36px; font-weight: 800; margin-left: 10px; }
+  .btn { display: inline-block; background-color: #dc2626; color: #ffffff; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 20px; margin-top: 15px; width: 100%; text-align: center; box-sizing: border-box; box-shadow: 0 4px 0 #991b1b; transition: all 0.2s; }
+  .btn:hover { background-color: #b91c1c; transform: translateY(2px); box-shadow: 0 2px 0 #991b1b; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
+  .bonus-item { display: flex; align-items: center; justify-content: center; margin-top: 15px; background: white; padding: 10px; border-radius: 8px; font-weight: 600; color: #15803d; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+             <div style="font-size: 48px; margin-bottom: 10px;">🎄</div>
+             <h1 style="color: #ffffff; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">HOLIDAY SPECIAL</h1>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <p style="font-size: 18px;">Hi ${data.userName},</p>
+      <p>The holidays are here, and at FaMED, we want to give you the gift of <strong>passing your exam</strong>.</p>
+      
+      <div class="gift-box">
+        <div class="gift-tag">LIMITED TIME OFFER 🎁</div>
+        <h2 style="color: #15803d; margin-top: 10px; margin-bottom: 5px;">50% OFF EVERYTHING</h2>
+        <p style="margin: 0; color: #6b7280;">Any Subscription Plan</p>
+        
+        <div class="bonus-item">
+          <span style="font-size: 24px; margin-right: 10px;">📚</span>
+          PLUS: Free "Protokoll 2006" Book
+        </div>
+
+        <a href="https://famedtestprep.com/HolidaySpecial" class="btn">CLAIM MY GIFT 🎁</a>
+        <p style="font-size: 12px; color: #ef4444; margin-top: 15px;">*Offer expires soon!</p>
+      </div>
+
+      <p><strong>This package gives you:</strong></p>
+      <ul style="padding-left: 20px; color: #374151;">
+        <li>✅ Full Access to 2,000+ Exam Questions</li>
+        <li>✅ The "Protokoll 2006" Book (Physical Copy!)</li>
+        <li>✅ Performance Tracking Dashboard</li>
+      </ul>
+      
+      <p>Prepare smarter in 2026.</p>
+    </div>
+    <div class="footer">
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p><a href="#" style="color: #6b7280;">Unsubscribe</a></p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextHolidaySpecial = (data: any) => `Hi ${data.userName},
+
+🎄 HOLIDAY SPECIAL: 50% OFF + FREE BOOK 🎁
+
+The holidays are here, and we want to give you the gift of passing your exam.
+
+For a limited time, get:
+- 50% OFF any subscription plan
+- PLUS: A Free copy of the "Protokoll 2006" Book
+
+This package includes full access to 2,000+ exam questions and our advanced performance dashboard.
+
+Claim your gift now: https://famedtestprep.com/HolidaySpecial
+
+Prepare smarter in 2026.
+
+--
+FaMED Vorbereitung
+`;
+
+export const getNewYearSpecial = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0; }
+  .container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+  .header { background-color: #2563eb; padding: 30px; text-align: center; }
+  .header h1 { color: #ffffff; margin: 0; font-size: 24px; font-weight: 700; }
+  .content { padding: 40px 30px; }
+  .offer { background-color: #f0f9ff; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb; }
+  .btn { display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin-top: 20px; }
+  .footer { background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">Happy New Year from FaMED 🎉</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <p>Hi ${data.userName},</p>
+      <p>Happy 2026! We hope this year brings you success in your FaMED exam.</p>
+      <p>To help you start the year right, we wanted to let you know about a special we're running today:</p>
+      
+      <div class="offer">
+        <p style="margin: 0 0 10px 0;"><strong>New Year Special</strong></p>
+        <p style="margin: 0;">Half off any subscription plan, plus a free copy of our Protokoll 2006 book.</p>
+      </div>
+
+      <p>If you've been thinking about upgrading your preparation, this might be a good time.</p>
+      <p>Either way, we're here to support you. Let us know if you have any questions.</p>
+      
+      <a href="https://famedtestprep.com/HolidaySpecial" class="btn">View Details</a>
+    </div>
+    <div class="footer">
+      <p>© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p>Need help? Reply to this email or visit our <a href="https://t.me/+vgtsHuqtwfk4MTJh" style="color: #6b7280;">Telegram community</a>.</p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextNewYearSpecial = (data: any) => `Hi ${data.userName},
+
+🎉 HAPPY NEW YEAR! Start 2026 Right - Pass Your FaMED Exam!
+
+Happy New Year! We hope 2026 brings you success, and we want to help make that happen.
+
+💪 Start the Year Right - Study Smart.Pass the Test!
+
+⚡ LAST DAY OFFER ⚡
+50 % OFF EVERYTHING + FREE BOOK
+
+For TODAY ONLY, get:
+- 50 % OFF any subscription plan
+  - PLUS: Gratis eBook - The "Protokoll 2006" Book
+
+This package includes:
+✅ Full Simulation of the Test
+✅ Gratis eBook - The "Protokoll 2006" Book
+✅ Full Access to All 76 Official Cases
+✅ Performance Tracking Dashboard
+
+⏰ Offer ends TONIGHT at midnight!
+
+Claim your New Year gift now: https://famedtestprep.com/HolidaySpecial
+
+🚀 Make 2026 YOUR breakthrough year!
+
+--
+  FaMED Vorbereitung
+    `;
+
+export const getSiteBackOnline = (data: any) => `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9fafb; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <div style="background-color: #2563eb; padding: 30px; text-align: center;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" valign="middle">
+            <img src="https://famed-vorbereitung.com/logo.png" alt="FaMED Logo" style="height: 60px; width: auto; vertical-align: middle; margin-right: 20px;">
+            <span style="font-size: 24px; font-weight: 700; color: #ffffff; vertical-align: middle;">We're Back Online!</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div style="padding: 40px 30px;">
+      <p style="margin: 0 0 16px 0;">Hi ${data.userName},</p>
+      <p style="margin: 0 0 16px 0;">We wanted to reach out personally to apologize. Our website experienced some technical difficulties over the past few days, and we know some of you were unable to complete your purchase.</p>
+      <p style="margin: 0 0 16px 0;">We're sorry for the inconvenience this caused.</p>
+      
+      <div style="background-color: #f0f9ff; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb;">
+        <p style="margin: 0 0 10px 0;"><strong>Good news: We're fully operational again</strong></p>
+        <p style="margin: 0;">You can now access everything on our site, including the Premium App & Book Bundle that helps you prepare for your FaMED exam.</p>
+      </div>
+
+      <p style="margin: 16px 0 8px 0;"><strong>What's included in the bundle:</strong></p>
+      <ul style="line-height: 1.8; padding-left: 20px; margin: 0 0 20px 0;">
+        <li>Complete FaMED Protokoll book</li>
+        <li>FaMED App (3-Months access)</li>
+        <li>Personalized 8-week study plan</li>
+        <li>Private community access</li>
+        <li>Email support</li>
+      </ul>
+
+      <p style="margin: 0 0 20px 0;">If you were trying to get access before, you can complete your purchase now.</p>
+      
+      <p style="text-align: center; margin: 20px 0;">
+        <a href="https://famedtestprep.com/famedprotokolle" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">View Bundle Options</a>
+      </p>
+
+      <p style="margin-top: 30px; margin-bottom: 0;">If you have any questions or need help, just reply to this email.</p>
+    </div>
+    <div style="background-color: #f3f4f6; padding: 20px; text-align: center; font-size: 12px; color: #6b7280;">
+      <p style="margin: 0 0 5px 0;">© 2025 FaMED Vorbereitung. All rights reserved.</p>
+      <p style="margin: 0;">Need help? Reply to this email or visit our <a href="https://t.me/+vgtsHuqtwfk4MTJh" style="color: #6b7280; text-decoration: none;">Telegram community</a>.</p>
+    </div>
+  </div>
+</body>
+</html>
+`;
+
+export const getTextSiteBackOnline = (data: any) => `Hi ${data.userName},
+
+We're Back Online!
+
+We wanted to reach out personally to apologize. Our website experienced some technical difficulties over the past few days, and we know some of you were unable to complete your purchase.
+
+We're sorry for the inconvenience this caused.
+
+Good news: We're fully operational again.
+
+You can now access everything on our site, including the Premium App & Book Bundle that helps you prepare for your FaMED exam.
+
+🎁 SPECIAL BUNDLE OFFER - Save 60%!
+Book + App Bundle
+
+What's Included:
+✅ Complete FaMED Protokoll book
+✅ FaMED App (3-Months access)
+✅ Personalized 8-week study plan
+✅ Private community access  
+✅ Email support
+
+PRICING:
+Regular Price: €149.98
+Special Price: €59.99
+YOU SAVE: €89.99 (60% OFF!)
+
+Get the Complete Bundle Now: https://famedtestprep.com/famedprotokolle
+
+If you have any questions or need help, just reply to this email.
+
+--
+FaMED Vorbereitung
+`;
