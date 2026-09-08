@@ -1,6 +1,6 @@
 ---
 title: "FaMED Aufklärungsgespräch: 7 Most Common Procedures Explained Simply"
-date: "2026-03-05"
+date: "2026-09-08"
 readTime: "12 min"
 category: "Exam Guide"
 status: "published"

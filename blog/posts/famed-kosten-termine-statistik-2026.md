@@ -1,6 +1,6 @@
 ---
 title: "FaMED Exam Cost, Registration Deadlines, and Pass Rate Breakdown (2026)"
-date: "2026-01-25"
+date: "2026-08-18"
 readTime: "9 min"
 category: "Exam Guide"
 status: "published"

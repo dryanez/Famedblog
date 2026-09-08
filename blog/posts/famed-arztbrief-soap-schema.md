@@ -1,6 +1,6 @@
 ---
 title: "FaMED Arztbrief Writing Guide: SOAP Format & Time Management Under 20 Mins"
-date: "2026-03-01"
+date: "2026-09-06"
 readTime: "10 min"
 category: "Documentation"
 status: "published"

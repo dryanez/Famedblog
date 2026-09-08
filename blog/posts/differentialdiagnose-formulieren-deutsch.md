@@ -1,6 +1,6 @@
 ---
 title: "Differential Diagnosis in German: Phrases and Reasoning Examiners Love to Hear"
-date: "2026-02-10"
+date: "2026-08-28"
 readTime: "11 min"
 category: "Medical Terminology"
 status: "published"

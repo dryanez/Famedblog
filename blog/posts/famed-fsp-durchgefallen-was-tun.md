@@ -1,6 +1,6 @@
 ---
 title: "Failed the Fachsprachprüfung or FaMED? Step-by-Step Action Plan to Pass on Retake"
-date: "2026-02-20"
+date: "2026-09-03"
 readTime: "11 min"
 category: "Study Tips"
 status: "published"

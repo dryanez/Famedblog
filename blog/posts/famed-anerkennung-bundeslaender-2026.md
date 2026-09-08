@@ -1,6 +1,6 @@
 ---
 title: "FaMED Recognition 2026: Which German States Accept the FaMED Exam?"
-date: "2026-02-26"
+date: "2026-09-05"
 readTime: "9 min"
 category: "Exam Guide"
 status: "published"

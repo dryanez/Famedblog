@@ -1,6 +1,6 @@
 ---
 title: "Acute Abdomen in the FaMED Exam: Appendicitis, Cholecystitis & Diverticulitis"
-date: "2026-01-29"
+date: "2026-08-20"
 readTime: "12 min"
 category: "Clinical Cases"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "Mastering the Arzt-Arzt-Gespräch: The SBAR Framework for FaMED & FSP"
-date: "2026-03-03"
+date: "2026-09-07"
 readTime: "11 min"
 category: "Exam Guide"
 status: "published"

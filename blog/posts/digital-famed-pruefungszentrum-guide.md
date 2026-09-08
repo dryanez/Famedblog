@@ -1,6 +1,6 @@
 ---
 title: "The Digital FaMED Exam: Computer Interface, Video Stations & Typing Tips"
-date: "2026-02-12"
+date: "2026-08-30"
 readTime: "9 min"
 category: "Exam Guide"
 status: "published"

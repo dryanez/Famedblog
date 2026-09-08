@@ -1,6 +1,6 @@
 ---
 title: "FaMED vs. Kenntnisprüfung (KP): Differences, Pathways, and Timelines"
-date: "2026-02-15"
+date: "2026-09-01"
 readTime: "10 min"
 category: "Exam Guide"
 status: "published"

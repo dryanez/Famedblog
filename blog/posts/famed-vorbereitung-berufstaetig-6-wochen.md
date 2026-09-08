@@ -1,6 +1,6 @@
 ---
 title: "How to Prepare for the FaMED Exam While Working Full-Time (6-Week Plan)"
-date: "2026-02-08"
+date: "2026-08-26"
 readTime: "11 min"
 category: "Study Tips"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "Cardiovascular Cases in FaMED: STEMI, Angina & Heart Failure Protocols"
-date: "2026-02-02"
+date: "2026-08-22"
 readTime: "13 min"
 category: "Clinical Cases"
 status: "published"

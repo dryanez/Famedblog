@@ -1,6 +1,6 @@
 ---
 title: "Top 15 German Patient Idioms Every Foreign Doctor Must Understand"
-date: "2026-02-05"
+date: "2026-08-24"
 readTime: "10 min"
 category: "Medical Terminology"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "German Medical Terminology vs. Lay Language: 100 Essential Word Pairs"
-date: "2026-02-23"
+date: "2026-09-04"
 readTime: "14 min"
 category: "Medical Terminology"
 status: "published"

@@ -1,6 +1,6 @@
 ---
 title: "Emergency Red Flags in the Anamnese: What FaMED Examiners Expect You to Rule Out"
-date: "2026-02-18"
+date: "2026-09-02"
 readTime: "12 min"
 category: "Clinical Cases"
 status: "published"
