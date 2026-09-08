@@ -6,11 +6,6 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import UpsellCard from '@/components/UpsellCard';
 
-export const metadata = {
-    title: 'Free FAMED Study Guide',
-    description: 'Get the free FAMED study guide and an eight-week preparation plan for the medical German exam.',
-};
-
 export default function LeadMagnetPage() {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
