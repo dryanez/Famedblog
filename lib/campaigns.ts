@@ -1,14 +1,10 @@
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import {
-    getExamUrgency14Days,
-    getExamUrgency7Days,
     getExamUrgency3Days,
     getWelcomeDay0,
     getSubscriptionExpiry,
     getExamUrgencySpecialOffer,
-    getTextExamUrgency14Days,
-    getTextExamUrgency7Days,
     getTextExamUrgency3Days,
     getTextWelcomeDay0,
     getTextSubscriptionExpiry,
@@ -19,11 +15,18 @@ import {
     getTextNewYearSpecial,
     getExamUrgency1WeekSpecial,
     getTextExamUrgency1WeekSpecial,
-    getWelcomeBundlePromo,
-    getTextWelcomeBundlePromo,
     getSiteBackOnline,
     getTextSiteBackOnline
 } from '@/lib/campaign-templates';
+import {
+    getWelcomeBundlePromo, getTextWelcomeBundlePromo,
+    getExamUrgency14Days, getTextExamUrgency14Days,
+    getExamUrgency7Days, getTextExamUrgency7Days,
+    getAccountBookOffer, getTextAccountBookOffer,
+    getAccountMissingOut, getTextAccountMissingOut,
+    getAccountWeeklyBundle, getTextAccountWeeklyBundle,
+    getLeadAppOffer, getTextLeadAppOffer
+} from '@/lib/campaign-templates-v3';
 
 const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -184,6 +187,15 @@ export async function processCampaignSend(options: SendCampaignOptions): Promise
         if (error) return { success: false, sentCount: 0, error: 'Failed to fetch users' };
         users = data || [];
 
+        // Blog-funnel campaigns go to leads (study-plan downloads), skipping anyone who already bought
+        if (campaignId.startsWith('lead_')) {
+            const { data: leads } = await supabase.from('leads').select('email, first_name, created_at').range(0, 4999);
+            const owners = new Set(users.filter(u => u.account_type !== 'free' || u.has_book_access).map(u => String(u.email || '').toLowerCase()));
+            users = (leads || [])
+                .filter(l => l.email && !owners.has(String(l.email).toLowerCase()))
+                .map(l => ({ id: null, email: l.email, full_name: l.first_name || 'Doctor', created_date: l.created_at, account_type: 'lead' }));
+        }
+
         // Apply filtering logic based on campaignId
         const filtering = filterUsersForCampaign(users, campaignId);
         targetUsers = filtering.targetUsers;
@@ -249,6 +261,16 @@ export async function processCampaignSend(options: SendCampaignOptions): Promise
             } else {
                 return { success: false, sentCount: 0, error: 'Invalid campaign ID' };
             }
+        }
+    }
+
+    // Cool-down for the account/bundle emails: skip anyone who already got ANY campaign email in the last 5 days
+    if (!testEmail && !force && (campaignId.startsWith('account_') || campaignId.startsWith('lead_'))) {
+        const since = new Date(Date.now() - 5 * 86400000).toISOString();
+        const { data: recentLogs } = await supabase.from('campaign_logs').select('user_id, user_email').gte('sent_at', since);
+        if (recentLogs && recentLogs.length > 0) {
+            const recentSet = new Set([...recentLogs.map(l => l.user_id).filter(Boolean), ...recentLogs.map(l => l.user_email)]);
+            targetUsers = targetUsers.filter(u => !recentSet.has(u.id) && !recentSet.has(u.email));
         }
     }
 
@@ -356,14 +378,23 @@ export async function processCampaignSend(options: SendCampaignOptions): Promise
 
 function getTemplateForCampaign(campaignId: string) {
     const templates: Record<string, any> = {
-        'exam_urgency_14d': { emailTemplate: getExamUrgency14Days, textTemplate: getTextExamUrgency14Days, subjectLine: '⚠️ Your Exam is in 14 Days!' },
+        'exam_urgency_14d': { emailTemplate: getExamUrgency14Days, textTemplate: getTextExamUrgency14Days, subjectLine: 'Two weeks to your exam: 2 weeks of full app access' },
         'exam_urgency_special_offer': { emailTemplate: getExamUrgencySpecialOffer, textTemplate: getTextExamUrgencySpecialOffer, subjectLine: '🔥 Last Chance: €17.99 Special Offer' },
-        'exam_urgency_7d': { emailTemplate: getExamUrgency7Days, textTemplate: getTextExamUrgency7Days, subjectLine: '🚨 Final Week! Your Exam is This Week' },
+        'exam_urgency_7d': { emailTemplate: getExamUrgency7Days, textTemplate: getTextExamUrgency7Days, subjectLine: 'Final week: sit the real exam, every day' },
         'exam_urgency_1_week_special': { emailTemplate: getExamUrgency1WeekSpecial, textTemplate: getTextExamUrgency1WeekSpecial, subjectLine: '🚨 Final Week Special Offer' },
         'exam_urgency_3d': { emailTemplate: getExamUrgency3Days, textTemplate: getTextExamUrgency3Days, subjectLine: '⏰ 72 Hours Until Your FaMED Exam' },
         'welcome_day0': { emailTemplate: getWelcomeDay0, textTemplate: getTextWelcomeDay0, subjectLine: '👋 Welcome to FaMED!' },
         'subscription_expiry': { emailTemplate: getSubscriptionExpiry, textTemplate: getTextSubscriptionExpiry, subjectLine: '🔔 Your Premium Access Expires Soon' },
-        'welcome_bundle_promo': { emailTemplate: getWelcomeBundlePromo, textTemplate: getTextWelcomeBundlePromo, subjectLine: '🎁 Welcome to FaMED - Special Offer' },
+        'welcome_bundle_promo': { emailTemplate: getWelcomeBundlePromo, textTemplate: getTextWelcomeBundlePromo, subjectLine: 'Pass the FaMED exam with the Book + App Bundle' },
+        'lead_app_offer': { emailTemplate: getLeadAppOffer, textTemplate: getTextLeadAppOffer, subjectLine: 'Walk into exam day having already done it out loud' },
+        'account_book_offer': { emailTemplate: getAccountBookOffer, textTemplate: getTextAccountBookOffer, subjectLine: 'Welcome to FaMED: the book that shows how the exam runs' },
+        'account_missing_out': { emailTemplate: getAccountMissingOut, textTemplate: getTextAccountMissingOut, subjectLine: "Here's what you're missing" },
+        'account_weekly_bundle_1': { emailTemplate: getAccountWeeklyBundle, textTemplate: getTextAccountWeeklyBundle, subjectLine: 'Still half price: the Book + App Bundle' },
+        'account_weekly_bundle_2': { emailTemplate: getAccountWeeklyBundle, textTemplate: getTextAccountWeeklyBundle, subjectLine: 'Still half price: the Book + App Bundle' },
+        'account_weekly_bundle_3': { emailTemplate: getAccountWeeklyBundle, textTemplate: getTextAccountWeeklyBundle, subjectLine: 'Still half price: the Book + App Bundle' },
+        'account_weekly_bundle_4': { emailTemplate: getAccountWeeklyBundle, textTemplate: getTextAccountWeeklyBundle, subjectLine: 'Still half price: the Book + App Bundle' },
+        'account_weekly_bundle_5': { emailTemplate: getAccountWeeklyBundle, textTemplate: getTextAccountWeeklyBundle, subjectLine: 'Still half price: the Book + App Bundle' },
+        'account_weekly_bundle_6': { emailTemplate: getAccountWeeklyBundle, textTemplate: getTextAccountWeeklyBundle, subjectLine: 'Still half price: the Book + App Bundle' },
         'site_back_online': { emailTemplate: getSiteBackOnline, textTemplate: getTextSiteBackOnline, subjectLine: "We're Back Online!" },
         'holiday_special': { emailTemplate: getHolidaySpecial, textTemplate: getTextHolidaySpecial, subjectLine: '🎄 Holiday Special' },
         'new_year_special': { emailTemplate: getNewYearSpecial, textTemplate: getTextNewYearSpecial, subjectLine: '🎉 Happy New Year!' }
@@ -434,6 +465,45 @@ function filterUsersForCampaign(users: any[], campaignId: string) {
                 if (u.account_type?.startsWith('paid') || !u.created_date) return false;
                 const daysSince = (now.getTime() - new Date(u.created_date).getTime()) / 86400000;
                 return daysSince <= 7;
+            });
+            break;
+
+        case 'account_book_offer':
+        case 'account_missing_out':
+        case 'account_weekly_bundle_1':
+        case 'account_weekly_bundle_2':
+        case 'account_weekly_bundle_3':
+        case 'account_weekly_bundle_4':
+        case 'account_weekly_bundle_5':
+        case 'account_weekly_bundle_6': {
+            // Free accounts only (not paid, no book yet). Each week-window is its own campaign id, so the
+            // once-per-campaign dedupe makes the weekly bundle email go out once a week, until the
+            // exam is close (then the 14-day and 7-day countdown emails take over).
+            const windows: Record<string, [number, number]> = {
+                account_book_offer: [1, 3], account_missing_out: [5, 7],
+                account_weekly_bundle_1: [12, 19], account_weekly_bundle_2: [19, 26], account_weekly_bundle_3: [26, 33],
+                account_weekly_bundle_4: [33, 40], account_weekly_bundle_5: [40, 47], account_weekly_bundle_6: [47, 54]
+            };
+            const [from, to] = windows[campaignId];
+            targetUsers = users.filter(u => {
+                if (!u.email || !u.created_date || u.role === 'admin') return false;
+                if (u.account_type !== 'free' || u.has_book_access) return false;
+                const daysSince = (now.getTime() - new Date(u.created_date).getTime()) / 86400000;
+                if (daysSince < from || daysSince >= to) return false;
+                if (u.exam_date) {
+                    const daysUntil = (new Date(u.exam_date).getTime() - now.getTime()) / 86400000;
+                    if (daysUntil < 16) return false;
+                }
+                return true;
+            });
+            break;
+        }
+
+        case 'lead_app_offer':
+            targetUsers = users.filter(u => {
+                if (!u.email || !u.created_date) return false;
+                const daysSince = (now.getTime() - new Date(u.created_date).getTime()) / 86400000;
+                return daysSince >= 1 && daysSince < 3;
             });
             break;
 
