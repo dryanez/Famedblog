@@ -1,7 +1,6 @@
-import {headers} from 'next/headers';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BookPromoPopup from "@/components/BookPromoPopup";
@@ -9,7 +8,7 @@ import BookPromoPopup from "@/components/BookPromoPopup";
 const inter = Inter({ subsets: ["latin"] });
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://famed-vorbereitung.com";
 
-export const metadata: Metadata = {
+export const siteMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "FAMED Test Prep - Pass Your Medical German Exam",
@@ -53,12 +52,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
-  children,
+export default function SiteLayout({
+  children, locale = 'en',
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode; locale?: 'en'|'ar';
 }>) {
-  const locale = (await headers()).get('x-site-language') === 'ar' ? 'ar' : 'en';
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
