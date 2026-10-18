@@ -13,6 +13,8 @@ These are language-practice examples. Select questions to fit the actual convers
 
 ## Traumatology Anamnesis Checklist: Key Questions for Knee & Ankle Injuries
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ### Introduction
 
 A comprehensive Anamnesegespräch is crucial for the correct diagnosis and treatment planning of knee and ankle injuries. This blog post serves as a practical checklist for medical students and young doctors to conduct a structured and efficient patient interview for knee or ankle injuries. The goal is to capture all relevant information to make an informed clinical decision.

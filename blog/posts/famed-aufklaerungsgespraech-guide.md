@@ -13,6 +13,8 @@ In the human-medicine FaMed format, informed consent is one situation in the doc
 
 The necessary procedure information is supplied. Your job is to explain it clearly, respond to questions and check understanding. Medical knowledge is not separately assessed. A memorised procedure script must not override the assignment.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## 1. Establish the topic and purpose
 
 Introduce yourself, check whom you are speaking with and state the planned procedure in everyday language. Do not assume this person is the patient from the preceding history task.

@@ -13,6 +13,8 @@ In a medical-language presentation, precision is more useful than theatrical cer
 
 FaMed supplies the information for its patient presentations and does not separately assess medical knowledge.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## Name the source and degree of certainty
 
 Use the wording that the task supports:

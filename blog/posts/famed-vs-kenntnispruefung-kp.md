@@ -13,6 +13,8 @@ updated: "2026-10-18"
 
 Your responsible authority determines the route for your qualification and application. Do not assume every foreign-trained doctor must take a Kenntnisprüfung, or that document assessment always starts only after the language exam.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## Compare the purpose
 
 | Question | FaMed | Kenntnisprüfung |

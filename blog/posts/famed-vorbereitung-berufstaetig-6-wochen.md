@@ -13,6 +13,8 @@ Preparing while working requires a schedule you can repeat. Six weeks is an exam
 
 ## A possible 90-minute study session
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 Use three flexible blocks: vocabulary in context, one speaking exercise, then writing or review. Ninety minutes is a study suggestion, not an official requirement.
 
 For speaking, distinguish a single oral situation from a whole station: the current practice test gives at most 11 minutes per situation; the two paired oral blocks are each 23 minutes including reading. For writing, practise the 22-minute task including video time.

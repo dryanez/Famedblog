@@ -13,6 +13,8 @@ These are language-practice examples. Select questions to fit the actual convers
 
 You have passed your B2/C1 Goethe or telc exam, memorized medical anatomy in German, and practiced your questions. But then you enter your FaMED examination room, and the patient actor says:
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 > *"Herr Doktor, mir ist ganz flau im Magen und gestern hatte ich wieder diesen Kloß im Hals. Außerdem hab ich's total im Kreuz!"*
 
 If you pause with a blank look or ask the patient to repeat themselves in high academic German, ask a clear follow-up rather than guessing the meaning.

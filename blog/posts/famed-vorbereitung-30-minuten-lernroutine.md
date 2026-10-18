@@ -1,54 +1,57 @@
 ---
-title: "FaMED-Vorbereitung: Eine 30-Minuten-Lernroutine für jeden Tag"
+title: "FaMED Preparation: A 30-Minute Daily Study Routine"
 date: "2026-10-18"
 readTime: "5 min"
-category: "Lernstrategie"
+category: "Learning Strategy"
 status: "published"
-excerpt: "Eine konkrete tägliche Übung: Gespräch strukturieren, laut formulieren, Feedback prüfen und denselben Abschnitt erneut üben."
+excerpt: "A concrete daily exercise: structure a conversation, formulate it aloud, check feedback, and practice the same section again."
 tags: ["FaMED", "Lernplan", "Prüfungsvorbereitung"]
-updated: "2026-10-18"
+updated: "2026-10-19"
 ---
-Du hast Lernmaterial gesammelt, aber übst du auch das Sprechen? Für die Vorbereitung auf medizinische Sprachsituationen hilft ein fester Arbeitsablauf. Hier ist eine 30-Minuten-Routine, die du an deinen Lernstand anpassen kannst. Das ist ein Lernvorschlag von FaMED Prep, keine offizielle Prüfungsvorgabe und keine Bestehensgarantie.
 
-## Minuten 0–5: Ein Lernziel statt zehn Themen
+You've collected study material, but are you also practicing speaking? For preparing for medical language situations, a fixed workflow helps. Here is a 30-minute routine that you can adapt to your learning level. This is a learning suggestion from FaMED Prep, not an official exam requirement and no guarantee of passing.
 
-Wähle eine einzige Aufgabe: ein Gespräch eröffnen, eine Information zusammenfassen oder einen Abschnitt eines Arztbriefs formulieren. Schreibe auf, was du am Ende klarer ausdrücken möchtest. Beispiel: „Heute übe ich, eine unklare Antwort freundlich nachzufragen.“
+## Minutes 0–5: One Learning Goal Instead of Ten Topics
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
-Wenn du dieses Thema weiter üben möchtest, lies auch [Mastering the FaMED Anamnese: Part 1 - Overview & Key Strategies](/blog/anamnese-overview-part-1).
-
-
-Du brauchst zuerst einen Ablauf für deine Lernwochen? [Den kostenlosen Lernplan findest du hier](/lead-magnet).
-
-## Minuten 5–15: Laut üben
-
-Sprich die Aufgabe laut durch. Nimm dich mit deinem eigenen Gerät auf oder übe mit einem Lernpartner. Nutze ein Fallbeispiel, aber lerne keine angeblich universelle Musterantwort auswendig. Deine Formulierungen sollen zur konkreten Situation passen.
-
-Wenn dir ein Wort fehlt, markiere die Stelle und sprich weiter. So merkst du, welche Lücken dich tatsächlich im Gespräch aufhalten.
+Choose a single task: open a conversation, summarize information, or formulate a section of a doctor's letter. Write down what you want to express more clearly at the end. Example: "Today I will practice politely asking for clarification on an unclear answer."
 
 
-## Minuten 15–20: Drei konkrete Beobachtungen
-
-Höre deine Aufnahme an. Notiere nur drei Dinge: War die Reihenfolge verständlich? Waren deine Sätze klar? Welche Stelle möchtest du präziser formulieren? Bei medizinischen Inhalten brauchst du eine fachlich geeignete Quelle oder eine qualifizierte Rückmeldung; ein Sprachtraining ersetzt diese Prüfung nicht.
+If you want to continue practicing this topic, also read [Mastering the FaMED Anamnese: Part 1 - Overview & Key Strategies](/blog/anamnese-overview-part-1).
 
 
-Für den nächsten Lernschritt hilft dir [How to Prepare for the FaMED Exam While Working Full-Time (6-Week Plan)](/blog/famed-vorbereitung-berufstaetig-6-wochen).
+Do you first need a schedule for your study weeks? [You can find the free study plan here](/lead-magnet).
 
-## Minuten 20–27: Den schwierigen Abschnitt wiederholen
+## Minutes 5–15: Practice Aloud
 
-Übe denselben Abschnitt erneut. Ändere eine Formulierung und vergleiche beide Versuche. Ziel ist eine nachvollziehbare Verbesserung statt einer immer längeren Liste ungelesener Materialien.
+Speak the task aloud. Record yourself with your own device or practice with a study partner. Use a case example, but do not memorize a supposedly universal model answer. Your formulations should fit the specific situation.
+
+If you are missing a word, mark the spot and continue speaking. This way, you will notice which gaps actually hinder you in conversation.
 
 
-Du möchtest nicht nur lesen, sondern praktisch üben? [Hier zeigen wir die FaMED Prep App Schritt für Schritt](/blog/famed-prep-app-so-funktionierts), bevor du dich für einen Zugang entscheidest.
+## Minutes 15–20: Three Concrete Observations
 
-## Minuten 27–30: Den nächsten Schritt festhalten
+Listen to your recording. Note only three things: Was the sequence understandable? Were your sentences clear? Which part do you want to formulate more precisely? For medical content, you need a professionally appropriate source or qualified feedback; language training does not replace this review.
 
-Schreibe einen Satz auf: „Morgen wiederhole ich …“. Bewahre deine Notizen auf und prüfe nach einer Woche, welche Aufgaben dir leichter fallen. Wenn dein Prüfungstermin näher rückt, richte deinen Gesamtplan nach deinem individuellen Bedarf und den aktuellen Informationen des jeweiligen Prüfungsanbieters aus.
 
-## So kombinierst du Lesen und Üben
+For the next learning step, [How to Prepare for the FaMED Exam While Working Full-Time (6-Week Plan)](/blog/famed-vorbereitung-berufstaetig-6-wochen) will help you.
 
-Das digitale FaMED-Protokoll-Fallbuch kannst du zum Nachlesen verwenden; in der FaMED Prep App kannst du die verfügbaren Übungen praktisch bearbeiten. Das Paket enthält das digitale Buch und **90 Tage App-Zugang für €59.99 Gesamtpreis, einmalig**. Die jeweiligen Planlimits stehen in der App; es gibt keine Zusage unbegrenzt vieler Prüfungssimulationen.
+## Minutes 20–27: Repeat the Difficult Section
 
-[Digitales Buch + 90 Tage App für €59.99 ansehen](https://famedtestprep.com/PayPalCheckout?plan=bundle_3m&utm_source=blog&utm_medium=article&utm_campaign=30min_routine)
+Practice the same section again. Change a formulation and compare both attempts. The goal is a noticeable improvement instead of an ever-longer list of unread materials.
 
-Du möchtest zuerst einen Überblick? [Hier findest du unseren kostenlosen Lernplan](/lead-magnet). Prüfe außerdem die aktuellen Angaben deines Prüfungsanbieters: [FaMed](https://famed-test.de/).
+
+Do you want to not just read, but practice practically? [Here we show the FaMED Prep App step by step](/blog/famed-prep-app-so-funktionierts) before you decide on access.
+
+## Minutes 27–30: Note the Next Step
+
+Write down one sentence: "Tomorrow I will repeat...". Keep your notes and check after a week which tasks are easier for you. As your exam date approaches, align your overall plan with your individual needs and the current information from the respective exam provider.
+
+## How to Combine Reading and Practicing
+
+You can use the digital FaMED Protocol casebook for reference; in the FaMED Prep App, you can practically work through the available exercises. The package includes the digital book and **90 days of app access for a total price of €59.99, one-time**. The respective plan limits are in the app; there is no promise of an unlimited number of exam simulations.
+
+[View Digital Book + 90 Days App for €59.99](https://famedtestprep.com/PayPalCheckout?plan=bundle_3m&utm_source=blog&utm_medium=article&utm_campaign=30min_routine)
+
+Do you want an overview first? [Here you will find our free study plan](/lead-magnet). Also check the current information from your exam provider: [FaMed](https://famed-test.de/).

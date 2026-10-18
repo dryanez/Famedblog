@@ -13,6 +13,8 @@ The current human-medicine FaMed practice test asks for the **anamnesis section 
 
 ## What belongs in the requested text
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 Capture the information actually given: identity and personal details, current symptoms and course, previous illnesses and medication, tobacco and alcohol use, family and social history and relevant travel history. Check the concrete assignment for the required information.
 
 Write **complete sentences** using appropriate medical language. Convey patient statements with suitable distance, for example the Konjunktiv where appropriate. Do not turn missing information into a negative finding.

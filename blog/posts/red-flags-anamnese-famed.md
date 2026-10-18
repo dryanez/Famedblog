@@ -13,6 +13,8 @@ Ask clear questions about the person's actual complaint, listen to the response 
 
 FaMed assesses medical-language communication; medical knowledge is not separately evaluated. The following are original language exercises, not a complete emergency assessment or an official scoring checklist.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## Clarify the beginning and course
 
 For a fictional pain-history exercise:

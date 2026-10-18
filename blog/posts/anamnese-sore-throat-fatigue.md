@@ -13,6 +13,8 @@ These are language-practice examples. Select questions to fit the actual convers
 
 ## Introduction
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 The systematic Anamnese is a cornerstone of medical diagnostics. It allows the doctor to gain a comprehensive picture of the patient and their complaints in order to make an informed diagnosis and develop an appropriate treatment plan. This blog post focuses on structured history-taking for patients with sore throat, chronic fatigue, and/or infectious symptoms, giving you a solid framework for the FaMED exam.
 
 

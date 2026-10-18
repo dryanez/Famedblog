@@ -13,6 +13,8 @@ The official FaMed FAQ currently lists the human-medicine exam fee as **€530**
 
 ## Build your own budget
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 Start with the exam fee, then request actual prices for any travel, accommodation, translations, language certificates and preparation resources you need. These costs differ by person. There is no verified all-inclusive budget here, and we cannot promise that every expense is tax-deductible.
 
 The FAQ lists **Mainz, Kassel and Nürnberg**. Check the address in your booking confirmation. Do not assume another city is a current exam centre because an old article names it.

@@ -1,38 +1,40 @@
 ---
-title: "FaMED Protokoll 2026: Vorschau ins digitale Buch"
+title: "FaMED Protocol 2026: Preview into the Digital Book"
 date: "2026-10-18"
-updated: "2026-10-18"
+updated: "2026-10-19"
 readTime: "3 min"
-category: "Buchvorschau"
+category: "Book Preview"
 status: "published"
 tags: ["FaMED", "Buch", "Anamnese", "Lernmaterial"]
-excerpt: "Ein Blick in die Ausgabe 2026: Inhaltsübersicht, Redemittel und eine Beispielseite zur Schmerzanamnese."
+excerpt: "A look into the 2026 edition: Table of contents, useful phrases, and a sample page on pain history."
 ---
 
-Du möchtest vor dem Kauf sehen, wie das Buch aufgebaut ist? Hier findest du Auszüge aus **FaMED Protokoll — Lehrbuch, Ausgabe 2026** von Dr. Felipe Yanez.
+Would you like to see how the book is structured before buying it? Here you will find excerpts from **FaMED Protocol — Textbook, 2026 Edition** by Dr. Felipe Yanez.
 
-## Das digitale Buch
+## The Digital Book
 
-![FaMED Protokoll — Ausgabe 2026](/images/products/book-cover.png)
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
-Fälle, Gesprächsstruktur und Redemittel für die eigene Vorbereitung. **€19.99.**
+![FaMED Protocol — 2026 Edition](/images/products/book-cover.png)
 
-[Digitales Buch ansehen](https://famedtestprep.com/FamedProtokolle?utm_source=blog&utm_medium=preview&utm_campaign=book_2026).
+Cases, conversation structure, and useful phrases for your own preparation. **€19.99.**
 
-## Ein Blick ins Inhaltsverzeichnis
+[View Digital Book](https://famedtestprep.com/FamedProtokolle?utm_source=blog&utm_medium=preview&utm_campaign=book_2026).
 
-![Inhaltsverzeichnis der gestalteten Ausgabe 2026](/images/previews/book-2026-contents.webp)
+## A Look into the Table of Contents
 
-[Seite in voller Größe öffnen](/images/previews/book-2026-contents.webp).
+![Table of contents of the designed 2026 edition](/images/previews/book-2026-contents.webp)
 
-## Beispielseite: Schmerzanamnese
+[Open page in full size](/images/previews/book-2026-contents.webp).
 
-![Ausgabe 2026, Seite 21: Schmerzanalyse und deutsche Fragebeispiele](/images/previews/book-2026-opqrst.webp)
+## Sample Page: Pain History
 
-[Beispielseite in voller Größe öffnen](/images/previews/book-2026-opqrst.webp). Nutze OPQRST als Merkhilfe und passe die Fragen an das Gespräch an. Unser [Artikel zur Schmerzanamnese](/blog/pain-anamnesis-guide) führt die Übung weiter.
+![2026 Edition, Page 21: Pain analysis and German question examples](/images/previews/book-2026-opqrst.webp)
 
-Das Buch ist unabhängiges Vorbereitungsmaterial. Aktuelle Prüfungszeiten und Aufgaben findest du beim [Prüfungsanbieter](https://famed-test.de/pruefungsablauf/).
+[Open sample page in full size](/images/previews/book-2026-opqrst.webp). Nutze OPQRST als Merkhilfe und passe die Fragen an das Gespräch an. Unser [Artikel zur Schmerzanamnese](/blog/pain-anamnesis-guide) führt die Übung weiter.
 
-## Lesen und üben
+The book is independent preparation material. Current exam times and tasks can be found at the [exam provider](https://famed-test.de/pruefungsablauf/).
 
-Für den täglichen Ablauf hilft die [30-Minuten-Lernroutine](/blog/famed-vorbereitung-30-minuten-lernroutine). Du möchtest zusätzlich praktisch trainieren? [Hier lernst du die App kennen](/blog/famed-prep-app-so-funktionierts).
+## Read and Practice
+
+For daily routine, the [30-minute learning routine](/blog/famed-vorbereitung-30-minuten-lernroutine) helps. Would you like to practice additionally? [Here you can get to know the app](/blog/famed-prep-app-so-funktionierts).

@@ -1,58 +1,60 @@
 ---
-title: "FaMED: Zehn vermeidbare Fehler beim Üben"
+title: "FaMED: Ten Avoidable Mistakes When Practicing"
 date: "2025-05-20"
-excerpt: "Zehn praktische Prüfpunkte zu Aufgabenverständnis, Gesprächsführung und quellentreuem Schreiben, ohne erfundene Prüfungsregeln."
+excerpt: "Ten practical checkpoints on task comprehension, conversation management, and source-faithful writing, without invented exam rules."
 tags: [Fachsprachenprüfung, FaMED, Medizindeutsch, Approbation, Prüfungstipps]
 status: "published"
 category: "Exam Tips"
 readTime: "3 min"
-updated: "2026-10-18"
+updated: "2026-10-19"
 ---
 
-Diese zehn Punkte sind eine Lernhilfe von FaMED Prep, keine statistisch ermittelte Rangliste. Maßgeblich sind die aktuellen Aufgaben des Prüfungsanbieters. FaMED Prep bietet unabhängige Vorbereitungsmaterialien an.
+These ten points are a learning aid from FaMED Prep, not a statistically determined ranking. The current tasks of the exam provider are authoritative. FaMED Prep offers independent preparation materials.
 
-## 1. Aufgabe und Rolle nicht genau lesen
+## 1. Not reading the task and role carefully
 
-Prüfe, was in dieser Situation verlangt wird. Eine feste 30-Sekunden-Vorbereitung lässt sich aus den aktuell geprüften Quellen nicht als allgemeine Regel ableiten. Verwende die Angaben des tatsächlichen Auftrags.
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
-## 2. Situation und Station verwechseln
+Check what is required in this situation. A fixed 30-second preparation cannot be derived as a general rule from the currently examined sources. Use the information from the actual assignment.
 
-Der aktuelle Übungstest nennt maximal elf Minuten je mündlicher Situation. Der Arzt–Patient-Block umfasst Anamnese und Aufklärung, der Arzt–Arzt-Block zwei Vorstellungen; beide Blöcke dauern 23 Minuten einschließlich Lesezeit. Die schriftliche Station dauert 22 Minuten einschließlich Videozeit.
+## 2. Confusing situation and station
 
-## 3. Alle Fälle zu einer Geschichte verbinden
+The current practice test specifies a maximum of eleven minutes per oral situation. The doctor-patient block includes anamnesis and explanation, the doctor-doctor block includes two presentations; both blocks last 23 minutes including reading time. The written station lasts 22 minutes including video time.
 
-Die Personen und Fälle können sich unterscheiden. Übernimm keine Befunde aus dem vorherigen Gespräch. Halte die Angaben getrennt.
+## 3. Connecting all cases into one story
 
-## 4. Fachwörter ungeklärt stehen lassen
+The people and cases may differ. Do not transfer findings from the previous conversation. Keep the information separate.
 
-Erkläre Fachbegriffe im Patientengespräch verständlich. Frage nach, wenn eine Antwort unklar ist. Unsere [Begriffstabelle](/blog/medizinische-fachbegriffe-laiensprache-tabelle) liefert Beispiele; sie ist keine offizielle Vokabelliste.
+## 4. Leaving technical terms unexplained
 
-## 5. Eine Merkhilfe wie einen Pflichtfragebogen behandeln
+Explain technical terms understandably in the patient conversation. Ask if an answer is unclear. Our [glossary](/blog/medizinische-fachbegriffe-laiensprache-tabelle) provides examples; it is not an official vocabulary list.
 
-OPQRST und SAMPLER helfen beim Ordnen. Wähle Fragen passend zur Beschwerde und höre auf die Antworten. Eine lange Liste ersetzt keine Gesprächsführung.
+## 5. Treating a mnemonic as a mandatory questionnaire
 
-## 6. Sorgen mit einer Garantie beantworten
+OPQRST and SAMPLER help with organization. Choose questions appropriate to the complaint and listen to the answers. A long list does not replace conversation management.
 
-„Es kann nichts passieren“ ist keine gute Risikoaufklärung. Benenne, was bekannt ist, erkläre die bereitgestellten Informationen und frage nach dem konkreten Anliegen. Erfinde keine Prozentzahl, um überzeugender zu klingen.
+## 6. Answering concerns with a guarantee
 
-## 7. Befunde und Maßnahmen erfinden
+“Es kann nichts passieren” (Nothing can happen) is not good risk disclosure. State what is known, explain the provided information, and ask about the specific concern. Do not invent a percentage to sound more convincing.
 
-In der Vorstellung unterscheidest du Patientenangaben, dokumentierte Befunde und den vorgegebenen Plan. Sage offen, wenn eine Information fehlt. Das medizinische Fachwissen wird nicht separat bewertet.
+## 7. Inventing findings and measures
 
-## 8. Einen vollständigen SOAP-Brief schreiben
+In the presentation, you distinguish between patient information, documented findings, and the given plan. State openly if information is missing. Medical expertise is not assessed separately.
 
-Gefragt ist der Anamneseteil aus dem eigenen Patientenvideo. Schreibe vollständige Sätze. Ergänze keine Untersuchung, Diagnose oder Therapie, nur weil ein allgemeines Schema dafür ein Feld vorsieht. [Hier übst du den Schreibablauf](/blog/famed-arztbrief-soap-schema).
+## 8. Writing a complete SOAP letter
 
-## 9. Negationen und Zeitangaben verlieren
+The anamnesis part from your own patient video is requested. Write complete sentences. Do not add an examination, diagnosis, or therapy just because a general schema provides a field for it. [Here you can practice the writing process](/blog/famed-arztbrief-soap-schema).
 
-„Nicht erbrochen“ und „Erbrechen nicht erfragt“ bedeuten etwas anderes. Vergleiche Notizen und Text mit der Quelle. Gib Patientenäußerungen mit angemessener Distanz wieder; Konjunktiv I ist dabei ein geeignetes sprachliches Mittel, wenn er passt.
+## 9. Losing negations and time specifications
 
-## 10. Üben ohne Rückmeldung
+“Nicht erbrochen” (not vomited) and “Erbrechen nicht erfragt” (vomiting not asked about) mean something different. Compare notes and text with the source. Reproduce patient statements with appropriate distance; Konjunktiv I is a suitable linguistic means for this, if it fits.
 
-Wähle nach jedem Versuch einen konkreten Verbesserungspunkt. Die offizielle C1-Checkliste hilft beim Prüfen von Verständlichkeit, Struktur und Genauigkeit. Jeder der drei Prüfungsbereiche braucht mindestens 60%; ein starker Bereich gleicht einen zu schwachen nicht aus.
+## 10. Practicing without feedback
 
-[Schau in das digitale Buch](/blog/famed-protokoll-buch-vorschau) oder [lerne die App zuerst kennen](/blog/famed-prep-app-so-funktionierts). Mit der [30-Minuten-Routine](/blog/famed-vorbereitung-30-minuten-lernroutine) kannst du einen dieser Punkte heute üben.
+After each attempt, choose a specific point for improvement. The official C1 checklist helps in checking comprehensibility, structure, and accuracy. Each of the three exam areas needs at least 60%; a strong area does not compensate for a too weak one.
+
+[Look into the digital book](/blog/famed-protokoll-buch-vorschau) or [get to know the app first](/blog/famed-prep-app-so-funktionierts). With the [30-minute routine](/blog/famed-vorbereitung-30-minuten-lernroutine) you can practice one of these points today.
 
 ## Sources and review
 
-Editorial check: **18 October 2026**, human medicine. [Prüfungsablauf](https://famed-test.de/pruefungsablauf/), [Aktueller Übungstest](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf), [Anforderungen](https://famed-test.de/anforderungen/), [Bewertung](https://famed-test.de/pruefungsergebnis/). Practice examples are created by FaMED Prep; they are not predictions of exam questions.
+Editorial check: **18 October 2026**, human medicine. [Prüfungsablauf](https://famed-test.de/pruefungsablauf/) (Exam Procedure), [Aktueller Übungstest](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf) (Current Practice Test), [Anforderungen](https://famed-test.de/anforderungen/) (Requirements), [Bewertung](https://famed-test.de/pruefungsergebnis/) (Assessment). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

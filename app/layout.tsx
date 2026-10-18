@@ -1,3 +1,4 @@
+import {headers} from 'next/headers';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     default: "FAMED Test Prep - Pass Your Medical German Exam",
     template: "%s | FAMED Test Prep"
   },
-  description: "Complete preparation for the FAMED medical German language exam. Study guides, practice cases, and expert tips to pass on your first try.",
+  description: "Independent preparation for medical German communication. Study guides, practice cases and useful phrases.",
   keywords: ["FAMED", "Fachsprachenprüfung", "medical German", "FSP", "Approbation", "Germany", "medical exam"],
   authors: [{ name: "FAMED Test Prep" }],
   openGraph: {
@@ -52,11 +53,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = (await headers()).get('x-site-language') === 'ar' ? 'ar' : 'en';
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -76,14 +78,14 @@ export default function RootLayout({
         "@type": "WebSite",
         name: "FAMED Test Prep",
         url: siteUrl,
-        inLanguage: ["en", "de"],
+        inLanguage: ["en", "ar"],
         publisher: { "@id": `${siteUrl}/#organization` },
       },
     ],
   };
 
   return (
-    <html lang="en">
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
         <script
           type="application/ld+json"

@@ -71,7 +71,7 @@ export default function PreviewPage() {
             <article className="max-w-4xl mx-auto px-4 py-12 bg-white mt-8 rounded-lg shadow-lg">
                 <div
                     className="prose prose-lg max-w-none"
-                    dangerouslySetInnerHTML={{ __html: marked(preview?.content || '') }}
+                    dangerouslySetInnerHTML={{ __html: marked(preview?.content || '', {async:false}) }}
                 />
             </article>
 

@@ -1,88 +1,16 @@
-import { MetadataRoute } from 'next';
-import { getAllPosts } from '@/lib/posts';
-
-export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://famed-vorbereitung.com';
-    
-    // Filter to only genuine published posts (exclude drafts and thin placeholder posts)
-    const publishedPosts = getAllPosts().filter((post) => {
-        const isPublished = post.status === 'published';
-        const isPlaceholder = 
-            post.content.includes('quota was temporarily exceeded') ||
-            post.content.includes('placeholder draft');
-        return isPublished && !isPlaceholder;
-    });
-
-    const blogEntries: MetadataRoute.Sitemap = publishedPosts.map((post) => ({
-        url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: (() => {
-            try {
-                const date = new Date(post.updated || post.date);
-                return isNaN(date.getTime()) ? new Date('2026-09-08') : date;
-            } catch {
-                return new Date('2026-09-08');
-            }
-        })(),
-        changeFrequency: 'monthly',
-        priority: 0.8,
-    }));
-
-    const staticRoutes: MetadataRoute.Sitemap = [
-        {
-            url: baseUrl,
-            lastModified: new Date('2026-09-08'),
-            changeFrequency: 'weekly',
-            priority: 1.0,
-        },
-        {
-            url: `${baseUrl}/blog`,
-            lastModified: new Date('2026-09-08'),
-            changeFrequency: 'daily',
-            priority: 0.9,
-        },
-        {
-            url: `${baseUrl}/what-is-famed`,
-            lastModified: new Date('2026-09-08'),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${baseUrl}/lead-magnet`,
-            lastModified: new Date('2026-09-08'),
-            changeFrequency: 'monthly',
-            priority: 0.9,
-        },
-        {
-            url: `${baseUrl}/career`,
-            lastModified: new Date('2026-09-08'),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/book`,
-            lastModified: new Date('2026-09-08'),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/protokoll`,
-            lastModified: new Date('2026-09-08'),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/app`,
-            lastModified: new Date('2026-09-08'),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-        {
-            url: `${baseUrl}/resources/anamnese`,
-            lastModified: new Date('2026-09-08'),
-            changeFrequency: 'monthly',
-            priority: 0.7,
-        },
-    ];
-
-    return [...staticRoutes, ...blogEntries];
+import type {MetadataRoute} from 'next';
+import {getAllPosts} from '@/lib/posts';
+import {publicRoutes} from '@/lib/site-pages';
+import {siteUrl} from '@/lib/languages';
+export default function sitemap():MetadataRoute.Sitemap {
+ const routes=[...publicRoutes,'/blog',...getAllPosts().filter(p=>p.status==='published').map(p=>'/blog/'+p.slug)];
+ const arabic=new Set(getAllPosts('ar').filter(p=>p.status==='published').map(p=>'/blog/'+p.slug));
+ return routes.flatMap(route=>{
+  const hasArabic=!route.startsWith('/blog/')||arabic.has(route);
+  const en=siteUrl+(route==='/'?'':route);const ar=siteUrl+'/ar'+(route==='/'?'':route);
+  const post=route.startsWith('/blog/')?getAllPosts().find(p=>route==='/blog/'+p.slug):null;
+  const updated=post?.updated||'2026-10-19';
+  const alternates={languages:{en,...(hasArabic?{ar}:{}),'x-default':en}};
+  return [{url:en,lastModified:new Date(updated),changeFrequency:'weekly' as const,priority:route==='/'?1:0.8,alternates},...(hasArabic?[{url:ar,lastModified:new Date(updated),changeFrequency:'weekly' as const,priority:route==='/'?1:0.8,alternates}]:[])];
+ });
 }

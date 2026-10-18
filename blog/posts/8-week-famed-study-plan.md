@@ -13,6 +13,8 @@ This is a suggested study schedule, not an official timetable or a passing guara
 
 The current human-medicine format has **three stations and five tasks**: history, informed consent, two patient presentations and written anamnesis from a video. The oral blocks are each 23 minutes including reading; writing is 22 minutes including video. The practice test sets an 11-minute maximum for each oral situation.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## Weeks 1–2: Build a baseline across all tasks
 
 Record a short fictional history exercise. Explain a supplied procedure in everyday language. Present a short case note and write an anamnesis paragraph from a video or transcript. Identify one weakness in each skill.

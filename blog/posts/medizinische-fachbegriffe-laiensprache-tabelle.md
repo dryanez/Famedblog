@@ -13,6 +13,8 @@ These are language-practice examples. Select questions to fit the actual convers
 
 One of the fastest ways to lose points in the FaMED exam is using Latin terminology when speaking to patient actors. In German medical culture, patient comprehension is a core component of medical ethics and legal compliance.
 
+Want to practise medical vocabulary in the context of a patient conversation? [Get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book) and work with its cases and useful phrases alongside this glossary.
+
 If you tell a patient: *"Wir müssen eine Cholezystektomie wegen einer Cholezystolithiasis durchführen"*, the patient actor will look confused, and the examiners will mark down your score. You must say: *"Wir müssen die Gallenblase operativ entfernen, weil sich dort Gallensteine gebildet haben."*
 
 Below is the practice glossary dividing clinical German into **Fachbegriff (Medical Term)** and **Laiensprache (Lay Translation)** across all major organ systems.

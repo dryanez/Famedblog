@@ -13,6 +13,8 @@ These are language-practice examples. Select questions to fit the actual convers
 
 ## Introduction
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 The Schmerzanamnese (pain history) is a fundamental component of medical history-taking and is indispensable for correctly diagnosing and treating patients. It allows the doctor to understand the type, cause, and intensity of pain and thus initiate targeted therapy. In this comprehensive guide, we will cover the essential aspects of pain history-taking, particularly in preparation for the FaMED exam. This article serves as a practical guide to improve your skills in Anamneseerhebung and give you confidence in exam situations.
 
 

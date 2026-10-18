@@ -13,6 +13,8 @@ An unsuccessful language-exam result can be discouraging. Start with the result 
 
 ## 1. Use the provider's feedback route
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 FaMed's current results page offers a free, binding **15-minute feedback video appointment** after an unsuccessful attempt. It describes a further appointment as possible no earlier than six months after the preceding feedback session. Check the booking details directly with the provider.
 
 If you have a formal decision with review or appeal instructions, read those instructions promptly. This blog does not establish an appeal deadline or guarantee a particular legal entitlement to records.

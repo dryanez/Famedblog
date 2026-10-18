@@ -13,6 +13,8 @@ The term **B-symptoms** is used particularly in lymphoma contexts for unexplaine
 
 This article focuses on German questions and documentation. It is not a fixed investigation plan.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## Ask about each symptom separately
 
 For weight change:

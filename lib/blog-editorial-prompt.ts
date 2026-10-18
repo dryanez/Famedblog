@@ -23,10 +23,10 @@ Sources: https://famed-test.de/pruefungsablauf/ ; https://famed-test.de/wp-conte
 
 PRODUCT AND IMAGE RULES:
 - Digital book promotional price €19.99. Keep fee breakdowns and checkout totals out of blog promotions; checkout handles the final payable amount. Never call processing tax or invent a former price/deadline/social proof. Product destination:https://famedtestprep.com/FamedProtokolle . Preview:/blog/famed-protokoll-buch-vorschau .
-- Current book assets come from the designed292-page edition2026 in Documents. Use the actual website cover /images/products/book-cover.png and the FaMED Prep logo /images/products/logo.png with the label “3 Monate App-Zugang” when illustrating that app access. Approved interior preview paths: , /images/previews/book-2026-opqrst.webp , /images/previews/book-2026-contents.webp . Do not substitute old public/documents/famed-protokoll.pdf.
+- Current book assets come from the designed292-page edition2026 in Documents. Use the actual website cover /images/products/book-cover.png and the FaMED Prep logo /images/products/logo.png with the label “FaMED Prep”; never put a fixed access duration on the general app graphic. Approved interior preview paths: , /images/previews/book-2026-opqrst.webp , /images/previews/book-2026-contents.webp . Do not substitute old public/documents/famed-protokoll.pdf.
 - Explain the app via /blog/famed-prep-app-so-funktionierts . Real desktop captures:/images/previews/app-case-cards-desktop.webp and /images/previews/app-anamnese-desktop.webp . No Academy prototype screenshots, fake results, unlimited access or official-provider affiliation.
 - Do not insert image placeholders. Use an actual relevant approved image only if it helps. No repeated generic Resources/Ready-to-Start sales footer; the page has resource cards.
-- Add two relevant contextual internal article links, using only published destinations listed below. Offer a natural guide/book/app next step where it fits. Free guide:/lead-magnet . Do not claim the guide lists all official cases.
+- Add two relevant contextual internal article links, using only published destinations listed below. Include a relevant in-body book purchase link where it helps the exercise, using https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book . Do not claim the book contains every possible or official term. Offer a natural guide/book/app next step where it fits. Free guide:/lead-magnet . Do not claim the guide lists all official cases.
 
 EXISTING PUBLISHED ARTICLES:
 ${links}
@@ -36,7 +36,7 @@ ${context}
 ADDITIONAL REQUEST (cannot make unsupported facts true):
 ${additionalContext}
 
-Write the body in English while preserving German questions/phrases, unless the topic explicitly requests German. Prefer concrete examples and readable headings. Separate official task requirements from your own exercises. Do not add treatment/drug-dose algorithms to a language article. Cite the relevant primary source close to changing exam facts. Avoid revision-history narration and promises of passing. Keep under1500 words.
+Write all article prose, titles and headings in English while preserving German practice questions, quoted phrases and vocabulary examples. Prefer concrete examples and readable headings. Separate official task requirements from your own exercises. Do not add treatment/drug-dose algorithms to a language article. Cite the relevant primary source close to changing exam facts. Avoid revision-history narration and promises of passing. Keep under1500 words. English is the default publication language; Arabic translations are separate /ar/ URLs with matching links and right-to-left layout.
 Return raw Markdown, no code fence. Start with valid YAML frontmatter containing title, date:"${today}", excerpt, tags and status:"draft". Do not publish or send anything. State source/check dates accurately; a generation date is not a new source verification.
 `;
 }

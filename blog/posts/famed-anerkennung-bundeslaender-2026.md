@@ -13,6 +13,8 @@ Before booking FaMed, identify the authority responsible for your **human-medici
 
 The provider recognition overview remains labelled **November 2025**. Reading it in October 2026 does not turn it into a new 2026 policy. We distinguish provider statements from authority evidence below.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## What the primary sources support
 
 | Destination | What to check |

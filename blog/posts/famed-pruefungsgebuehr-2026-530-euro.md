@@ -1,33 +1,35 @@
 ---
-title: "FaMED-Prüfungsgebühr 2026: Aktuell 530 Euro"
+title: "FaMED Exam Fee 2026: Currently 530 Euros"
 date: "2026-10-18"
-updated: "2026-10-18"
+updated: "2026-10-19"
 readTime: "3 min"
-category: "Prüfungsinformationen"
+category: "Exam Information"
 status: "published"
 tags: ["FaMED", "Kosten", "Prüfungsgebühr", "Anmeldung"]
-excerpt: "Die offizielle FaMed-FAQ nennt derzeit 530 Euro. Hier findest du die Quelle und eine kurze Checkliste vor der Buchung."
+excerpt: "The official FaMed FAQ currently states 530 Euros. Here you will find the source and a short checklist before booking."
 ---
 
-**Die offizielle FaMed-FAQ nennt derzeit eine Prüfungsgebühr von 530 Euro.** Geprüft am 18. Oktober 2026. Maßgeblich sind der Preis und die Bedingungen bei deiner konkreten Buchung.
+**The official FaMed FAQ currently states an exam fee of 530 Euros.** Checked on October 18, 2026. The price and conditions at the time of your specific booking are decisive.
 
-## Welche Gebühr ist gemeint?
+## Which fee is meant?
 
-Die **530 Euro** betreffen die Prüfung beim offiziellen Anbieter. Sie sind keine Gebühr für die FaMED Prep App oder unser digitales Buch. Ein Vorbereitungskauf bucht keinen Prüfungstermin.
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
-Ältere Angaben von 490 Euro solltest du für deine Planung durch den aktuell veröffentlichten Betrag ersetzen. Ein genaues Datum der Preisänderung ist hier nicht belegt.
+The **530 Euros** concern the exam with the official provider. They are not a fee for the FaMED Prep App or our digital book. A preparation purchase does not book an exam appointment.
 
-## Vor der Buchung kurz prüfen
+You should replace older information of 490 Euros with the currently published amount for your planning. A precise date of the price change is not documented here.
 
-- Wird der Nachweis für deinen Ausbildungsabschluss und Antrag anerkannt? [Unsere Übersicht verlinkt die Behördeninformationen](/blog/famed-anerkennung-bundeslaender-2026).
-- Ist dein gewünschter Termin tatsächlich verfügbar? Nutze die [offizielle Buchungsseite](https://famed-test.de/buchungsseite/).
-- Stimmen Prüfungsort, Unterlagen und Zahlungsbetrag? Die FAQ nennt Mainz, Kassel und Nürnberg; prüfe deine Bestätigung.
-- Welche Storno- und Umbuchungsbedingungen gelten für deinen Termin? Die FAQ enthält widersprüchliche Bearbeitungsgebühren; kläre offene Punkte vor dem Bezahlen direkt mit dem Anbieter.
+## Briefly check before booking
 
-Weitere Hinweise zu Budget und Ergebnissen findest du im [Kosten- und Buchungsleitfaden](/blog/famed-kosten-termine-statistik-2026).
+- Is the proof of your qualification and application recognized? [Our overview links to the authority information](/blog/famed-anerkennung-bundeslaender-2026).
+- Is your desired date actually available? Use the [official booking page](https://famed-test.de/buchungsseite/).
+- Are the exam location, documents, and payment amount correct? The FAQ mentions Mainz, Kassel, and Nuremberg; check your confirmation.
+- What cancellation and rebooking conditions apply to your appointment? The FAQ contains contradictory processing fees; clarify any open points directly with the provider before paying.
 
-## Deine Vorbereitung planen
+Further information on budget and results can be found in the [Cost and Booking Guide](/blog/famed-kosten-termine-statistik-2026).
 
-Wähle einen realistischen Übungsplan und arbeite mit dem aktuellen Aufgabenformat. [Hier findest du die 30-Minuten-Lernroutine](/blog/famed-vorbereitung-30-minuten-lernroutine), [eine Buchvorschau](/blog/famed-protokoll-buch-vorschau) und [die App-Anleitung](/blog/famed-prep-app-so-funktionierts).
+## Plan your preparation
 
-Quelle: [Offizielle FaMed-FAQ](https://famed-test.de/faq/), geprüft am 18.10.2026. FaMED Prep ist ein unabhängiger Anbieter von Vorbereitungsmaterialien.
+Choose a realistic study plan and work with the current task format. [Here you will find the 30-minute study routine](/blog/famed-vorbereitung-30-minuten-lernroutine), [a book preview](/blog/famed-protokoll-buch-vorschau), and [the app instructions](/blog/famed-prep-app-so-funktionierts).
+
+Source: [Official FaMed FAQ](https://famed-test.de/faq/), checked on 18.10.2026. FaMED Prep is an independent provider of preparation materials.

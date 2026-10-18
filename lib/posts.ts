@@ -17,7 +17,8 @@ export interface BlogPost {
     status?: string;
 }
 
-export function getAllPosts(): BlogPost[] {
+export function getAllPosts(locale: 'en' | 'ar' = 'en'): BlogPost[] {
+    const postsDirectory = path.join(process.cwd(), locale === 'ar' ? 'blog/ar' : 'blog/posts');
     // Create dir if not exists
     if (!fs.existsSync(postsDirectory)) {
         return [];
@@ -60,8 +61,10 @@ export function getAllPosts(): BlogPost[] {
     });
 }
 
-export function getPostBySlug(slug: string): BlogPost | null {
+export function getPostBySlug(slug: string, locale: 'en' | 'ar' = 'en'): BlogPost | null {
+    const postsDirectory = path.join(process.cwd(), locale === 'ar' ? 'blog/ar' : 'blog/posts');
     try {
+        if (!/^[a-z0-9-]+$/.test(slug)) return null;
         if (!slug || slug.toLowerCase() === 'readme') {
             return null;
         }

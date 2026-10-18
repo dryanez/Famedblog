@@ -13,6 +13,8 @@ Abdominal complaints are useful material for medical-language practice. In FaMed
 
 ## Clarify the complaint in everyday German
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 Begin with an open question, then follow the reported symptom:
 
 - „Wo genau haben Sie Schmerzen?“

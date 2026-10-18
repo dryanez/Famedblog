@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 interface BlogCardProps {
+    arabic?: boolean;
     title: string;
     excerpt: string;
     slug: string;
@@ -9,9 +10,9 @@ interface BlogCardProps {
     category: string;
 }
 
-export default function BlogCard({ title, excerpt, slug, date, readTime, category }: BlogCardProps) {
+export default function BlogCard({ title, excerpt, slug, date, readTime, category, arabic=false }: BlogCardProps) {
     return (
-        <Link href={`/blog/${slug}`}>
+        <Link href={`${arabic?'/ar':''}/blog/${slug}`}>
             <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full border border-gray-100">
                 <div className="p-6">
                     {/* Category Badge */}
@@ -34,14 +35,14 @@ export default function BlogCard({ title, excerpt, slug, date, readTime, categor
                     {/* Meta */}
                     <div className="flex items-center justify-between text-sm text-gray-500">
                         <span>{date}</span>
-                        <span>{readTime} read</span>
+                        <span>{arabic?readTime.replace('min','دقائق'):readTime+' read'}</span>
                     </div>
                 </div>
 
                 {/* Read More */}
                 <div className="px-6 pb-6">
                     <div className="text-blue-600 font-semibold flex items-center group">
-                        Read More
+                        {arabic?'اقرأ المزيد':'Read more'}
                         <svg
                             className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
                             fill="none"

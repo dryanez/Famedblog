@@ -13,6 +13,8 @@ FaMed is a digital language examination taken **at a test centre**. It is not a 
 
 ## Understand the three stations
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 | Station | Tasks | Published block duration |
 |---|---|---|
 | Doctor–patient communication | History and informed consent | 23 minutes, including reading |

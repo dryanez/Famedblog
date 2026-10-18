@@ -13,6 +13,8 @@ The doctor–doctor station contains **two patient presentations**. Its publishe
 
 You communicate relevant supplied information in professional German and answer follow-up questions. This is a language task, not a requirement to recall a treatment algorithm from memory.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## SBAR is an organising tool
 
 SBAR can give a practice presentation a clear route. It is not the official mandatory answer template or a numerical scoring rubric.

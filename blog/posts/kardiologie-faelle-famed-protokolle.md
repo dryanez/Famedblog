@@ -13,6 +13,8 @@ Cardiovascular examples can help you practise medical German. They are not evide
 
 FaMed assesses language performance, not medical knowledge separately. In the presentation task, report the information supplied rather than inventing a diagnosis, drug dose or intervention.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## Ask about a reported symptom
 
 For a fictional history exercise involving chest discomfort, practise clear questions:

@@ -16,6 +16,8 @@ The Anamnesegespräch is one of the two situations in the doctor–patient stati
 
 ## Read the actual assignment
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 Identify your role, the person you are speaking with and the requested task. Use the supplied details; do not assume the display, case or role is always the same. The history case need not continue into the consent or writing task.
 
 Introduce yourself naturally and check how to address the patient. For example:

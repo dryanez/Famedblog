@@ -1,4 +1,4 @@
-export function headingId(text: string): string { return text.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-'); }
+export function headingId(text: string): string { return text.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu,'').trim().replace(/\s+/g,'-'); }
 export function nodeText(node: any): string { return node?.type==='text' ? String(node.value||'') : Array.isArray(node?.children) ? node.children.map(nodeText).join('') : ''; }
 export const relatedSlugs: Record<string,string[]> = {
   "8-week-famed-study-plan": [

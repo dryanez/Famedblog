@@ -14,6 +14,8 @@ FaMED preparation starts with understanding the task you are preparing for: prof
 
 ## Start with the official format
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 The exam provider's published practice test includes patient-history and informed-consent conversations, doctor-to-doctor patient presentations, and written documentation. Consult the [official FaMed practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf) and the provider's current information for the applicable instructions. This preparation site is independent of the exam provider.
 
 A study schedule is not an examination rulebook. Check the current format, eligibility, timing and registration information with the provider rather than relying on an older blog post.

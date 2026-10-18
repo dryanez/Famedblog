@@ -13,6 +13,8 @@ FaMed is a **Fachsprachenprüfung Medizin**: a medical-language examination. The
 
 Start with the route your licensing authority accepts. Do not choose from a promise that one provider is easier, faster or guaranteed to pass you.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## The current human-medicine FaMed format
 
 There are three stations: doctor–patient communication with history and consent; doctor–doctor communication with two patient presentations; and the written anamnesis section from a video. The oral blocks are each **23 minutes including reading**; writing is **22 minutes including video**. Individual oral situations in the current practice test have an **11-minute maximum**.

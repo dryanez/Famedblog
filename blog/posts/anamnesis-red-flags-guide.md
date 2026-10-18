@@ -13,6 +13,8 @@ When a person describes a concerning symptom, clear language matters. In this ar
 
 For FaMed, the relevant skill is faithful professional communication. Medical knowledge is not separately assessed. There is no verified universal „red flag missed = automatic fail“ rule in this review.
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 ## Turn a vague phrase into an answerable question
 
 A person may say „Ich bekomme schlecht Luft“, „Mir wird schwarz vor Augen“ or „Das Bein ist pelzig“. Do not replace these immediately with a diagnosis. Ask about what the person means:

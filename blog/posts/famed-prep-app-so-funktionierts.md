@@ -1,60 +1,62 @@
 ---
-title: "So funktioniert die FaMED Prep App: vom Fall zur Übung"
+title: "How the FaMED Prep App Works: From Case to Practice"
 date: "2026-10-18"
-updated: "2026-10-18"
+updated: "2026-10-19"
 readTime: "6 min"
-category: "App-Anleitung"
+category: "App Guide"
 status: "published"
 tags: ["FaMED", "App", "Anamnese", "Arzt-Arzt", "Arztbrief"]
-excerpt: "Echte App-Bildschirme und eine konkrete Anleitung: Fälle auswählen, Gespräche und schriftliche Aufgaben üben und verfügbare Rückmeldungen nutzen."
+excerpt: "Real app screens and concrete instructions: select cases, practice conversations and written tasks, and use available feedback."
 ---
 
-Du hast vom FaMED-Fallbuch gelesen und möchtest wissen, was die App zusätzlich bietet? Hier zeigen wir die tatsächlichen Bildschirme und den Ablauf. Die Aufnahmen zeigen die aktuelle öffentliche App mit fiktiven Übungsfällen.
+You've read about the FaMED casebook and want to know what the app additionally offers? Here we show the actual screens and the process. The recordings show the current public app with fictional practice cases.
 
-## 1. Eine Aufgabe für dein Lernziel auswählen
+## 1. Select a task for your learning goal
 
-In FaMED Prep findest du getrennte Bereiche für Anamnese, Aufklärung, Arzt-Arzt-Kommunikation und Arzt-Brief. Beginne mit einer Aufgabe, die du gezielt üben möchtest, statt jeden Bereich gleichzeitig zu bearbeiten.
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
-Die Arzt-Arzt-Fallauswahl gruppiert Fälle nach medizinischen Systemen. Öffne einen verfügbaren Fall und lies die Aufgabe, bevor du mit deiner Antwort beginnst.
+In FaMED Prep, you will find separate sections for anamnesis, informed consent, doctor-to-doctor communication, and medical report. Start with a task you specifically want to practice, instead of working on every section simultaneously.
 
-![Echte FaMED Prep Fallauswahl in der aktuellen App](/images/previews/app-case-cards-desktop.webp)
+The doctor-to-doctor case selection groups cases by medical systems. Open an available case and read the task before you begin your answer.
 
-*Aktuelle Fallauswahl. Welche Aufgaben freigeschaltet sind, hängt von deinem Zugang ab.*
+![Real FaMED Prep case selection in the current app](/images/previews/app-case-cards-desktop.webp)
 
-[Die Fallauswahl in der App ansehen](https://famedtestprep.com/MedicalCases?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_intro). Wenn du deine Übergabe zuerst strukturieren möchtest, hilft dir unser [Artikel zum SBAR-Schema](/blog/sbar-schema-arzt-arzt-gespraech).
+*Current case selection. Which tasks are unlocked depends on your access.*
 
-## 2. Anamnese und Aufklärung praktisch vorbereiten
+[View case selection in the app](https://famedtestprep.com/MedicalCases?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_intro). If you want to structure your handover first, our [article on the SBAR scheme](/blog/sbar-schema-arzt-arzt-gespraech) will help you.
 
-Im Anamnese-Bereich wählst du ein verfügbares Patientenbeispiel aus. Lies die Situation und bereite die Fragen vor, die du im Gespräch üben möchtest. Die Sprachübungen können die Mikrofonfreigabe deines Browsers benötigen; die Hinweise stehen im jeweiligen Übungsablauf.
+## 2. Practically prepare anamnesis and informed consent
 
-![Echte FaMED Prep Anamnese-Auswahl in der aktuellen App](/images/previews/app-anamnese-desktop.webp)
+In the anamnesis section, you select an available patient example. Read the situation and prepare the questions you want to practice in the conversation. The voice exercises may require your browser's microphone sharing; instructions are provided in the respective exercise flow.
 
-*Auswahl einer Gesprächsübung. Die Abbildung zeigt den Einstieg, keine abgeschlossene Prüfung.*
+![Real FaMED Prep anamnesis selection in the current app](/images/previews/app-anamnese-desktop.webp)
 
-Sprich verständlich und passend zur Aufgabe. Schau dir anschließend die im jeweiligen Modus verfügbare Rückmeldung beziehungsweise das Transkript an und wähle eine Stelle für den nächsten Versuch. KI-Rückmeldungen unterstützen das Üben; sie sind keine offizielle Prüfungsbewertung.
+*Selection of a conversation exercise. The image shows the start, not a completed exam.*
 
-Zum sprachlichen Einstieg kannst du vorher einen [echten Auszug aus dem digitalen Fallbuch](/blog/famed-protokoll-buch-vorschau) ansehen. Für Einwilligungsgespräche gibt es außerdem den [Aufklärungs-Leitfaden](/blog/famed-aufklaerungsgespraech-guide).
+Speak clearly and appropriately for the task. Then review the feedback or transcript available in the respective mode and choose a spot for the next attempt. AI feedback supports practice; it is not an official exam evaluation.
 
-## 3. Schriftliche Aufgaben bearbeiten
+For a linguistic introduction, you can first view a [real excerpt from the digital casebook](/blog/famed-protokoll-buch-vorschau). For consent discussions, there is also the [informed consent guide](/blog/famed-aufklaerungsgespraech-guide).
 
-Im Arzt-Brief-Bereich arbeitest du an medizinischer Dokumentation. Lies die konkrete Aufgabenstellung und die verfügbaren Informationen, bevor du schreibst. Nutze die angezeigte Zeitvorgabe als Teil der jeweiligen Übung; die App-Oberfläche ist nicht die verbindliche Prüfungsordnung des Prüfungsanbieters.
+## 3. Work on written tasks
 
-Wenn du zunächst eine Schreibroutine brauchst, lies unseren [Leitfaden zum Arztbrief](/blog/famed-arztbrief-soap-schema). Übe dann einen überschaubaren Abschnitt und prüfe Aufbau und Verständlichkeit.
+In the medical report section, you work on medical documentation. Read the specific task and available information before you write. Use the displayed time limit as part of the respective exercise; the app interface is not the binding examination regulations of the examination provider.
 
-## 4. Übung und Prüfungssimulation unterscheiden
+If you first need a writing routine, read our [guide to the medical report](/blog/famed-arztbrief-soap-schema). Then practice a manageable section and check structure and comprehensibility.
 
-Die App trennt Übungsangebote und Prüfungssimulationen. Verfügbare Funktionen und monatliche Simulationslimits hängen vom gewählten Plan ab. Ein zusätzliches Paket von zehn Prüfungssimulationen kostet für aktive bezahlte Mitglieder €29.99; es ist kein neuer Monatszugang.
+## 4. Distinguish between practice and exam simulation
 
-Stelle deine eigene Vorbereitung nach deinem Sprachstand und den aktuellen Angaben deines Prüfungsanbieters zusammen. Unser [praktischer Lernplan](/blog/8-week-famed-study-plan) und die [30-Minuten-Routine](/blog/famed-vorbereitung-30-minuten-lernroutine) helfen beim Aufteilen der Arbeit.
+The app separates practice offerings and exam simulations. Available features and monthly simulation limits depend on the chosen plan. An additional package of ten exam simulations costs €29.99 for active paid members; it is not a new monthly access.
 
-## 5. Welcher Zugang passt zu dir?
+Assemble your own preparation according to your language level and the current information from your examination provider. Our [practical study plan](/blog/8-week-famed-study-plan) and the [30-minute routine](/blog/famed-vorbereitung-30-minuten-lernroutine) help with dividing the work.
 
-Der einmonatige App-Zugang kostet derzeit **€25.99 für 30 Tage**. Weitere Laufzeiten stehen auf der [Planübersicht](https://famedtestprep.com/Upgrade?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_plans). Prüfe dort die enthaltenen Leistungen und Limits; der Checkout zeigt den zu zahlenden Betrag.
+## 5. Which access suits you?
 
-Digitales Buch: **€19.99**. [Hier kannst du zuerst ins Buch schauen](/blog/famed-protokoll-buch-vorschau).
+One-month app access currently costs **€25.99 for 30 days**. Further durations are available on the [plan overview](https://famedtestprep.com/Upgrade?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_plans). Check the included services and limits there; the checkout shows the amount to be paid.
 
-Wenn du beide Produkte kennst und zusammen nutzen möchtest, gibt es optional das digitale Buch mit 90 Tagen App-Zugang als **€59.99-Paket**. [Paketdetails ansehen](https://famedtestprep.com/PayPalCheckout?plan=bundle_3m&utm_source=blog&utm_medium=walkthrough&utm_campaign=optional_bundle).
+Digital book: **€19.99**. [You can look into the book first here](/blog/famed-protokoll-buch-vorschau).
 
-## Dein nächster Schritt
+If you know both products and want to use them together, there is optionally the digital book with 90 days of app access as a **€59.99 package**. [View package details](https://famedtestprep.com/PayPalCheckout?plan=bundle_3m&utm_source=blog&utm_medium=walkthrough&utm_campaign=optional_bundle).
 
-[Öffne die FaMED Prep App](https://famedtestprep.com/MedicalCases?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_intro), schau dir die verfügbaren Aufgaben an und wähle ein konkretes Lernziel. Wenn du zuerst einen Überblick über deine Lernwochen brauchst, [findest du den kostenlosen Guide hier](/lead-magnet).
+## Your next step
+
+[Open the FaMED Prep App](https://famedtestprep.com/MedicalCases?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_intro), look at the available tasks, and choose a specific learning goal. If you first need an overview of your study weeks, [you can find the free guide here](/lead-magnet).

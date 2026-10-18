@@ -13,6 +13,8 @@ These are language-practice examples. Select questions to fit the actual convers
 
 ## Introduction
 
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+
 The oncological Anamnese is a central component of medical diagnostics and treatment planning for cancer patients. A structured and comprehensive patient interview makes it possible to gather important information about the patient's medical history, risk factors, symptoms, and general health status. This information is essential for establishing a suspected diagnosis, planning further diagnostic steps, and developing an individualized therapy. This blog post provides you with a guide for systematically conducting an oncological Anamnese in the context of medical exams, particularly with regard to the FaMED exam.
 
 
