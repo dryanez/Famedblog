@@ -1,8 +1,4 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-
-const postsDirectory = path.join(process.cwd(), 'blog/posts');
+import manifest from './generated-content.json';
 
 export interface BlogPost {
     slug: string;
@@ -17,79 +13,5 @@ export interface BlogPost {
     status?: string;
 }
 
-export function getAllPosts(locale: 'en' | 'ar' = 'en'): BlogPost[] {
-    const postsDirectory = path.join(process.cwd(), locale === 'ar' ? 'blog/ar' : 'blog/posts');
-    // Create dir if not exists
-    if (!fs.existsSync(postsDirectory)) {
-        return [];
-    }
-
-    const fileNames = fs.readdirSync(postsDirectory);
-    const allPostsData = fileNames
-        .filter(fileName => fileName.endsWith('.md') && !fileName.toLowerCase().startsWith('readme'))
-        .map(fileName => {
-            const slug = fileName.replace(/\.md$/, '');
-            const fullPath = path.join(postsDirectory, fileName);
-            const fileContents = fs.readFileSync(fullPath, 'utf8');
-            const matterResult = matter(fileContents);
-
-            const content = matterResult.content;
-            // Generate excerpt if not in frontmatter
-            const excerpt = matterResult.data.excerpt || content.slice(0, 150).replace(/[#*`_]/g, '') + '...';
-
-            return {
-                slug,
-                title: matterResult.data.title || 'Untitled',
-                date: matterResult.data.date || new Date().toISOString().split('T')[0],
-                readTime: matterResult.data.readTime || '5 min',
-                category: matterResult.data.category || 'General',
-                content: content,
-                excerpt: excerpt,
-                tags: matterResult.data.tags || [],
-                status: matterResult.data.status || 'draft',
-                ...matterResult.data,
-            } as BlogPost;
-        });
-
-    // Sort posts by date
-    return allPostsData.sort((a, b) => {
-        if (a.date < b.date) {
-            return 1;
-        } else {
-            return -1;
-        }
-    });
-}
-
-export function getPostBySlug(slug: string, locale: 'en' | 'ar' = 'en'): BlogPost | null {
-    const postsDirectory = path.join(process.cwd(), locale === 'ar' ? 'blog/ar' : 'blog/posts');
-    try {
-        if (!/^[a-z0-9-]+$/.test(slug)) return null;
-        if (!slug || slug.toLowerCase() === 'readme') {
-            return null;
-        }
-
-        const fullPath = path.join(postsDirectory, `${slug}.md`);
-
-        if (!fs.existsSync(fullPath)) {
-            return null;
-        }
-
-        const fileContents = fs.readFileSync(fullPath, 'utf8');
-        const matterResult = matter(fileContents);
-
-        return {
-            slug,
-            title: matterResult.data.title || slug,
-            date: matterResult.data.date || new Date().toISOString().split('T')[0],
-            readTime: matterResult.data.readTime || '5 min',
-            category: matterResult.data.category || 'General',
-            content: matterResult.content,
-            tags: matterResult.data.tags || [],
-            status: matterResult.data.status || 'draft',
-            ...matterResult.data,
-        } as BlogPost;
-    } catch (error) {
-        return null;
-    }
-}
+export function getAllPosts(locale:'en'|'ar'='en'):BlogPost[]{return manifest.posts[locale].map(p=>({...p})) as BlogPost[];}
+export function getPostBySlug(slug:string,locale:'en'|'ar'='en'):BlogPost|null{if(!/^[a-z0-9-]+$/.test(slug))return null;return getAllPosts(locale).find(p=>p.slug===slug)||null;}
