@@ -1,3 +1,4 @@
+import {articleDestination} from '@/lib/article-destination';
 import AppWalkthrough from './AppWalkthrough';
 import { languageAlternates, type Locale } from '@/lib/languages';
 import { notFound } from 'next/navigation';
@@ -189,7 +190,7 @@ export default async function BlogArticle({ slug, locale = 'en' }: { slug: strin
                 h2: ({ node, ...props }) => <h2 id={headingId(nodeText(node))} className="scroll-mt-24 text-2xl font-bold mt-8 mb-4" {...props} />,
                 h3: ({ node, ...props }) => <h3 className="text-xl font-bold mt-6 mb-3" {...props} />,
                 p: ({ node, ...props }) => <p className="mb-4 text-gray-700 leading-relaxed" {...props} />,
-                a: ({ node, ...props }) => <a className="font-semibold text-blue-700 underline underline-offset-2 hover:text-blue-900" {...props} />,
+                a: ({ node, ...props }) => <a className="font-semibold text-blue-700 underline underline-offset-2 hover:text-blue-900" {...props} href={articleDestination(props.href,slug,locale)} />,
                 img: ({ node, alt, ...props }) => {
                   const src = typeof props.src === 'string' ? props.src : '';
                   const productCover = src === '/images/products/book-cover.png';
