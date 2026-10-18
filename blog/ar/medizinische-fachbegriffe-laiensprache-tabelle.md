@@ -11,11 +11,11 @@ updated: "2026-10-19"
 
 هذه أمثلة لممارسة اللغة. اختر الأسئلة لتناسب المحادثة والمهمة الفعلية؛ هذه ليست قائمة تحقق إلزامية رسمية أو أداة لاستبعاد التشخيص. لا يتم تقييم المعرفة الطبية بشكل منفصل في FaMed، ويمكن أن تختلف الحالات بين المهام.
 
-إحدى أسرع الطرق لخسارة النقاط في امتحان FaMED هي استخدام المصطلحات اللاتينية عند التحدث إلى ممثلي المرضى. في الثقافة الطبية الألمانية، يعد فهم المريض مكونًا أساسيًا من أخلاقيات المهنة والامتثال القانوني.
+قد لا يفهم المريض المصطلح التقني حتى لو كان مألوفاً لك طبياً. تدرّب على شرحه بالألمانية اليومية، ثم تحقّق من فهم المريض للشرح.
 
 هل ترغب في ممارسة المفردات الطبية في سياق محادثة مع مريض؟ [احصل على كتاب FaMED Protokoll الرقمي مقابل 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book) واعمل مع حالاته وعباراته المفيدة جنبًا إلى جنب مع هذا المسرد.
 
-إذا قلت لمريض: *"Wir müssen eine Cholezystektomie wegen einer Cholezystolithiasis durchführen"*، فسيبدو الممثل المريض مرتبكًا، وسيقوم الممتحنون بتخفيض درجتك. يجب أن تقول: *"Wir müssen die Gallenblase operativ entfernen, weil sich dort Gallensteine gebildet haben."*
+قارن مثلاً عبارة *"Wir müssen eine Cholezystektomie wegen einer Cholezystolithiasis durchführen"* بشرح أبسط: *"Wir müssen die Gallenblase operativ entfernen, weil sich dort Gallensteine gebildet haben."*
 
 أدناه تجد المسرد التدريبي الذي يقسم الألمانية السريرية إلى **Fachbegriff (مصطلح طبي)** و **Laiensprache (ترجمة بلغة مبسطة)** عبر جميع أنظمة الأعضاء الرئيسية.
 

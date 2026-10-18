@@ -4,7 +4,7 @@ export default function AppWalkthrough({arabic=false}:{arabic?:boolean}){
  return <section aria-label={arabic?'شاهد طريقة التدريب':'Watch a real practice session'} className="my-8 rounded-2xl border border-slate-200 bg-slate-950 p-3 sm:p-5">
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
   <h2 className="mb-3 text-xl font-bold text-white">{arabic?'شاهد: من الحالة إلى الملاحظات في ٤٨ ثانية':'Watch: from case to feedback in 48 seconds'}</h2>
-  <video controls playsInline preload="none" width={1280} height={848} poster="/videos/famed-app-poster.jpg" className="w-full rounded-xl" aria-label={arabic?'تسجيل فعلي للتطبيق مع شرح بالعربية':'Real app recording with English explanations'}>
+  <video controls playsInline preload="none" width={1280} height={848} poster="/videos/famed-app-poster.jpg" className="h-auto w-full rounded-xl" aria-label={arabic?'تسجيل فعلي للتطبيق مع شرح بالعربية':'Real app recording with English explanations'}>
    <source src={`/videos/famed-app-walkthrough-${locale}.mp4`} type="video/mp4"/>
    <track kind="captions" srcLang="en" label="English" src="/videos/famed-app-en.vtt"/>
    <track kind="captions" srcLang="ar" label="العربية" src="/videos/famed-app-ar.vtt"/>
