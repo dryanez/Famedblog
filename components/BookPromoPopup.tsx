@@ -3,11 +3,14 @@ import Image from 'next/image';
 import {usePathname} from 'next/navigation';
 import { useEffect, useState } from 'react';
 export default function BookPromoPopup() {
- const arabic = usePathname().startsWith('/ar');
+ const pathname = usePathname();
+ const arabic = pathname.startsWith('/ar');
+ const route = pathname.replace(/^\/ar(?=\/|$)/, '');
+ const appPage = route === '/app' || route === '/blog/famed-prep-app-so-funktionierts';
  const [open,setOpen]=useState(false);
- useEffect(()=>{try{if(localStorage.getItem('famed_book_offer_seen_v2'))return;}catch{return;}const timer=setTimeout(()=>setOpen(true),15000);return()=>clearTimeout(timer);},[]);
+ useEffect(()=>{if(appPage)return;try{if(localStorage.getItem('famed_book_offer_seen_v2'))return;}catch{return;}const timer=setTimeout(()=>setOpen(true),15000);return()=>clearTimeout(timer);},[appPage]);
  const close=()=>{setOpen(false);try{localStorage.setItem('famed_book_offer_seen_v2','true');}catch{/* optional preference */}};
- if(!open)return null;
+ if(appPage||!open)return null;
  return <aside aria-label="FaMED digital book offer" className="fixed bottom-4 right-4 z-50 w-[calc(100vw-2rem)] max-w-sm overflow-hidden rounded-2xl border border-blue-200 bg-white shadow-2xl">
   <button aria-label={arabic?'إغلاق عرض الكتاب':'Close book offer'} onClick={close} className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-xl text-slate-600 shadow">×</button>
   <Image unoptimized loading="eager" src="/images/products/book-cover.png" alt="FaMED Protokoll 2026 book cover" width={778} height={1100} className="h-52 w-full bg-slate-800 object-contain" />
@@ -16,7 +19,7 @@ export default function BookPromoPopup() {
    <h2 className="mt-2 text-xl font-bold text-slate-900">FaMED Protokoll 2026</h2>
    <p className="mt-2 text-sm text-slate-600">{arabic?'كتاب رقمي · حالات وعبارات مفيدة.':'Digital book · Cases and useful phrases.'}</p>
    <p className="mt-3 text-3xl font-bold text-blue-800">€19.99 <span className="text-sm font-normal text-slate-600">{arabic?'عرض الكتاب':'Book offer'}</span></p>
-   <a href="https://famedtestprep.com/FamedProtokolle?utm_source=blog&utm_medium=popup&utm_campaign=book_only" className="mt-4 inline-block rounded-lg bg-blue-700 px-5 py-3 font-bold text-white">{arabic?'اشترِ الكتاب الرقمي':'View digital book →'}</a>
+   <a href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=popup&utm_campaign=book_only" className="mt-4 inline-block rounded-lg bg-blue-700 px-5 py-3 font-bold text-white">{arabic?'اشترِ الكتاب الرقمي':'View digital book →'}</a>
   </div>
  </aside>;
 }
