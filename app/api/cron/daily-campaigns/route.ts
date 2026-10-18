@@ -10,13 +10,19 @@ const supabase = createClient(
 // List of campaigns that CAN run automatically
 const AUTOMATED_CAMPAIGNS = [
     'exam_urgency_14d',
-    'exam_urgency_special_offer',
     'exam_urgency_7d',
-    'exam_urgency_3d',
     'subscription_expiry',
     'welcome_day0',
     'welcome_bundle_promo',
-    'exam_urgency_1_week_special'
+    'account_book_offer',
+    'account_missing_out',
+    'account_weekly_bundle_1',
+    'account_weekly_bundle_2',
+    'account_weekly_bundle_3',
+    'account_weekly_bundle_4',
+    'account_weekly_bundle_5',
+    'account_weekly_bundle_6',
+    'lead_app_offer'
 ];
 
 export async function GET(request: Request) {
