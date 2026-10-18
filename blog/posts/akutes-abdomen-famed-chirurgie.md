@@ -1,84 +1,51 @@
 ---
-title: "Acute Abdomen in the FaMED Exam: Appendicitis, Cholecystitis & Diverticulitis"
+title: "Abdominal Pain in FaMED Practice: Questions and Clear Reporting"
 date: "2026-08-20"
-readTime: "12 min"
+readTime: "3 min"
 category: "Clinical Cases"
 status: "published"
 tags: ["FaMED", "Chirurgie", "Akutes Abdomen", "OSCE"]
-excerpt: "Surgical cases in the FaMED exam demand rapid clinical signs and immediate triage. Master the exact physical examination signs and patient presentations for acute surgical abdomen."
+excerpt: "Use fictional abdominal examples to practise questions, source distinctions and patient-friendly language."
+updated: "2026-10-18"
 ---
 
-In surgical stations of the FaMED exam, examiners assess one crucial clinical skill: **Do you know when to call the operating room?**
+Abdominal complaints are useful material for medical-language practice. In FaMed, the task is not a practical surgical examination or a test of whether you know when to operate. Medical knowledge is not separately assessed.
 
-When a patient actor presents with severe abdominal pain (*akutes Abdomen*), you must not spend 15 minutes asking about childhood illnesses. You must immediately determine whether there is peritoneal irritation (*Abwehrspannung*), locate the pain quadrant, test eponymic clinical signs, and organize emergent surgical consultation.
+## Clarify the complaint in everyday German
 
-Below are the examination scripts and clinical sign checklists for the **three most common acute surgical abdomen cases**.
+Begin with an open question, then follow the reported symptom:
 
----
+- „Wo genau haben Sie Schmerzen?“
+- „Wo haben die Schmerzen begonnen? Hat sich der Ort verändert?“
+- „Seit wann bestehen die Beschwerden, und wie haben sie sich entwickelt?“
+- „Welche weiteren Beschwerden haben Sie bemerkt?“
 
-![Acute Abdomen Surgical Triage Chart](/placeholder-image.jpg)
+Use [OPQRST](/blog/pain-anamnesis-guide) as a flexible memory aid. Select relevant questions rather than making every patient complete the same checklist.
 
----
+## Do not turn a symptom into a confirmed diagnosis
 
-## 1. Acute Appendicitis (*Akute Blinddarmentzündung*)
+A fictional source might report pain that moved from the middle of the abdomen to the right lower abdomen. You can accurately describe that movement without asserting that it proves appendicitis.
 
-### Typical Case Scenario
-A 22-year-old student reports diffuse periumbilical pain that began 14 hours ago and has now migrated into the right lower quadrant (*Schmerzwanderung*). Accompanying symptoms include subfebrile temperature (38.1 °C), nausea, and anorexia.
+> Der Patient gebe an, die Schmerzen hätten zunächst im mittleren Bauchbereich begonnen und seien später in den rechten Unterbauch gewandert.
 
-### Eponymic Signs Every Examiner Expects You to Test:
-| Clinical Sign | How to Perform in German | Meaning of Positive Sign |
-|---------------|--------------------------|--------------------------|
-| **McBurney-Punkt** | *"Druckschmerz zwischen dem äußeren und mittleren Drittel der Verbindungslinie zwischen Spina iliaca anterior superior und Nabel."* | Lokalisierte Entzündung der Appendix. |
-| **Lanz-Punkt** | *"Druckschmerz im rechten Drittel der Verbindungslinie zwischen beiden oberen Beckenkämmen."* | Retrozökale Lage der Appendix. |
-| **Rovsing-Zeichen** | *"Ausstreichen des Dickdarms von links nach rechts retrograd in Richtung Zökum führt zu Schmerzen im rechten Unterbauch."* | Retrograde Druckübertragung bei Entzündung. |
-| **Blumberg-Zeichen** | *"Kontralateraler Loslassschmerz im rechten Unterbauch nach vorsichtigem Eindrücken und schnellem Loslassen im linken Unterbauch."* | Peritoneale Reizung. |
-| **Psoas-Zeichen** | *"Schmerzen im rechten Unterbauch bei Anheben des rechten gestreckten Beines gegen Widerstand."* | Retrozökale Lage der Appendix auf dem M. psoas. |
+A reported symptom is different from an examination finding. Do not say you palpated the abdomen when no examination took place in the task.
 
-### Patient Communication in Aufklärung:
-*"Herr Weber, der Blinddarmfortsatz ist akut entzündet. Wir müssen ihn operativ entfernen, damit er nicht platzt. Dies geschieht im Regelfall über die Schlüsselloch-Chirurgie mit drei kleinen Schnitten."*
+## Report supplied findings separately
 
----
+If a presentation sheet contains an examination report, use wording such as „Laut Untersuchungsbericht …“. If a finding or plan is absent, say so. Avoid filling gaps with a textbook pattern.
 
-## 2. Acute Cholecystitis (*Akute Gallenblasenentzündung*)
+For example:
 
-### Typical Case Scenario
-A 48-year-old female patient (often with classic "6F" risk factors: *female, fat, forty, fertile, fair, family*) presents with intense right upper quadrant pain after eating a fatty meal. The pain radiates into the right shoulder and between the shoulder blades.
+> Zu den Laborwerten liegen mir in diesem Material keine Angaben vor.
 
-### The Mandatory Clinical Sign:
-* **Murphy-Zeichen:** *"Ich palpiere den rechten Rippenbogen und bitte die Patientin, tief einzuatmen. Bricht sie die Inspiration wegen plötzlich einschießender Schmerzen schlagartig ab, ist das Murphy-Zeichen positiv und hochspezifisch für eine akute Cholezystitis."*
+[The presentation guide](/blog/sbar-schema-arzt-arzt-gespraech) shows how to organise the available information. [The differential-phrasing article](/blog/differentialdiagnose-formulieren-deutsch) helps mark a suspicion without presenting it as confirmed.
 
-### Immediate Diagnostic Steps in German:
-1. **Labor:** Leukozyten, CRP, Bilirubin, alkalische Phosphatase (AP), Gamma-GT, Lipase (zum Ausschluss einer begleitenden biliären Pankreatitis).
-2. **Abdomensonographie:** Suche nach Dreischichtung der Gallenblasenwand (> 3 mm), Gallenblasenhydrops, Konkrementen mit Schallschatten sowie freier Flüssigkeit im Gallenblasenbett.
+## Explain the supplied procedure, not an invented continuation
 
----
+The informed-consent task may involve a different patient and procedure. Use its information about purpose, sequence, risks and perioperative behaviour. Do not assume the abdominal history automatically leads to a specific operation.
 
-## 3. Acute Diverticulitis (*Sigmadivertikulitis / "Linksseitenappendizitis"*)
+The [consent guide](/blog/famed-aufklaerungsgespraech-guide) gives adaptable language patterns. [See the book preview](/blog/famed-protokoll-buch-vorschau) for independent phrasing material. No diagnosis frequency or clinical treatment pathway is claimed here.
 
-### Typical Case Scenario
-A 65-year-old male presents with severe left lower quadrant crampy pain, constipation, and fever up to 38.6 °C.
+## Sources and review
 
-### Physical Exam Phrasing for the Arztbrief:
-*"Abdomen: Meteoristisch aufgetrieben. Ausgeprägter lokalisierter Druck- und Loslassschmerz im linken Unterbauch über dem Colon sigmoideum. Keine generalisierte Abwehrspannung. Darmgeräusche spärlich vorhanden."*
-
-### Classification & Plan (Hansen/Stock or CDD Classification):
-* **Mild/Uncomplicated (CDD Typ 1a):** Ambulante oder stationäre Überwachung, Nahrungskarenz, Flüssigkeit i.v., Analgesie (Metamizol). Antibiotikagabe nur bei Risikofaktoren.
-* **Complicated with microabscess or perforation (CDD Typ 2):** Sofortige stationäre Aufnahme, intravenöse Breitbandantibiose (z. B. Ceftriaxon + Metronidazol), chirurgisches Konsil zur Beurteilung einer Interventions- oder OP-Indikation.
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: **18 October 2026**, human medicine. [Official exam flow](https://famed-test.de/pruefungsablauf/), [Current human-medicine practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

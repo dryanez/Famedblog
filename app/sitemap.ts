@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/blog/${post.slug}`,
         lastModified: (() => {
             try {
-                const date = new Date(post.date);
+                const date = new Date(post.updated || post.date);
                 return isNaN(date.getTime()) ? new Date('2026-09-08') : date;
             } catch {
                 return new Date('2026-09-08');

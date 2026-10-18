@@ -1,88 +1,52 @@
 ---
-title: "How to Prepare for the FaMED Exam While Working Full-Time (6-Week Plan)"
+title: "FaMED Preparation While Working: An Adaptable Six-Week Plan"
 date: "2026-08-26"
-readTime: "11 min"
+readTime: "3 min"
 category: "Study Tips"
 status: "published"
 tags: ["FaMED", "Study Plan", "Time Management", "Career"]
-excerpt: "Working long hospital shifts as a Hospitant or care assistant? Here is a high-yield 6-week study schedule designed for busy doctors with only 90 minutes a day."
+excerpt: "Fit speaking, source-based writing and review around work, with realistic task timings and no promised completion date."
+updated: "2026-10-18"
 ---
 
-The overwhelming majority of international medical graduates preparing for the FaMED examination in Germany are not full-time students. You are likely working long shifts as a clinical observer (*Hospitant*), nursing assistant (*Pflegehelfer*), or managing family responsibilities in a new country.
+Preparing while working requires a schedule you can repeat. Six weeks is an example planning window, not evidence that every learner can reach the required language level in that time. Begin by checking the current task requirements and your own baseline.
 
-When you arrive home exhausted after an 8-hour hospital shift, reading thick German internal medicine textbooks is unrealistic and ineffective.
+## A possible 90-minute study session
 
-To pass the FaMED exam while working full-time, you do not need 6 hours of daily study. You need **90 minutes of focused, high-yield simulation**. Here is the 6-week blueprint designed specifically for working doctors.
+Use three flexible blocks: vocabulary in context, one speaking exercise, then writing or review. Ninety minutes is a study suggestion, not an official requirement.
 
----
+For speaking, distinguish a single oral situation from a whole station: the current practice test gives at most 11 minutes per situation; the two paired oral blocks are each 23 minutes including reading. For writing, practise the 22-minute task including video time.
 
-![Busy Doctor Study Schedule System](/placeholder-image.jpg)
+The written output is the **anamnesis section from its video**, not a full SOAP letter derived from your preceding spoken case. [See the writing method](/blog/famed-arztbrief-soap-schema).
 
----
+## Weeks 1–2: Understand and clarify
 
-## The 90-Minute Daily "Triad" Formula
+Practise opening a history, asking one clear follow-up and summarising what the person actually said. Use varied fictional symptoms and relevant background questions. Keep short writing sessions in the plan from the beginning.
 
-Divide your 90 minutes into three distinct 30-minute cognitive blocks:
+A limited-time day can use our [30-minute routine](/blog/famed-vorbereitung-30-minuten-lernroutine). Mark any unresolved language point for the next session.
 
-* **Block 1: Audio & Vocabulary Intake (30 mins — Morning Commute / Lunch):**
-  Listen to clinical audio cases or review digital flashcards of medical German vs. lay terms using the [FaMED App](https://famedtestprep.com/app).
-* **Block 2: Active Simulation (30 mins — Evening, High Energy):**
-  Simulate a single 20-minute timed station (Anamnese, Aufklärung, or Arzt-Arzt handover) out loud with a timer.
-* **Block 3: Timed Documentation (30 mins — Evening, Wind Down):**
-  Type one SOAP doctor's letter (*Arztbrief*) in German based on the case you simulated in Block 2.
+## Weeks 3–4: Explain and present
 
----
+Use supplied procedure notes for informed-consent practice. Explain the information without invented risk frequencies, guaranteed outcomes or unsupported aftercare rules.
 
-## The 6-Week Week-by-Week Roadmap
+For patient presentations, keep two fictional cases separate. Report the supplied history, findings and plan accurately, then practise short answers to follow-up questions. This is a language task, not a medical-knowledge interrogation.
 
-### Week 1: Internal Medicine Foundation (Cardiovascular & Respiratory)
-* **Topics:** Acute Coronary Syndrome, Stable Angina, Heart Failure, Pneumonia, Pulmonary Embolism.
-* **Objective:** Master standard cardiovascular anamnesis questions (*OPQRST* scheme) and lay explanations for ECG and heart catheterization.
+[Read the consent guide](/blog/famed-aufklaerungsgespraech-guide) and the [presentation framework](/blog/sbar-schema-arzt-arzt-gespraech) for concrete exercises.
 
-### Week 2: Gastroenterology & Acute Abdomen
-* **Topics:** Appendicitis, Cholecystitis, Diverticulitis, GI Bleeding (Ulcer), Pancreatitis.
-* **Objective:** Learn surgical pain characterization, dietary questions, and Aufklärung for Gastroscopy and Colonoscopy.
+## Weeks 5–6: Timing, feedback and repetition
 
-### Week 3: Neurology & Emergency Medicine
-* **Topics:** Stroke / TIA, Migraine vs. Subarachnoid Hemorrhage, Vertigo (BPPV vs. Central), Meningitis.
-* **Objective:** Master rapid neurological review of systems, time-of-onset questions, and Lumbar Puncture informed consent.
+Use the provider's current practice test. Compare each attempt with the source, then repeat a specific weak section. Build toward complete task sequences and allow time for feedback. If your baseline needs longer, extend the schedule rather than treating the calendar as a deadline for readiness.
 
-### Week 4: Surgery, Orthopedics & Traumatology
-* **Topics:** Distal Radius Fracture, Femoral Neck Fracture, Cruciate Ligament Tear, Deep Vein Thrombosis.
-* **Objective:** Physical exam vocabulary (*Status praesens*), conservative vs. surgical treatment explanations, and radiation protection counseling.
+In each week, practise spelling and keyboard familiarity, listening to names and quantities, and distinguishing missing information from explicitly denied symptoms.
 
-### Week 5: Mastering the Doctor-to-Doctor Handover (SBAR)
-* **Focus:** Synthesizing all previous cases into rapid, structured 5-minute doctor handovers.
-* **Objective:** Practice formulating differential diagnoses and defending diagnostic orders against senior doctor questions.
+## Learn appropriately at work
 
-### Week 6: Full OSCE Mock Simulations & Digital Interface Drills
-* **Focus:** Complete three full digital mock exams under realistic timed conditions.
-* **Objective:** Perfect German QWERTZ typing speed and build stamina for the 3-station circuit.
+Follow your workplace's access, supervision and confidentiality rules. Use only authorised teaching examples and materials. Do not access patient records simply for private exam preparation, and do not upload or record identifiable patient information in a study app.
 
----
+Notice useful ways colleagues structure explanations, then create a fictional example in your own words. Patient care is not a private mock-exam session.
 
-## How to Leverage Your Clinical Shift for Exam Prep
+[See actual book pages](/blog/famed-protokoll-buch-vorschau) or [read the app walkthrough](/blog/famed-prep-app-so-funktionierts) before adding optional resources. [The eight-week plan](/blog/8-week-famed-study-plan) offers a longer template.
 
-If you are already doing a *Hospitation* (clinical observation) in a German hospital, turn your daily workday into active exam preparation:
+## Sources and review
 
-1. **Listen to Senior Physician Handovers (*Frühbesprechung*):** Pay attention to the exact sentence structures senior consultants use to summarize overnight admissions.
-2. **Read Real German Discharge Letters (*Arztbriefe*):** Study the hospital's electronic medical records to observe standard German phrasing for normal and pathological findings.
-3. **Practice Lay Explanations with Real Patients:** When accompanying attending physicians, observe how they explain ultrasound findings, blood draws, and CT scans to patients without using medical jargon.
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: **18 October 2026**, human medicine. [Official exam flow](https://famed-test.de/pruefungsablauf/), [Current human-medicine practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

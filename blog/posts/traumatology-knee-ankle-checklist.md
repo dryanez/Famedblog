@@ -6,7 +6,10 @@ category: "Surgery"
 readTime: "8 min"
 excerpt: "Checklist of essential questions, trauma mechanisms, and clinical German terminology for acute joint and musculoskeletal injuries."
 tags: ['Traumatology', 'Surgery', 'Orthopedics', 'Anamnese']
+updated: "2026-10-18"
 ---
+
+These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 ## Traumatology Anamnesis Checklist: Key Questions for Knee & Ankle Injuries
 
@@ -118,8 +121,15 @@ General complaints and vegetative symptoms can provide clues to additional condi
 
 A structured and complete Anamnese is the foundation for diagnosing and treating knee and ankle injuries. The checklist presented here serves as a guide to capture all relevant information and make informed clinical decisions.
 
-### Resources 📚
 
-*   📖 FaMED Protocol Book: https://famedtestprep.com/famedprotokolle
-*   💻 FaMED App & Simulation: https://famedtestprep.com
-*   💬 Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
+For a practical next step, continue with [The Ultimate Guide to Pain Anamnesis: Mastering Medical History Taking](/blog/pain-anamnesis-guide).
+
+
+To build on this exercise, read [Mastering the Arzt-Arzt-Gespräch: The SBAR Framework for FaMED & FSP](/blog/sbar-schema-arzt-arzt-gespraech).
+
+
+Want to turn your reading into practice? [See how the FaMED Prep app works, step by step](/blog/famed-prep-app-so-funktionierts), before deciding whether its exercises fit your preparation.
+
+## Sources and review
+
+Editorial check: 18 October 2026. [FaMed requirements](https://famed-test.de/anforderungen/), [current exam flow](https://famed-test.de/pruefungsablauf/).

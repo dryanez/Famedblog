@@ -1,92 +1,47 @@
 ---
-title: "FaMED Recognition 2026: Which German States Accept the FaMED Exam?"
+title: "FaMED Recognition: Check Your State and Qualification Route"
 date: "2026-09-05"
-readTime: "9 min"
+readTime: "3 min"
 category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Anerkennung", "Approbation", "Bundesländer"]
-excerpt: "A complete 2026 breakdown of where the FaMED digital medical language exam is recognized across German federal states and licensing authorities."
+excerpt: "Find the authority conditions for your destination state and qualification route, with dated primary sources."
+updated: "2026-10-18"
 ---
 
-One of the most frequent questions international medical graduates ask before investing in exam fees is: **"Is the FaMED examination accepted in my target German state?"**
+Before booking FaMed, identify the authority responsible for your **human-medicine** licensing application. The exam centre's location does not determine whether that authority accepts the certificate.
 
-Because Germany's medical licensing system (*Approbationsbehörden*) is organized at the state (*Länder*) level, requirements vary considerably. While the traditional Fachsprachprüfung (FSP) is administered by individual State Medical Chambers (*Landesärztekammern*), the **FaMED** exam was developed by the **Ludwig-Maximilians-Universität München (LMU)** as an objective, scientifically standardized C1 digital alternative.
+The provider recognition overview remains labelled **November 2025**. Reading it in October 2026 does not turn it into a new 2026 policy. We distinguish provider statements from authority evidence below.
 
-In this guide, we review the current 2026 recognition status of FaMED across Germany and how you can ensure your certificate is accepted.
+## What the primary sources support
 
----
+| Destination | What to check |
+|---|---|
+| Rheinland-Pfalz | The LSJV authority page explicitly lists FaMed as a human-medicine FSP option. Check the rest of your application requirements. |
+| Bayern | The provider lists general human-medicine acceptance. Current Bavarian authority pages direct foreign-qualification applications to Oberbayern/ZAABY. Check its current requirements; older Unterfranken FAQs are historical evidence, not current routing instructions. |
+| Baden-Württemberg | Its authority currently names FaMed taken **after 13 May 2024**, provided the certificate accompanies the **initial application** and the exam is recognised in another state. A copy is sufficient for this proof. Later private certificates are not accepted under that procedure. |
+| Hessen | Acceptance depends on the qualification route. The EU/EWR/Swiss authority leaflet names digiFORT, while associated documents are not fully consistent. Do not infer unconditional acceptance for every applicant or decide this by passport nationality. |
+| Saarland, Thüringen, Sachsen-Anhalt | The provider's dated overview describes individual authority decisions. That is not a guarantee for a particular application. |
+| Other states | This review does not establish acceptance or rejection. Use the responsible authority's current requirements. |
 
-![German Medical Licensing Federal States Map](/placeholder-image.jpg)
+For detailed Baden-Württemberg conditions, use the [authority language FAQ](https://rp.baden-wuerttemberg.de/themen/bildung/ausbildung/seiten/faq-akad-heilberufe/sprachkenntnisse/). Its fee range for chamber examinations is not the FaMed fee.
 
----
+## Ask about your actual application
 
-## State-by-State Recognition Overview (2026)
+Use the current provider/issuer name from your intended booking. Do not describe LMU as the organisation currently conducting your appointment.
 
-| Bundesland | Primary Authority | FaMED Recognition Status | Notes / Practical Experience |
-|------------|-------------------|--------------------------|------------------------------|
-| **Bayern (Bavaria)** | Regierung von Oberbayern / Unterfranken | **Full Recognition** ✅ | Home state of FaMED. Widely recognized as equivalent or superior to chamber tests. |
-| **Rheinland-Pfalz** | Landesamt für Soziales, Jugend und Versorgung | **Full Recognition** ✅ | Accepts standardized university medical language evaluations. |
-| **Baden-Württemberg** | Regierungspräsidium Stuttgart | **Case-by-Case / On Request** ⚠️ | Requires formal submission of syllabus and equivalence petition. |
-| **Nordrhein-Westfalen (NRW)** | Bezirksregierungen (Münster, Köln, etc.) | **Camera Preference** ❌ / ⚠️ | Generally insists on the Ärztekammer FSP, with rare exceptions. |
-| **Hessen** | Hessisches Landesprüfungs- und Untersuchungsamt | **Camera Preference** ❌ | Strongly enforces the Hessian Chamber FSP. |
-| **Sachsen / Thüringen** | Landesdirektion / Landesverwaltungsamt | **On Request** ⚠️ | Recognition possible upon individual approval before taking test. |
-| **Berlin / Brandenburg** | Landesamt für Gesundheit und Soziales (LaGeSo) | **Standard FSP Priority** ⚠️ | Prioritizes Charité / Ärztekammer exams. |
+A possible enquiry, where the authority accepts case enquiries:
 
-*Disclaimer: Recognition policies change dynamically. Always obtain written confirmation from your Sachbearbeiter prior to test registration.*
+> Ich beantrage die Approbation in der Humanmedizin. Mein Ausbildungsabschluss stammt aus [Land]; mein Aktenzeichen lautet [falls vorhanden]. Ich plane den Fachsprachennachweis über FaMed/digiFORT. Welche Voraussetzungen gelten in meinem Verfahren für Anerkennung, Prüfungsdatum, Aussteller und Zeitpunkt der Vorlage?
 
----
+Attach or provide documents only through the authority's stated process. Some authorities do not answer hypothetical provider enquiries; read their published requirements first.
 
-## Why Choose FaMED Over the Chamber FSP?
+## Passing a language exam is not a licence
 
-If your intended state of licensure accepts FaMED (notably in Bavaria and surrounding jurisdictions), taking FaMED offers distinct advantages:
+FaMed can satisfy an accepted language requirement. It does not itself grant **Approbation** or **Berufserlaubnis**. These are different permissions, and a Berufserlaubnis may carry restrictions.
 
-1. **Scientifically Standardized Grading:** Traditional chamber exams are notorious for subjective grading swings based on which senior doctor conducts the interview. FaMED utilizes objective OSCE criteria and blinded video scoring.
-2. **Predictable Schedules & Faster Dates:** In many states, doctors wait 4 to 9 months simply to receive an FSP date from the Ärztekammer. FaMED testing center slots are booked online with predictable turnaround times.
-3. **No Catch Questions:** Chamber exams sometimes test obscure medical trivia or regional dialect idioms. FaMED strictly tests C1 communication competence, patient safety, and clinical structuring.
+Read [FaMED versus the Kenntnisprüfung](/blog/famed-vs-kenntnispruefung-kp) for the distinction between language and knowledge assessment. After checking your route, use the [preparation guide](/blog/ultimate-famed-preparation-guide) to organise learning. [See inside our book](/blog/famed-protokoll-buch-vorschau) before choosing optional preparation material.
 
----
+## Sources and review
 
-## How to Get Written Verification from Your Authority
-
-Before booking your €490 testing slot on famed-test.de, send a formal request email to your licensing caseworker (*Approbationsbehörde*). Here is a tested German email template:
-
-```
-Betreff: Antrag auf Approbation / Nachweis der medizinischen Fachsprache (C1)
-Aktenzeichen: [Ihre Vorgangsnummer, falls vorhanden]
-
-Sehr geehrte(r) Frau/Herr [Name des Sachbearbeiters],
-
-ich bereite mich derzeit auf die Erteilung meiner Approbation als Arzt/Ärztin vor. 
-Zum Nachweis der erforderlichen berufsbezogenen Deutschkenntnisse auf C1-Niveau plane ich die Teilnahme an der Fachsprachenprüfung Medizin (FaMED), die vom Institut für Didaktik und Ausbildungsforschung in der Medizin am Klinikum der Ludwig-Maximilians-Universität (LMU) München durchgeführt wird.
-
-Ich bitte Sie um eine kurze schriftliche Bestätigung, ob das Bestehenszeugnis der FaMED-Prüfung von Ihrer Behörde als gleichwertiger Fachsprachennachweis gemäß den länderspezifischen Vorgaben anerkannt wird.
-
-Vielen Dank für Ihre Unterstützung und freundliche Grüße,
-
-[Ihr vollständiger Name]
-[Ihre Kontaktdaten]
-```
-
----
-
-## What If You Move States Later?
-
-Once you obtain your official medical license (**Approbation** or **Berufserlaubnis**) in a state that accepted FaMED (such as Bavaria), that license is recognized across all 16 German federal states. You are not required to retake a language examination if you subsequently relocate to work in NRW, Hessen, or Baden-Württemberg.
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: **18 October 2026**, human medicine. [Provider overview, labelled November 2025](https://famed-test.de/ro/), [RLP authority](https://lsjv.rlp.de/themen/gesundheit/gesundheitsberufe/approbationen-fuer-akademische-heilberufe), [Bavaria: current foreign-qualification authority route](https://www.regierung.unterfranken.bayern.de/aufgaben/leistung/leistung_178578/index.html), [BW authority](https://rp.baden-wuerttemberg.de/themen/bildung/ausbildung/seiten/faq-akad-heilberufe/sprachkenntnisse/), [Hessen EU/EWR/Swiss leaflet](https://hlfgp.hessen.de/sites/hlfgp.hessen.de/files/2025-09/merkblatt_eu_medizin_1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

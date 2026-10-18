@@ -1,12 +1,14 @@
 {
-    "crons": [
-        {
-            "path": "/api/cron/daily-campaigns",
-            "schedule": "0 8 * * *"
-        },
-        {
-            "path": "/api/cron/publish-scheduled",
-            "schedule": "0 9 * * *"
-        }
-    ]
+  "crons": [
+    {
+      "path": "/api/cron/daily-campaigns",
+      "schedule": "0 8 * * *"
+    },
+    {
+      "path": "/api/cron/publish-scheduled",
+      "schedule": "0 9 * * *"
+    }
+  ],
+  "framework": "nextjs",
+  "outputDirectory": ".next"
 }

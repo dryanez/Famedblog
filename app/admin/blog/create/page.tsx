@@ -199,7 +199,9 @@ export default function CreateBlogPostPage() {
             const data = await response.json();
 
             if (data.success) {
-                setStatus(`✅ Scheduled ${data.scheduled}/${data.total} posts! Check the calendar to see them.`);
+                setStatus(data.requiresEditorialReview
+                    ? `✅ Created ${data.drafted}/${data.total} drafts. Review facts and sources before publishing.`
+                    : `✅ Scheduled ${data.scheduled}/${data.total} posts! Check the calendar to see them.`);
                 setSuggestedTopics([]);
                 setPdfUri('');
                 setPdfFile(null);

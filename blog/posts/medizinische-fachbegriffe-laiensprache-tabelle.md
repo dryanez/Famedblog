@@ -1,22 +1,24 @@
 ---
-title: "German Medical Terminology vs. Lay Language: 100 Essential Word Pairs"
+title: "German Medical Terms in Everyday Language: A Practice Glossary"
 date: "2026-09-04"
 readTime: "14 min"
 category: "Medical Terminology"
 status: "published"
 tags: ["FaMED", "Terminology", "Vocabulary", "Fachbegriffe", "Laiensprache"]
-excerpt: "Master the 100 most frequent medical German terms and their layperson translations required for the FaMED exam and daily hospital ward communication."
+excerpt: "Practise medical German explanations in everyday language. This is a study selection, not an official vocabulary list."
+updated: "2026-10-18"
 ---
+
+These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 One of the fastest ways to lose points in the FaMED exam is using Latin terminology when speaking to patient actors. In German medical culture, patient comprehension is a core component of medical ethics and legal compliance.
 
 If you tell a patient: *"Wir müssen eine Cholezystektomie wegen einer Cholezystolithiasis durchführen"*, the patient actor will look confused, and the examiners will mark down your score. You must say: *"Wir müssen die Gallenblase operativ entfernen, weil sich dort Gallensteine gebildet haben."*
 
-Below is the definitive **100-word glossary** dividing clinical German into **Fachbegriff (Medical Term)** and **Laiensprache (Lay Translation)** across all major organ systems.
+Below is the practice glossary dividing clinical German into **Fachbegriff (Medical Term)** and **Laiensprache (Lay Translation)** across all major organ systems.
 
 ---
 
-![German Medical Vocabulary Comparison Table](/placeholder-image.jpg)
 
 ---
 
@@ -41,13 +43,16 @@ Below is the definitive **100-word glossary** dividing clinical German into **Fa
 
 ---
 
+
+For a practical next step, continue with [Top 15 German Patient Idioms Every Foreign Doctor Must Understand](/blog/deutsche-patientensprache-redewendungen).
+
 ## 2. Gastroenterology & Abdomen
 
 | Medizinischer Fachbegriff | Deutsche Laiensprache (Für den Patienten) |
 |---------------------------|-------------------------------------------|
 | **Gastritis** | Magenschleimhautentzündung |
 | **Ulkus ventrikuli** | Magengeschwür |
-| **Refluxösophagitis** | Entzündung der Speiseröhre durch Sodbrennen |
+| **Refluxösophagitis** | Entzündung der Speiseröhre durch zurückfließenden Mageninhalt |
 | **Appendizitis** | Blinddarmentzündung (Entzündung des Wurmfortsatzes) |
 | **Cholezystitis** | Gallenblasenentzündung |
 | **Cholelithiasis** | Gallensteinleiden |
@@ -66,6 +71,7 @@ Below is the definitive **100-word glossary** dividing clinical German into **Fa
 
 ---
 
+
 ## 3. Neurology & Psychiatry
 
 | Medizinischer Fachbegriff | Deutsche Laiensprache (Für den Patienten) |
@@ -74,7 +80,7 @@ Below is the definitive **100-word glossary** dividing clinical German into **Fa
 | **Transitorische ischämische Attacke (TIA)** | Vorübergehende Durchblutungsstörung im Gehirn |
 | **Zephalgie** | Kopfschmerzen |
 | **Vertigo** | Schwindel, Drehschwindel |
-| **Paresse** | Unvollständige Lähmung, Muskelschwäche |
+| **Parese** | Unvollständige Lähmung, Muskelschwäche |
 | **Plegie** | Vollständige Lähmung |
 | **Parästhesie** | Missempfindungen (Kribbeln, Taubheitsgefühl, „Ameisenlaufen“) |
 | **Amnesie** | Gedächtnisverlust |
@@ -82,32 +88,38 @@ Below is the definitive **100-word glossary** dividing clinical German into **Fa
 | **Epileptischer Anfall** | Krampfanfall |
 | **Meningitis** | Hirnhautentzündung |
 | **Insomnie** | Schlafstörung, Schlaflosigkeit |
-| **Depression** | Schwermut, seelisches Tief |
+| **Depression** | Erkrankung mit anhaltend gedrückter Stimmung und häufig Interessenverlust |
 
 ---
+
+
+To build on this exercise, read [FaMED Aufklärung: Explain the Supplied Procedure Clearly](/blog/famed-aufklaerungsgespraech-guide).
 
 ## 4. Nephrology & Urology
 
 | Medizinischer Fachbegriff | Deutsche Laiensprache (Für den Patienten) |
 |---------------------------|-------------------------------------------|
 | **Nephrolithiasis** | Nierensteine |
-| **Urolithiasis** | Harnsteine, Blasensteine |
+| **Urolithiasis** | Steine in den Harnwegen |
 | **Zystitis** | Blasenentzündung, Harnwegsinfekt |
 | **Hämaturie** | Blut im Urin |
-| **Dysurie** | Schmerzen oder Brennen beim Wasserlassen |
-| **Polyurie** | Vermehrtes Wasserlassen |
+| **Dysurie** | Erschwertes oder schmerzhaftes Wasserlassen |
+| **Polyurie** | Erhöhte Urinmenge |
 | **Pollakisurie** | Häufiges Wasserlassen in kleinen Mengen |
 | **Niereninsuffizienz** | Nierenschwäche, Nierenfunktionsstörung |
 | **Harninkontinenz** | Blasenschwäche, unwillkürlicher Urinverlust |
 
 ---
 
+
+Want to turn your reading into practice? [See how the FaMED Prep app works, step by step](/blog/famed-prep-app-so-funktionierts), before deciding whether its exercises fit your preparation.
+
 ## 5. Musculoskeletal & Surgery
 
 | Medizinischer Fachbegriff | Deutsche Laiensprache (Für den Patienten) |
 |---------------------------|-------------------------------------------|
 | **Fraktur** | Knochenbruch |
-| **Distorsion** | Verstauchung, Zerrung |
+| **Distorsion** | Verstauchung eines Gelenks |
 | **Luxation** | Auskugeln oder Verrenkung eines Gelenks |
 | **Ruptur** | Riss (z. B. Sehnenriss, Bänderriss) |
 | **Arthrose** | Gelenkverschleiß |
@@ -132,18 +144,6 @@ This demonstrates to examiners that you are conscious of communication barriers 
 
 ---
 
-## Resources 📚
+## Sources and review
 
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: 18 October 2026. [FaMed requirements](https://famed-test.de/anforderungen/), [current exam flow](https://famed-test.de/pruefungsablauf/).

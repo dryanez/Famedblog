@@ -6,15 +6,19 @@ category: "Neurology"
 readTime: "9 min"
 excerpt: "Step-by-step German phrasing and targeted questions for assessing neurological complaints including migraines, dizziness, and tremors."
 tags: ['Neurology', 'Anamnese', 'Headache', 'Vertigo', 'Tremor']
+updated: "2026-10-18"
 ---
 
-# Navigating Neurological Anamnesis: Essential Questions for Migraine, Vertigo & Tinnitus
+These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 The neurological Anamnese is a crucial step in diagnosing and treating neurological conditions. A careful and structured patient interview allows the doctor to gather important information to determine the cause of complaints and initiate appropriate therapy. This blog post focuses on the essential questions to ask during the history-taking of patients with migraine, vertigo (Schwindel), and tinnitus. The goal is to provide a comprehensive and structured approach that is helpful in preparing for the FaMED exam.
 
 ## Introduction
 
 The neurological Anamnese requires a systematic approach. The goal is to capture the patient's symptoms in detail, identify relevant previous illnesses, and consider psychosocial factors. This article provides an overview of the key questions to ask patients with migraine, vertigo, and tinnitus.
+
+
+For a practical next step, continue with [The Ultimate Guide to Pain Anamnesis: Mastering Medical History Taking](/blog/pain-anamnesis-guide).
 
 ## Migraine: Detailed Questions for Headache Analysis
 
@@ -39,11 +43,14 @@ The history-taking for migraine includes a detailed characterization of headache
 
 ### Accompanying Symptoms (Begleitsymptome)
 
-*   **Haben Sie auch andere Beschwerden bemerkt? Zum Beispiel Kribbeln oder Taubheit im Gesicht, Arm oder Bein, Schwindel oder Bewusstlosigkeit, unkontrollierte Augenbewegungen oder Geräusche im Kopf (z.B. Pfeifen, Brummen)?** Capturing accompanying symptoms is important to rule out other causes.
+Ask these separately as appropriate rather than delivering the whole example as one long question.
+
+*   **Haben Sie auch andere Beschwerden bemerkt? Zum Beispiel Kribbeln oder Taubheit im Gesicht, Arm oder Bein, Schwindel oder Bewusstlosigkeit, unkontrollierte Augenbewegungen oder Geräusche im Kopf (z.B. Pfeifen, Brummen)?** These questions clarify the description; answers alone do not rule out other causes.
 
 ### Medication History (Medikamentenanamnese)
 
 *   **Haben Sie schon etwas dagegen gemacht? Medikamente genommen oder Ruhe gesucht? Hat etwas geholfen?** These questions provide insight into the effectiveness of previous treatments.
+
 
 ## Vertigo (Schwindel) and Tinnitus: Questions for Differentiation
 
@@ -68,6 +75,9 @@ Vertigo and tinnitus can have various causes, from benign positional vertigo to 
 *   **Haben Sie Gleichgewichtsstörungen oder eine Hörminderung bemerkt?** These symptoms may indicate an inner ear condition.
 *   **Beeinflusst der Schwindel oder Tinnitus Ihren Schlaf, Ihre Konzentration oder Ihre Stimmung?** This question captures the impact of symptoms on quality of life.
 
+
+To build on this exercise, read [Spotting Critical Red Flags in Anamnesis: A Survival Guide](/blog/anamnesis-red-flags-guide).
+
 ## Additional Important Questions
 
 Regardless of the specific complaints, the following general questions should be considered in the neurological Anamnese:
@@ -80,9 +90,12 @@ Regardless of the specific complaints, the following general questions should be
 *   **Psychological history (Psychoanamnese):** Haben Sie in letzter Zeit vermehrt Stress oder etwas, das Sie mental belastet?
 *   **Social history (Sozialanamnese):** Was machen Sie beruflich? Leben Sie allein oder mit anderen zusammen?
 
-## Vegetative History (B-Symptoms)
 
-*   **Haben Sie in letzter Zeit Erkältungssymptome wie Fieber oder Nachtschweiß bemerkt?**
+Want to turn your reading into practice? [See how the FaMED Prep app works, step by step](/blog/famed-prep-app-so-funktionierts), before deciding whether its exercises fit your preparation.
+
+## Other General Symptoms
+
+*   **Haben Sie Fieber gemessen oder Nachtschweiß bemerkt?**
 *   **Haben Sie in den letzten 6 Monaten abgenommen?**
 *   **Hat sich Ihr Appetit in letzter Zeit verändert?**
 *   **Haben Sie Schwierigkeiten, einzuschlafen oder durchzuschlafen?**
@@ -97,8 +110,6 @@ At the end of the Anamnese, you should summarize the key points and give the pat
 
 A comprehensive and structured neurological Anamnese is essential for diagnosis and treatment planning in patients with migraine, vertigo, and tinnitus. The questions listed here serve as a guide to capture relevant information and make informed decisions. Thorough preparation and practicing Anamnesegespräche are indispensable for success in the FaMED exam.
 
-## Resources 📚
+## Sources and review
 
-*   📖 FaMED Protocol Book: https://famedtestprep.com/famedprotokolle
-*   💻 FaMED App & Simulation: https://famedtestprep.com
-*   💬 Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
+Editorial check: 18 October 2026. [FaMed requirements](https://famed-test.de/anforderungen/), [current exam flow](https://famed-test.de/pruefungsablauf/).

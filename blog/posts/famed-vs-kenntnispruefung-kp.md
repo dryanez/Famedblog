@@ -1,79 +1,43 @@
 ---
-title: "FaMED vs. Kenntnisprüfung (KP): Differences, Pathways, and Timelines"
+title: "FaMED and Kenntnisprüfung: Language Evidence and Medical Knowledge"
 date: "2026-09-01"
-readTime: "10 min"
+readTime: "3 min"
 category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Kenntnisprüfung", "Approbation", "Career"]
-excerpt: "Confused about the difference between medical language exams (FaMED/FSP) and medical equivalence exams (KP)? Here is the complete roadmap for foreign doctors in Germany."
+excerpt: "Understand how language assessment differs from the Kenntnisprüfung and why neither exam alone grants Approbation."
+updated: "2026-10-18"
 ---
 
-When foreign doctors begin their licensing journey in Germany, the bureaucracy can feel overwhelming. Terms like **FaMED**, **FSP**, **Defizitbescheid**, **Gleichwertigkeitsprüfung**, and **Kenntnisprüfung (KP)** are constantly mentioned, often without clear context.
+**FaMed assesses professional German communication. The Kenntnisprüfung assesses medical knowledge and skills within a licensing procedure.** Passing either assessment does not, by itself, issue a medical licence.
 
-The most crucial distinction you must understand early is: **FaMED is a language exam; Kenntnisprüfung is a medical knowledge exam.**
+Your responsible authority determines the route for your qualification and application. Do not assume every foreign-trained doctor must take a Kenntnisprüfung, or that document assessment always starts only after the language exam.
 
-Passing the language exam is the prerequisite gateway before you can either work under a temporary license (*Berufserlaubnis*) or proceed toward your full medical license (*Approbation*).
+## Compare the purpose
 
----
+| Question | FaMed | Kenntnisprüfung |
+|---|---|---|
+| What is assessed? | Professional medical German communication at C1 level | Medical knowledge and skills required by the applicable equivalence procedure |
+| Typical task focus | Patient history, informed consent, two case presentations and written anamnesis | Oral-practical assessment with patient presentation under §37 ÄApprO |
+| Who determines your eligibility and route? | Provider requirements and licensing-authority acceptance | The responsible licensing authority and examination procedure |
+| Does passing automatically grant Approbation? | No | No; the authority must establish all requirements |
 
-![FaMED vs Kenntnisprüfung Comparison Roadmap](/placeholder-image.jpg)
+The official knowledge-test rules cover internal medicine and surgery, with additional aspects such as emergency medicine, pharmacotherapy, imaging, radiation protection and professional legal issues. They are not a promise of a particular set of elective questions. The old claim that the board must consist of three professors was too specific.
 
----
+## Check equivalence and application requirements
 
-## Direct Comparison: FaMED vs. Kenntnisprüfung
+A qualification may be recognised through the applicable recognition procedure; in other cases an authority can require a knowledge assessment. EU/EWR/Swiss and third-country routes must not be treated as identical. Use your authority's current instructions and any decision issued in your case.
 
-| Feature | FaMED / FSP (Medical Language) | Kenntnisprüfung (KP) (Equivalence) |
-|---------|--------------------------------|-------------------------------------|
-| **Target Competence** | Medical German communication (C1 level) | Clinical medicine (equivalent to 3rd German state exam / M3) |
-| **Exam Format** | OSCE (Anamnese, Handover, Arztbrief) | Bedside practical exam + Oral commission exam |
-| **Examining Body** | Authorized FaMED Testing Centers (via famed-test.de) / State Medical Chambers | University Hospital examination board (3 medical professors) |
-| **Focus Disciplines** | Internal Medicine, Surgery, General Medicine | Internal Medicine, Surgery + 1-2 Electives (e.g. Pharmacology, Radiology, Emergency) |
-| **Prerequisites** | General German B2 certificate | Passing FSP/FaMED + Defizitbescheid from licensing authority |
-| **Cost** | ~€400 – €500 | ~€800 – €1,500 |
-| **Result Outcome** | Grants eligibility for *Berufserlaubnis* | Grants full, permanent **German Approbation** |
+A **Berufserlaubnis** is a separate permission that can have restrictions. Do not assume you can work while waiting merely because you passed FaMed or booked a Kenntnisprüfung.
 
----
+For destination-state language requirements, read the [recognition guide](/blog/famed-anerkennung-bundeslaender-2026). For the current FaMed fee and live booking sources, use our [administrative guide](/blog/famed-kosten-termine-statistik-2026). No universal KP price or completion timeline is promised here.
 
-## Pathway 1 vs. Pathway 2: Gutachten or Kenntnisprüfung?
+## Transfer useful communication habits
 
-After you pass your FaMED exam, the licensing authority (*Approbationsbehörde*) evaluates your foreign university transcripts against the German medical curriculum (*Gleichwertigkeitsprüfung*):
+Practice distinguishing patient-reported information, documented findings and your own interpretation. Use precise times, medication names and clear summaries. A framework such as SBAR can help you organise a practice presentation, but it is not a universal mandated answer structure for either assessment.
 
-### Pathway A: Document Equivalence (*Gleichwertigkeit über Gutachten*)
-* An official expert (*Gutachter*) analyzes your medical school transcripts, syllabus hours, and clinical internships.
-* If no substantial deficits (*wesentliche Unterschiede*) are found, you receive your **Approbation without taking the Kenntnisprüfung**.
-* Common for doctors from the EU/EEA and certain recognized non-EU curricula.
+[Try the presentation exercise](/blog/sbar-schema-arzt-arzt-gespraech), then compare your answer with the actual assignment. [See the preparation app](/blog/famed-prep-app-so-funktionierts) before deciding whether its available exercises suit your language goals.
 
-### Pathway B: The Direct Kenntnisprüfung
-* If significant curriculum deficits are identified (or if transcript evaluation would take over a year), doctors opt directly for the **Kenntnisprüfung (KP)**.
-* While preparing for the KP, you can work as an assistant physician with a temporary license (**Berufserlaubnis**) for up to two years in most states.
+## Sources and review
 
----
-
-## Why Excelling in FaMED Gives You an Unfair Advantage in KP
-
-Doctors who view the FaMED simply as a hurdle to clear with the minimum score often struggle later in the Kenntnisprüfung. 
-
-In the KP, the medical professors test your clinical acumen in German:
-1. **Patient Presentation:** You must present a real hospital patient to the examination committee using the exact same SBAR/SOAP structure learned in FaMED.
-2. **Clinical Fluency:** If you struggle to articulate pathophysiological reasoning smoothly in German, examiners may interpret linguistic hesitation as medical incompetence.
-3. **Medical Documentation:** You will write a real patient chart and Epicrisis.
-
-Mastering the FaMED format thoroughly builds the communication foundation you will rely upon during your final Approbation exam.
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: **18 October 2026**, human medicine. [Knowledge-test rules, §37 ÄApprO](https://www.gesetze-im-internet.de/_appro_2002/__37.html), [Temporary permission, §10 BÄO](https://www.gesetze-im-internet.de/b_o/__10.html), [Exam flow](https://famed-test.de/pruefungsablauf/). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

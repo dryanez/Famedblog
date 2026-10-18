@@ -1,93 +1,46 @@
 ---
-title: "The Digital FaMED Exam: Computer Interface, Video Stations & Typing Tips"
+title: "The Digital FaMED Exam: Tasks, Video Notes and Typing Practice"
 date: "2026-08-30"
-readTime: "9 min"
+readTime: "3 min"
 category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Digital Exam", "Testing Center", "OSCE"]
-excerpt: "Everything you need to know about the computerized FaMED exam setup at authorized testing centers: screen layout, German keyboard layout, video controls, and time savers."
+excerpt: "Prepare for the digital FaMed tasks: separate oral cases, video notes and the written anamnesis section."
+updated: "2026-10-18"
 ---
 
-Unlike traditional chamber exams where you sit across a table from physical examiners in an Ärztekammer meeting room, the **FaMED exam is conducted digitally in authorized testing centers** (developed based on medical didactic research at LMU Munich and booked via famed-test.de).
+FaMed is a digital language examination taken **at a test centre**. It is not a remote exam you take from home. The provider's current FAQ lists Mainz, Kassel and Nürnberg; your confirmation supplies your appointment details.
 
-For many candidates, this computer-based format creates unexpected anxiety: *How do the video stations work? Is there a German QWERTZ keyboard? What happens if the video finishes early?*
+## Understand the three stations
 
-Understanding the technical environment before exam day eliminates surprises and lets you focus 100% on your medical communication.
+| Station | Tasks | Published block duration |
+|---|---|---|
+| Doctor–patient communication | History and informed consent | 23 minutes, including reading |
+| Doctor–doctor communication | Two separate patient presentations | 23 minutes, including reading |
+| Written communication | Anamnesis section based on a patient video | 22 minutes, including video |
 
----
+The current practice test allows **at most 11 minutes per oral situation**. Do not confuse a situation with a whole paired station. Oral order can vary; writing is last, with one-minute station breaks. The cases need not follow one continuous patient story.
 
-![Digital FaMED Computer Testing Station](/placeholder-image.jpg)
+The published block durations do not establish a specific 30-second preparation screen or an exact reading-time subdivision.
 
----
+## Prepare for the written video task
 
-## The Testing Center Setup: What to Expect
+The current practice test permits pausing and moving forward or backward through the video. Take factual notes, check uncertain names, times and negations, then write the **anamnesis section in complete sentences**. Do not add an invented examination, diagnosis or treatment plan.
 
-When you enter an authorized FaMED testing center (e.g., in Mainz, Kassel, Nürnberg, or Munich), you will be assigned an individual testing cubicle equipped with:
-* A high-resolution monitor displaying the exam portal.
-* A standardized headset with an integrated noise-cancelling microphone.
-* A standard **German QWERTZ keyboard** and optical mouse.
-* Scratch paper and a pen provided by the proctor.
+Our [written-task guide](/blog/famed-arztbrief-soap-schema) shows how to move from a source statement to a sentence. SOAP may be useful in other clinical documentation contexts, but it is not the required format of this FaMed task.
 
----
+## Practise typing and clear audio
 
-## Station-by-Station Digital Workflow
+Practise German spelling, umlauts, punctuation and medical terms on a keyboard. Familiarity with a German layout can help; the exact equipment and instructions for your appointment come from the centre.
 
-### Station 1: Patient Anamnese & Aufklärung
-* You communicate via high-definition audio/video link with a trained standardized patient actor located in an observation studio.
-* An on-screen digital countdown clock displays your remaining minutes and seconds.
-* You can take handwritten notes on your scratch paper during the conversation.
+For speaking practice, make a test recording on your own device and listen for intelligibility. There is no requirement to adopt a particular pitch or a baritone voice.
 
-### Station 2: Doctor-to-Doctor Handover (Arzt-Arzt-Kommunikation)
-* You present your two assigned cases.
-* Depending on the testing setup, this conversation is either conducted live with a medical assessor via video link or recorded digitally for blinded multi-rater evaluation.
-* Blinded recording ensures that your score is evaluated by calibrated raters without personal or unconscious bias.
+In a timed writing practice, divide your available time between viewing, checking notes, composing and proofreading. Adjust those shares to the video and your typing speed. The overall official limit is not a universal minute-by-minute training script.
 
-### Station 3: Digital Documentation (Schriftliche Station)
-* You watch a pre-recorded clinical encounter or simulated patient scenario on screen.
-* You can pause, rewind, or re-watch segments of the video within your allotted time.
-* An integrated text editor opens where you type your medical discharge summary (*Arztbrief*).
-* At the end of the 20 minutes, the editor automatically submits your text.
+## Keep app practice distinct from the exam interface
 
----
+FaMED Prep is an independent preparation app. [See its actual screens and workflow](/blog/famed-prep-app-so-funktionierts); they do not prove what the official examination interface looks like. If you prefer a short daily exercise, use our [30-minute routine](/blog/famed-vorbereitung-30-minuten-lernroutine).
 
-## 4 Technical Survival Tips for the Digital Test
+## Sources and review
 
-### 1. Master the German QWERTZ Keyboard Layout
-If you usually type on an English (QWERTY) or foreign keyboard, practice typing on a German keyboard before your exam:
-* Note the inverted positions of **Z** and **Y**.
-* Practice typing umlauts (**ä, ö, ü**) and the sharp S (**ß**) fluently without hunting for keys.
-* Capitalize all German nouns (*"der Patient"*, *"die Schmerzen"*, *"das Abdomen"*).
-
-### 2. Prepare Your Scratchpad Before the Timer Starts
-The moment you sit down, draw your structural grid on your scratch paper:
-* Write the letters **OPQRST** vertically for anamnesis.
-* Write **S-B-A-R** for the doctor presentation.
-* As the patient talks, jot down keywords in the corresponding quadrant rather than writing full sentences.
-
-### 3. Audio Clarity and Microphone Etiquette
-* Position your headset microphone approximately two finger-widths away from the corner of your mouth.
-* Speak in a measured, calm baritone. Fast or hushed speech degrades audio quality during recorded evaluations.
-* Articulate word endings cleanly (*-ung, -heit, -keit, -tion*).
-
-### 4. Digital Time Management
-* In Station 3, do not spend more than 5 minutes watching and re-watching the video.
-* Begin typing your Objective findings and Assessment by minute 7.
-* Always finish typing by minute 18 to allow 2 minutes for orthography and grammar checks.
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: **18 October 2026**, human medicine. [Exam flow](https://famed-test.de/pruefungsablauf/), [Current practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf), [FAQ](https://famed-test.de/faq/). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

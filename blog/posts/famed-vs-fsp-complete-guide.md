@@ -1,83 +1,50 @@
 ---
-title: "FaMed vs FSP: Complete Comparison Guide 2025"
+title: "FaMED and Chamber FSP: Compare the Actual Requirements"
 date: "2024-12-07"
-readTime: "8 min"
+readTime: "3 min"
 category: "Exam Guide"
 status: "published"
 tags: ["famed", "fsp", "comparison", "guide"]
-excerpt: "In-depth comparison between the FaMED exam and the traditional Fachsprachenprüfung (FSP): structure, difficulty, and state recognition."
+excerpt: "Compare authority acceptance, current task format and booking requirements for your language-exam route."
+updated: "2026-10-18"
 ---
 
-Understanding the differences between the **FaMed** exam and the traditional **FSP** (Fachsprachprüfung) is crucial for international medical doctors planning to practice in Germany. While both test your medical German, their structure, recognition, and philosophy differ significantly.
+FaMed is a **Fachsprachenprüfung Medizin**: a medical-language examination. The practical comparison is between the FaMed route and a particular medical chamber's FSP, not between a language exam and a different profession-wide qualification.
 
-## What is FaMed?
+Start with the route your licensing authority accepts. Do not choose from a promise that one provider is easier, faster or guaranteed to pass you.
 
-**FaMed** is a specialized medical language examination developed by researchers at the **Ludwig-Maximilians-Universität München (LMU)** in collaboration with the LMU Klinikum. It stands out as the first medical language exam in Germany developed according to international research standards.
+## The current human-medicine FaMed format
 
-*   **Developer:** LMU Munich
-*   **Format:** OSCE (Objective Structured Clinical Examination)
-*   **Cost:** €490
-*   **Philosophy:** Standardized, fair, and scientifically validated assessment.
+There are three stations: doctor–patient communication with history and consent; doctor–doctor communication with two patient presentations; and the written anamnesis section from a video. The oral blocks are each **23 minutes including reading**; writing is **22 minutes including video**. Individual oral situations in the current practice test have an **11-minute maximum**.
 
-## What is FSP (Fachsprachprüfung)?
+Oral order can vary. Writing is last. Cases may differ within and between stations. There is no separate vocabulary-translation task in this format.
 
-The traditional **FSP** is the standard medical language exam administered by various Landesärztekammern (State Medical Chambers). It is known for varying significantly in difficulty and format from one state to another.
+## What to compare with your chamber
 
-*   **Administrator:** Local Medical Chambers (e.g., in Hessen, NRW, Saxony)
-*   **Format:** Varies by state (usually Patient-Doctor, Documentation, Doctor-Doctor)
-*   **Cost:** €400 - €1000+ (varies widely by state)
-*   **Consistency:** Can vary significantly depending on the examiner and region.
+| Question | Where to verify it |
+|---|---|
+| Is this certificate accepted for my application? | Your responsible licensing authority |
+| What are the tasks, timings and passing requirements? | The chosen provider's current instructions |
+| What does it cost? | Current booking/fee information |
+| What dates are available? | Actual booking calendar or chamber process |
+| What documents and submission order apply? | Authority instructions and booking requirements |
 
-## Key Differences
+Chamber procedures differ. This article does not claim that all chambers are subjective, test obscure medical trivia or have the same waiting time.
 
-### 1. Standardization vs. Variation
+The FaMed FAQ currently lists **€530**, separate from our preparation products. See the [cost and booking guide](/blog/famed-kosten-termine-statistik-2026). We do not publish an unsourced chamber-fee comparison.
 
-**FaMed** is designed to be highly standardized. Using the OSCE format, it aims to ensure that every candidate faces a comparable level of difficulty and impartial grading. This eliminates the "luck factor" often associated with traditional exams.
+## Recognition comes before purchase
 
-**FSP** is notorious for its lack of standardization. A case in Hamburg might be completely different from one in Munich. The grading can sometimes feel subjective depending on the examiners present.
+The provider lists FaMed recognition in Bayern and Rheinland-Pfalz; the RLP authority explicitly lists FaMed. Check the current responsible authority and your qualification route. Other destinations may apply conditions, including qualification route or certificate submission with the initial application. The [recognition article](/blog/famed-anerkennung-bundeslaender-2026) links the relevant sources and their limitations.
 
-### 2. Recognition
+A passed language examination is one possible licensing requirement. It does not itself grant Approbation or an unrestricted right to work.
 
-**FaMed** is currently recognized in specific states, most notably **Rheinland-Pfalz** and **Bavaria** (for Human Medicine). It may also be recognized in **Baden-Württemberg** under specific reciprocal recognition rules.
+## Prepare for the task you will actually take
 
-**FSP** is the default requirement in most other states. If you wish to work in a state that does not yet recognize FaMed, you must take the local FSP.
+Use the current practice test, then choose one speaking or writing skill to improve. SBAR and OPQRST can be useful **practice frameworks**, not mandatory scoring schemas. [Start with a pain-history exercise](/blog/pain-anamnesis-guide) or the [written-task guide](/blog/famed-arztbrief-soap-schema).
 
-### 3. Exam Structure (OSCE)
+[View our book sample](/blog/famed-protokoll-buch-vorschau) and [app walkthrough](/blog/famed-prep-app-so-funktionierts) before selecting optional preparation resources. Neither is an official exam booking or certificate.
 
-FaMed uses the **OSCE (Objective Structured Clinical Examination)** format. This typically involves a circuit of stations that simulate real-world medical scenarios:
+## Sources and review
 
-1.  **Anamnesegespräch** (Patient History)
-2.  **Patientenvorstellung** (Doctor-Doctor Communication)
-3.  **Schriftliche Dokumentation** (Medical Letter/Note)
-4.  **Aufklärung** (Patient Education)
-
-This structure is rigid and timed, ensuring you are tested on specific competencies rather than general conversation.
-
-## Which Exam Should You Take?
-
-### Choose FaMed if:
-
-*   You plan to work in **Bavaria** or **Rheinland-Pfalz**.
-*   You prefer a **structured, standardized exam** where expectations are clear.
-*   You want an exam developed by university researchers (LMU) with a focus on fairness.
-*   You want to avoid the "examiner lottery" of traditional FSPs.
-
-**THERE IS A WAY TO WORK ANYWHERE AFTER FAMED once you have your approbation dont worry. [click here to know more](/blog)**
-
-### Choose Traditional FSP if:
-
-*   You have a job offer in a state that **only** accepts the local Medical Chamber's exam (e.g., Hessen or NRW).
-*   Your local Approbation authority specifically demands the local FSP.
-
-## Preparation Strategy
-
-Standardized exams like FaMed reward systematic preparation. Focus on:
-*   **Structured Communication:** Learn precise phrases for transitioning between exam sections. [**Get the Official FaMED Book (€49.99)**](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU) for complete conversation protocols.
-*   **OSCE Timing:** Practice completing tasks strictly within the time limits (e.g., 20 minutes for Anamnese). [**Start Online Practice Exam**](/exam) 
-*   **Standard German:** FaMed values clear, professional German communication over dialect or slang.
-
-## Final Recommendation
-
-Before registering, **always contact your local Approbationsbehörde**. Ask specifically: *"Is the FaMed exam from LMU Munich recognized for my Approbation in this state?"*
-
-If the answer is yes, FaMed offers a fair, modern, and scientifically backed alternative to the traditional FSP.
+Editorial check: **18 October 2026**, human medicine. [Exam flow](https://famed-test.de/pruefungsablauf/), [Practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf), [FAQ](https://famed-test.de/faq/). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

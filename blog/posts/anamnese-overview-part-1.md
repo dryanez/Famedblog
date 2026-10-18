@@ -1,67 +1,53 @@
 ---
-title: "Mastering the FaMED Anamnese: Part 1 - Overview & Key Strategies"
+title: "FaMED Anamnese: Read the Task, Listen and Ask Clearly"
 slug: "anamnese-overview-part-1"
 date: "2025-12-11"
 author: "FaMED Test Prep Team"
 category: "Exam Strategy"
 tags: ["FaMED", "Anamnese", "Exam Prep", "Medical German", "Communication"]
 featured: false
-excerpt: "Master the crucial first 30 seconds and key strategies for the FaMED Anamnese station. Learn how to pass the intake interview with confidence."
+excerpt: "Read the task, ask clear questions and build a structured patient history using the current FaMed format."
 status: "published"
-readTime: "8 min"
+readTime: "3 min"
+updated: "2026-10-18"
 ---
 
-# Mastering the FaMED Anamnese: Part 1 - Overview & Intake Interview
+The Anamnesegespräch is one of the two situations in the doctor–patient station. The current practice test gives this situation **at most 11 minutes**; the paired history/consent block is **23 minutes including reading**.
 
-The Anamnese (Medical History) section of the FaMED exam is a 10-minute station that tests your clinical communication and information-gathering skills under time pressure. Success depends on understanding its unique and fast-paced format.
+## Read the actual assignment
 
-## The Decisive First 30 Seconds
+Identify your role, the person you are speaking with and the requested task. Use the supplied details; do not assume the display, case or role is always the same. The history case need not continue into the consent or writing task.
 
-Right at the beginning, you receive a crucial **30-second preparation window**. During this time, two key pieces of information appear on the left side of the screen:
+Introduce yourself naturally and check how to address the patient. For example:
 
-1.  **Your Assigned Role** (e.g., Emergency Room Physician).
-2.  **The Patient's Full Name**.
+> Guten Tag, mein Name ist …, ich bin heute für das Gespräch zuständig. Was führt Sie zu uns?
 
-**Your only task during these 30 seconds is to read and absorb this information.**
+## Listen before running through a checklist
 
-> [!TIP]
-> Use this time to mentally switch into your role. If you are an ER physician, anticipate acute conditions. If you are in a practice, think about chronic management.
+Let the person describe the main concern, then clarify onset, course and relevant associated symptoms. Ask one clear question at a time. If an answer already covers a point, do not repeat it merely to satisfy a mnemonic.
 
-## Execution and Core Strategy
+For pain, [OPQRST can help you organise follow-up questions](/blog/pain-anamnesis-guide). It is a memory aid, not a published FaMed scoring checklist.
 
-### The Greeting
-Your first action must be to **greet the patient by name**. This is an indispensable first step that demonstrates you have used the preparation time correctly.
+## Connect symptoms with background
 
-### Taking Notes
-It is strongly recommended to **take notes through the entire conversation**. This simple action helps you:
-- Keep track of questions already asked.
-- Maintain a clear structure.
+Ask about relevant previous illnesses, medication and allergies, then family/social circumstances and other information the situation calls for. The class materials use SAMPLER to remember information groups. Adapt it to the conversation rather than reciting every question in a fixed order.
 
-Under exam stress, notes are an invaluable tool to stay organized and ensure you cover all essential points of the medical history.
+Useful transitions include:
 
-## Want the Full Anamnese Checklist?
+- „Damit ich Ihre Beschwerden besser einordnen kann, frage ich noch nach Ihren Medikamenten.“
+- „Wie hat sich das seit Beginn verändert?“
+- „Wenn Sie sagen, Ihnen sei schwindelig: Wie fühlt sich das genau an?“
 
-We have compiled the complete current list of FaMED cases, Anamnese checklists, and other exam sections in our comprehensive study guide.
+[Patient idioms](/blog/deutsche-patientensprache-redewendungen) are useful material for practising clarification.
 
-<div className="my-8">
-  <LeadMagnetCTA />
-</div>
+## Summarise and respond
 
-## Join Our Community
+Keep notes faithful to what was said. At the end, offer a concise patient-facing summary, check it and explain the next steps appropriate to the assignment. Do not promise a diagnosis that has not been established.
 
-Don't study alone! Join our Telegram channel to connect with other candidates, ask questions, and get exclusive discounts on our app.
+> Ich fasse kurz zusammen: … Habe ich Sie richtig verstanden? Welche Frage ist für Sie noch offen?
 
-> [!NOTE]
-> **Join the FaMED Community**: [Click here to join our Telegram Channel](https://t.me/+vgtsHuqtwfk4MTJh) and mention you came from the blog for a special discount!
+Record a fictional practice interview, listen for clarity and choose one part to repeat. [Our book preview](/blog/famed-protokoll-buch-vorschau) shows a conversation-opening excerpt. [The app walkthrough](/blog/famed-prep-app-so-funktionierts) explains the separate practice areas; these are independent learning resources, not official case predictions.
 
-## Official Preparation Resources
+## Sources and review
 
-You can get access to **all this information**, including **all protocols**, **pro tips**, and a **deep dissection of the test** in the official book for FaMED preparation!
-
-![Official FaMED Preparation Book](/images/blog/famed-protokoll-book-3.jpg)
-
-[**Buy the Official FaMED Book**](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU)
-
----
-
-*Stay tuned for Part 2, where we dive deeper into specific Anamnese questions and red flags!*
+Editorial check: **18 October 2026**, human medicine. [Official exam flow](https://famed-test.de/pruefungsablauf/), [Current human-medicine practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

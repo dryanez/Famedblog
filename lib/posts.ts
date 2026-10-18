@@ -8,6 +8,7 @@ export interface BlogPost {
     slug: string;
     title: string;
     date: string;
+    updated?: string;
     readTime: string;
     category: string;
     content: string;

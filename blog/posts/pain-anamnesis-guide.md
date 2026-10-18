@@ -6,13 +6,20 @@ category: "Anamnese"
 readTime: "7 min"
 excerpt: "Apply the OPQRST pain anamnesis framework in fluent German. High-yield phrases, pain characterization, and differential diagnosis tips."
 tags: ['Pain Assessment', 'OPQRST', 'Anamnese', 'Clinical Skills']
+updated: "2026-10-18"
 ---
 
-# The Ultimate Guide to Pain Anamnesis: Mastering Medical History Taking
+These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 ## Introduction
 
 The Schmerzanamnese (pain history) is a fundamental component of medical history-taking and is indispensable for correctly diagnosing and treating patients. It allows the doctor to understand the type, cause, and intensity of pain and thus initiate targeted therapy. In this comprehensive guide, we will cover the essential aspects of pain history-taking, particularly in preparation for the FaMED exam. This article serves as a practical guide to improve your skills in Anamneseerhebung and give you confidence in exam situations.
+
+
+For a practical next step, continue with [Mastering the FaMED Anamnese: Part 1 - Overview & Key Strategies](/blog/anamnese-overview-part-1).
+
+
+Need a starting schedule? [Get the free study guide here](/lead-magnet), then adapt it to your own learning needs.
 
 ## Main Content
 
@@ -118,18 +125,23 @@ Ask about the patient's professional and social environment as well as possible 
 
 ### 7. Closing the Conversation (Gesprächsabschluss)
 
-Summarize the key points and provide an outlook on the next steps.
+Summarize the key points and describe the next steps supported by the assignment. The following is a fictional language example, not a required investigation plan.
 
 **Example:**
 
-"Jetzt würde ich noch einmal kurz zusammenfassen: Sie haben … Habe ich alles richtig verstanden? Möchten Sie noch etwas hinzufügen? Als Nächstes werde ich eine körperliche Untersuchung durchführen, Ihre Lunge und Ihr Herz abhören sowie Ihren Bauch abtasten. Außerdem werde ich Ihnen ein bisschen Blut abnehmen, um die Blutwerte zu kontrollieren. Anschließend werde ich alle Ergebnisse mit meinem Oberarzt besprechen, und dann können wir Ihnen sagen, was Sie genau haben. Haben Sie noch Fragen an mich? Dann gehen wir weiter. Von meiner Seite war das alles. Vielen Dank für Ihre Mitarbeit."
+"Jetzt würde ich noch einmal kurz zusammenfassen: Sie haben … Habe ich alles richtig verstanden? Möchten Sie noch etwas hinzufügen? Als Nächstes werde ich eine körperliche Untersuchung durchführen, Ihre Lunge und Ihr Herz abhören sowie Ihren Bauch abtasten. Außerdem werde ich Ihnen ein bisschen Blut abnehmen, um die Blutwerte zu kontrollieren. Die weiteren Schritte richten sich nach den erhobenen Informationen und der vorgesehenen Abklärung. Haben Sie noch Fragen an mich? Dann gehen wir weiter. Von meiner Seite war das alles. Vielen Dank für Ihre Mitarbeit."
+
 
 ## Conclusion
 
 The Schmerzanamnese is a decisive step in medical diagnostics. A structured and empathetic approach to conversation, combined with the application of methods like OPQRST and SAMPLER, allows you to gather valuable information and make an informed diagnosis. Practice these techniques regularly to improve your skills and gain confidence for the FaMED exam.
 
-## Resources 📚
 
-- 📖 FaMED Protocol Book: https://famedtestprep.com/famedprotokolle
-- 💻 FaMED App & Simulation: https://famedtestprep.com
-- 💬 Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
+To build on this exercise, read [Cardiovascular Cases in FaMED: STEMI, Angina & Heart Failure Protocols](/blog/kardiologie-faelle-famed-protokolle).
+
+
+Want to turn your reading into practice? [See how the FaMED Prep app works, step by step](/blog/famed-prep-app-so-funktionierts), before deciding whether its exercises fit your preparation.
+
+## Sources and review
+
+Editorial check: 18 October 2026. [FaMed requirements](https://famed-test.de/anforderungen/), [current exam flow](https://famed-test.de/pruefungsablauf/).

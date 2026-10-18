@@ -1,112 +1,50 @@
 ---
-title: "FaMED Arztbrief Writing Guide: SOAP Format & Time Management Under 20 Mins"
+title: "FaMED Written Task: The Anamnesis Section in 22 Minutes"
 date: "2026-09-06"
-readTime: "10 min"
+readTime: "3 min"
 category: "Documentation"
 status: "published"
 tags: ["FaMED", "Arztbrief", "Documentation", "SOAP"]
-excerpt: "Learn how to write a flawless German medical discharge letter under strict time pressure in the FaMED exam using the SOAP schema."
+excerpt: "Write the anamnesis from a patient video in complete sentences; understand why a full SOAP note is the wrong target."
+updated: "2026-10-18"
 ---
 
-The written station (Station 3) of the FaMED exam is a common pitfall for candidates. In the digital examination center, you watch a video of a physician-patient encounter and are given exactly **20 minutes** to write a concise, grammatically clean medical report (*Epikrise / Arztbrief*).
+The current human-medicine FaMed practice test asks for the **anamnesis section of a doctor's letter**, based on a patient video. The entire task has a **22-minute maximum, including video time**. The video may be paused and moved backward or forward.
 
-Candidates who write lengthy introductory essays frequently run out of time before reaching their therapeutic recommendations or diagnostic plan.
+## What belongs in the requested text
 
-By structuring your documentation according to the **SOAP method**, you ensure that no vital clinical data is missed while finishing safely within the 20-minute countdown.
+Capture the information actually given: identity and personal details, current symptoms and course, previous illnesses and medication, tobacco and alcohol use, family and social history and relevant travel history. Check the concrete assignment for the required information.
 
----
+Write **complete sentences** using appropriate medical language. Convey patient statements with suitable distance, for example the Konjunktiv where appropriate. Do not turn missing information into a negative finding.
 
-## The Anatomy of the SOAP Note
+## Step 1: Extract facts before composing
 
-SOAP divides clinical documentation into four distinct quadrants:
+Use a short note grid. Keep times, quantities and negations visible. Mark uncertain words so you can revisit the relevant video segment. A blank medication field does not mean the patient takes no medication.
 
-```
-S — Subjective (Was der Patient schildert)
-O — Objective  (Was der Arzt untersucht und misst)
-A — Assessment (Diagnosen, Differenzialdiagnosen & Beurteilung)
-P — Plan       (Diagnostik, Therapie & weiteres Vorgehen)
-```
+For a fictional language exercise, suppose the source says:
 
-Let us examine what belongs in each section during your FaMED exam:
+> „Seit drei Tagen habe ich Bauchschmerzen. Mir ist übel, aber ich habe nicht erbrochen.“
 
-![SOAP Schema Arztbrief Structure](/placeholder-image.jpg)
+Your notes could read: three days; abdominal pain; nausea; vomiting explicitly denied. They do not support a temperature, examination result or diagnosis.
 
----
+## Step 2: Convert the notes into connected sentences
 
-## 1. Subjective (Subjektive Angaben / Anamnese)
+A possible formulation is:
 
-Here you summarize the chief complaint (*Leitsymptom*) and the relevant history using precise medical verbs:
+> Der Patient gebe an, seit drei Tagen unter Bauchschmerzen zu leiden. Begleitend bestehe Übelkeit; Erbrechen werde verneint.
 
-* **Aktuelle Anamnese:**  
-  *"Der 62-jährige Patient stellte sich mit seit drei Tagen bestehenden krampfartigen Schmerzen im linken Unterbauch vor. Die Schmerzen strahlen in die Leistenregion aus und werden von Obstipation sowie Fieber bis 38,4 °C begleitet. Übelkeit oder Erbrechen wurden verneint."*
-* **Vorerkrankungen & Medikation:**  
-  *"Bekannte arterielle Hypertonie (Amlodipin 5 mg 1-0-0). Keine Voroperationen am Abdomen."*
-* **Allergien & Noxen:**  
-  *"Keine bekannten Medikamentenallergien. Gelegentlicher Nikotinkonsum (5 Zigaretten/Tag)."*
+This is an original short example, not a complete model answer or an official case. Preserve the facts before trying to make the sentence more elaborate.
 
----
+## Step 3: Check the draft against the source
 
-## 2. Objective (Objektive Befunde / Status praesens)
+Read for name and age, time course, side/location, units, medication names and negations. Then check sentence structure, verb forms, spelling and references. Use the 22-minute overall limit in full practice; your own viewing/writing split can change as you improve.
 
-Only document verified physical exam findings and vital signs. Keep sentences concise:
+## Where SOAP does and does not help
 
-* **Vitalzeichen:**  
-  *"Blutdruck: 135/85 mmHg, Herzfrequenz: 82/min rhythmisch, Temperatur: 38,3 °C axillär."*
-* **Körperliche Untersuchung:**  
-  *"Abdomen: Weich, lokalisierter Druckschmerz und Loslassschmerz im linken Unterbauch (Sigma-Divertikel-Zeichen). Keine Abwehrspannung. Darmgeräusche in allen vier Quadranten regelrecht vorhanden. Nierenlager beidseits indolent."*
-* **Labor & Schnelltests (sofern vorhanden):**  
-  *"Leukozyten: 13.800/µl, CRP: 68 mg/l. Urinstreifentest unauffällig."*
+SOAP organises some clinical notes into subjective, objective, assessment and plan. This FaMed assignment requests the anamnesis. It does **not** ask you to invent an objective examination, diagnosis, discharge plan or medication order to fill the other headings. Nor does it require you to recycle the patient from the earlier oral task.
 
----
+For connected practice, read the [history-taking guide](/blog/anamnese-overview-part-1) and [terminology table](/blog/medizinische-fachbegriffe-laiensprache-tabelle). [See actual book pages](/blog/famed-protokoll-buch-vorschau) for more phrasing practice, or [view the app workflow](/blog/famed-prep-app-so-funktionierts).
 
-## 3. Assessment (Beurteilung & Epikrise)
+## Sources and review
 
-This is the cognitive core where you synthesize findings into a working diagnosis:
-
-*"In der Zusammenschau der klinischen Symptomatik mit lokalisiertem linksseitigem Unterbauchschmerz, Fieber und deutlicher Erhöhung der Entzündungsparameter besteht der dringende Verdacht auf eine **akute Divertikulitis (Hinweis auf Sigmadivertikulitis)**.*
-
-*Differenzialdiagnostisch kommen eine Kolitis anderer Genese (z. B. ischämisch oder infektiös), eine Urolithiasis links sowie ein kolorektales Karzinom in Betracht."*
-
----
-
-## 4. Plan (Procedere & Therapie)
-
-Specify exact diagnostic next steps and immediate pharmacological interventions:
-
-* **Diagnostik:**
-  1. Abdomensonographie zum Nachweis von Darmwandverdickung und perikolischem Fettgewebsödem.
-  2. Bei unklarem Ultraschallbefund: Abdomen-CT mit rektaler und intravenöser Kontrastmittelgabe.
-  3. Koloskopie im entzündungsfreien Intervall (in ca. 4–6 Wochen) zum Malignomausschluss.
-* **Therapie:**
-  1. Nahrungskarenz und Flüssigkeitssubstitution intravenös.
-  2. Analgetische Therapie (z. B. Metamizol 1 g i.v. bei Bedarf).
-  3. Bei unkomplizierter Divertikulitis mit Risikofaktoren: Beginn einer antibiotischen Therapie (z. B. Cefuroxim + Metronidazol).
-  4. Stationäre Aufnahme zur Verlaufskontrolle.
-
----
-
-## 5 Time-Saving Rules for the Digital Test
-
-1. **Use Bullet Points in Objective & Plan:** Examiners prefer clean lists over dense narrative blocks. It saves you 3–5 minutes of typing.
-2. **Watch Your Medical Orthography:** Misspelling standard Latin terms (*"Appendisitis"* instead of *Appendizitis*) will cost valuable linguistic points.
-3. **Never Omit Vital Signs:** Even if normal, always state: *"Kreislauf stabil, afebril / subfebril"*.
-4. **Draft the Assessment First:** If you know your diagnosis early, formulating the Plan takes less than 3 minutes.
-5. **Reserve 2 Minutes for Proofreading:** Quickly check for subject-verb agreement and German compound nouns (*Unterbauchschmerzen*, *Entzündungsparameter*).
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: **18 October 2026**, human medicine. [Official exam flow](https://famed-test.de/pruefungsablauf/), [Current human-medicine practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

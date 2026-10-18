@@ -1,90 +1,51 @@
 ---
-title: "Cardiovascular Cases in FaMED: STEMI, Angina & Heart Failure Protocols"
+title: "Cardiology Language Practice: Symptoms, Findings and Case Presentations"
 date: "2026-08-22"
-readTime: "13 min"
+readTime: "3 min"
 category: "Clinical Cases"
 status: "published"
 tags: ["FaMED", "Kardiologie", "OSCE Cases", "Innere Medizin"]
-excerpt: "Cardiology represents over 30% of all FaMED internal medicine stations. Review the full clinical protocols for acute myocardial infarction, stable angina, and acute heart failure."
+excerpt: "Practise accurate German communication with fictional cardiovascular examples, without invented exam frequencies or treatment algorithms."
+updated: "2026-10-18"
 ---
 
-Internal medicine is the backbone of the FaMED examination, and within internal medicine, **cardiology is the single most frequently tested specialty**. In virtually every FaMED testing session, at least one of your two assigned patient encounters involves acute or chronic chest complaints.
+Cardiovascular examples can help you practise medical German. They are not evidence that a particular diagnosis appears in a certain share of FaMed exams.
 
-Examiners use cardiovascular cases to evaluate whether you can maintain clinical calm while swiftly initiating life-saving diagnostic and therapeutic algorithms in German.
+FaMed assesses language performance, not medical knowledge separately. In the presentation task, report the information supplied rather than inventing a diagnosis, drug dose or intervention.
 
-In this guide, we review the exact examination scripts and doctor handover protocols for the **three primary cardiology cases**.
+## Ask about a reported symptom
 
----
+For a fictional history exercise involving chest discomfort, practise clear questions:
 
-![Cardiovascular OSCE Case Protocols](/placeholder-image.jpg)
+- „Seit wann bestehen die Beschwerden?“
+- „Wie fühlen sie sich an, und wo genau spüren Sie sie?“
+- „Strahlen die Beschwerden aus?“
+- „Was hat sich seit Beginn verändert?“
 
----
+These examples practise language. Answers alone do not confirm or exclude a particular disease. Use the [pain-history framework](/blog/pain-anamnesis-guide) to adapt follow-up questions to the source scenario.
 
-## Case 1: ST-Elevation Myocardial Infarction (STEMI / Akuter Herzinfarkt)
+## Separate the patient's report from findings
 
-### Patient Presentation (Station 1)
-* **Patient:** 61-jähriger Bauingenieur, starker Raucher (40 PY).
-* **Leitsymptom:** Vor 90 Minuten plötzlich aufgetretener, massiver Druckschmerz hinter dem Brustbein (*"als ob ein Elefant auf meiner Brust sitzt"*), Ausstrahlung in linken Unterkiefer und linken Arm. Begleitend Übelkeit und Todesangst.
+Suppose a fictional source states that Herr Beispiel reports breathlessness when lying down, that his legs have become swollen, and that an examination report is not supplied.
 
-### Key Anamnese Questions to Ask:
-1. *"Seit wie vielen Minuten bestehen diese unerträglichen Schmerzen ganz genau?"* (Crucial for the PCI door-to-balloon time window).
-2. *"Haben Sie Nitrospray ausprobiert und hat es geholfen?"* (Patients with known CHD; in STEMI, nitrates bring no significant relief).
-3. *"Haben Sie vor Kurzem Operationen, Magenblutungen oder Schlaganfälle gehabt?"* (Assessing contraindications for immediate dual antiplatelet therapy and anticoagulation).
+A faithful formulation is:
 
-### Doctor-to-Doctor Handover (Station 2):
-*"Ich übergebe Herrn Werner Koch, einen 61-jährigen Patienten mit dem dringenden Verdacht auf ein **akutes Koronarsyndrom bei V.a. STEMI**. Im 12-Kanal-EKG zeigen sich signifikante ST-Strecken-Hebungen von > 0,2 mV in den Ableitungen II, III und aVF mit spiegelbildlichen Senkungen in I und aVL, vereinbar mit einem **akuten Hinterwandinfarkt**.*
+> Herr Beispiel berichte über Atemnot im Liegen und neu aufgetretene Beinschwellungen. Zu Auskultation und Vitalparametern liegen im vorliegenden Material keine Angaben vor.
 
-*Als Sofortmaßnahmen habe ich veranlasst: Oberkörperhochlagerung, Anlage von zwei großlumigen venösen Zugängen, kontinuierliches EKG-Monitoring, Gabe von 250 mg ASS i.v., 5000 IE unfraktioniertem Heparin sowie 5 mg Morphin i.v. bei starken Schmerzen. Das Herzkatheterlabor ist bereits zur umgehenden primären perkutanen Koronarintervention (PCI) alarmiert."*
+Do not add crackles, oxygen saturation or a medication administration simply because they might fit an expected diagnosis.
 
----
+## Present a documented finding precisely
 
-## Case 2: Stable Angina Pectoris (Stabile KHK / Belastungsangina)
+If the source actually supplies an ECG finding, measurement or plan, report it with its units, timing and context. Preserve whether the source calls something suspected or confirmed. An assessment must not become more certain merely to make your language sound confident.
 
-### Patient Presentation (Station 1)
-* **Patient:** 54-jährige Verkäuferin mit Hypercholesterinämie und Adipositas.
-* **Leitsymptom:** Seit mehreren Wochen auftretende retrosternale Engegefühle, die ausschließlich beim schnellen Gehen oder Treppensteigen auftreten und in Ruhe nach 3–5 Minuten vollständig abklingen.
+[The SBAR practice article](/blog/sbar-schema-arzt-arzt-gespraech) helps organise information. It does not prescribe a compulsory official schema or clinical treatment sequence.
 
-### Differential Diagnosis Reasoning (Station 2):
-*"Aufgrund des typischen Schmerzcharakters mit reproduzierbarer Auslösung unter körperlicher Belastung und rascher Beschwerdebesserung in Ruhe besteht der dringende Verdacht auf eine **stabile koronare Herzkrankheit (KHK, CCS-Klasse II)**.*
+## Use the correct task for writing
 
-*Differenzialdiagnostisch müssen wir eine muskuloskelettale Ursache, ein Tietze-Syndrom sowie eine Refluxösophagitis abgrenzen. Eine Lungenembolie oder Aortendissektion ist aufgrund des subakuten, belastungsabhängigen Verlaufs unwahrscheinlich, muss aber im Hinterkopf behalten werden.*
+The written station asks for the anamnesis section from its video. It does not require you to write an acute-heart-failure treatment plan or carry over this cardiology case. See the [written-task guide](/blog/famed-arztbrief-soap-schema).
 
-*Zur weiteren Diagnostik empfehle ich die Bestimmung des kardiovaskulären Risikoprofils im Nüchternlabor, ein Ruhe-EKG, eine transthorakale Echokardiographie sowie eine Ischämiediagnostik mittels **Belastungs-EKG** oder **Stressechokardiographie**."*
+For further independent language practice, [look inside the digital book](/blog/famed-protokoll-buch-vorschau) or [see the app's real exercise areas](/blog/famed-prep-app-so-funktionierts). This article contains no treatment protocol or prediction of official exam cases.
 
----
+## Sources and review
 
-## Case 3: Acute Decompensated Heart Failure (Akute Herzinsuffizienz / Lungenödem)
-
-### Patient Presentation (Station 1)
-* **Patient:** 73-jähriger Rentner mit bekannter ischämischer Kardiomyopathie.
-* **Leitsymptom:** Zunehmende Atemnot im Liegen (*Orthopnoe*), schläft nur noch mit drei Kissen. Seit drei Tagen Gewichtszunahme um 4 kg und deutliche Schwellung beider Unterschenkel. Nächtlicher Reizhusten mit schaumigem Auswurf.
-
-### High-Yield Auscultation & Exam Vocabulary:
-* **Lunge:** *"Feuchte, fein- bis mittelblasige Rasselgeräusche (RG) beidseits basal, vereinbar mit einem kardialen Lungenödem."*
-* **Halsvenen:** *"Sichtbare Halsvenenstauung bei 45 Grad aufgerichtetem Oberkörper."*
-* **Beine:** *"Beidseitige prall-elastische, eindrückbare Unterschenkel- und Knöchelödeme."*
-
-### Immediate Therapy Plan in the Arztbrief (Station 3):
-1. **Positioning:** *Herzbettlagerung (Oberkörper hoch, Beine tief zur Senkung der kardialen Vorlast).*
-2. **Oxygen:** *Sauerstoffgabe über Nasenbrille zur Aufrechterhaltung einer SpO₂ > 92 %.*
-3. **Diuresis:** *Furosemid 40 mg i.v. als Bolus zur forcierten Diurese.*
-4. **Vasodilatation:** *Nitroglycerin sublingual oder per Perfusor bei systolischem Blutdruck > 110 mmHg.*
-5. **Diagnostics:** *Bestimmung von NT-proBNP, Troponin, Elektrolyten und Nierenwerten; Echokardiographie zur Beurteilung der LVEF.*
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: **18 October 2026**, human medicine. [Official exam flow](https://famed-test.de/pruefungsablauf/), [Current human-medicine practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

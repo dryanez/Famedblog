@@ -1,98 +1,58 @@
 ---
-title: "B-Symptoms Explained: Your Guide to Weight Loss, Fever & Night Sweats"
+title: "B-Symptoms in German: Ask About Fever, Sweating and Weight Change"
 date: "2026-01-17"
 status: "published"
 category: "Anamnese"
-readTime: "6 min"
-excerpt: "How to systematically ask about and document B-symptoms (fever, night sweats, unexplained weight loss) in German clinical consultations."
+readTime: "3 min"
+excerpt: "Understand the term and practise source-faithful questions without diagnosing cancer from a symptom list."
 tags: ['B-Symptomatik', 'Oncology', 'Internal Medicine', 'Anamnese']
+updated: "2026-10-18"
 ---
 
-## B-Symptoms Explained: Your Guide to Weight Loss, Fever & Night Sweats
+The term **B-symptoms** is used particularly in lymphoma contexts for unexplained fever above 38°C, marked night sweats and unintended weight loss of more than 10% over six months. These symptoms can have different causes; they do not by themselves diagnose cancer or establish its stage.
 
-### Introduction
+This article focuses on German questions and documentation. It is not a fixed investigation plan.
 
-In medical diagnostics, non-specific symptoms often play a crucial role. Among these, the so-called B-symptoms — unintentional weight loss, fever, and night sweats — hold a special significance. Although they can occur in many different diseases, they are particularly important in the context of oncological history-taking. This blog post provides you with a comprehensive overview of B-symptoms, their significance, and how they are assessed during a medical examination.
+## Ask about each symptom separately
 
-### What Are B-Symptoms?
+For weight change:
 
-B-symptoms are characteristic signs that may indicate a systemic disease. They include:
+> Haben Sie ungewollt Gewicht verloren? Wie viel ungefähr und in welchem Zeitraum? Wie hoch war Ihr Gewicht vorher?
 
-*   **Unintentional weight loss (Ungewollter Gewichtsverlust):** A significant weight loss of more than 10% of body weight within 6 months without deliberate dieting or increased physical activity.
-*   **Fever (Fieber):** Unexplained fever above 38°C that cannot be explained by an obvious infection or other known causes.
-*   **Night sweats (Nachtschweiß):** Repeated occurrence of heavy sweating during the night, so severe that clothing or bedding becomes soaked.
+For fever:
 
-### The Importance of B-Symptoms in Medical History-Taking
+> Haben Sie Fieber gemessen? Wie hoch war die Temperatur, und wann wurde sie gemessen?
 
-Capturing B-symptoms is particularly important in the Anamnese, as they can point to various underlying conditions. The most common include:
+For night sweating:
 
-*   **Infections:** Tuberculosis, HIV, bacterial infections
-*   **Autoimmune diseases:** Systemic Lupus Erythematosus (SLE), Rheumatoid Arthritis
-*   **Inflammatory diseases:** Morbus Crohn
-*   **Malignant lymphomas:** Hodgkin-Lymphom, Non-Hodgkin-Lymphom
-*   **Leukemias:** Acute and chronic leukemias
-*   **Other cancers:** Less common in solid tumors, but can occur.
+> Schwitzen Sie nachts? Ist es so stark, dass Sie Kleidung oder Bettwäsche wechseln müssen? Wie oft kommt das vor?
 
-Particularly in the context of oncological history-taking, B-symptoms often signal advanced disease or a high tumor burden.
+One answer does not establish that the other symptoms were denied. Avoid writing a blanket „B-Symptomatik verneint“ after asking only about weight.
 
-### Assessing B-Symptoms in the Patient Interview
+## Keep the report faithful
 
-To adequately capture B-symptoms, a structured Anamnesegespräch is essential. Here are some important questions you should ask as a doctor:
+Fictional source statement: „Ich habe in drei Monaten etwa vier Kilo verloren, ohne eine Diät zu machen.“
 
-*   **Weight loss (Gewichtsverlust):**
-*   "Haben Sie in den letzten sechs Monaten ungewollt Gewicht verloren?"
-*   "Wie viel Gewicht haben Sie ungefähr verloren?"
-*   "Haben Sie bemerkt, dass Ihre Kleidung lockerer sitzt?"
-*   "Haben Sie Ihren Appetit in letzter Zeit verändert?"
+Possible formulation:
 
-*   **Fever (Fieber):**
-*   "Hatten Sie in letzter Zeit Fieber?"
-*   "Wie hoch war das Fieber (wenn gemessen)?"
-*   "Wann tritt das Fieber auf (Tageszeit)?"
-*   "Gibt es Begleitsymptome wie Schüttelfrost?"
+> Der Patient gebe an, innerhalb von drei Monaten ungewollt etwa vier Kilogramm abgenommen zu haben.
 
-*   **Night sweats (Nachtschweiß):**
-*   "Haben Sie in letzter Zeit unter Nachtschweiß gelitten?"
-*   "Ist der Schweiß so stark, dass Sie Ihre Kleidung oder Bettwäsche wechseln müssen?"
-*   "Wie oft tritt der Nachtschweiß auf?"
+Without the starting weight you cannot infer a percentage. Do not change „etwa“ into an exact measurement. If no fever question was asked, do not add „afebril“.
 
-It is important to carefully document the patient's answers and follow up to get a complete picture of the symptoms.
+## Respond to concern honestly
 
-### Differential Diagnostic Considerations
+A useful response acknowledges the question without guaranteeing a diagnosis:
 
-It is crucial not to view B-symptoms in isolation, but to evaluate them in the context of other symptoms, medical history, and physical examination. Other causes for the symptoms must be ruled out before a malignant disease is considered.
+> Ich verstehe, dass Sie sich Sorgen machen. Diese Beschwerden können unterschiedliche Ursachen haben. Wir halten zunächst genau fest, was sich verändert hat, und besprechen die vorgesehenen nächsten Schritte.
 
-### Further Diagnostics
+Avoid „Krebs ist ausgeschlossen“ or a claim about inheritance when the available information does not support it. Clinical investigations depend on professional assessment in the actual case.
 
-If a malignant disease is suspected based on B-symptoms, further diagnostic measures are required. These may include:
+## Put the questions into a conversation
 
-*   **Blood tests (Blutuntersuchungen):** Blood count, inflammatory markers, liver and kidney values, LDH, Beta-2-Mikroglobulin
-*   **Imaging (Bildgebung):** Chest X-ray, CT Thorax/Abdomen/Pelvis, MRI, PET-CT
-*   **Lymph node biopsy (Lymphknotenbiopsie):** If lymphoma is suspected
-*   **Bone marrow biopsy (Knochenmarkbiopsie):** If leukemia is suspected
+FaMed assesses language performance, not a memorised oncology algorithm. Ask relevant questions, listen and summarise. The [oncological-history examples](/blog/oncological-anamnesis-mastery) and [general history guide](/blog/anamnese-overview-part-1) show how these information groups fit into a conversation.
 
-### The Role of Vegetative History-Taking
+[See our digital book sample](/blog/famed-protokoll-buch-vorschau) or [view the app walkthrough](/blog/famed-prep-app-so-funktionierts) for further language practice.
 
-The vegetative Anamnese is an important component of comprehensive history-taking and helps to better classify B-symptoms. It includes questions about:
+## Sources and review
 
-*   **Temperature:** "Haben Sie Fieber gemessen?"
-*   **Sleep:** "Schlafen Sie gut? Haben Sie Ein- oder Durchschlafschwierigkeiten?"
-*   **Appetite:** "Hat sich Ihr Appetit in letzter Zeit verändert?"
-*   **Bowel and urination:** "Haben Sie Probleme beim Wasserlassen oder Stuhlgang? Leiden Sie unter Durchfall oder Verstopfung?"
-*   **Cough:** "Haben Sie Husten? Kommt dabei Schleim hoch oder ist es ein trockener Husten?"
-
-### Communication and Responding to Patient Anxiety
-
-It is crucial to listen attentively to the patient during the conversation and address their fears. Phrases like "Ich kann Ihre Angst sehr gut verstehen" or "Beruhigen Sie sich bitte! Sie brauchen im Moment keine Angst zu haben" can have a calming effect. It is important to emphasize that B-symptoms can have many causes and do not necessarily indicate cancer. Open and honest communication is essential to gain the patient's trust and enable successful diagnosis and treatment.
-
-If cancer runs in the family and the patient is afraid, you can respond: "Ich kann Ihre Angst sehr gut verstehen. Aber ich möchte Sie beruhigen, weil Krebs nicht 100% erblich ist." or "Um ehrlich zu sein, ist Krebs nicht 100% ausgeschlossen, Ihre Beschwerden könnten auch viele andere Gründe haben."
-
-### Conclusion
-
-B-symptoms are important warning signs that can indicate various diseases. Careful assessment during medical history-taking is essential to make the correct diagnosis and initiate appropriate therapy. Especially in the context of oncological history-taking, B-symptoms should always be taken seriously and further investigated.
-
-### Resources 📚
-
-*   📖 FaMED Protocol Book: https://famedtestprep.com/famedprotokolle
-*   💻 FaMED App & Simulation: https://famedtestprep.com
-*   💬 Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
+Editorial check: **18 October 2026**, human medicine. [GPOH clinical glossary](https://www.gpoh.de/kinderkrebsinfo/content/e67296/e8939/index_ger.html?selected=B), [Exam requirements](https://famed-test.de/anforderungen/). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

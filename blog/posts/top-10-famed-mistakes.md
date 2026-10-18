@@ -1,76 +1,58 @@
 ---
-title: "Top 10 FaMED-Fehler: Was ausländische Ärzte in der Fachsprachenprüfung vermeiden sollten"
+title: "FaMED: Zehn vermeidbare Fehler beim Üben"
 date: "2025-05-20"
-excerpt: "Die FaMED-Prüfung ist für viele internationale Ärztinnen und Ärzte die größte Hürde auf dem Weg zur Approbation. Wir zeigen Ihnen die 10 häufigsten Fehler und wie Sie diese mit dem FaMED Protokoll Book vermeiden."
+excerpt: "Zehn praktische Prüfpunkte zu Aufgabenverständnis, Gesprächsführung und quellentreuem Schreiben, ohne erfundene Prüfungsregeln."
 tags: [Fachsprachenprüfung, FaMED, Medizindeutsch, Approbation, Prüfungstipps]
 status: "published"
 category: "Exam Tips"
-readTime: "7 min"
+readTime: "3 min"
+updated: "2026-10-18"
 ---
 
-Die Fachsprachenprüfung (FaMED) ist oft der schnellste Weg, um die für die Approbation erforderlichen Deutschkenntnisse auf C1-Niveau nachzuweisen. Doch Vorsicht: Viele hochqualifizierte Ärztinnen und Ärzte scheitern nicht an ihrem medizinischen Wissen, sondern an spezifischen kommunikativen und formalen Fehlern.
+Diese zehn Punkte sind eine Lernhilfe von FaMED Prep, keine statistisch ermittelte Rangliste. Maßgeblich sind die aktuellen Aufgaben des Prüfungsanbieters. FaMED Prep bietet unabhängige Vorbereitungsmaterialien an.
 
-Basierend auf den offiziellen Richtlinien und den wertvollen Inhalten des **FaMED Protokoll Books**, haben wir die zehn häufigsten Fehler zusammengestellt, die Sie unbedingt vermeiden sollten.
+## 1. Aufgabe und Rolle nicht genau lesen
 
-### 1. Verwendung von medizinischem Jargon gegenüber Patienten
-In der Station „Arzt-Patienten-Kommunikation“ ist die Laiensprache der absolute Schlüssel zum Erfolg. Viele Kandidaten verfallen unter Stress in Fachbegriffe wie „Hämatochezie“ oder „Dysphagie“. 
-*   **Der Tipp aus dem FaMED Protokoll Book:** Erklären Sie komplizierte Sachverhalte immer umschreibend. Sagen Sie statt „Ösophagogastroduodenoskopie“ lieber „Magenspiegelung“ und erklären Sie, dass ein flexibler Schlauch mit einer Kamera verwendet wird.
+Prüfe, was in dieser Situation verlangt wird. Eine feste 30-Sekunden-Vorbereitung lässt sich aus den aktuell geprüften Quellen nicht als allgemeine Regel ableiten. Verwende die Angaben des tatsächlichen Auftrags.
 
-### 2. Die ersten 30 Sekunden der Vorbereitung ignorieren
-Zu Beginn der Anamnese-Station haben Sie genau 30 Sekunden Zeit. Viele nutzen diese Zeit nicht effektiv.
-*   **Ground Truth:** In diesen 30 Sekunden werden Ihre Rolle und der vollständige Name des Patienten angezeigt. Begrüßen Sie den Patienten unbedingt mit seinem Namen! Dies zeigt den Prüfern sofort, dass Sie aufmerksam und organisiert sind.
+## 2. Situation und Station verwechseln
 
-### 3. Fehlende Struktur in der Schmerzanalyse
-Ein häufiger Fehler ist eine ungeordnete Exploration der Schmerzen. 
-*   **Lösung:** Nutzen Sie konsequent den **OPQRST-Algorithmus**, wie er im FaMED Protokoll Book detailliert beschrieben wird. Fragen Sie nach dem zeitlichen Auftreten (Onset), der Lokalisation, der Stärke (Skala 0-10) und der Qualität des Schmerzes (brennend, stechend, dumpf).
+Der aktuelle Übungstest nennt maximal elf Minuten je mündlicher Situation. Der Arzt–Patient-Block umfasst Anamnese und Aufklärung, der Arzt–Arzt-Block zwei Vorstellungen; beide Blöcke dauern 23 Minuten einschließlich Lesezeit. Die schriftliche Station dauert 22 Minuten einschließlich Videozeit.
 
-### 4. Den Konjunktiv I im Arztbrief vernachlässigen
-Der schriftliche Teil der Prüfung verlangt absolute formale Präzision. Patientenäußerungen müssen im korrekten **Konjunktiv I** wiedergegeben werden.
-*   **Beispiel:** Statt „Der Patient hat Schmerzen“ schreiben Sie: „Der Patient gebe an, er habe Schmerzen.“ Dies signalisiert die nötige professionelle Distanz und Objektivität.
+## 3. Alle Fälle zu einer Geschichte verbinden
 
-### 5. „Red Flags“ in der vegetativen Anamnese übersehen
-In Fällen wie dem Kolonkarzinom oder Bronchialkarzinom sind die B-Symptome entscheidend. Viele Bewerber vergessen nach ungewolltem Gewichtsverlust, Nachtschweiß oder Fieber zu fragen.
-*   **Ground Truth:** Das FaMED Protokoll Book betont, dass die vegetative Anamnese wie ein „Check der Armaturen im Auto“ ist – sie darf niemals fehlen, um lebensbedrohliche Diagnosen nicht zu übersehen.
+Die Personen und Fälle können sich unterscheiden. Übernimm keine Befunde aus dem vorherigen Gespräch. Halte die Angaben getrennt.
 
-### 6. Leere Empathie-Floskeln verwenden
-Patienten in der Prüfung sind oft ängstlich oder sauer. Ein mechanisches „Machen Sie sich keine Sorgen“ wirkt oft abweisend.
-*   **Besser:** Validieren Sie die Gefühle. Das FaMED Protokoll Book empfiehlt Formulierungen wie: „Ich kann total verstehen, dass Sie sich Sorgen machen, weil Sie bisher noch nie operiert worden sind.“ Gehen Sie auf die spezifische Ursache der Angst ein.
+## 4. Fachwörter ungeklärt stehen lassen
 
-### 7. Zeitmanagement in der Arzt-Arzt-Kommunikation
-In der 10-minütigen Station für die Patientenvorstellung haben Sie nur 2,5 Minuten Einlesezeit. Viele verzetteln sich in Details und kommen nicht zum „Procedere“.
-*   **Die Struktur:** Folgen Sie der im Buch vorgegebenen Kette: Einleitung → Aktuelle Anamnese → Wichtige Untersuchungsbefunde → Labor/Bildgebung → Beurteilung & Plan.
+Erkläre Fachbegriffe im Patientengespräch verständlich. Frage nach, wenn eine Antwort unklar ist. Unsere [Begriffstabelle](/blog/medizinische-fachbegriffe-laiensprache-tabelle) liefert Beispiele; sie ist keine offizielle Vokabelliste.
 
-### 8. Vernachlässigung der Sozialanamnese
-Die Prüfer achten darauf, ob Sie an die Zeit nach der Entlassung denken. 
-*   **Fehler:** Zu vergessen, nach der häuslichen Situation oder dem Beruf zu fragen. 
-*   **Wichtig:** „Müssen Sie viele Treppen steigen?“ oder „Gibt es jemanden, der sich im Notfall um Sie kümmern kann?“ sind essenzielle Fragen für die Entlassungsplanung.
+## 5. Eine Merkhilfe wie einen Pflichtfragebogen behandeln
 
-### 9. Unvollständige Aufklärung über Risiken
-Bei der Patientenaufklärung müssen Risiken nicht nur genannt, sondern oft auch quantifiziert werden. 
-*   **Beispiel aus dem Protokoll:** Bei einer Thyroidektomie sollte erwähnt werden, dass eine Verletzung des Stimmbandnervs bei etwa 1 % der Patienten vorkommt.
+OPQRST und SAMPLER helfen beim Ordnen. Wähle Fragen passend zur Beschwerde und höre auf die Antworten. Eine lange Liste ersetzt keine Gesprächsführung.
 
-### 10. Mangelnde Dokumentation
-Ein zentraler Leitsatz im deutschen Gesundheitssystem lautet: „Was nicht dokumentiert wurde, wurde auch nicht gemacht.“ 
-*   **Tipp:** Machen Sie sich während des Gesprächs Notizen. Dies hilft Ihnen nicht nur, den Überblick zu behalten, sondern ist die Basis für einen fehlerfreien Arztbrief.
+## 6. Sorgen mit einer Garantie beantworten
 
----
+„Es kann nichts passieren“ ist keine gute Risikoaufklärung. Benenne, was bekannt ist, erkläre die bereitgestellten Informationen und frage nach dem konkreten Anliegen. Erfinde keine Prozentzahl, um überzeugender zu klingen.
 
-### Praktische Tipps für Ihre Vorbereitung
+## 7. Befunde und Maßnahmen erfinden
 
-Um diese Fehler zu vermeiden, ist eine integrierte Vorbereitung unerlässlich. 
-1.  **Arbeiten Sie mit dem FaMED Protokoll Book:** Es bietet Ihnen den klaren Rahmen und die Redemittel, die Sie für alle drei Stationen benötigen.
-2.  **Nutzen Sie die FaMED App:** Auf [www.famedtestprep.com](http://www.famedtestprep.com) finden Sie interaktive Lerntools und simulierte Patientengespräche. Die Kombination aus gedruckten Protokollen und digitalem Training ist der sicherste Weg zum Bestehen.
-3.  **Simulation unter Zeitdruck:** Üben Sie die 10-Minuten-Szenarien mit Kollegen oder vor dem Spiegel, um ein Gefühl für das Tempo der Prüfung zu bekommen.
+In der Vorstellung unterscheidest du Patientenangaben, dokumentierte Befunde und den vorgegebenen Plan. Sage offen, wenn eine Information fehlt. Das medizinische Fachwissen wird nicht separat bewertet.
 
-Die FaMED-Prüfung testet Ihre Fähigkeit, spontan und fließend zu reagieren. Mit der richtigen Struktur und den passenden Werkzeugen werden Sie diese Hürde erfolgreich meistern.
+## 8. Einen vollständigen SOAP-Brief schreiben
 
-**Viel Erfolg bei Ihrer Prüfung!**
-*Ihr Team von FaMEDTestPrep.com*
+Gefragt ist der Anamneseteil aus dem eigenen Patientenvideo. Schreibe vollständige Sätze. Ergänze keine Untersuchung, Diagnose oder Therapie, nur weil ein allgemeines Schema dafür ein Feld vorsieht. [Hier übst du den Schreibablauf](/blog/famed-arztbrief-soap-schema).
 
----
+## 9. Negationen und Zeitangaben verlieren
 
-### 🚀 Ressourcen für Ihren Erfolg
+„Nicht erbrochen“ und „Erbrechen nicht erfragt“ bedeuten etwas anderes. Vergleiche Notizen und Text mit der Quelle. Gib Patientenäußerungen mit angemessener Distanz wieder; Konjunktiv I ist dabei ein geeignetes sprachliches Mittel, wenn er passt.
 
-*   📚 **FaMED Protokoll Book:** [Hier bestellen](https://famedtestprep.com/famedprotokolle)
-*   📱 **FaMED App & Simulation:** [Jetzt starten](https://famedtestprep.com)
-*   💬 **Community:** [Telegram Gruppe beitreten](https://t.me/+vgtsHuqtwfk4MTJh)
+## 10. Üben ohne Rückmeldung
+
+Wähle nach jedem Versuch einen konkreten Verbesserungspunkt. Die offizielle C1-Checkliste hilft beim Prüfen von Verständlichkeit, Struktur und Genauigkeit. Jeder der drei Prüfungsbereiche braucht mindestens 60%; ein starker Bereich gleicht einen zu schwachen nicht aus.
+
+[Schau in das digitale Buch](/blog/famed-protokoll-buch-vorschau) oder [lerne die App zuerst kennen](/blog/famed-prep-app-so-funktionierts). Mit der [30-Minuten-Routine](/blog/famed-vorbereitung-30-minuten-lernroutine) kannst du einen dieser Punkte heute üben.
+
+## Sources and review
+
+Editorial check: **18 October 2026**, human medicine. [Prüfungsablauf](https://famed-test.de/pruefungsablauf/), [Aktueller Übungstest](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf), [Anforderungen](https://famed-test.de/anforderungen/), [Bewertung](https://famed-test.de/pruefungsergebnis/). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

@@ -1,98 +1,58 @@
 ---
-title: "Differential Diagnosis in German: Phrases and Reasoning Examiners Love to Hear"
+title: "Diagnostic Uncertainty in German: Precise Phrases for Case Presentations"
 date: "2026-08-28"
-readTime: "11 min"
+readTime: "3 min"
 category: "Medical Terminology"
 status: "published"
 tags: ["FaMED", "Differentialdiagnose", "Medical German", "Arzt-Arzt"]
-excerpt: "Learn the exact academic phrasing and clinical reasoning connectors needed to articulate differential diagnoses with senior German doctors in the FaMED exam."
+excerpt: "Practise reporting a supplied suspicion, alternatives and missing information without inventing a clinical algorithm."
+updated: "2026-10-18"
 ---
 
-During Station 2 of the FaMED exam, after presenting your patient's symptoms, the examiner will look you in the eye and ask:
-> *"Herr Kollege / Frau Kollegin, welche Differentialdiagnosen ziehen Sie in Betracht und wie grenzen Sie diese ab?"*
+In a medical-language presentation, precision is more useful than theatrical certainty. A suspected diagnosis is not a confirmed finding; an unanswered question is not a negative result.
 
-Many candidates know the medical diagnoses perfectly well, but their German becomes hesitant. They say: *"Vielleicht ist es Herzinfarkt oder vielleicht Pneumonie..."*
+FaMed supplies the information for its patient presentations and does not separately assess medical knowledge.
 
-In German academic medicine, senior consultants expect structured clinical confidence. You need to distinguish between your primary working diagnosis (*Verdachtsdiagnose*), critical emergencies to rule out (*Ausschlussdiagnosen*), and plausible alternatives (*Differenzialdiagnosen*).
+## Name the source and degree of certainty
 
-Here is your phrasebook for formulating flawless differential diagnostic reasoning.
+Use the wording that the task supports:
 
----
+| Information in the material | Possible German phrasing |
+|---|---|
+| Patient reports a symptom | „Die Patientin berichte über …“ |
+| A finding is documented | „Im vorliegenden Befund wird … beschrieben.“ |
+| A suspicion is stated | „Laut Aufgabeninformation besteht der Verdacht auf …“ |
+| A diagnosis is confirmed in the source | „Als gesicherte Diagnose ist … angegeben.“ |
+| Information is absent | „Hierzu liegen mir keine Angaben vor.“ |
 
-![Clinical Reasoning and Differential Diagnosis Hierarchy](/placeholder-image.jpg)
+These are practice formulations, not prescribed official sentences.
 
----
+## Use alternatives without inventing a conclusion
 
-## The 3-Tier Diagnostic Hierarchy
+If the assignment contains alternatives, introduce them clearly:
 
-Structure your thoughts into three distinct tiers before speaking:
+- „Als weitere Möglichkeit wird … genannt.“
+- „Die Befunde erlauben laut Bericht noch keine eindeutige Zuordnung.“
+- „Zur Klärung ist im vorgegebenen Plan … vorgesehen.“
 
-```
-Tier 1: Verdachtsdiagnose (Most probable working diagnosis)
-Tier 2: Lebensbedrohliche Differenzialdiagnosen (Red flags to rule out immediately)
-Tier 3: Weitere plausible Differenzialdiagnosen (Other contributing possibilities)
-```
+If you offer an interpretation in a practice exercise, label it as your interpretation. Do not report that an investigation was performed or ordered when it was not.
 
----
+## A fictional language exercise
 
-## High-Yield Sentence Openers for Diagnostic Reasoning
+Source note: a patient reports breathlessness after an operation; the supplied note describes a suspected embolism and planned further investigation. No result is given.
 
-### 1. Formulating the Working Diagnosis (*Verdachtsdiagnose*)
-* *"In der Zusammenschau der klinischen Symptomatik und des kardiovaskulären Risikoprofils besteht der dringende Verdacht auf..."*
-* *"Die Leitsymptomatik weist richtungsweisend auf das Vorliegen einer akuten ... hin."*
-* *"Klinisch führend ist das Bild eines/einer..."*
+> Die Patientin berichte über nach einer Operation aufgetretene Atemnot. Im vorliegenden Bericht wird der Verdacht auf eine Lungenembolie genannt. Die weitere Abklärung sei geplant; ein Untersuchungsergebnis liegt in dieser Übung nicht vor.
 
-### 2. Introducing Alternatives (*Differenzialdiagnosen*)
-* *"Differenzialdiagnostisch müssen wir vorrangig an ... denken."*
-* *"Als wichtige Differenzialdiagnose kommt insbesondere ... in Betracht."*
-* *"Zusätzlich müssen wir ursächlich ein/eine ... in Erwägung ziehen."*
+This exercise practises source accuracy, not the clinical diagnosis or exclusion of embolism.
 
-### 3. Ruling Out Emergencies (*Ausschlussdiagnosen*)
-* *"Aufgrund der potenziellen Lebensgefahr müssen wir zeitnah ein/eine ... sicher ausschließen."*
-* *"Zwingend auszuschließen ist in diesem Zusammenhang ein/eine..."*
-* *"Zur Differenzierung zwischen A und B ist die zeitnahe Durchführung von ... unerlässlich."*
+## Keep connectors proportionate
 
----
+„Dafür spricht …“ indicates supporting information; it does not mean „beweist …“. „Dagegen spricht …“ does not automatically mean „sicher ausgeschlossen“. Practise that difference using only the facts provided.
 
-## Clinical Case Example: Acute Dyspnea in a 65-Year-Old Female
+Use [SBAR as an organising aid](/blog/sbar-schema-arzt-arzt-gespraech), then compare the recorded presentation with its source. For patient-facing questions, see [the history guide](/blog/anamnese-overview-part-1).
 
-Let us put this into practice for a patient presenting with sudden dyspnea and tachycardia:
+[Our book preview](/blog/famed-protokoll-buch-vorschau) and [app walkthrough](/blog/famed-prep-app-so-funktionierts) show independent resources for further practice.
 
-### Model Answer:
-*"Aufgrund des akuten Beginns der Dyspnoe in Kombination mit Tachykardie, Tachypnoe und dem Risikofaktor einer rezenten Knieoperation besteht der dringende Verdacht auf eine **akute Lungenarterienembolie**.*
+## Sources and review
 
-*Differenzialdiagnostisch müssen wir vor allem an ein **akutes Koronarsyndrom mit kardialem Lungenödem** sowie eine **akute Exazerbation einer COPD** denken. Da die Patientin zudem über einseitige atemabhängige Thoraxschmerzen berichtet, müssen wir auch einen **Spontanpneumothorax** und eine **Pneumonie** differenzialdiagnostisch in Betracht ziehen.*
-
-*Zur Differenzierung habe ich unverzüglich ein 12-Kanal-EKG sowie eine Bestimmung der D-Dimere und des Troponins angefordert. Zur definitiven Sicherung bzw. zum Ausschluss der Lungenembolie ist eine **CT-Angiographie der Pulmonalarterien (CTPA)** indiziert."*
-
----
-
-## 10 Precision Connectors for Clinical Arguments
-
-Enhance your academic delivery by integrating these transitional German conjunctions:
-
-| Connector | German Meaning | Example Sentence |
-|-----------|----------------|------------------|
-| **Richtungsweisend für...** | Indicative of... | *"Richtungsweisend für eine Appendizitis ist der typische Schmerzwanderungsprozess."* |
-| **In Anbetracht (+ Genitiv)** | Considering... | *"In Anbetracht des hohen Alters ist eine atypische Präsentation möglich."* |
-| **Untermauert wird dies durch...** | This is substantiated by... | *"Untermauert wird dieser Verdacht durch den deutlichen Anstieg der Lipase."* |
-| **Gegen ... spricht...** | What argues against... is... | *"Gegen eine Cholezystitis spricht das Fehlen eines sonographischen Dreischichtungszeichens."* |
-| **Für ... spricht...** | What argues for... is... | *"Für eine Urolithiasis spricht der kolikartige Schmerzcharakter mit Ausstrahlung in die Genitalregion."* |
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: **18 October 2026**, human medicine. [Official exam flow](https://famed-test.de/pruefungsablauf/), [Current human-medicine practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.

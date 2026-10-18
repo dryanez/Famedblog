@@ -1,3 +1,4 @@
+import { buildBlogEditorialPrompt } from '@/lib/blog-editorial-prompt';
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { GoogleGenerativeAI } from '@google/generative-ai';
@@ -58,7 +59,7 @@ export async function POST(request: Request) {
                         content,
                         excerpt: topic.angle,
                         tags: ['FaMED', 'Preparation', ...topic.keywords.slice(0, 3)],
-                        status: 'scheduled',
+                        status: 'draft',
                         scheduled_date: scheduledDate.toISOString(),
                         pdf_uri: pdfUri,
                         pdf_name: pdfName,
@@ -90,7 +91,9 @@ export async function POST(request: Request) {
 
         return NextResponse.json({
             success: true,
-            scheduled: successCount,
+            scheduled: 0,
+            drafted: successCount,
+            requiresEditorialReview: true,
             total: topics.length,
             results
         });
@@ -107,52 +110,7 @@ export async function POST(request: Request) {
 async function generateBlogPost(topic: any, famedContext: string, pdfUri?: string): Promise<string> {
     const today = new Date().toISOString().split('T')[0];
 
-    const prompt = `You are writing a blog post for FaMED-Vorbereitung.com, a German medical exam preparation site.
-
-TOPIC: ${topic.title}
-
-ANGLE: ${topic.angle}
-KEYWORDS: ${topic.keywords.join(', ')}
-
-FAMED CONTEXT (USE THIS AS YOUR KNOWLEDGE BASE):
-${famedContext || 'Use general FaMED exam knowledge'}
-
-IMPORTANT REQUIREMENTS:
-- **Write in ENGLISH** (not German)
-- When mentioning the "FaMED Protokoll Book", link it naturally: [FaMED Protokoll Book](https://famedtestprep.com/protokoll)
-- When suggesting practice or simulation, link to the app: [FaMED App](https://famedtestprep.com)
-- Include practical tips for exam preparation  
-- Mention communication skills (Anamnese)
-- Keep it under 1500 words
-- Use markdown format with proper headings
-- **ADD 1-2 IMAGE PLACEHOLDERS** throughout the post using this format:
-  ![Description of helpful image here](/placeholder-image.jpg)
-- Include frontmatter in this EXACT format:
----
-title: "${topic.title}"
-date: "${today}"
-excerpt: "${topic.angle}"
-tags: ["FaMED", "Preparation", ${topic.keywords.slice(0, 3).map((k: string) => `"${k}"`).join(', ')}]
-status: "draft"
----
-
-**CRITICAL: At the END of the blog post, add this exact CTA section:**
-
----
-
-## Ready to Start?
-
-📱 **[Download the FaMED App](https://famedtestprep.com)** for instant access to simulate the test  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll)** with all the cases  
-👥 **Join our FaMED Study Community** for support and updates
-
-**Viel Erfolg!** (Good luck!)
-
-*Have questions about FaMED preparation? Leave a comment below or join our study group!*
-
----
-
-Generate the complete blog post now, starting with the frontmatter.`;
+    const prompt = buildBlogEditorialPrompt(topic, today, famedContext);
 
     if (pdfUri) {
         // Use Gemini File API for PDF-based generation

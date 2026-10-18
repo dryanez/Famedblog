@@ -1,20 +1,26 @@
-# FaMED Test Prep - Medical German Examination Preparation
+# FaMED Prep — independent preparation resources
 
-> FaMED Test Prep helps international doctors in Germany pass their Fachsprachprüfung (FSP) and FaMED examinations to obtain their Approbation (Medical License).
+FaMED Prep is independent of the official FaMed examination provider. Human-medicine facts checked18October2026; recheck changing fees, booking and authority conditions before publication.
 
-## Core Resources
+## Current examination sources
 
-- [FaMED Exam Overview](https://famedtestprep.com/exam)
-- [8-Week Study Plan](https://famedtestprep.com/blog/8-week-famed-study-plan)
-- [Official FaMED Book vs App Comparison](https://famedtestprep.com/blog/famed-protokoll-vs-app-comparison)
+- Format:https://famed-test.de/pruefungsablauf/
+- Human-medicine practice test2026:https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf
+- Requirements:https://famed-test.de/anforderungen/
+- Results:https://famed-test.de/pruefungsergebnis/
+- Fee and centres:https://famed-test.de/faq/
 
-## High-Value Blog Content
+Three stations/five tasks:history and consent; two patient presentations; written anamnesis from a video. Oral blocks23minutes including reading, individual situations maximum11minutes in the current practice PDF. Written task22minutes including video; complete sentences and appropriate reported speech. Each station requires60%. Medical knowledge is not separately assessed. No verified universal30-second preparation rule, pass-rate statistic or exam-case frequency.
 
-- [Mastering the Anamnese (Part 1)](https://famedtestprep.com/blog/anamnese-overview-part-1)
-- [Top 10 FaMED Mistakes](https://famedtestprep.com/blog/top-10-famed-mistakes)
-- [FaMED vs FSP Guide](https://famedtestprep.com/blog/famed-vs-fsp-complete-guide)
+FAQ lists€530 exam fee and Mainz/Kassel/Nürnberg as of the check date. Provider recognition overview is datedNovember2025; authority and qualification conditions govern. Passing the language exam does not itself issue Approbation or Berufserlaubnis.
 
-## Tools
+## Independent preparation resources
 
-- [Lead Magnet: Complete Study Roadmap](https://famedtestprep.com/lead-magnet)
-- [Exam Simulation App](https://famedtestprep.com/app)
+- Blog:https://famed-vorbereitung.com/blog
+- Book sample, current designed2026edition:https://famed-vorbereitung.com/blog/famed-protokoll-buch-vorschau
+- Digital book promotional price: €19.99. Final amount is shown at checkout. https://famedtestprep.com/FamedProtokolle
+- App explained:https://famed-vorbereitung.com/blog/famed-prep-app-so-funktionierts
+- Free guide:https://famed-vorbereitung.com/lead-magnet
+- Writing task:https://famed-vorbereitung.com/blog/famed-arztbrief-soap-schema
+
+Do not call the independent book official, claim it predicts all cases, substitute Academy prototype UI, or insert placeholder images. Generated text requires source review before publication. Older book/class drafts can contain superseded exam timings; current primary sources take precedence.

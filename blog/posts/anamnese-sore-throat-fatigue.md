@@ -6,11 +6,17 @@ category: "Anamnese"
 readTime: "8 min"
 excerpt: "Master structured German anamnesis for patients presenting with sore throat, chronic fatigue, and infectious signs in the FaMED exam."
 tags: ['Anamnese', 'Infectiology', 'Fatigue', 'Clinical German']
+updated: "2026-10-18"
 ---
+
+These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 ## Introduction
 
 The systematic Anamnese is a cornerstone of medical diagnostics. It allows the doctor to gain a comprehensive picture of the patient and their complaints in order to make an informed diagnosis and develop an appropriate treatment plan. This blog post focuses on structured history-taking for patients with sore throat, chronic fatigue, and/or infectious symptoms, giving you a solid framework for the FaMED exam.
+
+
+For a practical next step, continue with [B-Symptoms Explained: Your Guide to Weight Loss, Fever & Night Sweats](/blog/b-symptoms-explained).
 
 ## Systematic Anamnese
 
@@ -80,7 +86,7 @@ If the patient has pain, conduct a detailed pain analysis. Use the OPQRST framew
 
 ### 6. Vegetative History (Vegetative Anamnese)
 
-Ask about vegetative symptoms that could indicate an infection or inflammation.
+Ask about relevant general symptoms without assuming a specific cause.
 
 *   **Questions:**
 *   War Ihnen übel? Mussten Sie erbrechen? Leiden Sie unter Übelkeit oder Erbrechen?
@@ -92,9 +98,9 @@ Ask about vegetative symptoms that could indicate an infection or inflammation.
 *   Haben Sie in letzter Zeit ungewollt zu- oder abgenommen?
 *   Haben Sie Husten? Kommt dabei Schleim hoch oder ist es ein trockener Husten?
 
-### 7. Gynecological History (Gynäkologische Anamnese) — for female patients
+### 7. Gynecological History (Gynäkologische Anamnese) — where relevant
 
-For female patients, gynecological history-taking is important.
+Ask reproductive-history questions where relevant to the person, symptoms and assignment; do not apply every question to every conversation.
 
 *   **Questions:**
 *   Wie sieht es mit Ihrer Menstruation aus? Haben Sie sie noch? Ist sie regelmäßig?
@@ -201,23 +207,28 @@ Ask about professional and social circumstances.
 *   Wie haben die Beschwerden begonnen (plötzlich oder langsam)?
 *   Haben sich die Beschwerden verändert (besser oder schlimmer geworden)?
 *   Haben Sie einen COVID-Test gemacht? Wie war das Ergebnis?
-*   Haben Sie typische Symptome bemerkt (Fieber, Husten, Geruchs- oder Geschmacksverlust)?
+*   Haben Sie weitere Symptome bemerkt, zum Beispiel Fieber oder Husten?
 *   Hatten Sie in letzter Zeit Kontakt mit einer erkälteten oder positiv getesteten Person?
 *   Sind Sie gegen COVID-19 geimpft?
 *   Haben Sie selbst etwas gegen die Beschwerden unternommen (Medikamente, Hausmittel, Arztbesuch)?
 
 ### 16. Closing the Conversation (Gesprächsabschluss)
 
-Summarize the key information and give the patient the opportunity to add anything. Explain the next steps (physical examination, lab tests, etc.).
+Summarize the key information and give the patient the opportunity to add anything. Explain the next steps supported by the actual assignment; the following is a fictional language example, not a universal investigation plan.
 
-*   **Example:** "Jetzt würde ich noch einmal kurz zusammenfassen: Sie haben … Habe ich alles richtig verstanden? Möchten Sie noch etwas hinzufügen? Als Nächstes werde ich eine körperliche Untersuchung durchführen, Ihre Lunge und Ihr Herz abhören sowie Ihren Bauch abtasten. Außerdem werde ich Ihnen ein bisschen Blut abnehmen, um die Blutwerte zu kontrollieren. Anschließend werde ich alle Ergebnisse mit meinem Oberarzt besprechen, und dann können wir Ihnen sagen, was Sie genau haben. Haben Sie noch Fragen an mich? Dann gehen wir weiter."
+*   **Example:** "Jetzt würde ich noch einmal kurz zusammenfassen: Sie haben … Habe ich alles richtig verstanden? Möchten Sie noch etwas hinzufügen? Als Nächstes werde ich eine körperliche Untersuchung durchführen, Ihre Lunge und Ihr Herz abhören sowie Ihren Bauch abtasten. Außerdem werde ich Ihnen ein bisschen Blut abnehmen, um die Blutwerte zu kontrollieren. Die weiteren Schritte richten sich nach den erhobenen Informationen und der vorgesehenen Abklärung. Haben Sie noch Fragen an mich? Dann gehen wir weiter."
+
 
 ## Conclusion
 
 A structured and systematic Anamnese is essential for diagnosis. By consistently covering all relevant areas, you can find the right direction even with complex symptom patterns such as chronic fatigue, sore throat, or unclear infectious symptoms.
 
-## Resources 📚
 
-*   📖 FaMED Protocol Book: https://famedtestprep.com/famedprotokolle
-*   💻 FaMED App & Simulation: https://famedtestprep.com
-*   💬 Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
+To build on this exercise, read [Mastering the FaMED Anamnese: Part 1 - Overview & Key Strategies](/blog/anamnese-overview-part-1).
+
+
+Want to turn your reading into practice? [See how the FaMED Prep app works, step by step](/blog/famed-prep-app-so-funktionierts), before deciding whether its exercises fit your preparation.
+
+## Sources and review
+
+Editorial check: 18 October 2026. [FaMed requirements](https://famed-test.de/anforderungen/), [current exam flow](https://famed-test.de/pruefungsablauf/).

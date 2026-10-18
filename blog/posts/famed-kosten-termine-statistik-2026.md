@@ -1,87 +1,46 @@
 ---
-title: "FaMED Exam Cost, Registration Deadlines, and Pass Rate Breakdown (2026)"
+title: "FaMED Exam Fee, Booking and Results: What Is Verified in 2026"
 date: "2026-08-18"
-readTime: "9 min"
+readTime: "3 min"
 category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Kosten", "Termine", "Statistik", "Approbation"]
-excerpt: "Planning your FaMED exam budget and timeline? Here is the full breakdown of 2026 examination fees, registration deadlines on famed-test.de, and realistic pass rates."
+excerpt: "The published €530 exam fee, current booking sources, result timing and a practical planning checklist."
+updated: "2026-10-18"
 ---
 
-Before international medical doctors commit to the medical language exam pathway, financial and logistical planning is essential. Taking the exam involves registration fees, document translations, study materials, and potential travel to an authorized testing center.
+The official FaMed FAQ currently lists the human-medicine exam fee as **€530**. This is the exam provider's fee, separate from any FaMED Prep book or app purchase. Check the amount and conditions in the official booking before paying.
 
-To help you budget accurately and avoid missed registration windows, here is the complete **2026 administrative guide** to FaMED examination costs, schedules, and statistical pass rates.
+## Build your own budget
 
----
+Start with the exam fee, then request actual prices for any travel, accommodation, translations, language certificates and preparation resources you need. These costs differ by person. There is no verified all-inclusive budget here, and we cannot promise that every expense is tax-deductible.
 
-![FaMED Exam Cost and Pass Rate Infographic](/placeholder-image.jpg)
+The FAQ lists **Mainz, Kassel and Nürnberg**. Check the address in your booking confirmation. Do not assume another city is a current exam centre because an old article names it.
 
----
+Our digital book offer is **€19.99**. [Look at real book pages first](/blog/famed-protokoll-buch-vorschau). Preparation purchases are optional and do not reserve an official exam place.
 
-## 1. FaMED Exam Costs & Fees (2026 Overview)
+## Book against live availability
 
-| Expense Item | Estimated Cost | Notes |
-|--------------|----------------|-------|
-| **FaMED Official Exam Fee** | **€490** | Paid directly via the official testing portal at famed-test.de upon booking. |
-| **Travel & Accommodation (if needed)** | **€50 – €200** | Only required if traveling to your chosen testing center (e.g., Mainz, Kassel, Nürnberg, etc.). |
-| **Official B2 Language Certificate** | **€180 – €240** | Goethe-Zertifikat B2 or telc Deutsch B2 (mandatory prerequisite). |
-| **Certified Translations of Diplomas** | **€200 – €400** | Sworn court translator (*vereidigter Übersetzer*) in Germany. |
-| **Preparation Materials (Book + App)** | **€50 – €100** | High-yield OSCE protocols and digital case simulations. |
-| **Total Estimated Budget:** | **~€1,040 – €1,480** | Complete cost of achieving your medical C1 certification. |
+Use the [official booking page](https://famed-test.de/buchungsseite/). No universal six-to-eight-week registration window, monthly testing frequency or guaranteed waiting period was verified. Choose a real available date and read the conditions for that booking.
 
-*Tax Tip: All examination, travel, and preparation expenses are fully tax-deductible in Germany as professional educational expenses (Werbungskosten) once you start earning your hospital salary.*
+The provider's FAQ requires a B2 certificate upload for Rheinland-Pfalz registration. This does not establish an identical upload rule for every route. First check [recognition in your destination state](/blog/famed-anerkennung-bundeslaender-2026) and the documents required by your authority.
 
----
+## Results and passing requirements
 
-## 2. Examination Dates and Deadlines
+The results page gives a usual processing period of **two to four weeks**; the FAQ says approximately four weeks. Treat this as guidance, not a guaranteed delivery date. Results arrive by email, with a successful digital certificate sent separately.
 
-Unlike traditional state chamber exams where you wait passively for months for an invitation letter, the FaMED system operates with **published online registration windows**:
+Each of the three stations requires **at least 60%**. A stronger station cannot compensate for one below that threshold.
 
-* **Testing Frequency:** Sessions typically take place **once or twice per month** throughout the calendar year.
-* **Capacity:** Each test cohort is strictly capped due to the physical availability of cubicles and standardized patient actors.
-* **Booking Lead Time:** Registration opens approximately **6 to 8 weeks** prior to the exam date and closes when capacity is reached.
-* **Results Turnaround:** Because FaMED ratings are standardized and evaluated across calibrated multi-rater video sessions, candidates typically receive their official certificate within **2 to 3 weeks** after the exam.
+We have not verified a public cohort dataset supporting a first-attempt pass rate, a retake percentage or a claimed success rate for our preparation materials. A personal result cannot be predicted from an invented statistic.
 
----
+## Check cancellation terms before paying
 
-## 3. Realistic Pass Rate Statistics
+The provider FAQ contains conflicting cancellation-fee figures. Follow the current terms attached to your booking and obtain clarification from the provider where they conflict. Do not budget using an old blog's cancellation amount.
 
-What are your actual statistical chances of passing the FaMED exam on your first attempt?
+Once the administrative steps are clear, adapt our [six-week preparation plan](/blog/famed-vorbereitung-berufstaetig-6-wochen) to your needs. [Request the free study guide](/lead-magnet) if you need a starting schedule.
 
-* **First-Time Candidate Pass Rate:** **~62% – 66%**
-* **Retake Candidate Pass Rate (Second Attempt):** **~78% – 82%**
-* **Candidates Utilizing Structured OSCE Protocol Preparation:** **> 88%**
+## Sources and review
 
-### Why Do Candidates Fail?
-According to rater evaluation feedback, failure is rarely caused by a complete lack of medical knowledge. The primary reasons international doctors fail are:
-1. **Linguistic Jargon Barrier (38% of failures):** Inability to simplify complex surgical or pharmacological terms for patient actors during the Aufklärung.
-2. **Incomplete Written Station (31% of failures):** Running out of time in Station 3 due to slow German typing or chaotic letter structure.
-3. **Severe Structural Disorganization (22% of failures):** Delivering an unstructured doctor-to-doctor presentation without clear differential diagnoses.
-4. **Pronunciation and Intonation (9% of failures):** Unclear phonetics that hinder comprehension during emergency phone handovers.
+Editorial check: **18 October 2026**, human medicine. [Provider FAQ](https://famed-test.de/faq/), [Booking](https://famed-test.de/buchungsseite/), [Results](https://famed-test.de/pruefungsergebnis/). Practice examples are created by FaMED Prep; they are not predictions of exam questions.
 
----
-
-## 4. How to Register for the Exam
-
-1. **Verify State Eligibility:** Confirm with your *Approbationsbehörde* (e.g. Regierung von Oberbayern or Rheinland-Pfalz) that FaMED is accepted for your file.
-2. **Prepare Prerequisites:** Ensure your B2 language certificate is valid and not older than required.
-3. **Visit the Official Portal:** Access [famed-test.de](https://famed-test.de) and select an open testing cohort.
-4. **Begin Active Simulation:** Immediately start practicing with timed OSCE cases to avoid cramming during the final week.
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+[Die kurze aktuelle Gebührenmeldung auf Deutsch](/blog/famed-pruefungsgebuehr-2026-530-euro).

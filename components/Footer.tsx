@@ -9,8 +9,8 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-bold mb-4">FAMED Test Prep</h3>
                         <p className="text-gray-400 text-sm">
-                            Complete preparation for the FAMED medical German language exam.
-                            Pass on your first try with our expert study guides and practice materials.
+                            Independent preparation for medical German communication.
+                            Study guides, worked examples and practice resources.
                         </p>
                     </div>
 
@@ -46,22 +46,22 @@ export default function Footer() {
                         <h3 className="text-lg font-bold mb-4">Resources</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
-                                <Link href="/anamnese" className="text-gray-400 hover:text-white transition">
+                                <Link href="https://famedtestprep.com/Anamnese" className="text-gray-400 hover:text-white transition">
                                     Anamnese Practice
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/aufklaerung" className="text-gray-400 hover:text-white transition">
+                                <Link href="https://famedtestprep.com/Aufklaerung" className="text-gray-400 hover:text-white transition">
                                     Aufklärung Practice
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/medicalcases" className="text-gray-400 hover:text-white transition">
+                                <Link href="https://famedtestprep.com/MedicalCases" className="text-gray-400 hover:text-white transition">
                                     Arzt-Arzt Cases
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/brief" className="text-gray-400 hover:text-white transition">
+                                <Link href="https://famedtestprep.com/Brief" className="text-gray-400 hover:text-white transition">
                                     Brief Practice
                                 </Link>
                             </li>

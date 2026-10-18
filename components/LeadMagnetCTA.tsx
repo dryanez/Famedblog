@@ -43,10 +43,10 @@ export default function LeadMagnetCTA() {
             {/* Same header content... */}
             <div className="max-w-3xl mx-auto text-center">
                 <h3 className="text-3xl font-bold mb-4">
-                    Pass Your FAMED Exam in Just 8 Weeks!
+                    Plan Your FaMED Preparation
                 </h3>
                 <p className="text-xl mb-6 text-blue-100">
-                    Get our FREE Complete FAMED Preparation Roadmap sent directly to your inbox.
+                    Request the free eight-week study guide and adapt the schedule to your needs.
                 </p>
 
                 {status === 'success' ? (

@@ -1,102 +1,47 @@
 ---
-title: "Failed the Fachsprachprüfung or FaMED? Step-by-Step Action Plan to Pass on Retake"
+title: "After an Unsuccessful FaMED Attempt: Feedback and a Practical Retake Plan"
 date: "2026-09-03"
-readTime: "11 min"
+readTime: "3 min"
 category: "Study Tips"
 status: "published"
 tags: ["FaMED", "FSP", "Wiederholungsprüfung", "Preparation"]
-excerpt: "Receiving a fail letter is devastating, but common. Here is an actionable 4-step recovery plan to analyze your examiner protocol and guarantee a pass on your next attempt."
+excerpt: "Use provider feedback to choose clear learning goals and build a practical retake preparation plan."
+updated: "2026-10-18"
 ---
 
-Opening a letter from the *Landesärztekammer* or examination committee with the word **"Nicht bestanden"** (Failed) is one of the most painful moments in an international physician's career. You have invested months of study, paid substantial fees, and your medical career in Germany feels temporarily on hold.
+An unsuccessful language-exam result can be discouraging. Start with the result and feedback available for the **specific examination you took**. FaMed and a chamber FSP may have different procedures.
 
-First, take a deep breath: **over 35% of foreign doctors fail their first medical language attempt.** The exam is not an indictment of your medical competence; it is a standardized test of linguistic and structural performance.
+## 1. Use the provider's feedback route
 
-Here is the exact step-by-step recovery plan used by doctors to systematically overcome their weaknesses and pass their retake with confidence.
+FaMed's current results page offers a free, binding **15-minute feedback video appointment** after an unsuccessful attempt. It describes a further appointment as possible no earlier than six months after the preceding feedback session. Check the booking details directly with the provider.
 
----
+If you have a formal decision with review or appeal instructions, read those instructions promptly. This blog does not establish an appeal deadline or guarantee a particular legal entitlement to records.
 
-![FSP Exam Retake Recovery Strategy](/placeholder-image.jpg)
+A neutral request could be:
 
----
+> Ich habe am [Datum] an der FaMed teilgenommen. Ich möchte das angebotene Nachgespräch nutzen. Bitte teilen Sie mir mit, wie ich einen Termin vereinbaren und welche Unterlagen ich dazu bereithalten kann.
 
-## Step 1: Request and Dissect Your Examination Protocol (*Prüfungsprotokoll*)
+## 2. Translate feedback into one observable goal
 
-Under German administrative law (*Verwaltungsverfahrensgesetz*), you have the legal right to request an inspection of your examination file (*Akteneinsicht*). 
+Examples: ask a clearer follow-up, keep two case presentations separate, preserve a negation from the video or explain a term in everyday language. Use actual feedback rather than guessing why a whole population fails.
 
-Within **14 days** of receiving your results, submit a formal request to your examination board:
+Each of the three FaMed stations requires at least **60%**. Do not prepare on the assumption that a strong result in one can compensate for another below the limit.
 
-```
-Betreff: Antrag auf Akteneinsicht gemäß § 29 VwVfG
-Prüfung: Fachsprachenprüfung Medizin am [Datum]
-Name: [Ihr Name], Geburtsdatum: [Ihr Geburtsdatum]
+## 3. Practise the current tasks
 
-Sehr geehrte Damen und Herren,
+- History and informed consent share a 23-minute oral block including reading.
+- Two patient presentations share another 23-minute block including reading.
+- The written task is a 22-minute anamnesis section from a video, including viewing time.
+- The current practice test sets an 11-minute maximum for each oral situation.
 
-hiermit beantrage ich form- und fristgerecht Einsicht in das Prüfungsprotokoll sowie die Bewertungsbögen meiner am [Datum] abgelegten Fachsprachprüfung. 
+Use [the written-task guide](/blog/famed-arztbrief-soap-schema) rather than the former recommendation to write a full SOAP plan. Mnemonics should help you select relevant information, not force a fixed checklist into every conversation.
 
-Bitte teilen Sie mir zeitnah einen Termin zur Einsichtnahme mit bzw. übersenden Sie mir Kopien der Protokolle.
+## 4. Plan the next weeks around evidence
 
-Mit freundlichen Grüßen,
-[Ihr Name]
-```
+Choose a schedule you can sustain. Review one attempt, work on one identified weakness, repeat the task, then compare the versions. Add full practice runs once individual skills are more reliable. Our [six-week plan](/blog/famed-vorbereitung-berufstaetig-6-wochen) is adaptable; six weeks is not a promise of readiness.
 
-### What to Look For in the Feedback
-Examiners grade across four distinct dimensions. Identify where your score dipped below the C1 passing line:
-1. **Linguistic Competence:** Did you struggle with German adjective endings and compound nouns, or did you make severe pronunciation mistakes?
-2. **Lay Communication (Anamnese & Aufklärung):** Did you use Latin jargon with the patient? Did you display empathy?
-3. **Medical Logic & Structuring (Arzt-Arzt-Gespräch):** Was your handover chaotic? Did you fail to formulate a clear working diagnosis?
-4. **Written Documentation (Arztbrief):** Did you run out of time? Were there syntax errors in the discharge summary?
+Check current repeat-booking and fee conditions with the provider before reserving another date. [See book excerpts](/blog/famed-protokoll-buch-vorschau) and [the app demonstration](/blog/famed-prep-app-so-funktionierts) before buying additional practice resources.
 
----
+## Sources and review
 
-## Step 2: Stop Studying Random Vocabulary Books
-
-The #1 mistake retake candidates make is buying another 600-page medical dictionary and memorizing isolated words. The FaMED and modern FSP do not test isolated vocabulary; they test **conversational flow under time pressure**.
-
-Shift your preparation to **simulation-based practice**:
-* Practice 20-minute timed stations with an alarm.
-* Record your patient interviews on your phone and listen back to identify vocal fillers (*"äh"*, *"mhm"*).
-* Use interactive OSCE simulations like the [FaMED App](https://famedtestprep.com/app) to build automated reflex answers.
-
----
-
-## Step 3: Master the "Big Three" High-Fail Traps
-
-Nearly 80% of failed exams stem from three recurring pitfalls:
-
-| Pitfall Area | Why Candidates Fail | The Turnkey Fix |
-|--------------|---------------------|-----------------|
-| **Station 1: Patient Anamnese** | Failing to ask about red flags (e.g. B-symptoms, radiating pain, vegetative symptoms). | Memorize a fixed mnemonic checklist (**OPQRST + SAMPLE**) and never leave the room until all boxes are checked. |
-| **Station 2: Handover** | rambling without a clear structure. | Use the **SBAR scheme** (*Situation, Background, Assessment, Recommendation*). |
-| **Station 3: Arztbrief** | Incomplete documentation due to slow typing or poor time management. | Adopt the **SOAP format** and write the Assessment & Plan first. |
-
----
-
-## Step 4: Follow an Intensive 4-to-6 Week Retake Schedule
-
-Do not wait months to re-register. Your knowledge is already fresh; you simply need structural recalibration:
-
-* **Week 1:** File inspection, protocol analysis, and error logging.
-* **Week 2:** Daily 20-minute Anamnese practice with focus on lay translations.
-* **Week 3:** Intensive Arzt-Arzt handover simulations and SBAR drill.
-* **Week 4:** Timed Arztbrief typing drills (20-minute hard cap).
-* **Weeks 5–6:** Full mock exams under real testing conditions.
-
----
-
-## Resources 📚
-
-* 📖 **FaMED Protocol Book**: [FaMED Protokoll 2026 Book](https://famedtestprep.com/protokoll) — Complete real exam case protocols and model answers
-* 💻 **FaMED App & Digital Simulation**: [FaMED App](https://famedtestprep.com/app) — Practice digital stations and OSCE timers
-* 💬 **Telegram Study Community**: [Join the FaMED Study Group](https://t.me/+vgtsHuqtwfk4MTJh)
-
----
-
-## Ready to Start? 🚀
-
-📱 **[Download the FaMED App](https://famed-vorbereitung.com/app)** for instant access to test simulations  
-📚 **[Order the FaMED Protokoll 2026 Book](https://famed-vorbereitung.com/protokoll)** with complete case transcripts  
-👥 **Join our FaMED Study Community** to prepare with fellow doctors
-
-**Viel Erfolg!** (Good luck!) 🍀
+Editorial check: **18 October 2026**, human medicine. [Results and feedback](https://famed-test.de/pruefungsergebnis/), [Exam flow](https://famed-test.de/pruefungsablauf/), [Practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.
