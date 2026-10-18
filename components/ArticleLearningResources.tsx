@@ -7,7 +7,7 @@ export default function ArticleLearningResources({german=false,arabic=false}:{ge
     <h2 className="mt-2 text-xl font-bold text-slate-900">FaMED Protokoll 2026</h2>
     <p className="mt-2 text-sm text-slate-700">{arabic?'حالات وعبارات مفيدة لتنظيم الحوار.':german?'Fälle, Redemittel und Gesprächsstruktur.':'Cases, useful phrases and conversation structure.'}</p>
     <p className="mt-3 text-3xl font-extrabold text-blue-800">€19.99</p>
-    <a className="mt-4 inline-block rounded-lg bg-blue-700 px-4 py-3 font-bold text-white" href="https://famedtestprep.com/FamedProtokolle?utm_source=blog&utm_medium=article&utm_campaign=book_2026">{arabic?'اشترِ الكتاب الرقمي':german?'Digitales Buch ansehen':'View digital book'}</a>
+    <a className="mt-4 inline-block rounded-lg bg-blue-700 px-4 py-3 font-bold text-white" href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=book_2026">{arabic?'اشترِ الكتاب الرقمي':german?'Digitales Buch ansehen':'Get the digital book'}</a>
     <a className="mt-3 block text-sm font-semibold text-blue-700 underline" href={`${arabic?'/ar':''}/blog/famed-protokoll-buch-vorschau`}>{arabic?'اقرأ عيّنة أولاً':german?'Erst reinlesen →':'Read a sample first →'}</a>
    </div>
   </div>

@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local release audit and concurrency lock
+/release-evidence/
+/.blog-release.lock

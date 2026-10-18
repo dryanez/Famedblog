@@ -7,14 +7,15 @@ export async function GET(request: Request) {
     try {
         // Verify cron secret for security
         const authHeader = request.headers.get('authorization');
-        if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+        const secret = process.env.CRON_SECRET;
+        if (!secret || authHeader !== `Bearer ${secret}`) {
             return new Response('Unauthorized', { status: 401 });
         }
 
         const result = await publishScheduledPosts();
 
         if (result.error) {
-            return NextResponse.json({ success: false, error: result.error }, { status: 500 });
+            return NextResponse.json({ success: false, error: result.error }, { status: 409 });
         }
 
         return NextResponse.json({

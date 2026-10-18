@@ -19,7 +19,7 @@ excerpt: "نظرة على إصدار 2026: جدول المحتويات، عبا�
 
 حالات، هيكل المحادثة، وعبارات مفيدة لتحضيرك الخاص. **19.99 يورو.**
 
-[عرض الكتاب الرقمي](https://famedtestprep.com/FamedProtokolle?utm_source=blog&utm_medium=preview&utm_campaign=book_2026).
+[عرض الكتاب الرقمي](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=preview&utm_campaign=book_2026).
 
 ## نظرة على جدول المحتويات
 

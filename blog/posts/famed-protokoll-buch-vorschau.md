@@ -13,13 +13,13 @@ Would you like to see how the book is structured before buying it? Here you will
 
 ## The Digital Book
 
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). Explore the sample pages below before deciding.
 
 ![FaMED Protocol — 2026 Edition](/images/products/book-cover.png)
 
 Cases, conversation structure, and useful phrases for your own preparation. **€19.99.**
 
-[View Digital Book](https://famedtestprep.com/FamedProtokolle?utm_source=blog&utm_medium=preview&utm_campaign=book_2026).
+[View Digital Book](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=preview&utm_campaign=book_2026).
 
 ## A Look into the Table of Contents
 
@@ -31,7 +31,7 @@ Cases, conversation structure, and useful phrases for your own preparation. **�
 
 ![2026 Edition, Page 21: Pain analysis and German question examples](/images/previews/book-2026-opqrst.webp)
 
-[Open sample page in full size](/images/previews/book-2026-opqrst.webp). Nutze OPQRST als Merkhilfe und passe die Fragen an das Gespräch an. Unser [Artikel zur Schmerzanamnese](/blog/pain-anamnesis-guide) führt die Übung weiter.
+[Open sample page in full size](/images/previews/book-2026-opqrst.webp). Use OPQRST as a memory aid and adapt the questions to the conversation. Continue with our [pain-history practice guide](/blog/pain-anamnesis-guide).
 
 The book is independent preparation material. Current exam times and tasks can be found at the [exam provider](https://famed-test.de/pruefungsablauf/).
 

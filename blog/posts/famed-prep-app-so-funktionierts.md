@@ -9,11 +9,11 @@ tags: ["FaMED", "App", "Anamnese", "Arzt-Arzt", "Arztbrief"]
 excerpt: "Real app screens and concrete instructions: select cases, practice conversations and written tasks, and use available feedback."
 ---
 
-You've read about the FaMED casebook and want to know what the app additionally offers? Here we show the actual screens and the process. The recordings show the current public app with fictional practice cases.
+Watch a real practice session above, then try one available task yourself. The edited demo shows a fictional writing case: choose it, listen, write an answer, review the actual AI feedback, and apply a correction in the next attempt.
 
 ## 1. Select a task for your learning goal
 
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
+[Try an available task in the app](https://famedtestprep.com/Brief?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_video). You can browse the writing case list before choosing a plan.
 
 In FaMED Prep, you will find separate sections for anamnesis, informed consent, doctor-to-doctor communication, and medical report. Start with a task you specifically want to practice, instead of working on every section simultaneously.
 

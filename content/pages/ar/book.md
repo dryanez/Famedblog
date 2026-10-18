@@ -22,3 +22,8 @@ updated: "2026-10-19"
 ## اجمع القراءة بالتدريب
 
 ابدأ [بقاموس المصطلحات الطبية](/ar/blog/medizinische-fachbegriffe-laiensprache-tabelle)، ثم جرّب شرح حالة بصوت عالٍ. وإذا أردت تدريبات تفاعلية، [تعرّف على طريقة عمل التطبيق](/ar/app).
+
+
+## الخطوة التالية
+
+[اقرأ عيّنة الكتاب](/ar/blog/famed-protokoll-buch-vorschau)، أو [اشترِ الكتاب الرقمي بسعر €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=book_page&utm_campaign=book_direct). راجع المبلغ النهائي وتفاصيل الدفع في صفحة الشراء.

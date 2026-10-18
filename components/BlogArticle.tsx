@@ -1,3 +1,4 @@
+import AppWalkthrough from './AppWalkthrough';
 import { languageAlternates, type Locale } from '@/lib/languages';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -178,6 +179,7 @@ export default async function BlogArticle({ slug, locale = 'en' }: { slug: strin
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {headings.length>2 && <nav aria-label={ar?'في هذا المقال':'In this article'} className="mb-8 rounded-xl border border-slate-200 bg-slate-50 p-5"><p className="mb-2 font-semibold text-slate-900">{ar?'في هذا المقال':'In this article'}</p><ul className="grid gap-2 sm:grid-cols-2">{headings.map((h,i)=><li key={i}><a className="text-sm text-blue-700 underline" href={`#${h.id}`}>{h.text}</a></li>)}</ul></nav>}
+          {slug === 'famed-prep-app-so-funktionierts' && <AppWalkthrough arabic={ar}/>}
           <div className="prose prose-lg max-w-none">
             <ReactMarkdown
               rehypePlugins={[rehypeRaw]}

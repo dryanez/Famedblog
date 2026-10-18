@@ -22,3 +22,8 @@ This is a digital book from independent FaMED Prep. It does not include physical
 ## Combine reading with practice
 
 Start with our [medical vocabulary glossary](/blog/medizinische-fachbegriffe-laiensprache-tabelle). Then try explaining a case aloud. If you want interactive exercises, [see how the web app works](/app).
+
+
+## Choose your next step
+
+[Read the book preview](/blog/famed-protokoll-buch-vorschau), or [get the digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=book_page&utm_campaign=book_direct). Review the final amount and payment details at checkout.

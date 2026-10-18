@@ -149,3 +149,9 @@ updated: "2026-10-19"
 ## المصادر والمراجعة
 
 المراجعة التحريرية: 18 أكتوبر 2026. [متطلبات FaMed](https://famed-test.de/anforderungen/)، [التدفق الحالي للامتحان](https://famed-test.de/pruefungsablauf/).
+
+## تمرين مفردات في خمس دقائق
+
+اختر ثلاثة مصطلحات من جدول واحد. اشرح كل مصطلح بصوت عالٍ من دون قراءة عمود اللغة المبسطة، ثم قارن صياغتك. اختم بالسؤال: „Ist die Erklärung verständlich, oder soll ich einen Punkt noch einmal erläutern?“
+
+للتدريب ضمن حوار أطول، [اطّلع على عيّنة الكتاب الرقمي](/ar/blog/famed-protokoll-buch-vorschau). ولتجربة إجابة بصوتك أو كتابتك، [شاهد تدريباً فعلياً في التطبيق](/ar/blog/famed-prep-app-so-funktionierts).

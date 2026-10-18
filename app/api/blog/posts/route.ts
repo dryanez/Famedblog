@@ -42,7 +42,7 @@ export async function POST(request: Request) {
                 content,
                 excerpt: parsedExcerpt,
                 tags: parsedTags || ['FaMED', 'Preparation'],
-                status: status || 'draft',
+                status: 'draft',
                 pdf_uri: pdfUri,
                 pdf_name: pdfName,
                 selected_topic: selectedTopic
@@ -72,7 +72,7 @@ export async function POST(request: Request) {
                     success: true,
                     path: `/blog/${slug}`,
                     post: updateData,
-                    message: 'Post updated successfully'
+                    published: false, requiresRelease: true, message: 'Editorial draft updated. Public publication requires the bilingual Markdown release.'
                 });
             }
             throw error;
@@ -82,7 +82,7 @@ export async function POST(request: Request) {
             success: true,
             path: `/blog/${slug}`,
             post: data,
-            message: 'Post saved successfully'
+            published: false, requiresRelease: true, message: 'Editorial draft saved. Public publication requires the bilingual Markdown release.'
         });
 
     } catch (error: any) {
