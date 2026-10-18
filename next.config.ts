@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
+  outputFileTracingIncludes: {
+    '/*': ['./blog/posts/**/*.md', './blog/ar/**/*.md', './content/pages/**/*.md'],
+  },
   images: {
     domains: ['famedtestprep.com'],
     formats: ['image/avif', 'image/webp'],
