@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import DiscoveryTracker from "@/components/DiscoveryTracker";
+import PostHogInit from "@/components/PostHogInit";
+import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BookPromoPopup from "@/components/BookPromoPopup";
@@ -93,12 +95,14 @@ export default function SiteLayout({
       </head>
       <body className={inter.className}>
         <DiscoveryTracker />
+        <PostHogInit />
         <Header />
         <main className="min-h-screen">
           {children}
         </main>
         <Footer />
         <BookPromoPopup />
+        <Analytics />
       </body>
     </html>
   );
