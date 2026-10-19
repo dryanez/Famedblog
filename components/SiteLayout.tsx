@@ -89,6 +89,18 @@ export default function SiteLayout({
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <head>
         <script
+          src="/cookie-consent.js"
+          data-dir={locale === 'ar' ? 'rtl' : undefined}
+          data-color="#007f76"
+          data-text={locale === 'ar'
+            ? 'نستخدم ملفات تعريف الارتباط لفهم كيفية استخدام الموقع وتحسينه. يمكنك قبول ملفات تعريف الارتباط الاختيارية أو رفضها.'
+            : 'We use cookies to understand how the site is used and improve it. You can accept or reject optional cookies.'}
+          data-accept={locale === 'ar' ? 'قبول' : 'Accept'}
+          data-reject={locale === 'ar' ? 'رفض' : 'Reject'}
+          data-policy="https://famedtestprep.com/PrivacyPolicy"
+          data-policy-label={locale === 'ar' ? 'سياسة الخصوصية' : 'Privacy policy'}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
