@@ -9,7 +9,7 @@ tags: ["FaMED", "App", "Anamnese", "Arzt-Arzt", "Arztbrief"]
 excerpt: "Real app screens and concrete instructions: select cases, practice conversations and written tasks, and use available feedback."
 ---
 
-Explore the four practice sections above, then try an available task yourself. The writing demonstration uses a fictional case, actual sequential typing and real AI practice feedback. The other clips preview their task screens.
+Watch the narrated walkthrough above: Anamnese, Aufklärung, Arzt–Arzt and Arztbrief, explained in order. The illustrated patient example uses real app response audio, and the writing example shows actual typing and AI practice feedback. The shorter clips below it preview each task screen.
 
 ## 1. Select a task for your learning goal
 
