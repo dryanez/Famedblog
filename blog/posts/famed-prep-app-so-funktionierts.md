@@ -9,7 +9,7 @@ tags: ["FaMED", "App", "Anamnese", "Arzt-Arzt", "Arztbrief"]
 excerpt: "Real app screens and concrete instructions: select cases, practice conversations and written tasks, and use available feedback."
 ---
 
-Watch a real practice session above, then try one available task yourself. The edited demo shows a fictional writing case: choose it, listen, write an answer, review the actual AI feedback, and apply a correction in the next attempt.
+Explore the four practice sections above, then try an available task yourself. The writing demonstration uses a fictional case, actual sequential typing and real AI practice feedback. The other clips preview their task screens.
 
 ## 1. Select a task for your learning goal
 
@@ -19,9 +19,13 @@ In FaMED Prep, you will find separate sections for anamnesis, informed consent, 
 
 The doctor-to-doctor case selection groups cases by medical systems. Open an available case and read the task before you begin your answer.
 
-![Real FaMED Prep case selection in the current app](/images/previews/app-case-cards-desktop.webp)
+![Real FaMED Prep case selection in the current app](/images/previews/app-case-cards-v2.png)
 
 *Current case selection. Which tasks are unlocked depends on your access.*
+
+![Actual doctor-to-doctor task with sidebar hidden](/images/previews/app-handover-v2.png)
+
+*Read the case and task before preparing your handover. Fictional practice case.*
 
 [View case selection in the app](https://famedtestprep.com/MedicalCases?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_intro). If you want to structure your handover first, our [article on the SBAR scheme](/blog/sbar-schema-arzt-arzt-gespraech) will help you.
 
@@ -29,7 +33,7 @@ The doctor-to-doctor case selection groups cases by medical systems. Open an ava
 
 In the anamnesis section, you select an available patient example. Read the situation and prepare the questions you want to practice in the conversation. The voice exercises may require your browser's microphone sharing; instructions are provided in the respective exercise flow.
 
-![Real FaMED Prep anamnesis selection in the current app](/images/previews/app-anamnese-desktop.webp)
+![Real FaMED Prep anamnesis selection in the current app](/images/previews/app-anamnese-v2.png)
 
 *Selection of a conversation exercise. The image shows the start, not a completed exam.*
 
@@ -37,11 +41,19 @@ Speak clearly and appropriately for the task. Then review the feedback or transc
 
 For a linguistic introduction, you can first view a [real excerpt from the digital casebook](/blog/famed-protokoll-buch-vorschau). For consent discussions, there is also the [informed consent guide](/blog/famed-aufklaerungsgespraech-guide).
 
+![Actual procedure-explanation task with sidebar hidden](/images/previews/app-aufklaerung-v2.png)
+
+*The role, scenario and instructions appear before recording starts. This is a task preview.*
+
 ## 3. Work on written tasks
 
 In the medical report section, you work on medical documentation. Read the specific task and available information before you write. Use the displayed time limit as part of the respective exercise; the app interface is not the binding examination regulations of the examination provider.
 
 If you first need a writing routine, read our [guide to the medical report](/blog/famed-arztbrief-soap-schema). Then practice a manageable section and check structure and comprehensibility.
+
+![Actual writing exercise with a demo answer and sidebar hidden](/images/previews/app-writing-v2.png)
+
+*An example answer being typed into the real exercise. Fictional case and demo account.*
 
 ## 4. Distinguish between practice and exam simulation
 
