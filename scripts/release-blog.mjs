@@ -1,3 +1,4 @@
+import {verifyHomepage,verifyPalette} from './homepage-regression.mjs';
 /** Paired Markdown -> immutable preview -> verified promotion. Never publishes database status. */
 import {execFileSync,execFile} from 'node:child_process';
 import {promisify} from 'node:util';
@@ -20,6 +21,7 @@ export function validatePairs(root){
 }
 function run(cmd,args,cwd){return execFileSync(cmd,args,{cwd,encoding:'utf8',maxBuffer:30*1024*1024});}
 export function verifyHtml(html,path,locale){
+ if(path===''||path==='/'||path==='/ar')verifyHomepage(html);
  if(!/<h1[\s>]/.test(html)||!html.includes(`lang="${locale}"`)||!html.includes(`dir="${locale==='ar'?'rtl':'ltr'}"`))throw Error(`Missing page/language: ${path}`);
  const canonical='https://famed-vorbereitung.com'+path;
  if(!html.includes(`rel="canonical" href="${canonical}"`))throw Error(`Wrong canonical: ${path}`);
@@ -35,6 +37,7 @@ async function main(){
  try{fd=openSync(lock,'wx');}catch{throw Error('Another release is running; inspect .blog-release.lock before retrying');}
  try{
   run('node',['scripts/build-content.mjs'],root);const manifest=validatePairs(root);
+  verifyPalette(readFileSync(join(root,'app/globals.css'),'utf8'));
   // Release only committed source: exclude unrelated dirty lifecycle work.
   const dirty=run('git',['status','--porcelain','--untracked-files=normal'],root).trim();
   if(dirty)throw Error('Commit the reviewed release first. Dirty source is never deployed.');
