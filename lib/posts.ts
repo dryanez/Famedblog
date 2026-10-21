@@ -13,5 +13,5 @@ export interface BlogPost {
     status?: string;
 }
 
-export function getAllPosts(locale:'en'|'ar'='en'):BlogPost[]{return manifest.posts[locale].map(p=>({...p})) as BlogPost[];}
-export function getPostBySlug(slug:string,locale:'en'|'ar'='en'):BlogPost|null{if(!/^[a-z0-9-]+$/.test(slug))return null;return getAllPosts(locale).find(p=>p.slug===slug)||null;}
+export function getAllPosts(locale:'en'|'ar'|'es'='en'):BlogPost[]{return manifest.posts[locale].map(p=>({...p})) as BlogPost[];}
+export function getPostBySlug(slug:string,locale:'en'|'ar'|'es'='en'):BlogPost|null{if(!/^[a-z0-9-]+$/.test(slug))return null;return getAllPosts(locale).find(p=>p.slug===slug)||null;}

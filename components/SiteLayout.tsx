@@ -58,7 +58,7 @@ export const siteMetadata: Metadata = {
 export default function SiteLayout({
   children, locale = 'en',
 }: Readonly<{
-  children: React.ReactNode; locale?: 'en'|'ar';
+  children: React.ReactNode; locale?: 'en'|'ar'|'es';
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -79,7 +79,7 @@ export default function SiteLayout({
         "@type": "WebSite",
         name: "FAMED Test Prep",
         url: siteUrl,
-        inLanguage: ["en", "ar"],
+        inLanguage: ["en", "ar", "es"],
         publisher: { "@id": `${siteUrl}/#organization` },
       },
     ],
@@ -94,11 +94,11 @@ export default function SiteLayout({
           data-color="#007f76"
           data-text={locale === 'ar'
             ? 'نستخدم ملفات تعريف الارتباط لفهم كيفية استخدام الموقع وتحسينه. يمكنك قبول ملفات تعريف الارتباط الاختيارية أو رفضها.'
-            : 'We use cookies to understand how the site is used and improve it. You can accept or reject optional cookies.'}
-          data-accept={locale === 'ar' ? 'قبول' : 'Accept'}
-          data-reject={locale === 'ar' ? 'رفض' : 'Reject'}
+            : locale === 'es' ? 'Usamos cookies para entender el uso del sitio y mejorarlo. Puedes aceptar o rechazar las cookies opcionales.' : 'We use cookies to understand how the site is used and improve it. You can accept or reject optional cookies.'}
+          data-accept={locale === 'ar' ? 'قبول' : locale === 'es' ? 'Aceptar' : 'Accept'}
+          data-reject={locale === 'ar' ? 'رفض' : locale === 'es' ? 'Rechazar' : 'Reject'}
           data-policy="https://famedtestprep.com/PrivacyPolicy"
-          data-policy-label={locale === 'ar' ? 'سياسة الخصوصية' : 'Privacy policy'}
+          data-policy-label={locale === 'ar' ? 'سياسة الخصوصية' : locale === 'es' ? 'Política de privacidad' : 'Privacy policy'}
         />
         <script
           type="application/ld+json"

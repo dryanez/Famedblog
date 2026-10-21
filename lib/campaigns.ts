@@ -264,6 +264,16 @@ export async function processCampaignSend(options: SendCampaignOptions): Promise
         }
     }
 
+    // Guide requests never imply marketing consent; fail closed for all lead sends.
+    // Only future, separately confirmed opt-ins can become eligible. Existing
+    // buyer/suppression/cadence checks still apply; this does not enable campaigns.
+    if (!testEmail && campaignId.startsWith('lead_')) {
+        const {data:consents,error:consentError}=await supabase.from('guide_requests').select('email,confirmed_at,withdrawn_at').eq('marketing_requested',true).eq('editorial_eligible',true).not('confirmed_at','is',null).is('withdrawn_at',null);
+        if(consentError)return {success:false,sentCount:0,error:'Consent eligibility unavailable'};
+        const eligible=new Set((consents||[]).map(c=>String(c.email).toLowerCase()));
+        targetUsers=targetUsers.filter(u=>eligible.has(String(u.email).toLowerCase()));
+    }
+
     // Cool-down for the account/bundle emails: skip anyone who already got ANY campaign email in the last 5 days
     if (!testEmail && !force && (campaignId.startsWith('account_') || campaignId.startsWith('lead_'))) {
         const since = new Date(Date.now() - 5 * 86400000).toISOString();

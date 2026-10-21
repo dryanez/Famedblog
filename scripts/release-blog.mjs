@@ -21,7 +21,7 @@ export function validatePairs(root){
 }
 function run(cmd,args,cwd){return execFileSync(cmd,args,{cwd,encoding:'utf8',maxBuffer:30*1024*1024});}
 export function verifyHtml(html,path,locale){
- if(path===''||path==='/'||path==='/ar')verifyHomepage(html);
+ if(path===''||path==='/'||path==='/ar'||path==='/es')verifyHomepage(html);
  if(!/<h1[\s>]/.test(html)||!html.includes(`lang="${locale}"`)||!html.includes(`dir="${locale==='ar'?'rtl':'ltr'}"`))throw Error(`Missing page/language: ${path}`);
  const canonical='https://famed-vorbereitung.com'+path;
  if(!html.includes(`rel="canonical" href="${canonical}"`))throw Error(`Wrong canonical: ${path}`);
@@ -58,6 +58,7 @@ async function main(){
   const sitemap=await fetchPreview('/sitemap.xml');
   const paths=[...Object.keys(manifest.pages.en),'/blog',...manifest.posts.en.filter(p=>p.status==='published').map(p=>'/blog/'+p.slug)];
   const targets=['en','ar'].flatMap(locale=>paths.map(route=>({locale,path:(locale==='ar'?'/ar':'')+(route==='/'?'':route)})));
+  for(const route of Object.keys(manifest.pages.es||{}))targets.push({locale:'es',path:'/es'+(route==='/'?'':route)});
   let cursor=0;const worker=async()=>{while(cursor<targets.length){const {locale,path}=targets[cursor++];verifyHtml(await fetchPreview(path||'/'),path,locale);if(!sitemap.includes('<loc>https://famed-vorbereitung.com'+path+'</loc>'))throw Error('Missing sitemap URL: '+path);report.checks.push({path:path||'/',passed:true});}};
   const results=await Promise.allSettled(Array.from({length:5},worker));for(const result of results)if(result.status==='rejected')throw result.reason;
   for(const draft of manifest.posts.en.filter(p=>p.status!=='published')){const r=await execAsync('vercel',['curl','/blog/'+draft.slug,'--deployment',deployment,'--','--silent','--output','/dev/null','--write-out','%{http_code}'],{cwd:stage});if(r.stdout.trim()!=='404')throw Error('Draft is public: '+draft.slug);}
@@ -65,7 +66,7 @@ async function main(){
   if(promote){
    const previous=JSON.parse(run('vercel',['inspect','famed-vorbereitung.com','--json'],root)).url;report.previous=previous;writeFileSync(reportPath,JSON.stringify(report,null,2));
    run('vercel',['promote',deployment,'--yes'],root);
-   try{for(const {path} of report.checks){const r=await fetch('https://famed-vorbereitung.com'+path);if(!r.ok)throw Error(`Live ${r.status}: ${path}`);verifyHtml(await r.text(),path==='/'?'':path,path.startsWith('/ar')?'ar':'en');}report.phase='live-verified';}
+   try{for(const {path} of report.checks){const r=await fetch('https://famed-vorbereitung.com'+path);if(!r.ok)throw Error(`Live ${r.status}: ${path}`);verifyHtml(await r.text(),path==='/'?'':path,path.startsWith('/ar')?'ar':path.startsWith('/es')?'es':'en');}report.phase='live-verified';}
    catch(e){run('vercel',['promote',previous,'--yes'],root);report.phase='rolled-back';report.error=String(e);writeFileSync(reportPath,JSON.stringify(report,null,2));throw e;}
    writeFileSync(reportPath,JSON.stringify(report,null,2));
   }

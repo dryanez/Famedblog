@@ -1,6 +1,7 @@
 import {NextResponse} from 'next/server';
 import {createClient} from '@supabase/supabase-js';
 import {getAllPosts} from '@/lib/posts';
+import {spanishRoutes} from '@/lib/languages';
 import {publicRoutes} from '@/lib/site-pages';
 const sources=new Set(['direct','google','bing','chatgpt','perplexity','claude','gemini','facebook','instagram','telegram','other']);
 const events=new Set(['page_view','book_click','app_click','video_play']);
@@ -12,7 +13,8 @@ export async function POST(request:Request){
   const body=await request.text();if(body.length>700)return new Response(null,{status:413});
   const {path,source,event}=JSON.parse(body);
   if(typeof path!=='string'||path.length>180||!sources.has(source)||!events.has(event))return new Response(null,{status:400});
-  const locale=path==='/ar'||path.startsWith('/ar/')?'ar':'en';const route=locale==='ar'?path.slice(3)||'/':path;
+  const locale=/^\/ar(?:\/|$)/.test(path)?'ar':/^\/es(?:\/|$)/.test(path)?'es':'en';const route=locale==='en'?path:path.slice(3)||'/';
+  if(locale==='es'&&!spanishRoutes.includes(route))return new Response(null,{status:400});
   if(![...publicRoutes,'/blog'].includes(route)&&!getAllPosts(locale).some(p=>p.status==='published'&&route==='/blog/'+p.slug))return new Response(null,{status:400});
   const db=createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!,process.env.SUPABASE_SERVICE_ROLE_KEY!);
   const {error}=await db.rpc('record_discovery',{p_path:path,p_source:source,p_event:event});

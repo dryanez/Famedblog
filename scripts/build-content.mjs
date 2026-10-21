@@ -1,7 +1,7 @@
 import fs from 'node:fs';import path from 'node:path';import matter from 'gray-matter';
-const manifest={posts:{en:[],ar:[]},pages:{en:{},ar:{}}};
-for(const locale of ['en','ar']){
- const directory=locale==='en'?'blog/posts':'blog/ar';
+const manifest={posts:{en:[],ar:[],es:[]},pages:{en:{},ar:{},es:{}}};
+for(const locale of ['en','ar','es']){
+ const directory=locale==='en'?'blog/posts':locale==='ar'?'blog/ar':'blog/es';
  for(const file of fs.readdirSync(directory).filter(f=>f.endsWith('.md')&&f.toLowerCase()!=='readme.md')){
   const {data,content}=matter(fs.readFileSync(path.join(directory,file),'utf8'));
   manifest.posts[locale].push({slug:file.slice(0,-3),title:data.title||'Untitled',date:String(data.date||'2026-10-19'),readTime:data.readTime||'5 min',category:data.category||'General',excerpt:data.excerpt||content.slice(0,150),tags:data.tags||[],status:data.status||'draft',...data,content});
@@ -13,4 +13,4 @@ for(const locale of ['en','ar']){
  }
 }
 fs.writeFileSync('lib/generated-content.json',JSON.stringify(manifest));
-console.log('Content bundled:',Object.fromEntries(['en','ar'].map(l=>[l,{posts:manifest.posts[l].length,pages:Object.keys(manifest.pages[l]).length}])));
+console.log('Content bundled:',Object.fromEntries(['en','ar','es'].map(l=>[l,{posts:manifest.posts[l].length,pages:Object.keys(manifest.pages[l]).length}])));

@@ -1,162 +1,25 @@
 'use client';
-
-import { useState } from 'react';
-import { submitLead } from '@/app/actions';
-import ArticleLearningResources from '@/components/ArticleLearningResources';
-
-export default function LeadMagnetCTA({arabic=false}:{arabic?:boolean}) {
-    const [isLoading, setIsLoading] = useState(false);
-    const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
-    const [message, setMessage] = useState('');
-
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault();
-
-
-        setIsLoading(true);
-        setStatus('idle');
-        setMessage('');
-
-        try {
-            const formData = new FormData(e.currentTarget);
-            const result = await submitLead(formData);
-
-
-            setIsLoading(false);
-            if (result.success) {
-                setStatus('success');
-                setMessage(result.message);
-            } else {
-                setStatus('error');
-                setMessage(result.message || 'Something went wrong.');
-            }
-        } catch (err) {
-            console.error('Submission error:', err);
-            setIsLoading(false);
-            setStatus('error');
-            setMessage('An unexpected error occurred. Please try again.');
-        }
-    }
-
-    return (
-        <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 my-12 text-white shadow-xl">
-            {/* Same header content... */}
-            <div className="max-w-3xl mx-auto text-center">
-                <h3 className="text-3xl font-bold mb-4">
-                    {arabic?'خطّط للتحضير لامتحان FaMED':'Plan Your FaMED Preparation'}
-                </h3>
-                <p className="text-xl mb-6 text-blue-100">
-                    {arabic?'اطلب دليل الدراسة المجاني لثمانية أسابيع وعدّل الخطة حسب احتياجاتك.':'Request the free eight-week study guide and adapt the schedule to your needs.'}
-                </p>
-
-                {status === 'success' ? (
-                    <div className="animate-fade-in space-y-8">
-                        <div className="bg-green-100 text-green-800 p-6 rounded-lg shadow-inner">
-                            <svg className="w-16 h-16 mx-auto mb-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
-                            <h4 className="text-2xl font-bold mb-2">{arabic?'تحقّق من بريدك الإلكتروني!':'Check your inbox!'}</h4>
-                            <p>{arabic?'تم تسجيل طلبك. تحقّق من بريدك ومن مجلد الرسائل غير المرغوب فيها.':message}</p>
-                        </div>
-                        <div className="text-black transform scale-100 origin-top">
-                            <ArticleLearningResources arabic={arabic} />
-                        </div>
-                    </div>
-                ) : (
-                    <>
-                        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 text-start max-w-2xl mx-auto">
-                            {/* List items unchanged */}
-                            <ul className="space-y-3">
-                                <li className="flex items-start">
-                                    <span className="mr-3 text-green-300">✓</span>
-                                    <span>{arabic?'خطة دراسة يومية لثمانية أسابيع':'8-week day-by-day study timeline'}</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-3 text-green-300">✓</span>
-                                    <span>{arabic?'أسئلة تدريبية وإجابات نموذجية':'Sample questions & model answers'}</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-3 text-green-300">✓</span>
-                                    <span>{arabic?'عشرة أخطاء شائعة':'Top 10 common mistakes'}</span>
-                                </li>
-                                <li className="flex items-start">
-                                    <span className="mr-3 text-green-300">✓</span>
-                                    <span>{arabic?'قوائم بالمفردات الأساسية':'Essential vocabulary lists'}</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-                            <div>
-                                <input
-                                    type="text"
-                                    name="firstName"
-                                    placeholder={arabic?'اسمك الأول':'Your First Name'}
-                                    required
-                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-300 outline-none"
-                                    style={{ backgroundColor: 'white' }}
-                                />
-                            </div>
-                            <div>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder={arabic?'بريدك الإلكتروني':'Your Email Address'}
-                                    required
-                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-300 outline-none"
-                                    style={{ backgroundColor: 'white' }}
-                                />
-                            </div>
-                            <div>
-                                <input
-                                    type="date"
-                                    name="examDate"
-                                    required
-                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-300 outline-none"
-                                    style={{ backgroundColor: 'white' }}
-                                    placeholder={arabic?'متى موعد امتحانك؟':'When is your exam?'}
-                                />
-                            </div>
-                            <div>
-                                <select
-                                    name="germanLevel"
-                                    required
-                                    className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 outline-none"
-                                    style={{ backgroundColor: 'white' }}
-                                >
-                                    <option value="">{arabic?'مستواك في الألمانية':'Your German Level'}</option>
-                                    <option value="A1">{arabic?'A1 - مبتدئ':'A1 - Beginner'}</option>
-                                    <option value="A2">{arabic?'A2 - أساسي':'A2 - Elementary'}</option>
-                                    <option value="B1">{arabic?'B1 - متوسط':'B1 - Intermediate'}</option>
-                                    <option value="B2">{arabic?'B2 - فوق المتوسط':'B2 - Upper Intermediate'}</option>
-                                    <option value="C1">{arabic?'C1 - متقدّم':'C1 - Advanced'}</option>
-                                    <option value="C2">{arabic?'C2 - متمكّن':'C2 - Proficient'}</option>
-                                </select>
-                            </div>
-                            <button
-                                type="submit"
-                                disabled={isLoading}
-                                className="w-full bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
-                            >
-                                {isLoading ? (
-                                    <span className="flex items-center justify-center">
-                                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                        </svg>
-                                        Sending...
-                                    </span>
-                                ) : (arabic?'أرسل لي خطة الدراسة':'Send me the study plan →')}
-                            </button>
-                            {status === 'error' && (
-                                <p className="bg-red-100 text-red-800 p-3 rounded text-sm mt-2 font-bold border border-red-200">{arabic?'تعذّر إرسال الطلب. حاول مرة أخرى أو تواصل مع الدعم.':message}</p>
-                            )}
-                        </form>
-                    </>
-                )}
-
-                <p className="mt-6 text-sm text-blue-200">
-                    {arabic?'يمكنك إلغاء الاشتراك في أي وقت. محتوى دراسي مفيد دون رسائل مزعجة.':'No spam. Unsubscribe anytime. High-yield content only.'}
-                </p>
-            </div>
-        </div>
-    );
+import {useState} from 'react';
+import {submitLead} from '@/app/actions';
+// @ts-ignore Shared consent text also lives in the recorded server-side evidence.
+import {consentCopy} from '@/lib/guide-consent-copy.mjs';
+const copy={en:{title:'Plan your FaMED preparation',intro:'A free eight-week schedule for speaking and writing practice. Read it now or request the link by email.',read:'Read or print the free guide',name:'First name',email:'Email address',date:'Exam date (optional)',level:'German level (optional)',send:'Email me the guide',sending:'Sending…',privacy:'Privacy policy',note:'The guide request does not subscribe you to marketing. The optional checkbox needs a separate email confirmation.',failed:'Something went wrong. Try again or open the guide directly.'},ar:{title:'خطّط للتحضير لامتحان FaMED',intro:'جدول مجاني لثمانية أسابيع للتحدث والكتابة. اقرأه الآن أو اطلب الرابط عبر البريد.',read:'اقرأ الدليل المجاني أو اطبعه',name:'الاسم الأول',email:'البريد الإلكتروني',date:'تاريخ الامتحان (اختياري)',level:'مستوى الألمانية (اختياري)',send:'أرسل لي رابط الدليل',sending:'جارٍ الإرسال…',privacy:'سياسة الخصوصية',note:'طلب الدليل لا يفعّل التسويق. يحتاج المربع الاختياري إلى تأكيد منفصل عبر البريد.',failed:'حدث خطأ. حاول مرة أخرى أو افتح الدليل مباشرة.'},es:{title:'Organiza tu preparación para FaMED',intro:'Un plan gratuito de ocho semanas para practicar expresión oral y escritura. Léelo ahora o pide el enlace por correo.',read:'Leer o imprimir la guía gratuita',name:'Nombre',email:'Correo electrónico',date:'Fecha del examen (opcional)',level:'Nivel de alemán (opcional)',send:'Enviarme la guía',sending:'Enviando…',privacy:'Política de privacidad',note:'Pedir la guía no te suscribe a marketing. La casilla opcional requiere una confirmación aparte por correo.',failed:'Algo salió mal. Inténtalo de nuevo o abre la guía directamente.'}};
+export default function LeadMagnetCTA({arabic=false,locale}:{arabic?:boolean;locale?:'en'|'ar'|'es'}){
+ const lang=locale||(arabic?'ar':'en'),c=copy[lang];const [loading,setLoading]=useState(false),[status,setStatus]=useState(''),[message,setMessage]=useState('');
+ async function submit(e:React.FormEvent<HTMLFormElement>){e.preventDefault();setLoading(true);setMessage('');try{const result=await submitLead(new FormData(e.currentTarget));setStatus(result.success?'success':'error');setMessage(result.message||c.failed);}catch{setStatus('error');setMessage(c.failed);}finally{setLoading(false);}}
+ const input='mt-2 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900';
+ return <section className="my-12 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-white shadow-xl sm:p-8" dir={lang==='ar'?'rtl':'ltr'}>
+  <div className="mx-auto max-w-2xl"><h3 className="text-center text-3xl font-bold">{c.title}</h3><p className="mt-5 text-center text-lg leading-relaxed text-blue-100">{c.intro}</p>
+   <p className="my-6 text-center"><a href={`/guides/famed-study-plan-${lang}.html`} className="font-bold text-white underline underline-offset-4">{c.read}</a></p>
+   <form onSubmit={submit} className="mx-auto max-w-md space-y-4 text-start"><input type="hidden" name="locale" value={lang}/><input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden"/>
+    <label className="block font-semibold">{c.name}<input required maxLength={80} name="firstName" autoComplete="given-name" className={input}/></label>
+    <label className="block font-semibold">{c.email}<input required type="email" maxLength={254} name="email" autoComplete="email" className={input}/></label>
+    <label className="block font-semibold">{c.date}<input type="date" name="examDate" className={input}/></label>
+    <label className="block font-semibold">{c.level}<select name="germanLevel" className={input}><option value="">—</option>{['A1','A2','B1','B2','C1','C2'].map(level=><option key={level}>{level}</option>)}</select></label>
+    <label className="flex items-start gap-3 rounded-lg border border-blue-300 bg-blue-800 p-4 text-sm leading-relaxed"><input type="checkbox" name="marketingConsent" value="yes" className="mt-1 h-5 w-5 shrink-0"/>{consentCopy[lang]}</label>
+    <button disabled={loading} className="w-full rounded-lg bg-white px-6 py-4 font-bold text-blue-700 shadow disabled:opacity-60">{loading?c.sending:c.send}</button>
+    {message&&<p role="status" className={`rounded-lg bg-white p-4 ${status==='success'?'text-green-800':'text-red-800'}`}>{message}</p>}
+   </form><p className="mt-6 text-sm leading-relaxed text-blue-100">{c.note} <a href="https://famedtestprep.com/PrivacyPolicy" className="underline">{c.privacy}</a></p>
+  </div>
+ </section>;
 }
