@@ -1,0 +1,368 @@
+[
+  {
+    "locale": "es",
+    "pages": 30,
+    "bytes": 88570,
+    "sha256": "c709be06ce719a7199c923ca62dad1da053066f13ce8a42c36a82fff3a2760c3",
+    "checkedPageLayout": [
+      {
+        "page": 2,
+        "title": "Qué encontrarás en esta guía",
+        "minimumFont": 11.3,
+        "bottom": 398.9
+      },
+      {
+        "page": 3,
+        "title": "Entender el examen FaMED",
+        "minimumFont": 11.3,
+        "bottom": 356.2
+      },
+      {
+        "page": 4,
+        "title": "Estructura actual y tiempos",
+        "minimumFont": 11.3,
+        "bottom": 338.7
+      },
+      {
+        "page": 6,
+        "title": "Escritura: casos y variantes",
+        "minimumFont": 11.2,
+        "bottom": 366.1
+      },
+      {
+        "page": 7,
+        "title": "Arzt–Arzt: 32 temas",
+        "minimumFont": 10.5,
+        "bottom": 109.5
+      },
+      {
+        "page": 8,
+        "title": "Esquemas de comunicación",
+        "minimumFont": 10.4,
+        "bottom": 268.4
+      },
+      {
+        "page": 9,
+        "title": "Semana 1: Fundamentos y Anamnese",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 10,
+        "title": "Semana 1: Fundamentos y Anamnese",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 11,
+        "title": "Semana 2: Aufklärung: explicar procedimientos",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 12,
+        "title": "Semana 2: Aufklärung: explicar procedimientos",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 13,
+        "title": "Semana 3: Arzt–Arzt I: respiratorio, corazón y digestivo",
+        "minimumFont": 11.0,
+        "bottom": 268.8
+      },
+      {
+        "page": 14,
+        "title": "Semana 3: Arzt–Arzt I: respiratorio, corazón y digestivo",
+        "minimumFont": 11.0,
+        "bottom": 497.9
+      },
+      {
+        "page": 15,
+        "title": "Semana 4: Arzt–Arzt II: traumatología y otros sistemas",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 16,
+        "title": "Semana 4: Arzt–Arzt II: traumatología y otros sistemas",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 17,
+        "title": "Semana 5: Arztbrief: documentación escrita",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 18,
+        "title": "Semana 5: Arztbrief: documentación escrita",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 19,
+        "title": "Semana 6: Integración y práctica completa",
+        "minimumFont": 11.0,
+        "bottom": 279.7
+      },
+      {
+        "page": 20,
+        "title": "Semana 6: Integración y práctica completa",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 21,
+        "title": "Semana 7: Afinar la práctica y ganar fluidez",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 22,
+        "title": "Semana 7: Afinar la práctica y ganar fluidez",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 23,
+        "title": "Semana 8: Preparación final y examen",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 24,
+        "title": "Consejos para el día del examen",
+        "minimumFont": 11.3,
+        "bottom": 311.4
+      },
+      {
+        "page": 25,
+        "title": "Tu lista de comprobación",
+        "minimumFont": 11.3,
+        "bottom": 207.0
+      },
+      {
+        "page": 26,
+        "title": "Diez errores frecuentes — 1 a 5",
+        "minimumFont": 11.3,
+        "bottom": 355.5
+      },
+      {
+        "page": 27,
+        "title": "Diez errores frecuentes — 6 a 10",
+        "minimumFont": 11.3,
+        "bottom": 303.0
+      },
+      {
+        "page": 28,
+        "title": "Recursos para practicar",
+        "minimumFont": 11.3,
+        "bottom": 347.1
+      },
+      {
+        "page": 29,
+        "title": "Si quieres seguir practicando",
+        "minimumFont": 11.3,
+        "bottom": 364.6
+      },
+      {
+        "page": 30,
+        "title": "Tu preparación, paso a paso",
+        "minimumFont": 11.3,
+        "bottom": 303.7
+      }
+    ],
+    "dailyRows": 54,
+    "caseLists": {
+      "anamnese": 12,
+      "aufklaerung": 20,
+      "arztArzt": 32,
+      "writingTopics": 15
+    }
+  },
+  {
+    "locale": "ar",
+    "pages": 30,
+    "bytes": 114116,
+    "sha256": "788bb31f3b9c289728b2b673070240a76e74261e7e4f23a9ec438c9fd2a5ab1d",
+    "checkedPageLayout": [
+      {
+        "page": 2,
+        "title": "ماذا ستجد في هذا الدليل؟",
+        "minimumFont": 11.3,
+        "bottom": 451.5
+      },
+      {
+        "page": 3,
+        "title": "فهم امتحان FaMED",
+        "minimumFont": 11.3,
+        "bottom": 391.2
+      },
+      {
+        "page": 4,
+        "title": "البنية الحالية والأوقات",
+        "minimumFont": 11.3,
+        "bottom": 391.2
+      },
+      {
+        "page": 6,
+        "title": "الكتابة: الحالات والصيغ المختلفة",
+        "minimumFont": 11.2,
+        "bottom": 383.4
+      },
+      {
+        "page": 7,
+        "title": "Arzt–Arzt: اثنان وثلاثون موضوعاً",
+        "minimumFont": 10.5,
+        "bottom": 125.7
+      },
+      {
+        "page": 8,
+        "title": "مناهج التواصل",
+        "minimumFont": 10.4,
+        "bottom": 284.5
+      },
+      {
+        "page": 9,
+        "title": "الأسبوع 1: الأساسيات وأخذ القصة المرضية",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 10,
+        "title": "الأسبوع 1: الأساسيات وأخذ القصة المرضية",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 11,
+        "title": "الأسبوع 2: Aufklärung: شرح الإجراءات للمريض",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 12,
+        "title": "الأسبوع 2: Aufklärung: شرح الإجراءات للمريض",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 13,
+        "title": "الأسبوع 3: Arzt–Arzt الأول: التنفس والقلب والهضم",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 14,
+        "title": "الأسبوع 3: Arzt–Arzt الأول: التنفس والقلب والهضم",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 15,
+        "title": "الأسبوع 4: Arzt–Arzt الثاني: الرضوض والأجهزة الأخرى",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 16,
+        "title": "الأسبوع 4: Arzt–Arzt الثاني: الرضوض والأجهزة الأخرى",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 17,
+        "title": "الأسبوع 5: Arztbrief: التوثيق الكتابي",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 18,
+        "title": "الأسبوع 5: Arztbrief: التوثيق الكتابي",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 19,
+        "title": "الأسبوع 6: دمج المهارات والتدريب الكامل",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 20,
+        "title": "الأسبوع 6: دمج المهارات والتدريب الكامل",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 21,
+        "title": "الأسبوع 7: تحسين الأداء والسرعة",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 22,
+        "title": "الأسبوع 7: تحسين الأداء والسرعة",
+        "minimumFont": 11.0,
+        "bottom": 525.9
+      },
+      {
+        "page": 23,
+        "title": "الأسبوع 8: التحضير الأخير والامتحان",
+        "minimumFont": 11.0,
+        "bottom": 296.8
+      },
+      {
+        "page": 24,
+        "title": "إرشادات يوم الامتحان",
+        "minimumFont": 11.3,
+        "bottom": 363.9
+      },
+      {
+        "page": 25,
+        "title": "قائمة التحقق من استعدادك",
+        "minimumFont": 11.3,
+        "bottom": 242.0
+      },
+      {
+        "page": 26,
+        "title": "عشرة أخطاء شائعة — من الأول إلى الخامس",
+        "minimumFont": 11.3,
+        "bottom": 355.5
+      },
+      {
+        "page": 27,
+        "title": "عشرة أخطاء شائعة — من السادس إلى العاشر",
+        "minimumFont": 11.3,
+        "bottom": 373.0
+      },
+      {
+        "page": 28,
+        "title": "موارد التدريب",
+        "minimumFont": 11.3,
+        "bottom": 382.1
+      },
+      {
+        "page": 29,
+        "title": "إذا أردت مواصلة التدريب",
+        "minimumFont": 11.3,
+        "bottom": 417.2
+      },
+      {
+        "page": 30,
+        "title": "تحضيرك خطوة بخطوة",
+        "minimumFont": 11.3,
+        "bottom": 356.2
+      }
+    ],
+    "dailyRows": 54,
+    "caseLists": {
+      "anamnese": 12,
+      "aufklaerung": 20,
+      "arztArzt": 32,
+      "writingTopics": 15
+    }
+  }
+]

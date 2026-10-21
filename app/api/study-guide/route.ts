@@ -10,6 +10,6 @@ export async function GET(request:Request){
  const hash=createHash('sha256').update(token).digest('hex');
  const {data,error}=await supabaseAdmin.from('guide_requests').select('locale').eq('guide_token_hash',hash).single();
  if(error||!data||!['en','ar','es'].includes(data.locale))return new Response('Guide link not found',{status:404,headers});
- const pdf=await readFile(join(process.cwd(),'content','guides','famed-original-study-guide.pdf'));
- return new Response(pdf,{headers:{...headers,'Content-Type':'application/pdf','Content-Disposition':'attachment; filename="FaMED-8-Week-Study-Guide.pdf"'}});
+ const pdf=await readFile(join(process.cwd(),'content','guides',data.locale==='en'?'famed-original-study-guide.pdf':`famed-study-guide-${data.locale}.pdf`));
+ return new Response(pdf,{headers:{...headers,'Content-Type':'application/pdf','Content-Disposition':`attachment; filename="FaMED-8-Week-Study-Guide-${data.locale}.pdf"`}});
 }

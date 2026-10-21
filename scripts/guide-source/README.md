@@ -1,0 +1,5 @@
+# Complete Spanish and Arabic guide editions
+
+The English source `content/guides/famed-original-study-guide.pdf` is unchanged. The translated editions preserve all30 source chapter/page positions,54 daily session rows,case lists,frameworks,German practice examples,tips,checklists,resources and optional product chapter. They are complete editorial translations rather than literal reproductions of contradictory exam counts and unsupported sales claims. Current-format corrections are identified in the documents and sourced to https://famed-test.de/pruefungsablauf/ (reviewed21October2026).
+
+Generate on macOS with Python3 and reportlab,arabic-reshaper,python-bidi installed,using `python3 scripts/guide-source/render.py`. The renderer embeds the system Arial Unicode font,shapes Arabic and preserves LTR German examples. It rejects page overflow or a page count other than30. The frozen PDFs and translation-manifest.json are deployed; Python is not run in the website build. Visual rendering QA is still required after edits. Never replace the English original with these editions or truncate the daily sessions.
