@@ -10,6 +10,6 @@ export async function GET(request:Request){
  const hash=createHash('sha256').update(token).digest('hex');
  const {data,error}=await supabaseAdmin.from('guide_requests').select('locale').eq('guide_token_hash',hash).single();
  if(error||!data||!['en','ar','es'].includes(data.locale))return new Response('Guide link not found',{status:404,headers});
- const html=await readFile(join(process.cwd(),'content','guides',`famed-study-plan-${data.locale}.html`),'utf8');
- return new Response(html,{headers:{...headers,'Content-Type':'text/html; charset=utf-8'}});
+ const pdf=await readFile(join(process.cwd(),'content','guides','famed-original-study-guide.pdf'));
+ return new Response(pdf,{headers:{...headers,'Content-Type':'application/pdf','Content-Disposition':'attachment; filename="FaMED-8-Week-Study-Guide.pdf"'}});
 }
