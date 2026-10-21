@@ -6,14 +6,12 @@ category: "Documentation"
 status: "published"
 tags: ["FaMED", "Arztbrief", "Documentation", "SOAP"]
 excerpt: "Write the anamnesis from a patient video in complete sentences; understand why a full SOAP note is the wrong target."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 The current human-medicine FaMed practice test asks for the **anamnesis section of a doctor's letter**, based on a patient video. The entire task has a **22-minute maximum, including video time**. The video may be paused and moved backward or forward.
 
 ## What belongs in the requested text
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 Capture the information actually given: identity and personal details, current symptoms and course, previous illnesses and medication, tobacco and alcohol use, family and social history and relevant travel history. Check the concrete assignment for the required information.
 
@@ -44,8 +42,6 @@ Read for name and age, time course, side/location, units, medication names and n
 ## Where SOAP does and does not help
 
 SOAP organises some clinical notes into subjective, objective, assessment and plan. This FaMed assignment requests the anamnesis. It does **not** ask you to invent an objective examination, diagnosis, discharge plan or medication order to fill the other headings. Nor does it require you to recycle the patient from the earlier oral task.
-
-For connected practice, read the [history-taking guide](/blog/anamnese-overview-part-1) and [terminology table](/blog/medizinische-fachbegriffe-laiensprache-tabelle). [See actual book pages](/blog/famed-protokoll-buch-vorschau) for more phrasing practice, or [view the app workflow](/blog/famed-prep-app-so-funktionierts).
 
 ## Sources and review
 

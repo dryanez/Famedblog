@@ -6,14 +6,12 @@ category: "Surgery"
 readTime: "8 min"
 excerpt: "Checklist of essential questions, trauma mechanisms, and clinical German terminology for acute joint and musculoskeletal injuries."
 tags: ['Traumatology', 'Surgery', 'Orthopedics', 'Anamnese']
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 ## Traumatology Anamnesis Checklist: Key Questions for Knee & Ankle Injuries
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ### Introduction
 

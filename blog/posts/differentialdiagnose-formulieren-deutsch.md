@@ -6,14 +6,12 @@ category: "Medical Terminology"
 status: "published"
 tags: ["FaMED", "Differentialdiagnose", "Medical German", "Arzt-Arzt"]
 excerpt: "Practise reporting a supplied suspicion, alternatives and missing information without inventing a clinical algorithm."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 In a medical-language presentation, precision is more useful than theatrical certainty. A suspected diagnosis is not a confirmed finding; an unanswered question is not a negative result.
 
 FaMed supplies the information for its patient presentations and does not separately assess medical knowledge.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## Name the source and degree of certainty
 
@@ -52,8 +50,6 @@ This exercise practises source accuracy, not the clinical diagnosis or exclusion
 „Dafür spricht …“ indicates supporting information; it does not mean „beweist …“. „Dagegen spricht …“ does not automatically mean „sicher ausgeschlossen“. Practise that difference using only the facts provided.
 
 Use [SBAR as an organising aid](/blog/sbar-schema-arzt-arzt-gespraech), then compare the recorded presentation with its source. For patient-facing questions, see [the history guide](/blog/anamnese-overview-part-1).
-
-[Our book preview](/blog/famed-protokoll-buch-vorschau) and [app walkthrough](/blog/famed-prep-app-so-funktionierts) show independent resources for further practice.
 
 ## Sources and review
 

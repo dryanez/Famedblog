@@ -6,14 +6,12 @@ category: "Neurology"
 readTime: "9 min"
 excerpt: "Step-by-step German phrasing and targeted questions for assessing neurological complaints including migraines, dizziness, and tremors."
 tags: ['Neurology', 'Anamnese', 'Headache', 'Vertigo', 'Tremor']
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 The neurological Anamnese is a crucial step in diagnosing and treating neurological conditions. A careful and structured patient interview allows the doctor to gather important information to determine the cause of complaints and initiate appropriate therapy. This blog post focuses on the essential questions to ask during the history-taking of patients with migraine, vertigo (Schwindel), and tinnitus. The goal is to provide a comprehensive and structured approach that is helpful in preparing for the FaMED exam.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## Introduction
 

@@ -1,7 +1,7 @@
 ---
 title: "How the FaMED Prep App Works: Four Practice Sections"
 date: "2026-10-18"
-updated: "2026-10-20"
+updated: "2026-10-21"
 readTime: "5 min"
 category: "App Guide"
 status: "published"
@@ -68,7 +68,3 @@ Choose one section, complete one task, and carry one useful correction into your
 Practice tasks and exam simulations have different access rules and limits. Check the current [plan overview](https://famedtestprep.com/Upgrade?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_plans) before choosing access. AI feedback supports preparation; it does not replace your examination provider's requirements.
 
 ## Choose your next step
-
-[Explore available app tasks](https://famedtestprep.com/MedicalCases?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_intro). One-month app access is **€25.99 for 30 days**; available tasks and limits depend on the plan.
-
-Prefer to start with reading? The digital casebook is **€19.99**. [Read a real book preview](/blog/famed-protokoll-buch-vorschau). An optional **€59.99 package** combines the digital book with 90 days of app access; [view its details](https://famedtestprep.com/PayPalCheckout?plan=bundle_3m&utm_source=blog&utm_medium=walkthrough&utm_campaign=optional_bundle).

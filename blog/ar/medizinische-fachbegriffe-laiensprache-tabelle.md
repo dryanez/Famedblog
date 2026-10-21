@@ -6,14 +6,12 @@ category: "المصطلحات الطبية"
 status: "published"
 tags: ["FaMED", "Terminology", "Vocabulary", "Fachbegriffe", "Laiensprache"]
 excerpt: "تدرب على شرح المصطلحات الطبية الألمانية باللغة اليومية. هذه مجموعة مختارة للدراسة، وليست قائمة مفردات رسمية."
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 هذه أمثلة لممارسة اللغة. اختر الأسئلة لتناسب المحادثة والمهمة الفعلية؛ هذه ليست قائمة تحقق إلزامية رسمية أو أداة لاستبعاد التشخيص. لا يتم تقييم المعرفة الطبية بشكل منفصل في FaMed، ويمكن أن تختلف الحالات بين المهام.
 
 قد لا يفهم المريض المصطلح التقني حتى لو كان مألوفاً لك طبياً. تدرّب على شرحه بالألمانية اليومية، ثم تحقّق من فهم المريض للشرح.
-
-هل ترغب في ممارسة المفردات الطبية في سياق محادثة مع مريض؟ [احصل على كتاب FaMED Protokoll الرقمي مقابل 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book) واعمل مع حالاته وعباراته المفيدة جنبًا إلى جنب مع هذا المسرد.
 
 قارن مثلاً عبارة *"Wir müssen eine Cholezystektomie wegen einer Cholezystolithiasis durchführen"* بشرح أبسط: *"Wir müssen die Gallenblase operativ entfernen, weil sich dort Gallensteine gebildet haben."*
 
@@ -153,5 +151,3 @@ updated: "2026-10-19"
 ## تمرين مفردات في خمس دقائق
 
 اختر ثلاثة مصطلحات من جدول واحد. اشرح كل مصطلح بصوت عالٍ من دون قراءة عمود اللغة المبسطة، ثم قارن صياغتك. اختم بالسؤال: „Ist die Erklärung verständlich, oder soll ich einen Punkt noch einmal erläutern?“
-
-للتدريب ضمن حوار أطول، [اطّلع على عيّنة الكتاب الرقمي](/ar/blog/famed-protokoll-buch-vorschau). ولتجربة إجابة بصوتك أو كتابتك، [شاهد تدريباً فعلياً في التطبيق](/ar/blog/famed-prep-app-so-funktionierts).

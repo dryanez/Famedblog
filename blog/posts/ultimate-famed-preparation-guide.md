@@ -2,7 +2,7 @@
 title: "FaMED Preparation Guide: Speaking, Writing and a Practical Study Plan"
 slug: "ultimate-famed-preparation-guide"
 date: "2025-12-09"
-updated: "2026-10-18"
+updated: "2026-10-21"
 readTime: "6 min"
 category: "Exam Preparation"
 tags: ["FaMED", "Study Guide", "Medical German", "Preparation"]
@@ -13,8 +13,6 @@ status: "published"
 FaMED preparation starts with understanding the task you are preparing for: professional medical-language communication.
 
 ## Start with the official format
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 The exam provider's published practice test includes patient-history and informed-consent conversations, doctor-to-doctor patient presentations, and written documentation. Consult the [official FaMed practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf) and the provider's current information for the applicable instructions. This preparation site is independent of the exam provider.
 
@@ -29,10 +27,6 @@ If you want to practise a patient presentation, use the [SBAR article](/blog/sba
 ## Combine reading and speaking
 
 Read a short section, close the material and explain the idea in your own words. Record your own practice if you find it useful. Listen for clarity and structure, then repeat the most difficult passage. Qualified feedback is valuable when you need to check medical content or recurring language problems.
-
-![Book excerpt: pain-history questions, edition 2026](/images/previews/book-2026-opqrst.webp)
-
-[Look inside the digital FaMED book](/blog/famed-protokoll-buch-vorschau) before deciding whether it fits your learning style. The book offer is €19.99.
 
 ## Make writing a regular task
 

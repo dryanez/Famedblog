@@ -6,14 +6,12 @@ category: "Anamnese"
 readTime: "3 min"
 excerpt: "A language-practice approach to concerning symptom descriptions, without treating the article as a diagnostic or triage algorithm."
 tags: ['Anamnese', 'Red Flags', 'Emergency Medicine', 'Patient Safety']
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 When a person describes a concerning symptom, clear language matters. In this article we practise how to clarify that description and report what was said. It is not a complete diagnostic checklist, and individual symptom questions cannot rule out an emergency.
 
 For FaMed, the relevant skill is faithful professional communication. Medical knowledge is not separately assessed. There is no verified universal „red flag missed = automatic fail“ rule in this review.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## Turn a vague phrase into an answerable question
 
@@ -44,8 +42,6 @@ Use the actual supplied clinical findings or plan if the assignment includes the
 ## Review the recording
 
 After a fictional practice interview, check three things: did you understand the person's own words, did you clarify the important uncertainty, and did your summary add or change any facts?
-
-[The focused symptom-question exercise](/blog/red-flags-anamnese-famed) develops the same skill. [Book excerpts](/blog/famed-protokoll-buch-vorschau) and [the app walkthrough](/blog/famed-prep-app-so-funktionierts) show further independent study options.
 
 ## Sources and review
 

@@ -6,14 +6,12 @@ category: "Learning Strategy"
 status: "published"
 excerpt: "A concrete daily exercise: structure a conversation, formulate it aloud, check feedback, and practice the same section again."
 tags: ["FaMED", "Lernplan", "Prüfungsvorbereitung"]
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 You've collected study material, but are you also practicing speaking? For preparing for medical language situations, a fixed workflow helps. Here is a 30-minute routine that you can adapt to your learning level. This is a learning suggestion from FaMED Prep, not an official exam requirement and no guarantee of passing.
 
 ## Minutes 0–5: One Learning Goal Instead of Ten Topics
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 Choose a single task: open a conversation, summarize information, or formulate a section of a doctor's letter. Write down what you want to express more clearly at the end. Example: "Today I will practice politely asking for clarification on an unclear answer."
 
@@ -49,9 +47,5 @@ Do you want to not just read, but practice practically? [Here we show the FaMED 
 Write down one sentence: "Tomorrow I will repeat...". Keep your notes and check after a week which tasks are easier for you. As your exam date approaches, align your overall plan with your individual needs and the current information from the respective exam provider.
 
 ## How to Combine Reading and Practicing
-
-You can use the digital FaMED Protocol casebook for reference; in the FaMED Prep App, you can practically work through the available exercises. The package includes the digital book and **90 days of app access for a total price of €59.99, one-time**. The respective plan limits are in the app; there is no promise of an unlimited number of exam simulations.
-
-[View Digital Book + 90 Days App for €59.99](https://famedtestprep.com/PayPalCheckout?plan=bundle_3m&utm_source=blog&utm_medium=article&utm_campaign=30min_routine)
 
 Do you want an overview first? [Here you will find our free study plan](/lead-magnet). Also check the current information from your exam provider: [FaMed](https://famed-test.de/).

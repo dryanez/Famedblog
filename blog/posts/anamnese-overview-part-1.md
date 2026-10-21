@@ -9,14 +9,12 @@ featured: false
 excerpt: "Read the task, ask clear questions and build a structured patient history using the current FaMed format."
 status: "published"
 readTime: "3 min"
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 The Anamnesegespräch is one of the two situations in the doctor–patient station. The current practice test gives this situation **at most 11 minutes**; the paired history/consent block is **23 minutes including reading**.
 
 ## Read the actual assignment
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 Identify your role, the person you are speaking with and the requested task. Use the supplied details; do not assume the display, case or role is always the same. The history case need not continue into the consent or writing task.
 
@@ -47,8 +45,6 @@ Useful transitions include:
 Keep notes faithful to what was said. At the end, offer a concise patient-facing summary, check it and explain the next steps appropriate to the assignment. Do not promise a diagnosis that has not been established.
 
 > Ich fasse kurz zusammen: … Habe ich Sie richtig verstanden? Welche Frage ist für Sie noch offen?
-
-Record a fictional practice interview, listen for clarity and choose one part to repeat. [Our book preview](/blog/famed-protokoll-buch-vorschau) shows a conversation-opening excerpt. [The app walkthrough](/blog/famed-prep-app-so-funktionierts) explains the separate practice areas; these are independent learning resources, not official case predictions.
 
 ## Sources and review
 

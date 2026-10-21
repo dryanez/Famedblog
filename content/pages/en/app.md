@@ -16,7 +16,3 @@ Practise medical history taking, explaining procedures, presenting patients and 
 [Read the app walkthrough with actual screens](/blog/famed-prep-app-so-funktionierts). Select an available task, read its instructions and work with the feedback or transcript available in that mode. Voice exercises may require microphone permission.
 
 ## Choose a suitable plan
-
-The one-month access plan is €25.99 for 30 days. Longer options and their current features are shown on the [app plan overview](https://famedtestprep.com/Upgrade?utm_source=blog&utm_medium=app_page&utm_campaign=app_plans). Exercise availability and simulation limits depend on your plan.
-
-AI feedback supports practice; it is not an official exam assessment. The app and the digital book are separate products. [Read about the book](/book) if you prefer to start with cases and useful phrases.

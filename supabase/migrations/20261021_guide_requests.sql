@@ -18,3 +18,5 @@ grant all on public.guide_requests to service_role;
 create index if not exists guide_requests_email_created on public.guide_requests(email,created_at desc);
 
 alter table public.guide_requests add column if not exists editorial_eligible boolean not null default false;
+
+alter table public.guide_requests add column if not exists guide_token_hash text unique;

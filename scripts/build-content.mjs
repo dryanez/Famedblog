@@ -9,8 +9,10 @@ for(const locale of ['en','ar','es']){
  manifest.posts[locale].sort((a,b)=>String(b.date).localeCompare(String(a.date)));
  for(const file of fs.readdirSync('content/pages/'+locale).filter(f=>f.endsWith('.md'))){
   const {data,content}=matter(fs.readFileSync('content/pages/'+locale+'/'+file,'utf8'));const key=file.slice(0,-3);const route=key==='home'?'/':key==='resources-anamnese'?'/resources/anamnese':'/'+key;
-  manifest.pages[locale][route]={title:data.title,excerpt:data.excerpt,content};
+  manifest.pages[locale][route]={title:data.title,excerpt:data.excerpt,updated:data.updated,content};
  }
 }
 fs.writeFileSync('lib/generated-content.json',JSON.stringify(manifest));
 console.log('Content bundled:',Object.fromEntries(['en','ar','es'].map(l=>[l,{posts:manifest.posts[l].length,pages:Object.keys(manifest.pages[l]).length}])));
+
+fs.writeFileSync('lib/spanish-slugs.mjs','export const spanishSlugs = '+JSON.stringify(manifest.posts.es.filter(p=>p.status==='published').map(p=>p.slug))+';\n');

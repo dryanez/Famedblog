@@ -6,14 +6,12 @@ category: "Study Tips"
 status: "published"
 tags: ["FaMED", "Study Plan", "Time Management", "Career"]
 excerpt: "Fit speaking, source-based writing and review around work, with realistic task timings and no promised completion date."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 Preparing while working requires a schedule you can repeat. Six weeks is an example planning window, not evidence that every learner can reach the required language level in that time. Begin by checking the current task requirements and your own baseline.
 
 ## A possible 90-minute study session
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 Use three flexible blocks: vocabulary in context, one speaking exercise, then writing or review. Ninety minutes is a study suggestion, not an official requirement.
 
@@ -46,8 +44,6 @@ In each week, practise spelling and keyboard familiarity, listening to names and
 Follow your workplace's access, supervision and confidentiality rules. Use only authorised teaching examples and materials. Do not access patient records simply for private exam preparation, and do not upload or record identifiable patient information in a study app.
 
 Notice useful ways colleagues structure explanations, then create a fictional example in your own words. Patient care is not a private mock-exam session.
-
-[See actual book pages](/blog/famed-protokoll-buch-vorschau) or [read the app walkthrough](/blog/famed-prep-app-so-funktionierts) before adding optional resources. [The eight-week plan](/blog/8-week-famed-study-plan) offers a longer template.
 
 ## Sources and review
 

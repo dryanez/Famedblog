@@ -8,7 +8,7 @@ export async function submitLead(formData:FormData){
  const store={
   async recent(email:string){const {data,error}=await supabaseAdmin.from('guide_requests').select('id').eq('email',email).not('provider_message_id','is',null).gte('created_at',new Date(Date.now()-900000).toISOString()).limit(1);if(error)throw Error('Guide storage unavailable');return !!data?.length;},
   async record(lead:any){
-   const {data,error}=await supabaseAdmin.from('guide_requests').insert({email:lead.email,first_name:lead.firstName,locale:lead.locale,marketing_requested:lead.marketingRequested,token_hash:lead.tokenHash,consent_version:lead.consentVersion,consent_text:lead.consentText}).select('id').single();if(error)throw Error('Guide storage unavailable');
+   const {data,error}=await supabaseAdmin.from('guide_requests').insert({email:lead.email,first_name:lead.firstName,locale:lead.locale,marketing_requested:lead.marketingRequested,token_hash:lead.tokenHash,guide_token_hash:lead.guideTokenHash,consent_version:lead.consentVersion,consent_text:lead.consentText}).select('id').single();if(error)throw Error('Guide storage unavailable');
    // A guide request is not permission for the existing lead campaigns.
    const {error:leadError}=await supabaseAdmin.from('leads').insert({email:lead.email,first_name:lead.firstName,exam_date:lead.examDate,german_level:lead.germanLevel,source:'website_guide_request_v2'});if(leadError&&leadError.code!=='23505')console.error('Guide lead record unavailable',leadError.code);
    return data;

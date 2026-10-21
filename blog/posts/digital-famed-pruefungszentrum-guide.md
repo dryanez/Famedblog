@@ -6,14 +6,12 @@ category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Digital Exam", "Testing Center", "OSCE"]
 excerpt: "Prepare for the digital FaMed tasks: separate oral cases, video notes and the written anamnesis section."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 FaMed is a digital language examination taken **at a test centre**. It is not a remote exam you take from home. The provider's current FAQ lists Mainz, Kassel and Nürnberg; your confirmation supplies your appointment details.
 
 ## Understand the three stations
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 | Station | Tasks | Published block duration |
 |---|---|---|

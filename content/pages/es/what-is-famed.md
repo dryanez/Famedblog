@@ -28,8 +28,6 @@ Cada una de las tres estaciones exige al menos un 60 %. Una estación más fuert
 
 ## Empieza con un plan
 
-[Descarga el plan gratuito](/es/lead-magnet), [consulta una muestra del libro](/es/book) o [mira cómo se practica en la app](/es/app).
-
 ## Fuentes oficiales
 
 Revisión editorial: 21 de octubre de 2026, medicina humana. [Estructura del examen](https://famed-test.de/pruefungsablauf/), [prueba de práctica](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf) y [resultados y criterios](https://famed-test.de/pruefungsergebnis/). La aceptación del examen depende de la autoridad competente; esta página no determina tu vía individual de reconocimiento profesional.

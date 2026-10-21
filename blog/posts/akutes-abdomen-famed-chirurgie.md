@@ -6,14 +6,12 @@ category: "Clinical Cases"
 status: "published"
 tags: ["FaMED", "Chirurgie", "Akutes Abdomen", "OSCE"]
 excerpt: "Use fictional abdominal examples to practise questions, source distinctions and patient-friendly language."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 Abdominal complaints are useful material for medical-language practice. In FaMed, the task is not a practical surgical examination or a test of whether you know when to operate. Medical knowledge is not separately assessed.
 
 ## Clarify the complaint in everyday German
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 Begin with an open question, then follow the reported symptom:
 
@@ -45,8 +43,6 @@ For example:
 ## Explain the supplied procedure, not an invented continuation
 
 The informed-consent task may involve a different patient and procedure. Use its information about purpose, sequence, risks and perioperative behaviour. Do not assume the abdominal history automatically leads to a specific operation.
-
-The [consent guide](/blog/famed-aufklaerungsgespraech-guide) gives adaptable language patterns. [See the book preview](/blog/famed-protokoll-buch-vorschau) for independent phrasing material. No diagnosis frequency or clinical treatment pathway is claimed here.
 
 ## Sources and review
 

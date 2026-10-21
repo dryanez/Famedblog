@@ -6,20 +6,16 @@ category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Kosten", "Termine", "Statistik", "Approbation"]
 excerpt: "The published €530 exam fee, current booking sources, result timing and a practical planning checklist."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 The official FaMed FAQ currently lists the human-medicine exam fee as **€530**. This is the exam provider's fee, separate from any FaMED Prep book or app purchase. Check the amount and conditions in the official booking before paying.
 
 ## Build your own budget
 
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
-
 Start with the exam fee, then request actual prices for any travel, accommodation, translations, language certificates and preparation resources you need. These costs differ by person. There is no verified all-inclusive budget here, and we cannot promise that every expense is tax-deductible.
 
 The FAQ lists **Mainz, Kassel and Nürnberg**. Check the address in your booking confirmation. Do not assume another city is a current exam centre because an old article names it.
-
-Our digital book offer is **€19.99**. [Look at real book pages first](/blog/famed-protokoll-buch-vorschau). Preparation purchases are optional and do not reserve an official exam place.
 
 ## Book against live availability
 

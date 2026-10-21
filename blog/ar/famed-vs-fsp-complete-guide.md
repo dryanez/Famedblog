@@ -6,14 +6,12 @@ category: "دليل الاختبار"
 status: "published"
 tags: ["famed", "fsp", "comparison", "guide"]
 excerpt: "قارن بين قبول السلطات، وتنسيق المهام الحالي، ومتطلبات الحجز لمسار اختبار اللغة الخاص بك."
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 FaMed هو **Fachsprachenprüfung Medizin**: اختبار اللغة الطبية. المقارنة العملية هي بين مسار FaMed و FSP الخاص بغرفة طبية معينة، وليس بين اختبار لغة ومؤهل مهني مختلف.
 
 ابدأ بالمسار الذي تقبله سلطة الترخيص الخاصة بك. لا تختر بناءً على وعود بأن أحد المزودين أسهل أو أسرع أو يضمن لك النجاح.
-
-للحصول على حالات وعبارات مفيدة للتدريب بجانب هذا الموضوع، [احصل على الكتاب الرقمي FaMED Protokoll مقابل 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). يمكنك أيضاً [قراءة عينة أولاً](/ar/blog/famed-protokoll-buch-vorschau).
 
 ## تنسيق FaMed الحالي للطب البشري
 
@@ -44,8 +42,6 @@ FaMed هو **Fachsprachenprüfung Medizin**: اختبار اللغة الطبي�
 ## استعد للمهمة التي ستؤديها فعلياً
 
 استخدم اختبار الممارسة الحالي، ثم اختر مهارة واحدة في التحدث أو الكتابة لتحسينها. يمكن أن تكون SBAR و OPQRST **أطر عمل تدريبية** مفيدة، وليست مخططات تقييم إلزامية. [ابدأ بتمرين تاريخ الألم](/ar/blog/pain-anamnesis-guide) أو [دليل المهام الكتابية](/ar/blog/famed-arztbrief-soap-schema).
-
-[شاهد عينة كتابنا](/ar/blog/famed-protokoll-buch-vorschau) و[جولة في التطبيق](/ar/blog/famed-prep-app-so-funktionierts) قبل اختيار موارد التحضير الاختيارية. لا يعتبر أي منهما حجزاً رسمياً للاختبار أو شهادة.
 
 ## المصادر والمراجعة
 

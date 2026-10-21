@@ -6,14 +6,12 @@ category: "Anamnese"
 readTime: "7 min"
 excerpt: "Apply the OPQRST pain anamnesis framework in fluent German. High-yield phrases, pain characterization, and differential diagnosis tips."
 tags: ['Pain Assessment', 'OPQRST', 'Anamnese', 'Clinical Skills']
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 ## Introduction
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 The Schmerzanamnese (pain history) is a fundamental component of medical history-taking and is indispensable for correctly diagnosing and treating patients. It allows the doctor to understand the type, cause, and intensity of pain and thus initiate targeted therapy. In this comprehensive guide, we will cover the essential aspects of pain history-taking, particularly in preparation for the FaMED exam. This article serves as a practical guide to improve your skills in Anamneseerhebung and give you confidence in exam situations.
 

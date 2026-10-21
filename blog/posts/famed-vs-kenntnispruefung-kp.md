@@ -6,14 +6,12 @@ category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Kenntnisprüfung", "Approbation", "Career"]
 excerpt: "Understand how language assessment differs from the Kenntnisprüfung and why neither exam alone grants Approbation."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 **FaMed assesses professional German communication. The Kenntnisprüfung assesses medical knowledge and skills within a licensing procedure.** Passing either assessment does not, by itself, issue a medical licence.
 
 Your responsible authority determines the route for your qualification and application. Do not assume every foreign-trained doctor must take a Kenntnisprüfung, or that document assessment always starts only after the language exam.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## Compare the purpose
 

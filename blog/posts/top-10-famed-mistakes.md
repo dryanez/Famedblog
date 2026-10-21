@@ -6,14 +6,12 @@ tags: [Fachsprachenprüfung, FaMED, Medizindeutsch, Approbation, Prüfungstipps]
 status: "published"
 category: "Exam Tips"
 readTime: "3 min"
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 These ten points are a learning aid from FaMED Prep, not a statistically determined ranking. The current tasks of the exam provider are authoritative. FaMED Prep offers independent preparation materials.
 
 ## 1. Not reading the task and role carefully
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 Check what is required in this situation. A fixed 30-second preparation cannot be derived as a general rule from the currently examined sources. Use the information from the actual assignment.
 
@@ -52,8 +50,6 @@ The anamnesis part from your own patient video is requested. Write complete sent
 ## 10. Practicing without feedback
 
 After each attempt, choose a specific point for improvement. The official C1 checklist helps in checking comprehensibility, structure, and accuracy. Each of the three exam areas needs at least 60%; a strong area does not compensate for a too weak one.
-
-[Look into the digital book](/blog/famed-protokoll-buch-vorschau) or [get to know the app first](/blog/famed-prep-app-so-funktionierts). With the [30-minute routine](/blog/famed-vorbereitung-30-minuten-lernroutine) you can practice one of these points today.
 
 ## Sources and review
 

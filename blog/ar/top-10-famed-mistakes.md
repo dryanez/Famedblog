@@ -6,14 +6,12 @@ tags: [Fachsprachenprüfung, FaMED, Medizindeutsch, Approbation, Prüfungstipps]
 status: "published"
 category: "نصائح الامتحانات"
 readTime: "3 min"
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 هذه النقاط العشر هي مساعدة تعليمية من FaMED Prep، وليست ترتيبًا محددًا إحصائيًا. المهام الحالية لمقدم الامتحان هي المرجع. تقدم FaMED Prep مواد تحضيرية مستقلة.
 
 ## 1. عدم قراءة المهمة والدور بعناية
-
-للحالات والعبارات المفيدة للممارسة جنبًا إلى جنب مع هذا الموضوع، [احصل على الكتاب الرقمي FaMED Protokoll بسعر 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). يمكنك أيضًا [قراءة عينة أولاً](/ar/blog/famed-protokoll-buch-vorschau).
 
 تحقق مما هو مطلوب في هذا الموقف. لا يمكن اشتقاق وقت تحضير ثابت مدته 30 ثانية كقاعدة عامة من المصادر التي يتم فحصها حاليًا. استخدم المعلومات من المهمة الفعلية.
 
@@ -52,8 +50,6 @@ updated: "2026-10-19"
 ## 10. الممارسة بدون تغذية راجعة
 
 بعد كل محاولة، اختر نقطة محددة للتحسين. تساعد قائمة التحقق الرسمية C1 في التحقق من الوضوح والهيكل والدقة. تحتاج كل منطقة من مناطق الامتحان الثلاث إلى 60٪ على الأقل؛ منطقة قوية لا تعوض عن منطقة ضعيفة جدًا.
-
-[اطلع على الكتاب الرقمي](/ar/blog/famed-protokoll-buch-vorschau) أو [تعرف على التطبيق أولاً](/ar/blog/famed-prep-app-so-funktionierts). باستخدام [روتين الـ 30 دقيقة](/ar/blog/famed-vorbereitung-30-minuten-lernroutine) يمكنك ممارسة إحدى هذه النقاط اليوم.
 
 ## المصادر والمراجعة
 

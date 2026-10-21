@@ -42,8 +42,4 @@ El vídeo completo está narrado en inglés, con subtítulos en inglés y ejerci
 
 ## Acceso y límites
 
-El plan de un mes cuesta €25.99 por 30 días. La disponibilidad de ejercicios y los límites de simulación dependen del plan. Consulta las condiciones vigentes antes de comprar. El feedback de IA sirve para practicar y no sustituye una evaluación oficial.
-
 [Ver la app](https://famedtestprep.com/MedicalCases?utm_source=blog&utm_medium=spanish_app&utm_campaign=es_pilot&utm_content=app&utm_locale=es) · [Consultar planes](https://famedtestprep.com/Upgrade?utm_source=blog&utm_medium=spanish_app&utm_campaign=es_pilot&utm_content=app&utm_locale=es)
-
-La app y el libro son productos separados. [Mira el interior del libro digital](/es/book) si quieres comenzar leyendo casos y expresiones.

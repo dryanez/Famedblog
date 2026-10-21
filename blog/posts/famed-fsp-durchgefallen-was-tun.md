@@ -6,14 +6,12 @@ category: "Study Tips"
 status: "published"
 tags: ["FaMED", "FSP", "Wiederholungsprüfung", "Preparation"]
 excerpt: "Use provider feedback to choose clear learning goals and build a practical retake preparation plan."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 An unsuccessful language-exam result can be discouraging. Start with the result and feedback available for the **specific examination you took**. FaMed and a chamber FSP may have different procedures.
 
 ## 1. Use the provider's feedback route
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 FaMed's current results page offers a free, binding **15-minute feedback video appointment** after an unsuccessful attempt. It describes a further appointment as possible no earlier than six months after the preceding feedback session. Check the booking details directly with the provider.
 
@@ -41,8 +39,6 @@ Use [the written-task guide](/blog/famed-arztbrief-soap-schema) rather than the 
 ## 4. Plan the next weeks around evidence
 
 Choose a schedule you can sustain. Review one attempt, work on one identified weakness, repeat the task, then compare the versions. Add full practice runs once individual skills are more reliable. Our [six-week plan](/blog/famed-vorbereitung-berufstaetig-6-wochen) is adaptable; six weeks is not a promise of readiness.
-
-Check current repeat-booking and fee conditions with the provider before reserving another date. [See book excerpts](/blog/famed-protokoll-buch-vorschau) and [the app demonstration](/blog/famed-prep-app-so-funktionierts) before buying additional practice resources.
 
 ## Sources and review
 

@@ -6,14 +6,12 @@ category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Anerkennung", "Approbation", "Bundesländer"]
 excerpt: "Find the authority conditions for your destination state and qualification route, with dated primary sources."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 Before booking FaMed, identify the authority responsible for your **human-medicine** licensing application. The exam centre's location does not determine whether that authority accepts the certificate.
 
 The provider recognition overview remains labelled **November 2025**. Reading it in October 2026 does not turn it into a new 2026 policy. We distinguish provider statements from authority evidence below.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## What the primary sources support
 
@@ -41,8 +39,6 @@ Attach or provide documents only through the authority's stated process. Some au
 ## Passing a language exam is not a licence
 
 FaMed can satisfy an accepted language requirement. It does not itself grant **Approbation** or **Berufserlaubnis**. These are different permissions, and a Berufserlaubnis may carry restrictions.
-
-Read [FaMED versus the Kenntnisprüfung](/blog/famed-vs-kenntnispruefung-kp) for the distinction between language and knowledge assessment. After checking your route, use the [preparation guide](/blog/ultimate-famed-preparation-guide) to organise learning. [See inside our book](/blog/famed-protokoll-buch-vorschau) before choosing optional preparation material.
 
 ## Sources and review
 

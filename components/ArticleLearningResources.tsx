@@ -1,27 +1,15 @@
 import Image from 'next/image';
-export default function ArticleLearningResources({german=false,arabic=false}:{german?:boolean;arabic?:boolean}) {
- return <section id="weiterlernen" style={{scrollMarginTop:100}} aria-label={arabic?'تابع التعلّم':german?'Weiterlernen':'Continue learning'} className="my-12 grid gap-5 md:grid-cols-2">
-  <div className="flex flex-col gap-5 rounded-2xl sm:flex-row md:flex-col lg:flex-row border border-blue-200 bg-blue-50 p-5">
-   <a href={`${arabic?'/ar':''}/blog/famed-protokoll-buch-vorschau`} className="shrink-0 self-start"><Image unoptimized loading="eager" src="/images/products/book-cover.png" alt="FaMED Protokoll · Ausgabe 2026" width={778} height={1100} className="w-20 rounded shadow-sm sm:w-24" /></a>
-   <div className="min-w-0"><p className="text-xs font-bold uppercase tracking-wide text-blue-700">{arabic?'الكتاب الرقمي':german?'Digitales Buch':'Digital book'}</p>
-    <h2 className="mt-2 text-xl font-bold text-slate-900">FaMED Protokoll 2026</h2>
-    <p className="mt-2 text-sm text-slate-700">{arabic?'حالات وعبارات مفيدة لتنظيم الحوار.':german?'Fälle, Redemittel und Gesprächsstruktur.':'Cases, useful phrases and conversation structure.'}</p>
-    <p className="mt-3 text-3xl font-extrabold text-blue-800">€19.99</p>
-    <a className="mt-4 inline-block rounded-lg bg-blue-700 px-4 py-3 font-bold text-white" href="https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=book_2026">{arabic?'اشترِ الكتاب الرقمي':german?'Digitales Buch ansehen':'Get the digital book'}</a>
-    <a className="mt-3 block text-sm font-semibold text-blue-700 underline" href={`${arabic?'/ar':''}/blog/famed-protokoll-buch-vorschau`}>{arabic?'اقرأ عيّنة أولاً':german?'Erst reinlesen →':'Read a sample first →'}</a>
+export const bookCheckout='https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book';
+export default function ArticleLearningResources({german=false,arabic=false,locale}:{german?:boolean;arabic?:boolean;locale?:'en'|'ar'|'es'}) {
+ const ar=locale==='ar'||arabic,es=locale==='es',prefix=ar?'/ar':es?'/es':'';
+ return <section id="optional-resources" aria-label={ar?'موارد اختيارية':es?'Recursos opcionales':'Optional learning resources'} className="my-12 grid gap-5 md:grid-cols-2">
+  <div className="flex flex-col gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:flex-row md:flex-col lg:flex-row">
+   <a href={bookCheckout} className="shrink-0 self-start"><Image unoptimized loading="lazy" src="/images/products/book-cover.png" alt="FaMED Protokoll 2026" width={778} height={1100} className="w-20 rounded shadow-sm sm:w-24" /></a>
+   <div><p className="text-xs font-bold uppercase tracking-wide text-slate-600">{ar?'للتعلّم الإضافي':es?'Para seguir practicando':'For further practice'}</p><h2 className="mt-2 text-xl font-bold text-slate-900">FaMED Protokoll 2026</h2>
+    <p className="mt-3 text-sm leading-relaxed text-slate-700">{ar?'كتاب رقمي بالألمانية يتضمن حالات وعبارات مفيدة وبنية المحادثة. مورد اختياري مستقل عن التطبيق.':es?'Libro digital en alemán con casos, expresiones útiles y estructuras de conversación. Un recurso opcional, separado de la app.':german?'Digitales Buch mit Fällen, Redemitteln und Gesprächsstruktur.':'A digital book in German with cases, useful phrases and conversation structures. An optional resource, separate from the app.'}</p>
+    <a className="mt-5 inline-block rounded-lg bg-blue-700 px-4 py-3 font-bold text-white" href={bookCheckout}>{ar?'احصل على الكتاب الرقمي':es?'Conseguir el libro digital':german?'Digitales Buch erhalten':'Get the digital book'}</a>
    </div>
   </div>
-  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-   <div className="mb-5 flex min-h-40 items-center justify-center rounded-xl bg-slate-800 p-5">
-    <div className="flex h-36 w-36 rotate-3 flex-col items-center justify-center gap-3 rounded-3xl bg-white p-4 shadow-xl">
-     <Image unoptimized loading="eager" src="/images/products/logo.png" alt="FaMED Prep App" width={200} height={82} className="h-16 w-28 object-contain" />
-     <span className="text-center text-xs font-semibold text-slate-700">FaMED Prep</span>
-    </div>
-   </div>
-   <p className="text-xs font-bold uppercase tracking-wide text-blue-700">{arabic?'تدرّب عملياً':german?'Praktisch üben':'Put it into practice'}</p>
-   <h2 className="mt-2 text-xl font-bold text-slate-900">FaMED Prep App</h2>
-   <p className="mt-3 text-slate-700">{arabic?'أخذ القصة المرضية وشرح الإجراءات وعرض الحالات والكتابة: تعرّف أولاً على طريقة التدريب.':german?'Anamnese, Aufklärung, Patientenvorstellung und Schreiben: Lerne zuerst den Ablauf kennen.':'History, informed consent, case presentations and writing: see how the practice works first.'}</p>
-   <a className="mt-5 inline-block rounded-lg bg-slate-900 px-4 py-3 font-bold text-white" href={`${arabic?'/ar':''}/blog/famed-prep-app-so-funktionierts`}>{arabic?'كيف يعمل التطبيق؟':german?'So funktioniert die App →':'How the app works →'}</a>
-  </div>
+  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6"><Image unoptimized loading="lazy" src="/images/products/logo.png" alt="FaMED Prep App" width={200} height={82} className="mb-5 h-12 w-auto object-contain"/><h2 className="text-xl font-bold text-slate-900">FaMED Prep App</h2><p className="mt-3 leading-relaxed text-slate-700">{ar?'تعرّف على التدريب على أخذ القصة المرضية وشرح الإجراءات وعرض الحالات والكتابة.':es?'Conoce los ejercicios de Anamnese, Aufklärung, Arzt–Arzt y escritura, y cómo utilizar el feedback para practicar.':'Explore practice for history taking, informed consent, case presentations and writing, and see how feedback can support your next attempt.'}</p><a className="mt-5 inline-block font-semibold text-blue-700 underline" href={`${prefix}/blog/famed-prep-app-so-funktionierts`}>{ar?'كيف يعمل التطبيق؟':es?'Cómo funciona la app':'How the app works →'}</a></div>
  </section>;
 }

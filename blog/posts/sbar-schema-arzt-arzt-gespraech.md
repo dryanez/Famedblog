@@ -6,14 +6,12 @@ category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Arzt-Arzt-Gespräch", "SBAR", "Communication"]
 excerpt: "Organise two separate case presentations from supplied information, without inventing findings or treating SBAR as the official rubric."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 The doctor–doctor station contains **two patient presentations**. Its published duration is **23 minutes including reading**; the current practice test allows **at most 11 minutes per situation**. The cases need to be kept separate.
 
 You communicate relevant supplied information in professional German and answer follow-up questions. This is a language task, not a requirement to recall a treatment algorithm from memory.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## SBAR is an organising tool
 
@@ -51,8 +49,6 @@ Distinguish „bereits durchgeführt“, „geplant“ and „von mir vorgeschla
 Make separate notes for each practice case. After speaking, compare your recording with the supplied source: did you mix identities, times, findings or plans? Then repeat only the unclear section. Use the [differential-diagnosis phrasing exercise](/blog/differentialdiagnose-formulieren-deutsch) to practise degrees of certainty.
 
 The [written station](/blog/famed-arztbrief-soap-schema) has a different task: anamnesis from its video in complete sentences. Do not carry this presentation's facts into it.
-
-[See the real app workflow](/blog/famed-prep-app-so-funktionierts) or [look inside the book](/blog/famed-protokoll-buch-vorschau) to choose further practice material.
 
 ## Sources and review
 

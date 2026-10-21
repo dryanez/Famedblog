@@ -6,14 +6,12 @@ category: "Anamnese"
 readTime: "3 min"
 excerpt: "Understand the term and practise source-faithful questions without diagnosing cancer from a symptom list."
 tags: ['B-Symptomatik', 'Oncology', 'Internal Medicine', 'Anamnese']
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 The term **B-symptoms** is used particularly in lymphoma contexts for unexplained fever above 38°C, marked night sweats and unintended weight loss of more than 10% over six months. These symptoms can have different causes; they do not by themselves diagnose cancer or establish its stage.
 
 This article focuses on German questions and documentation. It is not a fixed investigation plan.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## Ask about each symptom separately
 
@@ -52,8 +50,6 @@ Avoid „Krebs ist ausgeschlossen“ or a claim about inheritance when the avail
 ## Put the questions into a conversation
 
 FaMed assesses language performance, not a memorised oncology algorithm. Ask relevant questions, listen and summarise. The [oncological-history examples](/blog/oncological-anamnesis-mastery) and [general history guide](/blog/anamnese-overview-part-1) show how these information groups fit into a conversation.
-
-[See our digital book sample](/blog/famed-protokoll-buch-vorschau) or [view the app walkthrough](/blog/famed-prep-app-so-funktionierts) for further language practice.
 
 ## Sources and review
 

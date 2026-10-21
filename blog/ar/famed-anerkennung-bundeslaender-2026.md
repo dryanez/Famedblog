@@ -6,14 +6,12 @@ category: "دليل الامتحان"
 status: "published"
 tags: ["FaMED", "Anerkennung", "Approbation", "Bundesländer"]
 excerpt: "اكتشف شروط السلطة لولايتك المقصودة ومسار التأهيل، مع مصادر أولية مؤرخة."
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 قبل حجز FaMed، حدد السلطة المسؤولة عن طلب ترخيصك في **الطب البشري**. لا يحدد موقع مركز الامتحان ما إذا كانت تلك السلطة تقبل الشهادة.
 
 تظل نظرة عامة على اعتراف المزود تحمل تسمية **نوفمبر 2025**. قراءتها في أكتوبر 2026 لا تحولها إلى سياسة جديدة لعام 2026. نميز بين بيانات المزود وأدلة السلطة أدناه.
-
-للحالات والعبارات المفيدة للتدرب جنبًا إلى جنب مع هذا الموضوع، [احصل على الكتاب الرقمي FaMED Protokoll مقابل 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). يمكنك أيضًا [قراءة عينة أولاً](/ar/blog/famed-protokoll-buch-vorschau).
 
 ## ما تدعمه المصادر الأولية
 
@@ -41,8 +39,6 @@ updated: "2026-10-19"
 ## اجتياز امتحان اللغة ليس ترخيصًا
 
 يمكن لـ FaMed أن يفي بمتطلب لغوي مقبول. إنه لا يمنح بحد ذاته **Approbation** أو **Berufserlaubnis**. هذه تصاريح مختلفة، وقد تحمل Berufserlaubnis قيودًا.
-
-اقرأ [FaMED مقابل Kenntnisprüfung](/ar/blog/famed-vs-kenntnispruefung-kp) للتمييز بين تقييم اللغة والمعرفة. بعد التحقق من مسارك، استخدم [دليل التحضير](/ar/blog/ultimate-famed-preparation-guide) لتنظيم التعلم. [اطلع على كتابنا من الداخل](/ar/blog/famed-protokoll-buch-vorschau) قبل اختيار مواد التحضير الاختيارية.
 
 ## المصادر والمراجعة
 

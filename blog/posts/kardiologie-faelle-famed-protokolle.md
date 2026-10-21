@@ -6,14 +6,12 @@ category: "Clinical Cases"
 status: "published"
 tags: ["FaMED", "Kardiologie", "OSCE Cases", "Innere Medizin"]
 excerpt: "Practise accurate German communication with fictional cardiovascular examples, without invented exam frequencies or treatment algorithms."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 Cardiovascular examples can help you practise medical German. They are not evidence that a particular diagnosis appears in a certain share of FaMed exams.
 
 FaMed assesses language performance, not medical knowledge separately. In the presentation task, report the information supplied rather than inventing a diagnosis, drug dose or intervention.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## Ask about a reported symptom
 
@@ -45,8 +43,6 @@ If the source actually supplies an ECG finding, measurement or plan, report it w
 ## Use the correct task for writing
 
 The written station asks for the anamnesis section from its video. It does not require you to write an acute-heart-failure treatment plan or carry over this cardiology case. See the [written-task guide](/blog/famed-arztbrief-soap-schema).
-
-For further independent language practice, [look inside the digital book](/blog/famed-protokoll-buch-vorschau) or [see the app's real exercise areas](/blog/famed-prep-app-so-funktionierts). This article contains no treatment protocol or prediction of official exam cases.
 
 ## Sources and review
 

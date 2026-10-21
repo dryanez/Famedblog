@@ -6,14 +6,12 @@ category: "المصطلحات الطبية"
 status: "published"
 tags: ["FaMED", "Patientensprache", "Redewendungen", "Umgangssprache"]
 excerpt: "نادرًا ما يتحدث المرضى الألمان بالألمانية المدرسية. تدرب على 15 تعبيرًا يوميًا ووضح ما يعنيه الشخص. هذه أمثلة، وليست قائمة امتحان رسمية."
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 هذه أمثلة لممارسة اللغة. اختر الأسئلة لتناسب المحادثة والمهمة الفعلية؛ هذه ليست قائمة إلزامية رسمية أو أداة لاستبعاد التشخيص. لا يتم تقييم المعرفة الطبية بشكل منفصل في FaMed، ويمكن أن تختلف الحالات بين المهام.
 
 لقد اجتزت امتحان B2/C1 Goethe أو telc، وحفظت التشريح الطبي باللغة الألمانية، وتدربت على أسئلتك. ولكن بعد ذلك تدخل غرفة امتحان FaMED، ويقول الممثل المريض:
-
-للحالات والعبارات المفيدة للتدرب عليها إلى جانب هذا الموضوع، [احصل على كتاب FaMED Protokoll الرقمي مقابل 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). يمكنك أيضًا [قراءة عينة أولاً](/ar/blog/famed-protokoll-buch-vorschau).
 
 > *"Herr Doktor, mir ist ganz flau im Magen und gestern hatte ich wieder diesen Kloß im Hals. Außerdem hab ich's total im Kreuz!"*
 

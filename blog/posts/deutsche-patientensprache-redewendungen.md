@@ -6,14 +6,12 @@ category: "Medical Terminology"
 status: "published"
 tags: ["FaMED", "Patientensprache", "Redewendungen", "Umgangssprache"]
 excerpt: "German patients rarely speak in textbook German. Practise 15 everyday expressions and clarify what the person means. These are examples, not an official exam list."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 You have passed your B2/C1 Goethe or telc exam, memorized medical anatomy in German, and practiced your questions. But then you enter your FaMED examination room, and the patient actor says:
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 > *"Herr Doktor, mir ist ganz flau im Magen und gestern hatte ich wieder diesen Kloß im Hals. Außerdem hab ich's total im Kreuz!"*
 

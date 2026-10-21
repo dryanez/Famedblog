@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'standalone',
   outputFileTracingIncludes: {
-    '/*': ['./blog/posts/**/*.md', './blog/ar/**/*.md', './content/pages/**/*.md'],
+    '/*': ['./blog/posts/**/*.md', './blog/ar/**/*.md', './content/pages/**/*.md', './content/guides/*.html', './blog/es/**/*.md'],
   },
   images: {
     domains: ['famedtestprep.com'],

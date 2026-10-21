@@ -6,14 +6,12 @@ category: "دليل الاختبار"
 status: "published"
 tags: ["FaMED", "Digital Exam", "Testing Center", "OSCE"]
 excerpt: "استعد لمهام FaMed الرقمية: حالات شفهية منفصلة، ملاحظات الفيديو، وقسم كتابة التاريخ المرضي (Anamnesis)."
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 FaMed هو اختبار لغة رقمي يتم إجراؤه **في مركز اختبار**. إنه ليس اختباراً عن بُعد يمكنك إجراؤه من المنزل. تسرد الأسئلة الشائعة الحالية للمزود مدن ماينتس، وكاسل، ونورنبيرغ؛ ويوفر تأكيد الحجز الخاص بك تفاصيل موعدك.
 
 ## فهم المحطات الثلاث
-
-للحصول على حالات وعبارات مفيدة للتدريب بجانب هذا الموضوع، [احصل على الكتاب الرقمي FaMED Protokoll مقابل 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). يمكنك أيضاً [قراءة عينة أولاً](/ar/blog/famed-protokoll-buch-vorschau).
 
 | المحطة | المهام | مدة الكتلة المنشورة |
 |---|---|---|

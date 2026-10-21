@@ -1,7 +1,7 @@
 ---
 title: "كيف يعمل تطبيق FaMED Prep: شرح أقسام التدريب الأربعة"
 date: "2026-10-18"
-updated: "2026-10-20"
+updated: "2026-10-21"
 readTime: "5 min"
 category: "دليل التطبيق"
 status: "published"
@@ -68,7 +68,3 @@ excerpt: "شاشات حقيقية للتطبيق وتعليمات ملموسة: 
 لمهام التدريب ومحاكاة الامتحان قواعد وصول وحدود مختلفة. راجع [الخطط الحالية](https://famedtestprep.com/Upgrade?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_plans) قبل اختيار الوصول. تدعم ملاحظات الذكاء الاصطناعي التحضير، ولا تحلّ محل متطلبات الجهة التي تعقد امتحانك.
 
 ## اختر خطوتك التالية
-
-[استكشف مهام التطبيق المتاحة](https://famedtestprep.com/MedicalCases?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_intro). تبلغ تكلفة الوصول لشهر واحد **25.99 يورو لمدة 30 يوماً**؛ وتختلف المهام والحدود حسب الخطة.
-
-هل تفضّل البدء بالقراءة؟ الكتاب الرقمي بسعر **19.99 يورو**. [اقرأ معاينة فعلية للكتاب](/ar/blog/famed-protokoll-buch-vorschau). تجمع حزمة اختيارية بسعر **59.99 يورو** بين الكتاب الرقمي و90 يوماً من الوصول إلى التطبيق؛ [اطّلع على تفاصيلها](https://famedtestprep.com/PayPalCheckout?plan=bundle_3m&utm_source=blog&utm_medium=walkthrough&utm_campaign=optional_bundle).

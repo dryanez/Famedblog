@@ -6,7 +6,7 @@ import PostHogInit from "@/components/PostHogInit";
 import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import BookPromoPopup from "@/components/BookPromoPopup";
+
 
 const inter = Inter({ subsets: ["latin"] });
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://famed-vorbereitung.com";
@@ -113,7 +113,7 @@ export default function SiteLayout({
           {children}
         </main>
         <Footer />
-        <BookPromoPopup />
+
         <Analytics />
       </body>
     </html>

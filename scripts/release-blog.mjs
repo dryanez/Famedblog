@@ -1,3 +1,4 @@
+import {verifyFunnelHome} from './funnel-check.mjs';
 import {verifyHomepage,verifyPalette} from './homepage-regression.mjs';
 /** Paired Markdown -> immutable preview -> verified promotion. Never publishes database status. */
 import {execFileSync,execFile} from 'node:child_process';
@@ -10,7 +11,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 export function validatePairs(root){
  const manifest=JSON.parse(readFileSync(join(root,'lib/generated-content.json')));
- for(const locale of ['en','ar'])for(const post of manifest.posts[locale].filter(p=>p.status==='published')){
+ for(const locale of ['en','ar',...(manifest.posts.es?['es']:[])])for(const post of manifest.posts[locale].filter(p=>p.status==='published')){
   const other=manifest.posts[locale==='en'?'ar':'en'].find(p=>p.slug===post.slug&&p.status==='published');
   if(!other)throw Error(`Missing published counterpart: ${locale}/${post.slug}`);
   for(const key of ['title','excerpt','content'])if(!post[key]?.trim())throw Error(`Missing ${key}: ${locale}/${post.slug}`);
@@ -21,7 +22,7 @@ export function validatePairs(root){
 }
 function run(cmd,args,cwd){return execFileSync(cmd,args,{cwd,encoding:'utf8',maxBuffer:30*1024*1024});}
 export function verifyHtml(html,path,locale){
- if(path===''||path==='/'||path==='/ar'||path==='/es')verifyHomepage(html);
+ if(path===''||path==='/'||path==='/ar'||path==='/es'){verifyHomepage(html);verifyFunnelHome(html);}
  if(!/<h1[\s>]/.test(html)||!html.includes(`lang="${locale}"`)||!html.includes(`dir="${locale==='ar'?'rtl':'ltr'}"`))throw Error(`Missing page/language: ${path}`);
  const canonical='https://famed-vorbereitung.com'+path;
  if(!html.includes(`rel="canonical" href="${canonical}"`))throw Error(`Wrong canonical: ${path}`);
@@ -56,12 +57,12 @@ async function main(){
   report.deployment=deployment;report.phase='preview';writeFileSync(reportPath,JSON.stringify(report,null,2));
   const fetchPreview=async(path)=>{const r=await execAsync('vercel',['curl',path,'--deployment',deployment,'--','--silent','--show-error','--fail'],{cwd:stage,maxBuffer:10*1024*1024});return r.stdout;};
   const sitemap=await fetchPreview('/sitemap.xml');
-  const paths=[...Object.keys(manifest.pages.en),'/blog',...manifest.posts.en.filter(p=>p.status==='published').map(p=>'/blog/'+p.slug)];
+  const paths=[...Object.keys(manifest.pages.en).filter(p=>!['/book','/protokoll'].includes(p)),'/blog',...manifest.posts.en.filter(p=>p.status==='published').map(p=>'/blog/'+p.slug)];
   const targets=['en','ar'].flatMap(locale=>paths.map(route=>({locale,path:(locale==='ar'?'/ar':'')+(route==='/'?'':route)})));
-  for(const route of Object.keys(manifest.pages.es||{}))targets.push({locale:'es',path:'/es'+(route==='/'?'':route)});
+  for(const route of [...Object.keys(manifest.pages.es||{}).filter(p=>!['/book','/protokoll'].includes(p)),'/blog',...(manifest.posts.es||[]).filter(p=>p.status==='published').map(p=>'/blog/'+p.slug)])targets.push({locale:'es',path:'/es'+(route==='/'?'':route)});
   let cursor=0;const worker=async()=>{while(cursor<targets.length){const {locale,path}=targets[cursor++];verifyHtml(await fetchPreview(path||'/'),path,locale);if(!sitemap.includes('<loc>https://famed-vorbereitung.com'+path+'</loc>'))throw Error('Missing sitemap URL: '+path);report.checks.push({path:path||'/',passed:true});}};
   const results=await Promise.allSettled(Array.from({length:5},worker));for(const result of results)if(result.status==='rejected')throw result.reason;
-  for(const draft of manifest.posts.en.filter(p=>p.status!=='published')){const r=await execAsync('vercel',['curl','/blog/'+draft.slug,'--deployment',deployment,'--','--silent','--output','/dev/null','--write-out','%{http_code}'],{cwd:stage});if(r.stdout.trim()!=='404')throw Error('Draft is public: '+draft.slug);}
+  for(const draft of manifest.posts.en.filter(p=>p.status==='draft')){const r=await execAsync('vercel',['curl','/blog/'+draft.slug,'--deployment',deployment,'--','--silent','--output','/dev/null','--write-out','%{http_code}'],{cwd:stage});if(r.stdout.trim()!=='404')throw Error('Draft is public: '+draft.slug);}
   report.phase='preview-verified';writeFileSync(reportPath,JSON.stringify(report,null,2));
   if(promote){
    const previous=JSON.parse(run('vercel',['inspect','famed-vorbereitung.com','--json'],root)).url;report.previous=previous;writeFileSync(reportPath,JSON.stringify(report,null,2));

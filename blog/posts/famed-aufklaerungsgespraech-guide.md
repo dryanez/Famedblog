@@ -6,14 +6,12 @@ category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Aufklärungsgespräch", "Patient Communication", "OSCE"]
 excerpt: "Explain the supplied procedure in everyday German, discuss risks honestly and respond to patient questions."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 In the human-medicine FaMed format, informed consent is one situation in the doctor–patient station. The current practice test allows **at most 11 minutes** for the situation; the paired oral block lasts **23 minutes including reading**.
 
 The necessary procedure information is supplied. Your job is to explain it clearly, respond to questions and check understanding. Medical knowledge is not separately assessed. A memorised procedure script must not override the assignment.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## 1. Establish the topic and purpose
 
@@ -44,8 +42,6 @@ Explain the supplied instructions about eating, medication, activity or follow-u
 ## 5. Make room for questions and a decision
 
 Ask the person to explain the key point in their own words. Respond to their concern, then return to the structure. Respect uncertainty or refusal; do not use a dramatic consequence that is not supported by the case.
-
-For further practice, use [everyday-language terminology](/blog/medizinische-fachbegriffe-laiensprache-tabelle) and [patient idioms](/blog/deutsche-patientensprache-redewendungen). The [book sample](/blog/famed-protokoll-buch-vorschau) and [app walkthrough](/blog/famed-prep-app-so-funktionierts) show optional independent learning resources. We have not verified a ranking of the seven most frequent official procedures.
 
 ## Sources and review
 

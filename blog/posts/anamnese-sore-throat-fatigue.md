@@ -6,14 +6,12 @@ category: "Anamnese"
 readTime: "8 min"
 excerpt: "Master structured German anamnesis for patients presenting with sore throat, chronic fatigue, and infectious signs in the FaMED exam."
 tags: ['Anamnese', 'Infectiology', 'Fatigue', 'Clinical German']
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 ## Introduction
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 The systematic Anamnese is a cornerstone of medical diagnostics. It allows the doctor to gain a comprehensive picture of the patient and their complaints in order to make an informed diagnosis and develop an appropriate treatment plan. This blog post focuses on structured history-taking for patients with sore throat, chronic fatigue, and/or infectious symptoms, giving you a solid framework for the FaMED exam.
 

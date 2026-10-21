@@ -6,14 +6,12 @@ category: "دليل الاختبار"
 status: "published"
 tags: ["FaMED", "Kenntnisprüfung", "Approbation", "Career"]
 excerpt: "افهم كيف يختلف تقييم اللغة عن الـ Kenntnisprüfung ولماذا لا يمنح أي منهما بمفرده ترخيص مزاولة المهنة (Approbation)."
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 **يقوم اختبار FaMed بتقييم التواصل الطبي المهني باللغة الألمانية. بينما يقوم اختبار Kenntnisprüfung بتقييم المعرفة والمهارات الطبية ضمن إجراءات الترخيص.** اجتياز أي من التقييمين لا يمنح بحد ذاته ترخيصاً طبياً.
 
 تحدد السلطة المختصة بك مسار تأهيلك وطلبك. لا تفترض أن كل طبيب مدرب في الخارج يجب أن يخضع لاختبار Kenntnisprüfung، أو أن تقييم المستندات يبدأ دائماً فقط بعد اختبار اللغة.
-
-للحصول على حالات وعبارات مفيدة للتدريب بجانب هذا الموضوع، [احصل على الكتاب الرقمي FaMED Protokoll مقابل 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). يمكنك أيضاً [قراءة عينة أولاً](/ar/blog/famed-protokoll-buch-vorschau).
 
 ## قارن بين الغرض
 

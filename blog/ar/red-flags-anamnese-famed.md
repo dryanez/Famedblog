@@ -6,14 +6,12 @@ category: "الحالات السريرية"
 status: "published"
 tags: ["FaMED", "Anamnese", "Red Flags", "Emergency Medicine"]
 excerpt: "تدرب على الأسئلة المركزة والتقارير الدقيقة بدون قواعد فشل تلقائية مختلقة أو ادعاءات بأن قائمة التحقق تستبعد حالات الطوارئ."
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 اطرح أسئلة واضحة حول شكوى الشخص الفعلية، واستمع إلى الإجابة واحتفظ بالمعلومات المهمة.
 
 تقيّم FaMed التواصل باللغة الطبية؛ ولا يتم تقييم المعرفة الطبية بشكل منفصل. التمارين التالية هي تمارين لغوية أصلية، وليست تقييمًا كاملاً لحالة طارئة أو قائمة تحقق رسمية للدرجات.
-
-للحصول على حالات وعبارات مفيدة للتدرب جنبًا إلى جنب مع هذا الموضوع، [احصل على كتاب FaMED Protokoll الرقمي مقابل 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). يمكنك أيضًا [قراءة عينة أولاً](/ar/blog/famed-protokoll-buch-vorschau).
 
 ## توضيح البداية والمسار
 
@@ -46,8 +44,6 @@ updated: "2026-10-19"
 > Ich möchte kurz prüfen, ob ich Sie richtig verstanden habe: … Welche weitere Veränderung ist Ihnen aufgefallen؟
 
 إذا كان سيناريو الممارسة يتطلب شرحًا للخطوات التالية، فاستخدم الخطة المقدمة. لا تخترع تشخيصًا مطمئنًا أو تعد بأن العرض غير ضار.
-
-للممارسة الأوسع، استخدم [قائمة التحقق من لغة الأعراض](/ar/blog/anamnesis-red-flags-guide) و[أسئلة الألم](/ar/blog/pain-anamnesis-guide). [انظر سير عمل التطبيق](/ar/blog/famed-prep-app-so-funktionierts) أو [تصفح الكتاب](/ar/blog/famed-protokoll-buch-vorschau) قبل اختيار المزيد من التمارين.
 
 ## المصادر والمراجعة
 

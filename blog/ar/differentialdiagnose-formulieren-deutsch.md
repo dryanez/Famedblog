@@ -6,14 +6,12 @@ category: "المصطلحات الطبية"
 status: "published"
 tags: ["FaMED", "Differentialdiagnose", "Medical German", "Arzt-Arzt"]
 excerpt: "تدرب على الإبلاغ عن اشتباه مُقدم، وبدائل، ومعلومات مفقودة دون اختراع خوارزمية سريرية."
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 في عرض تقديمي طبي لغوي، الدقة أكثر فائدة من اليقين المسرحي. التشخيص المشتبه به ليس نتيجة مؤكدة؛ والسؤال الذي لم تتم الإجابة عليه ليس نتيجة سلبية.
 
 توفر FaMed المعلومات لعروضها التقديمية للمرضى ولا تقيّم المعرفة الطبية بشكل منفصل.
-
-للحالات والعبارات المفيدة للتدرب عليها إلى جانب هذا الموضوع، [احصل على كتاب FaMED Protokoll الرقمي مقابل 19.99 يورو](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). يمكنك أيضًا [قراءة عينة أولاً](/ar/blog/famed-protokoll-buch-vorschau).
 
 ## اذكر المصدر ودرجة اليقين
 
@@ -52,8 +50,6 @@ updated: "2026-10-19"
 „Dafür spricht …“ تشير إلى معلومات داعمة؛ ولا تعني „beweist …“. „Dagegen spricht …“ لا تعني تلقائيًا „sicher ausgeschlossen“. تدرب على هذا الفرق باستخدام الحقائق المقدمة فقط.
 
 استخدم [SBAR كمساعد تنظيمي](/ar/blog/sbar-schema-arzt-arzt-gespraech)، ثم قارن العرض المسجل بمصدره. للأسئلة الموجهة للمرضى، راجع [دليل التاريخ المرضي](/ar/blog/anamnese-overview-part-1).
-
-[معاينة كتابنا](/ar/blog/famed-protokoll-buch-vorschau) و [شرح التطبيق](/ar/blog/famed-prep-app-so-funktionierts) تعرض موارد مستقلة لمزيد من التدريب.
 
 ## المصادر والمراجعة
 

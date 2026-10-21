@@ -6,14 +6,12 @@ category: "Exam Guide"
 status: "published"
 tags: ["famed", "fsp", "comparison", "guide"]
 excerpt: "Compare authority acceptance, current task format and booking requirements for your language-exam route."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 FaMed is a **Fachsprachenprüfung Medizin**: a medical-language examination. The practical comparison is between the FaMed route and a particular medical chamber's FSP, not between a language exam and a different profession-wide qualification.
 
 Start with the route your licensing authority accepts. Do not choose from a promise that one provider is easier, faster or guaranteed to pass you.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## The current human-medicine FaMed format
 
@@ -44,8 +42,6 @@ A passed language examination is one possible licensing requirement. It does not
 ## Prepare for the task you will actually take
 
 Use the current practice test, then choose one speaking or writing skill to improve. SBAR and OPQRST can be useful **practice frameworks**, not mandatory scoring schemas. [Start with a pain-history exercise](/blog/pain-anamnesis-guide) or the [written-task guide](/blog/famed-arztbrief-soap-schema).
-
-[View our book sample](/blog/famed-protokoll-buch-vorschau) and [app walkthrough](/blog/famed-prep-app-so-funktionierts) before selecting optional preparation resources. Neither is an official exam booking or certificate.
 
 ## Sources and review
 

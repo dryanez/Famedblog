@@ -6,14 +6,12 @@ category: "Clinical Cases"
 status: "published"
 tags: ["FaMED", "Anamnese", "Red Flags", "Emergency Medicine"]
 excerpt: "Practise focused questions and accurate reporting without invented automatic-failure rules or claims that a checklist rules out emergencies."
-updated: "2026-10-18"
+updated: "2026-10-21"
 ---
 
 Ask clear questions about the person's actual complaint, listen to the response and preserve important information.
 
 FaMed assesses medical-language communication; medical knowledge is not separately evaluated. The following are original language exercises, not a complete emergency assessment or an official scoring checklist.
-
-For cases and useful phrases to practise alongside this topic, [get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book). You can also [read a sample first](/blog/famed-protokoll-buch-vorschau).
 
 ## Clarify the beginning and course
 
@@ -46,8 +44,6 @@ Do not write „B-Symptomatik verneint“ unless the relevant questions were act
 > Ich möchte kurz prüfen, ob ich Sie richtig verstanden habe: … Welche weitere Veränderung ist Ihnen aufgefallen?
 
 If a practice scenario calls for an explanation of next steps, use its supplied plan. Do not invent a reassuring diagnosis or promise that a symptom is harmless.
-
-For broader practice, use [the symptom-language checklist](/blog/anamnesis-red-flags-guide) and [pain questions](/blog/pain-anamnesis-guide). [See the app workflow](/blog/famed-prep-app-so-funktionierts) or [look inside the book](/blog/famed-protokoll-buch-vorschau) before selecting more exercises.
 
 ## Sources and review
 

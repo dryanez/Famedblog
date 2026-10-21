@@ -6,14 +6,12 @@ category: "Medical Terminology"
 status: "published"
 tags: ["FaMED", "Terminology", "Vocabulary", "Fachbegriffe", "Laiensprache"]
 excerpt: "Practise medical German explanations in everyday language. This is a study selection, not an official vocabulary list."
-updated: "2026-10-19"
+updated: "2026-10-21"
 ---
 
 These are language-practice examples. Select questions to fit the actual conversation and assignment; this is not an official mandatory checklist or a diagnostic rule-out tool. Medical knowledge is not separately assessed in FaMed, and cases can differ between tasks.
 
 A patient may not understand a technical term even when it is medically familiar to you. Practise explaining it in everyday German and checking whether your explanation was understood.
-
-Want to practise medical vocabulary in the context of a patient conversation? [Get the FaMED Protokoll digital book for €19.99](https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=article&utm_campaign=contextual_book) and work with its cases and useful phrases alongside this glossary.
 
 For example, compare *"Wir müssen eine Cholezystektomie wegen einer Cholezystolithiasis durchführen"* with a more accessible explanation: *"Wir müssen die Gallenblase operativ entfernen, weil sich dort Gallensteine gebildet haben."*
 
@@ -153,5 +151,3 @@ Editorial check: 18 October 2026. [FaMed requirements](https://famed-test.de/anf
 ## A five-minute vocabulary exercise
 
 Choose three terms from one table. Explain each aloud without reading the everyday-language column, then compare your wording. Finish with: „Ist die Erklärung verständlich, oder soll ich einen Punkt noch einmal erläutern?“
-
-To practise the terms within a longer conversation, [preview the digital casebook](/blog/famed-protokoll-buch-vorschau). If you want to speak or write your own answer, [watch a real app exercise](/blog/famed-prep-app-so-funktionierts).
