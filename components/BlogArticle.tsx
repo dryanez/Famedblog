@@ -188,6 +188,7 @@ export default async function BlogArticle({ slug, locale = 'en' }: { slug: strin
               remarkPlugins={[remarkGfm]}
               components={{
                 // Map HTML elements to styled components if needed
+                table: ({ node, ...props }) => <div className="my-6 max-w-full overflow-x-auto" role="region" aria-label={ar ? 'جدول المقال' : es ? 'Tabla del artículo' : 'Article table'} tabIndex={0}><table {...props} /></div>,
                 h2: ({ node, ...props }) => <h2 id={headingId(nodeText(node))} className="scroll-mt-24 text-2xl font-bold mt-8 mb-4" {...props} />,
                 h3: ({ node, ...props }) => <h3 className="text-xl font-bold mt-6 mb-3" {...props} />,
                 p: ({ node, ...props }) => <p className="mb-4 text-gray-700 leading-relaxed" {...props} />,

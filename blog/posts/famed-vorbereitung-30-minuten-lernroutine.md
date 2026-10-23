@@ -6,7 +6,7 @@ category: "Learning Strategy"
 status: "published"
 excerpt: "A concrete daily exercise: structure a conversation, formulate it aloud, check feedback, and practice the same section again."
 tags: ["FaMED", "Lernplan", "Prüfungsvorbereitung"]
-updated: "2026-10-21"
+updated: "2026-10-23"
 ---
 
 You've collected study material, but are you also practicing speaking? For preparing for medical language situations, a fixed workflow helps. Here is a 30-minute routine that you can adapt to your learning level. This is a learning suggestion from FaMED Prep, not an official exam requirement and no guarantee of passing.
@@ -45,6 +45,10 @@ Do you want to not just read, but practice practically? [Here we show the FaMED 
 ## Minutes 27–30: Note the Next Step
 
 Write down one sentence: "Tomorrow I will repeat...". Keep your notes and check after a week which tasks are easier for you. As your exam date approaches, align your overall plan with your individual needs and the current information from the respective exam provider.
+
+## Track the same routine over a week
+
+Use the [seven-day practice tracker](/blog/famed-7-day-practice-tracker) to save a first attempt, choose one correction and check a repeat across Anamnese, Aufklärung, Arzt–Arzt and writing. A completed session is practice evidence, not an exam score.
 
 ## How to Combine Reading and Practicing
 

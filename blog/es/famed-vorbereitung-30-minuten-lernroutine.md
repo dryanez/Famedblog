@@ -5,7 +5,7 @@ readTime: "5 min"
 category: "Preparación"
 status: "published"
 excerpt: "Combina una tarea concreta, una revisión y un segundo intento sin convertir cada sesión en un simulacro."
-updated: "2026-10-21"
+updated: "2026-10-23"
 tags: ["FaMED", "Lernplan", "Prüfungsvorbereitung"]
 ---
 
@@ -28,6 +28,10 @@ Comprueba qué información faltó, cuál añadiste sin apoyo y qué frases resu
 Repite el fragmento con una corrección concreta. Anota qué cambió y qué volverás a practicar mañana. Alterna habilidades durante la semana y mantén sesiones de escritura desde el comienzo.
 
 [Recibe el plan de ocho semanas](/es/lead-magnet) si necesitas organizar esa alternancia.
+
+## Sigue la misma rutina durante una semana
+
+Utiliza el [registro de práctica de siete días](/es/blog/famed-7-day-practice-tracker) para guardar un primer intento, elegir una corrección y comprobar la repetición en Anamnese, Aufklärung, Arzt–Arzt y escritura. Completar una sesión demuestra práctica, no una puntuación del examen.
 
 ## Fuentes y revisión
 
