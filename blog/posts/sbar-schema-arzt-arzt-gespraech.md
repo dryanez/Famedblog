@@ -1,12 +1,12 @@
 ---
 title: "FaMED Patient Presentations: Use SBAR as a Practice Framework"
 date: "2026-09-07"
-readTime: "3 min"
+readTime: "5 min"
 category: "Exam Guide"
 status: "published"
 tags: ["FaMED", "Arzt-Arzt-Gespräch", "SBAR", "Communication"]
 excerpt: "Organise two separate case presentations from supplied information, without inventing findings or treating SBAR as the official rubric."
-updated: "2026-10-21"
+updated: "2026-10-25"
 ---
 
 The doctor–doctor station contains **two patient presentations**. Its published duration is **23 minutes including reading**; the current practice test allows **at most 11 minutes per situation**. The cases need to be kept separate.
@@ -50,6 +50,32 @@ Make separate notes for each practice case. After speaking, compare your recordi
 
 The [written station](/blog/famed-arztbrief-soap-schema) has a different task: anamnesis from its video in complete sentences. Do not carry this presentation's facts into it.
 
+## A two-case drill: find the mixed information
+
+Use these original fictional notes only for this language exercise:
+
+| Case | Identity | Reported complaint | Duration |
+|---|---|---|---|
+| A | Frau Beispiel, 54 | Husten | fünf Tage |
+| B | Herr Muster, 41 | Knieschmerzen | zwei Tage |
+
+Neither sheet supplies a medication history or examination findings. Present case A, put its sheet aside, then open case B. If you say „Herr Muster berichte über seit fünf Tagen bestehenden Husten“, you have moved both the symptom and duration from the other case.
+
+A source-faithful opening for B is:
+
+> Ich stelle Herrn Muster, einen 41-jährigen Patienten, vor. Er berichte über seit zwei Tagen bestehende Knieschmerzen.
+
+If asked about his medication, the exercise does not support „Er nehme keine Medikamente“. Say that the supplied information does not state it. A missing medication history is different from an explicitly negative one.
+
+After your second attempt, check three things: identity, symptom with duration, and the distinction between missing and stated information. Then compare the language. This is a self-check, not the official grading rubric or a clinical management exercise.
+
+## Keep the next step small
+
+Save one first attempt and one corrected version using the [seven-day practice tracker](/blog/famed-7-day-practice-tracker). If you need a longer schedule, [request the free eight-week guide](/lead-magnet): submit your details to receive your private download and backup email. Marketing consent is optional and separate.
+
 ## Sources and review
 
-Editorial check: **18 October 2026**, human medicine. [Official exam flow](https://famed-test.de/pruefungsablauf/), [Current human-medicine practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.
+Exam-format references reviewed: **23 October 2026**, human medicine. [Official exam flow](https://famed-test.de/pruefungsablauf/), [Current human-medicine practice test](https://famed-test.de/wp-content/uploads/2026/05/FaMed-Uebungstest_2-1.pdf). Practice examples are created by FaMED Prep; they are not predictions of exam questions.
+
+
+Practice exercise expanded **25 October 2026**.
