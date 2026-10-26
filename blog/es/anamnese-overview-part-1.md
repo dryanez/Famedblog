@@ -5,7 +5,7 @@ readTime: "3 min"
 category: "Preparación"
 status: "published"
 excerpt: "Escucha, profundiza y resume sin convertir la entrevista en un interrogatorio memorizado."
-updated: "2026-10-21"
+updated: "2026-10-26"
 tags: ["FaMED", "Anamnese", "Exam Prep", "Medical German", "Communication"]
 ---
 
@@ -28,6 +28,8 @@ Resume con palabras comprensibles y da espacio para corregir malentendidos. Dife
 Trabaja con un caso ficticio, graba un fragmento si puedes y escucha si tus preguntas responden a lo que dijo el paciente. Elige una corrección concreta y repite. En FaMED, la estación médico–paciente también incluye Aufklärung y no requiere que los dos casos se relacionen.
 
 [Practica preguntas sobre dolor](/es/blog/pain-anamnesis-guide) y [solicita el calendario gratuito](/es/lead-magnet).
+
+Para una sesión breve en pareja, prueba las [tres tarjetas de preguntas de seguimiento con respuestas del paciente](/es/blog/famed-anamnese-follow-up-question-drill).
 
 ## Fuentes y revisión
 

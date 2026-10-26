@@ -9,7 +9,7 @@ featured: false
 excerpt: "Read the task, ask clear questions and build a structured patient history using the current FaMed format."
 status: "published"
 readTime: "3 min"
-updated: "2026-10-21"
+updated: "2026-10-26"
 ---
 
 The Anamnesegespräch is one of the two situations in the doctor–patient station. The current practice test gives this situation **at most 11 minutes**; the paired history/consent block is **23 minutes including reading**.
@@ -45,6 +45,8 @@ Useful transitions include:
 Keep notes faithful to what was said. At the end, offer a concise patient-facing summary, check it and explain the next steps appropriate to the assignment. Do not promise a diagnosis that has not been established.
 
 > Ich fasse kurz zusammen: … Habe ich Sie richtig verstanden? Welche Frage ist für Sie noch offen?
+
+For a focused partner session, try the [three follow-up question cards with patient replies](/blog/famed-anamnese-follow-up-question-drill).
 
 ## Sources and review
 
