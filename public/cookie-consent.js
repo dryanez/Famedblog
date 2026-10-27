@@ -1,4 +1,5 @@
-/* Cookie consent banner. Optional tools (PostHog analytics + session replay) load only after "Accept".
+/* Cookie consent banner. PostHog runs cookieless until "Accept"; Accept opts it in to cookies + session replay,
+   Reject keeps it cookieless.
    Text comes from data-* attributes on the <script> tag. Choice is saved in localStorage.
    Consumers: window.whenCookieConsent(fn) runs fn now if accepted, or later when the visitor accepts.
    Reopen the banner from anywhere with window.openCookieSettings(). */
