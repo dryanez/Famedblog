@@ -1,11 +1,11 @@
 ---
 title: "Cómo funciona FaMED Prep: las cuatro áreas de práctica"
 date: "2026-10-21"
-readTime: "5 min"
+readTime: "7 min"
 category: "Preparación"
 status: "published"
 excerpt: "Anamnese, Aufklärung, Arzt–Arzt y escritura, con pantallas reales y explicación en español."
-updated: "2026-10-21"
+updated: "2026-10-28"
 tags: ["FaMED", "App", "Anamnese", "Aufklärung", "Arzt-Arzt", "Arztbrief"]
 ---
 
@@ -41,6 +41,8 @@ En el área de escritura, escucha el material del ejercicio y redacta a partir d
 
 ![Ejercicio real de escritura con datos ficticios](/images/previews/app-writing-20261020.png)
 
+En el modo evaluado de escritura, revisa **Struktur, Vollständigkeit, Fachterminologie, Grammatik y Präzision**: estructura, integridad de la información, terminología médica, gramática y precisión. Elige una corrección concreta y aplícala al repetir.
+
 ## Mira la demostración
 
 El vídeo completo está narrado en inglés, con subtítulos en inglés y ejercicios en alemán. La voz del presentador es sintética; los ejemplos se distinguen de grabaciones de usuarios y de resultados reales de clientes.
@@ -52,3 +54,18 @@ El vídeo completo está narrado en inglés, con subtítulos en inglés y ejerci
 ## Alcance del material
 
 Ejemplos ficticios de práctica lingüística, creados por FaMED Prep. No predicen preguntas de examen ni sustituyen una valoración clínica.
+
+## Convierte la demostración en una sesión de práctica
+
+Utiliza el vídeo existente como ejemplo y después realiza tu propio intento. Los clips de conversación y escritura muestran actividades distintas; volver a verlos o cambiar el idioma de la narración no equivale a completar una tarea nueva.
+
+| Área | Tu siguiente acción | Qué comparar después |
+|---|---|---|
+| Anamnese | Elige una de las [tarjetas de preguntas de seguimiento](/es/blog/famed-anamnese-follow-up-question-drill); di tu pregunta antes de revelar la respuesta del paciente. | ¿Tu resumen conserva la respuesta, la incertidumbre y cualquier corrección? |
+| Aufklärung | Utiliza la información facilitada sobre el procedimiento y la [guía de explicación al paciente](/es/blog/famed-aufklaerungsgespraech-guide) para practicar una explicación breve. | ¿Explicaste lo facilitado con claridad, sin inventar riesgos ni mensajes tranquilizadores? |
+| Arzt–Arzt | Practica las dos aperturas de casos independientes del [ejercicio SBAR](/es/blog/sbar-schema-arzt-arzt-gespraech). | ¿Cada nombre, síntoma y duración se mantuvo en su propio caso? |
+| Arztbrief | Escribe tu texto breve antes de abrir las correcciones del [ejercicio de fidelidad a la fuente](/es/blog/famed-arztbrief-soap-schema). | ¿La duración, la negación explícita y los datos desconocidos conservaron su significado? |
+
+Guarda tu primer intento, elige una corrección de los comentarios disponibles y repite la misma tarea breve. Compara ambos intentos con la misma fuente antes de valorar el lenguaje. Estas comprobaciones organizan el estudio; no producen una nota oficial ni demuestran preparación para aprobar.
+
+Para un plan más largo, [solicita la guía gratuita](/es/lead-magnet). Después de enviar tus datos, tu página personal de agradecimiento inicia la descarga del PDF y ofrece un enlace manual; también recibes un enlace de respaldo por correo. La confirmación de marketing sigue siendo independiente y opcional.

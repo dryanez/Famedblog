@@ -1,8 +1,8 @@
 ---
 title: "How the FaMED Prep App Works: Four Practice Sections"
 date: "2026-10-18"
-updated: "2026-10-21"
-readTime: "5 min"
+updated: "2026-10-28"
+readTime: "7 min"
 category: "App Guide"
 status: "published"
 tags: ["FaMED", "App", "Anamnese", "Aufklärung", "Arzt-Arzt", "Arztbrief"]
@@ -67,4 +67,17 @@ Choose one section, complete one task, and carry one useful correction into your
 
 Practice tasks and exam simulations have different access rules and limits. Check the current [plan overview](https://famedtestprep.com/Upgrade?utm_source=blog&utm_medium=walkthrough&utm_campaign=app_plans) before choosing access. AI feedback supports preparation; it does not replace your examination provider's requirements.
 
-## Choose your next step
+## Turn the demonstration into one practice session
+
+Use the existing film as a worked example, then make your own attempt. The conversation and writing clips show different activities; replaying them or switching narration language is not a new completed task.
+
+| Section | Your next action | What to compare afterwards |
+|---|---|---|
+| Anamnese | Choose one of the [follow-up question cards](/blog/famed-anamnese-follow-up-question-drill); say your question before revealing the patient reply. | Does your summary preserve the reply, uncertainty and any correction? |
+| Aufklärung | Use the supplied procedure information and the [explanation guide](/blog/famed-aufklaerungsgespraech-guide) to practise a short patient-facing explanation. | Did you explain the supplied information clearly without inventing risks or reassurance? |
+| Arzt–Arzt | Practise the two separate case openings in the [SBAR exercise](/blog/sbar-schema-arzt-arzt-gespraech). | Did each name, symptom and duration stay with its own case? |
+| Arztbrief | Write your own short account before opening the corrections in the [source-fidelity writing exercise](/blog/famed-arztbrief-soap-schema). | Did the duration, explicit denial and unknown details retain their original meaning? |
+
+Keep your first attempt, choose one correction from the available comments, then repeat the same short task. Compare both attempts with the same source before judging the language. These checks organise study; they do not produce an official score or prove readiness to pass.
+
+For a longer plan, [request the free study guide](/lead-magnet). After submitting your details, your personal thank-you page starts the PDF download and provides a manual fallback; an email supplies a backup link. Marketing confirmation remains separate and optional.
