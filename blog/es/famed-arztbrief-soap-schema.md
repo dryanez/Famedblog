@@ -5,7 +5,7 @@ readTime: "5 min"
 category: "Preparación"
 status: "published"
 excerpt: "Practica una anamnesis fiel al vídeo y corrige cuatro errores que alteran los datos; la tarea no es un informe de alta ni un SOAP completo."
-updated: "2026-10-25"
+updated: "2026-10-30"
 tags: ["FaMED", "Arztbrief", "Documentation", "SOAP"]
 ---
 
@@ -61,6 +61,8 @@ En el segundo intento subraya la duración, las náuseas y la negación de vómi
 ## Incluye escritura en tu semana de estudio
 
 Utiliza el día 5 del [registro de práctica de siete días](/es/blog/famed-7-day-practice-tracker) para una sesión corta de la fuente al texto. Para un calendario más amplio, [solicita la guía gratuita de ocho semanas](/es/lead-magnet). Tras registrarte, la página personal de agradecimiento inicia la descarga del PDF y recibes un enlace de respaldo por correo. Los mensajes de marketing siguen siendo opcionales y separados.
+
+Para otra sesión de construcción de frases, prueba los [cinco ejercicios de Konjunktiv I desde la fuente](/es/blog/famed-konjunktiv-i-five-writing-drills).
 
 ## Fuentes y revisión
 

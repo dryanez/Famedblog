@@ -6,7 +6,7 @@ category: "Documentation"
 status: "published"
 tags: ["FaMED", "Arztbrief", "Documentation", "SOAP"]
 excerpt: "Write the anamnesis from a patient video in complete sentences; understand why a full SOAP note is the wrong target."
-updated: "2026-10-25"
+updated: "2026-10-30"
 ---
 
 The current human-medicine FaMed practice test asks for the **anamnesis section of a doctor's letter**, based on a patient video. The entire task has a **22-minute maximum, including video time**. The video may be paused and moved backward or forward.
@@ -61,6 +61,8 @@ On your second attempt, underline the duration, nausea and denial of vomiting. C
 ## Put writing into your study week
 
 Use day5 of the [seven-day practice tracker](/blog/famed-7-day-practice-tracker) for a short source-to-text session. For a broader schedule, [request the free eight-week guide](/lead-magnet). After registration, your personal thank-you page starts the PDF download and an email provides a backup link. Marketing emails remain optional and separate.
+
+For a separate sentence-building session, try the [five Konjunktiv I source-to-sentence drills](/blog/famed-konjunktiv-i-five-writing-drills).
 
 ## Sources and review
 
