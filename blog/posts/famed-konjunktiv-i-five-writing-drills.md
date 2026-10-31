@@ -1,7 +1,7 @@
 ---
 title: "Konjunktiv I for FaMED Writing: Five Source-to-Sentence Drills"
-date: "2026-10-30"
-updated: "2026-10-30"
+date: "2026-10-31"
+updated: "2026-10-31"
 readTime: "5 min"
 category: "Writing Practice"
 status: "published"

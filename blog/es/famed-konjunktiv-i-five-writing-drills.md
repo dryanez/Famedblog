@@ -1,7 +1,7 @@
 ---
 title: "Konjunktiv I para escribir en FaMED: cinco ejercicios desde la fuente"
-date: "2026-10-30"
-updated: "2026-10-30"
+date: "2026-10-31"
+updated: "2026-10-31"
 readTime: "5 min"
 category: "Práctica de escritura"
 status: "published"

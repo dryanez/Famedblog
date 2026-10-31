@@ -1,7 +1,7 @@
 ---
 title: "Konjunktiv I للكتابة في FaMED: خمسة تدريبات من المصدر إلى الجملة"
-date: "2026-10-30"
-updated: "2026-10-30"
+date: "2026-10-31"
+updated: "2026-10-31"
 readTime: "5 min"
 category: "تدريب الكتابة"
 status: "published"
