@@ -18,7 +18,7 @@ if(process.argv[1]===fileURLToPath(import.meta.url)){
   for(const route of ['/book','/protokoll','/blog/famed-protokoll-buch-vorschau']){const r=await fetch(origin+prefix+route,{redirect:'manual'});assert.equal(r.status,307,route);assert.ok(r.headers.get('location').startsWith('https://www.paypal.com/ncp/payment/DQCLR47JB5DXU'));}
   console.log('PASS',prefix||'en','guide registration funnel and direct payment aliases');
  }
- for(const path of ['/guides/famed-study-plan-en.html','/guides/famed-study-plan-ar.html','/guides/famed-study-plan-es.html','/images/previews/book-2026-contents.webp','/images/previews/book-2026-opqrst.webp','/2026%20Protokol%20Famed.pdf','/documents/famed-protokoll.pdf'])assert.equal((await fetch(origin+path)).status,404,'Public preview must be withdrawn: '+path);
+ for(const path of ['/guides/famed-study-plan-en.html','/guides/famed-study-plan-ar.html','/guides/famed-study-plan-es.html','/images/previews/book-2026-contents.webp','/images/previews/book-2026-opqrst.webp','/2026%20Protokol%20Famed.pdf','/documents/famed-protokoll.pdf','/documents/anamnese.pdf'])assert.equal((await fetch(origin+path)).status,404,'Public preview must be withdrawn: '+path);
  assert.equal((await fetch(origin+'/api/study-guide?token=invalid')).status,404);
  console.log('PASS private guide and withdrawn book interiors');
 }
