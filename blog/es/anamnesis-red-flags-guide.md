@@ -25,7 +25,7 @@ Anota qué se ha referido, qué se ha negado y qué no se ha preguntado. Esas tr
 
 ## Comprueba tu interacción
 
-Repite un fragmento de entrevista y revisa si la siguiente pregunta surgió de la respuesta anterior. Termina con un resumen que el paciente pueda corregir. [Consulta el ejercicio de señales de alarma](/es/blog/red-flags-anamnese-famed) para aplicar esta estructura a otra ficha ficticia.
+Repite un fragmento de entrevista y revisa si la siguiente pregunta surgió de la respuesta anterior. Termina con un resumen que el paciente pueda corregir. [Consulta el ejercicio de señales de alarma](/es/blog/red-flags-anamnese-famed) para aplicar esta estructura a otra ficha de práctica.
 
 ## Fuentes y revisión
 

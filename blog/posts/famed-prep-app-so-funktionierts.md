@@ -13,11 +13,11 @@ Watch the walkthrough above, then choose one skill to practise. The four section
 
 ## 1. Anamnese: ask, listen and follow up
 
-Practise a patient conversation in German. Choose an available fictional patient, read the situation, and ask your first question. The patient responds during the exercise; listen to the answer before deciding what to ask next. Follow the microphone instructions shown in your browser and exercise.
+Practise a patient conversation in German. Choose an available practice patient, read the situation, and ask your first question. The patient responds during the exercise; listen to the answer before deciding what to ask next. Follow the microphone instructions shown in your browser and exercise.
 
 ![Anamnese practice screen in the actual FaMED Prep app](/images/previews/app-anamnese-practice-20261020.png)
 
-*Anamnese: the conversation exercise shown with a fictional patient. The sidebar is excluded so you can focus on the task.*
+*Anamnese: the conversation exercise shown with a practice patient. The sidebar is excluded so you can focus on the task.*
 
 The video includes two scripted doctor questions with actual patient-response audio from the app. This demonstrates the exchange; it is an edited example, not a real student's attempt.
 
@@ -27,7 +27,7 @@ After a conversation, use the available feedback to choose your next practice go
 
 ## 2. Aufklärung: explain a procedure to the patient
 
-Choose a procedure and read your role, the fictional case and the instructions. Practise explaining the planned procedure in language a patient can understand. Organise the explanation and leave room for questions.
+Choose a procedure and read your role, the practice case and the instructions. Practise explaining the planned procedure in language a patient can understand. Organise the explanation and leave room for questions.
 
 ![Aufklärung task showing the role, scenario and instructions](/images/previews/app-aufklaerung-task-20261020.png)
 
@@ -43,7 +43,7 @@ Select an available handover case, then read the patient information and your ta
 
 ![Arzt–Arzt case information and handover task](/images/previews/app-handover-task-20261020.png)
 
-*Arzt–Arzt: the actual handover task, with the sidebar hidden. The case is fictional.*
+*Arzt–Arzt: the actual handover task, with the sidebar hidden.*
 
 The full test gives feedback on **Struktur, Inhalt, Sprachliche Präzision and Kommunikationsstil**. Use the comments to make the next presentation clearer and more focused.
 
@@ -55,7 +55,7 @@ Open an available writing exercise and listen to the practice recording. Work th
 
 ![Answer being typed in the actual Arztbrief exercise](/images/previews/app-writing-20261020.png)
 
-*Arztbrief: actual typing using a demo account and a fictional case. This is an example answer, not a model answer to memorise.*
+*Arztbrief: actual typing using a demo account and a practice case. This is an example answer, not a model answer to memorise.*
 
 Review **Struktur, Vollständigkeit, Fachterminologie, Grammatik and Präzision**. Choose one useful correction from the specific comments and apply it in the next attempt.
 

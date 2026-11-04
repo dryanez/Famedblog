@@ -9,7 +9,7 @@ updated: "2026-10-21"
 tags: ["FaMED", "Differentialdiagnose", "Medical German", "Arzt-Arzt"]
 ---
 
-Este ejercicio trabaja formulación lingüística con casos ficticios. No propone diagnósticos ni tratamientos para pacientes reales.
+Este ejercicio trabaja formulación lingüística con casos de práctica. No propone diagnósticos ni tratamientos para pacientes reales.
 
 ## Indica el grado de certeza
 

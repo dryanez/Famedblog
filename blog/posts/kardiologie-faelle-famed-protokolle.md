@@ -5,7 +5,7 @@ readTime: "3 min"
 category: "Clinical Cases"
 status: "published"
 tags: ["FaMED", "Kardiologie", "OSCE Cases", "Innere Medizin"]
-excerpt: "Practise accurate German communication with fictional cardiovascular examples, without invented exam frequencies or treatment algorithms."
+excerpt: "Practise accurate German communication with cardiovascular practice examples, without invented exam frequencies or treatment algorithms."
 updated: "2026-10-21"
 ---
 
@@ -15,7 +15,7 @@ FaMed assesses language performance, not medical knowledge separately. In the pr
 
 ## Ask about a reported symptom
 
-For a fictional history exercise involving chest discomfort, practise clear questions:
+For a history exercise involving chest discomfort, practise clear questions:
 
 - „Seit wann bestehen die Beschwerden?“
 - „Wie fühlen sie sich an, und wo genau spüren Sie sie?“
@@ -26,7 +26,7 @@ These examples practise language. Answers alone do not confirm or exclude a part
 
 ## Separate the patient's report from findings
 
-Suppose a fictional source states that Herr Beispiel reports breathlessness when lying down, that his legs have become swollen, and that an examination report is not supplied.
+Suppose a case text states that Herr Beispiel reports breathlessness when lying down, that his legs have become swollen, and that an examination report is not supplied.
 
 A faithful formulation is:
 

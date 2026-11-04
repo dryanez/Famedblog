@@ -5,11 +5,11 @@ updated: "2026-10-31"
 readTime: "5 min"
 category: "Práctica de escritura"
 status: "published"
-excerpt: "Transforma cinco frases ficticias de pacientes en discurso indirecto. Practica sei, habe, nehme, könne y un hecho pasado sin cambiar la información."
+excerpt: "Transforma cinco frases de pacientes en discurso indirecto. Practica sei, habe, nehme, könne y un hecho pasado sin cambiar la información."
 tags: ["FaMED", "Konjunktiv I", "Arztbrief"]
 ---
 
-Un verbo puede parecer correcto mientras la frase cambia lo que dijo el paciente. En este ejercicio, redacta primero el discurso indirecto y después compara tanto la forma verbal como los datos con la fuente. Son cinco **pacientes ficticias independientes**, no un caso combinado ni una respuesta modelo oficial.
+Un verbo puede parecer correcto mientras la frase cambia lo que dijo el paciente. En este ejercicio, redacta primero el discurso indirecto y después compara tanto la forma verbal como los datos con la fuente. Son cinco **pacientes de práctica independientes**, no un caso combinado ni una respuesta modelo oficial.
 
 El organizador pide frases completas y Konjunktiv I para las declaraciones del paciente cuando corresponda. Este ejercicio utiliza deliberadamente formas claras de tercera persona del singular; no indica que debas poner todos los verbos del informe en subjuntivo. La frase introductoria puede variar. Las propuestas utilizan siempre «Die Patientin berichte» para centrarte en la oración siguiente.
 
@@ -19,7 +19,7 @@ Oculta la respuesta sugerida. Copia la fuente, subraya la expresión temporal y 
 
 ## 1. Un estado presente: sei
 
-Fuente ficticia:
+Fuente:
 
 > „Ich bin seit gestern müde.“
 
@@ -31,7 +31,7 @@ Cambia «ich bin» por «sie sei». Conserva la expresión de inicio. El cansanc
 
 ## 2. Un síntoma referido: habe
 
-Fuente ficticia:
+Fuente:
 
 > „Ich habe seit Montag Kopfschmerzen.“
 
@@ -43,7 +43,7 @@ Mantén el lunes y la cefalea. No sustituyas el día por un número de días sup
 
 ## 3. Medicación e incertidumbre: nehme, wisse
 
-Fuente ficticia:
+Fuente:
 
 > „Ich nehme morgens eine Tablette. Den Namen weiß ich nicht.“
 
@@ -55,7 +55,7 @@ Importan ambas partes: un comprimido por la mañana y un nombre desconocido. «N
 
 ## 4. Capacidad: könne
 
-Fuente ficticia:
+Fuente:
 
 > „Ich kann nachts schlecht schlafen.“
 
@@ -67,7 +67,7 @@ Una formulación posible; compárala después de escribir:
 
 ## 5. Un hecho concluido: sei … gestürzt
 
-Fuente ficticia:
+Fuente:
 
 > „Ich bin gestern gestürzt.“
 

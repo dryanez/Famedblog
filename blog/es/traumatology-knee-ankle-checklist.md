@@ -9,7 +9,7 @@ updated: "2026-10-21"
 tags: ["Traumatology", "Surgery", "Orthopedics", "Anamnese"]
 ---
 
-Esta lista se utiliza para practicar lenguaje con lesiones ficticias. No es una guía de valoración ni tratamiento de una lesión real.
+Esta lista se utiliza para practicar lenguaje con lesiones de práctica. No es una guía de valoración ni tratamiento de una lesión real.
 
 ## Aclara qué ocurrió
 

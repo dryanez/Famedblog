@@ -107,7 +107,7 @@ Cuando no estés seguro, utiliza la expresión dentro de una pregunta y deja que
 
 ## Práctica breve
 
-Elige tres expresiones. Representa una entrevista con una ficha ficticia y escribe un resumen fiel a las respuestas. Comprueba que no hayas convertido una expresión ambigua en un diagnóstico. [Continúa con el glosario](/es/blog/medizinische-fachbegriffe-laiensprache-tabelle) y [la estructura de Anamnese](/es/blog/anamnese-overview-part-1).
+Elige tres expresiones. Representa una entrevista con una ficha de práctica y escribe un resumen fiel a las respuestas. Comprueba que no hayas convertido una expresión ambigua en un diagnóstico. [Continúa con el glosario](/es/blog/medizinische-fachbegriffe-laiensprache-tabelle) y [la estructura de Anamnese](/es/blog/anamnese-overview-part-1).
 
 ## Fuentes y revisión
 

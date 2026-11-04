@@ -1,0 +1,28 @@
+'use client';
+import {useState} from 'react';
+import {useRouter} from 'next/navigation';
+import {submitLead} from '@/app/actions';
+// @ts-ignore Shared consent text also lives in the recorded server-side evidence.
+import {consentCopy} from '@/lib/guide-consent-copy.mjs';
+import {guideLocale,localePrefix,type Locale} from '@/lib/languages';
+// Short guide request form for the homepage: same submitLead flow as LeadMagnetCTA, then straight to the guide-ready page.
+const copy:Record<Locale,{privacy:string;name:string;email:string;send:string;sending:string;note:string;failed:string}>={
+ en:{privacy:'Privacy policy',name:'First name',email:'Email address',send:'Send me the free guide',sending:'Sending…',note:'Instant download, plus a copy in your inbox. No marketing unless you tick the box.',failed:'Something went wrong. Please try again.'},
+ ar:{privacy:'سياسة الخصوصية',name:'الاسم الأول',email:'البريد الإلكتروني',send:'أرسل لي الدليل المجاني',sending:'جارٍ الإرسال…',note:'تنزيل فوري ونسخة في بريدك. لا رسائل تسويقية إلا إذا اخترت المربع.',failed:'حدث خطأ. حاول مرة أخرى.'},
+ es:{privacy:'Política de privacidad',name:'Nombre',email:'Correo electrónico',send:'Envíame la guía gratuita',sending:'Enviando…',note:'Descarga inmediata y una copia en tu correo. Sin marketing salvo que marques la casilla.',failed:'Algo salió mal. Inténtalo de nuevo.'},
+ ru:{privacy:'Политика конфиденциальности',name:'Имя',email:'Электронная почта',send:'Получить бесплатное руководство',sending:'Отправка…',note:'Мгновенная загрузка и копия на почту. Без рассылки, если вы не отметите галочку.',failed:'Что-то пошло не так. Попробуйте ещё раз.'},
+ fr:{privacy:'Politique de confidentialité',name:'Prénom',email:'Adresse e-mail',send:'Recevoir le guide gratuit',sending:'Envoi…',note:'Téléchargement immédiat et une copie par e-mail. Aucun marketing sauf si vous cochez la case.',failed:'Une erreur s’est produite. Veuillez réessayer.'},
+ tr:{privacy:'Gizlilik politikası',name:'Ad',email:'E-posta adresi',send:'Ücretsiz rehberi gönder',sending:'Gönderiliyor…',note:'Anında indirme ve e-postanıza bir kopya. Kutuyu işaretlemezseniz pazarlama e-postası yok.',failed:'Bir sorun oluştu. Lütfen tekrar deneyin.'},
+};
+export default function HeroGuideForm({locale,id='hero',dark=false}:{locale:Locale;id?:string;dark?:boolean}){
+ const router=useRouter(),c=copy[locale],guide=guideLocale(locale);const [loading,setLoading]=useState(false),[message,setMessage]=useState('');
+ async function submit(e:React.FormEvent<HTMLFormElement>){e.preventDefault();setLoading(true);setMessage('');try{const result=await submitLead(new FormData(e.currentTarget));if(result.success&&result.downloadUrl){const token=new URL(result.downloadUrl,'https://famed-vorbereitung.com').searchParams.get('token');router.push(`${localePrefix(guide)}/guide-ready?token=${token}&email=${result.emailSent?'sent':'check'}`);return;}setMessage(result.message||c.failed);}catch{setMessage(c.failed);}finally{setLoading(false);}}
+ const label=`block text-sm font-semibold ${dark?'text-blue-100':'text-slate-700'}`,input='mt-1.5 h-12 w-full rounded-lg border border-slate-300 bg-white px-4 text-base text-slate-900 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600/30';
+ return <form onSubmit={submit} className={`rounded-2xl p-5 sm:p-6 ${dark?'bg-white/10 ring-1 ring-white/20':'bg-white shadow-xl shadow-blue-900/10 ring-1 ring-slate-200'}`}><input type="hidden" name="locale" value={guide}/><input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden"/>
+  <div className="grid gap-3 sm:grid-cols-2"><label htmlFor={`${id}-name`} className={label}>{c.name}<input id={`${id}-name`} required maxLength={80} name="firstName" autoComplete="given-name" className={input}/></label><label htmlFor={`${id}-email`} className={label}>{c.email}<input id={`${id}-email`} required type="email" maxLength={254} name="email" autoComplete="email" className={input}/></label></div>
+  <button disabled={loading} className={`mt-4 flex min-h-14 w-full items-center justify-center gap-3 rounded-xl px-6 text-lg font-bold shadow-lg disabled:opacity-60 ${dark?'bg-white text-blue-800 hover:bg-blue-50':'bg-blue-700 text-white shadow-blue-700/25 hover:bg-blue-800'}`}>{loading?c.sending:c.send}{!loading&&<span aria-hidden="true" className="inline-block rtl:rotate-180">→</span>}</button>
+  <label className={`mt-4 flex items-start gap-3 text-xs leading-relaxed ${dark?'text-blue-100':'text-slate-600'}`}><input type="checkbox" name="marketingConsent" value="yes" className="mt-0.5 h-4 w-4 shrink-0"/>{consentCopy[guide]}</label>
+  <p className={`mt-3 text-xs ${dark?'text-blue-100':'text-slate-500'}`}>{c.note} <a href="https://famedtestprep.com/PrivacyPolicy" className="underline">{c.privacy}</a></p>
+  {message&&<p role="status" className="mt-3 rounded-lg bg-red-50 p-3 text-sm text-red-800">{message}</p>}
+ </form>;
+}

@@ -4,12 +4,12 @@ date: "2026-10-21"
 readTime: "3 min"
 category: "Preparación"
 status: "published"
-excerpt: "Describe dolor torácico, palpitaciones y disnea con precisión lingüística y datos ficticios."
+excerpt: "Describe dolor torácico, palpitaciones y disnea con precisión lingüística y datos de práctica."
 updated: "2026-10-21"
 tags: ["FaMED", "Kardiologie", "OSCE Cases", "Innere Medizin"]
 ---
 
-Este recurso trabaja lenguaje médico con fichas ficticias. No ofrece decisiones diagnósticas ni tratamientos para una situación real.
+Este recurso trabaja lenguaje médico con fichas de práctica. No ofrece decisiones diagnósticas ni tratamientos para una situación real.
 
 ## Escucha cómo se describe el síntoma
 
@@ -25,7 +25,7 @@ Con el paciente utiliza vocabulario comprensible. Con el colega organiza motivo 
 
 ## Revisión de un ejercicio
 
-Prepara una ficha ficticia, entrevista y redacta un resumen. Comprueba si cada afirmación procede de la fuente y si tu lenguaje mantiene la cronología. Repite solo el fragmento que perdió claridad.
+Prepara una ficha de práctica, entrevista y redacta un resumen. Comprueba si cada afirmación procede de la fuente y si tu lenguaje mantiene la cronología. Repite solo el fragmento que perdió claridad.
 
 [Consulta el glosario de lenguaje cotidiano](/es/blog/medizinische-fachbegriffe-laiensprache-tabelle) y [la estructura de presentación](/es/blog/sbar-schema-arzt-arzt-gespraech).
 

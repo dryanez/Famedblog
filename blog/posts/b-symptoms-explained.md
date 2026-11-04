@@ -31,7 +31,7 @@ One answer does not establish that the other symptoms were denied. Avoid writing
 
 ## Keep the report faithful
 
-Fictional source statement: „Ich habe in drei Monaten etwa vier Kilo verloren, ohne eine Diät zu machen.“
+Source statement: „Ich habe in drei Monaten etwa vier Kilo verloren, ohne eine Diät zu machen.“
 
 Possible formulation:
 

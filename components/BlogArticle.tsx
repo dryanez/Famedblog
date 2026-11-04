@@ -3,7 +3,10 @@ import AppWalkthrough from './AppWalkthrough';
 import { languageAlternates, type Locale } from '@/lib/languages';
 import { redirect,notFound } from 'next/navigation';
 import Link from 'next/link';
-import LeadMagnetCTA from '@/components/LeadMagnetCTA';
+import BlogCard from '@/components/BlogCard';
+import HeroGuideForm from '@/components/HeroGuideForm';
+import { guideOffer } from '@/lib/guide-offer';
+import { Send } from 'lucide-react';
 import ArticleLearningResources from '@/components/ArticleLearningResources';
 import { headingId, nodeText, relatedSlugs } from '@/lib/article-navigation';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
@@ -59,7 +62,7 @@ export async function articleMetadata(slug: string, locale: Locale = 'en') {
 
 export default async function BlogArticle({ slug, locale = 'en' }: { slug: string; locale?: Locale }) {
   const prefix = locale === 'en' ? '' : '/'+locale;
-  const ar = locale === 'ar'; const es=locale==='es';
+  const ar = locale === 'ar'; const es=locale==='es'; const offer = guideOffer[locale];
   if(slug==='famed-protokoll-buch-vorschau')redirect('https://www.paypal.com/ncp/payment/DQCLR47JB5DXU?utm_source=blog&utm_medium=legacy_preview&utm_campaign=contextual_book');
   const post = getPostBySlug(slug, locale);
 
@@ -151,36 +154,33 @@ export default async function BlogArticle({ slug, locale = 'en' }: { slug: strin
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Article Header */}
-      <header className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Link
-              href={`${prefix}/blog`}
-              className="inline-flex items-center text-blue-100 hover:text-white mb-6 transition"
-            >
-              {ar ? 'العودة إلى المدونة' : es ? '← Volver a los artículos' : '← Back to Blog'}
-            </Link>
-            <div className="mb-4">
-              <span className="bg-blue-500 px-3 py-1 rounded-full text-sm font-semibold">
-                {post.category}
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {post.title}
-            </h1>
-            <div className="flex items-center gap-4 text-blue-100">
-              <time>{post.date}</time>
-              <span>•</span>
-              <span>{ar ? post.readTime.replace('min','دقائق') : es ? post.readTime + ' de lectura' : post.readTime + ' read'}</span>
-            </div>
+      <header className="border-b border-slate-200 bg-[#f4f8fd] px-5 py-12 md:py-16">
+        <div className="mx-auto max-w-3xl">
+          <Link
+            href={`${prefix}/blog`}
+            className="inline-flex min-h-11 items-center text-sm font-semibold text-blue-700 underline-offset-4 hover:underline"
+          >
+            {ar ? 'العودة إلى المدونة' : es ? '← Volver a los artículos' : '← Back to Blog'}
+          </Link>
+          <p className="mt-4 text-sm font-bold uppercase tracking-wider text-blue-700">{post.category}</p>
+          <h1 className="mt-3 text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 md:text-5xl">
+            {post.title}
+          </h1>
+          {post.excerpt && <p className="mt-5 text-xl leading-relaxed text-slate-600">{post.excerpt}</p>}
+          <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-600">
+            <span className="font-semibold text-slate-900">FaMED Prep</span>
+            <span aria-hidden="true">·</span>
+            <time>{post.date}</time>
+            <span aria-hidden="true">·</span>
+            <span>{ar ? post.readTime.replace('min','دقائق') : es ? post.readTime + ' de lectura' : post.readTime + ' read'}</span>
           </div>
         </div>
       </header>
 
       {/* Article Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          {headings.length>2 && <nav aria-label={ar?'في هذا المقال':es?'En este artículo':'In this article'} className="mb-8 rounded-xl border border-slate-200 bg-slate-50 p-5"><p className="mb-2 font-semibold text-slate-900">{ar?'في هذا المقال':es?'En este artículo':'In this article'}</p><ul className="grid gap-2 sm:grid-cols-2">{headings.map((h,i)=><li key={i}><a className="text-sm text-blue-700 underline" href={`#${h.id}`}>{h.text}</a></li>)}</ul></nav>}
+      <div className="px-5 py-12 md:py-16">
+        <div className="mx-auto max-w-3xl">
+          {headings.length>2 && <nav aria-label={ar?'في هذا المقال':es?'En este artículo':'In this article'} className="mb-10 rounded-2xl bg-[#f4f8fd] p-6 ring-1 ring-blue-100"><p className="mb-3 text-sm font-bold uppercase tracking-wider text-slate-900">{ar?'في هذا المقال':es?'En este artículo':'In this article'}</p><ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2">{headings.map((h,i)=><li key={i}><a className="font-medium text-blue-700 underline-offset-4 hover:underline" href={`#${h.id}`}>{h.text}</a></li>)}</ul></nav>}
           {slug === 'famed-prep-app-so-funktionierts' && <AppWalkthrough arabic={ar} spanish={es}/>}
           <div className="prose prose-lg max-w-none">
             <ReactMarkdown
@@ -188,10 +188,10 @@ export default async function BlogArticle({ slug, locale = 'en' }: { slug: strin
               remarkPlugins={[remarkGfm]}
               components={{
                 // Map HTML elements to styled components if needed
-                table: ({ node, ...props }) => <div className="my-6 max-w-full overflow-x-auto" role="region" aria-label={ar ? 'جدول المقال' : es ? 'Tabla del artículo' : 'Article table'} tabIndex={0}><table {...props} /></div>,
-                h2: ({ node, ...props }) => <h2 id={headingId(nodeText(node))} className="scroll-mt-24 text-2xl font-bold mt-8 mb-4" {...props} />,
-                h3: ({ node, ...props }) => <h3 className="text-xl font-bold mt-6 mb-3" {...props} />,
-                p: ({ node, ...props }) => <p className="mb-4 text-gray-700 leading-relaxed" {...props} />,
+                table: ({ node, ...props }) => <div className="my-8 max-w-full overflow-x-auto rounded-2xl bg-white ring-1 ring-slate-200" role="region" aria-label={ar ? 'جدول المقال' : es ? 'Tabla del artículo' : 'Article table'} tabIndex={0}><table {...props} /></div>,
+                h2: ({ node, ...props }) => <h2 id={headingId(nodeText(node))} className="scroll-mt-24 mt-12 mb-4 text-3xl font-extrabold tracking-tight text-slate-900" {...props} />,
+                h3: ({ node, ...props }) => <h3 className="mt-8 mb-3 text-xl font-bold text-slate-900" {...props} />,
+                p: ({ node, ...props }) => <p className="mb-5 text-lg leading-8 text-slate-700" {...props} />,
                 a: ({ node, ...props }) => <a className="font-semibold text-blue-700 underline underline-offset-2 hover:text-blue-900" {...props} href={articleDestination(props.href,slug,locale)} />,
                 img: ({ node, alt, ...props }) => {
                   const src = typeof props.src === 'string' ? props.src : '';
@@ -200,72 +200,56 @@ export default async function BlogArticle({ slug, locale = 'en' }: { slug: strin
                   const book = src.includes('/book-2026-');
                   return <img {...props} alt={alt || 'Article illustration'} loading={preview ? 'eager' : 'lazy'} width={productCover ? 778 : preview ? (book ? 997 : 1280) : undefined} height={productCover ? 1100 : preview ? (book ? 1500 : 720) : undefined} className="mx-auto my-6 max-h-[900px] h-auto w-auto max-w-full rounded-xl border border-slate-200 object-contain" />;
                 },
-                ul: ({ node, ...props }) => <ul className="list-disc pl-6 mb-6 space-y-2" {...props} />,
-                li: ({ node, ...props }) => <li className="text-gray-700" {...props} />,
+                ul: ({ node, ...props }) => <ul className="mb-6 list-disc space-y-2 ps-6 marker:text-blue-700" {...props} />,
+                li: ({ node, ...props }) => <li className="text-lg leading-8 text-slate-700" {...props} />,
               }}
             >
               {post.content}
             </ReactMarkdown>
           </div>
 
+          {/* Free guide signup */}
+          <section aria-labelledby="article-guide" className="my-14 rounded-3xl bg-blue-800 p-6 text-white sm:p-10">
+            <p className="text-sm font-bold uppercase tracking-wider text-blue-200">{offer.free}</p>
+            <h2 id="article-guide" className="mt-2 text-2xl font-extrabold tracking-tight sm:text-3xl">{offer.cta}</h2>
+            <div className="mt-6"><HeroGuideForm locale={locale} id="article" dark/></div>
+          </section>
 
+          <ArticleLearningResources locale={locale} />
 
           {/* Telegram CTA */}
-          <div className="my-12 p-6 bg-blue-50 border border-blue-200 rounded-xl flex items-center justify-between gap-4">
-            <div>
-              <h3 className="font-bold text-lg text-blue-900 mb-1">{ar ? 'انضم إلى المجتمع' : es ? 'Únete a la comunidad' : 'Join the Community'}</h3>
-              <p className="text-blue-700 text-sm">{ar ? 'ناقش أسئلة الدراسة واعثر على مصادر التحضير.' : es ? 'Comparte preguntas de estudio y descubre recursos de preparación.' : 'Share study questions and find preparation resources.'}</p>
+          <div className="my-12 flex flex-wrap items-center gap-5 rounded-2xl bg-white p-6 ring-1 ring-slate-200">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-700"><Send aria-hidden="true" className="h-6 w-6" /></span>
+            <div className="min-w-0 flex-1 basis-60">
+              <h3 className="text-lg font-bold text-slate-900">{ar ? 'انضم إلى المجتمع' : es ? 'Únete a la comunidad' : 'Join the Community'}</h3>
+              <p className="mt-1 text-slate-600">{ar ? 'ناقش أسئلة الدراسة واعثر على مصادر التحضير.' : es ? 'Comparte preguntas de estudio y descubre recursos de preparación.' : 'Share study questions and find preparation resources.'}</p>
             </div>
             <a
               href="https://t.me/+vgtsHuqtwfk4MTJh"
               target="_blank"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition flex-shrink-0"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 shrink-0 items-center rounded-xl bg-blue-700 px-6 font-bold text-white transition hover:bg-blue-800"
             >
               {ar ? 'انضم عبر تيليغرام' : es ? 'Unirme a Telegram →' : 'Join Telegram →'}
             </a>
           </div>
-
-          {/* Lead Magnet CTA */}
-          <div className="mt-8">
-            <LeadMagnetCTA locale={locale} />
-          </div>
-
-          {/* Related Posts */}
-          <div className="mt-16 pt-8 border-t border-gray-200">
-            <h2 className="text-2xl font-bold mb-6">{ar ? 'تابع القراءة' : es ? 'Sigue leyendo' : 'Continue Reading'}</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {relatedPosts.map((relatedPost) => (
-                <Link
-                  key={relatedPost.slug}
-                  href={`${prefix}/blog/${relatedPost.slug}`}
-                  className="block p-6 border border-gray-200 rounded-lg hover:border-blue-600 hover:shadow-lg transition"
-                >
-                  <div className="text-sm text-blue-600 font-semibold mb-2">
-                    {relatedPost.category}
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">
-                    {relatedPost.title}
-                  </h3>
-                  <div className="text-sm text-gray-500">
-                    {ar ? relatedPost.readTime.replace('min','دقائق') : es ? relatedPost.readTime + ' de lectura' : relatedPost.readTime + ' read'}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <ArticleLearningResources locale={locale} />
-          {/* Back to Blog */}
-          <div className="mt-12 text-center">
-            <Link
-              href={`${prefix}/blog`}
-              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-            >
-              {ar ? 'العودة إلى جميع المقالات' : es ? '← Ver todos los artículos' : '← Back to All Posts'}
-            </Link>
-          </div>
         </div>
       </div>
+
+      {/* Related Posts */}
+      <section className="bg-[#f4f8fd] px-5 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="text-3xl font-extrabold tracking-tight text-slate-900">{ar ? 'تابع القراءة' : es ? 'Sigue leyendo' : 'Continue Reading'}</h2>
+            <Link href={`${prefix}/blog`} className="inline-flex min-h-11 items-center font-semibold text-blue-700 underline-offset-4 hover:underline">
+              {ar ? 'العودة إلى جميع المقالات' : es ? 'Ver todos los artículos →' : 'All posts →'}
+            </Link>
+          </div>
+          <div className="mt-8 grid gap-8 md:grid-cols-3">
+            {relatedPosts.map((relatedPost) => <BlogCard key={relatedPost.slug} {...relatedPost} locale={locale} />)}
+          </div>
+        </div>
+      </section>
     </article>
   );
 }

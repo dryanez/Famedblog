@@ -5,7 +5,7 @@ readTime: "3 min"
 category: "Clinical Cases"
 status: "published"
 tags: ["FaMED", "Chirurgie", "Akutes Abdomen", "OSCE"]
-excerpt: "Use fictional abdominal examples to practise questions, source distinctions and patient-friendly language."
+excerpt: "Use abdominal practice examples to practise questions, source distinctions and patient-friendly language."
 updated: "2026-10-21"
 ---
 
@@ -24,7 +24,7 @@ Use [OPQRST](/blog/pain-anamnesis-guide) as a flexible memory aid. Select releva
 
 ## Do not turn a symptom into a confirmed diagnosis
 
-A fictional source might report pain that moved from the middle of the abdomen to the right lower abdomen. You can accurately describe that movement without asserting that it proves appendicitis.
+A case text might report pain that moved from the middle of the abdomen to the right lower abdomen. You can accurately describe that movement without asserting that it proves appendicitis.
 
 > Der Patient gebe an, die Schmerzen hätten zunächst im mittleren Bauchbereich begonnen und seien später in den rechten Unterbauch gewandert.
 

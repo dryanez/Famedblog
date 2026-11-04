@@ -13,7 +13,7 @@ Una sesión corta sirve si tiene un objetivo concreto. Esta rutina de 30 minutos
 
 ## Minutos 0–5: elige una tarea
 
-Selecciona Anamnese, Aufklärung, Arzt–Arzt o escritura. Lee la consigna, identifica al interlocutor y subraya la información disponible. Trabaja con un caso ficticio, sin datos de pacientes reales.
+Selecciona Anamnese, Aufklärung, Arzt–Arzt o escritura. Lee la consigna, identifica al interlocutor y subraya la información disponible. Trabaja con un caso de práctica, sin datos de pacientes reales.
 
 ## Minutos 5–15: practica
 

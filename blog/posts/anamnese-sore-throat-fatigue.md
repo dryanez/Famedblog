@@ -214,7 +214,7 @@ Ask about professional and social circumstances.
 
 ### 16. Closing the Conversation (Gesprächsabschluss)
 
-Summarize the key information and give the patient the opportunity to add anything. Explain the next steps supported by the actual assignment; the following is a fictional language example, not a universal investigation plan.
+Summarize the key information and give the patient the opportunity to add anything. Explain the next steps supported by the actual assignment; the following is a language example, not a universal investigation plan.
 
 *   **Example:** "Jetzt würde ich noch einmal kurz zusammenfassen: Sie haben … Habe ich alles richtig verstanden? Möchten Sie noch etwas hinzufügen? Als Nächstes werde ich eine körperliche Untersuchung durchführen, Ihre Lunge und Ihr Herz abhören sowie Ihren Bauch abtasten. Außerdem werde ich Ihnen ein bisschen Blut abnehmen, um die Blutwerte zu kontrollieren. Die weiteren Schritte richten sich nach den erhobenen Informationen und der vorgesehenen Abklärung. Haben Sie noch Fragen an mich? Dann gehen wir weiter."
 

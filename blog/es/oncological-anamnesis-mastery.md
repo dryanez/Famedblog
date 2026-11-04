@@ -9,7 +9,7 @@ updated: "2026-10-21"
 tags: ["Oncology", "Anamnese", "Doctor Patient Communication", "Internal Medicine"]
 ---
 
-En una ficha oncológica ficticia, la precisión y el respeto son tan importantes como la estructura. Este material entrena comunicación; no sirve para diagnosticar ni orientar tratamientos reales.
+En una ficha oncológica de práctica, la precisión y el respeto son tan importantes como la estructura. Este material entrena comunicación; no sirve para diagnosticar ni orientar tratamientos reales.
 
 ## Escucha el motivo de consulta
 

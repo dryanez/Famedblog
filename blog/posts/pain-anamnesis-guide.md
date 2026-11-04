@@ -125,7 +125,7 @@ Ask about the patient's professional and social environment as well as possible 
 
 ### 7. Closing the Conversation (Gesprächsabschluss)
 
-Summarize the key points and describe the next steps supported by the assignment. The following is a fictional language example, not a required investigation plan.
+Summarize the key points and describe the next steps supported by the assignment. The following is a language example, not a required investigation plan.
 
 **Example:**
 

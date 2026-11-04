@@ -37,7 +37,7 @@ If the assignment contains alternatives, introduce them clearly:
 
 If you offer an interpretation in a practice exercise, label it as your interpretation. Do not report that an investigation was performed or ordered when it was not.
 
-## A fictional language exercise
+## A language exercise
 
 Source note: a patient reports breathlessness after an operation; the supplied note describes a suspected embolism and planned further investigation. No result is given.
 

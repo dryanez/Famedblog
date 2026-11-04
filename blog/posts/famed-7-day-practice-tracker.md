@@ -11,7 +11,7 @@ updated: "2026-10-23"
 
 If your study notes keep growing but you rarely repeat a difficult conversation, try tracking **what changed between two attempts**. This seven-day plan gives each session one task and one visible check. It is an independent practice suggestion, not an official exam timetable or a prediction of your result.
 
-You need a fictional case or the organiser's practice material, a notebook and, if useful, a recording device or study partner. Keep patient-identifying information out of your practice notes and recordings. If you have only 15 minutes, shorten the task rather than skipping the second attempt.
+You need a practice case or the organiser's practice material, a notebook and, if useful, a recording device or study partner. Keep patient-identifying information out of your practice notes and recordings. If you have only 15 minutes, shorten the task rather than skipping the second attempt.
 
 ## Set up one row for each session
 
@@ -43,7 +43,7 @@ Practise an open question, one follow-up and a summary based on the answer. With
 >
 > Ich fasse kurz zusammen: Die Beschwerden bestehen seit drei Tagen. Habe ich Sie richtig verstanden?
 
-The second sentence is appropriate only if the fictional source actually says three days. On your repeat attempt, check whether you preserved the answer and gave the speaker room to correct you. Continue with the [Anamnese overview](/blog/anamnese-overview-part-1).
+The second sentence is appropriate only if the source actually says three days. On your repeat attempt, check whether you preserved the answer and gave the speaker room to correct you. Continue with the [Anamnese overview](/blog/anamnese-overview-part-1).
 
 ## Day 3: Aufklärung — explain without adding facts
 
@@ -55,7 +55,7 @@ If practising with a partner, ask them to describe what they understood. Check a
 
 ## Day 4: Arzt–Arzt — keep two cases separate
 
-Use two separate fictional case sheets. Present a brief opening for each and answer one follow-up from the supplied facts. Keep names, times and plans on their own sheet.
+Use two separate practice case sheets. Present a brief opening for each and answer one follow-up from the supplied facts. Keep names, times and plans on their own sheet.
 
 > Dazu liegen mir in den vorliegenden Angaben keine Informationen vor.
 
@@ -63,7 +63,7 @@ This is useful when a fact is genuinely missing, not when it is present and you 
 
 ## Day 5: writing — preserve what the patient said
 
-For exam-format practice, use the organiser's patient video and the actual writing instructions. For a shorter language drill, this original fictional statement is enough:
+For exam-format practice, use the organiser's patient video and the actual writing instructions. For a shorter language drill, this original statement is enough:
 
 > „Seit drei Tagen habe ich Bauchschmerzen. Mir ist übel, aber ich habe nicht erbrochen.“
 

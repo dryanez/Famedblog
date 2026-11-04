@@ -31,7 +31,7 @@ updated: "2026-10-21"
 
 ## حافظ على دقة التقرير
 
-بيان مصدر خيالي: „Ich habe in drei Monaten etwa vier Kilo verloren, ohne eine Diät zu machen.“
+بيان المصدر: „Ich habe in drei Monaten etwa vier Kilo verloren, ohne eine Diät zu machen.“
 
 صياغة محتملة:
 

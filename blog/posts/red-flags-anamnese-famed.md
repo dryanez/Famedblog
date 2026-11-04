@@ -15,7 +15,7 @@ FaMed assesses medical-language communication; medical knowledge is not separate
 
 ## Clarify the beginning and course
 
-For a fictional pain-history exercise:
+For a pain-history exercise:
 
 - „Wann haben die Beschwerden begonnen?“
 - „Haben sie plötzlich eingesetzt oder allmählich zugenommen?“

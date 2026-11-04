@@ -1,4 +1,5 @@
 import manifest from './generated-content.json';
+import type {Locale} from './languages';
 
 export interface BlogPost {
     slug: string;
@@ -13,5 +14,5 @@ export interface BlogPost {
     status?: string;
 }
 
-export function getAllPosts(locale:'en'|'ar'|'es'='en'):BlogPost[]{return manifest.posts[locale].map(p=>({...p})) as BlogPost[];}
-export function getPostBySlug(slug:string,locale:'en'|'ar'|'es'='en'):BlogPost|null{if(!/^[a-z0-9-]+$/.test(slug))return null;return getAllPosts(locale).find(p=>p.slug===slug)||null;}
+export function getAllPosts(locale:Locale='en'):BlogPost[]{return ((manifest.posts as Record<string,BlogPost[]>)[locale]||[]).map(p=>({...p}));}
+export function getPostBySlug(slug:string,locale:Locale='en'):BlogPost|null{if(!/^[a-z0-9-]+$/.test(slug))return null;return getAllPosts(locale).find(p=>p.slug===slug)||null;}

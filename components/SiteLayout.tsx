@@ -6,6 +6,7 @@ import PostHogInit from "@/components/PostHogInit";
 import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { locales, type Locale } from "@/lib/languages";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -55,10 +56,19 @@ export const siteMetadata: Metadata = {
   },
 };
 
+const cookieCopy:Record<Locale,[string,string,string,string]>={
+  en:['We use cookies to understand how the site is used and improve it. You can accept or reject optional cookies.','Accept','Reject','Privacy policy'],
+  ar:['نستخدم ملفات تعريف الارتباط لفهم كيفية استخدام الموقع وتحسينه. يمكنك قبول ملفات تعريف الارتباط الاختيارية أو رفضها.','قبول','رفض','سياسة الخصوصية'],
+  es:['Usamos cookies para entender el uso del sitio y mejorarlo. Puedes aceptar o rechazar las cookies opcionales.','Aceptar','Rechazar','Política de privacidad'],
+  ru:['Мы используем файлы cookie, чтобы понимать, как используется сайт, и улучшать его. Вы можете принять или отклонить необязательные cookie.','Принять','Отклонить','Политика конфиденциальности'],
+  fr:['Nous utilisons des cookies pour comprendre l’utilisation du site et l’améliorer. Vous pouvez accepter ou refuser les cookies facultatifs.','Accepter','Refuser','Politique de confidentialité'],
+  tr:['Sitenin nasıl kullanıldığını anlamak ve geliştirmek için çerez kullanıyoruz. İsteğe bağlı çerezleri kabul edebilir veya reddedebilirsiniz.','Kabul et','Reddet','Gizlilik politikası'],
+};
+
 export default function SiteLayout({
   children, locale = 'en',
 }: Readonly<{
-  children: React.ReactNode; locale?: 'en'|'ar'|'es';
+  children: React.ReactNode; locale?: Locale;
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -79,7 +89,7 @@ export default function SiteLayout({
         "@type": "WebSite",
         name: "FAMED Test Prep",
         url: siteUrl,
-        inLanguage: ["en", "ar", "es"],
+        inLanguage: locales,
         publisher: { "@id": `${siteUrl}/#organization` },
       },
     ],
@@ -92,13 +102,11 @@ export default function SiteLayout({
           src="/cookie-consent.js"
           data-dir={locale === 'ar' ? 'rtl' : undefined}
           data-color="#007f76"
-          data-text={locale === 'ar'
-            ? 'نستخدم ملفات تعريف الارتباط لفهم كيفية استخدام الموقع وتحسينه. يمكنك قبول ملفات تعريف الارتباط الاختيارية أو رفضها.'
-            : locale === 'es' ? 'Usamos cookies para entender el uso del sitio y mejorarlo. Puedes aceptar o rechazar las cookies opcionales.' : 'We use cookies to understand how the site is used and improve it. You can accept or reject optional cookies.'}
-          data-accept={locale === 'ar' ? 'قبول' : locale === 'es' ? 'Aceptar' : 'Accept'}
-          data-reject={locale === 'ar' ? 'رفض' : locale === 'es' ? 'Rechazar' : 'Reject'}
+          data-text={cookieCopy[locale][0]}
+          data-accept={cookieCopy[locale][1]}
+          data-reject={cookieCopy[locale][2]}
           data-policy="https://famedtestprep.com/PrivacyPolicy"
-          data-policy-label={locale === 'ar' ? 'سياسة الخصوصية' : locale === 'es' ? 'Política de privacidad' : 'Privacy policy'}
+          data-policy-label={cookieCopy[locale][3]}
         />
         <script
           type="application/ld+json"

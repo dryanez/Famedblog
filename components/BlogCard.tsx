@@ -1,8 +1,9 @@
+import {blogLocale,localePrefix,type Locale} from '@/lib/languages';
 import Link from 'next/link';
 
 interface BlogCardProps {
     arabic?: boolean;
-    locale?: 'en'|'ar'|'es';
+    locale?: Locale;
     title: string;
     excerpt: string;
     slug: string;
@@ -11,48 +12,34 @@ interface BlogCardProps {
     category: string;
 }
 
+const moreLabel:Record<Locale,string>={en:'Read more',ar:'اقرأ المزيد',es:'Leer más',ru:'Читать (англ.)',fr:'Lire (en anglais)',tr:'Oku (İngilizce)'};
+const readLabel=(t:string,l?:Locale)=>l==='es'?t+' de lectura':l==='ru'?t.replace('min','мин'):l==='tr'?t.replace('min','dk'):l==='fr'?t+' de lecture':t+' read';
 export default function BlogCard({ title, excerpt, slug, date, readTime, category, arabic=false,locale }: BlogCardProps) {
     return (
-        <Link href={`${locale&&locale!=='en'?'/'+locale:arabic?'/ar':''}/blog/${slug}`}>
-            <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full border border-gray-100">
-                <div className="p-6">
-                    {/* Category Badge */}
-                    <div className="mb-3">
-                        <span className="inline-block bg-blue-100 text-blue-600 text-xs font-semibold px-3 py-1 rounded-full">
-                            {category}
-                        </span>
-                    </div>
+        <Link href={`${localePrefix(blogLocale(locale||(arabic?'ar':'en')))}/blog/${slug}`} className="group block h-full">
+            <article className="flex h-full flex-col rounded-2xl bg-white p-6 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-900/10 hover:ring-blue-300">
+                {/* Category */}
+                <p className="text-xs font-bold uppercase tracking-wider text-blue-700">{category}</p>
 
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition line-clamp-2">
-                        {title}
-                    </h3>
+                {/* Title */}
+                <h3 className="mt-3 line-clamp-2 text-xl font-extrabold leading-snug tracking-tight text-slate-900 transition group-hover:text-blue-700">
+                    {title}
+                </h3>
 
-                    {/* Excerpt */}
-                    <p className="text-gray-600 mb-4 line-clamp-3">
-                        {excerpt}
-                    </p>
+                {/* Excerpt */}
+                <p className="mt-3 line-clamp-3 flex-1 leading-relaxed text-slate-600">
+                    {excerpt}
+                </p>
 
-                    {/* Meta */}
-                    <div className="flex items-center justify-between text-sm text-gray-500">
-                        <span>{date}</span>
-                        <span>{arabic?readTime.replace('min','دقائق'):locale==='es'?readTime+' de lectura':readTime+' read'}</span>
-                    </div>
-                </div>
-
-                {/* Read More */}
-                <div className="px-6 pb-6">
-                    <div className="text-blue-600 font-semibold flex items-center group">
-                        {arabic?'اقرأ المزيد':locale==='es'?'Leer más':'Read more'}
-                        <svg
-                            className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
+                {/* Meta + read more */}
+                <div className="mt-6 flex items-center justify-between gap-4 border-t border-slate-100 pt-4 text-sm">
+                    <span className="text-slate-500">{date} · {arabic?readTime.replace('min','دقائق'):readLabel(readTime,locale)}</span>
+                    <span className="flex shrink-0 items-center gap-1.5 font-semibold text-blue-700">
+                        {arabic?'اقرأ المزيد':moreLabel[locale||'en']}
+                        <svg aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
-                    </div>
+                    </span>
                 </div>
             </article>
         </Link>
