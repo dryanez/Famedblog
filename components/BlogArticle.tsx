@@ -188,7 +188,7 @@ export default async function BlogArticle({ slug, locale = 'en' }: { slug: strin
               remarkPlugins={[remarkGfm]}
               components={{
                 // Map HTML elements to styled components if needed
-                table: ({ node, ...props }) => <div className="my-6 max-w-full overflow-x-auto" role="region" aria-label={ar ? 'جدول المقال' : es ? 'Tabla del artículo' : 'Article table'} tabIndex={0}><table {...props} /></div>,
+                table: ({ node, ...props }) => <div className="my-8 max-w-full overflow-x-auto rounded-2xl bg-white ring-1 ring-slate-200" role="region" aria-label={ar ? 'جدول المقال' : es ? 'Tabla del artículo' : 'Article table'} tabIndex={0}><table {...props} /></div>,
                 h2: ({ node, ...props }) => <h2 id={headingId(nodeText(node))} className="scroll-mt-24 mt-12 mb-4 text-3xl font-extrabold tracking-tight text-slate-900" {...props} />,
                 h3: ({ node, ...props }) => <h3 className="mt-8 mb-3 text-xl font-bold text-slate-900" {...props} />,
                 p: ({ node, ...props }) => <p className="mb-5 text-lg leading-8 text-slate-700" {...props} />,
