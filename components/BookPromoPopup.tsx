@@ -3,10 +3,9 @@ import {useEffect,useRef,useState} from 'react';
 import {usePathname} from 'next/navigation';
 import {X} from 'lucide-react';
 import {localeOf,localePattern,type Locale} from '@/lib/languages';
-// Book offer popup (owner request, 4 November): appears after 25 s or half a page of scrolling, at most once a week.
+// Book offer popup (owner request, 4 November): only on blog articles, once the reader is 60% through the article text, at most once a week.
 // Payment runs on this site through PayPal buttons; /api/book-checkout passes it to the app's guest checkout, which emails the book.
-const WAS='39,99 €',NOW='19,99 €',SEEN='famed-book-popup',WEEK=7*864e5;
-const SKIP=['/lead-magnet','/guide-ready'];
+const WAS='39,99 €',NOW='19,99 €',SEEN='famed-book-popup',WEEK=7*864e5,READ=0.6;
 const copy:Record<Locale,{badge:string;eyebrow:string;cases:string;text:string;name:string;email:string;sent:string;close:string;thanks:string;invalid:string;failed:string}>={
  en:{badge:'50% off',eyebrow:'Limited offer',cases:'All current cases seen on the exam',text:'The digital case book in German: cases, useful phrases and conversation structures for Anamnese, Aufklärung, Arzt–Arzt and Arztbrief.',name:'First name',email:'Email address',sent:'Sent to your email right after payment.',close:'Close',thanks:'Thank you! Your book is on its way to',invalid:'Please enter your first name and a valid email first.',failed:'The payment could not be completed. Please try again.'},
  ar:{badge:'خصم 50%',eyebrow:'عرض محدود',cases:'جميع الحالات الحالية التي ظهرت في الامتحان',text:'كتاب الحالات الرقمي بالألمانية: حالات وعبارات مفيدة وبنية المحادثة لـ Anamnese وAufklärung وArzt–Arzt وArztbrief.',name:'الاسم الأول',email:'البريد الإلكتروني',sent:'يُرسل إلى بريدك فور الدفع.',close:'إغلاق',thanks:'شكراً لك! الكتاب في طريقه إلى',invalid:'يرجى إدخال اسمك الأول وبريد إلكتروني صحيح أولاً.',failed:'تعذّر إتمام الدفع. حاول مرة أخرى.'},
@@ -26,13 +25,16 @@ export default function BookPromoPopup(){
  const [open,setOpen]=useState(false),[error,setError]=useState(''),[done,setDone]=useState('');
  const nameRef=useRef(''),emailRef=useRef(''),buttons=useRef<HTMLDivElement>(null),rendered=useRef(false);
  useEffect(()=>{
-  if(SKIP.includes(base))return;
+  if(!/^\/blog\/[^/]+$/.test(base))return;
   try{if(Date.now()-Number(localStorage.getItem(SEEN)||0)<WEEK)return;}catch{}
-  let shown=false;const show=()=>{if(shown)return;shown=true;setOpen(true);try{localStorage.setItem(SEEN,String(Date.now()));}catch{}cleanup();};
-  const onScroll=()=>{const el=document.documentElement;if(el.scrollTop+innerHeight>=el.scrollHeight/2)show();};
-  const timer=setTimeout(show,25000);window.addEventListener('scroll',onScroll,{passive:true});
-  const cleanup=()=>{clearTimeout(timer);window.removeEventListener('scroll',onScroll);};
-  return cleanup;
+  const onScroll=()=>{
+   const article=document.querySelector('.prose');if(!article)return;
+   const box=article.getBoundingClientRect();
+   if((innerHeight-box.top)/box.height<READ)return;
+   window.removeEventListener('scroll',onScroll);setOpen(true);try{localStorage.setItem(SEEN,String(Date.now()));}catch{}
+  };
+  window.addEventListener('scroll',onScroll,{passive:true});
+  return()=>window.removeEventListener('scroll',onScroll);
  },[base]);
  useEffect(()=>{
   if(!open)return;
