@@ -6,6 +6,7 @@ import PostHogInit from "@/components/PostHogInit";
 import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BookPromoPopup from "@/components/BookPromoPopup";
 import { locales, type Locale } from "@/lib/languages";
 
 
@@ -121,6 +122,7 @@ export default function SiteLayout({
           {children}
         </main>
         <Footer />
+        <BookPromoPopup />
 
         <Analytics />
       </body>
