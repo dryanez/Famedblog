@@ -1,8 +1,9 @@
+import {blogLocale,localePrefix,type Locale} from '@/lib/languages';
 import Link from 'next/link';
 
 interface BlogCardProps {
     arabic?: boolean;
-    locale?: 'en'|'ar'|'es';
+    locale?: Locale;
     title: string;
     excerpt: string;
     slug: string;
@@ -11,9 +12,11 @@ interface BlogCardProps {
     category: string;
 }
 
+const moreLabel:Record<Locale,string>={en:'Read more',ar:'اقرأ المزيد',es:'Leer más',ru:'Читать (англ.)',fr:'Lire (en anglais)',tr:'Oku (İngilizce)'};
+const readLabel=(t:string,l?:Locale)=>l==='es'?t+' de lectura':l==='ru'?t.replace('min','мин'):l==='tr'?t.replace('min','dk'):l==='fr'?t+' de lecture':t+' read';
 export default function BlogCard({ title, excerpt, slug, date, readTime, category, arabic=false,locale }: BlogCardProps) {
     return (
-        <Link href={`${locale&&locale!=='en'?'/'+locale:arabic?'/ar':''}/blog/${slug}`}>
+        <Link href={`${localePrefix(blogLocale(locale||(arabic?'ar':'en')))}/blog/${slug}`}>
             <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full border border-gray-100">
                 <div className="p-6">
                     {/* Category Badge */}
@@ -36,14 +39,14 @@ export default function BlogCard({ title, excerpt, slug, date, readTime, categor
                     {/* Meta */}
                     <div className="flex items-center justify-between text-sm text-gray-500">
                         <span>{date}</span>
-                        <span>{arabic?readTime.replace('min','دقائق'):locale==='es'?readTime+' de lectura':readTime+' read'}</span>
+                        <span>{arabic?readTime.replace('min','دقائق'):readLabel(readTime,locale)}</span>
                     </div>
                 </div>
 
                 {/* Read More */}
                 <div className="px-6 pb-6">
                     <div className="text-blue-600 font-semibold flex items-center group">
-                        {arabic?'اقرأ المزيد':locale==='es'?'Leer más':'Read more'}
+                        {arabic?'اقرأ المزيد':moreLabel[locale||'en']}
                         <svg
                             className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
                             fill="none"

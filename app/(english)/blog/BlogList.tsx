@@ -3,11 +3,12 @@
 import { useState } from 'react';
 import BlogCard from '@/components/BlogCard';
 import { BlogPost } from '@/lib/posts';
+import type {Locale} from '@/lib/languages';
 
 interface BlogListProps {
     initialPosts: BlogPost[];
     arabic?: boolean;
-    locale?: 'en'|'ar'|'es';
+    locale?: Locale;
 }
 
 export default function BlogList({ initialPosts, arabic=false,locale }: BlogListProps) {

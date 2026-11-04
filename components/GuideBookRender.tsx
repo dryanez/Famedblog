@@ -1,8 +1,9 @@
 import styles from './GuideBookRender.module.css';
-import type { Locale } from '@/lib/languages';
+import { guideLocale, type Locale } from '@/lib/languages';
 
-export default function GuideBookRender({ locale }: { locale: Locale }) {
-  const arabic = locale === 'ar';
+export default function GuideBookRender({ locale: pageLocale }: { locale: Locale }) {
+  // The cover shows the guide's own language: the English guide for page-only languages.
+  const locale = guideLocale(pageLocale), arabic = locale === 'ar';
   const label = arabic ? 'دليل' : locale === 'es' ? 'Guía' : 'Guide';
   const title = arabic ? 'دليلك المجاني · 30 صفحة' : locale === 'es' ? 'Tu guía gratuita · 30 páginas' : 'Your free guide · 30 pages';
   const subtitle = arabic ? ['دليلك المجاني', 'للتحضير للامتحان'] : locale === 'es' ? ['Tu guía gratuita', 'de preparación'] : ['Your free', 'preparation guide'];
