@@ -39,7 +39,8 @@ export default function BookCheckout({locale,id}:{locale:Locale;id:string}){
    <label htmlFor={`${id}-name`} className="block text-sm font-semibold text-slate-700">{c.name}<input id={`${id}-name`} required maxLength={80} autoComplete="given-name" onChange={e=>{nameRef.current=e.target.value;}} className={input}/></label>
    <label htmlFor={`${id}-email`} className="block text-sm font-semibold text-slate-700">{c.email}<input id={`${id}-email`} required type="email" maxLength={200} autoComplete="email" onChange={e=>{emailRef.current=e.target.value;}} className={input}/></label>
   </div>
-  <div ref={buttons} className="mt-4 min-h-[110px]"/>
+  {/* isolate: keeps PayPal's iframes under the sticky site header when scrolling. */}
+  <div ref={buttons} className="isolate mt-4 min-h-[110px]"/>
   {error&&<p role="alert" className="mt-2 rounded-lg bg-red-50 p-3 text-sm text-red-800">{error}</p>}
   <p className="mt-2 text-xs text-slate-500">{c.sent}</p>
  </div>;
