@@ -11,4 +11,4 @@
 .pages{top:4px;height:calc(100% - 8px);left:calc(var(--w) - 3px - (var(--d) - 4px)/2);width:calc(var(--d) - 4px);transform:rotateY(90deg);background:linear-gradient(90deg,#0002,#0000 20%,#0000 80%,#0002),repeating-linear-gradient(90deg,#e4ddca 0,#fffdf6 1px,#fffdf6 3px)}
 .top{left:0;width:calc(var(--w) - 3px);top:calc(4px - (var(--d) - 4px)/2);height:calc(var(--d) - 4px);transform:rotateX(90deg);background:repeating-linear-gradient(0deg,#e4ddca 0,#fffdf6 1px,#fffdf6 3px)}
 .shadow{position:absolute;bottom:22px;left:50%;width:300px;height:34px;transform:translateX(-42%);border-radius:50%;background:radial-gradient(closest-side,#0f172a59,#0f172a00);filter:blur(3px)}
-@media(max-width:480px){.book{--w:200px;--d:42px}.shadow{width:240px}}
+@media(max-width:1023px){.scene{padding:12px 24px 36px}.book{--w:170px;--d:34px}.shadow{width:200px;bottom:12px;height:24px}}
