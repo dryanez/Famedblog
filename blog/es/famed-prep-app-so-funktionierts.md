@@ -9,7 +9,7 @@ updated: "2026-10-28"
 tags: ["FaMED", "App", "Anamnese", "Aufklärung", "Arzt-Arzt", "Arztbrief"]
 ---
 
-FaMED Prep funciona en el navegador. La práctica se realiza en alemán; esta guía explica el funcionamiento en español. Las pantallas ilustran datos ficticios de demostración y no resultados de clientes.
+FaMED Prep funciona en el navegador. La práctica se realiza en alemán; esta guía explica el funcionamiento en español. Las pantallas ilustran datos de demostración y no resultados de clientes.
 
 ## 1. Anamnese: entrevista al paciente
 
@@ -39,7 +39,7 @@ El feedback del modo evaluado distingue estructura, contenido, precisión lingü
 
 En el área de escritura, escucha el material del ejercicio y redacta a partir de esa fuente. Comprueba cronología, negaciones y frases completas antes de revisar el feedback. La etiqueta del área de la app no cambia la tarea escrita oficial de FaMED: la anamnesis basada en un vídeo.
 
-![Ejercicio real de escritura con datos ficticios](/images/previews/app-writing-20261020.png)
+![Ejercicio real de escritura con datos de demostración](/images/previews/app-writing-20261020.png)
 
 En el modo evaluado de escritura, revisa **Struktur, Vollständigkeit, Fachterminologie, Grammatik y Präzision**: estructura, integridad de la información, terminología médica, gramática y precisión. Elige una corrección concreta y aplícala al repetir.
 
@@ -53,7 +53,7 @@ El vídeo completo está narrado en inglés, con subtítulos en inglés y ejerci
 
 ## Alcance del material
 
-Ejemplos ficticios de práctica lingüística, creados por FaMED Prep. No predicen preguntas de examen ni sustituyen una valoración clínica.
+Ejemplos de práctica lingüística, creados por FaMED Prep. No predicen preguntas de examen ni sustituyen una valoración clínica.
 
 ## Convierte la demostración en una sesión de práctica
 

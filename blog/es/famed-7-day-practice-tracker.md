@@ -11,7 +11,7 @@ updated: "2026-10-23"
 
 Si acumulas apuntes pero rara vez repites una conversación difícil, prueba a registrar **qué cambió entre dos intentos**. Este plan de siete días propone una tarea y una comprobación visible por sesión. Es una sugerencia independiente de estudio, no un calendario oficial del examen ni una predicción de tu resultado.
 
-Necesitas un caso ficticio o el material de práctica del organizador, un cuaderno y, si te ayuda, una grabadora o un compañero. No incluyas datos que identifiquen a pacientes en tus apuntes o grabaciones. Si solo tienes 15 minutos, acorta la tarea en lugar de eliminar el segundo intento.
+Necesitas un caso de práctica o el material de práctica del organizador, un cuaderno y, si te ayuda, una grabadora o un compañero. No incluyas datos que identifiquen a pacientes en tus apuntes o grabaciones. Si solo tienes 15 minutos, acorta la tarea en lugar de eliminar el segundo intento.
 
 ## Prepara una fila para cada sesión
 
@@ -43,7 +43,7 @@ Practica una pregunta abierta, una de seguimiento y un resumen basado en la resp
 >
 > Ich fasse kurz zusammen: Die Beschwerden bestehen seit drei Tagen. Habe ich Sie richtig verstanden?
 
-La segunda frase solo corresponde si el caso ficticio indica realmente tres días. Al repetir, comprueba si conservaste la respuesta y diste espacio para que la otra persona te corrigiera. Continúa con la [introducción a Anamnese](/es/blog/anamnese-overview-part-1).
+La segunda frase solo corresponde si el caso indica realmente tres días. Al repetir, comprueba si conservaste la respuesta y diste espacio para que la otra persona te corrigiera. Continúa con la [introducción a Anamnese](/es/blog/anamnese-overview-part-1).
 
 ## Día 3: Aufklärung — explica sin añadir datos
 
@@ -55,7 +55,7 @@ Si practicas con alguien, pídele que describa lo que entendió. Contrasta cualq
 
 ## Día 4: Arzt–Arzt — mantén separados los dos casos
 
-Utiliza dos fichas de casos ficticios. Presenta una apertura breve para cada uno y responde a una pregunta de seguimiento con los datos facilitados. Mantén los nombres, tiempos y planes en su ficha correspondiente.
+Utiliza dos fichas de casos de práctica. Presenta una apertura breve para cada uno y responde a una pregunta de seguimiento con los datos facilitados. Mantén los nombres, tiempos y planes en su ficha correspondiente.
 
 > Dazu liegen mir in den vorliegenden Angaben keine Informationen vor.
 
@@ -63,7 +63,7 @@ Esta frase sirve cuando falta realmente un dato, no cuando está presente y lo p
 
 ## Día 5: escritura — conserva lo que dijo el paciente
 
-Para practicar el formato del examen, utiliza el vídeo del paciente del organizador y las instrucciones reales de escritura. Para un ejercicio lingüístico más corto basta esta frase ficticia original:
+Para practicar el formato del examen, utiliza el vídeo del paciente del organizador y las instrucciones reales de escritura. Para un ejercicio lingüístico más corto basta esta frase original:
 
 > „Seit drei Tagen habe ich Bauchschmerzen. Mir ist übel, aber ich habe nicht erbrochen.“
 

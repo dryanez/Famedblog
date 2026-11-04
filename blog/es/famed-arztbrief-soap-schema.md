@@ -21,7 +21,7 @@ Escribe **frases completas** con lenguaje médico adecuado. Atribuye las declara
 
 Utiliza una tabla breve de notas. Mantén visibles tiempos, cantidades y negaciones. Marca las palabras dudosas para volver al fragmento correspondiente del vídeo. Una casilla de medicación vacía no significa que el paciente no tome medicamentos.
 
-Para un ejercicio lingüístico ficticio, imagina que la fuente dice:
+Para un ejercicio lingüístico, imagina que la fuente dice:
 
 > „Seit drei Tagen habe ich Bauchschmerzen. Mir ist übel, aber ich habe nicht erbrochen.“
 
@@ -45,7 +45,7 @@ SOAP organiza algunas notas clínicas en datos subjetivos, objetivos, valoració
 
 ## Ejercicio de corrección: ¿qué frases cambian la fuente?
 
-Utiliza solo la frase ficticia breve anterior. Comprueba estos fragmentos antes de leer la explicación:
+Utiliza solo la frase breve anterior. Comprueba estos fragmentos antes de leer la explicación:
 
 | Fragmento del borrador | Comprobación con la frase facilitada |
 |---|---|

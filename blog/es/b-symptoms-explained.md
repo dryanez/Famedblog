@@ -25,7 +25,7 @@ Diferencia síntomas presentes, negados y no preguntados. En una presentación p
 
 ## Ejercicio de revisión
 
-Utiliza una ficha ficticia, formula tres preguntas y redacta un párrafo breve con las respuestas suministradas. Comprueba que no hayas añadido una interpretación diagnóstica. [Practica también la anamnesis general](/es/blog/anamnese-overview-part-1).
+Utiliza una ficha de práctica, formula tres preguntas y redacta un párrafo breve con las respuestas suministradas. Comprueba que no hayas añadido una interpretación diagnóstica. [Practica también la anamnesis general](/es/blog/anamnese-overview-part-1).
 
 ## Fuentes y revisión
 

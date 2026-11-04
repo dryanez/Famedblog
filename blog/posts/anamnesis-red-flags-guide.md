@@ -41,7 +41,7 @@ Use the actual supplied clinical findings or plan if the assignment includes the
 
 ## Review the recording
 
-After a fictional practice interview, check three things: did you understand the person's own words, did you clarify the important uncertainty, and did your summary add or change any facts?
+After a practice interview, check three things: did you understand the person's own words, did you clarify the important uncertainty, and did your summary add or change any facts?
 
 ## Sources and review
 

@@ -5,11 +5,11 @@ updated: "2026-10-31"
 readTime: "5 min"
 category: "Writing Practice"
 status: "published"
-excerpt: "Turn five fictional patient statements into reported speech. Practise sei, habe, nehme, könne and a completed event while preserving the source."
+excerpt: "Turn five practice patient statements into reported speech. Practise sei, habe, nehme, könne and a completed event while preserving the source."
 tags: ["FaMED", "Konjunktiv I", "Arztbrief"]
 ---
 
-A verb can look polished while the sentence changes what the patient said. In this exercise, write a reported statement first, then compare both its verb form and its facts with the source. These are five **independent fictional female patients**, not a combined case or an official model answer.
+A verb can look polished while the sentence changes what the patient said. In this exercise, write a reported statement first, then compare both its verb form and its facts with the source. These are five **independent practice patients**, not a combined case or an official model answer.
 
 The organiser asks for complete sentences and Konjunktiv I for patient statements where appropriate. This short drill deliberately uses clear third-person singular forms; it is not a rule to put every verb in a report into the subjunctive. Your reporting phrase can vary. The suggested answers use “Die Patientin berichte” consistently so you can focus on the following clause.
 
@@ -19,7 +19,7 @@ Cover the suggested answer. Copy the source, underline the time expression and a
 
 ## 1. A present state: sei
 
-Fictional source:
+Source:
 
 > „Ich bin seit gestern müde.“
 
@@ -31,7 +31,7 @@ Change “ich bin” to “sie sei”. Keep the onset expression. Tiredness repo
 
 ## 2. Possession of a symptom: habe
 
-Fictional source:
+Source:
 
 > „Ich habe seit Montag Kopfschmerzen.“
 
@@ -43,7 +43,7 @@ Keep Monday and the headache. Do not replace the weekday with a guessed number o
 
 ## 3. Medication and uncertainty: nehme, wisse
 
-Fictional source:
+Source:
 
 > „Ich nehme morgens eine Tablette. Den Namen weiß ich nicht.“
 
@@ -55,7 +55,7 @@ Both clauses matter: a morning tablet and an unknown name. “Nehme … ein” e
 
 ## 4. Ability: könne
 
-Fictional source:
+Source:
 
 > „Ich kann nachts schlecht schlafen.“
 
@@ -67,7 +67,7 @@ One possible formulation — compare after writing:
 
 ## 5. A completed event: sei … gestürzt
 
-Fictional source:
+Source:
 
 > „Ich bin gestern gestürzt.“
 

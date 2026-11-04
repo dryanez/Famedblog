@@ -12,13 +12,13 @@ const copy={
 export default function ArticleLearningResources({german=false,arabic=false,locale}:{german?:boolean;arabic?:boolean;locale?:Locale}) {
  const lang:Locale=locale||(arabic?'ar':'en'),[label,eyebrow,book,bookCta,app,appCta]=copy[lang],prefix=localePrefix(blogLocale(lang)),en=lang==='en';
  return <section id="optional-resources" aria-label={label} className="my-12 grid gap-5 md:grid-cols-2">
-  <div className="flex flex-col gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-6 sm:flex-row md:flex-col lg:flex-row">
-   <a href={bookCheckout} className="shrink-0 self-start"><Image unoptimized loading="lazy" src="/images/products/book-cover.png" alt="FaMED Protokoll 2026" width={778} height={1100} className="w-20 rounded shadow-sm sm:w-24" /></a>
-   <div><p className="text-xs font-bold uppercase tracking-wide text-slate-600">{eyebrow}</p><h2 className="mt-2 text-xl font-bold text-slate-900">FaMED Protokoll 2026</h2>
-    <p className="mt-3 text-sm leading-relaxed text-slate-700">{en&&german?'Digitales Buch mit Fällen, Redemitteln und Gesprächsstruktur.':book}</p>
-    <a className="mt-5 inline-block rounded-lg bg-blue-700 px-4 py-3 font-bold text-white" href={bookCheckout}>{en&&german?'Digitales Buch erhalten':bookCta}</a>
+  <div className="flex flex-col gap-6 rounded-2xl bg-white p-6 ring-1 ring-slate-200 sm:flex-row md:flex-col">
+   <a href={bookCheckout} className="shrink-0 self-start"><Image unoptimized loading="lazy" src="/images/products/book-cover.png" alt="FaMED Protokoll 2026" width={778} height={1100} className="w-24 -rotate-3 rounded-sm shadow-xl shadow-slate-900/25 transition hover:rotate-0 sm:w-28" /></a>
+   <div className="flex flex-col"><p className="text-xs font-bold uppercase tracking-wider text-blue-700">{eyebrow}</p><h2 className="mt-2 text-xl font-extrabold text-slate-900">FaMED Protokoll 2026</h2>
+    <p className="mt-3 flex-1 leading-relaxed text-slate-600">{en&&german?'Digitales Buch mit Fällen, Redemitteln und Gesprächsstruktur.':book}</p>
+    <a className="mt-5 inline-flex min-h-12 items-center self-start rounded-xl bg-blue-700 px-5 font-bold text-white transition hover:bg-blue-800" href={bookCheckout}>{en&&german?'Digitales Buch erhalten':bookCta}</a>
    </div>
   </div>
-  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6"><Image unoptimized loading="lazy" src="/images/products/logo.png" alt="FaMED Prep App" width={200} height={82} className="mb-5 h-12 w-auto object-contain"/><h2 className="text-xl font-bold text-slate-900">FaMED Prep App</h2><p className="mt-3 leading-relaxed text-slate-700">{app}</p><a className="mt-5 inline-block font-semibold text-blue-700 underline" href={`${prefix}/blog/famed-prep-app-so-funktionierts`}>{appCta}</a></div>
+  <div className="flex flex-col rounded-2xl bg-white p-6 ring-1 ring-slate-200"><Image unoptimized loading="lazy" src="/images/products/logo.png" alt="FaMED Prep App" width={200} height={82} className="mb-5 h-12 w-auto self-start object-contain"/><h2 className="text-xl font-extrabold text-slate-900">FaMED Prep App</h2><p className="mt-3 flex-1 leading-relaxed text-slate-600">{app}</p><a className="mt-5 inline-flex min-h-12 items-center self-start rounded-xl px-5 font-bold text-blue-700 ring-1 ring-blue-200 transition hover:bg-blue-50" href={`${prefix}/blog/famed-prep-app-so-funktionierts`}>{appCta}</a></div>
  </section>;
 }

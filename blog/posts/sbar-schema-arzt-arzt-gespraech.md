@@ -26,7 +26,7 @@ SBAR can give a practice presentation a clear route. It is not the official mand
 
 A supplied case can call for a different emphasis. Do not force information into an empty category.
 
-## A short fictional source-to-speech exercise
+## A short source-to-speech exercise
 
 Practice notes: Frau Beispiel, 54; cough for five days; no temperature value supplied; medication list available in the task; examination report not supplied.
 
@@ -52,7 +52,7 @@ The [written station](/blog/famed-arztbrief-soap-schema) has a different task: a
 
 ## A two-case drill: find the mixed information
 
-Use these original fictional notes only for this language exercise:
+Use these original practice notes only for this language exercise:
 
 | Case | Identity | Reported complaint | Duration |
 |---|---|---|---|

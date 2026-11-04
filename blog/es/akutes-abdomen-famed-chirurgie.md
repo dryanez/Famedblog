@@ -4,7 +4,7 @@ date: "2026-10-21"
 readTime: "3 min"
 category: "Preparación"
 status: "published"
-excerpt: "Ordena la anamnesis de una ficha ficticia sin inventar hallazgos ni un plan terapéutico."
+excerpt: "Ordena la anamnesis de una ficha de práctica sin inventar hallazgos ni un plan terapéutico."
 updated: "2026-10-21"
 tags: ["FaMED", "Chirurgie", "Akutes Abdomen", "OSCE"]
 ---
@@ -13,7 +13,7 @@ El dolor abdominal permite practicar localización, evolución y síntomas asoci
 
 ## Empieza con una descripción abierta
 
-Deja que el paciente ficticio explique el motivo de consulta. Aclara dónde comenzó el dolor, si cambió de lugar y cómo describe su intensidad. OPQRST puede servir de recordatorio sin sustituir la conversación.
+Deja que el paciente explique el motivo de consulta. Aclara dónde comenzó el dolor, si cambió de lugar y cómo describe su intensidad. OPQRST puede servir de recordatorio sin sustituir la conversación.
 
 ## Selecciona preguntas pertinentes
 

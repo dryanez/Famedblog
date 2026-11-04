@@ -21,7 +21,7 @@ Write **complete sentences** using appropriate medical language. Convey patient 
 
 Use a short note grid. Keep times, quantities and negations visible. Mark uncertain words so you can revisit the relevant video segment. A blank medication field does not mean the patient takes no medication.
 
-For a fictional language exercise, suppose the source says:
+For a language exercise, suppose the source says:
 
 > „Seit drei Tagen habe ich Bauchschmerzen. Mir ist übel, aber ich habe nicht erbrochen.“
 
@@ -45,7 +45,7 @@ SOAP organises some clinical notes into subjective, objective, assessment and pl
 
 ## A correction drill: which phrases change the source?
 
-Use only the short fictional statement above. Check these draft fragments before looking at the explanation:
+Use only the short statement above. Check these draft fragments before looking at the explanation:
 
 | Draft fragment | Check against the supplied statement |
 |---|---|

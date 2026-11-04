@@ -26,7 +26,7 @@ SBAR puede dar una estructura clara a tu práctica. No es una plantilla oficial 
 
 Cada caso puede requerir un énfasis diferente. No inventes información para rellenar un apartado vacío.
 
-## Un ejercicio ficticio de la fuente al discurso
+## Un ejercicio de la fuente al discurso
 
 Datos de práctica: Frau Beispiel, 54 años; tos desde hace cinco días; no se facilita temperatura; hay una lista de medicación en la tarea; no se aporta informe de exploración.
 
@@ -52,7 +52,7 @@ La [tarea escrita](/es/blog/famed-arztbrief-soap-schema) es diferente: redactar 
 
 ## Ejercicio con dos casos: encuentra la información mezclada
 
-Utiliza estas notas ficticias originales solo para el ejercicio lingüístico:
+Utiliza estas notas originales de práctica solo para el ejercicio lingüístico:
 
 | Caso | Identidad | Síntoma referido | Duración |
 |---|---|---|---|

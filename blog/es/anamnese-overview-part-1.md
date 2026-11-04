@@ -25,7 +25,7 @@ Resume con palabras comprensibles y da espacio para corregir malentendidos. Dife
 
 ## Revisa tu práctica
 
-Trabaja con un caso ficticio, graba un fragmento si puedes y escucha si tus preguntas responden a lo que dijo el paciente. Elige una corrección concreta y repite. En FaMED, la estación médico–paciente también incluye Aufklärung y no requiere que los dos casos se relacionen.
+Trabaja con un caso de práctica, graba un fragmento si puedes y escucha si tus preguntas responden a lo que dijo el paciente. Elige una corrección concreta y repite. En FaMED, la estación médico–paciente también incluye Aufklärung y no requiere que los dos casos se relacionen.
 
 [Practica preguntas sobre dolor](/es/blog/pain-anamnesis-guide) y [solicita el calendario gratuito](/es/lead-magnet).
 

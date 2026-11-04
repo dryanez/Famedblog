@@ -15,7 +15,7 @@ updated: "2026-10-21"
 
 ## توضيح البداية والمسار
 
-لتمرين خيالي حول تاريخ الألم:
+لتمرين حول تاريخ الألم:
 
 - „Wann haben die Beschwerden begonnen؟“
 - „Haben sie plötzlich eingesetzt oder allmählich zugenommen؟“

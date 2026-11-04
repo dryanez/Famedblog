@@ -9,7 +9,7 @@ updated: "2026-10-21"
 tags: ["FaMED", "Anamnese", "Red Flags", "Emergency Medicine"]
 ---
 
-Esta guía es un ejercicio de comunicación con casos ficticios; no es un protocolo de triaje ni una lista de diagnósticos para autoevaluarse.
+Esta guía es un ejercicio de comunicación con casos de práctica; no es un protocolo de triaje ni una lista de diagnósticos para autoevaluarse.
 
 ## Aclara antes de etiquetar
 

@@ -10,7 +10,7 @@ excerpt: "Practica preguntas sin inducir la respuesta, un medicamento desconocid
 tags: ["FaMED", "Anamnese", "Medical German"]
 ---
 
-Una buena pregunta de seguimiento parte de la respuesta que realmente escuchaste. En este ejercicio en pareja, debes aclarar un dato sin poner la respuesta en boca del paciente. Las tres tarjetas son **situaciones ficticias independientes**, no partes de un mismo caso clínico.
+Una buena pregunta de seguimiento parte de la respuesta que realmente escuchaste. En este ejercicio en pareja, debes aclarar un dato sin poner la respuesta en boca del paciente. Las tres tarjetas son **situaciones de práctica independientes**, no partes de un mismo caso clínico.
 
 El organizador describe Anamnese como la recogida de información dando espacio al paciente para hablar, con una comunicación clara y respetuosa. Estos diálogos originales practican esa habilidad concreta. No son una prueba oficial, una guía de decisiones clínicas ni una rúbrica de evaluación del examen.
 

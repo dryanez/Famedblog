@@ -17,7 +17,7 @@ Aclara el comienzo, los factores que modifican el dolor, sus características, l
 
 ## Utiliza lenguaje comprensible
 
-Pregunta primero de forma abierta y precisa después lo necesario. Cuando ofrezcas palabras como «brennend» o «stechend», no obligues al paciente ficticio a escoger una si su descripción es diferente. Si utilizas una escala, explica sus extremos.
+Pregunta primero de forma abierta y precisa después lo necesario. Cuando ofrezcas palabras como «brennend» o «stechend», no obligues al paciente a escoger una si su descripción es diferente. Si utilizas una escala, explica sus extremos.
 
 ## Mantén la fuente
 

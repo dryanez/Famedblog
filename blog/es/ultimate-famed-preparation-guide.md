@@ -17,7 +17,7 @@ Medicina humana tiene tres estaciones y cinco tareas: Anamnese y Aufklärung, do
 
 ## Alterna habilidades
 
-Practica preguntas y explicaciones comprensibles, presentaciones técnicas y escritura desde la primera semana. Utiliza fuentes separadas y casos ficticios. Una lista de diagnósticos no predice las preguntas del examen.
+Practica preguntas y explicaciones comprensibles, presentaciones técnicas y escritura desde la primera semana. Utiliza fuentes separadas y casos de práctica. Una lista de diagnósticos no predice las preguntas del examen.
 
 ## Revisa antes de repetir
 

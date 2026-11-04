@@ -9,7 +9,7 @@ updated: "2026-10-21"
 tags: ["Anamnese", "Infectiology", "Fatigue", "Clinical German"]
 ---
 
-Utiliza estas preguntas como material de idioma para un caso ficticio. No son una lista que deba recitarse completa ni permiten establecer por sí solas una enfermedad.
+Utiliza estas preguntas como material de idioma para un caso de práctica. No son una lista que deba recitarse completa ni permiten establecer por sí solas una enfermedad.
 
 ## Abre y orienta la entrevista
 

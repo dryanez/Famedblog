@@ -10,7 +10,7 @@ excerpt: "Practise choosing a non-leading follow-up, handling an unknown medicin
 tags: ["FaMED", "Anamnese", "Medical German"]
 ---
 
-A useful follow-up starts with the answer you actually heard. In this partner exercise, your task is to clarify one missing detail without supplying the patient's answer yourself. The three cards are **separate fictional situations**, not parts of one clinical case.
+A useful follow-up starts with the answer you actually heard. In this partner exercise, your task is to clarify one missing detail without supplying the patient's answer yourself. The three cards are **separate practice situations**, not parts of one clinical case.
 
 The organiser describes Anamnese as gathering information while giving the patient room to speak, using clear, respectful communication. These original mini-dialogues practise that narrow skill. They are not an official test, clinical decision guide or exam scoring rubric.
 

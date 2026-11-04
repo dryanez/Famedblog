@@ -21,7 +21,7 @@ The written output is the **anamnesis section from its video**, not a full SOAP 
 
 ## Weeks 1–2: Understand and clarify
 
-Practise opening a history, asking one clear follow-up and summarising what the person actually said. Use varied fictional symptoms and relevant background questions. Keep short writing sessions in the plan from the beginning.
+Practise opening a history, asking one clear follow-up and summarising what the person actually said. Use varied practice symptoms and relevant background questions. Keep short writing sessions in the plan from the beginning.
 
 A limited-time day can use our [30-minute routine](/blog/famed-vorbereitung-30-minuten-lernroutine). Mark any unresolved language point for the next session.
 
@@ -29,7 +29,7 @@ A limited-time day can use our [30-minute routine](/blog/famed-vorbereitung-30-m
 
 Use supplied procedure notes for informed-consent practice. Explain the information without invented risk frequencies, guaranteed outcomes or unsupported aftercare rules.
 
-For patient presentations, keep two fictional cases separate. Report the supplied history, findings and plan accurately, then practise short answers to follow-up questions. This is a language task, not a medical-knowledge interrogation.
+For patient presentations, keep two practice cases separate. Report the supplied history, findings and plan accurately, then practise short answers to follow-up questions. This is a language task, not a medical-knowledge interrogation.
 
 [Read the consent guide](/blog/famed-aufklaerungsgespraech-guide) and the [presentation framework](/blog/sbar-schema-arzt-arzt-gespraech) for concrete exercises.
 
@@ -43,7 +43,7 @@ In each week, practise spelling and keyboard familiarity, listening to names and
 
 Follow your workplace's access, supervision and confidentiality rules. Use only authorised teaching examples and materials. Do not access patient records simply for private exam preparation, and do not upload or record identifiable patient information in a study app.
 
-Notice useful ways colleagues structure explanations, then create a fictional example in your own words. Patient care is not a private mock-exam session.
+Notice useful ways colleagues structure explanations, then create an example in your own words. Patient care is not a private mock-exam session.
 
 ## Sources and review
 
