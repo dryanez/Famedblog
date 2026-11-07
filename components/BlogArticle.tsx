@@ -1,4 +1,5 @@
 import {articleDestination} from '@/lib/article-destination';
+import AppPracticeCTA from '@/components/AppPracticeCTA';
 import AppWalkthrough from './AppWalkthrough';
 import { languageAlternates, type Locale } from '@/lib/languages';
 import { redirect,notFound } from 'next/navigation';
@@ -207,6 +208,9 @@ export default async function BlogArticle({ slug, locale = 'en' }: { slug: strin
               {post.content}
             </ReactMarkdown>
           </div>
+
+          {/* Straight into the matching free app exercise */}
+          <AppPracticeCTA slug={slug} locale={locale} />
 
           {/* Free guide signup */}
           <section aria-labelledby="article-guide" className="my-14 rounded-3xl bg-blue-800 p-6 text-white sm:p-10">
