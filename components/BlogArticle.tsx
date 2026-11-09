@@ -2,7 +2,6 @@ import {articleDestination} from '@/lib/article-destination';
 import AppPracticeCTA from '@/components/AppPracticeCTA';
 import AppWalkthrough from './AppWalkthrough';
 import { languageAlternates, type Locale } from '@/lib/languages';
-import { seoTitle } from '@/lib/seo-title';
 import { redirect,notFound } from 'next/navigation';
 import Link from 'next/link';
 import BlogCard from '@/components/BlogCard';
@@ -39,7 +38,7 @@ export async function articleMetadata(slug: string, locale: Locale = 'en') {
   })();
 
   return {
-    title: seoTitle(post.title),
+    title: post.title,
     description: metaDesc,
     keywords: post.tags || ['FaMED', 'Fachsprachenprüfung', 'medical German', 'FSP', 'Approbation'],
     alternates: languageAlternates(`${prefix}/blog/${post.slug}`),

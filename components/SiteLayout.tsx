@@ -17,7 +17,7 @@ export const siteMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "FAMED Test Prep - Pass Your Medical German Exam",
-    template: "%s | FaMED Prep"
+    template: "%s | FAMED Test Prep"
   },
   description: "Independent preparation for medical German communication. Study guides, practice cases and useful phrases.",
   keywords: ["FAMED", "Fachsprachenprüfung", "medical German", "FSP", "Approbation", "Germany", "medical exam"],
