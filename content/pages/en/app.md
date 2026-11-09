@@ -1,6 +1,6 @@
 ---
 title: "FaMED Prep \u2014 practise medical German online"
-excerpt: "Explore the web app before choosing an access plan."
+excerpt: "FaMED Prep web app: practise medical history taking, informed consent, patient presentations and writing in medical German, in your browser."
 category: "Preparation"
 updated: "2026-10-19"
 ---

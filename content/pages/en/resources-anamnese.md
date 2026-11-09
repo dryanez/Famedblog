@@ -1,6 +1,6 @@
 ---
 title: "Medical history practice resources"
-excerpt: "Organise questions, listen carefully and report clearly."
+excerpt: "Medical history (Anamnese) practice for FaMED: guides on open questions, pain history and German medical terms in everyday language."
 category: "Preparation"
 updated: "2026-10-19"
 ---

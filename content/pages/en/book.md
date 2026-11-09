@@ -1,6 +1,6 @@
 ---
 title: "FaMED Protokoll 2026 \u2014 the digital case book"
-excerpt: "Cases, useful phrases and conversation structure for medical German practice."
+excerpt: "FaMED Protokoll 2026 digital case book: cases, useful phrases and conversation structure to practise medical German for the FaMED exam."
 category: "Preparation"
 updated: "2026-10-19"
 ---

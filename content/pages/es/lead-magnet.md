@@ -1,6 +1,6 @@
 ---
 title: "Plan gratuito de ocho semanas para preparar FaMED"
-excerpt: "Deja tus datos para recibir por correo la guía gratuita de ocho semanas."
+excerpt: "Recibe por correo el plan gratuito de ocho semanas para preparar FaMED: horario adaptable, práctica oral y escrita, repasos y recursos."
 updated: "2026-10-21"
 ---
 

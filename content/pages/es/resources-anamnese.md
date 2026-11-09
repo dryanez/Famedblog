@@ -1,6 +1,6 @@
 ---
 title: "Recursos de práctica para la anamnesis"
-excerpt: "Organiza tus preguntas, escucha y comunica con claridad."
+excerpt: "Práctica de anamnesis para FaMED: guías para hacer preguntas abiertas, explorar el dolor y usar términos médicos alemanes en lenguaje cotidiano."
 updated: "2026-10-21"
 ---
 

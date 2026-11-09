@@ -1,6 +1,6 @@
 ---
 title: "Planning a medical career in Germany"
-excerpt: "Explore the next steps alongside your language preparation."
+excerpt: "Planning a medical career in Germany: recognition, permission to practise and next steps alongside your FaMED language preparation."
 category: "Preparation"
 updated: "2026-10-19"
 ---

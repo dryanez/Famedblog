@@ -1,6 +1,6 @@
 ---
 title: "Your free eight-week FaMED study plan"
-excerpt: "Enter your details to receive the free eight-week study guide by email."
+excerpt: "Get the free eight-week FaMED study plan by email: an adaptable schedule, speaking and writing practice, review points and resources."
 category: "Preparation"
 updated: "2026-10-21"
 ---

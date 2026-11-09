@@ -1,6 +1,6 @@
 ---
 title: "What is FaMED? Tasks, timing and preparation"
-excerpt: "Understand the professional-language exam and plan relevant practice."
+excerpt: "What is the FaMED exam? Three stations, five tasks, timing and the 60% pass mark per station, with links to the official sources."
 category: "Preparation"
 updated: "2026-10-19"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Preview the current FaMED Protokoll digital book"
-excerpt: "See the current cover and genuine sample pages."
+excerpt: "Preview the FaMED Protokoll 2026 digital book: the current cover and real sample pages with cases, useful phrases and conversation structure."
 category: "Preparation"
 updated: "2026-10-19"
 ---
