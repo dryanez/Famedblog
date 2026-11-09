@@ -1,7 +1,7 @@
 import type {Locale} from './languages';
 // Free 8-week guide offer copy, shared by the homepage hero and the article signup band.
 export const guideOffer:Record<Locale,{eyebrow:string;cta:string;free:string;badge:[string,string]}>={
- en:{eyebrow:'FaMED preparation · Medical German',cta:'Get our free 8-week study guide today',free:'Free PDF · 30 pages',badge:['8','weeks free']},
+ en:{eyebrow:'FaMED preparation · Medical German',cta:'Get our free 8-week study guide today',free:'Free PDF · 30 pages',badge:['8','weeks free']},de:{eyebrow:'FaMED-Vorbereitung · Medizinisches Deutsch',cta:'Holen Sie sich heute unseren kostenlosen 8-Wochen-Lernplan',free:'Kostenloses PDF · 30 Seiten',badge:['8','Wochen gratis']},
  ar:{eyebrow:'التحضير لاختبار FaMED · الألمانية الطبية',cta:'احصل اليوم على دليل الدراسة المجاني لمدة ٨ أسابيع',free:'ملف PDF مجاني · ٣٠ صفحة',badge:['٨','أسابيع مجاناً']},
  es:{eyebrow:'Preparación FaMED · Alemán médico',cta:'Consigue hoy nuestra guía gratuita de 8 semanas',free:'PDF gratuito · 30 páginas',badge:['8','semanas gratis']},
  ru:{eyebrow:'Подготовка к FaMED · Медицинский немецкий',cta:'Получите бесплатный 8-недельный план уже сегодня',free:'Бесплатный PDF · 30 страниц (англ.)',badge:['8','недель бесплатно']},

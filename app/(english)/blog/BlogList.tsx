@@ -34,17 +34,17 @@ export default function BlogList({ initialPosts, arabic=false,locale }: BlogList
                 <div className="mx-auto max-w-6xl">
                     <p className="text-sm font-bold uppercase tracking-wider text-blue-700">{offer.eyebrow}</p>
                     <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 md:text-6xl">
-                        {arabic?'مدونة امتحان FaMED':locale==='es'?'Blog de preparación para FaMED':'FaMED Exam Blog'}
+                        {arabic?'مدونة امتحان FaMED':locale==='es'?'Blog de preparación para FaMED':locale==='de'?'FaMED-Prüfung: Blog':'FaMED Exam Blog'}
                     </h1>
                     <p className="mt-5 max-w-2xl text-xl leading-relaxed text-slate-600">
-                        {arabic?'مقالات وأدلة وتدريبات للتحضير للتواصل الطبي باللغة الألمانية.':locale==='es'?'Artículos, guías y ejercicios para practicar comunicación médica en alemán.':'Articles, study guides and exercises for medical German communication.'}
+                        {arabic?'مقالات وأدلة وتدريبات للتحضير للتواصل الطبي باللغة الألمانية.':locale==='es'?'Artículos, guías y ejercicios para practicar comunicación médica en alemán.':locale==='de'?'Artikel, Leitfäden und Übungen für die medizinische Kommunikation auf Deutsch.':'Articles, study guides and exercises for medical German communication.'}
                     </p>
                 </div>
             </header>
 
             <div className="mx-auto max-w-6xl px-5 py-12 md:py-16">
                 {/* Categories */}
-                <h2 className="sr-only">{arabic?'تصفّح حسب الموضوع':locale==='es'?'Explorar por tema':'Browse by category'}</h2>
+                <h2 className="sr-only">{arabic?'تصفّح حسب الموضوع':locale==='es'?'Explorar por tema':locale==='de'?'Nach Thema':'Browse by category'}</h2>
                 <div className="flex flex-wrap gap-2">
                     {categories.map((category) => (
                         <button
@@ -56,7 +56,7 @@ export default function BlogList({ initialPosts, arabic=false,locale }: BlogList
                                     : 'bg-white text-slate-700 ring-1 ring-slate-200 hover:text-blue-700 hover:ring-blue-300'
                                 }`}
                         >
-                            {category==='All Posts'?(arabic?'جميع المقالات':locale==='es'?'Todos los artículos':'All Posts'):category}
+                            {category==='All Posts'?(arabic?'جميع المقالات':locale==='es'?'Todos los artículos':locale==='de'?'Alle Artikel':'All Posts'):category}
                         </button>
                     ))}
                 </div>
@@ -71,7 +71,7 @@ export default function BlogList({ initialPosts, arabic=false,locale }: BlogList
                 {/* No results message */}
                 {filteredPosts.length === 0 && (
                     <div className="py-12 text-center">
-                        <p className="text-lg text-slate-500">{arabic?'لا توجد مقالات.':locale==='es'?'No se encontraron artículos.':'No posts found.'}</p>
+                        <p className="text-lg text-slate-500">{arabic?'لا توجد مقالات.':locale==='es'?'No se encontraron artículos.':locale==='de'?'Keine Artikel gefunden.':'No posts found.'}</p>
                     </div>
                 )}
             </div>

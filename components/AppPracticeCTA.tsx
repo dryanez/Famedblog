@@ -2,11 +2,11 @@ import {appPracticePath,appPracticeUrl} from '@/lib/article-destination';
 import type {Locale} from '@/lib/languages';
 
 // Exercise names stay German (they are the exam's own terms); only the generic "case" is translated.
-const caseWord:Record<Locale,string>={en:'case',es:'caso clínico',ar:'الحالة',ru:'клинический случай',fr:'cas clinique',tr:'vaka'};
+const caseWord:Record<Locale,string>={en:'case',de:'Fall',es:'caso clínico',ar:'الحالة',ru:'клинический случай',fr:'cas clinique',tr:'vaka'};
 const topicOf=(path:string,locale:Locale)=>({'/anamnese':'Anamnese','/aufklaerung':'Aufklärung','/brief':'Arztbrief','/medicalcases':caseWord[locale]} as Record<string,string>)[path]||'FaMED';
 
 const copy:Record<Locale,{title:(t:string)=>string;text:string;cta:string}>={
- en:{title:t=>`Practise this ${t} now, free`,text:'Open the FaMED Prep app and try a real exam-style task in your browser. No account, no card needed.',cta:'Start practising →'},
+ en:{title:t=>`Practise this ${t} now, free`,text:'Open the FaMED Prep app and try a real exam-style task in your browser. No account, no card needed.',cta:'Start practising →'},de:{title:t=>`Üben Sie diesen ${t} jetzt kostenlos`,text:'Öffnen Sie die FaMED Prep App und probieren Sie eine echte Aufgabe im Prüfungsformat direkt im Browser. Ohne Konto, ohne Karte.',cta:'Jetzt üben →'},
  es:{title:t=>`Practica este ${t} ahora, gratis`,text:'Abre la app FaMED Prep y prueba una tarea real tipo examen en tu navegador. Sin cuenta y sin tarjeta.',cta:'Empezar a practicar →'},
  ar:{title:t=>`تدرّب على ${t} الآن مجانًا`,text:'افتح تطبيق FaMED Prep وجرّب مهمة حقيقية مثل الامتحان في متصفحك. بدون حساب وبدون بطاقة.',cta:'ابدأ التدريب ←'},
  ru:{title:t=>`Потренируйте ${t} прямо сейчас бесплатно`,text:'Откройте приложение FaMED Prep и попробуйте реальное задание в формате экзамена в браузере. Без регистрации и без карты.',cta:'Начать тренировку →'},

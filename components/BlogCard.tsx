@@ -12,8 +12,8 @@ interface BlogCardProps {
     category: string;
 }
 
-const moreLabel:Record<Locale,string>={en:'Read more',ar:'اقرأ المزيد',es:'Leer más',ru:'Читать (англ.)',fr:'Lire (en anglais)',tr:'Oku (İngilizce)'};
-const readLabel=(t:string,l?:Locale)=>l==='es'?t+' de lectura':l==='ru'?t.replace('min','мин'):l==='tr'?t.replace('min','dk'):l==='fr'?t+' de lecture':t+' read';
+const moreLabel:Record<Locale,string>={en:'Read more',de:'Weiterlesen',ar:'اقرأ المزيد',es:'Leer más',ru:'Читать (англ.)',fr:'Lire (en anglais)',tr:'Oku (İngilizce)'};
+const readLabel=(t:string,l?:Locale)=>l==='es'?t+' de lectura':l==='de'?t+' Lesezeit':l==='ru'?t.replace('min','мин'):l==='tr'?t.replace('min','dk'):l==='fr'?t+' de lecture':t+' read';
 export default function BlogCard({ title, excerpt, slug, date, readTime, category, arabic=false,locale }: BlogCardProps) {
     return (
         <Link href={`${localePrefix(blogLocale(locale||(arabic?'ar':'en')))}/blog/${slug}`} className="group block h-full">

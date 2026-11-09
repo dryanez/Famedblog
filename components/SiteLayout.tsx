@@ -58,7 +58,7 @@ export const siteMetadata: Metadata = {
 };
 
 const cookieCopy:Record<Locale,[string,string,string,string]>={
-  en:['We use cookies to understand how the site is used and improve it. You can accept or reject optional cookies.','Accept','Reject','Privacy policy'],
+  en:['We use cookies to understand how the site is used and improve it. You can accept or reject optional cookies.','Accept','Reject','Privacy policy'],de:['Wir verwenden Cookies, um zu verstehen, wie die Seite genutzt wird, und sie zu verbessern. Sie können optionale Cookies akzeptieren oder ablehnen.','Akzeptieren','Ablehnen','Datenschutz'],
   ar:['نستخدم ملفات تعريف الارتباط لفهم كيفية استخدام الموقع وتحسينه. يمكنك قبول ملفات تعريف الارتباط الاختيارية أو رفضها.','قبول','رفض','سياسة الخصوصية'],
   es:['Usamos cookies para entender el uso del sitio y mejorarlo. Puedes aceptar o rechazar las cookies opcionales.','Aceptar','Rechazar','Política de privacidad'],
   ru:['Мы используем файлы cookie, чтобы понимать, как используется сайт, и улучшать его. Вы можете принять или отклонить необязательные cookie.','Принять','Отклонить','Политика конфиденциальности'],
