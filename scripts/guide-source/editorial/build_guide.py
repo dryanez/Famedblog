@@ -16,6 +16,8 @@ BODY_FONT = {'ru': '-apple-system,"SF Pro Text",system-ui,sans-serif', 'tr': '-a
              'ar': '"SF Arabic","Geeza Pro",sans-serif'}
 HEAD_FONT = {'ar': '"SF Arabic","Geeza Pro",sans-serif', 'tr': '"New York",Georgia,serif', 'ru': '"New York",Georgia,serif'}
 TOTAL = 30
+STUDY = {'en': 'Study<br>guide', 'es': 'Guía de<br>estudio', 'ar': 'دليل<br>الدراسة', 'de': 'Lern&shy;leitfaden', 'ru': 'Учебное<br>руководство', 'fr': 'Guide<br>d’étude', 'tr': 'Çalışma<br>rehberi'}
+SG_FONT = {'ru': '-apple-system,"SF Pro Display",sans-serif', 'tr': '-apple-system,"SF Pro Display",sans-serif', 'ar': '"SF Arabic","Geeza Pro",sans-serif'}
 
 def load(loc):
     spec = importlib.util.spec_from_file_location(f'c_{loc}', W / 'i18n' / f'content_{loc}.py')
@@ -23,6 +25,13 @@ def load(loc):
 
 def build(loc):
     M = load(loc); C, WEEKS, U = M.C, M.WEEKS, M.UI
+    spec = importlib.util.spec_from_file_location('tables', W / 'i18n' / 'tables.py'); TB = importlib.util.module_from_spec(spec); spec.loader.exec_module(TB)
+    F, X = TB.FACTS[loc], TB.EXAM[loc]
+    facts = (f'<div class="kt"><b class="kh">{F["t"]}</b>' + ''.join(f'<div class="kr"><span>{k}</span><strong>{v}</strong></div>' for k, v in F['rows'])
+             + f'<small>{F["note"]}</small></div>')
+    exam_tbl = (f'<table class="st"><tr>' + ''.join(f'<th>{h}</th>' for h in X['h']) + '</tr>'
+                + ''.join(f'<tr><td><b>{a}</b></td><td>{b}</td><td class="tm">{c}</td></tr>' for a, b, c in X['rows'])
+                + f'<tr><td colspan="3" class="sf">{X["foot"]}</td></tr></table>')
     rtl = loc == 'ar'
     if loc != 'en':  # drop "the original English PDF is kept unchanged": the English guide is now this same edition
         t, x = C['intro']; C['intro'] = (t, x[:x.rstrip('.').rfind('.') + 1])
@@ -80,9 +89,10 @@ def build(loc):
     ft = lambda n: f'<div class="ft"><span dir="ltr">{n} / {TOTAL}</span>{a(BOOK, U["foot_book"] + (" ←" if rtl else " →"))}</div>'
     arr = '←' if rtl else '→'
     def pull(t, d, href=BOOK, cta=U['book_cta'], img=True, cls=''):
-        return a(href, (f'<img src="assets/book3d_s.png">' if img else '') + f'<b>{t}</b><p>{d}</p><span>{cta} {arr}</span>', 'pull ' + cls)
+        im = f'<img src="assets/book3d_s.png">' if img is True else (f'<img class="appi" src="{img}">' if img else '')
+        return a(href, im + f'<b>{t}</b><p>{d}</p><span>{cta} {arr}</span>', 'pull ' + cls)
     tip = lambda: pull('FaMED Protokoll 2026', U['tip_d'])
-    apptip = lambda: pull(U['app_t'], U['app_d'], APP, U['app_cta'], False, 'dark')
+    apptip = lambda: pull(U['app_t'], U['app_d'], APP, U['app_cta'], 'assets/app-icon.png', 'dark')
     notes = lambda: f'<div class="notes"><b>{U["notes"]}</b>' + '<i></i>' * 6 + '</div>'
 
     pages = []
@@ -91,15 +101,15 @@ def build(loc):
         pages.append(f'<section class="pg"><div class="in">{hd(k)}<div class="big"><b>{num}</b><h2>{t}</h2></div><div class="bd">{inner}</div>{extra}</div>{ft(n)}</section>')
 
     # 1 cover
-    pages.append(f'''<section class="pg cv"><div class="k"><span>FaMED Prep</span><span>{U["free_guide"]}</span></div><div class="eight">8</div>
+    pages.append(f'''<section class="pg cv"><div class="k"><span>FaMED Prep</span><span>{U["free_guide"]}</span></div><div class="eight">8</div><div class="sg">{STUDY[loc]}</div><div class="sgr"></div>
 <h1>{U["cover_a"]} <i>{U["cover_b"]}</i></h1><div class="s">{U["cover_line"]}</div>
 <div class="bt">{a(BOOK, f'<img src="assets/cover_flat.jpg"><div><b>FaMED Protokoll 2026</b><span>{U["book_cta"]} {arr}</span></div>', 'cvbook')}{logo(120)}</div></section>''')
     # 2 intro + clickable contents
     tocpages = [2, 3, 4, 5, 8, 9, 24, 26, 28, 29]
     toc = ''.join(f'<a href="#p{pg}"><div><span>{i:02d}</span>{t}<em>{pg}</em></div></a>' for i, (t, pg) in enumerate(zip(U['toc_items'], tocpages), 1))
     page(U['k_intro'], C['intro'][0], '01', body(C['intro'][1]), f'<div class="toc mini"><b>{U["toc_t"]}</b>{toc}</div><div style="height:5mm"></div>' + tip())
-    page(U['k_exam'], C['exam'][0], '02', body(C['exam'][1]))
-    page(U['k_exam'], C['format'][0], '03', body(C['format'][1]))
+    page(U['k_exam'], C['exam'][0], '02', facts + body(C['exam'][1]))
+    page(U['k_exam'], C['format'][0], '03', exam_tbl + body(C['format'][1]))
     cases = f'<p class="lede">{link(C["cases_note"])}</p><div class="cols">' + ''.join(
         f'<div><h3>{t}</h3><ol>' + ''.join(f'<li dir="ltr">{x}</li>' for x in items) + '</ol></div>' for t, items in [(C['an'], CASES_AN), (C['auf'], CASES_AUF)]) + '</div>'
     page(U['k_cases'], C['cases'], '04', cases)
@@ -127,7 +137,7 @@ def build(loc):
     n = len(pages) + 1
     pages.append(f'''<section class="pg"><div class="full">{hd(U["k_bookapp"])}{a(BOOK, '<img src="assets/book3d.png">', 'bimg')}
 <div class="tx"><h3>FaMED Protokoll 2026</h3><p>{U["book_d"]}</p>{a(BOOK, U["book_cta"] + " " + arr, "btn")}</div>
-<div class="ap"><div><h4>{U["app_t"]}</h4><p>{U["app_d"]}</p></div>{a(APP, U["app_cta"] + " " + arr, "btn")}</div>
+<div class="ap"><img class="appi" src="assets/app-icon.png"><div><h4>{U["app_t"]}</h4><p>{U["app_d"]}</p></div>{a(APP, U["app_cta"] + " " + arr, "btn")}</div>
 <p class="opt">{U["bundle"]} {a(BUNDLE, U["bundle_cta"] + " " + arr, "u")}<br>{U["optional"]}</p>{ft(n)}</div></section>''')
     page(U['k_closing'], C['closing'][0], '10', body(C['closing'][1]), tip())
     assert len(pages) == TOTAL, len(pages)
@@ -152,9 +162,26 @@ svg.logo{{direction:ltr;unicode-bidi:isolate}}
 .d4 .notes{{margin-top:6mm;border-top:.6mm solid var(--ink);padding-top:3mm}}
 .d4 .notes b{{font:700 7.5pt var(--bf);letter-spacing:.14em;text-transform:uppercase;color:#6b6c66}}
 .d4 .notes i{{display:block;height:9mm;border-bottom:.25mm solid #cfc8b8}}
+.d4 img.appi{{height:17mm!important;width:17mm;border-radius:3.8mm;background:#fff;box-shadow:0 .6mm 2mm #0003;object-fit:cover}}
+.d4 .full .opt a.u{{color:#fff}}
+.d4 .full .ap img.appi{{position:static;flex:0 0 auto;width:17mm;left:auto;top:auto}}
+.d4 .kt{{background:var(--tint);border-top:1mm solid var(--ink);padding:3mm 4.5mm 3mm;margin:0 0 5mm}}
+.d4 .kt .kh{{display:block;font:700 7.5pt var(--bf);letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:1.5mm}}
+.d4 .kt .kr{{display:grid;grid-template-columns:32mm 1fr;gap:4mm;padding:2mm 0;border-bottom:.25mm solid var(--rule);font-family:var(--bf);font-size:9.3pt;line-height:1.4}}
+.d4 .kt .kr span{{color:#6b6c66;font-weight:600}}.d4 .kt .kr strong{{font-weight:600;color:var(--ink)}}
+.d4 .kt .kr:nth-child(2) strong{{font:800 15pt Manrope;color:var(--coral)}}
+.d4 .kt small{{display:block;margin-top:2mm;font:italic 7.6pt/1.4 var(--bf);color:#6b6c66}}
+.d4 table.st{{width:100%;border-collapse:collapse;margin:0 0 5mm;font-family:var(--bf)}}
+.d4 table.st th{{background:var(--ink);color:#fff;text-align:start;font:700 7.5pt var(--bf);letter-spacing:.1em;text-transform:uppercase;padding:2.4mm 3mm}}
+.d4 table.st td{{padding:3mm;border-bottom:.25mm solid var(--rule);font-size:9.5pt;line-height:1.4;vertical-align:top;color:var(--tx)}}
+.d4 table.st tr:nth-child(even) td{{background:var(--tint)}}
+.d4 table.st td.tm{{font-weight:700;color:var(--coral);white-space:nowrap}}
+.d4 table.st td.sf{{background:#fff!important;font-size:8.3pt;color:#6b6c66;border-bottom:.6mm solid var(--ink)}}
+.d4 .cv .sg{{position:absolute;left:16mm;top:34mm;width:104mm;font:800 50pt/.98 {SG_FONT.get(loc,'Manrope')};letter-spacing:-.035em;color:var(--ink);hyphens:manual}}
+.d4 .cv .sgr{{position:absolute;left:16mm;top:76mm;width:18mm;height:1.6mm;background:var(--coral)}}
 '''
     rtl_css = '''
-.d4 .cv .eight{right:auto;left:6mm}.d4 .cv h1,.d4 .cv .s{left:auto;right:16mm;text-align:right}
+.d4 .cv .eight{right:auto;left:6mm}.d4 .cv .sg{left:auto;right:16mm;text-align:right;letter-spacing:0}.d4 .cv .sgr{left:auto;right:16mm}.d4 .cv h1,.d4 .cv .s{left:auto;right:16mm;text-align:right}
 .d4 .full img{left:auto;right:16mm}.d4 .full .tx{left:16mm;right:112mm}.d4 .full .opt{left:auto;right:16mm}
 .d4 .pull img{float:left;margin-left:0;margin-right:3mm}
 .bd ul li{padding-left:0;padding-right:5.5mm}.bd ul.bl li:before{left:auto;right:.4mm}.bd ul.chk li:before{left:auto;right:0}
