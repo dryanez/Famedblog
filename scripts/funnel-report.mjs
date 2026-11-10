@@ -15,14 +15,15 @@ async function get(path) {
   if (!res.ok) throw new Error(`${path}: ${res.status} ${await res.text()}`);
   return res.json();
 }
-const [guides, leads, fulfil, guests, users, blogCtx, events] = await Promise.all([
-  get(`guide_requests?select=email,locale,created_at,marketing_requested,confirmed_at&created_at=gte.${since}&limit=5000`),
+const [guides, leads, fulfil, guests, users, blogCtx, events, followups] = await Promise.all([
+  get(`guide_requests?select=email,locale,created_at,marketing_requested,confirmed_at,withdrawn_at&created_at=gte.${since}&limit=5000`),
   get(`leads?select=email,source,created_at&created_at=gte.${since}&limit=5000`),
   get(`payment_fulfillments?select=user_id,plan_id,provider,created_at&created_at=gte.${since}&limit=5000`),
   get(`guest_purchases?select=email,plan_id,status,paid_at&paid_at=gte.${since}&limit=5000`),
   get(`users?select=id,email&limit=20000`),
   get(`blog_purchase_context?select=session_id,entry_slug,entry_locale,created_at&created_at=gte.${since}&limit=5000`),
   get(`purchase_events?select=session_id,event,plan_id&created_at=gte.${since}&limit=50000`),
+  get(`email_logs?select=email_type,status&email_type=in.(guide_d1,guide_d3)&created_at=gte.${since}&limit=5000`),
 ]);
 const lc = (e) => (e || '').toLowerCase().trim();
 const emailOf = Object.fromEntries(users.map((u) => [u.id, lc(u.email)]));
@@ -55,6 +56,7 @@ console.log('   guide → purchase conversion:', g.length ? `${((buyersAfterGuid
 if (hours.length) console.log('   hours from guide to purchase (median):', hours[Math.floor(hours.length / 2)].toFixed(1), '| within 48 h:', hours.filter((h) => h <= 48).length);
 console.log('   without guide:', sales.length - afterGuide.length);
 
+console.log('   follow-up emails sent:', count(followups.filter((f) => f.status === 'sent'), (f) => f.email_type), '| unsubscribed:', g.filter((x) => x.withdrawn_at).length);
 console.log('\n3) Blog / guide-email visits that reached the app');
 const ses = new Set(blogCtx.map((b) => b.session_id));
 const ev = (name) => new Set(events.filter((e) => e.event === name && ses.has(e.session_id)).map((e) => e.session_id)).size;
