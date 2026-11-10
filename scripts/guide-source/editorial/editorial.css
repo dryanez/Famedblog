@@ -1,0 +1,38 @@
+
+.d4 .cv{background:#F3EEE4}
+.d4 .cv .k{position:absolute;left:16mm;right:16mm;top:16mm;display:flex;justify-content:space-between;font:700 7.5pt Inter;letter-spacing:.22em;text-transform:uppercase;border-bottom:.6mm solid var(--ink);padding-bottom:3mm}
+.d4 .cv .eight{position:absolute;right:6mm;top:16mm;font:800 330pt/1 Manrope;letter-spacing:-.08em;color:var(--coral)}
+.d4 .cv h1{position:absolute;left:16mm;top:150mm;width:120mm;font:400 34pt/1.08 "New York",Georgia,serif;letter-spacing:-.01em}
+.d4 .cv h1 i{color:var(--coral)}
+.d4 .cv .s{position:absolute;left:16mm;top:205mm;font:600 10pt Inter;letter-spacing:.14em;text-transform:uppercase}
+.d4 .cv .bt{position:absolute;left:16mm;right:16mm;bottom:16mm;display:flex;justify-content:space-between;align-items:flex-end;border-top:.6mm solid var(--ink);padding-top:5mm}
+.d4 .cvbook{display:flex;gap:4mm;align-items:center}.d4 .cvbook img{height:24mm}.d4 .cvbook b{display:block;font:400 13pt "New York",Georgia,serif}.d4 .cvbook span{font:700 8pt Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--coral)}
+.d4 .in{padding:16mm 16mm 0}
+.d4 .hd{display:flex;justify-content:space-between;font:700 7pt Inter;letter-spacing:.22em;text-transform:uppercase;border-bottom:.6mm solid var(--ink);padding-bottom:3mm}
+.d4 .big{display:flex;align-items:flex-end;gap:6mm;margin:8mm 0 6mm}
+.d4 .big b{font:800 70pt/0.8 Manrope;letter-spacing:-.06em;color:var(--coral)}
+.d4 h2{font:400 26pt/1.1 "New York",Georgia,serif}
+.d4 p{font:400 10.3pt/1.6 Inter;color:#2a2b27}
+.d4 .lead{font:400 13pt/1.5 "New York",Georgia,serif;color:var(--ink);margin-bottom:6mm}
+.d4 .toc{columns:2;column-gap:8mm}.d4 .toc div{break-inside:avoid;padding:3.5mm 0;border-top:.25mm solid #cfc8b8;font:400 12pt "New York",Georgia,serif;display:flex;gap:3mm}
+.d4 .toc span{font:800 9pt Manrope;color:var(--coral)}.d4 .toc em{margin-left:auto;font:600 8.5pt Inter;font-style:normal;color:#8a8b84}
+.d4 .days{columns:2;column-gap:8mm}
+.d4 .dy{break-inside:avoid;border-top:.25mm solid #cfc8b8;padding:3mm 0 3.5mm}
+.d4 .dy h4{font:400 13pt "New York",Georgia,serif}.d4 .dy h4 small{font:600 8pt Inter;color:var(--coral);letter-spacing:.06em;margin-left:2mm}
+.d4 .dy p{font-size:8.8pt;line-height:1.45;margin-top:1.2mm}.d4 .dy p b{font:700 7pt Inter;letter-spacing:.12em;text-transform:uppercase;color:#8a8b84;margin-right:1.5mm}
+.d4 .pull{break-inside:avoid;background:var(--coral);color:#fff;padding:5mm;margin-top:3mm;display:block}
+.d4 .pull img{height:30mm;float:right;margin-left:3mm}
+.d4 .pull b{display:block;font:400 14pt/1.2 "New York",Georgia,serif;margin-bottom:2mm}.d4 .pull p{color:#fff;font-size:9pt}
+.d4 .pull span{display:inline-block;margin-top:3mm;font:700 8.5pt Inter;letter-spacing:.1em;text-transform:uppercase;border-bottom:.5mm solid #fff}
+.d4 .ft{position:absolute;left:16mm;right:16mm;bottom:10mm;display:flex;justify-content:space-between;font:700 7.5pt Inter;letter-spacing:.14em;text-transform:uppercase;border-top:.25mm solid #cfc8b8;padding-top:3mm;color:#6b6c66}
+.d4 .ft a{color:var(--coral)}
+.d4 .full{position:absolute;inset:0;background:var(--coral);color:#fff}
+.d4 .full .hd{border-color:#fff;margin:16mm 16mm 0}
+.d4 .full img{position:absolute;left:16mm;top:42mm;width:88mm}
+.d4 .full .tx{position:absolute;left:112mm;right:16mm;top:52mm}
+.d4 .full h3{font:400 30pt/1.05 "New York",Georgia,serif}.d4 .full p{color:#fff;margin:5mm 0 7mm}
+.d4 .btn{display:inline-block;background:var(--ink);color:#fff;font:700 10pt Inter;padding:3.4mm 6mm}
+.d4 .full .ap{position:absolute;left:16mm;right:16mm;top:178mm;background:#fff;color:var(--ink);padding:7mm 8mm;display:flex;gap:6mm;align-items:center}
+.d4 .full .ap div{flex:1}.d4 .full .ap h4{font:400 17pt "New York",Georgia,serif;margin-bottom:1.5mm}.d4 .full .ap p{color:#2a2b27;margin:0}
+.d4 .full .opt{position:absolute;left:16mm;top:222mm;font:600 9pt Inter;color:#ffe9e5}
+.d4 .full .ft{border-color:#ffffff88;color:#fff}.d4 .full .ft a{color:#fff}
