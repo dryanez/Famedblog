@@ -24,8 +24,8 @@ export function hasVersion(locale:Locale,route:string){
 export const localePrefix=(locale:Locale)=>locale==='en'?'':'/'+locale;
 /** Articles live in en/ar/es; page-only languages link to the English articles. */
 export const blogLocale=(locale:Locale):Locale=>pageOnlyLocales.includes(locale)?'en':locale;
-/** Copy language of the guide form, emails and guide-ready page (en/ar/es). The PDF itself exists in every locale: forms send the page locale as guideLang. */
-export const guideLocale=(locale:Locale):'en'|'ar'|'es'=>pageOnlyLocales.includes(locale)||locale==='de'?'en':locale as 'en'|'ar'|'es';
+/** The guide (PDF, emails, guide-ready page) exists in every site language. */
+export const guideLocale=(locale:Locale):Locale=>locale;
 export function localeOf(path:string):Locale{return (path.match(localePattern)?.[1] as Locale)||'en';}
 export function languageAlternates(path:string){
  const base=path.replace(localePattern,'')||'/';
