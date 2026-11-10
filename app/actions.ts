@@ -10,7 +10,7 @@ export async function submitLead(formData:FormData){
   async record(lead:any){
    const {data,error}=await supabaseAdmin.from('guide_requests').insert({email:lead.email,first_name:lead.firstName,locale:lead.locale,marketing_requested:lead.marketingRequested,token_hash:lead.tokenHash,guide_token_hash:lead.guideTokenHash,consent_version:lead.consentVersion,consent_text:lead.consentText}).select('id').single();if(error)throw Error('Guide storage unavailable');
    // A guide request is not permission for the existing lead campaigns.
-   const {error:leadError}=await supabaseAdmin.from('leads').insert({email:lead.email,first_name:lead.firstName,exam_date:lead.examDate,german_level:lead.germanLevel,source:'website_guide_request_v2'});if(leadError&&leadError.code!=='23505')console.error('Guide lead record unavailable',leadError.code);
+   const {error:leadError}=await supabaseAdmin.from('leads').insert({email:lead.email,first_name:lead.firstName,exam_date:lead.examDate,german_level:lead.germanLevel,source:'website_guide_request_v2'+(lead.page?':'+lead.page:'')});if(leadError&&leadError.code!=='23505')console.error('Guide lead record unavailable',leadError.code);
    return data;
   },
   async delivered(id:string,providerId:string){const {error}=await supabaseAdmin.from('guide_requests').update({provider_message_id:providerId}).eq('id',id);if(error)throw Error('Delivery evidence unavailable');},
