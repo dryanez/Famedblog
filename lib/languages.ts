@@ -12,8 +12,8 @@ export const spanishRoutes=['/','/what-is-famed','/lead-magnet','/app','/career'
 export const pageOnlyLocales:Locale[]=['ru','fr','tr'];
 export const pageOnlyRoutes=spanishRoutes;
 export const localePattern=/^\/(ar|es|ru|fr|tr|de)(?=\/|$)/;
-/** German has translated articles only (no translated pages yet). */
-export function hasGermanVersion(route:string){return route==='/blog'||germanSlugs.some((slug:string)=>route==='/blog/'+slug);}
+/** German has the main pages (since Nov 2026) and translated articles. */
+export function hasGermanVersion(route:string){return pageOnlyRoutes.includes(route)||route==='/blog'||germanSlugs.some((slug:string)=>route==='/blog/'+slug);}
 export function hasSpanishVersion(route:string){return spanishRoutes.includes(route)||route==='/blog'||spanishSlugs.some((slug:string)=>route==='/blog/'+slug);}
 export function hasVersion(locale:Locale,route:string){
  if(locale==='en'||locale==='ar')return true;
