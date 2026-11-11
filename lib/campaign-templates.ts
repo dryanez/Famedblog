@@ -743,7 +743,7 @@ export const getSiteBackOnline = (data: any) => `
       <p style="margin: 0 0 20px 0;">If you were trying to get access before, you can complete your purchase now.</p>
       
       <p style="text-align: center; margin: 20px 0;">
-        <a href="https://famedtestprep.com/famedprotokolle" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">View Bundle Options</a>
+        <a href="https://famedtestprep.com/bundle" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">View Bundle Options</a>
       </p>
 
       <p style="margin-top: 30px; margin-bottom: 0;">If you have any questions or need help, just reply to this email.</p>
@@ -784,7 +784,7 @@ Regular Price: €149.98
 Special Price: €59.99
 YOU SAVE: €89.99 (60% OFF!)
 
-Get the Complete Bundle Now: https://famedtestprep.com/famedprotokolle
+Get the Complete Bundle Now: https://famedtestprep.com/bundle
 
 If you have any questions or need help, just reply to this email.
 

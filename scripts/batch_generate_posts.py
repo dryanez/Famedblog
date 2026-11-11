@@ -104,7 +104,7 @@ def generate_and_save_posts():
         - **IMPORTANT:** Set 'status' to "published" in frontmatter.
         - Approx 1000-1500 words
         - **CRITICAL:** You MUST include a "Resources" or "Call to Action" section at the end with these EXACT links:
-            - FaMED Protokoll Book: https://famedtestprep.com/famedprotokolle
+            - FaMED Protokoll Book: https://famedtestprep.com/protokolle
             - FaMED App & Simulation: https://famedtestprep.com
             - Telegram Group: https://t.me/+vgtsHuqtwfk4MTJh
         
